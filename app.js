@@ -8,7 +8,7 @@ $("#updated").textContent = `最終更新 ${dateLabel(latest.date)}`;
 $("#latest-title").textContent = latest.headline;
 $("#latest-time").textContent = `${dateLabel(latest.date)} 第${latest.meeting}回会議時点`;
 $("#latestPdf").href = encodeURI(latest.pdf);
-$("#latest-stats").innerHTML = [["避難者", latest.stats.evacuees, "人"],["避難所",latest.stats.shelters,"か所"],["住家被害",latest.stats.homes,"棟"],["断水",46700,"戸"]].map(([l,v,u])=>`<div><dt>${l}</dt><dd>${fmt(v)}<small>${u}</small></dd></div>`).join("");
+$("#latest-stats").innerHTML = [["避難者", latest.stats.evacuees, "人"],["避難所",latest.stats.shelters,"か所"],["住家被害",latest.stats.homes,"棟"],["断水",latest.stats.waterOutages,"戸"]].map(([l,v,u])=>`<div><dt>${l}</dt><dd>${fmt(v)}<small>${u}</small></dd></div>`).join("");
 
 let activeMetric = "evacuees";
 function renderMetrics(){
@@ -24,14 +24,14 @@ function renderChart(){
   const circles=pts.map((p,i)=>p?`<g><circle cx="${p.x}" cy="${p.y}" r="7" fill="#fff" stroke="${metric.color}" stroke-width="4"/><text x="${p.x}" y="${p.y-16}" text-anchor="middle" font-size="13" font-weight="700" fill="#17231f">${fmt(p.v)}</text></g>`:"").join("");
   $("#chart").innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><path d="M${pad} ${H-pad}H${W-pad}" stroke="#d9ded8"/><path d="M${pad} ${H/2}H${W-pad}" stroke="#edf0ed" stroke-dasharray="5 8"/>${lines}${circles}</svg>`;
   $("#chart").setAttribute("aria-label",`${metric.label}の推移：${days.map((d,i)=>`${dateLabel(d.date,false)} ${values[i]==null?"調査中":fmt(values[i])+metric.unit}`).join("、")}`);
-  $("#chartDates").innerHTML=days.map(d=>`<span>${dateLabel(d.date,false)}</span>`).join("");
+  $("#chartDates").style.gridTemplateColumns=`repeat(${days.length},1fr)`;$("#chartDates").innerHTML=days.map(d=>`<span>${dateLabel(d.date,false)}</span>`).join("");
   $("#chartLabel").textContent=metric.label;$("#chartLatest").textContent=`${fmt(latest.stats[activeMetric])} ${metric.unit}`;
   const first=valid[0],last=valid.at(-1),diff=last-first;$("#chartChange").textContent=`記録開始比 ${diff>0?"+":""}${fmt(diff)} ${metric.unit}`;
 }
 $("#insights").innerHTML=[
-  ["避難者は7月30日が最多","9,450人をピークに8月2日は8,556人。4日間で894人減少しました。"],
-  ["避難所の集約が進む","432か所から206か所へ。ただし、避難生活の環境と在宅避難者への継続支援が必要です。"],
-  ["被害の全容は調査途上","住家被害の判定数は1,507棟から4,042棟へ増加。被害の急増ではなく調査進展を含む値です。"]
+  ["避難者は7月30日が最多","9,450人をピークに8月4日は7,646人。5日間で1,804人減少しました。"],
+  ["避難所の集約が進む","432か所から146か所へ。ただし、避難生活の環境と在宅避難者への継続支援が必要です。"],
+  ["被害の全容は調査途上","住家被害は8月3日から推定値に変更され、8月4日は13,393棟。定義変更を含むため単純比較には注意が必要です。"]
 ].map(([h,p])=>`<article class="insight"><b>${h}</b><p>${p}</p></article>`).join("");
 
 const topics=["すべて",...new Set(days.flatMap(d=>d.topics))];let activeTopic="すべて";
