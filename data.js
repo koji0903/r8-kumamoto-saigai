@@ -128,6 +128,33 @@ window.REPORT_DATA = {
       pdf: "20260804火の国会議498回.pdf"
     }
   ],
+  supportCategories: [
+    { key: "materials", label: "物資・食料", description: "飲料水、衛生用品、寝具、炊き出しなど" },
+    { key: "water", label: "水・衛生・入浴", description: "生活用水、トイレ、衛生環境、入浴支援" },
+    { key: "shelter", label: "避難生活", description: "避難所環境、段ボールベッド、車中泊" },
+    { key: "housing", label: "住まい", description: "ホテル避難、応急住宅、住宅修理" },
+    { key: "welfare", label: "福祉・医療", description: "要配慮者、福祉避難所、医療との連携" },
+    { key: "children", label: "子ども・子育て", description: "子どもの居場所、妊産婦・乳幼児支援" },
+    { key: "volunteer", label: "ボランティア・助成", description: "活動人員、災害VC、支援団体向け助成" },
+    { key: "access", label: "情報・アクセシビリティ", description: "聴覚障害、外国人、情報入手支援" }
+  ],
+  supportEvents: [
+    { date:"2026-08-01", meeting:495, page:6, category:"materials", title:"物資ニーズのマッチングを調整", detail:"水、体拭きシート、災害VC用飲料水などの物資ニーズをSEMA関連で調整中と報告。", areas:[], pdf:"20260801火の国会議495回.pdf" },
+    { date:"2026-08-01", meeting:495, page:6, category:"shelter", title:"避難所設備等のニーズを調査", detail:"トイレカー、ラップポン、段ボールベッド、紙管パーテーション、キッチンカーによる炊き出しなどをEDAN関連で調査。", areas:[], pdf:"20260801火の国会議495回.pdf" },
+    { date:"2026-08-01", meeting:495, page:7, category:"water", title:"生活用水不足が継続", detail:"八代市・氷川町では飲料水は充足してきたとの報告がある一方、生活用水不足が課題。宇土市災害VCではトイレカー支援が必要と報告。", areas:["八代市","氷川町","宇土市"], pdf:"20260801火の国会議495回.pdf" },
+    { date:"2026-08-01", meeting:495, page:8, category:"children", title:"避難所で子どもの居場所を実施", detail:"八代市第二中学校で子どもひろばを実施し、小中高校生約20人が参加。人数は会議報告時点の概数。", areas:["八代市"], pdf:"20260801火の国会議495回.pdf" },
+    { date:"2026-08-02", meeting:496, page:5, category:"volunteer", title:"避難所の物資作業に人手不足", detail:"八代市体育館で物資受付・仕分けの人手が不足し、保健師が物資作業に追われていると報告。", areas:["八代市"], pdf:"20260802火の国会議496回.pdf" },
+    { date:"2026-08-02", meeting:496, page:5, category:"shelter", title:"断水避難所の衛生・トイレを優先", detail:"水が出ない避難所では衛生・トイレの課題が深刻で、環境改善の優先順位が高いと共有。", areas:[], pdf:"20260802火の国会議496回.pdf" },
+    { date:"2026-08-02", meeting:496, page:11, category:"welfare", title:"福祉・生活ニーズを連携支援", detail:"DMATとDWATが八代市・氷川町・宇城市を中心に連携し、福祉避難所、施設入所、移送などに対応。買い物支援のニーズも報告。", areas:["八代市","氷川町","宇城市"], pdf:"20260802火の国会議496回.pdf" },
+    { date:"2026-08-03", meeting:497, page:3, category:"housing", title:"ホテル避難の移動を開始", detail:"宿泊支援提供事業で宇土市1件、宇城市1件のホテル移動を報告。受け入れ施設94施設を確保。", areas:["宇土市","宇城市"], pdf:"20260803火の国会議497回.pdf" },
+    { date:"2026-08-03", meeting:497, page:7, category:"children", title:"親子安心ステーションを開設", detail:"1歳未満の子どもを育てる家族と妊婦を対象に、八代市豊原と熊本市城南の助産院各1か所で開設。", areas:["八代市","熊本市"], pdf:"20260803火の国会議497回.pdf" },
+    { date:"2026-08-04", meeting:498, page:2, category:"housing", title:"ホテル避難の受付を拡大", detail:"対象9市町村、受け入れ114施設。8月4日14時時点で申込289件、マッチング済み6件。いずれも事業全体値。", areas:["熊本市","宇土市","宇城市","八代市","氷川町","甲佐町","美里町","御船町","嘉島町"], pdf:"20260804火の国会議498回.pdf" },
+    { date:"2026-08-04", meeting:498, page:3, category:"housing", title:"応急住宅と住宅修理の支援", detail:"宇城市・氷川町で建設型応急住宅の整備を決定。御船町・甲佐町・美里町で賃貸型応急住宅と住宅応急修理の受付を開始。", areas:["宇城市","氷川町","御船町","甲佐町","美里町"], pdf:"20260804火の国会議498回.pdf" },
+    { date:"2026-08-04", meeting:498, page:6, category:"materials", title:"飲料水と配布用品のニーズ", detail:"氷川町で飲料水ニーズを報告。2リットル水を提供する場合は紙コップも必要との意見を共有。", areas:["氷川町"], pdf:"20260804火の国会議498回.pdf" },
+    { date:"2026-08-04", meeting:498, page:8, category:"children", title:"子どもの預かり・居場所支援", detail:"美里町で片付けや仕事の間に子どもを預けたいニーズ、芦北町で子どもの心理的ストレス、八代市で遊び場支援が報告。", areas:["美里町","芦北町","八代市"], pdf:"20260804火の国会議498回.pdf" },
+    { date:"2026-08-04", meeting:498, page:9, category:"access", title:"遠隔手話通訳の利用支援", detail:"宇城市で手話話者4人、氷川町でろう者1人が避難所にいると報告。遠隔手話通訳の利用方法を周囲が支援する必要があると共有。", areas:["宇城市","氷川町"], pdf:"20260804火の国会議498回.pdf" },
+    { date:"2026-08-04", meeting:498, page:12, category:"volunteer", title:"支援団体向け助成情報を共有", detail:"日本財団の助成プログラムと、中央共同募金会の「ボラサポ・令和8年熊本地震」助成公募開始を共有。申請条件・期限は各公式情報の確認が必要。", areas:[], pdf:"20260804火の国会議498回.pdf" }
+  ],
   metrics: [
     { key: "evacuees", label: "避難者", unit: "人", color: "#e45e35" },
     { key: "shelters", label: "避難所", unit: "か所", color: "#d39b2b" },
