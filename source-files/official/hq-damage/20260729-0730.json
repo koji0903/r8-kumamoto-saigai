@@ -1,0 +1,511 @@
+{
+ "title": "令和８年熊本地震による人的被害等の状況（７月２９日７：３０時点）",
+ "date": "2026-07-29",
+ "time": "07:30",
+ "columns": [
+  "shelters",
+  "evacuees",
+  "injuredMinor",
+  "injuredModerate",
+  "injuredSevere",
+  "cardiacArrest",
+  "deaths",
+  "casualtyUnclassified",
+  "outages",
+  "waterOutages"
+ ],
+ "municipalities": {
+  "熊本市": {
+   "shelters": 182,
+   "evacuees": 2062,
+   "injuredMinor": 5,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0,
+   "outages": 430
+  },
+  "宇土市": {
+   "shelters": 8,
+   "evacuees": 632,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0,
+   "outages": 3030,
+   "waterOutages": 12200
+  },
+  "宇城市": {
+   "shelters": 6,
+   "evacuees": 2288,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 1,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0,
+   "outages": 7770,
+   "waterOutages": 14000
+  },
+  "美里町": {
+   "shelters": 14,
+   "evacuees": 158,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 2,
+   "outages": 3900
+  },
+  "荒尾市": {
+   "shelters": 1,
+   "evacuees": 10,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "玉名市": {
+   "shelters": 5,
+   "evacuees": 0,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "玉東町": {
+   "shelters": 1,
+   "evacuees": 0,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "和水町": {
+   "shelters": 2,
+   "evacuees": 8,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "南関町": {
+   "shelters": 0,
+   "evacuees": 0,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "長洲町": {
+   "shelters": 1,
+   "evacuees": 0,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "山鹿市": {
+   "shelters": 5,
+   "evacuees": 16,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "菊池市": {
+   "shelters": 4,
+   "evacuees": 69,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "合志市": {
+   "shelters": 9,
+   "evacuees": 89,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "大津町": {
+   "shelters": 3,
+   "evacuees": 58,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0,
+   "waterOutages": 5
+  },
+  "菊陽町": {
+   "shelters": 7,
+   "evacuees": 76,
+   "injuredMinor": 2,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "阿蘇市": {
+   "shelters": 4,
+   "evacuees": 3,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "南小国町": {
+   "shelters": 1,
+   "evacuees": 0,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "小国町": {
+   "shelters": 2,
+   "evacuees": 0,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "産山村": {
+   "shelters": 0,
+   "evacuees": 0,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "高森町": {
+   "shelters": 0,
+   "evacuees": 0,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "南阿蘇村": {
+   "shelters": 4,
+   "evacuees": 2,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "西原村": {
+   "shelters": 3,
+   "evacuees": 22,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "御船町": {
+   "shelters": 7,
+   "evacuees": 108,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "嘉島町": {
+   "shelters": 4,
+   "evacuees": 176,
+   "outages": 620
+  },
+  "益城町": {
+   "shelters": 4,
+   "evacuees": 526,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0,
+   "outages": 4760
+  },
+  "甲佐町": {
+   "shelters": 5,
+   "evacuees": 107,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 1,
+   "casualtyUnclassified": 0,
+   "outages": 200,
+   "waterOutages": 480
+  },
+  "山都町": {
+   "shelters": 4,
+   "evacuees": 43,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "八代市": {
+   "shelters": 62,
+   "evacuees": 2887,
+   "injuredModerate": 0,
+   "cardiacArrest": 2,
+   "deaths": 0,
+   "casualtyUnclassified": 8,
+   "outages": 12470,
+   "waterOutages": 28500
+  },
+  "氷川町": {
+   "shelters": 9,
+   "evacuees": 209,
+   "injuredModerate": 0,
+   "cardiacArrest": 2,
+   "deaths": 0,
+   "casualtyUnclassified": 3,
+   "outages": 3520
+  },
+  "水俣市": {
+   "shelters": 19,
+   "evacuees": 44,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "芦北町": {
+   "shelters": 6,
+   "evacuees": 71,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0,
+   "waterOutages": 530
+  },
+  "津奈木町": {
+   "shelters": 2,
+   "evacuees": 5,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "人吉市": {
+   "shelters": 8,
+   "evacuees": 29,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 3
+  },
+  "錦町": {
+   "shelters": 1,
+   "evacuees": 0,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "あさぎり町": {
+   "shelters": 5,
+   "evacuees": 0,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "多良木町": {
+   "shelters": 1,
+   "evacuees": 2,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "湯前町": {
+   "shelters": 1,
+   "evacuees": 2,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "水上村": {
+   "shelters": 0,
+   "evacuees": 0,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "相良村": {
+   "shelters": 0,
+   "evacuees": 0,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "五木村": {
+   "shelters": 0,
+   "evacuees": 0,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "山江村": {
+   "shelters": 0,
+   "evacuees": 0,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "球磨村": {
+   "shelters": 5,
+   "evacuees": 2,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "天草市": {
+   "shelters": 48,
+   "evacuees": 93,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0,
+   "waterOutages": 1100
+  },
+  "上天草市": {
+   "shelters": 11,
+   "evacuees": 51,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  },
+  "苓北町": {
+   "shelters": 1,
+   "evacuees": 24,
+   "injuredMinor": 0,
+   "injuredModerate": 0,
+   "injuredSevere": 0,
+   "cardiacArrest": 0,
+   "deaths": 0,
+   "casualtyUnclassified": 0
+  }
+ },
+ "totals": {
+  "shelters": 465,
+  "evacuees": 9872,
+  "injuredMinor": 8,
+  "injuredModerate": 4,
+  "injuredSevere": 3,
+  "cardiacArrest": 5,
+  "deaths": 3,
+  "casualtyUnclassified": 16,
+  "outages": 36700,
+  "waterOutages": 56815
+ },
+ "affectedCounts": {},
+ "extraRows": {
+  "身元不明": {
+   "injuredMinor": 1,
+   "injuredModerate": 4,
+   "cardiacArrest": 1,
+   "deaths": 2
+  }
+ },
+ "notes": {
+  "八代市": {
+   "injuredMinor": "不明",
+   "injuredSevere": "不明(2名)"
+  },
+  "氷川町": {
+   "injuredMinor": "不明",
+   "injuredSevere": "不明"
+  }
+ },
+ "certification": {},
+ "meeting": 3,
+ "govMeeting": null,
+ "sourceUrl": "https://www.pref.kumamoto.jp/uploaded/attachment/315417.pdf",
+ "file": "315417.pdf"
+}
