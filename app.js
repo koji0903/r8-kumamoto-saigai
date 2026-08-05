@@ -19,6 +19,33 @@ const fmt=n=>n==null?"調査中":n.toLocaleString("ja-JP");
 const statDisplay=(day,key)=>key==="outages"&&day.stats.outageStatus?day.stats.outageStatus:key==="waterOutages"&&day.stats[key]==null?"資料記載なし":fmt(day.stats[key]);
 const dateLabel=(iso,full=true)=>new Intl.DateTimeFormat("ja-JP",full?{year:"numeric",month:"long",day:"numeric",weekday:"short"}:{month:"numeric",day:"numeric"}).format(new Date(`${iso}T00:00:00+09:00`));
 const latest=days.at(-1);
+const SITE_NAME="よか隊ネット災害支援レポート";
+
+// 全ページ共通の名称・位置づけ。HTMLに残る旧名称やページ固有タイトルも表示時に統一する。
+document.querySelectorAll(".brand").forEach(brand=>{
+  const mark=brand.querySelector(".brand-mark");
+  const label=brand.querySelector("span:last-child");
+  if(mark) mark.textContent="よ";
+  if(label) label.innerHTML=`よか隊ネット<br><b>災害支援レポート</b>`;
+});
+document.title=document.title.includes("｜")
+  ? `${document.title.split("｜")[0]}｜${SITE_NAME}`
+  : SITE_NAME;
+document.querySelector('meta[property="og:site_name"]')?.setAttribute("content",SITE_NAME);
+document.querySelector('meta[property="og:title"]')?.setAttribute("content",document.title);
+document.querySelector('meta[property="og:image:alt"]')?.setAttribute("content",`${SITE_NAME}｜令和8年熊本地震の災害・支援情報アーカイブ`);
+
+const siteHeader=document.querySelector(".site-header");
+if(siteHeader&&!document.querySelector(".archive-source-policy")){
+  const policy=document.createElement("aside");
+  policy.className="archive-source-policy";
+  policy.setAttribute("aria-label","本サイトの位置づけと一次情報の確認");
+  policy.innerHTML=`<div><b>本サイトは災害・支援情報のアーカイブです</b><p>「火の国会議」議事録を中核に、熊本県災害対策本部と各市町村の公式情報を、出典・確認時点とともに整理しています。本サイト自体は行政機関等が発信する一次情報ではありません。</p></div><nav aria-label="一次情報へのリンク"><a href="meetings.html">火の国会議議事録</a><a href="official.html">国・県・市町村の一次情報</a><a href="https://portal.bousai.pref.kumamoto.jp/" target="_blank" rel="noopener">防災情報くまもと ↗</a></nav><p class="archive-source-warning"><b>参照時の注意</b> 避難、安否、支援活動、制度申請などの判断前には、リンク先の一次情報で発表時刻・対象地域・受付条件を必ず再確認してください。</p>`;
+  siteHeader.after(policy);
+}
+
+const topNotice=document.querySelector(".notice p");
+if(topNotice) topNotice.innerHTML=`<b>火の国会議の生の現場情報を軸に、公的な一次情報を紐づけて保存しています。</b> このページは記録・検索のためのアーカイブであり、緊急情報や行政の公式発表に代わるものではありません。`;
 
 // メインメニューは各HTMLに静的に置いてある（JS無効でも動く）。ここでは組み立てない。
 
@@ -69,7 +96,7 @@ if($("#audienceUpdates")){
 const footer=document.querySelector("footer");
 if(footer&&!document.querySelector(".site-directory")){
   const directory=document.createElement("section");directory.className="site-directory";directory.setAttribute("aria-label","サイト内リンク");
-  directory.innerHTML=`<div><b>火の国会議</b><a href="timeline.html">日ごとのまとめ</a><a href="meetings.html">議事録（全文）</a></div><div><b>被災された方</b><a href="shelters.html">稼働避難所</a><a href="guide.html">制度・生活再建</a><a href="terms.html">災害用語集</a></div><div><b>支援する方</b><a href="support.html">支援分野別</a><a href="municipalities.html">自治体別</a><a href="supporters.html">支援者向け入口</a></div><div><b>一次情報</b><a href="official.html">国・県・市町村</a><a href="https://portal.bousai.pref.kumamoto.jp/" target="_blank" rel="noopener">防災情報くまもと ↗</a></div>`;
+  directory.innerHTML=`<div><b>火の国会議</b><a href="timeline.html">日ごとのまとめ</a><a href="meetings.html">議事録（全文）</a></div><div><b>被災された方</b><a href="shelters.html">稼働避難所</a><a href="guide.html">制度・生活再建</a><a href="terms.html">災害用語集</a></div><div><b>支援する方</b><a href="support.html">支援分野別</a><a href="municipalities.html">自治体別</a><a href="supporters.html">支援者向け入口</a></div><div><b>一次情報・出典</b><a href="official.html">国・熊本県・市町村</a><a href="meetings.html">火の国会議 原本PDF</a><a href="https://portal.bousai.pref.kumamoto.jp/" target="_blank" rel="noopener">防災情報くまもと ↗</a></div>`;
   footer.before(directory);
 }
 if($("#recentUpdates")) $("#recentUpdates").innerHTML=[...days].reverse().slice(0,3).map(d=>`<article><time datetime="${d.date}">${dateLabel(d.date)}</time><span>第${d.meeting}回</span><h3>${d.headline}</h3><p>${d.summary}</p><a href="timeline.html">詳細を見る →</a></article>`).join("");

@@ -91,6 +91,8 @@ for (const shelter of shelters.features) {
 const htmlFiles = (await readdir(root)).filter(f => f.endsWith(".html"));
 for (const file of htmlFiles) {
   const html = await readFile(path.join(root, file), "utf8");
+  if (!html.includes("よか隊ネット災害支援レポート")) errors.push(`${file} のサイト名称が新名称に統一されていません`);
+  if (html.includes("火の国 災害支援レポート")) errors.push(`${file} に旧サイト名称が残っています`);
   for (const match of html.matchAll(/(?:href|src)="([^"#?]+)(?:[?#][^"]*)?"/g)) {
     const target = decodeURIComponent(match[1]);
     if (target && !/^(https?:|mailto:|tel:)/.test(target) && !(await exists(target))) {
@@ -101,6 +103,7 @@ for (const file of htmlFiles) {
 
 const appSource = await readFile(path.join(root, "app.js"), "utf8");
 if (appSource.includes("<span>負傷者</span>")) errors.push("人的被害総数を『負傷者』と表示する旧コードが残っています");
+if (!appSource.includes("archive-source-policy")) errors.push("全ページ共通の一次情報・アーカイブ注意書きがありません");
 
 console.log(`会議 ${report.days.length}日分 / 自治体イベント ${report.municipalEvents.length}件 / 支援イベント ${report.supportEvents.length}件`);
 console.log(`構造化議事録 ${minutes.meetings.length}回分 / 開設中避難所 ${shelters.features.length}件`);
