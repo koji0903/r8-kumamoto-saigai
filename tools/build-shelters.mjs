@@ -145,6 +145,13 @@ const main = async () => {
   const out = `window.SHELTER_DATA=${JSON.stringify(payload)};\n`;
 
   const before = await readFile(outPath, "utf8").catch(() => null);
+  // 画面表示は分単位。--retrieved-at で秒を保存した生成物と、ファイル名から
+  // 分単位で復元した入力を比較しても、内容が同じなら差分としない。
+  const normalizeRetrievedSeconds = src => src?.replace(
+    /(\"retrievedAt\":\"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:)\d{2}/,
+    (_, prefix) => `${prefix}00`
+  );
+  const sameContent = before === out || normalizeRetrievedSeconds(before) === normalizeRetrievedSeconds(out);
   const withNotes = features.filter(f => f.supplements).length;
   const summary = [
     `入力       ${path.relative(root, input)}`,
@@ -155,8 +162,8 @@ const main = async () => {
 
   if (check) {
     console.log(summary);
-    console.log(before === out ? "\nshelters-data.js は最新です。" : "\nshelters-data.js に差分があります（--check なので書き込んでいません）。");
-    process.exit(before === out ? 0 : 1);
+    console.log(sameContent ? "\nshelters-data.js は最新です。" : "\nshelters-data.js に差分があります（--check なので書き込んでいません）。");
+    process.exit(sameContent ? 0 : 1);
   }
 
   await writeFile(outPath, out);

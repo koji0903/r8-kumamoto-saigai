@@ -37,9 +37,9 @@ if($("#latest-title")){
 if($("#casualtySummary")){
   // 人的被害はライフラインの数値と並べず、独立した枠で示す
   $("#casualtySummary").innerHTML=
-    `<h3>人的被害</h3><div><p><span>死者</span><strong>${fmt(latest.stats.deaths)}<small>人</small></strong></p>`+
-    `<p><span>負傷者</span><strong>${fmt(latest.stats.injured)}<small>人</small></strong></p></div>`+
-    `<small>${dateLabel(latest.date)} 第${latest.meeting}回会議時点の県内合計。災害関連死の認定など、今後の調査により変動します。</small>`;
+    `<h3>人的被害</h3><div><p><span>人的被害（死亡を含む）</span><strong>${fmt(latest.stats.injured)}<small>人</small></strong></p>`+
+    `<p><span>うち死者</span><strong>${fmt(latest.stats.deaths)}<small>人</small></strong></p></div>`+
+    `<small>${dateLabel(latest.date)} 第${latest.meeting}回会議時点の県内合計。「人的被害」は死者を含む原資料の集計です。災害関連死の認定など、今後の調査により変動します。</small>`;
 }
 if($("#situationSnapshot")){
   const maxEvac=[...days].sort((a,b)=>b.stats.evacuees-a.stats.evacuees)[0],evacChange=latest.stats.evacuees-maxEvac.stats.evacuees;
@@ -77,10 +77,12 @@ if($("#priorityRegions")) $("#priorityRegions").innerHTML=priorityMunicipalities
 
 if($("#metricTabs")){
   let activeMetric="evacuees";
+  // 集計定義が変わった箇所では折れ線をつながない。前後の値は直接比較できない。
+  const metricBreakDates={outages:new Set(["2026-08-01"]),homes:new Set(["2026-08-03"])};
   const renderMetrics=()=>{$("#metricTabs").innerHTML=metrics.map(m=>`<button class="metric-button ${m.key===activeMetric?"active":""}" data-key="${m.key}" aria-pressed="${m.key===activeMetric}"><span>${m.label}</span><strong>${statDisplay(latest,m.key)}</strong>${latest.stats[m.key]==null?"":` ${m.unit}`}</button>`).join("");$$('.metric-button').forEach(b=>b.onclick=()=>{activeMetric=b.dataset.key;renderMetrics();renderChart()})};
   // 変化量の起点(baseIdx)は指標ごとに違う（住家被害は7/31〜、断水は8/3〜）。
   // 「記録開始比」だと全期間の変化に見えるので、比較の起点になった日を表示する。
-  const renderChart=()=>{const metric=metrics.find(m=>m.key===activeMetric),values=days.map(d=>d.stats[activeMetric]),valid=values.filter(v=>v!=null),max=Math.max(...valid)*1.12,W=1000,H=220,pad=22,pts=values.map((v,i)=>v==null?null:{x:pad+i*(W-pad*2)/(values.length-1),y:H-pad-(v/max)*(H-pad*2),v});const segs=[];let cur=[];pts.forEach(p=>{if(p)cur.push(p);else if(cur.length){segs.push(cur);cur=[]}});if(cur.length)segs.push(cur);$("#chart").innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><path d="M${pad} ${H-pad}H${W-pad}" stroke="#d9ded8"/>${segs.map(s=>`<polyline fill="none" stroke="${metric.color}" stroke-width="5" points="${s.map(p=>`${p.x},${p.y}`).join(' ')}"/>`).join('')}${pts.map(p=>p?`<g><circle cx="${p.x}" cy="${p.y}" r="7" fill="#fff" stroke="${metric.color}" stroke-width="4"/><text x="${p.x}" y="${p.y-16}" text-anchor="middle" font-size="13">${fmt(p.v)}</text></g>`:'').join('')}</svg>`;$("#chartDates").style.gridTemplateColumns=`repeat(${days.length},1fr)`;$("#chartDates").innerHTML=days.map(d=>`<span>${dateLabel(d.date,false)}</span>`).join('');$("#chartLabel").textContent=metric.label;$("#chartLatest").textContent=latest.stats[activeMetric]==null?statDisplay(latest,activeMetric):`${fmt(latest.stats[activeMetric])} ${metric.unit}`;const baseIdx=values.findIndex(v=>v!=null),diff=valid.at(-1)-valid[0];$("#chartChange").textContent=latest.stats[activeMetric]==null?"最新報告は定量値なし":`${dateLabel(days[baseIdx].date,false)}比 ${diff>0?"+":""}${fmt(diff)} ${metric.unit}`;if($("#trendTable"))$("#trendTable").innerHTML=`<table><thead><tr><th>会議日</th><th>会議</th><th>${metric.label}</th></tr></thead><tbody>${days.map(d=>`<tr><td>${dateLabel(d.date,false)}</td><td>第${d.meeting}回</td><td>${d.stats[activeMetric]==null?statDisplay(d,activeMetric):`${fmt(d.stats[activeMetric])} ${metric.unit}`}</td></tr>`).join('')}</tbody></table>`};
+  const renderChart=()=>{const metric=metrics.find(m=>m.key===activeMetric),values=days.map(d=>d.stats[activeMetric]),valid=values.filter(v=>v!=null),max=Math.max(...valid)*1.12,W=1000,H=220,pad=22,pts=values.map((v,i)=>v==null?null:{x:pad+i*(W-pad*2)/(values.length-1),y:H-pad-(v/max)*(H-pad*2),v});const segs=[];let cur=[];pts.forEach((p,i)=>{if(metricBreakDates[activeMetric]?.has(days[i].date)&&cur.length){segs.push(cur);cur=[]}if(p)cur.push(p);else if(cur.length){segs.push(cur);cur=[]}});if(cur.length)segs.push(cur);$("#chart").innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><path d="M${pad} ${H-pad}H${W-pad}" stroke="#d9ded8"/>${segs.map(s=>`<polyline fill="none" stroke="${metric.color}" stroke-width="5" points="${s.map(p=>`${p.x},${p.y}`).join(' ')}"/>`).join('')}${pts.map(p=>p?`<g><circle cx="${p.x}" cy="${p.y}" r="7" fill="#fff" stroke="${metric.color}" stroke-width="4"/><text x="${p.x}" y="${p.y-16}" text-anchor="middle" font-size="13">${fmt(p.v)}</text></g>`:'').join('')}</svg>`;$("#chartDates").style.gridTemplateColumns=`repeat(${days.length},1fr)`;$("#chartDates").innerHTML=days.map(d=>`<span>${dateLabel(d.date,false)}</span>`).join('');$("#chartLabel").textContent=metric.label;$("#chartLatest").textContent=latest.stats[activeMetric]==null?statDisplay(latest,activeMetric):`${fmt(latest.stats[activeMetric])} ${metric.unit}`;const baseIdx=values.findIndex(v=>v!=null),diff=valid.at(-1)-valid[0],hasDefinitionBreak=metricBreakDates[activeMetric]?.size;$("#chartChange").textContent=latest.stats[activeMetric]==null?"最新報告は定量値なし":hasDefinitionBreak?"定義変更箇所で折れ線を分割":`${dateLabel(days[baseIdx].date,false)}比 ${diff>0?"+":""}${fmt(diff)} ${metric.unit}`;if($("#trendTable"))$("#trendTable").innerHTML=`<table><thead><tr><th>会議日</th><th>会議</th><th>${metric.label}</th></tr></thead><tbody>${days.map(d=>`<tr><td>${dateLabel(d.date,false)}</td><td>第${d.meeting}回</td><td>${d.stats[activeMetric]==null?statDisplay(d,activeMetric):`${fmt(d.stats[activeMetric])} ${metric.unit}`}</td></tr>`).join('')}</tbody></table>`};
   renderMetrics();renderChart();
 }
 
@@ -92,6 +94,7 @@ if($("#timelineList")){
 }
 
 if($("#archive")) $("#archive").innerHTML=[...days].reverse().map(d=>`<a class="archive-row" href="${encodeURI(d.pdf)}" target="_blank" rel="noopener"><time datetime="${d.date}">${dateLabel(d.date,false)}</time><span>第${d.meeting}回</span><b>${d.headline}</b><i>PDFを開く ↗</i></a>`).join('');
+if($("#situationSource")) $("#situationSource").textContent=`出典：第${days[0].meeting}〜${latest.meeting}回 火の国会議資料。速報値を含み、調査・判定の進展で変動します。`;
 
 if($("#officialPrimary")){
   $("#officialPrimary").innerHTML=officialSources.map(s=>`<a class="official-card" href="${s.url}" target="_blank" rel="noopener"><span>${s.level}</span><h3>${s.name}</h3><p>${s.description}</p><b>公式サイトを開く ↗</b></a>`).join('');

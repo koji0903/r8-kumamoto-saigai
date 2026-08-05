@@ -17,6 +17,8 @@ if(root && MINUTES){
   const pdfHref = (m, page) => encodeURI(page ? `${m.pdf}#page=${page}` : m.pdf);
   const ordered = [...meetings].sort((a, b) => b.date.localeCompare(a.date));
   const latest = ordered[0];
+  const searchLabel = $("#minutesSearchLabel");
+  if(searchLabel) searchLabel.textContent = `${meetings.length}回分の議事録を横断検索`;
 
   // ---- 横断検索用のフラットな索引 -------------------------------------------
   // 1項目 = 1発言／1数値。どの回・どの議題・PDFの何ページから来たかを持たせる。
@@ -132,6 +134,7 @@ if(root && MINUTES){
           <p class="minutes-eyebrow">第${m.meeting}回 火の国会議 ／ 令和8年熊本地震 第${m.series}回</p>
           <h2>${dateLabel(m.date)} 18:00〜</h2>
           <p class="minutes-doc-meta"><span>発災${m.disasterDay}日目</span><span>${esc(attendanceText)}</span><span>全${m.pages}ページ</span></p>
+          ${m.attendanceNote ? `<p class="minutes-attendance-note">注：${esc(m.attendanceNote)}</p>` : ""}
           <p class="minutes-venue">${esc(m.venue)}</p>
         </div>
         <a class="minutes-pdf" href="${pdfHref(m)}" target="_blank" rel="noopener">議事録PDF全文 ↗</a>
