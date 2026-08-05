@@ -1,16 +1,16 @@
 // 熊本県災害対策本部会議「人的被害等の状況」の描画。
 //
-// hq-damage-data.js（生成物）を読み、市町村ごとの現在値・推移・罹災証明の日程を出す。
-// app.js とは疎結合にしてあり、このファイルや hq-damage-data.js が落ちても
-// 会議由来の情報（data.js）はそのまま表示される。
+// data/generated/hq-damage-data.js（生成物）を読み、市町村ごとの現在値・推移・罹災証明の日程を出す。
+// app.js とは疎結合にしてあり、このファイルや data/generated/hq-damage-data.js が落ちても
+// 会議由来の情報（data/report-data.js）はそのまま表示される。
 try{
 
 const HQ = window.HQ_DAMAGE;
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
 
 // ---- 災害対策本部会議の資料一覧（official.html） ------------------------------
-// 被害状況データ（hq-damage-data.js は152KB）を読まないページでも出せるよう、
-// カタログ（hq-index.js）だけで完結させる。
+// 被害状況データ（data/generated/hq-damage-data.js は152KB）を読まないページでも出せるよう、
+// カタログ（data/generated/hq-index.js）だけで完結させる。
 const indexHost = document.querySelector("#hqMeetingIndex");
 if(indexHost && window.HQ_INDEX){
   // よく参照される順に並べ、それ以外は資料の掲載順のまま

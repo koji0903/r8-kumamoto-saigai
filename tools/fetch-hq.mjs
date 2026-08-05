@@ -4,8 +4,8 @@
 //   node tools/fetch-hq.mjs
 //
 // 生成物
-//   source-files/official/hq-index.json   会議回ごとの資料カタログ（コミットする）
-//   source-files/official/hq/*.pdf        資料PDF本体（.gitignore 済み・コミットしない）
+//   sources/official/hq-index.json   会議回ごとの資料カタログ（コミットする）
+//   sources/official/hq/*.pdf        資料PDF本体（.gitignore 済み・コミットしない）
 //
 // PDFをリポジトリに入れないのは、全82件で約84MBあるためです。県の公開URLは
 // 添付ファイルIDで安定しているので、サイトからは県のURLへ直接リンクしています。
@@ -17,7 +17,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const INDEX_URL = "https://www.pref.kumamoto.jp/soshiki/222/274487.html";
 const ORIGIN = "https://www.pref.kumamoto.jp";
-const OUT_DIR = join(ROOT, "source-files/official");
+const OUT_DIR = join(ROOT, "sources/official");
 const PDF_DIR = join(OUT_DIR, "hq");
 const UA = "Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.0; +https://github.com/koji0903/r8-kumamoto-saigai)";
 
@@ -71,7 +71,7 @@ const catalog = { source: INDEX_URL, retrievedAt: new Date().toISOString(), meet
 await writeFile(join(OUT_DIR, "hq-index.json"), JSON.stringify(catalog, null, 2) + "\n");
 
 // official.html が資料一覧を出すために読む（生成物・直接編集しない）
-await writeFile(join(ROOT, "hq-index.js"),
+await writeFile(join(ROOT, "data/generated/hq-index.js"),
   "// 生成物・直接編集しない。生成: node tools/fetch-hq.mjs\n"
   + "window.HQ_INDEX = " + JSON.stringify({
       source: catalog.source, retrievedAt: catalog.retrievedAt,
@@ -94,4 +94,4 @@ for (const meeting of meetings) {
 
 console.log(`会議 ${meetings.length}回 / 資料 ${total}件`);
 console.log(`  取得 ${fetched}件、既存 ${skipped}件 → ${PDF_DIR}`);
-console.log(`  カタログ → source-files/official/hq-index.json`);
+console.log(`  カタログ → sources/official/hq-index.json`);

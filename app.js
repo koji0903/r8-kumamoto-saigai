@@ -1,4 +1,4 @@
-// data.js は日々手で編集する。構文エラーや読み込み失敗で全ページが白紙になるのを避けるため、
+// data/report-data.js は日々手で編集する。構文エラーや読み込み失敗で全ページが白紙になるのを避けるため、
 // 描画全体を try で囲み、失敗したら公式サイトへの導線を出して知らせる。
 const showDataError=err=>{
   console.error("[火の国レポート] データの読み込み・描画に失敗しました",err);
@@ -48,7 +48,7 @@ if(topNotice) topNotice.innerHTML=`<b>火の国会議の生の現場情報を軸
 
 // メインメニューは各HTMLに静的に置いてある（JS無効でも動く）。ここでは組み立てない。
 
-// 最終更新は、火の国会議（data.js）と県災害対策本部会議（hq-latest.js）の新しいほう。
+// 最終更新は、火の国会議（data/report-data.js）と県災害対策本部会議（data/generated/hq-latest.js）の新しいほう。
 // 県の資料は1日2回出るため会議記録より先行することがある。
 if($("#updated")){
   const hqDate=window.HQ_LATEST?.date;
@@ -69,7 +69,7 @@ if($("#casualtySummary")){
 }
 if($("#situationSnapshot")){
   const maxEvac=[...days].sort((a,b)=>b.stats.evacuees-a.stats.evacuees)[0],evacChange=latest.stats.evacuees-maxEvac.stats.evacuees;
-  // 断水の内訳自治体は data.js の waterOutageAreas から出す（記載を忘れた日は範囲を断定しない）
+  // 断水の内訳自治体は data/report-data.js の waterOutageAreas から出す（記載を忘れた日は範囲を断定しない）
   const waterAreas=latest.stats.waterOutageAreas;
   const waterAreaNote=waterAreas?.length
     ? `${waterAreas.map(n=>n.replace(/[市町村]$/,"")).join("・")}の${waterAreas.length}${[...new Set(waterAreas.map(n=>n.slice(-1)))].join("")}合計`

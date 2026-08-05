@@ -43,12 +43,15 @@
 ├── official.html         公的情報リンク集
 ├── meetings.html         議事録ビューア（回ごとの全文 + 横断検索 + PDF一覧）
 │
-├── data.js               会議由来の集計データ（手編集）※ 更新の中心
-├── minutes-data.js       議事録の構造化データ（手編集）※ 更新の中心
-├── hq-damage-data.js     県の市町村別被害状況（自動生成）※ index / municipalities のみ読む
-├── hq-latest.js          県資料の最新時点だけ（自動生成・軽量）※ 全ページが読む
-├── hq-index.js           本部会議の資料カタログ（自動生成）※ official のみ読む
-├── shelters-data.js      避難所データ（自動生成・直接編集しない）
+├── data/                  サイトが読む整理済みデータ
+│   ├── report-data.js       会議由来の集計データ（手編集）※ 更新の中心
+│   ├── minutes-data.js      議事録の構造化データ（手編集）※ 更新の中心
+│   ├── shelter-supplements.json  避難所ごとの会議補足（手編集）
+│   └── generated/           取得・抽出処理で作るデータ（直接編集しない）
+│       ├── hq-damage-data.js  県の市町村別被害状況
+│       ├── hq-latest.js       県資料の最新時点
+│       ├── hq-index.js        本部会議の資料カタログ
+│       └── shelters-data.js   開設中避難所データ
 ├── app.js                共通描画ロジック（全ページで読み込み）
 ├── minutes.js            議事録ビューア専用
 ├── hq.js                 県公式データの描画（自治体別・トップ・公的情報）
@@ -58,16 +61,17 @@
 │
 ├── tools/
 │   ├── fetch-hq.mjs              県の本部会議ページ → 資料PDFとカタログの取得
-│   ├── build-hq-damage.py        被害状況PDF → hq-damage-data.js の生成（要 PyMuPDF）
-│   ├── build-shelters.mjs        県公式JSON → shelters-data.js の生成
-│   └── shelter-supplements.json  避難所ごとの会議補足（手編集）
+│   ├── build-hq-damage.py        被害状況PDF → data/generated/hq-damage-data.js の生成（要 PyMuPDF）
+│   └── build-shelters.mjs        県公式JSON → data/generated/shelters-data.js の生成
 │
-├── source-files/official/  取得した県公式データの生ファイル（保存用・改変しない）
-│   ├── hq-index.json         本部会議の資料カタログ
-│   ├── hq-damage/*.json      被害状況の抽出結果（PDFが手元になくても中身を追える）
-│   └── hq/                   資料PDF本体（.gitignore 済み・コミットしない）
+├── sources/               参照した一次資料の保存場所
+│   ├── hinokuni-meetings/   火の国会議の原本PDF（公開・参照用）
+│   └── official/            熊本県公式サイトから取得した原データ
+│       ├── hq-index.json      本部会議の資料カタログ
+│       ├── hq-damage/*.json   被害状況の抽出結果
+│       └── hq/                県資料PDF本体（.gitignore 済み）
 ├── vendor/leaflet/         Leaflet 同梱（CDN に依存しない）
-└── *.pdf                   火の国会議 議事録の原本
+└── tmp/                    抽出途中の画像・テキスト（.gitignore 済み）
 ```
 
 ビルド・パッケージ依存はありません。リポジトリをそのまま静的ホスティングに置けば動作します。公開前のデータ検査スクリプトを同梱しています。ローカル確認は任意のHTTPサーバで。
@@ -91,11 +95,11 @@ node tools/build-shelters.mjs --check
 
 ### 1. 議事録PDFを追加する
 
-その日の火の国会議PDFをリポジトリ直下に置きます。ファイル名は `YYYYMMDD火の国会議NNN回.pdf` の形式に揃えてください。
+その日の火の国会議PDFを `sources/hinokuni-meetings/` に置きます。ファイル名は `YYYYMMDD火の国会議NNN回.pdf` の形式に揃えてください。
 
-> 既存の `20260729火の国会議.pdf`（第492回）だけは回数が入っていません。公開済みURLが変わるため、意図的に改名していません。新規ファイルは必ず回数を含めてください。
+> 既存の `sources/hinokuni-meetings/20260729火の国会議.pdf`（第492回）だけは、受領時のファイル名を保つため回数が入っていません。新規ファイルは必ず回数を含めてください。
 
-### 2. `data.js` を更新する
+### 2. `data/report-data.js` を更新する
 
 `window.REPORT_DATA` の各配列に追記します。編集対象は主に以下です。
 
@@ -111,7 +115,7 @@ node tools/build-shelters.mjs --check
 ```js
 {
   date: "2026-08-04", meeting: 498, disasterDay: 8, attendees: 180,
-  pdf: "20260804火の国会議498回.pdf",
+  pdf: "sources/hinokuni-meetings/20260804火の国会議498回.pdf",
   areas: ["宇土市", "宇城市"],          // 議事録で言及された自治体
   stats: {
     injured: 161, deaths: 38,           // 人的被害
@@ -135,14 +139,14 @@ node tools/build-shelters.mjs --check
 - 集計定義が前日と変わったら、必ず `note` に書きます。グラフは同じ線で繋がってしまうため、注記がないと読み手が誤読します。
 - `municipalEvents[]` / `supportEvents[]` には `page` を必ず入れます。PDFの該当ページに直接リンクするために使います。
 
-### 3. `minutes-data.js` を更新する
+### 3. `data/minutes-data.js` を更新する
 
-議事録の中身そのものを載せるファイルです。`data.js` が「数値と要約」なのに対し、こちらは**議事次第の構造をそのまま**持ちます。`meetings[]` の末尾に1件追記します。
+議事録の中身そのものを載せるファイルです。`data/report-data.js` が「数値と要約」なのに対し、こちらは**議事次第の構造をそのまま**持ちます。`meetings[]` の末尾に1件追記します。
 
 ```js
 {
   meeting: 498, date: "2026-08-04", disasterDay: 8, series: 7, pages: 13,
-  pdf: "20260804火の国会議498回.pdf",
+  pdf: "sources/hinokuni-meetings/20260804火の国会議498回.pdf",
   venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
   attendance: { onsite: 25, online: null, total: null },   // 記載がない欄は null
   orgs: ["熊本県社協", "ソナエトコ", …],                    // 【参加団体】をそのまま
@@ -204,13 +208,13 @@ node tools/build-shelters.mjs --check
 node tools/fetch-hq.mjs
 ```
 
-県の掲載ページから資料PDFを取得し、カタログ（`source-files/official/hq-index.json` と `hq-index.js`）を書き出します。取得済みのPDFは再取得しません。
+県の掲載ページから資料PDFを取得し、カタログ（`sources/official/hq-index.json` と `data/generated/hq-index.js`）を書き出します。取得済みのPDFは再取得しません。
 
 ```bash
 python3 tools/build-hq-damage.py
 ```
 
-「人的被害等の状況」PDFの表を読み、`hq-damage-data.js` / `hq-latest.js` と、抽出結果の保存（`source-files/official/hq-damage/*.json`）を生成します。
+「人的被害等の状況」PDFの表を読み、`data/generated/hq-damage-data.js` / `data/generated/hq-latest.js` と、抽出結果の保存（`sources/official/hq-damage/*.json`）を生成します。
 
 **PDF本体はコミットしません。** 全82件で約84MBあるためです。県の添付ファイルURLは安定しているので、サイトからは県のURLへ直接リンクしています。抽出結果のJSONはコミットするので、PDFが手元になくても中身は追えます。
 
@@ -234,23 +238,23 @@ python3 tools/build-hq-damage.py
 
 ```bash
 curl -sS "https://portal.bousai.pref.kumamoto.jp/data/shelter/shelter.json" \
-  -o "source-files/official/kumamoto-open-shelters-$(date +%Y%m%d-%H%M).json"
+  -o "sources/official/kumamoto-open-shelters-$(date +%Y%m%d-%H%M).json"
 ```
 
 ```bash
 node tools/build-shelters.mjs
 ```
 
-引数なしで実行すると `source-files/official/` 内で最も新しい `kumamoto-open-shelters-*.json` を選び、`shelters-data.js` を上書きします。ファイルを明示することもできます。
+引数なしで実行すると `sources/official/` 内で最も新しい `kumamoto-open-shelters-*.json` を選び、`data/generated/shelters-data.js` を上書きします。ファイルを明示することもできます。
 
 ```bash
-node tools/build-shelters.mjs source-files/official/kumamoto-open-shelters-20260805-1156.json
+node tools/build-shelters.mjs sources/official/kumamoto-open-shelters-20260805-1156.json
 ```
 
 **抽出条件**（スクリプト内で完結）
 
 - `shelterStartTimestamp` があり、`shelterEndTimestamp` が空欄 = 開設中
-- かつ `data.js` の `municipalities[]` に載っている21市町村のもの
+- かつ `data/report-data.js` の `municipalities[]` に載っている21市町村のもの
 
 取得時刻はファイル名の `YYYYMMDD-HHMM` から読み取り、`metadata.retrievedAt` としてサイト上に「取得 ◯月◯日 ◯時◯分」と表示されます。**ファイル名の時刻は取得した実時刻にしてください。** 秒まで指定したい場合は `--retrieved-at=2026-08-05T11:56:22+09:00` を渡します（表示は分までなので通常は不要）。
 
@@ -260,25 +264,25 @@ node tools/build-shelters.mjs source-files/official/kumamoto-open-shelters-20260
 node tools/build-shelters.mjs --check
 ```
 
-補足IDの誤り、緯度経度の欠損、開設中0件などはスクリプトが警告・中断します。`shelters-data.js` は生成物なので、直接編集しても次回の生成で消えます。
+補足IDの誤り、緯度経度の欠損、開設中0件などはスクリプトが警告・中断します。`data/generated/shelters-data.js` は生成物なので、直接編集しても次回の生成で消えます。
 
 ### 6. 避難所への会議補足を足す（任意）
 
-議事録に施設名が明記された報告があれば、`tools/shelter-supplements.json` に追記します。県の施設ID（`facilityId`）をキーにします。
+議事録に施設名が明記された報告があれば、`data/shelter-supplements.json` に追記します。県の施設ID（`facilityId`）をキーにします。
 
 ```json
 {
   "00002252": [
     {
       "date": "2026-08-01", "meeting": 495, "page": 12,
-      "pdf": "20260801火の国会議495回.pdf",
+      "pdf": "sources/hinokuni-meetings/20260801火の国会議495回.pdf",
       "text": "避難中の猫4匹について、飼い主が片付けに行く間の預かり支援ニーズを報告。"
     }
   ]
 }
 ```
 
-施設IDは生成済みの `shelters-data.js` を施設名で検索すると分かります。存在しないIDを書いた場合は生成時に警告が出ます。
+施設IDは生成済みの `data/generated/shelters-data.js` を施設名で検索すると分かります。存在しないIDを書いた場合は生成時に警告が出ます。
 
 ### 7. 確認してコミット
 
@@ -313,16 +317,16 @@ favicon は `favicon.png`（32px）と `apple-touch-icon.png`（180px）です�
 ## 既知の制約と運用上の注意
 
 - **JavaScript が必要です。** 統計・一覧・地図はすべてクライアント側で描画します。JS が無効な環境では各ページの `noscript` から公式サイトへ誘導する構成になっています。
-- **`data.js` に構文エラーがあると全ページのJSが止まります。** 更新後は必ずブラウザのコンソールを確認してください（`app.js` は読み込み失敗時にページ上部へ警告を出します）。`minutes-data.js` の構文エラーは議事録ビューアだけを止め、他ページには波及しません（`minutes.js` が独立して try で囲んでいます）。文法チェックだけなら次のコマンドでできます。
+- **`data/report-data.js` に構文エラーがあると全ページのJSが止まります。** 更新後は必ずブラウザのコンソールを確認してください（`app.js` は読み込み失敗時にページ上部へ警告を出します）。`data/minutes-data.js` の構文エラーは議事録ビューアだけを止め、他ページには波及しません（`minutes.js` が独立して try で囲んでいます）。文法チェックだけなら次のコマンドでできます。
 
 ```bash
-node -e "global.window={};require('./minutes-data.js');console.log(window.MINUTES_DATA.meetings.length+'回')"
+node -e "global.window={};require('./data/minutes-data.js');console.log(window.MINUTES_DATA.meetings.length+'回')"
 ```
 
 - **避難所データは取得時点のスナップショットです。** 開設状況は随時変わるため、サイト上でも「支援活動前に再確認」を明示しています。
 - **`index.html` の「開設中◯件」と会議資料の「避難所◯か所」は一致しません。** 出所（県の施設データ / 会議報告）と時点が異なるためで、それぞれ別の数値として扱っています。
-- **県資料の集計定義は途中で変わります。** 停電は「戸数」→「事故受付数」→ 列そのものが消滅、住家被害は「判定分」→「推定値」と変化しています。グラフや推移は同じ線でつながってしまうため、`data.js` の `note` と各ページの注記で明示しています。値が取れない時点はサイト上でも線を切って、0 と区別しています。
-- **県資料PDFはリポジトリに入れていません。** 県の公開ページが変わるとリンク切れになります。抽出結果は `source-files/official/hq-damage/` に残るので数値は追えますが、原本の保全が必要になった場合は取得方針の見直しが要ります。
+- **県資料の集計定義は途中で変わります。** 停電は「戸数」→「事故受付数」→ 列そのものが消滅、住家被害は「判定分」→「推定値」と変化しています。グラフや推移は同じ線でつながってしまうため、`data/report-data.js` の `note` と各ページの注記で明示しています。値が取れない時点はサイト上でも線を切って、0 と区別しています。
+- **県資料PDFはリポジトリに入れていません。** 県の公開ページが変わるとリンク切れになります。抽出結果は `sources/official/hq-damage/` に残るので数値は追えますが、原本の保全が必要になった場合は取得方針の見直しが要ります。
 - **議事録PDFの容量。** 1日あたり約800KB がリポジトリ履歴に積み上がります（2026年8月時点で計5.7MB）。長期運用する場合は Git LFS への移行、または別ストレージへの退避を検討してください。公開済みURLが変わる作業なので、移行時はリダイレクトの用意が必要です。
 
 ---

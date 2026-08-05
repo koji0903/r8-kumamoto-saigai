@@ -1,5 +1,5 @@
 // 議事録ビューア（meetings.html 専用）
-// minutes-data.js の構造をそのまま描画する。data.js とは独立して動く。
+// data/minutes-data.js の構造をそのまま描画する。data/report-data.js とは独立して動く。
 try{
 
 const MINUTES = window.MINUTES_DATA;

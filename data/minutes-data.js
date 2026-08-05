@@ -35,7 +35,7 @@ window.MINUTES_DATA = {
   meetings: [
     {
       meeting: 492, date: "2026-07-29", disasterDay: 2, series: 1, pages: 10,
-      pdf: "20260729火の国会議.pdf",
+      pdf: "sources/hinokuni-meetings/20260729火の国会議.pdf",
       venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
       attendance: { onsite: 37, online: 462, total: 499 },
       orgs: ["熊本県社協", "熊本市社協", "minori", "熊本県建築士会宇城支部", "Anchor", "IT DART", "熊本YMCA", "熊本学園大（向井）", "動物支援ナース熊本県支部", "れんげ国際ボランティア会", "あらいぐま人吉", "でんでん虫の会", "日本青年会議所", "Fラボ", "SPF", "Camp", "九州テクニカルネットワーク（災害NGO結）", "災害救援レスキューアシスト", "JWORKS CAREER", "日本サッカー協会", "危機管理教育研究所", "カタリバ", "ROJE", "日本レスキュー協会", "JVOAD", "バルビー", "KVOAD"],
@@ -214,7 +214,7 @@ window.MINUTES_DATA = {
     },
     {
       meeting: 493, date: "2026-07-30", disasterDay: 3, series: 2, pages: 11,
-      pdf: "20260730火の国会議493回.pdf",
+      pdf: "sources/hinokuni-meetings/20260730火の国会議493回.pdf",
       venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
       attendance: { onsite: 29, online: 244, total: 253 },
       attendanceNote: "原資料は現地参加29人、Online 244人、合計253人と記載しており、内訳の算術合計と一致しません。本サイトでは推測で訂正せず、原資料の記載をそのまま掲載しています。",
@@ -408,7 +408,7 @@ window.MINUTES_DATA = {
     },
     {
       meeting: 494, date: "2026-07-31", disasterDay: 4, series: 3, pages: 10,
-      pdf: "20260731火の国会議494回.pdf",
+      pdf: "sources/hinokuni-meetings/20260731火の国会議494回.pdf",
       venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
       attendance: { onsite: 17, online: null, total: null },
       orgs: ["熊本県社協", "熊本県建築士会宇城支部", "傾聴ネットキーステーション", "まごころ葬祭扶助サポートステーション", "ソナエトコ", "ペット防災ネットワーク", "大分県災害支援O-Link", "でんでん虫の会", "動物支援ナース熊本県支部", "あいらの里", "ピースボート災害支援センター", "JVOAD", "バルビー", "KVOAD"],
@@ -599,7 +599,7 @@ window.MINUTES_DATA = {
     },
     {
       meeting: 495, date: "2026-08-01", disasterDay: 5, series: 4, pages: 14,
-      pdf: "20260801火の国会議495回.pdf",
+      pdf: "sources/hinokuni-meetings/20260801火の国会議495回.pdf",
       venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
       attendance: { onsite: 24, online: 186, total: 210 },
       orgs: ["熊本県社協", "熊本県建築士会宇城支部", "傾聴ネットキーステーション", "O-Link", "復興支援福岡", "まごころ葬祭扶助サポート", "あらいぐま人吉", "宇土市防災士会", "九州フィナンシャルグループ", "はままつna net", "しずおか茶の国会議", "ソナエトコ", "YNF", "グッドネイバーズ・ジャパン", "熊本YMCA", "熊本学園大（向井）", "JVOAD", "バルビー", "KVOAD"],
@@ -782,7 +782,7 @@ window.MINUTES_DATA = {
     },
     {
       meeting: 496, date: "2026-08-02", disasterDay: 6, series: 5, pages: 14,
-      pdf: "20260802火の国会議496回.pdf",
+      pdf: "sources/hinokuni-meetings/20260802火の国会議496回.pdf",
       venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
       attendance: { onsite: 35, online: 159, total: 194 },
       orgs: ["熊本県社協", "熊本県建築士会宇城支部", "動物支援ナース熊本県支部", "ソナエトコ", "復興支援福岡", "傾聴ネットキーステーション", "まごころ葬祭扶助サポート", "あらいぐま人吉", "災害支援団体Team Ozaki", "ひのくにスマイルプロジェクト", "ピースボート災害支援センター（PBV）", "ソーシャルデザインワークス", "おおいた災害支援つなぐネットワーク(O-Link)", "プラン・インターナショナル・ジャパン", "SeRV", "IT DART", "カインズ", "日本青年会議所", "全国フードバンク推進協議会", "朝日新聞社", "ユナイテッド・アース", "JVOAD", "バルビー", "KVOAD"],
@@ -1014,7 +1014,7 @@ window.MINUTES_DATA = {
     },
     {
       meeting: 497, date: "2026-08-03", disasterDay: 7, series: 6, pages: 15,
-      pdf: "20260803火の国会議497回.pdf",
+      pdf: "sources/hinokuni-meetings/20260803火の国会議497回.pdf",
       venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
       attendance: { onsite: 26, online: 232, total: 258 },
       orgs: ["熊本県社協", "熊本県建築士会宇城支部", "傾聴ネットキーステーション", "まごころ葬祭扶助サポート", "ペット防災ネットワーク", "きょうされん熊本支部", "IT DART", "ソナエトコ", "あらいぐま人吉", "熊本YMCA", "プラン・インターナショナル・ジャパン", "助けあいジャパン", "九州テクニカルネットワーク（災害NGO結）", "ピースボート災害支援センター", "JVOAD", "バルビー", "KVOAD"],
@@ -1237,7 +1237,7 @@ window.MINUTES_DATA = {
     },
     {
       meeting: 498, date: "2026-08-04", disasterDay: 8, series: 7, pages: 13,
-      pdf: "20260804火の国会議498回.pdf",
+      pdf: "sources/hinokuni-meetings/20260804火の国会議498回.pdf",
       venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
       attendance: { onsite: 25, online: null, total: null },
       orgs: ["熊本県社協", "ソナエトコ", "あらいぐま人吉", "生協くまもと", "よか隊ネット熊本", "傾聴ネットキーステーション", "でんでん虫の会", "熊本・生と死を考える会", "YNF", "熊本県建築士会宇城支部", "minori", "宇土市防災士会", "IT DART", "宗像平井組", "FNV", "熊本DWAT", "熊本YMCA", "東京YMCA", "日本YMCA同盟", "N-NET", "日本財団", "JVOAD", "バルビー", "KVOAD"],
@@ -1448,7 +1448,7 @@ window.MINUTES_DATA = {
     },
     {
       meeting: 499, date: "2026-08-05", disasterDay: 9, series: 8, pages: 14,
-      pdf: "20260805火の国会議499回.pdf",
+      pdf: "sources/hinokuni-meetings/20260805火の国会議499回.pdf",
       venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
       attendance: { onsite: 18, online: 199, total: 217 },
       orgs: ["熊本県社協", "生協くまもと", "あらいぐま人吉", "ソナエトコ", "熊本県建築士会宇城支部", "IT DART", "全社協", "N-NET", "いのりんジャパン", "寺子屋カフェくまもと", "熊本YMCA", "Jump", "JVOAD", "バルビー", "KVOAD"],

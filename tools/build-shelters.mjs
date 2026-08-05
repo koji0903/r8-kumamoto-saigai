@@ -1,22 +1,22 @@
 #!/usr/bin/env node
-// 熊本県「防災情報くまもと」の避難所JSONから shelters-data.js を生成する。
+// 熊本県「防災情報くまもと」の避難所JSONから data/generated/shelters-data.js を生成する。
 //
 //   node tools/build-shelters.mjs
-//   node tools/build-shelters.mjs source-files/official/kumamoto-open-shelters-20260805-1156.json
+//   node tools/build-shelters.mjs sources/official/kumamoto-open-shelters-20260805-1156.json
 //   node tools/build-shelters.mjs --check          … 上書きせず差分の有無だけ確認
 //   node tools/build-shelters.mjs --retrieved-at=2026-08-05T11:56:22+09:00
 //
-// 抽出条件: 開設日時があり閉鎖日時が空欄（＝開設中）で、data.js の対象21市町村に属する施設。
-// 施設ごとの会議補足は tools/shelter-supplements.json（手編集）から取り込む。
+// 抽出条件: 開設日時があり閉鎖日時が空欄（＝開設中）で、data/report-data.js の対象21市町村に属する施設。
+// 施設ごとの会議補足は data/shelter-supplements.json（手編集）から取り込む。
 
 import { readFile, writeFile, readdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const officialDir = path.join(root, "source-files", "official");
-const outPath = path.join(root, "shelters-data.js");
-const supplementsPath = path.join(root, "tools", "shelter-supplements.json");
+const officialDir = path.join(root, "sources", "official");
+const outPath = path.join(root, "data", "generated", "shelters-data.js");
+const supplementsPath = path.join(root, "data", "shelter-supplements.json");
 
 const SOURCE_NAME = "熊本県「防災情報くまもと」避難所情報";
 const SOURCE_URL = "https://portal.bousai.pref.kumamoto.jp/?p=evacuation/shelter";
@@ -53,13 +53,13 @@ const resolveRetrievedAt = file => {
   return `${y}-${mo}-${d}T${h}:${mi}:00+09:00`;
 };
 
-// --- data.js から対象21市町村を読む（名簿を二重管理しないため） ---
+// --- data/report-data.js から対象21市町村を読む（名簿を二重管理しないため） ---
 const loadMunicipalities = async () => {
-  const src = await readFile(path.join(root, "data.js"), "utf8");
+  const src = await readFile(path.join(root, "data/report-data.js"), "utf8");
   const shim = {};
   new Function("window", src)(shim);
   const list = shim.REPORT_DATA?.municipalities;
-  if (!Array.isArray(list) || !list.length) die("data.js から municipalities を読み取れませんでした。");
+  if (!Array.isArray(list) || !list.length) die("data/report-data.js から municipalities を読み取れませんでした。");
   return new Set(list.map(m => m.name));
 };
 
@@ -162,13 +162,13 @@ const main = async () => {
 
   if (check) {
     console.log(summary);
-    console.log(sameContent ? "\nshelters-data.js は最新です。" : "\nshelters-data.js に差分があります（--check なので書き込んでいません）。");
+    console.log(sameContent ? "\ndata/generated/shelters-data.js は最新です。" : "\ndata/generated/shelters-data.js に差分があります（--check なので書き込んでいません）。");
     process.exit(sameContent ? 0 : 1);
   }
 
   await writeFile(outPath, out);
   console.log(summary);
-  console.log(before === out ? "\nshelters-data.js は変更なし。" : `\nshelters-data.js を更新しました（${out.length.toLocaleString("ja-JP")} バイト）。`);
+  console.log(before === out ? "\ndata/generated/shelters-data.js は変更なし。" : `\ndata/generated/shelters-data.js を更新しました（${out.length.toLocaleString("ja-JP")} バイト）。`);
 };
 
 main();

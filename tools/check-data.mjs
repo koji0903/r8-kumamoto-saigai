@@ -24,9 +24,9 @@ const unique = (rows, key, label) => {
   }
 };
 
-const report = await loadWindowData("data.js", "REPORT_DATA");
-const minutes = await loadWindowData("minutes-data.js", "MINUTES_DATA");
-const shelters = await loadWindowData("shelters-data.js", "SHELTER_DATA");
+const report = await loadWindowData("data/report-data.js", "REPORT_DATA");
+const minutes = await loadWindowData("data/minutes-data.js", "MINUTES_DATA");
+const shelters = await loadWindowData("data/generated/shelters-data.js", "SHELTER_DATA");
 const shelterAgeHours = (Date.now() - new Date(shelters.metadata.retrievedAt).getTime()) / 36e5;
 if (shelterAgeHours > 6) warnings.push(`避難所データの取得から${Math.floor(shelterAgeHours)}時間経過。公開前に県公式JSONを再取得してください`);
 const municipalityNames = new Set(report.municipalities.map(m => m.name));
@@ -44,7 +44,7 @@ for (const day of report.days) {
   const minutesDay = minutes.meetings.find(m => m.meeting === day.meeting);
   if (!minutesDay) errors.push(`構造化議事録がない: 第${day.meeting}回`);
   if (minutesDay && minutesDay.date !== day.date) errors.push(`日付不一致: 第${day.meeting}回`);
-  const officialFile = `source-files/official/hq-damage/${day.date.replaceAll("-", "")}-1400.json`;
+  const officialFile = `sources/official/hq-damage/${day.date.replaceAll("-", "")}-1400.json`;
   if (await exists(officialFile)) {
     const official = JSON.parse(await readFile(path.join(root, officialFile), "utf8"));
     const homes = official.totals.homesTotal ?? official.totals.homes;

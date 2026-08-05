@@ -3,13 +3,13 @@
 #
 #   python3 tools/build-hq-damage.py
 #
-# 前提: tools/fetch-hq.mjs を先に実行して source-files/official/hq/*.pdf を揃えておく。
+# 前提: tools/fetch-hq.mjs を先に実行して sources/official/hq/*.pdf を揃えておく。
 # 依存: PyMuPDF（pip install pymupdf）。サイト本体には依存パッケージはなく、
 #       この抽出工程だけがPDFの表を読むために必要とする。
 #
 # 生成物
-#   source-files/official/hq-damage/*.json  抽出結果の保存（コミットする）
-#   hq-damage-data.js                       サイトが読むデータ（生成物・直接編集しない）
+#   sources/official/hq-damage/*.json  抽出結果の保存（コミットする）
+#   data/generated/hq-damage-data.js       サイトが読むデータ（生成物・直接編集しない）
 #
 # 列構成は日によって変わる（初期は停電列があり住家被害は1列、8/1以降は住家被害が
 # 内訳に分かれ停電列が消える）。そのためヘッダー行のラベルから毎回対応づける。
@@ -23,11 +23,11 @@ except ImportError:
     sys.exit("PyMuPDF が必要です:  pip install pymupdf")
 
 ROOT = Path(__file__).resolve().parent.parent
-INDEX = ROOT / "source-files/official/hq-index.json"
-PDF_DIR = ROOT / "source-files/official/hq"
-ARCHIVE = ROOT / "source-files/official/hq-damage"
-OUT = ROOT / "hq-damage-data.js"
-OUT_LATEST = ROOT / "hq-latest.js"
+INDEX = ROOT / "sources/official/hq-index.json"
+PDF_DIR = ROOT / "sources/official/hq"
+ARCHIVE = ROOT / "sources/official/hq-damage"
+OUT = ROOT / "data/generated/hq-damage-data.js"
+OUT_LATEST = ROOT / "data/generated/hq-latest.js"
 
 # 45市町村。PDFの行順そのまま（県北→阿蘇→上益城→県南→天草）。
 MUNICIPALITIES = [
@@ -234,7 +234,7 @@ def main():
         "metadata": {
             "source": index["source"],
             "sourceName": "熊本県 災害対策本部会議",
-            "generatedFrom": "source-files/official/hq/*.pdf",
+            "generatedFrom": "sources/official/hq/*.pdf",
             "latest": {"date": latest["date"], "time": latest["time"],
                        "meeting": latest["meeting"], "govMeeting": latest["govMeeting"],
                        "url": latest["sourceUrl"]},
