@@ -27,7 +27,7 @@ if($("#sectionLinks")){
   const links=[
     ["時系列で見る","日々の被害と支援の変化","timeline.html","日"],
     ["自治体別に見る","21市町村ごとの確認情報","municipalities.html","市"],
-    ["避難所マップ","指定避難所886件を地図で検索","shelters.html","避"],
+    ["稼働避難所マップ","県公式で開設中の避難所を確認","shelters.html","避"],
     ["支援分野で見る","物資・住まい・福祉など","support.html","支"],
     ["公的情報を見る","国・県・市町村の公式発表","official.html","公"],
     ["議事録を見る","すべての原資料PDF","meetings.html","録"]
