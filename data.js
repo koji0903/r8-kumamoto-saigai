@@ -233,7 +233,7 @@ window.REPORT_DATA = {
       date: "2026-08-04", meeting: 498, disasterDay: 8,
       pdf: "20260804火の国会議498回.pdf",
       areas: ["熊本市", "八代市", "宇土市", "宇城市", "美里町", "御船町", "嘉島町", "益城町", "甲佐町", "氷川町", "芦北町"],
-      stats: { injured: 161, deaths: 38, evacuees: 7646, shelters: 146, outages: null, outageStatus: "おおむね解消", homes: 13393, waterOutages: 44380 },
+      stats: { injured: 161, deaths: 38, evacuees: 7646, shelters: 146, outages: null, outageStatus: "おおむね解消", homes: 13393, waterOutages: 44380, waterOutageAreas: ["宇城市", "甲佐町", "八代市", "氷川町"] },
       topics: ["被害", "避難", "断水", "住まい", "宿泊", "ボランティア"],
       headline: "停電はおおむね解消、応急住宅整備へ",
       summary: "停電はおおむね解消し、避難者は7,646人まで減少。一方で断水は44,380戸で続き、ホテル避難、応急住宅、災害ボランティア活動が本格化しています。",
