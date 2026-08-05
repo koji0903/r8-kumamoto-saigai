@@ -159,6 +159,7 @@ window.REPORT_DATA = {
     { key: "evacuees", label: "避難者", unit: "人", color: "#e45e35" },
     { key: "shelters", label: "避難所", unit: "か所", color: "#d39b2b" },
     { key: "outages", label: "停電・受付", unit: "件／戸", color: "#3b8a78" },
+    { key: "waterOutages", label: "断水", unit: "戸", color: "#2d79a8" },
     { key: "homes", label: "住家被害（把握・推定）", unit: "棟", color: "#6577a6" }
   ],
   days: [

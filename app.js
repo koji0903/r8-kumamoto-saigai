@@ -4,7 +4,7 @@ const priorityMunicipalities=["宇土市","宇城市","氷川町","八代市"];
 const municipalityRank=name=>{const i=priorityMunicipalities.indexOf(name);return i<0?99:i};
 const orderedMunicipalities=[...municipalities].sort((a,b)=>municipalityRank(a.name)-municipalityRank(b.name)||a.name.localeCompare(b.name,"ja"));
 const fmt=n=>n==null?"調査中":n.toLocaleString("ja-JP");
-const statDisplay=(day,key)=>key==="outages"&&day.stats.outageStatus?day.stats.outageStatus:fmt(day.stats[key]);
+const statDisplay=(day,key)=>key==="outages"&&day.stats.outageStatus?day.stats.outageStatus:key==="waterOutages"&&day.stats[key]==null?"資料記載なし":fmt(day.stats[key]);
 const dateLabel=(iso,full=true)=>new Intl.DateTimeFormat("ja-JP",full?{year:"numeric",month:"long",day:"numeric",weekday:"short"}:{month:"numeric",day:"numeric"}).format(new Date(`${iso}T00:00:00+09:00`));
 const latest=days.at(-1);
 
