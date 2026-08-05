@@ -18,6 +18,10 @@ if(nav&&!nav.querySelector('a[href="guide.html"]')){
   const link=document.createElement("a");link.href="guide.html";link.textContent="制度・生活再建";
   const official=nav.querySelector('a[href="official.html"]');nav.insertBefore(link,official);
 }
+if(nav&&!nav.querySelector('a[href="terms.html"]')){
+  const link=document.createElement("a");link.href="terms.html";link.textContent="災害用語集";
+  const official=nav.querySelector('a[href="official.html"]');nav.insertBefore(link,official);
+}
 
 if($("#updated")) $("#updated").textContent=`最終更新 ${dateLabel(latest.date)}`;
 if($("#latest-title")){
@@ -34,6 +38,7 @@ if($("#sectionLinks")){
     ["稼働避難所マップ","県公式で開設中の避難所を確認","shelters.html","避"],
     ["支援分野で見る","物資・住まい・福祉など","support.html","支"],
     ["制度・生活再建","法律用語と公的支援をやさしく解説","guide.html","制"],
+    ["災害用語集","専門用語・似た言葉・関連情報を検索","terms.html","語"],
     ["公的情報を見る","国・県・市町村の公式発表","official.html","公"],
     ["議事録を見る","すべての原資料PDF","meetings.html","録"]
   ];
