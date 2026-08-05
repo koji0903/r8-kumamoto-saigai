@@ -19,14 +19,14 @@ const fmt=n=>n==null?"調査中":n.toLocaleString("ja-JP");
 const statDisplay=(day,key)=>key==="outages"&&day.stats.outageStatus?day.stats.outageStatus:key==="waterOutages"&&day.stats[key]==null?"資料記載なし":fmt(day.stats[key]);
 const dateLabel=(iso,full=true)=>new Intl.DateTimeFormat("ja-JP",full?{year:"numeric",month:"long",day:"numeric",weekday:"short"}:{month:"numeric",day:"numeric"}).format(new Date(`${iso}T00:00:00+09:00`));
 const latest=days.at(-1);
-const SITE_NAME="よか隊ネット災害支援レポート";
+const SITE_NAME="よか隊ネット熊本　災害・支援状況レポート";
 
 // 全ページ共通の名称・位置づけ。HTMLに残る旧名称やページ固有タイトルも表示時に統一する。
 document.querySelectorAll(".brand").forEach(brand=>{
   const mark=brand.querySelector(".brand-mark");
   const label=brand.querySelector("span:last-child");
   if(mark) mark.textContent="よ";
-  if(label) label.innerHTML=`よか隊ネット<br><b>災害支援レポート</b>`;
+  if(label) label.innerHTML=`よか隊ネット熊本<br><b>災害・支援状況レポート</b>`;
 });
 document.title=document.title.includes("｜")
   ? `${document.title.split("｜")[0]}｜${SITE_NAME}`

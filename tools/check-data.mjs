@@ -91,7 +91,8 @@ for (const shelter of shelters.features) {
 const htmlFiles = (await readdir(root)).filter(f => f.endsWith(".html"));
 for (const file of htmlFiles) {
   const html = await readFile(path.join(root, file), "utf8");
-  if (!html.includes("よか隊ネット災害支援レポート")) errors.push(`${file} のサイト名称が新名称に統一されていません`);
+  if (!html.includes("よか隊ネット熊本　災害・支援状況レポート")) errors.push(`${file} のサイト名称が新名称に統一されていません`);
+  if (html.includes("よか隊ネット災害支援レポート")) errors.push(`${file} に直前のサイト名称が残っています`);
   if (html.includes("火の国 災害支援レポート")) errors.push(`${file} に旧サイト名称が残っています`);
   for (const match of html.matchAll(/(?:href|src)="([^"#?]+)(?:[?#][^"]*)?"/g)) {
     const target = decodeURIComponent(match[1]);
