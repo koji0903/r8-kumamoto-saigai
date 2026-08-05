@@ -33,3 +33,150 @@
 /* data.js の読み込み・描画に失敗したときの案内（app.js が挿入） */.data-error{margin:0;padding:18px 22px;background:#fff4f1;border-bottom:4px solid var(--orange)}.data-error b{display:block;font-size:1.05rem;color:var(--orange-dark)}.data-error p{margin:6px 0 10px;color:var(--ink)}.data-error a{font-weight:700;color:var(--green)}
 /* JS 無効時の案内 */.noscript-notice{max-width:1180px;margin:22px auto;padding:18px 22px;background:#fff;border-left:4px solid var(--orange)}.noscript-notice b{display:block;margin-bottom:6px}.noscript-notice p{margin:0 0 10px;color:var(--muted)}.noscript-notice a{display:inline-block;margin-right:16px;font-weight:700;color:var(--green)}
 /* 人的被害（index.html の被災状況セクション） */.casualty-summary{margin:0 0 22px;padding:20px 24px;background:#fff;border-left:4px solid var(--orange-dark);box-shadow:0 8px 26px rgba(23,35,31,.06)}.casualty-summary h3{margin:0 0 12px;font-size:.95rem;letter-spacing:.08em;color:var(--orange-dark)}.casualty-summary div{display:flex;flex-wrap:wrap;gap:14px 46px}.casualty-summary p{margin:0;display:flex;align-items:baseline;gap:10px}.casualty-summary span{color:var(--muted);font-size:.9rem}.casualty-summary strong{font-size:1.9rem;line-height:1.2;font-variant-numeric:tabular-nums}.casualty-summary small{display:block;margin-top:12px;color:var(--muted);font-size:.82rem;line-height:1.6}.casualty-summary strong small{display:inline;margin:0 0 0 3px;font-size:.9rem;color:inherit}
+
+/* ===== 議事録ビューア（meetings.html） ===== */
+.section-title{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(26px,3.4vw,38px);margin:0 0 34px}
+.minutes-page{padding-top:34px;background:linear-gradient(180deg,#faf9f5,#f3f1e9)}
+.minutes-toolbar{border:1px solid var(--line);background:#fff;padding:22px 24px;border-radius:6px;box-shadow:0 10px 30px rgba(23,35,31,.05)}
+.minutes-search{display:block;max-width:560px}
+.minutes-search span{display:block;font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}
+.minutes-search input{width:100%;border:1px solid var(--line);border-radius:4px;padding:12px 14px;font:inherit;background:#fbfaf6}
+.minutes-search input:focus{outline:2px solid var(--orange);outline-offset:1px}
+.minutes-themes{display:flex;flex-wrap:wrap;gap:22px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.minutes-theme-group{display:flex;align-items:center;flex-wrap:wrap;gap:6px}
+.minutes-theme-group>span{font-size:10px;font-weight:800;letter-spacing:.08em;color:var(--muted);margin-right:2px}
+.minutes-theme-group button{border:1px solid var(--line);background:#fff;color:#36433e;border-radius:30px;padding:6px 13px;font-size:12px;cursor:pointer;font-family:inherit}
+.minutes-theme-group button:hover{border-color:var(--orange)}
+.minutes-theme-group button.active{background:var(--green);border-color:var(--green);color:#fff}
+
+.minutes-picker{display:flex;gap:8px;overflow-x:auto;padding:26px 0 18px;scrollbar-width:thin}
+.minutes-picker button{flex:0 0 auto;min-width:112px;text-align:left;border:1px solid var(--line);background:#fff;border-radius:5px;padding:12px 14px;cursor:pointer;font-family:inherit;color:var(--ink)}
+.minutes-picker button:hover{border-color:var(--orange)}
+.minutes-picker button.active{border-color:var(--ink);background:var(--ink);color:#fff}
+.minutes-picker time{display:block;font-size:11px;color:var(--muted)}
+.minutes-picker button.active time{color:#aebbb5}
+.minutes-picker b{display:block;font-size:16px;line-height:1.35}
+.minutes-picker small{font-size:10px;color:var(--muted)}
+.minutes-picker button.active small{color:#aebbb5}
+
+.minutes-doc{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.minutes-doc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:26px;padding:32px 34px;background:var(--ink);color:#fff}
+.minutes-eyebrow{margin:0;color:#efb89f;font-size:11px;font-weight:800;letter-spacing:.1em}
+.minutes-doc-head h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(24px,3vw,34px);margin:8px 0 10px}
+.minutes-doc-meta{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.minutes-doc-meta span{font-size:11px;background:#2c3a35;padding:4px 10px;border-radius:3px;color:#dce3df}
+.minutes-venue{margin:12px 0 0;font-size:11px;color:#95a29d}
+.minutes-pdf{flex:0 0 auto;background:var(--orange);color:#fff;text-decoration:none;font-size:12px;font-weight:800;padding:12px 16px;border-radius:4px}
+.minutes-pdf:hover{background:var(--orange-dark)}
+
+.minutes-index{display:flex;flex-wrap:wrap;gap:6px;padding:16px 34px;border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:82px;z-index:5}
+.minutes-index a{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;text-decoration:none;color:#36433e;border:1px solid var(--line);background:#fff;border-radius:30px;padding:6px 13px}
+.minutes-index a:hover{border-color:var(--orange);color:var(--orange-dark)}
+.minutes-index b{display:grid;place-items:center;width:17px;height:17px;border-radius:50%;background:var(--green);color:#fff;font-size:10px}
+
+.minutes-section{padding:38px 34px;border-bottom:1px solid var(--line);scroll-margin-top:150px}
+.minutes-section:last-child{border-bottom:0}
+.minutes-section-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:22px}
+.minutes-no{display:grid;place-items:center;flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;font-size:13px;font-weight:800}
+.minutes-section-head h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:24px;margin:0}
+.minutes-section-head p{margin:4px 0 0;font-size:12px;color:var(--muted)}
+
+.minutes-group{border-top:1px solid var(--line);padding:20px 0 4px}
+.minutes-section .minutes-group:first-of-type{border-top:0;padding-top:0}
+.minutes-group-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px}
+.minutes-group-head h4{font-size:15px;margin:0;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.minutes-theme-tag{font-size:10px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:1px 6px}
+.minutes-pagelink{flex:0 0 auto;font-size:11px;font-weight:800;color:var(--orange);text-decoration:none;white-space:nowrap}
+.minutes-pagelink:hover{text-decoration:underline}
+.minutes-source{margin:6px 0 0;font-size:11px;color:var(--muted)}
+
+.minutes-items{list-style:none;margin:12px 0 0;padding:0}
+.minutes-items li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;padding:11px 0;border-top:1px dashed #e6e9e3}
+.minutes-items li:first-child{border-top:0}
+.minutes-items li>b{font-size:12px;font-weight:800;line-height:1.6}
+.minutes-items li.is-stat>b{color:var(--green)}
+.minutes-items li.is-voice>b{color:var(--orange-dark)}
+.minutes-items li:not(.is-stat):not(.is-voice){grid-template-columns:minmax(0,1fr)}
+.minutes-items p{margin:0;font-size:13.5px}
+.minutes-items .minutes-link{display:inline-block;margin-top:6px;font-size:11px;font-weight:700;color:var(--orange);text-decoration:none;word-break:break-word}
+.minutes-items .minutes-link:hover{text-decoration:underline}
+.minutes-crumb{margin-top:6px!important;font-size:11px!important;color:var(--muted)}
+
+.minutes-table-scroll{overflow-x:auto;margin-top:12px}
+.minutes-vc table{width:100%;min-width:600px;table-layout:fixed;border-collapse:collapse;font-size:13px}
+.minutes-vc th,.minutes-vc td{text-align:left;vertical-align:top;padding:11px 12px;border-bottom:1px solid var(--line)}
+.minutes-vc thead th{font-size:11px;color:var(--muted);background:var(--paper);border-bottom:2px solid var(--ink)}
+.minutes-vc tbody th{width:92px;font-weight:800;white-space:nowrap}
+.minutes-vc th:nth-child(2),.minutes-vc td:nth-child(2){width:215px}
+.minutes-vc td{word-break:break-word;overflow-wrap:anywhere}
+.vc-status{display:inline-block;background:#eef3ef;border-left:3px solid var(--green);padding:3px 9px;font-size:12px;font-weight:700;overflow-wrap:anywhere;max-width:100%}
+.minutes-vc-normal{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:14px 0 0;font-size:12px}
+.minutes-vc-normal b{color:var(--muted);font-size:11px;margin-right:4px}
+.minutes-vc-normal span{border:1px solid var(--line);border-radius:3px;padding:2px 8px;background:#fbfaf6}
+
+.minutes-orgs{padding:26px 34px 32px;background:var(--paper);border-top:1px solid var(--line)}
+.minutes-orgs b{display:block;font-size:11px;letter-spacing:.06em;color:var(--muted);margin-bottom:10px}
+.minutes-orgs div{display:flex;flex-wrap:wrap;gap:6px}
+.minutes-orgs span{font-size:11.5px;background:#fff;border:1px solid var(--line);border-radius:3px;padding:3px 9px}
+
+.minutes-results-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin:30px 0 18px}
+.minutes-results-head h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:26px;margin:0}
+.minutes-results-head p{margin:0;font-size:12px;color:var(--muted)}
+.minutes-results-head button{margin-left:auto;border:1px solid var(--line);background:#fff;border-radius:30px;padding:7px 15px;font-size:12px;cursor:pointer;font-family:inherit}
+.minutes-results-head button:hover{border-color:var(--orange);color:var(--orange-dark)}
+.minutes-result-day{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px 26px;margin-bottom:12px}
+.minutes-result-day>header{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+.minutes-result-day time{font-weight:800;font-size:14px}
+.minutes-result-day header b{font-size:12px;color:var(--orange-dark)}
+.minutes-result-day header span{font-size:11px;color:var(--muted)}
+.minutes-result-day header a{margin-left:auto;font-size:12px;font-weight:700;color:var(--orange);text-decoration:none}
+.minutes-result-day header a:hover{text-decoration:underline}
+
+.minutes-disclaimer{margin:26px 0 0;font-size:11.5px;color:var(--muted);border-left:3px solid var(--yellow);padding-left:14px}
+
+@media(max-width:900px){
+  .minutes-items li{grid-template-columns:minmax(0,1fr);gap:3px}
+  .minutes-vc td:nth-child(2){width:auto}
+}
+@media(max-width:800px){
+  .minutes-page{padding:34px 16px 60px}
+  .minutes-toolbar{padding:18px}
+  .minutes-themes{gap:14px}
+  .minutes-doc-head{display:block;padding:24px 20px}
+  .minutes-pdf{display:inline-block;margin-top:18px}
+  .minutes-index{padding:12px 20px;top:112px;overflow-x:auto;flex-wrap:nowrap}
+  .minutes-index a{white-space:nowrap}
+  .minutes-section{padding:28px 20px;scroll-margin-top:180px}
+  .minutes-orgs{padding:22px 20px 26px}
+  .minutes-result-day{padding:18px 20px}
+  .minutes-result-day header a{margin-left:0;width:100%}
+  .minutes-results-head button{margin-left:0}
+}
+.day-links{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:14px}
+.day-links .day-link{margin-top:0}
+.day-link.sub{color:#c8d1cd;font-weight:400}
+
+/* 災害VC表：狭い画面では表をやめ、市町村ごとのブロックに積み替える。
+   横スクロールだと「会場と補足」が画面外に隠れてしまうため。 */
+@media(max-width:700px){
+  .minutes-table-scroll{overflow-x:visible}
+  .minutes-vc table{min-width:0;table-layout:auto;display:block}
+  .minutes-vc thead{display:none}
+  .minutes-vc tbody,.minutes-vc tbody tr,.minutes-vc tbody th,.minutes-vc tbody td{display:block}
+  .minutes-vc tbody tr{padding:14px 0;border-bottom:1px solid var(--line)}
+  .minutes-vc tbody tr:last-child{border-bottom:0}
+  .minutes-vc tbody th,.minutes-vc tbody td,.minutes-vc td:nth-child(2){width:auto;padding:0;border:0}
+  .minutes-vc tbody th{font-size:15px;margin-bottom:7px}
+  .minutes-vc tbody td:nth-child(2){margin-bottom:7px}
+  .minutes-vc tbody td:last-child{font-size:12.5px;color:var(--muted)}
+  .minutes-vc tbody td:empty{display:none}
+  .vc-status{font-size:12.5px}
+}
+
+/* 議事録原本アーカイブは暗い背景のセクションに置いているため、明色版を用意する */
+.dark .archive{border-top-color:#fff}
+.dark .archive-row{color:#fff;border-bottom-color:#43504b}
+.dark .archive-row:hover{background:#26332e}
+.dark .archive-row span{color:#aebbb5}
+.dark .archive-row i{color:#ff9b78}
+.dark .section-title{color:#fff}
