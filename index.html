@@ -16,7 +16,7 @@
       <span>火の国<br><b>災害支援レポート</b></span>
     </a>
     <nav aria-label="ページ内メニュー">
-      <a href="#overview">概況</a><a href="#timeline">日々の記録</a><a href="#official">公的情報</a><a href="#meetings">議事録</a>
+      <a href="#overview">概況</a><a href="#timeline">日々の記録</a><a href="#municipalities">自治体別</a><a href="#official">公的情報</a><a href="#meetings">議事録</a>
     </nav>
     <span class="updated" id="updated"></span>
   </header>
@@ -59,6 +59,17 @@
       </div>
       <div id="timelineList" class="timeline-list" aria-live="polite"></div>
       <p id="noResults" class="no-results" hidden>該当する記録がありません。検索条件を変えてください。</p>
+    </section>
+
+    <section class="section municipality-section" id="municipalities">
+      <div class="section-head"><div><p class="kicker">BY MUNICIPALITY</p><h2>自治体別に見る</h2></div><p>火の国会議で自治体名が明記された災害・支援情報を整理しています。推測や複数自治体の合計値の按分は行っていません。</p></div>
+      <div class="municipality-dashboard">
+        <aside class="municipality-picker">
+          <label><span>市町村を検索</span><input id="municipalityDashboardSearch" type="search" placeholder="市町村名"></label>
+          <div id="municipalityPickerList" role="listbox" aria-label="表示する市町村"></div>
+        </aside>
+        <div class="municipality-detail" id="municipalityDetail" aria-live="polite"></div>
+      </div>
     </section>
 
     <section class="section official-section" id="official">
