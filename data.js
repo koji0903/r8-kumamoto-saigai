@@ -1,5 +1,23 @@
 window.REPORT_DATA = {
   disaster: { occurred: "2026-07-28T16:27:00+09:00", name: "令和8年熊本地震" },
+  officialSources: [
+    { level: "国", name: "内閣府 防災情報", description: "政府の災害情報、被害・対応状況、関係省庁資料", url: "https://www.bousai.go.jp/" },
+    { level: "県", name: "熊本県 災害・防災情報", description: "県の被害情報、災害対策本部資料、生活再建・支援制度", url: "https://www.pref.kumamoto.jp/life/1/2/index.html" },
+    { level: "県・リアルタイム", name: "防災情報くまもと", description: "避難情報、避難所、気象・河川・地震などの発令・観測情報", url: "https://portal.bousai.pref.kumamoto.jp/" }
+  ],
+  municipalities: [
+    { name: "熊本市", url: "https://www.city.kumamoto.jp/" }, { name: "八代市", url: "https://www.city.yatsushiro.lg.jp/" },
+    { name: "水俣市", url: "https://www.city.minamata.lg.jp/" }, { name: "山鹿市", url: "https://www.city.yamaga.kumamoto.jp/" },
+    { name: "菊池市", url: "https://www.city.kikuchi.lg.jp/" }, { name: "宇土市", url: "https://www.city.uto.lg.jp/" },
+    { name: "上天草市", url: "https://www.city.kamiamakusa.kumamoto.jp/" }, { name: "宇城市", url: "https://www.city.uki.kumamoto.jp/" },
+    { name: "天草市", url: "https://www.city.amakusa.kumamoto.jp/" }, { name: "合志市", url: "https://www.city.koshi.lg.jp/" },
+    { name: "美里町", url: "https://www.town.kumamoto-misato.lg.jp/" }, { name: "大津町", url: "https://www.town.ozu.kumamoto.jp/" },
+    { name: "菊陽町", url: "https://www.town.kikuyo.lg.jp/" }, { name: "西原村", url: "https://www.vill.nishihara.kumamoto.jp/" },
+    { name: "御船町", url: "https://www.town.mifune.kumamoto.jp/" }, { name: "嘉島町", url: "https://www.town.kumamoto-kashima.lg.jp/" },
+    { name: "益城町", url: "https://www.town.mashiki.lg.jp/" }, { name: "甲佐町", url: "https://www.town.kosa.lg.jp/" },
+    { name: "氷川町", url: "https://www.town.hikawa.kumamoto.jp/" }, { name: "芦北町", url: "https://www.town.ashikita.lg.jp/" },
+    { name: "津奈木町", url: "https://www.town.tsunagi.lg.jp/" }
+  ],
   metrics: [
     { key: "evacuees", label: "避難者", unit: "人", color: "#e45e35" },
     { key: "shelters", label: "避難所", unit: "か所", color: "#d39b2b" },
@@ -10,6 +28,7 @@ window.REPORT_DATA = {
     {
       date: "2026-07-29", meeting: 492, disasterDay: 2, attendees: 499,
       pdf: "20260729火の国会議.pdf",
+      areas: ["熊本市", "八代市", "宇土市", "宇城市", "天草市", "甲佐町", "氷川町", "芦北町"],
       stats: { injured: 80, deaths: 12, evacuees: 8886, shelters: 432, outages: 34880, homes: null },
       topics: ["被害", "避難", "ライフライン", "支援"],
       headline: "県内21市町村に災害救助法を適用",
@@ -20,6 +39,7 @@ window.REPORT_DATA = {
     {
       date: "2026-07-30", meeting: 493, disasterDay: 3, attendees: 253,
       pdf: "20260730火の国会議493回.pdf",
+      areas: ["熊本市", "八代市", "宇土市", "宇城市", "美里町", "御船町", "益城町", "甲佐町", "津奈木町"],
       stats: { injured: 120, deaths: 34, evacuees: 9450, shelters: 406, outages: 18910, homes: null },
       topics: ["被害", "避難", "ライフライン", "ボランティア"],
       headline: "11か所で災害VC設置の見込み",
@@ -30,6 +50,7 @@ window.REPORT_DATA = {
     {
       date: "2026-07-31", meeting: 494, disasterDay: 4,
       pdf: "20260731火の国会議494回.pdf",
+      areas: ["熊本市", "八代市", "宇土市", "美里町", "御船町", "嘉島町", "益城町", "甲佐町", "氷川町"],
       stats: { injured: 131, deaths: 35, evacuees: 9134, shelters: 374, outages: 1590, homes: 1507 },
       topics: ["被害", "避難", "ライフライン", "ボランティア", "入浴"],
       headline: "住家被害の判定が進み、1,507棟を確認",
@@ -40,6 +61,7 @@ window.REPORT_DATA = {
     {
       date: "2026-08-01", meeting: 495, disasterDay: 5, attendees: 210,
       pdf: "20260801火の国会議495回.pdf",
+      areas: ["熊本市", "八代市", "宇土市", "宇城市", "美里町", "御船町", "益城町", "甲佐町", "氷川町"],
       stats: { injured: 139, deaths: 36, evacuees: 9068, shelters: 218, outages: 1545, homes: 3429 },
       topics: ["被害", "避難", "ライフライン", "物資", "ボランティア"],
       headline: "支援ニーズのマッチングが本格化",
@@ -50,6 +72,7 @@ window.REPORT_DATA = {
     {
       date: "2026-08-02", meeting: 496, disasterDay: 6, attendees: 194,
       pdf: "20260802火の国会議496回.pdf",
+      areas: ["熊本市", "八代市", "宇土市", "宇城市", "美里町", "御船町", "益城町", "甲佐町", "氷川町"],
       stats: { injured: 152, deaths: 38, evacuees: 8556, shelters: 206, outages: 536, homes: 4042 },
       topics: ["被害", "避難", "断水", "住まい", "ボランティア"],
       headline: "避難者は8,556人、住まいの支援へ",
@@ -60,6 +83,7 @@ window.REPORT_DATA = {
     {
       date: "2026-08-03", meeting: 497, disasterDay: 7, attendees: 258,
       pdf: "20260803火の国会議497回.pdf",
+      areas: ["熊本市", "八代市", "宇土市", "宇城市", "美里町", "御船町", "嘉島町", "益城町", "甲佐町", "氷川町", "芦北町"],
       stats: { injured: 157, deaths: 38, evacuees: 8383, shelters: 162, outages: 85, homes: 12024, waterOutages: 45280 },
       topics: ["被害", "避難", "断水", "宿泊", "ボランティア", "気象"],
       headline: "ホテル避難の受付と災害VC活動が拡大",
@@ -70,6 +94,7 @@ window.REPORT_DATA = {
     {
       date: "2026-08-04", meeting: 498, disasterDay: 8,
       pdf: "20260804火の国会議498回.pdf",
+      areas: ["熊本市", "八代市", "宇土市", "宇城市", "美里町", "御船町", "嘉島町", "益城町", "甲佐町", "氷川町", "芦北町"],
       stats: { injured: 161, deaths: 38, evacuees: 7646, shelters: 146, outages: 0, homes: 13393, waterOutages: 44380 },
       topics: ["被害", "避難", "断水", "住まい", "宿泊", "ボランティア"],
       headline: "停電はおおむね解消、応急住宅整備へ",

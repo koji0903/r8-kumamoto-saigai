@@ -16,7 +16,7 @@
       <span>火の国<br><b>災害支援レポート</b></span>
     </a>
     <nav aria-label="ページ内メニュー">
-      <a href="#overview">概況</a><a href="#timeline">日々の記録</a><a href="#meetings">議事録</a>
+      <a href="#overview">概況</a><a href="#timeline">日々の記録</a><a href="#official">公的情報</a><a href="#meetings">議事録</a>
     </nav>
     <span class="updated" id="updated"></span>
   </header>
@@ -59,6 +59,14 @@
       </div>
       <div id="timelineList" class="timeline-list" aria-live="polite"></div>
       <p id="noResults" class="no-results" hidden>該当する記録がありません。検索条件を変えてください。</p>
+    </section>
+
+    <section class="section official-section" id="official">
+      <div class="section-head"><div><p class="kicker">OFFICIAL INFORMATION</p><h2>公的情報を確認する</h2></div><p>会議記録は状況把握の補助情報です。避難、支援制度、罹災証明などの最新情報は、国・県・お住まいの市町村の公式発表を必ず確認してください。</p></div>
+      <div class="official-primary" id="officialPrimary"></div>
+      <div class="municipality-head"><div><h3>災害救助法適用 21市町村</h3><p>市町村名から各公式サイトへ移動します。緊急情報、防災、災害支援などの案内をご確認ください。</p></div><label><span>市町村を探す</span><input id="municipalitySearch" type="search" placeholder="例：宇土市、氷川町"></label></div>
+      <div class="municipality-grid" id="municipalityGrid" aria-live="polite"></div>
+      <p class="official-disclaimer">外部の公的機関サイトを新しいタブで開きます。リンク先の掲載内容・更新日時を確認してください。</p>
     </section>
 
     <section class="section" id="meetings">
