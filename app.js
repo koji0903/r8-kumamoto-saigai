@@ -6,21 +6,16 @@ const dateLabel=(iso,full=true)=>new Intl.DateTimeFormat("ja-JP",full?{year:"num
 const latest=days.at(-1);
 
 const nav=document.querySelector(".site-header nav");
-if(nav&&!nav.querySelector('a[href="support.html"]')){
-  const link=document.createElement("a");link.href="support.html";link.textContent="支援分野";
-  const official=nav.querySelector('a[href="official.html"]');nav.insertBefore(link,official);
-}
-if(nav&&!nav.querySelector('a[href="shelters.html"]')){
-  const link=document.createElement("a");link.href="shelters.html";link.textContent="避難所マップ";
-  const official=nav.querySelector('a[href="official.html"]');nav.insertBefore(link,official);
-}
-if(nav&&!nav.querySelector('a[href="guide.html"]')){
-  const link=document.createElement("a");link.href="guide.html";link.textContent="制度・生活再建";
-  const official=nav.querySelector('a[href="official.html"]');nav.insertBefore(link,official);
-}
-if(nav&&!nav.querySelector('a[href="terms.html"]')){
-  const link=document.createElement("a");link.href="terms.html";link.textContent="災害用語集";
-  const official=nav.querySelector('a[href="official.html"]');nav.insertBefore(link,official);
+if(nav){
+  const page=location.pathname.split("/").pop()||"index.html";
+  const groups={
+    "index.html":"index.html","timeline.html":"timeline.html","meetings.html":"meetings.html",
+    "affected.html":"affected.html","guide.html":"affected.html","terms.html":"affected.html","official.html":"affected.html",
+    "supporters.html":"supporters.html","support.html":"supporters.html",
+    "municipalities.html":"municipalities.html","shelters.html":"municipalities.html"
+  };
+  const items=[["サマリー","index.html"],["火の国会議","timeline.html"],["被災された方","affected.html"],["支援する方","supporters.html"],["地域・避難所","municipalities.html"],["議事録原本","meetings.html"]];
+  nav.innerHTML=items.map(([label,url])=>`<a href="${url}"${groups[page]===url?' aria-current="page"':''}>${label}</a>`).join("");
 }
 
 if($("#updated")) $("#updated").textContent=`最終更新 ${dateLabel(latest.date)}`;
@@ -33,16 +28,22 @@ if($("#latest-title")){
 
 if($("#sectionLinks")){
   const links=[
-    ["時系列で見る","日々の被害と支援の変化","timeline.html","日"],
-    ["自治体別に見る","21市町村ごとの確認情報","municipalities.html","市"],
-    ["稼働避難所マップ","県公式で開設中の避難所を確認","shelters.html","避"],
-    ["支援分野で見る","物資・住まい・福祉など","support.html","支"],
-    ["制度・生活再建","法律用語と公的支援をやさしく解説","guide.html","制"],
-    ["災害用語集","専門用語・似た言葉・関連情報を検索","terms.html","語"],
-    ["公的情報を見る","国・県・市町村の公式発表","official.html","公"],
-    ["議事録を見る","すべての原資料PDF","meetings.html","録"]
+    ["日ごとのまとめ","火の国会議から現場の変化を追う","timeline.html","日"],
+    ["自治体別に見る","21市町村ごとの被害・支援情報","municipalities.html","市"],
+    ["議事録原本を見る","保存した火の国会議PDFを確認","meetings.html","録"]
   ];
   $("#sectionLinks").innerHTML=links.map(([h,p,u,m])=>`<a href="${u}"><span>${m}</span><div><h3>${h}</h3><p>${p}</p></div><b>→</b></a>`).join("");
+}
+if($("#audienceUpdates")){
+  const recent=[...supportEvents].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,6);
+  $("#audienceUpdates").innerHTML=recent.map(e=>`<article><time>${dateLabel(e.date)}</time><span>${supportCategories.find(c=>c.key===e.category)?.label||e.category}</span><h3>${e.title}</h3><p>${e.detail}</p><a href="${encodeURI(`${e.pdf}#page=${e.page}`)}" target="_blank" rel="noopener">会議資料 p.${e.page} ↗</a></article>`).join("");
+}
+
+const footer=document.querySelector("footer");
+if(footer&&!document.querySelector(".site-directory")){
+  const directory=document.createElement("section");directory.className="site-directory";directory.setAttribute("aria-label","サイト内リンク");
+  directory.innerHTML=`<div><b>火の国会議</b><a href="timeline.html">日ごとのまとめ</a><a href="meetings.html">議事録原本</a></div><div><b>被災された方</b><a href="shelters.html">稼働避難所</a><a href="guide.html">制度・生活再建</a><a href="terms.html">災害用語集</a></div><div><b>支援する方</b><a href="support.html">支援分野別</a><a href="municipalities.html">自治体別</a><a href="supporters.html">支援者向け入口</a></div><div><b>一次情報</b><a href="official.html">国・県・市町村</a><a href="https://portal.bousai.pref.kumamoto.jp/" target="_blank" rel="noopener">防災情報くまもと ↗</a></div>`;
+  footer.before(directory);
 }
 if($("#recentUpdates")) $("#recentUpdates").innerHTML=[...days].reverse().slice(0,3).map(d=>`<article><time datetime="${d.date}">${dateLabel(d.date)}</time><span>第${d.meeting}回</span><h3>${d.headline}</h3><p>${d.summary}</p><a href="timeline.html">詳細を見る →</a></article>`).join("");
 
