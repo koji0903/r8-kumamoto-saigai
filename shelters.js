@@ -4,9 +4,9 @@
   const $=s=>document.querySelector(s), esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const dateLabel=iso=>new Intl.DateTimeFormat("ja-JP",{year:"numeric",month:"long",day:"numeric"}).format(new Date(`${iso}T00:00:00+09:00`));
   const official=name=>report.municipalities.find(m=>m.name===name)?.url;
-  const priority=["宇土市","宇城市","氷川町","八代市"],features=dataset.features, muni=[...new Set(features.map(f=>f.municipality))].sort((a,b)=>{const ai=priority.indexOf(a),bi=priority.indexOf(b);return (ai<0?99:ai)-(bi<0?99:bi)||a.localeCompare(b,"ja")});
+  const features=dataset.features, muni=[...new Set(features.map(f=>f.municipality))].sort((a,b)=>a.localeCompare(b,"ja"));
   let filtered=features, shown=40, selected=null, map=null, layer=null, markers=new Map();
-  $("#shelterMunicipality").insertAdjacentHTML("beforeend",`<optgroup label="重点地域">${muni.filter(n=>priority.includes(n)).map(n=>`<option>${esc(n)}</option>`).join("")}</optgroup><optgroup label="その他の開設地域">${muni.filter(n=>!priority.includes(n)).map(n=>`<option>${esc(n)}</option>`).join("")}</optgroup>`);
+  $("#shelterMunicipality").insertAdjacentHTML("beforeend",muni.map(n=>`<option>${esc(n)}</option>`).join(""));
   const dateTimeLabel=value=>new Intl.DateTimeFormat("ja-JP",{year:"numeric",month:"long",day:"numeric",hour:"2-digit",minute:"2-digit"}).format(new Date(value));
   const retrieved=dateTimeLabel(dataset.metadata.retrievedAt);
   const retrievedAgeHours=(Date.now()-new Date(dataset.metadata.retrievedAt).getTime())/36e5;

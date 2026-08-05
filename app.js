@@ -12,9 +12,8 @@ try{
 
 const {days,metrics,officialSources,municipalities,municipalEvents,supportCategories,supportEvents}=window.REPORT_DATA;
 const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
-const priorityMunicipalities=["宇土市","宇城市","氷川町","八代市"];
-const municipalityRank=name=>{const i=priorityMunicipalities.indexOf(name);return i<0?99:i};
-const orderedMunicipalities=[...municipalities].sort((a,b)=>municipalityRank(a.name)-municipalityRank(b.name)||a.name.localeCompare(b.name,"ja"));
+// 自治体間に表示上の序列を設けず、市町村名順で統一する。
+const orderedMunicipalities=[...municipalities].sort((a,b)=>a.name.localeCompare(b.name,"ja"));
 const fmt=n=>n==null?"調査中":n.toLocaleString("ja-JP");
 const statDisplay=(day,key)=>key==="outages"&&day.stats.outageStatus?day.stats.outageStatus:key==="waterOutages"&&day.stats[key]==null?"資料記載なし":fmt(day.stats[key]);
 const dateLabel=(iso,full=true)=>new Intl.DateTimeFormat("ja-JP",full?{year:"numeric",month:"long",day:"numeric",weekday:"short"}:{month:"numeric",day:"numeric"}).format(new Date(`${iso}T00:00:00+09:00`));
@@ -83,7 +82,7 @@ if($("#situationSnapshot")){
 if($("#sectionLinks")){
   const links=[
     ["日ごとのまとめ","火の国会議から現場の変化を追う","timeline.html","日"],
-    ["重点4地域を見る","宇土・宇城・氷川・八代を中心に確認","municipalities.html","市"],
+    ["自治体別に見る","被災市町村の情報を同じ基準で確認","municipalities.html","市"],
     ["議事録を読む","県の報告・災害VC・現地の声を回ごとに","meetings.html","録"]
   ];
   $("#sectionLinks").innerHTML=links.map(([h,p,u,m])=>`<a href="${u}"><span>${m}</span><div><h3>${h}</h3><p>${p}</p></div><b>→</b></a>`).join("");
@@ -100,8 +99,6 @@ if(footer&&!document.querySelector(".site-directory")){
   footer.before(directory);
 }
 if($("#recentUpdates")) $("#recentUpdates").innerHTML=[...days].reverse().slice(0,3).map(d=>`<article><time datetime="${d.date}">${dateLabel(d.date)}</time><span>第${d.meeting}回</span><h3>${d.headline}</h3><p>${d.summary}</p><a href="timeline.html">詳細を見る →</a></article>`).join("");
-if($("#priorityRegions")) $("#priorityRegions").innerHTML=priorityMunicipalities.map(name=>{const events=municipalEvents.filter(e=>e.areas.includes(name)),latestEvent=[...events].sort((a,b)=>b.date.localeCompare(a.date))[0];return `<a href="municipalities.html?name=${encodeURIComponent(name)}"><span>重点地域</span><h3>${name}</h3><p>${latestEvent?`${dateLabel(latestEvent.date)}までに会議記録${events.length}件`:`会議記録を確認`}</p><b>地域情報を見る →</b></a>`}).join("");
-
 if($("#metricTabs")){
   let activeMetric="evacuees";
   // 集計定義が変わった箇所では折れ線をつながない。前後の値は直接比較できない。
@@ -125,16 +122,16 @@ if($("#situationSource")) $("#situationSource").textContent=`出典：第${days[
 
 if($("#officialPrimary")){
   $("#officialPrimary").innerHTML=officialSources.map(s=>`<a class="official-card" href="${s.url}" target="_blank" rel="noopener"><span>${s.level}</span><h3>${s.name}</h3><p>${s.description}</p><b>公式サイトを開く ↗</b></a>`).join('');
-  const renderMunicipalities=()=>{const q=$("#municipalitySearch").value.trim();$("#municipalityGrid").innerHTML=orderedMunicipalities.filter(m=>m.name.includes(q)).map(m=>`<a class="${priorityMunicipalities.includes(m.name)?'priority-municipality':''}" href="${m.url}" target="_blank" rel="noopener"><span>${m.name}${priorityMunicipalities.includes(m.name)?'<small>重点地域</small>':''}</span><b>公式サイト ↗</b></a>`).join('')};
+  const renderMunicipalities=()=>{const q=$("#municipalitySearch").value.trim();$("#municipalityGrid").innerHTML=orderedMunicipalities.filter(m=>m.name.includes(q)).map(m=>`<a href="${m.url}" target="_blank" rel="noopener"><span>${m.name}</span><b>公式サイト ↗</b></a>`).join('')};
   $("#municipalitySearch").addEventListener("input",renderMunicipalities);renderMunicipalities();
 }
 
 if($("#municipalityDetail")){
-  let selectedMunicipality=new URLSearchParams(location.search).get("name")||"宇土市";if(!municipalities.some(m=>m.name===selectedMunicipality))selectedMunicipality="宇土市";
-  const renderDetail=()=>{const municipality=municipalities.find(m=>m.name===selectedMunicipality),events=municipalEvents.filter(e=>e.areas.includes(selectedMunicipality)).sort((a,b)=>b.date.localeCompare(a.date)),specific=events.filter(e=>e.category!=="制度"),latestDate=events[0]?.date;$("#municipalityDetail").innerHTML=`<header><div><p>${priorityMunicipalities.includes(selectedMunicipality)?"重点地域":"その他の対象地域"} ｜ 自治体別 災害・支援情報</p><h3>${selectedMunicipality}</h3><span>会議記録 ${events.length}件${latestDate?` ｜ 最終確認 ${dateLabel(latestDate)}`:''}</span></div><a href="${municipality.url}" target="_blank" rel="noopener">${selectedMunicipality}公式サイト ↗</a></header><div class="hq-panel" id="hqPanel"></div><div class="municipality-scope"><b>掲載範囲</b><p>下の一覧は会議議事録で自治体名が明記された事項のみです。上の被害状況は県災害対策本部会議の資料によるもので、出所が異なります。</p></div>${specific.length?`<div class="municipal-category-summary">${[...new Set(specific.map(e=>e.category))].map(c=>`<span>${c}<b>${specific.filter(e=>e.category===c).length}</b></span>`).join('')}</div>`:`<div class="municipality-empty"><b>個別情報は確認できていません</b><p>災害救助法の適用は確認されています。公式サイトで最新情報をご確認ください。</p></div>`}<div class="municipal-events">${events.map(e=>`<article><div class="event-meta"><time>${dateLabel(e.date)}</time><span>${e.category}</span></div><h4>${e.title}</h4><p>${e.detail}</p><a href="${encodeURI(`${e.pdf}#page=${e.page}`)}" target="_blank" rel="noopener">第${e.meeting}回議事録 p.${e.page} ↗</a></article>`).join('')}</div>`;
+  let selectedMunicipality=new URLSearchParams(location.search).get("name")||orderedMunicipalities[0].name;if(!municipalities.some(m=>m.name===selectedMunicipality))selectedMunicipality=orderedMunicipalities[0].name;
+  const renderDetail=()=>{const municipality=municipalities.find(m=>m.name===selectedMunicipality),events=municipalEvents.filter(e=>e.areas.includes(selectedMunicipality)).sort((a,b)=>b.date.localeCompare(a.date)),specific=events.filter(e=>e.category!=="制度"),latestDate=events[0]?.date;$("#municipalityDetail").innerHTML=`<header><div><p>自治体別 災害・支援情報</p><h3>${selectedMunicipality}</h3><span>会議記録 ${events.length}件${latestDate?` ｜ 最終確認 ${dateLabel(latestDate)}`:''}</span></div><a href="${municipality.url}" target="_blank" rel="noopener">${selectedMunicipality}公式サイト ↗</a></header><div class="hq-panel" id="hqPanel"></div><div class="municipality-scope"><b>掲載範囲</b><p>下の一覧は会議議事録で自治体名が明記された事項のみです。上の被害状況は県災害対策本部会議の資料によるもので、出所が異なります。</p></div>${specific.length?`<div class="municipal-category-summary">${[...new Set(specific.map(e=>e.category))].map(c=>`<span>${c}<b>${specific.filter(e=>e.category===c).length}</b></span>`).join('')}</div>`:`<div class="municipality-empty"><b>個別情報は確認できていません</b><p>災害救助法の適用は確認されています。公式サイトで最新情報をご確認ください。</p></div>`}<div class="municipal-events">${events.map(e=>`<article><div class="event-meta"><time>${dateLabel(e.date)}</time><span>${e.category}</span></div><h4>${e.title}</h4><p>${e.detail}</p><a href="${encodeURI(`${e.pdf}#page=${e.page}`)}" target="_blank" rel="noopener">第${e.meeting}回議事録 p.${e.page} ↗</a></article>`).join('')}</div>`;
     // 県公式データは hq.js が描く。読み込めていなくても会議由来の情報は出る。
     window.renderHqPanel?.(selectedMunicipality)};
-  const renderPicker=()=>{const q=$("#municipalityDashboardSearch").value.trim(),matches=orderedMunicipalities.filter(m=>m.name.includes(q)),priority=matches.filter(m=>priorityMunicipalities.includes(m.name)),others=matches.filter(m=>!priorityMunicipalities.includes(m.name)),buttons=list=>list.map(m=>`<button type="button" aria-pressed="${m.name===selectedMunicipality}" class="${m.name===selectedMunicipality?'active':''}" data-name="${m.name}"><span>${m.name}</span><b>${municipalEvents.filter(e=>e.areas.includes(m.name)).length}件</b></button>`).join('');$("#municipalityPickerList").innerHTML=`${priority.length?`<p class="municipality-group-label">重点地域</p>${buttons(priority)}`:''}${others.length?`<p class="municipality-group-label sub">その他の対象地域</p>${buttons(others)}`:''}`;$$('#municipalityPickerList button').forEach(b=>b.onclick=()=>{selectedMunicipality=b.dataset.name;history.replaceState(null,'',`?name=${encodeURIComponent(selectedMunicipality)}`);renderPicker();renderDetail()})};
+  const renderPicker=()=>{const q=$("#municipalityDashboardSearch").value.trim(),matches=orderedMunicipalities.filter(m=>m.name.includes(q));$("#municipalityPickerList").innerHTML=matches.map(m=>`<button type="button" aria-pressed="${m.name===selectedMunicipality}" class="${m.name===selectedMunicipality?'active':''}" data-name="${m.name}"><span>${m.name}</span><b>${municipalEvents.filter(e=>e.areas.includes(m.name)).length}件</b></button>`).join('');$$('#municipalityPickerList button').forEach(b=>b.onclick=()=>{selectedMunicipality=b.dataset.name;history.replaceState(null,'',`?name=${encodeURIComponent(selectedMunicipality)}`);renderPicker();renderDetail()})};
   $("#municipalityDashboardSearch").addEventListener("input",renderPicker);renderPicker();renderDetail();
 }
 
