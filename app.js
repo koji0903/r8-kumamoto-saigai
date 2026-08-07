@@ -11,6 +11,7 @@ const showDataError=err=>{
 try{
 
 const navigationStyles=document.createElement("link");navigationStyles.rel="stylesheet";navigationStyles.href="navigation-enhancements.css";document.head.append(navigationStyles);
+const designStyles=document.createElement("link");designStyles.rel="stylesheet";designStyles.href="design-system.css";document.head.append(designStyles);
 
 const {days,metrics,officialSources,municipalities,municipalEvents,supportCategories,supportEvents}=window.REPORT_DATA;
 const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
@@ -37,6 +38,14 @@ document.title=document.title.includes("｜")
 document.querySelector('meta[property="og:site_name"]')?.setAttribute("content",SITE_NAME);
 document.querySelector('meta[property="og:title"]')?.setAttribute("content",document.title);
 document.querySelector('meta[property="og:image:alt"]')?.setAttribute("content",`${SITE_NAME}｜令和8年熊本地震の災害・支援情報アーカイブ`);
+const labelTranslations={
+  "CURRENT SITUATION":"現在の状況","INFORMATION MENU":"情報メニュー","OFFICIAL INFORMATION":"公的情報",
+  "BY MUNICIPALITY":"市町村別","OFFICIAL MUNICIPAL UPDATES":"市町村の公式発信","COVERAGE":"収集状況",
+  "METHOD & SOURCE":"掲載基準と出典","FOR AFFECTED PEOPLE":"被災された方へ","FOR SUPPORTERS":"支援する方へ",
+  "DAILY ARCHIVE":"日ごとの記録","MEETING ARCHIVE":"会議記録","SUPPORT BY FIELD":"支援分野別",
+  "PUBLIC INFORMATION":"公的情報","DISASTER GUIDE":"制度・生活再建","DISASTER TERMS":"災害用語"
+};
+document.querySelectorAll(".kicker,.eyebrow").forEach(label=>{const translated=labelTranslations[label.textContent.trim()];if(translated)label.textContent=translated});
 
 const siteHeader=document.querySelector(".site-header");
 const headerNav=siteHeader?.querySelector("nav");
@@ -44,6 +53,13 @@ if(headerNav&&!headerNav.querySelector('a[href="municipality-updates.html"]')){
   const link=document.createElement("a");link.href="municipality-updates.html";link.textContent="市町村公式発信";
   if(location.pathname.endsWith("municipality-updates.html"))link.setAttribute("aria-current","page");
   headerNav.querySelector("a")?.after(link);
+}
+if(siteHeader&&headerNav&&!siteHeader.querySelector(".mobile-menu-toggle")){
+  headerNav.id="mainNavigation";headerNav.classList.add("enhanced-nav");
+  const toggle=document.createElement("button");toggle.type="button";toggle.className="mobile-menu-toggle";toggle.setAttribute("aria-controls",headerNav.id);toggle.setAttribute("aria-expanded","false");
+  toggle.innerHTML='<svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="close-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg><span>メニュー</span>';
+  toggle.onclick=()=>{const open=toggle.getAttribute("aria-expanded")!=="true";toggle.setAttribute("aria-expanded",String(open));headerNav.classList.toggle("is-open",open)};
+  siteHeader.insertBefore(toggle,headerNav);
 }
 if(siteHeader&&!document.querySelector(".archive-source-policy")){
   const policy=document.createElement("aside");
@@ -99,6 +115,8 @@ if($("#sectionLinks")){
     ["議事録を読む","県の報告・災害VC・現地の声を回ごとに","meetings.html","録"]
   ];
   $("#sectionLinks").innerHTML=links.map(([h,p,u,m])=>`<a href="${u}"><span>${m}</span><div><h3>${h}</h3><p>${p}</p></div><b>→</b></a>`).join("");
+  const icons={"日":'<svg viewBox="0 0 24 24"><path d="M6 3v3M18 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1Z"/></svg>',"公":'<svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9l6-5 6 5v11M9 12h6M9 15h6"/></svg>',"市":'<svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V6h8v14M14 10h4v10M9 9h2M9 13h2M9 17h2"/></svg>',"録":'<svg viewBox="0 0 24 24"><path d="M7 3h10v4H7zM5 5H3v16h14v-2M8 10h9M8 14h9M8 18h6M17 6h4v15H7"/></svg>'};
+  $$("#sectionLinks>a>span").forEach(span=>{span.innerHTML=icons[span.textContent]||span.textContent});
 }
 const municipalitySummary=document.querySelector(".municipality-summary");
 if(municipalitySummary&&!municipalitySummary.querySelector('a[href="municipality-updates.html"]'))municipalitySummary.querySelector(".municipality-caveat")?.insertAdjacentHTML("beforebegin",'<a class="button official-feed-button" href="municipality-updates.html">市町村公式発信の時系列を見る</a>');
