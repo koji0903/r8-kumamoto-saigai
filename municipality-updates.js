@@ -5,16 +5,18 @@
   const $ = selector => document.querySelector(selector);
   const esc = value => String(value).replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
   const dateLabel = date => new Intl.DateTimeFormat("ja-JP", { year: "numeric", month: "long", day: "numeric", weekday: "short" }).format(new Date(`${date}T12:00:00+09:00`));
+  const svg = paths => `<svg viewBox="0 0 24 24" aria-hidden="true">${paths}</svg>`;
   const categoryMeta = {
-    "避難・安全": { key: "safety", icon: "避", description: "避難所・避難指示・道路・安全確保" },
-    "ライフライン": { key: "lifeline", icon: "水", description: "給水・断水・電気・ガス" },
-    "住まい・証明": { key: "housing", icon: "住", description: "住居・罹災証明・応急住宅" },
-    "ごみ・生活": { key: "living", icon: "暮", description: "災害ごみ・入浴・日常生活" },
-    "交通": { key: "transport", icon: "交", description: "鉄道・バス・移動手段" },
-    "施設・学校": { key: "facility", icon: "施", description: "公共施設・学校・保育" },
-    "支援・制度": { key: "support", icon: "支", description: "相談・給付・寄附・支援制度" },
-    "その他": { key: "other", icon: "他", description: "上記以外の公式発信" }
+    "避難・安全": { key: "safety", icon: svg('<path d="M12 3 4.5 6v5.4c0 4.7 3.2 8 7.5 9.6 4.3-1.6 7.5-4.9 7.5-9.6V6L12 3Z"/><path d="m9 12 2 2 4-4"/>'), description: "避難所・避難指示・道路・安全確保" },
+    "ライフライン": { key: "lifeline", icon: svg('<path d="M12 2.8S6.5 9.1 6.5 14a5.5 5.5 0 0 0 11 0C17.5 9.1 12 2.8 12 2.8Z"/><path d="M9.5 15.2a2.8 2.8 0 0 0 2.5 1.5"/>'), description: "給水・断水・電気・ガス" },
+    "住まい・証明": { key: "housing", icon: svg('<path d="M4 10.5 12 4l8 6.5V20H4v-9.5Z"/><path d="M9 20v-6h6v6M8 8.5h8"/>'), description: "住居・罹災証明・応急住宅" },
+    "ごみ・生活": { key: "living", icon: svg('<path d="M4 7h16M9 3h6l1 4H8l1-4ZM6.5 7l1 14h9l1-14M10 11v6M14 11v6"/>'), description: "災害ごみ・入浴・日常生活" },
+    "交通": { key: "transport", icon: svg('<rect x="5" y="3" width="14" height="16" rx="3"/><path d="M8 15h8M8 8h8M8 21l2-2M16 19l2 2"/>'), description: "鉄道・バス・移動手段" },
+    "施設・学校": { key: "facility", icon: svg('<path d="M3 10 12 5l9 5-9 5-9-5Z"/><path d="M6 12.2V17c3.5 2.4 8.5 2.4 12 0v-4.8M21 10v6"/>'), description: "公共施設・学校・保育" },
+    "支援・制度": { key: "support", icon: svg('<path d="M12 20s-7-4.2-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.8-7 10-7 10Z"/><path d="M8.5 12h7M12 8.5v7"/>'), description: "相談・給付・寄附・支援制度" },
+    "その他": { key: "other", icon: svg('<circle cx="12" cy="12" r="9"/><path d="M8 12h.01M12 12h.01M16 12h.01"/>'), description: "上記以外の公式発信" }
   };
+  const allIcon=svg('<rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/>');
   const meta = category => categoryMeta[category] || categoryMeta["その他"];
   const municipalities = [...data.municipalities].sort((a, b) => a.name.localeCompare(b.name, "ja"));
   const query = new URLSearchParams(location.search);
@@ -42,7 +44,7 @@
   const categories = Object.keys(categoryMeta).filter(category => all.some(x => x.category === category));
   const renderFilters = municipality => {
     const counts = Object.fromEntries(categories.map(category => [category, municipality.updates.filter(x => x.category === category).length]));
-    $("#feedCategories").innerHTML = [`<button type="button" data-category="すべて" aria-pressed="${active === "すべて"}"><span class="filter-icon">全</span><span>すべて</span><b>${municipality.updates.length}</b></button>`, ...categories.map(category => {
+    $("#feedCategories").innerHTML = [`<button type="button" data-category="すべて" aria-pressed="${active === "すべて"}"><span class="filter-icon" aria-hidden="true">${allIcon}</span><span>すべて</span><b>${municipality.updates.length}</b></button>`, ...categories.map(category => {
       const item = meta(category);
       return `<button type="button" class="category-${item.key}" data-category="${esc(category)}" aria-pressed="${active === category}" ${counts[category] ? "" : "disabled"}><span class="filter-icon" aria-hidden="true">${item.icon}</span><span>${esc(category)}</span><b>${counts[category]}</b></button>`;
     })].join("");

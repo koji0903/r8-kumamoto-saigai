@@ -12,6 +12,8 @@ try{
 
 const navigationStyles=document.createElement("link");navigationStyles.rel="stylesheet";navigationStyles.href="navigation-enhancements.css";document.head.append(navigationStyles);
 const designStyles=document.createElement("link");designStyles.rel="stylesheet";designStyles.href="design-system.css";document.head.append(designStyles);
+const modernStyles=document.createElement("link");modernStyles.rel="stylesheet";modernStyles.href="global-modern.css";document.head.append(modernStyles);
+document.body.classList.add("modern-site");
 
 const {days,metrics,officialSources,municipalities,municipalEvents,supportCategories,supportEvents}=window.REPORT_DATA;
 const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
