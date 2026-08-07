@@ -20,7 +20,7 @@ const municipalities = [
   ["水俣市", "https://localcms.city.minamata.lg.jp/", []],
   ["山鹿市", "https://www.city.yamaga.kumamoto.jp/", ["https://www.city.yamaga.kumamoto.jp/kiji0033159/index.html"]],
   ["菊池市", "https://www.city.kikuchi.lg.jp/", []],
-  ["宇土市", "https://www.city.uto.lg.jp/", []],
+  ["宇土市", "https://www.city.uto.lg.jp/", ["https://www.city.uto.lg.jp/category/list/1301.html"]],
   ["上天草市", "https://www.city.kamiamakusa.kumamoto.jp/", []],
   ["宇城市", "https://www.city.uki.kumamoto.jp/", ["https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"]],
   ["天草市", "https://www.city.amakusa.kumamoto.jp/default.html?site=1", ["https://www.city.amakusa.kumamoto.jp/bousai/kiji00313681/index.html"]],
@@ -37,6 +37,9 @@ const municipalities = [
   ["芦北町", "https://www.town.ashikita.lg.jp/", []],
   ["津奈木町", "https://www.town.tsunagi.lg.jp/", []]
 ].map(([name, officialUrl, hubs]) => ({ name, officialUrl, hubs }));
+// 宇土市の当該ページは、市が今回の災害情報だけを分類して掲載する専用集約ページ。
+// 「市民の皆様へ」等、表題だけでは地震関連性を判定できない記事も公式の掲載判断を尊重する。
+municipalities.find(municipality => municipality.name === "宇土市").trustAllHub = true;
 
 const decode = value => value
   .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
@@ -51,15 +54,16 @@ const relevant = value => /令和\s*[８8]年熊本地震|熊本地震|地震|�
 // 地震特設ページ内では、表題に「地震」と書かれない生活情報も対象になる。
 // ただし特設ページの共通ナビゲーションを取り込まないよう、影響・支援を示す語を必須とする。
 const contextual = value => /ごみ|廃棄物|し尿|入浴|シャワー|休園|休校|休館|閉館|利用.*(?:中止|制限|再開)|施設.*(?:中止|制限|再開)|窓口|証明|手数料|住宅|住まい|相談|支援|義援|寄附|物資|炊き出し|農地|農業|道路|交通|バス|タクシー|保険証|医療|保育|学校|公民館|体育|公園|水道|下水道/u.test(value) && !excluded(value);
-const navigation = value => /^(トップ|ホーム|一覧|詳細|こちら|戻る|次へ|前へ|もっと見る|メニュー|新着情報|緊急情報|防災情報|関連情報|サイトマップ)$/u.test(value);
-const category = value => /避難|安全|震度|通行止|道路/u.test(value) ? "避難・安全" : /給水|断水|水道|濁り水|停電|ガス/u.test(value) ? "ライフライン" : /罹災|り災|被災証明|住まい|住宅/u.test(value) ? "住まい・証明" : /ごみ|廃棄物|し尿|入浴/u.test(value) ? "ごみ・生活" : /鉄道|バス|市電|交通|運休/u.test(value) ? "交通" : /休館|閉館|休校|学校|保育|施設|中止/u.test(value) ? "施設・学校" : /支援|相談|救助法|ボランティア|寄附|義援/u.test(value) ? "支援・制度" : "その他";
+const navigation = value => /^(トップ|ホーム|一覧|記事一覧を見る|詳細|こちら|戻る|次へ|前へ|もっと見る|メニュー|新着情報|緊急情報|防災情報|関連情報|サイトマップ)$/u.test(value);
+const category = value => /避難|安全|震度|通行止|道路/u.test(value) ? "避難・安全" : /給水|断水|水道|飲料水|濁り水|停電|ガス/u.test(value) ? "ライフライン" : /罹災|り災|被災証明|住まい|住家|住宅|緊急修理|応急修理/u.test(value) ? "住まい・証明" : /ごみ|廃棄物|し尿|入浴|シャワー/u.test(value) ? "ごみ・生活" : /鉄道|バス|タクシー|市電|交通|運休|運行/u.test(value) ? "交通" : /休館|閉館|休校|学校|保育|施設|中止/u.test(value) ? "施設・学校" : /支援|相談|救助法|ボランティア|寄附|義援/u.test(value) ? "支援・制度" : "その他";
 
 function parseDate(value) {
   const full = value.match(/(2026|令和\s*[８8])\s*[年./-]\s*(\d{1,2})\s*[月./-]\s*(\d{1,2})\s*日?/u);
   const short = value.match(/(?:^|[^\d])(7|8)\s*月\s*(\d{1,2})\s*日/u);
   const iso = full ? `2026-${String(full[2]).padStart(2, "0")}-${String(full[3]).padStart(2, "0")}` : short ? `2026-${String(short[1]).padStart(2, "0")}-${String(short[2]).padStart(2, "0")}` : null;
   const clock = value.match(/(?:^|\s)([0-2]?\d):([0-5]\d)(?:\s|$)/)?.slice(1).join(":") || null;
-  return iso && iso >= DISASTER_DATE && iso <= END_DATE ? { date: iso, time: clock } : null;
+  const valid = iso && /^2026-(07|08)-(0[1-9]|[12]\d|3[01])$/.test(iso);
+  return valid && iso >= DISASTER_DATE && iso <= END_DATE ? { date: iso, time: clock } : null;
 }
 function allowed(url, official) {
   const host = new URL(url).hostname.replace(/^www\./, "");
@@ -72,7 +76,8 @@ function articleLike(url) {
 function canonicalArticleKey(url) {
   const parsed = new URL(url);
   const viewId = parsed.pathname.match(/\/q\/aview\/\d+\/(\d+)\.html$/i)?.[1];
-  return viewId ? `${parsed.hostname}/q/aview/${viewId}` : url;
+  const articleId = parsed.pathname.match(/\/article\/view\/\d+\/(\d+)\.html$/i)?.[1];
+  return viewId ? `${parsed.hostname}/q/aview/${viewId}` : articleId ? `${parsed.hostname}/article/view/${articleId}` : url;
 }
 async function get(url) {
   const response = await fetch(url, { headers: { "user-agent": UA, accept: "text/html,application/xhtml+xml" }, redirect: "follow", signal: AbortSignal.timeout(20000) });
@@ -145,11 +150,11 @@ for (const config of municipalities) {
       if (self) updates.set(self.url, self);
       const found = anchors(html, finalUrl, config);
       for (const link of found) {
-        if (link.parsedDate && (relevant(link.title) || (item.kind === "hub" && contextual(link.title)))) {
+        if (link.parsedDate && (relevant(link.title) || (item.kind === "hub" && (contextual(link.title) || config.trustAllHub)))) {
           updates.set(link.url, { title: link.title, url: link.url, ...link.parsedDate, category: category(link.title) });
         }
         // PDF等は一覧上の日付と表題を掲載できるが、HTML本文検査の巡回対象にはしない。
-        const shouldInspect = !/\.(?:pdf|docx?|xlsx?|zip)$/i.test(new URL(link.url).pathname) && articleLike(link.url) && (relevant(link.title) || (item.kind === "hub" && contextual(link.title)));
+        const shouldInspect = !/\.(?:pdf|docx?|xlsx?|zip)$/i.test(new URL(link.url).pathname) && articleLike(link.url) && (relevant(link.title) || (item.kind === "hub" && (contextual(link.title) || config.trustAllHub)));
         if (shouldInspect && !seen.has(link.url) && !queued.has(link.url)) {
           queue.push({ url: link.url, kind: "detail", trustedByHub: item.kind === "hub" });
           queued.add(link.url);
