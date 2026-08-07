@@ -95,9 +95,9 @@ if(homeHero&&!homeHero.querySelector(".home-search")){
   document.body.classList.add("home-redesign");
   const homeStyles=document.createElement("link");homeStyles.rel="stylesheet";homeStyles.href="home-redesign.css";document.head.append(homeStyles);
   const heroTitle=homeHero.querySelector("h1");
-  if(heroTitle)heroTitle.innerHTML='令和8年熊本地震<br><em>記録と教訓のアーカイブ</em>';
+  if(heroTitle)heroTitle.innerHTML='令和8年熊本地震<br><em>被災地のいまを知り、支援につなぐ</em>';
   const lead=homeHero.querySelector(".lead");
-  if(lead)lead.textContent="火の国会議の現場記録と、県・市町村の一次情報を、時間と地域からたどれます。";
+  if(lead)lead.textContent="火の国会議の現場情報と、県・市町村の一次情報を統合し、現在進行中の被災状況と支援の動きをお伝えします。";
   const icon=paths=>`<svg viewBox="0 0 24 24" aria-hidden="true">${paths}</svg>`;
   const categories=[
     ["避難・安全","避難所・道路・安全情報","shelters.html","sky",icon('<path d="M12 3 4.5 6v5.4c0 4.7 3.2 8 7.5 9.6 4.3-1.6 7.5-4.9 7.5-9.6V6L12 3Z"/><path d="m9 12 2 2 4-4"/>')],
