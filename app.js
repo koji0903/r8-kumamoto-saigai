@@ -88,6 +88,27 @@ if($("#latest-title")){
 }
 const heroActions=document.querySelector(".summary-hero .hero-actions");
 if(heroActions&&!heroActions.querySelector('a[href="municipality-updates.html"]'))heroActions.insertAdjacentHTML("afterbegin",'<a class="button official-feed-button" href="municipality-updates.html">市町村の公式発信を見る</a>');
+const homeHero=document.querySelector(".summary-hero");
+if(homeHero&&!homeHero.querySelector(".home-search")){
+  document.body.classList.add("home-redesign");
+  const homeStyles=document.createElement("link");homeStyles.rel="stylesheet";homeStyles.href="home-redesign.css";document.head.append(homeStyles);
+  const heroTitle=homeHero.querySelector("h1");
+  if(heroTitle)heroTitle.innerHTML='令和8年熊本地震<br><em>記録と教訓のアーカイブ</em>';
+  const lead=homeHero.querySelector(".lead");
+  if(lead)lead.textContent="火の国会議の現場記録と、県・市町村の一次情報を、時間と地域からたどれます。";
+  const icon=paths=>`<svg viewBox="0 0 24 24" aria-hidden="true">${paths}</svg>`;
+  const categories=[
+    ["避難・安全","避難所・道路・安全情報","shelters.html","sky",icon('<path d="M12 3 4.5 6v5.4c0 4.7 3.2 8 7.5 9.6 4.3-1.6 7.5-4.9 7.5-9.6V6L12 3Z"/><path d="m9 12 2 2 4-4"/>')],
+    ["ライフライン","断水・給水・電気・ガス","#situationTitle","cyan",icon('<path d="M12 2.8S6.5 9.1 6.5 14a5.5 5.5 0 0 0 11 0C17.5 9.1 12 2.8 12 2.8Z"/><path d="M9.5 15.2a2.8 2.8 0 0 0 2.5 1.5"/>')],
+    ["住まい・証明","住宅支援・罹災証明","guide.html","amber",icon('<path d="M4 10.5 12 4l8 6.5V20H4v-9.5Z"/><path d="M9 20v-6h6v6M8 8.5h8"/>')],
+    ["ごみ・生活","災害ごみ・入浴・暮らし","support.html","emerald",icon('<path d="M4 7h16M9 3h6l1 4H8l1-4ZM6.5 7l1 14h9l1-14M10 11v6M14 11v6"/>')],
+    ["施設・学校","公共施設・学校・保育","municipality-updates.html","violet",icon('<path d="M3 10 12 5l9 5-9 5-9-5Z"/><path d="M6 12.2V17c3.5 2.4 8.5 2.4 12 0v-4.8M21 10v6"/>')],
+    ["支援・制度","相談・給付・支援活動","affected.html","rose",icon('<path d="M12 20s-7-4.2-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.8-7 10-7 10Z"/><path d="M8.5 12h7M12 8.5v7"/>')]
+  ];
+  const discovery=document.createElement("div");discovery.className="home-discovery";
+  discovery.innerHTML=`<form class="home-search" action="timeline.html" role="search"><label for="homeSearch">アーカイブ内を検索</label><div>${icon('<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>')}<input id="homeSearch" name="q" type="search" placeholder="地域名、避難所、断水、罹災証明など"><button type="submit">検索</button></div></form><nav class="visual-category-nav" aria-label="主要カテゴリ">${categories.map(([name,description,url,tone,svg])=>`<a href="${url}" class="tone-${tone}"><span class="visual-icon">${svg}</span><span><b>${name}</b><small>${description}</small></span><svg class="category-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>`).join("")}</nav>`;
+  homeHero.querySelector(".hero-copy")?.append(discovery);
+}
 if($("#casualtySummary")){
   // 人的被害はライフラインの数値と並べず、独立した枠で示す
   $("#casualtySummary").innerHTML=
@@ -149,6 +170,8 @@ if($("#timelineList")){
   const topics=["すべて",...new Set(days.flatMap(d=>d.topics))];let activeTopic="すべて";
   const renderTimeline=()=>{const q=$("#search").value.trim().toLowerCase(),filtered=[...days].reverse().filter(d=>(activeTopic==="すべて"||d.topics.includes(activeTopic))&&`${d.headline}${d.summary}${d.actions.join('')}${d.note}${d.topics.join('')}`.toLowerCase().includes(q));$("#timelineList").innerHTML=filtered.map(d=>`<article class="day-card"><div class="date-block"><time datetime="${d.date}">${dateLabel(d.date)}</time><strong>発災 ${d.disasterDay}日目</strong><span>第${d.meeting}回 火の国会議</span></div><div class="day-content"><div class="tags">${d.topics.map(t=>`<span class="tag">${t}</span>`).join('')}</div><h3>${d.headline}</h3><p>${d.summary}</p><ul class="actions">${d.actions.map(a=>`<li>${a}</li>`).join('')}</ul><div class="related-official"><span>関連する自治体の公式情報</span><div>${d.areas.map(name=>{const m=municipalities.find(x=>x.name===name);return `<a href="${m.url}" target="_blank" rel="noopener">${name} ↗</a>`}).join('')}</div></div><p class="day-note">注：${d.note}</p><div class="day-links"><a class="day-link" href="meetings.html?meeting=${d.meeting}">第${d.meeting}回の議事録を読む →</a><a class="day-link sub" href="${encodeURI(d.pdf)}" target="_blank" rel="noopener">原本PDF ↗</a></div></div></article>`).join('');$("#noResults").hidden=filtered.length>0};
   const renderFilters=()=>{$("#topicFilters").innerHTML=topics.map(t=>`<button class="filter ${t===activeTopic?"active":""}" data-topic="${t}">${t}</button>`).join('');$$('.filter').forEach(b=>b.onclick=()=>{activeTopic=b.dataset.topic;renderFilters();renderTimeline()})};
+  const initialQuery=new URLSearchParams(location.search).get("q");
+  if(initialQuery)$("#search").value=initialQuery;
   $("#search").addEventListener("input",renderTimeline);renderFilters();renderTimeline();
 }
 
