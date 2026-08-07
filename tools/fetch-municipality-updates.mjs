@@ -21,25 +21,35 @@ const municipalities = [
   ["山鹿市", "https://www.city.yamaga.kumamoto.jp/", ["https://www.city.yamaga.kumamoto.jp/kiji0033159/index.html"]],
   ["菊池市", "https://www.city.kikuchi.lg.jp/", []],
   ["宇土市", "https://www.city.uto.lg.jp/", ["https://www.city.uto.lg.jp/category/list/1301.html"]],
-  ["上天草市", "https://www.city.kamiamakusa.kumamoto.jp/", []],
+  ["上天草市", "https://www.city.kamiamakusa.kumamoto.jp/", ["https://www.city.kamiamakusa.kumamoto.jp/q/new.html?pg=0"]],
   ["宇城市", "https://www.city.uki.kumamoto.jp/", ["https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"]],
   ["天草市", "https://www.city.amakusa.kumamoto.jp/default.html?site=1", ["https://www.city.amakusa.kumamoto.jp/bousai/kiji00313681/index.html"]],
-  ["合志市", "https://www.city.koshi.lg.jp/", []],
+  ["合志市", "https://www.city.koshi.lg.jp/", [], ["https://www.city.koshi.lg.jp/bousai/kiji00325658/index.html"]],
   ["美里町", "https://www.town.kumamoto-misato.lg.jp/", ["https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html"]],
-  ["大津町", "https://www.town.ozu.kumamoto.jp/", []],
+  ["大津町", "https://www.town.ozu.kumamoto.jp/", [], ["https://www.town.ozu.kumamoto.jp/page/26598.html"]],
   ["菊陽町", "https://www.town.kikuyo.lg.jp/", ["https://www.town.kikuyo.lg.jp/bousai/list00733.html"]],
   ["西原村", "https://www.vill.nishihara.kumamoto.jp/", []],
   ["御船町", "https://www.town.mifune.kumamoto.jp/", []],
   ["嘉島町", "https://www.town.kumamoto-kashima.lg.jp/", []],
-  ["益城町", "https://www.town.mashiki.lg.jp/", ["https://www.town.mashiki.lg.jp/list00538.html"]],
-  ["甲佐町", "https://www.town.kosa.lg.jp/", ["https://www.town.kosa.lg.jp/q/aview/55/13531.html"]],
+  ["益城町", "https://www.town.mashiki.lg.jp/", ["https://www.town.mashiki.lg.jp/list00538.html", "https://www.town.mashiki.lg.jp/new_list.html"]],
+  ["甲佐町", "https://www.town.kosa.lg.jp/", ["https://www.town.kosa.lg.jp/q/aview/55/13531.html"], ["https://www.town.kosa.lg.jp/q/aview/120/10636.html", "https://www.town.kosa.lg.jp/q/aview/119/6336.html"]],
   ["氷川町", "https://www.town.hikawa.kumamoto.jp/", []],
   ["芦北町", "https://www.town.ashikita.lg.jp/", []],
   ["津奈木町", "https://www.town.tsunagi.lg.jp/", []]
-].map(([name, officialUrl, hubs]) => ({ name, officialUrl, hubs }));
+].map(([name, officialUrl, hubs, details = []]) => ({ name, officialUrl, hubs, details }));
 // 宇土市の当該ページは、市が今回の災害情報だけを分類して掲載する専用集約ページ。
 // 「市民の皆様へ」等、表題だけでは地震関連性を判定できない記事も公式の掲載判断を尊重する。
 municipalities.find(municipality => municipality.name === "宇土市").trustAllHub = true;
+// 集約ページから外れた後も、過去に公式原文と日付を確認済みの資料はアーカイブとして保持する。
+municipalities.find(municipality => municipality.name === "八代市").preserved = [{
+  title: "避難所開設状況一覧（再編）（R8.8.1 12時時点）（PDF：479.6キロバイト）",
+  url: "https://www.city.yatsushiro.lg.jp/kiji00326799/3_26799_157902_up_xi1jezri.pdf",
+  date: "2026-08-01", time: null, category: "避難・安全"
+}];
+municipalities.find(municipality => municipality.name === "甲佐町").preserved = [
+  { title: "甲佐町『やな場』について", url: "https://www.town.kosa.lg.jp/q/aview/120/10636.html", date: "2026-07-29", time: null, category: "施設・学校" },
+  { title: "古民家交流拠点施設（『宿屋kugurido』・『trattoria San Vito』）", url: "https://www.town.kosa.lg.jp/q/aview/119/6336.html", date: "2026-07-29", time: null, category: "施設・学校" }
+];
 
 const decode = value => value
   .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
@@ -49,7 +59,7 @@ const decode = value => value
   .replace(/&lt;/gi, "<").replace(/&gt;/gi, ">");
 const text = html => decode(html.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ")).replace(/[\s\u3000]+/g, " ").trim();
 const clean = value => value.replace(/\s*[|｜].*?(市|町|村|ホームページ).*$/u, "").replace(/\s+/g, " ").trim();
-const excluded = value => /平成\s*[２2]8年|平成28年|10年|１０年|耐震|防災計画|訓練|復興記録|追悼|議会報告会/u.test(value);
+const excluded = value => /平成\s*[２2]8年|平成28年|令和\s*[７7]年|2025年|10年|１０年|耐震|防災計画|訓練|復興記録|追悼|議会報告会/u.test(value);
 const relevant = value => /令和\s*[８8]年熊本地震|熊本地震|地震|震度|避難|罹災|り災|被災|災害ごみ|災害廃棄物|給水|断水|濁り水|停電|ガス供給|災害ボランティア|災害救助法|応急住宅|ブルーシート|通行止|運休/u.test(value) && !excluded(value);
 // 地震特設ページ内では、表題に「地震」と書かれない生活情報も対象になる。
 // ただし特設ページの共通ナビゲーションを取り込まないよう、影響・支援を示す語を必須とする。
@@ -72,6 +82,9 @@ function allowed(url, official) {
 }
 function articleLike(url) {
   return /(?:\/kiji\d+|\/article\/view\/|\/q\/aview\/|\/page\d+|\/kinkyu\/|\/news\/|\/topics\/)/iu.test(new URL(url).pathname);
+}
+function hubLike(url) {
+  return /(?:\/category\/list\/|\/list\d+\.html|\/new(?:_list)?\.html|\/q\/new\.html)/iu.test(new URL(url).pathname);
 }
 function canonicalArticleKey(url) {
   const parsed = new URL(url);
@@ -107,12 +120,12 @@ function anchors(html, base, config) {
   }
   return result;
 }
-function selfRecord(html, url, trustedByHub) {
+function selfRecord(html, url, trustedByHub, verifiedDetail = false) {
   const h1 = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i);
   const ogTitle = html.match(/<meta\b[^>]*property=["']og:title["'][^>]*content=["']([^"']+)/i)?.[1];
   const titleTag = html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1];
   const title = clean(text(h1?.[1] || ogTitle || titleTag || ""));
-  if (!title || excluded(title) || /くらし・手続き\s+健康・福祉/u.test(title) || (!relevant(title) && !(trustedByHub && contextual(title)))) return null;
+  if (!title || excluded(title) || /くらし・手続き\s+健康・福祉/u.test(title) || (!verifiedDetail && !relevant(title) && !(trustedByHub && contextual(title)))) return null;
   const structuredDates = [...html.matchAll(/(?:datePublished|dateModified|datetime)["'=:\s]+([0-9T:+-]{10,})/gi)].map(match => match[1]).join(" ");
   const around = h1 ? html.slice(Math.max(0, h1.index - 1000), Math.min(html.length, h1.index + h1[0].length + 2600)) : html.slice(0, 7000);
   const date = parseDate(structuredDates) || parseDate(text(around)) || parseDate(text(html.slice(0, 18000)));
@@ -135,9 +148,12 @@ const records = [];
 for (const config of municipalities) {
   const queue = [
     { url: config.officialUrl, kind: "home", trustedByHub: false },
-    ...config.hubs.map(url => ({ url, kind: "hub", trustedByHub: true }))
+    ...config.hubs.map(url => ({ url, kind: "hub", trustedByHub: true })),
+    // details は公式検索と原文確認を経て登録した個別記事。
+    ...config.details.map(url => ({ url, kind: "detail", trustedByHub: true, verifiedDetail: true }))
   ];
   const seen = new Set(), queued = new Set(queue.map(item => item.url)), updates = new Map(), errors = [];
+  for (const update of config.preserved || []) updates.set(update.url, update);
   let fetched = 0;
   while (queue.length && fetched < MAX_PAGES_PER_SITE) {
     const item = queue.shift();
@@ -146,7 +162,7 @@ for (const config of municipalities) {
     try {
       const { html, finalUrl } = await get(item.url);
       fetched++;
-      const self = selfRecord(html, finalUrl, item.trustedByHub && item.kind === "detail");
+      const self = selfRecord(html, finalUrl, item.trustedByHub && item.kind === "detail", item.verifiedDetail);
       if (self) updates.set(self.url, self);
       const found = anchors(html, finalUrl, config);
       for (const link of found) {
@@ -154,7 +170,11 @@ for (const config of municipalities) {
           updates.set(link.url, { title: link.title, url: link.url, ...link.parsedDate, category: category(link.title) });
         }
         // PDF等は一覧上の日付と表題を掲載できるが、HTML本文検査の巡回対象にはしない。
-        const shouldInspect = !/\.(?:pdf|docx?|xlsx?|zip)$/i.test(new URL(link.url).pathname) && articleLike(link.url) && (relevant(link.title) || (item.kind === "hub" && (contextual(link.title) || config.trustAllHub)));
+        const discoveredHub = hubLike(link.url) && relevant(link.title);
+        if (discoveredHub && !seen.has(link.url) && !queued.has(link.url)) {
+          queue.push({ url: link.url, kind: "hub", trustedByHub: true }); queued.add(link.url);
+        }
+        const shouldInspect = !discoveredHub && !/\.(?:pdf|docx?|xlsx?|zip)$/i.test(new URL(link.url).pathname) && articleLike(link.url) && (relevant(link.title) || (item.kind === "hub" && (contextual(link.title) || config.trustAllHub)));
         if (shouldInspect && !seen.has(link.url) && !queued.has(link.url)) {
           queue.push({ url: link.url, kind: "detail", trustedByHub: item.kind === "hub" });
           queued.add(link.url);
@@ -173,7 +193,7 @@ for (const config of municipalities) {
     if (!previous || update.date > previous.date || (update.date === previous.date && update.title.length > previous.title.length)) canonicalUpdates.set(key, update);
   }
   const sorted = [...canonicalUpdates.values()]
-    .filter(update => !/^(スポーツ|行政サイト|トップページ|アクセス|くらし・手続き|>>>.*一覧へ|月\d+日更新）)$/u.test(update.title))
+    .filter(update => !/^(スポーツ|行政サイト|トップページ|アクセス|くらし・手続き|>>>.*一覧へ|月\d+日更新）)$/u.test(update.title) && !/(?:\/q\/list\/|\/category\/list\/|\/list\d+\.html)/i.test(new URL(update.url).pathname))
     .sort((a, b) => `${a.date} ${a.time || ""}`.localeCompare(`${b.date} ${b.time || ""}`));
   const unique = [], keys = new Set();
   for (const update of sorted) {
