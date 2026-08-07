@@ -1,8 +1,8 @@
 window.REPORT_DATA = {
   disaster: { occurred: "2026-07-28T16:27:00+09:00", name: "令和8年熊本地震" },
   officialSources: [
-    { level: "国", name: "内閣府 防災情報", description: "政府の災害情報、被害・対応状況、関係省庁資料", url: "https://www.bousai.go.jp/" },
-    { level: "県", name: "熊本県 災害・防災情報", description: "県の被害情報、災害対策本部資料、生活再建・支援制度", url: "https://www.pref.kumamoto.jp/life/1/2/index.html" },
+    { level: "国・8月7日更新", name: "内閣府 令和8年熊本地震", description: "被害・政府対応、災害救助法、激甚災害、特定非常災害、会議資料の公式集約", url: "https://www.bousai.go.jp/updates/r8kumamoto_jishin/index.html" },
+    { level: "県・8月7日更新", name: "熊本県 令和8年熊本地震", description: "被害情報、災害対策本部資料、注意喚起、生活・支援情報の公式集約", url: "https://www.pref.kumamoto.jp/soshiki/1/274517.html" },
     { level: "県・リアルタイム", name: "防災情報くまもと", description: "避難情報、避難所、気象・河川・地震などの発令・観測情報", url: "https://portal.bousai.pref.kumamoto.jp/" }
   ],
   municipalities: [

@@ -182,6 +182,8 @@ if($("#situationSource")) $("#situationSource").textContent=`出典：第${days[
 
 if($("#officialPrimary")){
   $("#officialPrimary").innerHTML=officialSources.map(s=>`<a class="official-card" href="${s.url}" target="_blank" rel="noopener"><span>${s.level}</span><h3>${s.name}</h3><p>${s.description}</p><b>公式サイトを開く ↗</b></a>`).join('');
+  const cabinet=document.createElement("section");cabinet.className="section official-section";cabinet.innerHTML=`<div class="hq-section-head"><div><p class="kicker">CABINET OFFICE</p><h2>内閣府の最新情報</h2><p>被害・政府対応のほか、非常災害対策本部と生活・生業再建支援チームの公式資料を確認できます。</p></div></div><div class="official-primary"><a class="official-card" href="https://www.bousai.go.jp/updates/r8kumamoto_jishin/status/index.html" target="_blank" rel="noopener"><span>8月7日 08:00現在</span><h3>被害状況・政府の対応</h3><p>内閣府の日次報告と過去分を確認できます。</p><b>公式資料一覧 ↗</b></a><a class="official-card" href="https://www.bousai.go.jp/updates/r8kumamoto_jishin/taisakukaigi.html" target="_blank" rel="noopener"><span>8月7日・第8回</span><h3>非常災害対策本会議</h3><p>政府の対応方針と省庁横断の取組資料です。</p><b>会議資料・議事録 ↗</b></a><a class="official-card" href="https://www.bousai.go.jp/updates/r8kumamoto_jishin/hisaisya_shien.html" target="_blank" rel="noopener"><span>8月7日・第6回</span><h3>生活・生業再建支援</h3><p>被災者生活と事業再建に関する政府チームの概要です。</p><b>支援チーム資料 ↗</b></a></div>`;
+  $(".hq-meetings-section")?.before(cabinet);
   const renderMunicipalities=()=>{const q=$("#municipalitySearch").value.trim();$("#municipalityGrid").innerHTML=orderedMunicipalities.filter(m=>m.name.includes(q)).map(m=>`<a href="${m.url}" target="_blank" rel="noopener"><span>${m.name}</span><b>公式サイト ↗</b></a>`).join('')};
   $("#municipalitySearch").addEventListener("input",renderMunicipalities);renderMunicipalities();
 }

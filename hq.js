@@ -16,7 +16,7 @@ if(indexHost && window.HQ_INDEX){
   // よく参照される順に並べ、それ以外は資料の掲載順のまま
   const rank = t => ["議事録", "人的被害等の状況", "本部会議資料", "各部説明資料", "各部報告資料", "知事コメント"]
     .findIndex(k => t.includes(k));
-  indexHost.innerHTML = [...window.HQ_INDEX.meetings].reverse().map(m => `
+  indexHost.innerHTML = [...window.HQ_INDEX.meetings].filter(m => m.documents.length).reverse().map(m => `
     <article>
       <header>
         <b>第${m.meeting}回</b>
