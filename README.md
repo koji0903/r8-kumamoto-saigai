@@ -36,6 +36,7 @@
 ├── affected.html         被災された方向けの入口
 ├── supporters.html       支援者・支援団体向けの入口
 ├── municipalities.html   自治体別の被害・支援情報
+├── municipality-updates.html 市町村公式サイトの発信時系列
 ├── support.html          支援分野別の活動・ニーズ
 ├── shelters.html         稼働避難所マップ（Leaflet + 国土地理院タイル）
 ├── guide.html            制度・生活再建ガイド

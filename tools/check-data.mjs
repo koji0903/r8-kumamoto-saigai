@@ -27,9 +27,11 @@ const unique = (rows, key, label) => {
 const report = await loadWindowData("data/report-data.js", "REPORT_DATA");
 const minutes = await loadWindowData("data/minutes-data.js", "MINUTES_DATA");
 const shelters = await loadWindowData("data/generated/shelters-data.js", "SHELTER_DATA");
+const municipalityUpdates = await loadWindowData("data/generated/municipality-updates.js", "MUNICIPALITY_UPDATES");
 const shelterAgeHours = (Date.now() - new Date(shelters.metadata.retrievedAt).getTime()) / 36e5;
 if (shelterAgeHours > 6) warnings.push(`避難所データの取得から${Math.floor(shelterAgeHours)}時間経過。公開前に県公式JSONを再取得してください`);
 const municipalityNames = new Set(report.municipalities.map(m => m.name));
+const updateMunicipalityNames = new Set(municipalityUpdates.municipalities.map(m => m.name));
 const supportKeys = new Set(report.supportCategories.map(c => c.key));
 const sectionKeys = new Set(minutes.sectionDefs.map(s => s.key));
 const themeKeys = new Set(minutes.themes.map(t => t.key));
@@ -38,6 +40,18 @@ unique(report.days, d => d.date, "会議日");
 unique(report.days, d => d.meeting, "会議番号");
 unique(minutes.meetings, m => m.meeting, "構造化議事録の会議番号");
 unique(shelters.features, f => f.id, "避難所施設ID");
+unique(municipalityUpdates.municipalities, m => m.name, "公式発信の自治体名");
+for (const name of municipalityNames) if (!updateMunicipalityNames.has(name)) errors.push(`公式発信データに自治体がない: ${name}`);
+for (const municipality of municipalityUpdates.municipalities) {
+  if (!municipalityNames.has(municipality.name)) errors.push(`公式発信データに対象外自治体: ${municipality.name}`);
+  unique(municipality.updates, update => update.url, `${municipality.name}の公式発信URL`);
+  for (const update of municipality.updates) {
+    if (update.date < municipalityUpdates.metadata.disasterDate) errors.push(`${municipality.name}の発信日が発災前: ${update.date}`);
+    const officialHost = new URL(municipality.officialUrl).hostname.replace(/^www\./, "");
+    const updateHost = new URL(update.url).hostname.replace(/^www\./, "");
+    if (updateHost !== officialHost && !updateHost.endsWith(`.${officialHost}`)) errors.push(`${municipality.name}の非公式URL: ${update.url}`);
+  }
+}
 
 for (const day of report.days) {
   if (!(await exists(day.pdf))) errors.push(`会議PDFがない: ${day.pdf}`);
@@ -108,6 +122,7 @@ if (!appSource.includes("archive-source-policy")) errors.push("全ページ共�
 
 console.log(`会議 ${report.days.length}日分 / 自治体イベント ${report.municipalEvents.length}件 / 支援イベント ${report.supportEvents.length}件`);
 console.log(`構造化議事録 ${minutes.meetings.length}回分 / 開設中避難所 ${shelters.features.length}件`);
+console.log(`市町村公式発信 ${municipalityUpdates.municipalities.reduce((n, m) => n + m.updates.length, 0)}件 / ${municipalityUpdates.municipalities.length}市町村`);
 for (const warning of warnings) console.warn(`警告: ${warning}`);
 if (errors.length) {
   for (const error of errors) console.error(`エラー: ${error}`);
