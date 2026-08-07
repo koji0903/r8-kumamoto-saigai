@@ -171,6 +171,32 @@ window.REPORT_DATA = {
       date: "2026-08-05", meeting: 499, page: 5, category: "ボランティア",
       areas: ["氷川町"], title: "災害VCは8月8日活動開始予定", detail: "コンテナやスポットクーラー等を整備し、1日50人を募集して開始する予定です。",
       pdf: "sources/hinokuni-meetings/20260805火の国会議499回.pdf"
+    },
+    {
+      date: "2026-08-06", meeting: 500, page: 2, category: "ライフライン",
+      areas: ["宇城市", "甲佐町", "八代市", "氷川町"], title: "断水が継続", detail: "4市町の合計で36,880戸。試験通水実施中です。市町別戸数は火の国会議資料に記載されていません。",
+      pdf: "sources/hinokuni-meetings/20260806火の国会議500回.pdf"
+    },
+    {
+      date: "2026-08-06", meeting: 500, page: 2, category: "生活支援",
+      areas: ["熊本市", "宇土市", "宇城市", "八代市", "氷川町", "甲佐町", "美里町", "御船町", "嘉島町", "益城町"],
+      title: "ホテル避難の受付が進む", detail: "受け入れ134施設、申込760件。連絡済486件の内訳はマッチング済み61件、調整中225件、辞退94件、不通106件で、いずれも事業全体値です。",
+      pdf: "sources/hinokuni-meetings/20260806火の国会議500回.pdf"
+    },
+    {
+      date: "2026-08-06", meeting: 500, page: 3, category: "住まい",
+      areas: ["宇城市", "氷川町", "熊本市"], title: "建設型応急住宅を整備", detail: "宇城市3団地50戸、氷川町1団地20戸を整備中。熊本市は城南地区40戸、富合地区10戸を建設予定と報告されました。",
+      pdf: "sources/hinokuni-meetings/20260806火の国会議500回.pdf"
+    },
+    {
+      date: "2026-08-06", meeting: 500, page: 5, category: "ボランティア",
+      areas: ["八代市"], title: "災害VCは8月10日から活動", detail: "8月10日から16日まで1日30人を募集。鏡地区を拠点とし、離れた地区への対応が課題と報告されました。",
+      pdf: "sources/hinokuni-meetings/20260806火の国会議500回.pdf"
+    },
+    {
+      date: "2026-08-06", meeting: 500, page: 9, category: "住まい",
+      areas: ["宇城市"], title: "応急危険度判定は約6割", detail: "宇城市では約8,000件が対象で約6割の判定を終了し、8月12日の完了を目標としていると建築士会から報告されました。",
+      pdf: "sources/hinokuni-meetings/20260806火の国会議500回.pdf"
     }
   ],
   supportCategories: [
@@ -207,7 +233,13 @@ window.REPORT_DATA = {
     { date:"2026-08-05", meeting:499, page:10, category:"access", title:"外国人の出張相談とこころの支援を検討", detail:"八代・宇城・宇土を訪問。コミュニティに属さない人への到達や、不安・夜間の屋外就寝など見えにくい課題が報告されました。", areas:["八代市","宇城市","宇土市"], pdf:"sources/hinokuni-meetings/20260805火の国会議499回.pdf" },
     { date:"2026-08-05", meeting:499, page:10, category:"welfare", title:"ペット救護本部を設置", detail:"県獣医師会・熊本市が連携して8月4日に設置し、熊本県獣医師会を窓口にペットの一時預かりを開始しました。", areas:["熊本市"], pdf:"sources/hinokuni-meetings/20260805火の国会議499回.pdf" },
     { date:"2026-08-05", meeting:499, page:12, category:"housing", title:"緊急修理制度を8月27日まで延長", detail:"住家被害の拡大を防ぐ緊急修理制度について、発災から31日間となる8月27日まで延長と報告されました。", areas:[], pdf:"sources/hinokuni-meetings/20260805火の国会議499回.pdf" },
-    { date:"2026-08-05", meeting:499, page:13, category:"volunteer", title:"交通費補助・支援団体向け助成を共有", detail:"ボラGO第1回は8月14日正午まで。日本財団、中央共同募金会、KEIRIN、公益推進協会の助成情報が共有されました。条件・期限は各公式情報の確認が必要です。", areas:[], pdf:"sources/hinokuni-meetings/20260805火の国会議499回.pdf" }
+    { date:"2026-08-05", meeting:499, page:13, category:"volunteer", title:"交通費補助・支援団体向け助成を共有", detail:"ボラGO第1回は8月14日正午まで。日本財団、中央共同募金会、KEIRIN、公益推進協会の助成情報が共有されました。条件・期限は各公式情報の確認が必要です。", areas:[], pdf:"sources/hinokuni-meetings/20260805火の国会議499回.pdf" },
+    { date:"2026-08-06", meeting:500, page:6, category:"shelter", title:"避難所運営への不満と退所を報告", detail:"食事の量・質、段ボールベッドやシャワーの未提供などへの不満から、避難所を出て車中泊を選ぶ人がいたとDWATから報告されました。個別避難所名は原資料に記載されていません。", areas:[], pdf:"sources/hinokuni-meetings/20260806火の国会議500回.pdf" },
+    { date:"2026-08-06", meeting:500, page:7, category:"shelter", title:"車中泊は減少傾向、残る課題を確認", detail:"宇城市では車中泊が減る一方、建物への恐怖、仕事や子どもの校区、情報不足などから継続する人がいると報告。在宅者への情報到達も課題です。", areas:["宇城市"], pdf:"sources/hinokuni-meetings/20260806火の国会議500回.pdf" },
+    { date:"2026-08-06", meeting:500, page:8, category:"materials", title:"避難所2か所へ不足物資を搬入", detail:"八代トヨオカ地建アリーナと八代市第四中学校へ、ボディシート、調理用品、食品、子ども用おむつ、湯沸かし保温ポットなどを搬入したと報告されました。", areas:["八代市"], pdf:"sources/hinokuni-meetings/20260806火の国会議500回.pdf" },
+    { date:"2026-08-06", meeting:500, page:8, category:"access", title:"視覚障害者の生活支援を実施", detail:"断水地域で給水を取りに行けない人など約25人に4日ほどで対応し、水・食料の配送や専門家訪問が可能と共有されました。人数は会議報告時点の概数です。", areas:["宇城市","宇土市","氷川町","八代市"], pdf:"sources/hinokuni-meetings/20260806火の国会議500回.pdf" },
+    { date:"2026-08-06", meeting:500, page:9, category:"welfare", title:"ペット同伴避難場所の環境に課題", detail:"八代市トヨオカアリーナではペット同伴避難場所の屋根状態が悪く、空調の効く代替場所や専門的助言が必要と報告されました。", areas:["八代市"], pdf:"sources/hinokuni-meetings/20260806火の国会議500回.pdf" },
+    { date:"2026-08-06", meeting:500, page:12, category:"volunteer", title:"支援団体向け助成期限を更新", detail:"日本財団は申請期限を8月31日まで延長。中央共同募金会とKEIRINは8月21日締切と共有されました。申請前に各公式情報の最新条件を確認してください。", areas:[], pdf:"sources/hinokuni-meetings/20260806火の国会議500回.pdf" }
   ],
   metrics: [
     { key: "evacuees", label: "避難者", unit: "人", color: "#e45e35" },
@@ -304,6 +336,17 @@ window.REPORT_DATA = {
       summary: "避難者は7,155人、避難所は133か所へ減少しました。断水は43,710戸で継続。ホテル避難の申込増加、災害VCの本格化とともに、避難所の食事・衛生・医療備品など具体的な課題が報告されています。",
       actions: ["ホテル避難の受け入れを127施設へ拡大", "宇城市で個人宅ニーズ受付を開始", "緊急修理制度を8月27日まで延長"],
       note: "人的被害181人は死亡38人を含む会議資料の総数。住家被害14,562棟は推定値。停電は前日の会議資料の『おおむね解消』を継承し、0件とは扱っていません。"
+    },
+    {
+      date: "2026-08-06", meeting: 500, disasterDay: 10, attendees: 191,
+      pdf: "sources/hinokuni-meetings/20260806火の国会議500回.pdf",
+      areas: ["熊本市", "八代市", "宇土市", "宇城市", "美里町", "御船町", "嘉島町", "益城町", "甲佐町", "氷川町", "芦北町"],
+      stats: { injured: 184, deaths: 38, evacuees: 6721, shelters: 125, outages: null, outageStatus: "おおむね解消", homes: 15697, waterOutages: 36880, waterOutageAreas: ["宇城市", "甲佐町", "八代市", "氷川町"] },
+      topics: ["被害", "避難", "断水", "住まい", "宿泊", "ボランティア", "避難所環境", "要配慮者"],
+      headline: "避難者6,721人、在宅・車中泊への支援が課題に",
+      summary: "避難者は6,721人、避難所は125か所へ減少し、断水は36,880戸で継続しています。ホテル避難と応急住宅整備が進む一方、避難所運営への不満、在宅・車中泊者への情報、要配慮者支援が報告されました。",
+      actions: ["ホテル避難の受け入れを134施設へ拡大", "宇城・氷川・熊本で建設型応急住宅を整備", "八代市災害VCの8月10日活動開始を決定"],
+      note: "人的被害184人は死亡38人を含む会議資料の総数。住家被害15,697棟は推定値。PDF表紙は日時を2026年8月5日と記載していますが、ファイル名と本文の県資料・事業実績が8月6日時点のため、本サイトでは8月6日の記録として掲載します。参加者は現地20人、オンライン174人に対し、原資料の合計欄は191人です。"
     }
   ]
 };
