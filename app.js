@@ -10,6 +10,8 @@ const showDataError=err=>{
 
 try{
 
+const navigationStyles=document.createElement("link");navigationStyles.rel="stylesheet";navigationStyles.href="navigation-enhancements.css";document.head.append(navigationStyles);
+
 const {days,metrics,officialSources,municipalities,municipalEvents,supportCategories,supportEvents}=window.REPORT_DATA;
 const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
 // 自治体間に表示上の序列を設けず、市町村名順で統一する。
@@ -37,11 +39,17 @@ document.querySelector('meta[property="og:title"]')?.setAttribute("content",docu
 document.querySelector('meta[property="og:image:alt"]')?.setAttribute("content",`${SITE_NAME}｜令和8年熊本地震の災害・支援情報アーカイブ`);
 
 const siteHeader=document.querySelector(".site-header");
+const headerNav=siteHeader?.querySelector("nav");
+if(headerNav&&!headerNav.querySelector('a[href="municipality-updates.html"]')){
+  const link=document.createElement("a");link.href="municipality-updates.html";link.textContent="市町村公式発信";
+  if(location.pathname.endsWith("municipality-updates.html"))link.setAttribute("aria-current","page");
+  headerNav.querySelector("a")?.after(link);
+}
 if(siteHeader&&!document.querySelector(".archive-source-policy")){
   const policy=document.createElement("aside");
   policy.className="archive-source-policy";
   policy.setAttribute("aria-label","本サイトの位置づけと一次情報の確認");
-  policy.innerHTML=`<div><b>本サイトは災害・支援情報のアーカイブです</b><p>「火の国会議」議事録を中核に、熊本県災害対策本部と各市町村の公式情報を、出典・確認時点とともに整理しています。本サイト自体は行政機関等が発信する一次情報ではありません。</p></div><nav aria-label="一次情報へのリンク"><a href="meetings.html">火の国会議議事録</a><a href="official.html">国・県・市町村の一次情報</a><a href="https://portal.bousai.pref.kumamoto.jp/" target="_blank" rel="noopener">防災情報くまもと ↗</a></nav><p class="archive-source-warning"><b>参照時の注意</b> 避難、安否、支援活動、制度申請などの判断前には、リンク先の一次情報で発表時刻・対象地域・受付条件を必ず再確認してください。</p>`;
+  policy.innerHTML=`<div><b>本サイトは災害・支援情報のアーカイブです</b><p>「火の国会議」議事録を中核に、熊本県災害対策本部と各市町村の公式情報を、出典・確認時点とともに整理しています。本サイト自体は行政機関等が発信する一次情報ではありません。</p></div><nav aria-label="一次情報へのリンク"><a href="meetings.html">火の国会議議事録</a><a href="municipality-updates.html">市町村公式発信</a><a href="official.html">国・県・市町村の一次情報</a><a href="https://portal.bousai.pref.kumamoto.jp/" target="_blank" rel="noopener">防災情報くまもと ↗</a></nav><p class="archive-source-warning"><b>参照時の注意</b> 避難、安否、支援活動、制度申請などの判断前には、リンク先の一次情報で発表時刻・対象地域・受付条件を必ず再確認してください。</p>`;
   siteHeader.after(policy);
 }
 
@@ -62,6 +70,8 @@ if($("#latest-title")){
   $("#latestPdf").href=`meetings.html?meeting=${latest.meeting}`;
   $("#latest-stats").innerHTML=[["避難者",latest.stats.evacuees,"人"],["避難所",latest.stats.shelters,"か所"],["住家被害",latest.stats.homes,"棟"],["断水",latest.stats.waterOutages,"戸"]].map(([l,v,u])=>`<div><dt>${l}</dt><dd>${fmt(v)}<small>${u}</small></dd></div>`).join("");
 }
+const heroActions=document.querySelector(".summary-hero .hero-actions");
+if(heroActions&&!heroActions.querySelector('a[href="municipality-updates.html"]'))heroActions.insertAdjacentHTML("afterbegin",'<a class="button official-feed-button" href="municipality-updates.html">市町村の公式発信を見る</a>');
 if($("#casualtySummary")){
   // 人的被害はライフラインの数値と並べず、独立した枠で示す
   $("#casualtySummary").innerHTML=
@@ -84,11 +94,16 @@ if($("#situationSnapshot")){
 if($("#sectionLinks")){
   const links=[
     ["日ごとのまとめ","火の国会議から現場の変化を追う","timeline.html","日"],
+    ["市町村の公式発信","7月28日以降の自治体発表を時系列で確認","municipality-updates.html","公"],
     ["自治体別に見る","被災市町村の情報を同じ基準で確認","municipalities.html","市"],
     ["議事録を読む","県の報告・災害VC・現地の声を回ごとに","meetings.html","録"]
   ];
   $("#sectionLinks").innerHTML=links.map(([h,p,u,m])=>`<a href="${u}"><span>${m}</span><div><h3>${h}</h3><p>${p}</p></div><b>→</b></a>`).join("");
 }
+const municipalitySummary=document.querySelector(".municipality-summary");
+if(municipalitySummary&&!municipalitySummary.querySelector('a[href="municipality-updates.html"]'))municipalitySummary.querySelector(".municipality-caveat")?.insertAdjacentHTML("beforebegin",'<a class="button official-feed-button" href="municipality-updates.html">市町村公式発信の時系列を見る</a>');
+const officialShortcut=document.querySelector(".official-shortcut");
+if(officialShortcut&&!officialShortcut.querySelector('a[href="municipality-updates.html"]'))officialShortcut.insertAdjacentHTML("beforeend",'<a class="button ghost" href="municipality-updates.html">市町村の発信記録へ</a>');
 if($("#audienceUpdates")){
   const recent=[...supportEvents].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,6);
   $("#audienceUpdates").innerHTML=recent.map(e=>`<article><time>${dateLabel(e.date)}</time><span>${supportCategories.find(c=>c.key===e.category)?.label||e.category}</span><h3>${e.title}</h3><p>${e.detail}</p><a href="${encodeURI(`${e.pdf}#page=${e.page}`)}" target="_blank" rel="noopener">会議資料 p.${e.page} ↗</a></article>`).join("");

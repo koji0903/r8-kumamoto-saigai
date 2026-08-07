@@ -21,6 +21,12 @@
   let selected = municipalities.find(m => m.name === query.get("name"))?.name || municipalities[0].name;
   let active = "すべて", ascending = true;
   const all = municipalities.flatMap(m => m.updates);
+  const phases = [
+    { key: "initial", from: "2026-07-28", to: "2026-07-30", label: "発災直後", description: "避難・安全確認、休止・断水など" },
+    { key: "response", from: "2026-07-31", to: "2026-08-03", label: "応急対応", description: "給水、災害ごみ、証明・窓口など" },
+    { key: "recovery", from: "2026-08-04", to: "9999-12-31", label: "生活支援・再建", description: "住まい、制度、相談、復旧など" }
+  ];
+  const phaseFor = date => phases.find(phase => date >= phase.from && date <= phase.to) || phases.at(-1);
   $("#feedRetrieved").textContent = `公式サイト確認日時：${new Intl.DateTimeFormat("ja-JP", { dateStyle: "long", timeStyle: "short" }).format(new Date(data.metadata.retrievedAt))}`;
   $("#feedStats").innerHTML = `<span><b>${municipalities.length}</b>市町村</span><span><b>${all.length}</b>記事リンク</span><span><b>${new Set(all.map(x => x.date)).size}</b>日分</span>`;
 
@@ -28,6 +34,10 @@
   categoryOverview.className = "feed-category-overview";
   categoryOverview.setAttribute("aria-label", "情報分類の内訳");
   $(".feed-controls").before(categoryOverview);
+  const periodNav = document.createElement("nav");
+  periodNav.className = "feed-period-nav";
+  periodNav.setAttribute("aria-label", "発信時期から移動");
+  categoryOverview.after(periodNav);
 
   const categories = Object.keys(categoryMeta).filter(category => all.some(x => x.category === category));
   const renderFilters = municipality => {
@@ -50,6 +60,15 @@
       renderFilters(municipality);
       renderTimeline(false);
     });
+    periodNav.innerHTML = `<header><span>時間の流れ</span><small>7月28日の発災から段階別に移動</small></header><div>${phases.map((phase, index) => {
+      const count = municipality.updates.filter(update => update.date >= phase.from && update.date <= phase.to).length;
+      return `<button type="button" data-phase="${phase.key}" ${count ? "" : "disabled"}><i>${index + 1}</i><span><b>${phase.label}</b><small>${phase.description}</small></span><strong>${count}件</strong></button>`;
+    }).join("")}</div>`;
+    periodNav.querySelectorAll("button:not([disabled])").forEach(button => button.onclick = () => {
+      const phase = phases.find(item => item.key === button.dataset.phase);
+      const target = [...document.querySelectorAll(".feed-day")].find(day => day.dataset.date >= phase.from && day.dataset.date <= phase.to);
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
   };
 
   const renderList = () => {
@@ -71,10 +90,10 @@
     if (!municipality.updates.length) { $("#feedTimeline").innerHTML = `<div class="feed-empty"><b>自動取得で確認できませんでした</b><p>公式情報が存在しないという意味ではありません。サイト構造、掲載場所、取得時の応答などにより検出できない場合があります。</p><a href="${esc(municipality.officialUrl)}" target="_blank" rel="noopener">公式サイトを直接確認する ↗</a></div>`; return; }
     if (!filtered.length) { $("#feedTimeline").innerHTML = '<div class="feed-empty"><b>条件に合う記事はありません</b><p>検索語または分類を変更してください。</p></div>'; return; }
     const groups = filtered.reduce((result, item) => ((result[item.date] ??= []).push(item), result), {});
-    $("#feedTimeline").innerHTML = Object.entries(groups).map(([date, items]) => `<section class="feed-day"><header><time datetime="${date}">${dateLabel(date)}</time><span>${items.length}件</span></header><div>${items.map(item => {
+    $("#feedTimeline").innerHTML = Object.entries(groups).map(([date, items]) => { const phase = phaseFor(date); return `<section class="feed-day phase-${phase.key}" data-date="${date}"><header><span class="feed-phase-label">${phase.label}</span><time datetime="${date}">${dateLabel(date)}</time><span>${items.length}件</span></header><div>${items.map(item => {
       const category = meta(item.category);
       return `<article class="category-${category.key}"><div class="article-category"><span class="category-symbol" aria-hidden="true">${category.icon}</span><span><b>${esc(item.category)}</b><small>${esc(category.description)}</small></span>${item.time ? `<time datetime="${date}T${item.time}">${esc(item.time)} 公表</time>` : ""}</div><h3>${esc(item.title)}</h3><a href="${esc(item.url)}" target="_blank" rel="noopener">公式ページで原文を確認 ↗</a></article>`;
-    }).join("")}</div></section>`).join("");
+    }).join("")}</div></section>`; }).join("");
   };
   $("#feedKeyword").addEventListener("input", () => renderTimeline(false));
   $("#feedMunicipalitySearch").addEventListener("input", renderList);
