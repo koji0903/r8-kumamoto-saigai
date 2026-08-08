@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // 市町村公式サイトから令和8年熊本地震に関する記事リンクを収集する。
 // 本文の自動要約は行わず、公式記事の表題・日付・URLだけを保存する。
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, writeFile, readFile } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -16,7 +16,7 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const municipalities = [
   ["熊本市", "https://www.city.kumamoto.jp/", ["https://www.city.kumamoto.jp/list04828.html"]],
-  ["八代市", "https://www.city.yatsushiro.lg.jp/", ["https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html"]],
+  ["八代市", "https://www.city.yatsushiro.lg.jp/", ["https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html", "https://www.city.yatsushiro.lg.jp/kinkyu.html"]],
   ["水俣市", "https://localcms.city.minamata.lg.jp/", []],
   ["山鹿市", "https://www.city.yamaga.kumamoto.jp/", ["https://www.city.yamaga.kumamoto.jp/kiji0033159/index.html"]],
   ["菊池市", "https://www.city.kikuchi.lg.jp/", []],
@@ -65,13 +65,16 @@ const relevant = value => /令和\s*[８8]年熊本地震|熊本地震|地震|�
 // ただし特設ページの共通ナビゲーションを取り込まないよう、影響・支援を示す語を必須とする。
 const contextual = value => /ごみ|廃棄物|し尿|入浴|シャワー|休園|休校|休館|閉館|利用.*(?:中止|制限|再開)|施設.*(?:中止|制限|再開)|窓口|証明|手数料|住宅|住まい|相談|支援|義援|寄附|物資|炊き出し|農地|農業|道路|交通|バス|タクシー|保険証|医療|保育|学校|公民館|体育|公園|水道|下水道/u.test(value) && !excluded(value);
 const navigation = value => /^(トップ|ホーム|一覧|記事一覧を見る|詳細|こちら|戻る|次へ|前へ|もっと見る|メニュー|新着情報|緊急情報|防災情報|関連情報|サイトマップ)$/u.test(value);
-const category = value => /避難|安全|震度|通行止|道路/u.test(value) ? "避難・安全" : /給水|断水|水道|飲料水|濁り水|停電|ガス/u.test(value) ? "ライフライン" : /罹災|り災|被災証明|住まい|住家|住宅|緊急修理|応急修理/u.test(value) ? "住まい・証明" : /ごみ|廃棄物|し尿|入浴|シャワー/u.test(value) ? "ごみ・生活" : /鉄道|バス|タクシー|市電|交通|運休|運行/u.test(value) ? "交通" : /休館|閉館|休校|学校|保育|施設|中止/u.test(value) ? "施設・学校" : /支援|相談|救助法|ボランティア|寄附|義援/u.test(value) ? "支援・制度" : "その他";
+const category = value => /避難|安全|震度|通行止|道路|強風|落雷|火の取り扱い/u.test(value) ? "避難・安全" : /給水|断水|水道|飲料水|生活用水|濁り水|通水|配水|停電|ガス/u.test(value) ? "ライフライン" : /罹災|り災|被災証明|住まい|住家|住宅|緊急修理|応急修理/u.test(value) ? "住まい・証明" : /ごみ|廃棄物|し尿|入浴|シャワー/u.test(value) ? "ごみ・生活" : /鉄道|バス|タクシー|市電|交通|運休|運行/u.test(value) ? "交通" : /休館|閉館|休校|学校|保育|施設|中止/u.test(value) ? "施設・学校" : /支援|相談|救助法|ボランティア|寄附|義援/u.test(value) ? "支援・制度" : "その他";
 
 function parseDate(value) {
   const full = value.match(/(2026|令和\s*[８8])\s*[年./-]\s*(\d{1,2})\s*[月./-]\s*(\d{1,2})\s*日?/u);
   const short = value.match(/(?:^|[^\d])(7|8)\s*月\s*(\d{1,2})\s*日/u);
   const iso = full ? `2026-${String(full[2]).padStart(2, "0")}-${String(full[3]).padStart(2, "0")}` : short ? `2026-${String(short[1]).padStart(2, "0")}-${String(short[2]).padStart(2, "0")}` : null;
-  const clock = value.match(/(?:^|\s)([0-2]?\d):([0-5]\d)(?:\s|$)/)?.slice(1).join(":") || null;
+  const colonClock = value.match(/(?:^|\s)([0-2]?\d):([0-5]\d)(?:\s|$)/);
+  const japaneseClock = value.match(/([0-2]?\d)\s*時\s*([0-5]?\d)\s*分/u);
+  const clockMatch = colonClock || japaneseClock;
+  const clock = clockMatch ? `${String(clockMatch[1]).padStart(2, "0")}:${String(clockMatch[2]).padStart(2, "0")}` : null;
   const valid = iso && /^2026-(07|08)-(0[1-9]|[12]\d|3[01])$/.test(iso);
   return valid && iso >= DISASTER_DATE && iso <= END_DATE ? { date: iso, time: clock } : null;
 }
@@ -131,6 +134,23 @@ function selfRecord(html, url, trustedByHub, verifiedDetail = false) {
   const date = parseDate(structuredDates) || parseDate(text(around)) || parseDate(text(html.slice(0, 18000)));
   return date ? { title, url, ...date, category: category(title) } : null;
 }
+// 八代市の緊急情報は個別ページではなく、1ページ内の article 単位で更新される。
+// 各記事の公式アンカーを原文リンクとして保存する。
+function inlineEmergencyRecords(html, url) {
+  if (new URL(url).pathname !== "/kinkyu.html") return [];
+  const records = [];
+  for (const match of html.matchAll(/<article\b[^>]*>([\s\S]*?)<\/article>/gi)) {
+    const block = match[1];
+    const id = block.match(/\bid=["'](kid\d+)["']/i)?.[1];
+    const heading = block.match(/<h2\b[^>]*>([\s\S]*?)<\/h2>/i)?.[1];
+    const timeElement = block.match(/<time\b[^>]*>([\s\S]*?)<\/time>/i)?.[1];
+    const title = heading ? clean(text(heading)) : "";
+    const parsedDate = timeElement ? parseDate(text(timeElement)) : null;
+    if (!id || !title || !parsedDate || excluded(title)) continue;
+    records.push({ title, url: `${new URL(url).origin}/kinkyu.html#${id}`, ...parsedDate, category: category(title) });
+  }
+  return records;
+}
 function pagination(html, base, config) {
   const urls = [];
   for (const match of html.matchAll(/<a\b[^>]*href\s*=\s*["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
@@ -145,6 +165,13 @@ function pagination(html, base, config) {
 
 const checkedAt = new Date().toISOString();
 const records = [];
+// 緊急情報一覧から削除された後も、取得済みの公式アンカー記録は時系列アーカイブに残す。
+let preservedYatsushiroEmergency = [];
+try {
+  const previous = JSON.parse(await readFile(join(OUT, "municipality-updates.json"), "utf8"));
+  preservedYatsushiroEmergency = previous.municipalities?.find(item => item.name === "八代市")?.updates
+    ?.filter(update => update.url.startsWith("https://www.city.yatsushiro.lg.jp/kinkyu.html#kid")) || [];
+} catch {}
 for (const config of municipalities) {
   const queue = [
     { url: config.officialUrl, kind: "home", trustedByHub: false },
@@ -154,6 +181,7 @@ for (const config of municipalities) {
   ];
   const seen = new Set(), queued = new Set(queue.map(item => item.url)), updates = new Map(), errors = [];
   for (const update of config.preserved || []) updates.set(update.url, update);
+  if (config.name === "八代市") for (const update of preservedYatsushiroEmergency) updates.set(update.url, update);
   let fetched = 0;
   while (queue.length && fetched < MAX_PAGES_PER_SITE) {
     const item = queue.shift();
@@ -162,6 +190,7 @@ for (const config of municipalities) {
     try {
       const { html, finalUrl } = await get(item.url);
       fetched++;
+      for (const update of inlineEmergencyRecords(html, finalUrl)) updates.set(update.url, update);
       const self = selfRecord(html, finalUrl, item.trustedByHub && item.kind === "detail", item.verifiedDetail);
       if (self) updates.set(self.url, self);
       const found = anchors(html, finalUrl, config);
@@ -197,7 +226,8 @@ for (const config of municipalities) {
     .sort((a, b) => `${a.date} ${a.time || ""}`.localeCompare(`${b.date} ${b.time || ""}`));
   const unique = [], keys = new Set();
   for (const update of sorted) {
-    const key = `${update.date}|${update.title}`;
+    // 緊急情報は同日に同じ見出しで複数回更新されるため、公式アンカーごとに保存する。
+    const key = update.url.includes("/kinkyu.html#kid") ? update.url : `${update.date}|${update.title}`;
     if (!keys.has(key)) { keys.add(key); unique.push(update); }
   }
   records.push({ name: config.name, officialUrl: config.officialUrl, checkedAt, status: unique.length ? "confirmed" : fetched ? "not-found-by-collector" : "fetch-error", updates: unique, sourcesChecked: [...seen], pagesFetched: fetched, errors });
