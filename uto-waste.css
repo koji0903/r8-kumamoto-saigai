@@ -80,3 +80,16 @@ body.waste-page{background:#f2efe6;background-image:radial-gradient(#d8d2c2 0.7p
 .facility-results .facility-card h3{color:#fff;font-size:22px}.facility-results .facility-status{margin-top:0}.facility-results .accepted{padding-top:4px;border-top:3px solid #dff7f3}
 .facility-results .route-link{background:#fff;color:#0f766e}
 @media(max-width:600px){.item-selection-heading{padding:11px 13px}.item-selection-heading b{font-size:16px}.facility-results{margin-top:42px;padding:13px;border-width:3px;border-radius:12px;box-shadow:6px 7px 0 #99d9d1}.facility-result-heading{grid-template-columns:40px minmax(0,1fr);margin:-13px -13px 3px;padding:17px 15px;border-radius:8px 8px 0 0}.facility-result-heading .result-step{width:40px;height:40px}.facility-result-heading h3{font-size:22px}.facility-result-heading>i{display:none}.facility-results .facility-card{padding:0 17px 18px}.facility-results .facility-card>header{margin:0 -17px 16px;padding:18px 17px}.facility-results .facility-card h3{font-size:19px}}
+
+/* 施設ごとの受入品目を、文章ではなくイラスト一覧で確認できるようにする */
+.facility-results .accepted{margin:18px -8px 0;padding:15px;border:3px solid #f59e0b;border-radius:10px;background:#fffbeb}
+.accepted>header{display:flex!important;align-items:center;gap:10px;margin:0 0 12px!important;padding:0 0 11px!important;border-bottom:2px solid #f4d58d;background:transparent!important;color:#0f172a!important}
+.accepted>header>span{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:#facc15;color:#713f12}.accepted>header svg{width:23px;height:23px}
+.accepted>header b,.accepted>header small{display:block}.accepted>header b{font-size:18px}.accepted>header small{margin-top:1px;color:#9a3412;font-size:11px;font-weight:900}
+.accepted-list{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.accepted-list>span{display:grid;grid-template-columns:54px minmax(0,1fr);gap:7px;align-items:center;min-height:55px;padding:5px 7px;border:1px solid #f2d58f;border-radius:7px;background:#fff}
+.accepted-list i{display:grid;place-items:center;width:54px;height:43px;border-radius:5px;background:#f8fafc;font-style:normal}.accepted-list i svg{width:52px;height:38px;color:#334155;stroke-width:3}
+.accepted-list .art-teal{fill:#2dd4bf;stroke:#0f766e}.accepted-list .art-orange{fill:#fb923c;stroke:#c2410c}.accepted-list .art-blue{fill:#93c5fd;stroke:#1d4ed8}.accepted-list .art-yellow{fill:#fde047;stroke:#a16207}.accepted-list .art-slate{fill:#cbd5e1;stroke:#475569}.accepted-list .hanger{fill:none}
+.accepted-list>span>b{font-size:11px;line-height:1.35}.accepted details{margin-top:11px;border-top:1px dashed #d6a731}.accepted summary{padding-top:10px;color:#92400e;font-size:11px;font-weight:900;cursor:pointer}.accepted details p{margin:8px 0 0;color:#5f4b27;font-size:11px;line-height:1.7}
+@media(max-width:1100px) and (min-width:901px){.accepted-list{grid-template-columns:1fr}.accepted-list>span{grid-template-columns:45px minmax(0,1fr)}.accepted-list i{width:45px}.accepted-list i svg{width:43px}}
+@media(max-width:600px){.facility-results .accepted{margin-inline:-4px;padding:12px}.accepted>header b{font-size:17px}.accepted-list>span{grid-template-columns:50px minmax(0,1fr)}.accepted-list i{width:50px}.accepted-list i svg{width:48px}.accepted-list>span>b{font-size:10px}}
