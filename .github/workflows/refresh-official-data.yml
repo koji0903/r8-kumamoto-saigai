@@ -1,0 +1,93 @@
+name: 公式災害情報の定期更新
+
+on:
+  schedule:
+    # 3時間ごと（UTC基準）。実行時刻はGitHub側の混雑で多少前後します。
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-official-disaster-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Node.jsを準備
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Pythonを準備
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 熊本県資料PDFのキャッシュを復元
+        uses: actions/cache@v4
+        with:
+          path: sources/official/hq
+          key: hq-pdfs-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            hq-pdfs-${{ runner.os }}-
+
+      - name: PDF抽出ライブラリを準備
+        run: python -m pip install --disable-pip-version-check pymupdf
+
+      - name: 熊本県災害対策本部資料を更新
+        run: |
+          node tools/fetch-hq.mjs
+          python tools/build-hq-damage.py
+
+      - name: 市町村公式発信を更新
+        run: node tools/fetch-municipality-updates.mjs
+
+      - name: 開設中避難所を更新
+        shell: bash
+        run: |
+          curl --fail --silent --show-error --location \
+            "https://portal.bousai.pref.kumamoto.jp/data/shelter/shelter.json" \
+            --output /tmp/kumamoto-open-shelters.json
+          retrieved_at="$(TZ=Asia/Tokyo date '+%Y-%m-%dT%H:%M:00+09:00')"
+          node tools/build-shelters.mjs /tmp/kumamoto-open-shelters.json \
+            "--retrieved-at=${retrieved_at}"
+
+      - name: データ整合性を検査
+        run: |
+          node tools/check-data.mjs
+          node --check app.js
+          node --check tools/fetch-hq.mjs
+          node --check tools/fetch-municipality-updates.mjs
+          git diff --check
+
+      - name: 確認済みデータを反映
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            data/generated/hq-damage-data.js \
+            data/generated/hq-index.js \
+            data/generated/hq-latest.js \
+            data/generated/municipality-updates.js \
+            data/generated/shelters-data.js \
+            sources/official/hq-damage \
+            sources/official/hq-index.json \
+            sources/official/municipalities/municipality-updates.json
+          if git diff --cached --quiet; then
+            echo "反映対象の差分はありません。"
+            exit 0
+          fi
+          checked_at="$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST')"
+          git commit -m "公式災害情報を自動更新 (${checked_at})"
+          git push origin HEAD:main
