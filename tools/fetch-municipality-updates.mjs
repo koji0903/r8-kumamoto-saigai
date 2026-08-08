@@ -22,7 +22,10 @@ const municipalities = [
   ["菊池市", "https://www.city.kikuchi.lg.jp/", []],
   ["宇土市", "https://www.city.uto.lg.jp/", ["https://www.city.uto.lg.jp/category/list/1301.html"]],
   ["上天草市", "https://www.city.kamiamakusa.kumamoto.jp/", ["https://www.city.kamiamakusa.kumamoto.jp/q/new.html?pg=0"]],
-  ["宇城市", "https://www.city.uki.kumamoto.jp/", ["https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"]],
+  ["宇城市", "https://www.city.uki.kumamoto.jp/", [
+    "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+    "https://www.city.uki.kumamoto.jp/toppage/important"
+  ]],
   ["天草市", "https://www.city.amakusa.kumamoto.jp/default.html?site=1", ["https://www.city.amakusa.kumamoto.jp/bousai/kiji00313681/index.html"]],
   ["合志市", "https://www.city.koshi.lg.jp/", [], ["https://www.city.koshi.lg.jp/bousai/kiji00325658/index.html"]],
   ["美里町", "https://www.town.kumamoto-misato.lg.jp/", ["https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html"]],
@@ -96,6 +99,15 @@ function parseDate(value) {
   const valid = iso && /^2026-(07|08)-(0[1-9]|[12]\d|3[01])$/.test(iso);
   return valid && iso >= DISASTER_DATE && iso <= END_DATE ? { date: iso, time: clock } : null;
 }
+function parseLeadingDate(value) {
+  const normalized = value.replace(/[０-９]/g, digit => String("０１２３４５６７８９".indexOf(digit)));
+  const match = normalized.match(/^(?:2026|令和\s*8)\s*[年./-]\s*(\d{1,2})\s*[月./-]\s*(\d{1,2})\s*日?/u);
+  if (!match) return null;
+  const date = `2026-${match[1].padStart(2, "0")}-${match[2].padStart(2, "0")}`;
+  if (date < DISASTER_DATE || date > END_DATE) return null;
+  const parsed = parseDate(value);
+  return { date, time: parsed?.date === date ? parsed.time : null };
+}
 function allowed(url, official) {
   const host = new URL(url).hostname.replace(/^www\./, "");
   const officialHost = new URL(official).hostname.replace(/^www\./, "");
@@ -152,7 +164,7 @@ function selfRecord(html, url, trustedByHub, verifiedDetail = false) {
   const around = h1 ? html.slice(Math.max(0, h1.index - 1000), Math.min(html.length, h1.index + h1[0].length + 2600)) : html.slice(0, 7000);
   // 見出しに「更新」と明記された日付を最優先し、次に構造化メタデータの
   // 最終日時を使う。ページ本文からの推定は最後の手段とする。
-  const statedTitleDate = /更新|時点|現在|掲載|発表/u.test(title) ? parseDate(title) : null;
+  const statedTitleDate = parseLeadingDate(title) || (/更新|時点|現在|掲載|発表/u.test(title) ? parseDate(title) : null);
   const date = statedTitleDate || structuredDates.at(-1) || parseDate(text(around)) || parseDate(text(html.slice(0, 18000)));
   return date ? { title, url, ...date, category: category(title) } : null;
 }
@@ -247,7 +259,7 @@ for (const config of municipalities) {
     // 一覧周辺の別の日付より、記事タイトル自身が明示する更新日・時点を優先する。
     // 「8月6日から」「8月31日まで」のような実施期間は掲載日ではないため対象外。
     .map(update => {
-      const stated = /更新|時点|現在|掲載|発表/u.test(update.title) ? parseDate(update.title) : null;
+      const stated = parseLeadingDate(update.title) || (/更新|時点|現在|掲載|発表/u.test(update.title) ? parseDate(update.title) : null);
       return stated ? { ...update, ...stated } : update;
     })
     .filter(update => !/^(スポーツ|行政サイト|トップページ|アクセス|くらし・手続き|>>>.*一覧へ|月\d+日更新）)$/u.test(update.title) && !/(?:\/q\/list\/|\/category\/list\/|\/list\d+\.html)/i.test(new URL(update.url).pathname))
