@@ -3,6 +3,27 @@
   const data = window.MUNICIPALITY_UPDATES;
   if (!data) return;
   const $ = selector => document.querySelector(selector);
+  const controls = $(".feed-controls");
+  const keywordLabel = controls?.querySelector(":scope > label");
+  const categoryFieldset = controls?.querySelector(":scope > fieldset");
+  const orderButton = controls?.querySelector(":scope > #feedOrder");
+  if (controls && keywordLabel && categoryFieldset && orderButton) {
+    const searchControl = document.createElement("section");
+    searchControl.className = "feed-search-control";
+    searchControl.setAttribute("aria-label", "キーワードで記事を検索");
+    searchControl.innerHTML = '<header><span aria-hidden="true">⌕</span><div><b>キーワード検索</b><small>記事の表題から探す</small></div></header>';
+    searchControl.append(keywordLabel);
+    const filterControl = document.createElement("section");
+    filterControl.className = "feed-filter-control";
+    filterControl.setAttribute("aria-label", "情報の分類で絞り込む");
+    filterControl.innerHTML = '<header><span aria-hidden="true">◈</span><div><b>情報の分類</b><small>種類を選んで絞り込む</small></div></header>';
+    filterControl.append(categoryFieldset);
+    const orderControl = document.createElement("div");
+    orderControl.className = "feed-order-control";
+    orderControl.innerHTML = '<span>並び順</span>';
+    orderControl.append(orderButton);
+    controls.append(searchControl, filterControl, orderControl);
+  }
   const esc = value => String(value).replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
   const dateLabel = date => new Intl.DateTimeFormat("ja-JP", { year: "numeric", month: "long", day: "numeric", weekday: "short" }).format(new Date(`${date}T12:00:00+09:00`));
   const svg = paths => `<svg viewBox="0 0 24 24" aria-hidden="true">${paths}</svg>`;
