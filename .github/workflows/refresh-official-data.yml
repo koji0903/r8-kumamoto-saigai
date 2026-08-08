@@ -52,6 +52,9 @@ jobs:
       - name: 市町村公式発信を更新
         run: node tools/fetch-municipality-updates.mjs
 
+      - name: トップページの公的最新トピックスを更新
+        run: node tools/fetch-official-topics.mjs
+
       - name: 開設中避難所を更新
         shell: bash
         run: |
@@ -68,6 +71,7 @@ jobs:
           node --check app.js
           node --check tools/fetch-hq.mjs
           node --check tools/fetch-municipality-updates.mjs
+          node --check tools/fetch-official-topics.mjs
           git diff --check
 
       - name: 確認済みデータを反映
@@ -80,10 +84,12 @@ jobs:
             data/generated/hq-index.js \
             data/generated/hq-latest.js \
             data/generated/municipality-updates.js \
+            data/generated/official-topics.js \
             data/generated/shelters-data.js \
             sources/official/hq-damage \
             sources/official/hq-index.json \
-            sources/official/municipalities/municipality-updates.json
+            sources/official/municipalities/municipality-updates.json \
+            sources/official/topics/latest-topics.json
           if git diff --cached --quiet; then
             echo "反映対象の差分はありません。"
             exit 0

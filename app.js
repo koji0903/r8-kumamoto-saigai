@@ -76,6 +76,23 @@ if(siteHeader&&!document.querySelector(".archive-source-policy")){
 const topNotice=document.querySelector(".notice p");
 if(topNotice) topNotice.innerHTML=`<b>火の国会議の生の現場情報を軸に、公的な一次情報を紐づけて保存しています。</b> このページは記録・検索のためのアーカイブであり、緊急情報や行政の公式発表に代わるものではありません。`;
 
+if($("#officialTopicsGrid")){
+  const topicsStyles=document.createElement("link");topicsStyles.rel="stylesheet";topicsStyles.href="official-topics.css";document.head.append(topicsStyles);
+  const topics=window.OFFICIAL_TOPICS;
+  const esc=value=>String(value??"").replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
+  const compactDate=item=>{const date=new Date(`${item.date}T00:00:00+09:00`);return `<time datetime="${esc(item.date)}">${date.getMonth()+1}/${date.getDate()}</time>${item.time?`<small>${esc(item.time)}</small>`:""}`};
+  const topicItem=(item,label)=>`<a class="topic-item" href="${esc(item.url)}" target="_blank" rel="noopener"><span class="topic-date">${compactDate(item)}</span><span class="topic-copy"><span class="topic-chip">${esc(label)}</span><b>${esc(item.title)}</b></span><span class="topic-arrow" aria-hidden="true">↗</span></a>`;
+  const icons={national:'<path d="M4 20h16M6 20V9l6-5 6 5v11M9 12h6M9 16h6"/>',prefecture:'<path d="M4 20h16M6 20V6h12v14M9 10h2m2 0h2m-6 4h2m2 0h2"/>',municipal:'<path d="M3 20h18M5 20V10l7-5 7 5v10M9 20v-6h6v6"/>'};
+  const group=(key,title,items,moreUrl,moreLabel)=>`<section class="topics-group ${key}"><header><div class="topics-group-title"><span class="topics-group-icon"><svg viewBox="0 0 24 24" aria-hidden="true">${icons[key]}</svg></span><h3>${title}</h3></div><a href="${moreUrl}">${moreLabel} →</a></header><div class="topic-list">${items.map(item=>topicItem(item,key==="municipal"?`${item.municipality}・${item.category}`:item.kind)).join("")}</div></section>`;
+  if(topics?.national?.length&&topics?.prefecture?.length){
+    $("#officialTopicsGrid").innerHTML=group("national","国からの最新情報",topics.national,"https://www.bousai.go.jp/updates/r8kumamoto_jishin/index.html","内閣府")+group("prefecture","熊本県からの最新情報",topics.prefecture,"https://www.pref.kumamoto.jp/soshiki/1/274517.html","熊本県")+group("municipal","市町村からの最新発表",topics.municipalities.slice(0,8),"municipality-updates.html","全自治体");
+    const retrieved=new Date(topics.metadata.retrievedAt);
+    $("#officialTopicsUpdated").textContent=`公式サイト確認：${new Intl.DateTimeFormat("ja-JP",{timeZone:"Asia/Tokyo",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"}).format(retrieved)}`;
+  }else{
+    $("#officialTopicsGrid").innerHTML='<p class="topics-loading">最新トピックスを表示できません。公的情報一覧から一次情報をご確認ください。</p>';
+  }
+}
+
 // メインメニューは各HTMLに静的に置いてある（JS無効でも動く）。ここでは組み立てない。
 
 // ここはサイト全体の更新時刻ではなく、主要集計の基準日を示す。

@@ -28,6 +28,7 @@ const report = await loadWindowData("data/report-data.js", "REPORT_DATA");
 const minutes = await loadWindowData("data/minutes-data.js", "MINUTES_DATA");
 const shelters = await loadWindowData("data/generated/shelters-data.js", "SHELTER_DATA");
 const municipalityUpdates = await loadWindowData("data/generated/municipality-updates.js", "MUNICIPALITY_UPDATES");
+const officialTopics = await loadWindowData("data/generated/official-topics.js", "OFFICIAL_TOPICS");
 const shelterAgeHours = (Date.now() - new Date(shelters.metadata.retrievedAt).getTime()) / 36e5;
 if (shelterAgeHours > 6) warnings.push(`避難所データの取得から${Math.floor(shelterAgeHours)}時間経過。公開前に県公式JSONを再取得してください`);
 const municipalityNames = new Set(report.municipalities.map(m => m.name));
@@ -51,6 +52,12 @@ for (const municipality of municipalityUpdates.municipalities) {
     const updateHost = new URL(update.url).hostname.replace(/^www\./, "");
     if (updateHost !== officialHost && !updateHost.endsWith(`.${officialHost}`)) errors.push(`${municipality.name}の非公式URL: ${update.url}`);
   }
+}
+if (!officialTopics.national.length) errors.push("国の最新トピックスがありません");
+if (!officialTopics.prefecture.length) errors.push("県の最新トピックスがありません");
+for (const topic of [...officialTopics.national, ...officialTopics.prefecture, ...officialTopics.municipalities]) {
+  if (!/^https:\/\//.test(topic.url)) errors.push(`トピックスURLが不正: ${topic.url}`);
+  if (!/^2026-(07|08)-\d{2}$/.test(topic.date)) errors.push(`トピックス日付が不正: ${topic.title}`);
 }
 
 for (const day of report.days) {
