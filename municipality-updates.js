@@ -112,7 +112,11 @@
     const search = $("#feedKeyword").value.trim().toLowerCase();
     const filtered = municipality.updates.filter(x => (active === "すべて" || x.category === active) && `${x.title} ${x.category}`.toLowerCase().includes(search)).sort((a, b) => (ascending ? 1 : -1) * `${a.date} ${a.time || ""}`.localeCompare(`${b.date} ${b.time || ""}`));
     $("#feedMunicipalityHeader").innerHTML = `<div><p>市町村公式サイトの発信記録</p><h2>${esc(municipality.name)}</h2><span>${municipality.updates.length ? `${municipality.updates.length}件を確認` : "自動取得では記事を確認できませんでした"}</span></div><a href="${esc(municipality.officialUrl)}" target="_blank" rel="noopener">${esc(municipality.name)}公式サイトで最新情報を確認 ↗</a>`;
-    document.querySelector(".feed-special-link")?.remove();
+    document.querySelectorAll(".feed-special-link").forEach(link => link.remove());
+    const vcMunicipalities = new Set(["熊本市","嘉島町","益城町","八代市","宇土市","宇城市","美里町","御船町","甲佐町","氷川町","芦北町"]);
+    if (vcMunicipalities.has(municipality.name)) {
+      $("#feedMunicipalityHeader").insertAdjacentHTML("afterend", `<a class="municipality-feature feed-special-link vc-feature-link" href="volunteer-centers.html#${encodeURIComponent(municipality.name)}"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.2-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.8-7 10-7 10Z"/><path d="M8.5 13h7M12 9.5v7"/></svg></span><span><small>${esc(municipality.name)}｜支援に参加する方へ</small><b>災害ボランティアセンター</b><em>設置場所・活動状況・公式発信を確認</em></span><i>VC情報を見る →</i></a>`);
+    }
     if (municipality.name === "宇土市") {
       $("#feedMunicipalityHeader").insertAdjacentHTML("afterend", `<a class="municipality-feature feed-special-link" href="uto-waste.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16v13H4zM8 7V4h8v3M9 11v5m6-5v5"/></svg></span><span><small>被災された方へ</small><b>災害ごみの持ち込み案内</b><em>品目別の持込先・入場券・地図を分かりやすく確認</em></span><i>案内を見る →</i></a>`);
     }

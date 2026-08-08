@@ -164,6 +164,8 @@ if($("#sectionLinks")){
 }
 const municipalitySummary=document.querySelector(".municipality-summary");
 if(municipalitySummary&&!municipalitySummary.querySelector('a[href="municipality-updates.html"]'))municipalitySummary.querySelector(".municipality-caveat")?.insertAdjacentHTML("beforebegin",'<a class="button official-feed-button" href="municipality-updates.html">市町村公式発信の時系列を見る</a>');
+const supporterNeeds=document.querySelector(".supporter-needs");
+if(supporterNeeds&&!supporterNeeds.querySelector('a[href="volunteer-centers.html"]'))supporterNeeds.insertAdjacentHTML("afterbegin",'<a href="volunteer-centers.html"><span>VC</span><h3>災害ボランティアセンター</h3><p>自治体別に設置場所・活動状況・公式募集を確認</p><b>VC情報を見る →</b></a>');
 const officialShortcut=document.querySelector(".official-shortcut");
 if(officialShortcut&&!officialShortcut.querySelector('a[href="municipality-updates.html"]'))officialShortcut.insertAdjacentHTML("beforeend",'<a class="button ghost" href="municipality-updates.html">市町村の発信記録へ</a>');
 if($("#audienceUpdates")){
@@ -174,7 +176,7 @@ if($("#audienceUpdates")){
 const footer=document.querySelector("footer");
 if(footer&&!document.querySelector(".site-directory")){
   const directory=document.createElement("section");directory.className="site-directory";directory.setAttribute("aria-label","サイト内リンク");
-  directory.innerHTML=`<div><b>火の国会議</b><a href="timeline.html">日ごとのまとめ</a><a href="meetings.html">議事録（全文）</a></div><div><b>被災された方</b><a href="shelters.html">稼働避難所</a><a href="guide.html">制度・生活再建</a><a href="terms.html">災害用語集</a></div><div><b>支援する方</b><a href="support.html">支援分野別</a><a href="municipalities.html">自治体別</a><a href="supporters.html">支援者向け入口</a></div><div><b>一次情報・出典</b><a href="municipality-updates.html">市町村の公式発信</a><a href="official.html">国・熊本県・市町村</a><a href="meetings.html">火の国会議 原本PDF</a><a href="https://portal.bousai.pref.kumamoto.jp/" target="_blank" rel="noopener">防災情報くまもと ↗</a></div>`;
+  directory.innerHTML=`<div><b>火の国会議</b><a href="timeline.html">日ごとのまとめ</a><a href="meetings.html">議事録（全文）</a></div><div><b>被災された方</b><a href="shelters.html">稼働避難所</a><a href="guide.html">制度・生活再建</a><a href="terms.html">災害用語集</a></div><div><b>支援する方</b><a href="volunteer-centers.html">災害ボランティアセンター</a><a href="support.html">支援分野別</a><a href="municipalities.html">自治体別</a><a href="supporters.html">支援者向け入口</a></div><div><b>一次情報・出典</b><a href="municipality-updates.html">市町村の公式発信</a><a href="official.html">国・熊本県・市町村</a><a href="meetings.html">火の国会議 原本PDF</a><a href="https://portal.bousai.pref.kumamoto.jp/" target="_blank" rel="noopener">防災情報くまもと ↗</a></div>`;
   footer.before(directory);
 }
 if($("#recentUpdates")) $("#recentUpdates").innerHTML=[...days].reverse().slice(0,3).map(d=>`<article><time datetime="${d.date}">${dateLabel(d.date)}</time><span>第${d.meeting}回</span><h3>${d.headline}</h3><p>${d.summary}</p><a href="timeline.html">詳細を見る →</a></article>`).join("");
