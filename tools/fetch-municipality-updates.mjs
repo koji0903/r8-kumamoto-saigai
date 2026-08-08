@@ -68,13 +68,31 @@ const navigation = value => /^(トップ|ホーム|一覧|記事一覧を見る|
 const category = value => /避難|安全|震度|通行止|道路|強風|落雷|火の取り扱い/u.test(value) ? "避難・安全" : /給水|断水|水道|飲料水|生活用水|濁り水|通水|配水|停電|ガス/u.test(value) ? "ライフライン" : /罹災|り災|被災証明|住まい|住家|住宅|緊急修理|応急修理/u.test(value) ? "住まい・証明" : /ごみ|廃棄物|し尿|入浴|シャワー/u.test(value) ? "ごみ・生活" : /鉄道|バス|タクシー|市電|交通|運休|運行/u.test(value) ? "交通" : /休館|閉館|休校|学校|保育|施設|中止/u.test(value) ? "施設・学校" : /支援|相談|救助法|ボランティア|寄附|義援/u.test(value) ? "支援・制度" : "その他";
 
 function parseDate(value) {
-  const full = value.match(/(2026|令和\s*[８8])\s*[年./-]\s*(\d{1,2})\s*[月./-]\s*(\d{1,2})\s*日?/u);
-  const short = value.match(/(?:^|[^\d])(7|8)\s*月\s*(\d{1,2})\s*日/u);
-  const iso = full ? `2026-${String(full[2]).padStart(2, "0")}-${String(full[3]).padStart(2, "0")}` : short ? `2026-${String(short[1]).padStart(2, "0")}-${String(short[2]).padStart(2, "0")}` : null;
-  const colonClock = value.match(/(?:^|\s)([0-2]?\d):([0-5]\d)(?:\s|$)/);
-  const japaneseClock = value.match(/([0-2]?\d)\s*時\s*([0-5]?\d)\s*分/u);
+  value = value.replace(/[０-９]/g, digit => String("０１２３４５６７８９".indexOf(digit)));
+  // 見出しには「7月28日発生…8月7日20時35分更新」のように複数の日付が
+  // 含まれる。掲載・更新日時として末尾側の日付を採用し、時刻はその日付の
+  // 直後に書かれたものだけを結び付ける（本文中の発災時刻等を拾わない）。
+  const candidates = [];
+  for (const match of value.matchAll(/(2026|令和\s*[８8])\s*[年./-]\s*(\d{1,2})\s*[月./-]\s*(\d{1,2})\s*日?/gu)) {
+    candidates.push({ index: match.index, end: match.index + match[0].length, month: match[2], day: match[3] });
+  }
+  for (const match of value.matchAll(/[RＲ]\s*8\s*[./-]\s*(\d{1,2})\s*[./-]\s*(\d{1,2})/gu)) {
+    candidates.push({ index: match.index, end: match.index + match[0].length, month: match[1], day: match[2] });
+  }
+  for (const match of value.matchAll(/(?:^|[^\d])(7|8)\s*月\s*(\d{1,2})\s*日/gu)) {
+    candidates.push({ index: match.index, end: match.index + match[0].length, month: match[1], day: match[2] });
+  }
+  for (const match of value.matchAll(/(?:^|[^\dRrＲ])(7|8)\s*[./-]\s*(\d{1,2})(?:日)?/gu)) {
+    candidates.push({ index: match.index, end: match.index + match[0].length, month: match[1], day: match[2] });
+  }
+  candidates.sort((a, b) => a.index - b.index);
+  const chosen = candidates.at(-1);
+  const iso = chosen ? `2026-${String(chosen.month).padStart(2, "0")}-${String(chosen.day).padStart(2, "0")}` : null;
+  const clockText = chosen ? value.slice(chosen.end, chosen.end + 32) : "";
+  const colonClock = clockText.match(/^\s*(?:[T（(、,・／/]?\s*)([0-2]?\d):([0-5]\d)/u);
+  const japaneseClock = clockText.match(/^\s*(?:[T（(、,・／/]?\s*)([0-2]?\d)\s*時(?:\s*([0-5]?\d)\s*分)?/u);
   const clockMatch = colonClock || japaneseClock;
-  const clock = clockMatch ? `${String(clockMatch[1]).padStart(2, "0")}:${String(clockMatch[2]).padStart(2, "0")}` : null;
+  const clock = clockMatch ? `${String(clockMatch[1]).padStart(2, "0")}:${String(clockMatch[2] || "0").padStart(2, "0")}` : null;
   const valid = iso && /^2026-(07|08)-(0[1-9]|[12]\d|3[01])$/.test(iso);
   return valid && iso >= DISASTER_DATE && iso <= END_DATE ? { date: iso, time: clock } : null;
 }
@@ -129,9 +147,13 @@ function selfRecord(html, url, trustedByHub, verifiedDetail = false) {
   const titleTag = html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1];
   const title = clean(text(h1?.[1] || ogTitle || titleTag || ""));
   if (!title || excluded(title) || /くらし・手続き\s+健康・福祉/u.test(title) || (!verifiedDetail && !relevant(title) && !(trustedByHub && contextual(title)))) return null;
-  const structuredDates = [...html.matchAll(/(?:datePublished|dateModified|datetime)["'=:\s]+([0-9T:+-]{10,})/gi)].map(match => match[1]).join(" ");
+  const structuredDates = [...html.matchAll(/(?:datePublished|dateModified|datetime)["'=:\s]+([0-9T:+-]{10,})/gi)]
+    .map(match => parseDate(match[1])).filter(Boolean).sort((a, b) => `${a.date} ${a.time || ""}`.localeCompare(`${b.date} ${b.time || ""}`));
   const around = h1 ? html.slice(Math.max(0, h1.index - 1000), Math.min(html.length, h1.index + h1[0].length + 2600)) : html.slice(0, 7000);
-  const date = parseDate(structuredDates) || parseDate(text(around)) || parseDate(text(html.slice(0, 18000)));
+  // 見出しに「更新」と明記された日付を最優先し、次に構造化メタデータの
+  // 最終日時を使う。ページ本文からの推定は最後の手段とする。
+  const statedTitleDate = /更新|時点|現在|掲載|発表/u.test(title) ? parseDate(title) : null;
+  const date = statedTitleDate || structuredDates.at(-1) || parseDate(text(around)) || parseDate(text(html.slice(0, 18000)));
   return date ? { title, url, ...date, category: category(title) } : null;
 }
 // 八代市の緊急情報は個別ページではなく、1ページ内の article 単位で更新される。
@@ -222,6 +244,12 @@ for (const config of municipalities) {
     if (!previous || update.date > previous.date || (update.date === previous.date && update.title.length > previous.title.length)) canonicalUpdates.set(key, update);
   }
   const sorted = [...canonicalUpdates.values()]
+    // 一覧周辺の別の日付より、記事タイトル自身が明示する更新日・時点を優先する。
+    // 「8月6日から」「8月31日まで」のような実施期間は掲載日ではないため対象外。
+    .map(update => {
+      const stated = /更新|時点|現在|掲載|発表/u.test(update.title) ? parseDate(update.title) : null;
+      return stated ? { ...update, ...stated } : update;
+    })
     .filter(update => !/^(スポーツ|行政サイト|トップページ|アクセス|くらし・手続き|>>>.*一覧へ|月\d+日更新）)$/u.test(update.title) && !/(?:\/q\/list\/|\/category\/list\/|\/list\d+\.html)/i.test(new URL(update.url).pathname))
     .sort((a, b) => `${a.date} ${a.time || ""}`.localeCompare(`${b.date} ${b.time || ""}`));
   const unique = [], keys = new Set();

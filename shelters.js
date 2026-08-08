@@ -9,6 +9,7 @@
   $("#shelterMunicipality").insertAdjacentHTML("beforeend",muni.map(n=>`<option>${esc(n)}</option>`).join(""));
   const dateTimeLabel=value=>new Intl.DateTimeFormat("ja-JP",{year:"numeric",month:"long",day:"numeric",hour:"2-digit",minute:"2-digit"}).format(new Date(value));
   const retrieved=dateTimeLabel(dataset.metadata.retrievedAt);
+  if($("#updated")) $("#updated").textContent=`避難所取得 ${new Intl.DateTimeFormat("ja-JP",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"}).format(new Date(dataset.metadata.retrievedAt))}`;
   const retrievedAgeHours=(Date.now()-new Date(dataset.metadata.retrievedAt).getTime())/36e5;
   const sourceIsStale=retrievedAgeHours>6;
   $("#shelterSourceDate").textContent=`取得 ${retrieved} ｜ 開設中 ${features.length.toLocaleString("ja-JP")}件`;

@@ -77,11 +77,13 @@ if(topNotice) topNotice.innerHTML=`<b>火の国会議の生の現場情報を軸
 
 // メインメニューは各HTMLに静的に置いてある（JS無効でも動く）。ここでは組み立てない。
 
-// 最終更新は、火の国会議（data/report-data.js）と県災害対策本部会議（data/generated/hq-latest.js）の新しいほう。
-// 県の資料は1日2回出るため会議記録より先行することがある。
+// ここはサイト全体の更新時刻ではなく、主要集計の基準日を示す。
+// 自治体発信・避難所はそれぞれのページで、公式データの取得日時に置き換える。
 if($("#updated")){
-  const hqDate=window.HQ_LATEST?.date;
-  $("#updated").textContent=`最終更新 ${dateLabel(hqDate&&hqDate>latest.date?hqDate:latest.date)}`;
+  const hq=window.HQ_LATEST;
+  $("#updated").textContent=hq
+    ? `県集計 ${dateLabel(hq.date)} ${hq.time}時点`
+    : `会議記録 ${dateLabel(latest.date)}時点`;
 }
 if($("#latest-title")){
   $("#latest-title").textContent=latest.headline;

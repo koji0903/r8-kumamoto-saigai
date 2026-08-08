@@ -23,6 +23,8 @@
   let selected = municipalities.find(m => m.name === query.get("name"))?.name || municipalities[0].name;
   let active = "すべて", ascending = false;
   const all = municipalities.flatMap(m => m.updates);
+  const retrievedLabel = new Intl.DateTimeFormat("ja-JP", { dateStyle: "short", timeStyle: "short" }).format(new Date(data.metadata.retrievedAt));
+  if ($("#updated")) $("#updated").textContent = `公式情報確認 ${retrievedLabel}`;
   const phases = [
     { key: "initial", from: "2026-07-28", to: "2026-07-30", label: "発災直後", description: "避難・安全確認、休止・断水など" },
     { key: "response", from: "2026-07-31", to: "2026-08-03", label: "応急対応", description: "給水、災害ごみ、証明・窓口など" },
