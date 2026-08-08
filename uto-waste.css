@@ -51,3 +51,15 @@ body.waste-page{background:#f2efe6;background-image:radial-gradient(#d8d2c2 0.7p
 .waste-filter button[aria-pressed="true"]>i{display:grid}
 @media(max-width:1000px){.waste-filter{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.waste-filter{grid-template-columns:1fr;gap:13px}.waste-filter button{grid-template-columns:122px minmax(0,1fr);min-height:140px;padding:12px 14px}.waste-art{min-height:104px}.waste-filter button .waste-art svg{width:112px;height:78px}.waste-filter-copy b{font-size:17px}.waste-filter-copy small{font-size:12px}}
+
+/* 手順と必要書類も、行動・持ち物が見える説明イラストにする */
+.quick-check li{display:flex;flex-direction:column;min-height:390px}
+.step-illustration{display:grid;place-items:center;width:100%;min-height:178px;margin-bottom:8px;border-radius:10px;background:#f8fafc}
+.step-illustration svg{width:min(100%,260px);height:158px;color:#334155;stroke-width:3}
+.step-illustration .step-ground{stroke:#64748b;stroke-width:4}.step-illustration .step-bin{stroke-width:4}.step-illustration .bin-green{fill:#5eead4;stroke:#0f766e}.step-illustration .bin-yellow{fill:#fde047;stroke:#a16207}.step-illustration .bin-blue{fill:#93c5fd;stroke:#1d4ed8}.step-illustration .bottle-shape{fill:#60a5fa;stroke:#1d4ed8}.step-illustration .pan-shape{fill:#cbd5e1;stroke:#475569}.step-illustration .cloth-shape{fill:#fb923c;stroke:#c2410c}.step-illustration .paper-back{fill:#e2e8f0;stroke:#64748b}.step-illustration .paper-front{fill:#fff;stroke:#2563eb}.step-illustration .id-card{fill:#bfdbfe;stroke:#1d4ed8}.step-illustration .car-shape{fill:#2dd4bf;stroke:#0f766e}.step-illustration .car-wheel{fill:#334155;stroke:#fff;stroke-width:5}.step-illustration .booth{fill:#fed7aa;stroke:#c2410c}.step-illustration .ticket-shape{fill:#fde047;stroke:#a16207}
+.quick-check li>div:last-child{grid-column:auto}.quick-check li>div:last-child b{font-size:23px}.quick-check li>div:last-child p{font-size:16px}
+.document-grid{max-width:1040px}.document-grid article{padding-top:22px}.document-illustration{display:grid;grid-template-rows:160px auto;place-items:center;margin:-4px -4px 20px;padding:14px;border-radius:10px;background:#f8fafc}
+.document-illustration svg{width:min(100%,390px);height:155px;color:#334155;stroke-width:3}
+.document-illustration>span{display:inline-block;margin-top:6px;padding:5px 12px;border-radius:999px;background:#0f766e;color:#fff;font-size:13px;font-weight:900}
+.document-illustration .doc-shadow{fill:#e2e8f0;stroke:#64748b}.document-illustration .doc-blue{fill:#bfdbfe;stroke:#1d4ed8}.document-illustration .doc-orange{fill:#fed7aa;stroke:#c2410c}.document-illustration .doc-stamp{fill:#fb7185;stroke:#be123c}.document-illustration .license{fill:#bfdbfe;stroke:#1d4ed8}.document-illustration .my-number{fill:#a7f3d0;stroke:#0f766e}
+@media(max-width:600px){.quick-check li{min-height:0}.step-illustration{min-height:150px}.step-illustration svg{height:142px}.quick-check li>div:last-child b{font-size:20px}.quick-check li>div:last-child p{font-size:14px}.document-illustration{grid-template-rows:130px auto}.document-illustration svg{height:130px}.document-illustration>span{font-size:11px}}
