@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// トップページ用に、内閣府・熊本県・市町村の最新一次情報を整理する。
+// トップページ用に、国・熊本県・市町村の最新一次情報を整理する。
 // 本文の要約は作らず、公式ページ上の表題・日時・URLのみを保存する。
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { dirname, join } from "node:path";
@@ -21,12 +21,17 @@ function links(source,base){return [...source.matchAll(/<a\b[^>]*href=["']([^"']
 const checkedAt=new Date().toISOString();
 const nationalHub="https://www.bousai.go.jp/updates/r8kumamoto_jishin/index.html";
 const nationalStatus="https://www.bousai.go.jp/updates/r8kumamoto_jishin/status/index.html";
+const maffPress="https://www.maff.go.jp/j/press/index.html";
 let national=[];
 try{
-  const [hub,status]=await Promise.all([html(nationalHub),html(nationalStatus)]);
+  const [hub,status,maff]=await Promise.all([html(nationalHub),html(nationalStatus),html(maffPress)]);
   const damage=links(status,nationalStatus).filter(item=>/令和.?8年熊本地震に係る被害状況/u.test(ascii(item.title))).map(item=>({...item,date:isoDate(item.title),time:clock(item.title),kind:"被害状況"})).filter(item=>item.date).sort((a,b)=>`${b.date} ${b.time||""}`.localeCompare(`${a.date} ${a.time||""}`))[0];
   const activities=links(hub,nationalHub).filter(item=>/^令和.?8年.?\d+月/u.test(ascii(item.title))).map(item=>({...item,date:isoDate(item.title),time:null,kind:"国の対応"})).filter(item=>item.date).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,2);
-  national=[damage,...activities].filter(Boolean);
+  const maffItems=[...maff.matchAll(/<p[^>]*class=["']list_item_date["'][^>]*>([^<]+)<\/p>([\s\S]*?)(?=<p[^>]*class=["']list_item_date["']|<h2|$)/gi)].flatMap(match=>{
+    const date=isoDateWithCurrentYear(match[1]);
+    return links(match[2],maffPress).filter(item=>/令和.?8年熊本地震/u.test(ascii(item.title))).map(item=>({...item,date,time:null,kind:/激甚災害/u.test(item.title)?"激甚災害・国の制度":"農林水産省"}));
+  }).filter(item=>item.date).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3);
+  national=[damage,...maffItems,...activities].filter(Boolean).filter((item,index,items)=>items.findIndex(other=>other.url===item.url)===index).sort((a,b)=>`${b.date} ${b.time||""}`.localeCompare(`${a.date} ${a.time||""}`));
 }catch(error){
   try{national=JSON.parse(await readFile(OUT,"utf8")).national||[]}catch{}
   if(!national.length)throw error;

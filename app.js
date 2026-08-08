@@ -85,7 +85,7 @@ if($("#officialTopicsGrid")){
   const icons={national:'<path d="M4 20h16M6 20V9l6-5 6 5v11M9 12h6M9 16h6"/>',prefecture:'<path d="M4 20h16M6 20V6h12v14M9 10h2m2 0h2m-6 4h2m2 0h2"/>',municipal:'<path d="M3 20h18M5 20V10l7-5 7 5v10M9 20v-6h6v6"/>'};
   const group=(key,title,items,moreUrl,moreLabel)=>`<section class="topics-group ${key}"><header><div class="topics-group-title"><span class="topics-group-icon"><svg viewBox="0 0 24 24" aria-hidden="true">${icons[key]}</svg></span><h3>${title}</h3></div><a href="${moreUrl}">${moreLabel} →</a></header><div class="topic-list">${items.map(item=>topicItem(item,key==="municipal"?`${item.municipality}・${item.category}`:item.kind)).join("")}</div></section>`;
   if(topics?.national?.length&&topics?.prefecture?.length){
-    $("#officialTopicsGrid").innerHTML=group("national","国からの最新情報",topics.national,"https://www.bousai.go.jp/updates/r8kumamoto_jishin/index.html","内閣府")+group("prefecture","熊本県からの最新情報",topics.prefecture,"https://www.pref.kumamoto.jp/soshiki/1/274517.html","熊本県")+group("municipal","市町村からの最新発表",topics.municipalities.slice(0,8),"municipality-updates.html","全自治体");
+    $("#officialTopicsGrid").innerHTML=group("national","国からの最新情報",topics.national,"official.html","国の情報一覧")+group("prefecture","熊本県からの最新情報",topics.prefecture,"https://www.pref.kumamoto.jp/soshiki/1/274517.html","熊本県")+group("municipal","市町村からの最新発表",topics.municipalities.slice(0,8),"municipality-updates.html","全自治体");
     const retrieved=new Date(topics.metadata.retrievedAt);
     $("#officialTopicsUpdated").textContent=`公式サイト確認：${new Intl.DateTimeFormat("ja-JP",{timeZone:"Asia/Tokyo",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"}).format(retrieved)}`;
   }else{
