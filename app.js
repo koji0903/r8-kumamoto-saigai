@@ -14,6 +14,7 @@ const navigationStyles=document.createElement("link");navigationStyles.rel="styl
 const designStyles=document.createElement("link");designStyles.rel="stylesheet";designStyles.href="design-system.css";document.head.append(designStyles);
 const modernStyles=document.createElement("link");modernStyles.rel="stylesheet";modernStyles.href="global-modern.css";document.head.append(modernStyles);
 const mobileStyles=document.createElement("link");mobileStyles.rel="stylesheet";mobileStyles.href="mobile-polish.css";document.head.append(mobileStyles);
+if(document.querySelector("#timelineList")){const timelineStyles=document.createElement("link");timelineStyles.rel="stylesheet";timelineStyles.href="timeline-redesign.css";document.head.append(timelineStyles)}
 document.body.classList.add("modern-site");
 
 const {days,metrics,officialSources,municipalities,municipalEvents,supportCategories,supportEvents}=window.REPORT_DATA;
