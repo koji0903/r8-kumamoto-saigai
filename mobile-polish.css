@@ -1,0 +1,64 @@
+/* スマートフォン用の最終レイアウト補正。全ページ共通CSSの後に読み込む。 */
+@media (max-width:800px){
+  .modern-site :where(main,section,article,aside,header,nav,div){min-width:0}
+  .modern-site :where(h1,h2,h3,h4,p,a,b,span,small,li,dd){overflow-wrap:anywhere}
+  .modern-site :where(p,li,dd){line-height:1.75}
+
+  /* 長いサイト名・見出し・一次情報リンクの横はみ出しを防ぐ */
+  .modern-site .brand{min-width:0}.modern-site .brand>span:last-child{min-width:0}
+  .modern-site .archive-source-policy nav a{min-width:0;white-space:normal;line-height:1.45}
+  .modern-site .summary-hero h1{max-width:100%;font-size:clamp(32px,9.2vw,40px);line-height:1.28;word-break:normal;line-break:strict}
+  .modern-site .summary-hero h1 em{display:block;max-width:100%;font-size:.9em}
+  .modern-site .subpage-hero h1{line-height:1.35;word-break:normal!important;line-break:strict}
+
+  /* タップ対象は指で押しやすい高さを確保 */
+  .modern-site :where(.button,.source-actions a,.term-links a,.term-links button,.load-more,#feedOrder){min-height:44px}
+  .modern-site :where(.source-actions a,.term-links a,.term-links button){display:inline-flex;align-items:center}
+
+  /* 1px区切りで接続していたカードを、スマホでは独立した塊にする */
+  .modern-site :where(.compact-steps,.first-actions ol,.support-checks,.feed-method>div){gap:12px;background:transparent}
+  .modern-site :where(.compact-steps article,.first-actions li,.support-checks article,.feed-method article){border:1px solid rgba(203,213,225,.55);border-radius:12px}
+  .modern-site :where(.status-grid,.glossary-grid,.path-grid,.need-grid,.audience-updates,.official-primary,.section-links,.recent-updates,.shelter-list,.hq-meeting-index){gap:12px}
+  .modern-site :where(.status-grid article,.glossary-grid details,.path-grid article,.audience-updates article){border-radius:12px;overflow:hidden}
+
+  /* 県集計とサマリーも表ではなく指標カードとして見せる */
+  .modern-site :where(.hq-summary,.hq-metrics){gap:10px;border:0;background:transparent;overflow:visible}
+  .modern-site :where(.hq-summary .hq-metric,.hq-metrics .hq-metric){border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden}
+  .modern-site .situation-snapshot{gap:12px}
+  .modern-site .situation-cautions{gap:10px}
+
+  /* 市町村・公式発信の密集を解消 */
+  .modern-site .municipality-grid{gap:10px;border:0}
+  .modern-site .municipality-grid a{min-height:54px;border:1px solid var(--line);border-radius:11px}
+  .modern-site .feed-overview-stats{gap:8px;background:transparent}
+  .modern-site .feed-overview-stats span{border:1px solid var(--line);border-radius:10px}
+  .modern-site .feed-category-overview>div{gap:10px}
+  .modern-site .feed-controls{row-gap:18px}
+  .modern-site .feed-day{padding:22px 0}
+  .modern-site .feed-day>div{padding-left:18px}
+  .modern-site .feed-day article{margin-bottom:8px;padding-bottom:24px}
+  .modern-site .feed-day article:last-child{margin-bottom:0;padding-bottom:4px}
+
+  /* 横長データはページ全体をはみ出さず、内側だけスクロール */
+  .modern-site :where(.trend-values,.minutes-table-scroll){max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .modern-site :where(img,svg,canvas,iframe){max-width:100%}
+}
+
+@media (max-width:480px){
+  .modern-site .archive-source-policy nav{grid-template-columns:1fr;gap:8px}
+  .modern-site .site-header nav.enhanced-nav{grid-template-columns:1fr}
+  .modern-site .municipality-grid{grid-template-columns:1fr}
+  .modern-site :where(.hq-summary,.hq-metrics){grid-template-columns:1fr 1fr}
+  .modern-site .feed-overview-stats{grid-template-columns:1fr 1fr}
+  .modern-site .feed-overview-stats span:last-child{grid-column:1/-1}
+  .modern-site .feed-controls fieldset div{grid-template-columns:1fr}
+  .modern-site .shelter-alert a{width:100%;margin:8px 0 0;text-align:center}
+  .modern-site .shelter-detail{padding:20px 18px}
+}
+
+@media (max-width:360px){
+  .modern-site .brand{font-size:10px}.modern-site .brand b{font-size:12px}
+  .modern-site .brand-mark{width:34px;height:36px}
+  .modern-site .mobile-menu-toggle{padding-inline:10px}
+  .modern-site :where(.hq-summary,.hq-metrics,.situation-snapshot){grid-template-columns:1fr}
+}
