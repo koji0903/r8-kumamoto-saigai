@@ -21,7 +21,7 @@
   const municipalities = [...data.municipalities].sort((a, b) => a.name.localeCompare(b.name, "ja"));
   const query = new URLSearchParams(location.search);
   let selected = municipalities.find(m => m.name === query.get("name"))?.name || municipalities[0].name;
-  let active = "すべて", ascending = true;
+  let active = "すべて", ascending = false;
   const all = municipalities.flatMap(m => m.updates);
   const phases = [
     { key: "initial", from: "2026-07-28", to: "2026-07-30", label: "発災直後", description: "避難・安全確認、休止・断水など" },
@@ -100,5 +100,6 @@
   $("#feedKeyword").addEventListener("input", () => renderTimeline(false));
   $("#feedMunicipalitySearch").addEventListener("input", renderList);
   $("#feedOrder").onclick = event => { ascending = !ascending; event.currentTarget.textContent = ascending ? "古い順" : "新しい順"; renderTimeline(false); };
+  $("#feedOrder").textContent = "新しい順";
   renderList(); renderTimeline();
 })();
