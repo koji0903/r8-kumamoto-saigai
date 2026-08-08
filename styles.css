@@ -266,3 +266,48 @@
   .hq-meeting-index article{grid-template-columns:1fr;gap:10px}
 }
 .hq-section-head p a{color:var(--orange-dark);font-weight:700}
+
+/* 支援分野別：カードの境界と本文が接しない、読みやすい情報密度 */
+.support-section .support-layout{gap:24px}
+.support-section .support-picker{padding:14px;border-radius:16px;box-shadow:0 4px 18px rgba(15,23,42,.06)}
+.support-section .support-picker>div{display:grid;gap:6px}
+.support-section .support-picker button{min-height:72px;padding:14px 16px;border:1px solid transparent;border-radius:11px;line-height:1.55}
+.support-section .support-picker button:not(.active){border-color:#e2e8f0}
+.support-section .support-picker button+button{margin-top:0}
+.support-section .support-picker button span{font-size:15px;letter-spacing:.01em}
+.support-section .support-picker button b{align-self:center;font-size:11px}
+.support-section .support-picker button small{margin-top:3px;font-size:10.5px;line-height:1.6}
+.support-section .support-detail{overflow:hidden;border-radius:16px;box-shadow:0 8px 28px rgba(15,23,42,.07)}
+.support-section .support-detail>header{padding:34px 38px}
+.support-section .support-detail>header p{font-size:11px;letter-spacing:.06em}
+.support-section .support-detail>header h2{margin:8px 0 10px;line-height:1.25}
+.support-section .support-detail>header span{display:block;font-size:12px;line-height:1.75;color:#cbd5e1}
+.support-section .support-scope{grid-template-columns:84px minmax(0,1fr);gap:18px;margin:16px 20px 0;padding:16px 18px;border:1px solid #e2e8f0}
+.support-section .support-scope b{padding-top:2px;font-size:12px}
+.support-section .support-scope p{font-size:12px;line-height:1.75;color:#475569}
+.support-section .support-events{display:grid;gap:14px;padding:18px 20px 28px}
+.support-section .support-events article{padding:22px 24px;border:1px solid #dbe3ea;border-radius:13px}
+.support-section .support-events h3{margin:10px 0 8px;font-size:18px;line-height:1.5;letter-spacing:-.01em}
+.support-section .support-events p{margin:0 0 14px;font-size:13px;line-height:1.8;color:#526173}
+.support-section .support-events a{display:inline-block;padding:3px 0;font-size:11px;line-height:1.5}
+.support-section .support-events .event-meta{gap:10px;flex-wrap:wrap}
+.support-section .support-events .event-meta time{font-size:12px;line-height:1.5}
+.support-section .support-events .event-meta span{max-width:100%;padding:4px 8px;font-size:10px;line-height:1.5;white-space:normal}
+
+@media(max-width:800px){
+  .support-section .support-layout{gap:18px}
+  .support-section .support-picker{padding:12px}
+  .support-section .support-picker>div{grid-template-columns:1fr 1fr;gap:8px}
+  .support-section .support-picker button{min-height:84px;padding:12px 13px;border:1px solid #e2e8f0}
+  .support-section .support-detail>header{padding:26px 22px}
+  .support-section .support-detail>header h2{font-size:29px}
+  .support-section .support-scope{grid-template-columns:1fr;gap:5px;margin:14px 14px 0;padding:15px 16px}
+  .support-section .support-events{gap:12px;padding:14px 14px 22px}
+  .support-section .support-events article{padding:19px 18px}
+}
+@media(max-width:480px){
+  .support-section .support-picker>div{grid-template-columns:1fr}
+  .support-section .support-picker button{min-height:0}
+  .support-section .support-events h3{font-size:17px}
+  .support-section .support-events p{font-size:13px}
+}
