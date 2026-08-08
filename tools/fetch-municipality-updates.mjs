@@ -36,7 +36,10 @@ const municipalities = [
   ["嘉島町", "https://www.town.kumamoto-kashima.lg.jp/", []],
   ["益城町", "https://www.town.mashiki.lg.jp/", ["https://www.town.mashiki.lg.jp/list00538.html", "https://www.town.mashiki.lg.jp/new_list.html"]],
   ["甲佐町", "https://www.town.kosa.lg.jp/", ["https://www.town.kosa.lg.jp/q/aview/55/13531.html"], ["https://www.town.kosa.lg.jp/q/aview/120/10636.html", "https://www.town.kosa.lg.jp/q/aview/119/6336.html"]],
-  ["氷川町", "https://www.town.hikawa.kumamoto.jp/", []],
+  ["氷川町", "https://www.town.hikawa.kumamoto.jp/", [
+    "https://www.town.hikawa.kumamoto.jp/list00849.html",
+    "https://www.town.hikawa.kumamoto.jp/kinkyu.html"
+  ]],
   ["芦北町", "https://www.town.ashikita.lg.jp/", []],
   ["津奈木町", "https://www.town.tsunagi.lg.jp/", []]
 ].map(([name, officialUrl, hubs, details = []]) => ({ name, officialUrl, hubs, details }));
@@ -68,7 +71,7 @@ const relevant = value => /令和\s*[８8]年熊本地震|熊本地震|地震|�
 // ただし特設ページの共通ナビゲーションを取り込まないよう、影響・支援を示す語を必須とする。
 const contextual = value => /ごみ|廃棄物|し尿|入浴|シャワー|休園|休校|休館|閉館|利用.*(?:中止|制限|再開)|施設.*(?:中止|制限|再開)|窓口|証明|手数料|住宅|住まい|相談|支援|義援|寄附|物資|炊き出し|農地|農業|道路|交通|バス|タクシー|保険証|医療|保育|学校|公民館|体育|公園|水道|下水道/u.test(value) && !excluded(value);
 const navigation = value => /^(トップ|ホーム|一覧|記事一覧を見る|詳細|こちら|戻る|次へ|前へ|もっと見る|メニュー|新着情報|緊急情報|防災情報|関連情報|サイトマップ)$/u.test(value);
-const category = value => /避難|安全|震度|通行止|道路|強風|落雷|火の取り扱い/u.test(value) ? "避難・安全" : /給水|断水|水道|飲料水|生活用水|濁り水|通水|配水|停電|ガス/u.test(value) ? "ライフライン" : /罹災|り災|被災証明|住まい|住家|住宅|緊急修理|応急修理/u.test(value) ? "住まい・証明" : /ごみ|廃棄物|し尿|入浴|シャワー/u.test(value) ? "ごみ・生活" : /鉄道|バス|タクシー|市電|交通|運休|運行/u.test(value) ? "交通" : /休館|閉館|休校|学校|保育|施設|中止/u.test(value) ? "施設・学校" : /支援|相談|救助法|ボランティア|寄附|義援/u.test(value) ? "支援・制度" : "その他";
+const category = value => /避難|安全|震度|通行止|道路|強風|落雷|火の取り扱い/u.test(value) ? "避難・安全" : /給水|断水|水道|飲料水|生活用水|濁り水|通水|配水|停電|ガス/u.test(value) ? "ライフライン" : /罹災|り災|被災証明|住まい|住家|住宅|緊急修理|応急修理|ブルーシート/u.test(value) ? "住まい・証明" : /ごみ|廃棄物|し尿|入浴|シャワー/u.test(value) ? "ごみ・生活" : /鉄道|バス|タクシー|市電|交通|運休|運行/u.test(value) ? "交通" : /休館|閉館|休校|学校|保育|施設|中止/u.test(value) ? "施設・学校" : /支援|相談|救助法|ボランティア|寄附|義援|物資配布|無料貸出/u.test(value) ? "支援・制度" : "その他";
 
 function parseDate(value) {
   value = value.replace(/[０-９]/g, digit => String("０１２３４５６７８９".indexOf(digit)));
@@ -168,10 +171,11 @@ function selfRecord(html, url, trustedByHub, verifiedDetail = false) {
   const date = statedTitleDate || structuredDates.at(-1) || parseDate(text(around)) || parseDate(text(html.slice(0, 18000)));
   return date ? { title, url, ...date, category: category(title) } : null;
 }
-// 八代市の緊急情報は個別ページではなく、1ページ内の article 単位で更新される。
+// 八代市・氷川町の緊急情報は個別ページではなく、1ページ内の article 単位で更新される。
 // 各記事の公式アンカーを原文リンクとして保存する。
 function inlineEmergencyRecords(html, url) {
-  if (new URL(url).pathname !== "/kinkyu.html") return [];
+  const page = new URL(url);
+  if (page.pathname !== "/kinkyu.html" || !/(?:city\.yatsushiro|town\.hikawa)\.kumamoto\.jp$/u.test(page.hostname)) return [];
   const records = [];
   for (const match of html.matchAll(/<article\b[^>]*>([\s\S]*?)<\/article>/gi)) {
     const block = match[1];
@@ -181,7 +185,7 @@ function inlineEmergencyRecords(html, url) {
     const title = heading ? clean(text(heading)) : "";
     const parsedDate = timeElement ? parseDate(text(timeElement)) : null;
     if (!id || !title || !parsedDate || excluded(title)) continue;
-    records.push({ title, url: `${new URL(url).origin}/kinkyu.html#${id}`, ...parsedDate, category: category(title) });
+    records.push({ title, url: `${page.origin}/kinkyu.html#${id}`, ...parsedDate, category: category(title) });
   }
   return records;
 }
@@ -200,11 +204,13 @@ function pagination(html, base, config) {
 const checkedAt = new Date().toISOString();
 const records = [];
 // 緊急情報一覧から削除された後も、取得済みの公式アンカー記録は時系列アーカイブに残す。
-let preservedYatsushiroEmergency = [];
+const preservedEmergency = new Map();
 try {
   const previous = JSON.parse(await readFile(join(OUT, "municipality-updates.json"), "utf8"));
-  preservedYatsushiroEmergency = previous.municipalities?.find(item => item.name === "八代市")?.updates
-    ?.filter(update => update.url.startsWith("https://www.city.yatsushiro.lg.jp/kinkyu.html#kid")) || [];
+  for (const municipality of previous.municipalities || []) {
+    preservedEmergency.set(municipality.name, municipality.updates
+      ?.filter(update => /\/kinkyu\.html#kid/u.test(update.url)) || []);
+  }
 } catch {}
 for (const config of municipalities) {
   const queue = [
@@ -215,7 +221,7 @@ for (const config of municipalities) {
   ];
   const seen = new Set(), queued = new Set(queue.map(item => item.url)), updates = new Map(), errors = [];
   for (const update of config.preserved || []) updates.set(update.url, update);
-  if (config.name === "八代市") for (const update of preservedYatsushiroEmergency) updates.set(update.url, update);
+  for (const update of preservedEmergency.get(config.name) || []) updates.set(update.url, update);
   let fetched = 0;
   while (queue.length && fetched < MAX_PAGES_PER_SITE) {
     const item = queue.shift();
