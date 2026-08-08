@@ -1,15 +1,16 @@
 (()=>{
   const icon=(body)=>`<svg viewBox="0 0 24 24" aria-hidden="true">${body}</svg>`;
+  const art=(body)=>`<svg viewBox="0 0 120 82" aria-hidden="true">${body}</svg>`;
   const categories=[
-    {key:"all",label:"すべて",icon:icon('<path d="M4 7h16v13H4zM8 7V4h8v3"/>')},
-    {key:"burnable",label:"可燃・プラスチック",icon:icon('<path d="M12 3c3 4 5 6 5 10a5 5 0 0 1-10 0c0-2 1-4 3-6 0 3 2 4 2 4 1-3 0-5 0-8Z"/>')},
-    {key:"fabric",label:"布団・布類",icon:icon('<path d="M4 8h16v10H4zM7 8V5h10v3M8 13h8"/>')},
-    {key:"wood",label:"木くず・家具",icon:icon('<path d="M4 18 18 4m-9 0 11 11M4 9l11 11"/>')},
-    {key:"metal",label:"金属類",icon:icon('<path d="M7 4h10l3 8-8 8-8-8 3-8Z"/>')},
-    {key:"sofa",label:"ソファー・マット",icon:icon('<path d="M5 11V8h14v3m2 1v7H3v-7m3 7v2m12-2v2"/>')},
-    {key:"small",label:"小型家電",icon:icon('<rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 8h6m-7 8h.01m4 0h.01m4 0h.01"/>')},
-    {key:"building",label:"瓦・がれき類",icon:icon('<path d="m3 17 4-5 4 4 4-8 6 9M4 20h16"/>')},
-    {key:"appliance",label:"テレビ・冷蔵庫等",icon:icon('<rect x="4" y="5" width="16" height="14" rx="2"/><path d="m9 2 3 3 3-3M8 15h8"/>')}
+    {key:"all",label:"すべて",examples:"すべての持込先を見る",art:art('<rect class="art-teal" x="11" y="36" width="29" height="32" rx="3"/><rect class="art-orange" x="45" y="21" width="29" height="47" rx="3"/><rect class="art-blue" x="79" y="31" width="29" height="37" rx="3"/><path d="M18 45h15M52 31h15M86 41h15"/>')},
+    {key:"burnable",label:"可燃・プラスチック",examples:"生活ごみを除く可燃物・プラ製品",art:art('<path class="art-orange" d="M18 31h44l-5 40H23l-5-40Z"/><path d="M26 31c3-18 28-18 31 0M36 42v18m11-18v18"/><path class="art-blue" d="M78 18h19v12l7 10v30H71V40l7-10V18Z"/><path d="M78 29h19M78 45h19"/>')},
+    {key:"fabric",label:"布団・布類",examples:"布団・毛布・衣類など",art:art('<rect class="art-blue" x="15" y="18" width="90" height="52" rx="9"/><path d="M22 38h76M43 18v52M70 18v52"/><path class="art-yellow" d="M19 22h25v14H19z"/>')},
+    {key:"wood",label:"木くず・家具",examples:"たんす・椅子・木材など",art:art('<rect class="art-orange" x="12" y="19" width="51" height="52" rx="2"/><path d="M12 38h51M38 19v52M31 29h3m11 0h3M31 50h3m11 0h3"/><path class="art-yellow" d="M76 35h28v25H76z"/><path d="M81 60v12m18-12v12M79 35V23m22 12V23"/>')},
+    {key:"metal",label:"金属類",examples:"フライパン・針金ハンガーなど",art:art('<circle class="art-slate" cx="43" cy="49" r="25"/><circle cx="43" cy="49" r="15"/><path d="m63 36 39-22 6 10-42 20"/><path class="hanger" d="M77 69 95 48l18 21H77Zm18-21c-5-8 8-10 4-18"/>')},
+    {key:"sofa",label:"ソファー・マット",examples:"ソファー・マットレス",art:art('<path class="art-orange" d="M23 37V23h74v14M14 40v28h92V40c0-7-11-7-11 0v9H25v-9c0-7-11-7-11 0Z"/><path d="M25 49v19m70-19v19M31 68v8m58-8v8"/>')},
+    {key:"small",label:"小型家電",examples:"カメラ・ゲーム機・電気シェーバー",art:art('<rect class="art-blue" x="9" y="28" width="50" height="35" rx="5"/><circle cx="34" cy="45" r="11"/><path d="M18 28l6-9h18l6 9"/><rect class="art-teal" x="69" y="36" width="42" height="25" rx="10"/><circle cx="83" cy="48" r="3"/><circle cx="98" cy="44" r="2"/><circle cx="103" cy="51" r="2"/>')},
+    {key:"building",label:"瓦・建材類",examples:"瓦・コンクリート・ガラス・石膏ボード",art:art('<path class="art-slate" d="M8 55 34 25l26 30H8Z"/><path class="art-orange" d="M43 66 73 29l27 37H43Z"/><path class="art-blue" d="m82 17 28 9-8 31-28-9 8-31Z"/><path d="m86 23 14 26M105 29 80 43"/>')},
+    {key:"appliance",label:"テレビ・冷蔵庫等",examples:"テレビ・冷蔵庫などの廃家電",art:art('<rect class="art-blue" x="8" y="23" width="61" height="43" rx="4"/><rect x="16" y="31" width="45" height="27" rx="2"/><path d="m28 13 11 10 11-10M22 72h34"/><rect class="art-teal" x="79" y="10" width="32" height="62" rx="4"/><path d="M79 37h32M87 23v7m0 15v11"/>')}
   ];
   const facilities=[
     {id:"cs",name:"CSネットワーク",address:"宇土市松山町3941",lat:32.668007,lng:130.673584,ticket:true,closed:"8月19日以降：毎週水曜・日曜",types:["burnable","fabric","wood","metal","sofa","small","building","appliance"],note:"可燃ごみ（生活ごみを除く）、プラスチック類、布団・布類、木くず、金属類、ソファー・マット、小型家電、瓦、コンクリート殻、廃家電、陶磁器、ガラス、スレート板、サイディングボード、石膏ボード",flow:"施設へ直接並べません。指定の入場券配布・待機場所へ向かってください。"},
@@ -26,7 +27,7 @@
   let selected="all";
   const filters=document.querySelector("#wasteFilters"),results=document.querySelector("#facilityResults");
   const render=()=>{
-    filters.innerHTML=categories.map(c=>`<button type="button" data-key="${c.key}" aria-pressed="${selected===c.key}">${c.icon}<span>${c.label}</span></button>`).join("");
+    filters.innerHTML=categories.map(c=>`<button type="button" data-key="${c.key}" aria-pressed="${selected===c.key}"><span class="waste-art">${c.art}</span><span class="waste-filter-copy"><b>${c.label}</b><small>${c.examples}</small></span><i aria-hidden="true">✓</i></button>`).join("");
     const found=selected==="all"?facilities:facilities.filter(f=>f.types.includes(selected));
     results.innerHTML=found.map(f=>`<article class="facility-card"><header><span class="facility-number">${facilities.indexOf(f)+1}</span><div><p>${f.ticket?"入場券が必要":"直接搬入"}</p><h3>${f.name}</h3><span>${f.address}</span></div></header><div class="facility-status ${f.ticket?"needs-ticket":"direct"}">${f.ticket?icon('<path d="M4 7h16v4a2 2 0 0 0 0 4v4H4v-4a2 2 0 0 0 0-4V7Z"/>'):icon('<path d="M3 11h18M5 11l2-5h10l2 5v7H5z"/>')}<b>${f.ticket?"入場券を受け取ってから搬入":"この施設へ直接搬入"}</b></div><dl><div><dt>受付</dt><dd>8:30〜11:30／13:00〜15:30</dd></div><div><dt>停止日</dt><dd>${f.closed}</dd></div></dl><div class="accepted"><b>受け入れるもの</b><p>${f.note}</p></div><p class="facility-flow">${f.flow}</p><a class="route-link" href="${mapsUrl(f)}" target="_blank" rel="noopener">現在地から経路を検索 ↗</a></article>`).join("");
     filters.querySelectorAll("button").forEach(b=>b.onclick=()=>{selected=b.dataset.key;render()});
