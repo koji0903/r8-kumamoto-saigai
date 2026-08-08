@@ -311,3 +311,17 @@
   .support-section .support-events h3{font-size:17px}
   .support-section .support-events p{font-size:13px}
 }
+
+/* 自治体ページから個別の生活情報へ進む導線 */
+.municipality-feature{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:16px;align-items:center;margin:18px 32px;padding:18px 20px;border:1px solid #99d3ce;border-radius:13px;background:linear-gradient(135deg,#ecfdf9,#f0f9ff);color:#0f172a;text-decoration:none;box-shadow:0 3px 12px rgba(15,118,110,.06)}
+.municipality-feature:hover{border-color:#0f766e;box-shadow:0 8px 22px rgba(15,118,110,.12)}
+.municipality-feature-icon{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:#ccfbf1;color:#0f766e}
+.municipality-feature-icon svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.municipality-feature span:nth-child(2){min-width:0}
+.municipality-feature small,.municipality-feature b,.municipality-feature em{display:block}
+.municipality-feature small{color:#0f766e;font-size:10px;font-weight:900}
+.municipality-feature b{margin:2px 0;font-size:18px}
+.municipality-feature em{color:#526173;font-size:11px;font-style:normal}
+.municipality-feature i{color:#0f766e;font-size:11px;font-style:normal;font-weight:900;white-space:nowrap}
+@media(max-width:600px){.municipality-feature{grid-template-columns:44px minmax(0,1fr);margin:14px;padding:16px}.municipality-feature-icon{width:44px;height:44px}.municipality-feature i{grid-column:2;margin-top:4px}.municipality-feature b{font-size:16px}.municipality-feature em{font-size:10px}}
+.feed-special-link{margin:16px 20px}

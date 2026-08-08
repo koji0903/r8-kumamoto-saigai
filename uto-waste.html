@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="description" content="令和8年熊本地震で発生した宇土市の災害ごみについて、持込先、分別、入場券、必要書類を被災者向けに整理">
+  <title>宇土市 災害ごみ持ち込み案内｜よか隊ネット熊本</title>
+  <link rel="icon" href="favicon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="よか隊ネット熊本　災害・支援状況レポート">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="宇土市 災害ごみ持ち込み案内">
+  <meta property="og:description" content="何をどこへ持ち込むか、入場券と必要書類、場所を分かりやすく案内します">
+  <meta property="og:image" content="ogp-20260808.png">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="uto-waste.css">
+</head>
+<body class="waste-page">
+  <a class="skip" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">よ</span><span>よか隊ネット熊本<br><b>災害・支援状況レポート</b></span></a>
+    <nav aria-label="メインメニュー"><a href="index.html">サマリー</a><a href="municipality-updates.html?name=宇土市">宇土市の公式発信</a><a href="municipalities.html?name=宇土市">宇土市の状況</a><a href="affected.html">被災された方</a></nav>
+  </header>
+
+  <main id="main">
+    <section class="waste-hero">
+      <div class="waste-hero-inner">
+        <p class="waste-eyebrow">宇土市｜令和8年熊本地震</p>
+        <h1>災害ごみを<br><span>持ち込む前に</span></h1>
+        <p class="waste-lead">ごみの種類によって持込先が違います。積み込む前に「どこへ行くか」「入場券が必要か」「書類を持ったか」を確認してください。</p>
+        <div class="hero-actions">
+          <a class="waste-button primary" href="#waste-sort">ごみから持込先を探す</a>
+          <a class="waste-button secondary" href="#waste-map">地図で場所を見る</a>
+        </div>
+      </div>
+      <aside class="today-card" aria-label="受付の基本情報">
+        <div class="icon-disc icon-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <p>受入期間</p><strong>8月8日（土）〜9月30日（水）</strong>
+        <dl><div><dt>午前</dt><dd>8:30〜11:30</dd></div><div><dt>午後</dt><dd>13:00〜15:30</dd></div></dl>
+        <small>12:00〜13:00は場内整理のため受入中止。施設ごとに受入停止日があります。</small>
+      </aside>
+    </section>
+
+    <section class="source-alert" aria-label="大切なお知らせ">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2.5 20h19L12 3Z"/><path d="M12 9v4m0 3h.01"/></svg>
+      <div><b>このページは案内用のアーカイブです</b><p>運用は変更される場合があります。出発前に宇土市公式ページで最新情報を確認してください。</p></div>
+      <a href="https://www.city.uto.lg.jp/article/view/1303/16352.html" target="_blank" rel="noopener">宇土市の最新情報を確認 ↗</a>
+    </section>
+
+    <section class="waste-section quick-check" aria-labelledby="before-title">
+      <header class="section-title"><p>BEFORE YOU GO</p><h2 id="before-title">出発前の3点確認</h2></header>
+      <ol>
+        <li><span>1</span><div class="icon-disc"><svg viewBox="0 0 24 24"><path d="M4 7h16v13H4zM8 7V4h8v3M9 11v5m6-5v5"/></svg></div><div><b>災害で出たごみを分別</b><p>生活ごみは可燃ごみに含まれません。品目ごとに分けて積み込んでください。</p></div></li>
+        <li><span>2</span><div class="icon-disc"><svg viewBox="0 0 24 24"><path d="M7 3h10v18H7zM10 7h4m-4 4h4m-4 4h4"/></svg></div><div><b>証明書類と本人確認証</b><p>り災証明書・被災証明書・減免申請書のいずれか1点と、免許証などが必要です。</p></div></li>
+        <li><span>3</span><div class="icon-disc"><svg viewBox="0 0 24 24"><path d="M3 11h18M5 11l2-5h10l2 5v7H5zM7 18v2m10-2v2"/></svg></div><div><b>入場券の要否を確認</b><p>CSネットワークとKIREKAは直接並べません。指定された待機場所へ向かいます。</p></div></li>
+      </ol>
+    </section>
+
+    <section class="waste-section ticket-guide" aria-labelledby="ticket-title">
+      <header class="section-title"><p>ENTRY TICKET</p><h2 id="ticket-title">入場券が必要な施設</h2><span>ごみを車に載せた状態で待機場所へ向かい、先着順で入場券を受け取ります。</span></header>
+      <div class="ticket-rules"><span><b>配布時間</b>8:30〜15:30</span><span><b>有効期限</b>受け取った当日のみ</span><span><b>利用回数</b>1枚につき1回</span></div>
+      <div class="ticket-flows">
+        <article><header><span>CSネットワーク行き</span><b>施設へ直接並べません</b></header><div><time>8月8日・9日</time><strong>コメリパワー宇土店 駐車場</strong><p>宇土市善道寺町綾織179-3</p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=コメリパワー宇土店%20宇土市善道寺町綾織179-3" target="_blank" rel="noopener">現在地から行く ↗</a></div><div><time>8月10日〜16日</time><strong>宇土市運動公園グラウンド</strong><p>宇土市旭町375</p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=宇土市運動公園グラウンド%20宇土市旭町375" target="_blank" rel="noopener">現在地から行く ↗</a></div><small>8月17日以降の入場券配布場所は、掲載中の公式情報で明示されていません。宇土市公式ページで再確認してください。</small></article>
+        <article><header><span>KIREKA行き</span><b>施設へ直接並べません</b></header><div><time>8月8日以降</time><strong>三菱ケミカル駐車場</strong><p>宇土市築籠町221</p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=三菱ケミカル駐車場%20宇土市築籠町221" target="_blank" rel="noopener">現在地から行く ↗</a></div><small>周辺道路では待機せず、搬入レーンへ左折で入るよう宇土市が協力を求めています。</small></article>
+      </div>
+    </section>
+
+    <section class="waste-section" id="waste-sort" aria-labelledby="sort-title">
+      <header class="section-title"><p>SORT BY ITEM</p><h2 id="sort-title">このごみは、どこへ？</h2><span>品目を選ぶと持ち込める施設を絞り込めます。</span></header>
+      <div class="waste-filter" id="wasteFilters" role="group" aria-label="ごみの種類"></div>
+      <div class="facility-results" id="facilityResults" aria-live="polite"></div>
+      <p class="classification-note"><b>迷ったときは自己判断で持ち込まず、宇土市環境交通課へ確認してください。</b> 電話 <a href="tel:0964273316">0964-27-3316</a></p>
+    </section>
+
+    <section class="waste-section map-section" id="waste-map" aria-labelledby="map-title">
+      <header class="section-title"><p>LOCATION &amp; ROUTE</p><h2 id="map-title">仮置場・入場券配布場所</h2><span>地図上の印を選ぶと詳細と経路検索を表示します。</span></header>
+      <div class="map-legend-waste"><span><i class="drop"></i>災害ごみ仮置場</span><span><i class="ticket"></i>入場券・待機場所</span></div>
+      <div id="wasteMap" class="waste-map" aria-label="宇土市災害ごみ関連場所の地図"></div>
+      <noscript><p class="map-noscript">地図にはJavaScriptが必要です。下の場所一覧からGoogle マップを開けます。</p></noscript>
+      <div class="location-list" id="locationList"></div>
+      <p class="map-caution">地図上の位置は国土地理院の住所検索を基にした案内位置です。入口や待機列は、現地誘導と宇土市の案内に従ってください。</p>
+    </section>
+
+    <section class="waste-section document-section" aria-labelledby="doc-title">
+      <header class="section-title"><p>DOCUMENTS</p><h2 id="doc-title">持っていく書類</h2></header>
+      <div class="document-grid">
+        <article><div class="icon-disc"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6zM14 3v4h4M9 12h6m-6 4h6"/></svg></div><h3>次のいずれか1点</h3><ul><li>り災証明書</li><li>被災証明書</li><li>ごみ処理手数料減免申請書</li></ul><p>減免申請書は環境交通課窓口または現地で申請が必要です。</p></article>
+        <article><div class="icon-disc"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 19c.5-4 2.5-6 6-6s5.5 2 6 6M16 8h5m-5 4h5m-4 4h4"/></svg></div><h3>本人確認証</h3><ul><li>運転免許証</li><li>マイナンバーカードなど</li></ul><p>書類とあわせて忘れずに持参してください。</p></article>
+      </div>
+      <p class="document-note">宇城クリーンセンター搬入時の減免申請書は、期限が8月7日までとなっている場合でもそのまま使用できると宇土市が案内しています。</p>
+    </section>
+
+    <section class="waste-section caution-section" aria-labelledby="caution-title">
+      <header class="section-title"><p>IMPORTANT</p><h2 id="caution-title">安全に利用するために</h2></header>
+      <div class="caution-grid">
+        <article><svg viewBox="0 0 24 24"><path d="M4 17h16M6 17l1-8h10l1 8M9 9V5h6v4"/></svg><b>先に分別する</b><p>上記品目ごとに事前に分別し、現地で速やかに降ろせるようにしてください。</p></article>
+        <article><svg viewBox="0 0 24 24"><path d="M5 12h14M8 8l-4 4 4 4m8-8 4 4-4 4"/></svg><b>誘導に従う</b><p>周辺道路で待機せず、入場時は左折に協力し、係員の誘導に従ってください。</p></article>
+        <article><svg viewBox="0 0 24 24"><path d="M12 3 2.5 20h19L12 3Z"/><path d="M12 9v4m0 3h.01"/></svg><b>事故に注意</b><p>搬入に伴う事故について、市は対応できないと案内しています。無理な運搬は避けてください。</p></article>
+      </div>
+    </section>
+
+    <section class="official-sources" aria-labelledby="source-title">
+      <div><p>PRIMARY SOURCES</p><h2 id="source-title">必ず一次情報も確認してください</h2><span>整理基準日：2026年8月8日／チラシ記載日：2026年8月6日</span></div>
+      <div class="source-links"><a href="https://www.city.uto.lg.jp/article/view/1303/16352.html" target="_blank" rel="noopener"><b>宇土市公式ページ</b><span>最新の運用・混雑情報 ↗</span></a><a href="sources/uto/仮置き場一覧表.pdf" target="_blank" rel="noopener"><b>災害ごみ仮置場一覧表</b><span>保存済み公式チラシ（PDF）↗</span></a></div>
+    </section>
+  </main>
+
+  <footer><div class="brand footer-brand"><span class="brand-mark" aria-hidden="true">よ</span><span>よか隊ネット熊本<br><b>災害・支援状況レポート</b></span></div><p>本ページは宇土市公式情報を被災者向けに再構成した案内ページです。</p><a href="municipalities.html?name=宇土市">宇土市のページへ</a></footer>
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="uto-waste.js"></script>
+</body>
+</html>
