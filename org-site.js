@@ -2,6 +2,7 @@
   const path=location.pathname.split('/').pop()||'index.html';
   document.body.classList.add('organization-site');
   document.body.classList.add('illustrated-site');
+  document.body.classList.add(`page-${path.replace(/\.html$/,'').replace(/[^a-z0-9-]/g,'-')||'index'}`);
   if(path==='index.html'){
     document.title='一般社団法人よか隊ネット熊本｜災害支援から、これからの地域づくりへ。';
     const description=document.querySelector('meta[name="description"]');
@@ -96,7 +97,7 @@
     return'info';
   };
   const decorateVisualCards=()=>{
-    const selector=['.disaster-service-grid>a','.need-grid>a','.source-actions>a','.home-history-grid article','.about-values .org-card','.join-section .org-card'].join(',');
+    const selector=['.disaster-service-grid>a','.need-grid>a','.source-actions>a','.home-history-grid article','.about-values .org-card','.join-section .org-card','.official-card','.section-links>a','.guide-card','.audience-updates article','.recent-updates article','.support-paths>a','.contact-method'].join(',');
     document.querySelectorAll(selector).forEach(card=>{if(card.querySelector(':scope > .visual-pictogram'))return;card.classList.add('illustration-card');card.insertAdjacentHTML('afterbegin',visualIcon(iconType(card)))});
   };
   decorateVisualCards();
