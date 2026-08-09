@@ -128,6 +128,17 @@ for (const file of htmlFiles) {
   if (!/<script\s+src="org-site\.js(?:\?[^\"]*)?"/.test(html)) errors.push(`${file} で共通スクリプト org-site.js が読み込まれていません`);
   const siteName = html.match(/<meta\s+property="og:site_name"\s+content="([^"]+)"/i)?.[1];
   if (siteName !== canonicalSiteName) errors.push(`${file} のog:site_nameが新名称に統一されていません`);
+  const expectedCanonical = file === "index.html" ? "https://www.yokatainet.jp/" : `https://www.yokatainet.jp/${file}`;
+  const canonical = html.match(/<link\s+rel="canonical"\s+href="([^"]+)"/i)?.[1];
+  const ogUrl = html.match(/<meta\s+property="og:url"\s+content="([^"]+)"/i)?.[1];
+  const ogImage = html.match(/<meta\s+property="og:image"\s+content="([^"]+)"/i)?.[1];
+  if (canonical !== expectedCanonical) errors.push(`${file} のcanonical URLが不正です`);
+  if (ogUrl !== expectedCanonical) errors.push(`${file} のog:urlがcanonical URLと一致しません`);
+  if (!html.match(/<meta\s+property="og:title"\s+content="[^"]+"/i)) errors.push(`${file} にog:titleがありません`);
+  if (!html.match(/<meta\s+property="og:description"\s+content="[^"]+"/i)) errors.push(`${file} にog:descriptionがありません`);
+  if (!html.includes('<meta name="twitter:card" content="summary_large_image">')) errors.push(`${file} のTwitterカード設定が不正です`);
+  if (!ogImage?.startsWith("https://www.yokatainet.jp/")) errors.push(`${file} のog:imageが正規ドメインを使用していません`);
+  else if (!(await exists(ogImage.slice("https://www.yokatainet.jp/".length)))) errors.push(`${file} のog:image実体がありません`);
   if (html.includes("よか隊ネット災害支援レポート")) errors.push(`${file} に直前のサイト名称が残っています`);
   if (html.includes("火の国 災害支援レポート")) errors.push(`${file} に旧サイト名称が残っています`);
   for (const match of html.matchAll(/(?:href|src)="([^"#?]+)(?:[?#][^"]*)?"/g)) {

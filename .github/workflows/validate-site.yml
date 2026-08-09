@@ -30,6 +30,7 @@ jobs:
 
       - name: データ整合性を検査
         run: |
+          node tools/build-seo.mjs --check
           node tools/check-data.mjs
           node --check app.js
           node --check tools/fetch-hq.mjs
