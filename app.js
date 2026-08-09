@@ -66,8 +66,12 @@ if(siteHeader&&!document.querySelector(".archive-source-policy")){
   policy.className="archive-source-policy";
   policy.setAttribute("aria-label","本サイトの位置づけと一次情報の確認");
   policy.innerHTML=`<div><b>本サイトは災害・支援情報のアーカイブです</b><p>「火の国会議」議事録を中核に、熊本県災害対策本部と各市町村の公式情報を、出典・確認時点とともに整理しています。本サイト自体は行政機関等が発信する一次情報ではありません。</p></div><nav aria-label="一次情報へのリンク"><a href="meetings.html">火の国会議議事録</a><a href="municipality-updates.html">市町村公式発信</a><a href="official.html">国・県・市町村の一次情報</a><a href="https://portal.bousai.pref.kumamoto.jp/" target="_blank" rel="noopener">防災情報くまもと ↗</a></nav><p class="archive-source-warning"><b>参照時の注意</b> 避難、安否、支援活動、制度申請などの判断前には、リンク先の一次情報で発表時刻・対象地域・受付条件を必ず再確認してください。</p>`;
-  siteHeader.after(policy);
-  if(location.pathname.endsWith("disaster.html"))document.querySelector(".disaster-portal")?.after(policy);
+  const disasterPortal=document.querySelector(".disaster-portal");
+  if(location.pathname.endsWith("disaster.html")&&disasterPortal){
+    disasterPortal.after(policy);
+  }else{
+    document.querySelector("main")?.after(policy);
+  }
 }
 
 const topNotice=document.querySelector(".notice p");
