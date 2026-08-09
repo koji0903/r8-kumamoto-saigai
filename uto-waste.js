@@ -22,8 +22,7 @@
   ];
   const locations=[
     ...facilities.map(f=>({...f,type:"drop",label:f.name,description:"災害ごみ仮置場"})),
-    {id:"komeri",type:"ticket",label:"コメリパワー宇土店 駐車場",address:"宇土市善道寺町綾織179-3",lat:32.681545,lng:130.672272,description:"CSネットワーク入場券・待機場所（8月8日・9日）"},
-    {id:"sports",type:"ticket",label:"宇土市運動公園グラウンド",address:"宇土市旭町375",lat:32.682423,lng:130.665771,description:"CSネットワーク入場券・待機場所（8月10日〜16日）"},
+    {id:"sports",type:"ticket",label:"宇土市運動公園グラウンド",address:"宇土市旭町375",lat:32.682423,lng:130.665771,description:"現在のCSネットワーク入場券・待機場所（8月10日〜16日）",current:true},
     {id:"mitsubishi",type:"ticket",label:"三菱ケミカル駐車場",address:"宇土市築籠町221",lat:32.692474,lng:130.654968,description:"KIREKA入場券・待機場所（8月8日以降）"}
   ];
   const mapsUrl=l=>`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${l.label} ${l.address}`)}`;

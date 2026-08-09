@@ -1,4 +1,3 @@
-const organizationScript=document.createElement("script");organizationScript.src="org-site.js";document.head.append(organizationScript);
 // data/report-data.js は日々手で編集する。構文エラーや読み込み失敗で全ページが白紙になるのを避けるため、
 // 描画全体を try で囲み、失敗したら公式サイトへの導線を出して知らせる。
 const showDataError=err=>{
@@ -11,11 +10,6 @@ const showDataError=err=>{
 
 try{
 
-const navigationStyles=document.createElement("link");navigationStyles.rel="stylesheet";navigationStyles.href="navigation-enhancements.css";document.head.append(navigationStyles);
-const designStyles=document.createElement("link");designStyles.rel="stylesheet";designStyles.href="design-system.css";document.head.append(designStyles);
-const modernStyles=document.createElement("link");modernStyles.rel="stylesheet";modernStyles.href="global-modern.css";document.head.append(modernStyles);
-const mobileStyles=document.createElement("link");mobileStyles.rel="stylesheet";mobileStyles.href="mobile-polish.css";document.head.append(mobileStyles);
-if(document.querySelector("#timelineList")){const timelineStyles=document.createElement("link");timelineStyles.rel="stylesheet";timelineStyles.href="timeline-redesign.css";document.head.append(timelineStyles)}
 document.body.classList.add("modern-site");
 
 const {days,metrics,officialSources,municipalities,municipalEvents,supportCategories,supportEvents}=window.REPORT_DATA;
@@ -54,12 +48,13 @@ document.querySelectorAll(".kicker,.eyebrow").forEach(label=>{const translated=l
 
 const siteHeader=document.querySelector(".site-header");
 const headerNav=siteHeader?.querySelector("nav");
-if(headerNav&&!headerNav.querySelector('a[href="municipality-updates.html"]')){
+const hasOrganizationHeader=Boolean(siteHeader?.querySelector(".org-header-inner"));
+if(!hasOrganizationHeader&&headerNav&&!headerNav.querySelector('a[href="municipality-updates.html"]')){
   const link=document.createElement("a");link.href="municipality-updates.html";link.textContent="市町村公式発信";
   if(location.pathname.endsWith("municipality-updates.html"))link.setAttribute("aria-current","page");
   headerNav.querySelector("a")?.after(link);
 }
-if(siteHeader&&headerNav&&!siteHeader.querySelector(".mobile-menu-toggle")){
+if(!hasOrganizationHeader&&siteHeader&&headerNav&&!siteHeader.querySelector(".mobile-menu-toggle")){
   headerNav.id="mainNavigation";headerNav.classList.add("enhanced-nav");
   const toggle=document.createElement("button");toggle.type="button";toggle.className="mobile-menu-toggle";toggle.setAttribute("aria-controls",headerNav.id);toggle.setAttribute("aria-expanded","false");
   toggle.innerHTML='<svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="close-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg><span>メニュー</span>';
@@ -72,13 +67,13 @@ if(siteHeader&&!document.querySelector(".archive-source-policy")){
   policy.setAttribute("aria-label","本サイトの位置づけと一次情報の確認");
   policy.innerHTML=`<div><b>本サイトは災害・支援情報のアーカイブです</b><p>「火の国会議」議事録を中核に、熊本県災害対策本部と各市町村の公式情報を、出典・確認時点とともに整理しています。本サイト自体は行政機関等が発信する一次情報ではありません。</p></div><nav aria-label="一次情報へのリンク"><a href="meetings.html">火の国会議議事録</a><a href="municipality-updates.html">市町村公式発信</a><a href="official.html">国・県・市町村の一次情報</a><a href="https://portal.bousai.pref.kumamoto.jp/" target="_blank" rel="noopener">防災情報くまもと ↗</a></nav><p class="archive-source-warning"><b>参照時の注意</b> 避難、安否、支援活動、制度申請などの判断前には、リンク先の一次情報で発表時刻・対象地域・受付条件を必ず再確認してください。</p>`;
   siteHeader.after(policy);
+  if(location.pathname.endsWith("disaster.html"))document.querySelector(".disaster-portal")?.after(policy);
 }
 
 const topNotice=document.querySelector(".notice p");
 if(topNotice) topNotice.innerHTML=`<b>火の国会議の生の現場情報を軸に、公的な一次情報を紐づけて保存しています。</b> このページは記録・検索のためのアーカイブであり、緊急情報や行政の公式発表に代わるものではありません。`;
 
 if($("#officialTopicsGrid")){
-  const topicsStyles=document.createElement("link");topicsStyles.rel="stylesheet";topicsStyles.href="official-topics.css";document.head.append(topicsStyles);
   const topics=window.OFFICIAL_TOPICS;
   const esc=value=>String(value??"").replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
   const compactDate=item=>{const date=new Date(`${item.date}T00:00:00+09:00`);return `<time datetime="${esc(item.date)}">${date.getMonth()+1}/${date.getDate()}</time>${item.time?`<small>${esc(item.time)}</small>`:""}`};
@@ -115,7 +110,6 @@ if(heroActions&&!heroActions.querySelector('a[href="municipality-updates.html"]'
 const homeHero=document.querySelector(".summary-hero");
 if(homeHero&&!homeHero.querySelector(".home-search")){
   document.body.classList.add("home-redesign");
-  const homeStyles=document.createElement("link");homeStyles.rel="stylesheet";homeStyles.href="home-redesign.css";document.head.append(homeStyles);
   const heroTitle=homeHero.querySelector("h1");
   if(heroTitle)heroTitle.innerHTML='令和8年熊本地震<br><em>被災地のいまを知り、支援につなぐ</em>';
   const lead=homeHero.querySelector(".lead");
