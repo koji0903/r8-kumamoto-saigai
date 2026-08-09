@@ -109,9 +109,12 @@ for (const shelter of shelters.features) {
   if (!Number.isFinite(shelter.lat) || !Number.isFinite(shelter.lng)) errors.push(`避難所の座標が不正: ${shelter.name}`);
 }
 
-const htmlFiles = (await readdir(root)).filter(f => f.endsWith(".html"));
+// Search Console verification files must remain the exact token response and are
+// not content pages, so site-wide branding/link checks do not apply to them.
+const htmlFiles = (await readdir(root)).filter(f => f.endsWith(".html") && !/^google[\w-]+\.html$/i.test(f));
 for (const file of htmlFiles) {
   const html = await readFile(path.join(root, file), "utf8");
+  if (!/<script\s+src="org-site\.js(?:\?[^\"]*)?"/.test(html)) errors.push(`${file} で共通スクリプト org-site.js が読み込まれていません`);
   if (!html.includes("よか隊ネット熊本　災害・支援状況レポート")) errors.push(`${file} のサイト名称が新名称に統一されていません`);
   if (html.includes("よか隊ネット災害支援レポート")) errors.push(`${file} に直前のサイト名称が残っています`);
   if (html.includes("火の国 災害支援レポート")) errors.push(`${file} に旧サイト名称が残っています`);
@@ -122,6 +125,9 @@ for (const file of htmlFiles) {
     }
   }
 }
+
+const sharedSiteScript = await readFile(path.join(root, "org-site.js"), "utf8");
+if (!sharedSiteScript.includes("G-ZPDRHTGZCR")) errors.push("org-site.js にGoogleタグが設定されていません");
 
 const appSource = await readFile(path.join(root, "app.js"), "utf8");
 if (appSource.includes("<span>負傷者</span>")) errors.push("人的被害総数を『負傷者』と表示する旧コードが残っています");

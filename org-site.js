@@ -1,4 +1,18 @@
 (()=>{
+  // Google Analytics is loaded from this shared site script so every content
+  // page, including future pages using org-site.js, receives the same tag.
+  const googleTagId='G-ZPDRHTGZCR';
+  if(!window.__yokataiGoogleTagLoaded){
+    window.__yokataiGoogleTagLoaded=true;
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};
+    window.gtag('js',new Date());
+    window.gtag('config',googleTagId);
+    const googleTagScript=document.createElement('script');
+    googleTagScript.async=true;
+    googleTagScript.src=`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(googleTagId)}`;
+    document.head.append(googleTagScript);
+  }
   const path=location.pathname.split('/').pop()||'index.html';
   document.body.classList.add('organization-site');
   document.body.classList.add('illustrated-site');
@@ -113,6 +127,41 @@
   decorateVisualCards();
   setTimeout(decorateVisualCards,0);
   setTimeout(decorateVisualCards,400);
+  const setupHomeMotion=()=>{
+    if(path!=='index.html'||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    const root=document.documentElement;
+    const hero=document.querySelector('.home-hero-v2');
+    const sections=[...document.querySelectorAll('.home-story>section:not(.home-hero-v2):not(.home-contact-v2)')];
+    const mark=(container,items,variant='')=>items.filter(Boolean).forEach((item,index)=>{
+      item.classList.add('motion-item');
+      if(variant)item.classList.add(variant);
+      item.style.setProperty('--motion-order',Math.min(index,8));
+    });
+    if(hero){
+      mark(hero,[hero.querySelector('.kicker'),hero.querySelector('.home-role'),hero.querySelector('h1'),hero.querySelector('.home-hero-lead'),hero.querySelector('.home-hero-actions'),hero.querySelector('.home-hero-art')]);
+      hero.classList.add('motion-section');
+    }
+    sections.forEach(section=>{
+      section.classList.add('motion-section');
+      if(section.matches('.home-current-v2'))mark(section,[section.querySelector('.kicker'),section.querySelector('.home-current-label'),section.querySelector('h2'),section.querySelector('.home-current-heading>p:last-of-type'),...section.querySelectorAll('.home-current-visual li')]);
+      else if(section.matches('.home-about-v2')){
+        mark(section,[section.querySelector('.home-about-visual')],'motion-from-left');
+        mark(section,[...section.querySelectorAll(':scope>div:last-child>*')],'motion-from-right');
+      }else if(section.matches('.home-principle-v2'))mark(section,[section.querySelector('.kicker'),section.querySelector('h2'),section.querySelector('blockquote'),...section.querySelectorAll('.principle-flow li')]);
+      else if(section.matches('.home-information-v2'))mark(section,[...section.querySelectorAll(':scope>div:first-child>*'),...section.querySelectorAll('.information-path>*')]);
+      else if(section.matches('.home-history-v2'))mark(section,[...section.querySelectorAll(':scope>header>*'),...section.querySelectorAll('.history-timeline article'),section.querySelector('.home-story-link')]);
+      else if(section.matches('.home-work-v2'))mark(section,[...section.querySelectorAll(':scope>header>*'),...section.querySelectorAll('.home-work-grid a')]);
+    });
+    root.classList.add('home-motion-ready');
+    requestAnimationFrame(()=>requestAnimationFrame(()=>hero?.classList.add('is-visible')));
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+      if(!entry.isIntersecting)return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }),{rootMargin:'0px 0px -7% 0px',threshold:.08});
+    sections.forEach(section=>observer.observe(section));
+  };
+  setupHomeMotion();
   const footer=document.querySelector('footer');
   if(footer){footer.className='org-footer';footer.innerHTML=`<div class="org-footer-brand"><img src="yokatai-logo.png" alt="一般社団法人よか隊ネット熊本"><p>〒869-0404<br>熊本県宇土市走潟町2235<br>代表：土黒 功司</p><a href="mailto:info.yokatai@gmail.com">info.yokatai@gmail.com</a><a href="tel:09027194037">090-2719-4037</a></div><nav class="org-footer-sitemap" aria-label="フッターサイトマップ"><section><b>令和8年熊本地震</b><a href="disaster.html">支援情報トップ</a><a href="affected.html">困りごとから探す</a><a href="shelters.html">避難所</a><a href="municipalities.html">自治体別情報</a><a href="official.html">国・県の公的情報</a><a href="municipality-updates.html">市町村の公式発信</a></section><section><b>暮らし・支援</b><a href="reconstruction.html">生活再建</a><a href="guide.html">制度・生活支援</a><a href="supporters.html">支援する方へ</a><a href="support.html">支援分野別</a><a href="volunteer-centers.html">災害ボランティアセンター</a></section><section><b>記録・資料</b><a href="timeline.html">日々の記録</a><a href="meetings.html">火の国会議 議事録</a><a href="terms.html">災害用語集</a></section><section><b>団体情報</b><a href="about.html">私たちについて</a><a href="about.html#activities">活動について</a><a href="join.html">支援・協力</a><a href="contact.html">お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a></section></nav><p class="operator">本サイトは一般社団法人よか隊ネット熊本が運営する支援情報サイトです。行政機関の公式サイトではありません。制度の判断・申請時はリンク先の公的機関で最新情報をご確認ください。</p>`}
 })();
