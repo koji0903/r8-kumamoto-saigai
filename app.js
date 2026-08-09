@@ -191,6 +191,8 @@ if($("#metricTabs")){
 }
 
 if($("#timelineList")){
+  const timelineTools=document.querySelector(".timeline-tools");
+  if(timelineTools&&!document.querySelector(".timeline-reading-guide"))timelineTools.insertAdjacentHTML("beforebegin",`<aside class="timeline-reading-guide" aria-label="日々の記録の読み方"><div><span>1</span><p><b>日付と発災日</b><small>いつの記録かを確認</small></p></div><div><span>2</span><p><b>状況と主な対応</b><small>数値と動きを大きく表示</small></p></div><div><span>3</span><p><b>現場報告と原資料</b><small>詳しい根拠まで確認できます</small></p></div></aside>`);
   const topics=["すべて",...new Set(days.flatMap(d=>d.topics))];let activeTopic="すべて";
   const dailyDetails=d=>{const support=supportEvents.filter(event=>event.date===d.date),municipal=municipalEvents.filter(event=>event.date===d.date);return support.length?support:municipal.map(event=>({...event,category:event.category,page:event.page||1,pdf:event.pdf||d.pdf}))};
   const metricDefs=[["evacuees","避難者","人"],["shelters","避難所","か所"],["deaths","死者","人"],["injured","人的被害","人"],["homes","住家被害","棟"],["waterOutages","断水","戸"]];
@@ -208,6 +210,8 @@ if($("#archive")) $("#archive").innerHTML=[...days].reverse().map(d=>`<a class="
 if($("#situationSource")) $("#situationSource").textContent=`出典：第${days[0].meeting}〜${latest.meeting}回 火の国会議資料。速報値を含み、調査・判定の進展で変動します。`;
 
 if($("#officialPrimary")){
+  const officialPrimary=$("#officialPrimary");
+  if(!document.querySelector(".official-reading-guide"))officialPrimary.insertAdjacentHTML("beforebegin",`<aside class="official-reading-guide" aria-label="公的情報の確認方法"><div><span>国</span><p><b>政府の対応・支援制度</b><small>内閣府などの公式資料</small></p></div><div><span>県</span><p><b>熊本県全体の被害状況</b><small>災害対策本部の会議資料</small></p></div><div><span>市</span><p><b>避難・申請・地域情報</b><small>お住まいの市町村で確認</small></p></div></aside>`);
   $("#officialPrimary").innerHTML=officialSources.map(s=>`<a class="official-card" href="${s.url}" target="_blank" rel="noopener"><span>${s.level}</span><h3>${s.name}</h3><p>${s.description}</p><b>公式サイトを開く ↗</b></a>`).join('');
   const cabinet=document.createElement("section");cabinet.className="section official-section";cabinet.innerHTML=`<div class="hq-section-head"><div><p class="kicker">CABINET OFFICE</p><h2>内閣府の最新情報</h2><p>被害・政府対応のほか、非常災害対策本部と生活・生業再建支援チームの公式資料を確認できます。</p></div></div><div class="official-primary"><a class="official-card" href="https://www.bousai.go.jp/updates/r8kumamoto_jishin/status/index.html" target="_blank" rel="noopener"><span>8月7日 08:00現在</span><h3>被害状況・政府の対応</h3><p>内閣府の日次報告と過去分を確認できます。</p><b>公式資料一覧 ↗</b></a><a class="official-card" href="https://www.bousai.go.jp/updates/r8kumamoto_jishin/taisakukaigi.html" target="_blank" rel="noopener"><span>8月7日・第8回</span><h3>非常災害対策本会議</h3><p>政府の対応方針と省庁横断の取組資料です。</p><b>会議資料・議事録 ↗</b></a><a class="official-card" href="https://www.bousai.go.jp/updates/r8kumamoto_jishin/hisaisya_shien.html" target="_blank" rel="noopener"><span>8月7日・第6回</span><h3>生活・生業再建支援</h3><p>被災者生活と事業再建に関する政府チームの概要です。</p><b>支援チーム資料 ↗</b></a></div>`;
   $(".hq-meetings-section")?.before(cabinet);
