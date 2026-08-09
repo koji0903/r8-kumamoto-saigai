@@ -114,6 +114,7 @@ for (const shelter of shelters.features) {
 const htmlFiles = (await readdir(root)).filter(f => f.endsWith(".html") && !/^google[\w-]+\.html$/i.test(f));
 for (const file of htmlFiles) {
   const html = await readFile(path.join(root, file), "utf8");
+  if (!/<link\s+rel="stylesheet"\s+href="design-system\.css(?:\?[^\"]*)?"/.test(html)) errors.push(`${file} で共通Design System design-system.css が読み込まれていません`);
   if (!/<script\s+src="org-site\.js(?:\?[^\"]*)?"/.test(html)) errors.push(`${file} で共通スクリプト org-site.js が読み込まれていません`);
   if (!html.includes("よか隊ネット熊本　災害・支援状況レポート")) errors.push(`${file} のサイト名称が新名称に統一されていません`);
   if (html.includes("よか隊ネット災害支援レポート")) errors.push(`${file} に直前のサイト名称が残っています`);
@@ -128,6 +129,15 @@ for (const file of htmlFiles) {
 
 const sharedSiteScript = await readFile(path.join(root, "org-site.js"), "utf8");
 if (!sharedSiteScript.includes("G-ZPDRHTGZCR")) errors.push("org-site.js にGoogleタグが設定されていません");
+
+const designSystem = await readFile(path.join(root, "design-system.css"), "utf8");
+for (const token of ["--color-brand-primary", "--text-body", "--space-section", "--container-content", "--radius-md", "--motion-base", "--ease-out", "--touch-target-min"]) {
+  if (!designSystem.includes(token)) errors.push(`design-system.css に必須Token ${token} がありません`);
+}
+for (const primitive of [".ds-container", ".ds-card", ".ds-button", ".ds-page-hero", ".graphic-dot", ".graphic-line", ".motion-reveal", ".motion-line-draw"]) {
+  if (!designSystem.includes(primitive)) errors.push(`design-system.css に共通Primitive ${primitive} がありません`);
+}
+if (!(await exists("docs/design-system.md"))) errors.push("Design Systemドキュメント docs/design-system.md がありません");
 
 const appSource = await readFile(path.join(root, "app.js"), "utf8");
 if (appSource.includes("<span>負傷者</span>")) errors.push("人的被害総数を『負傷者』と表示する旧コードが残っています");

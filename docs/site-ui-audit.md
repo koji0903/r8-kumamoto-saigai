@@ -41,3 +41,41 @@
 3. JSが成功したときだけ `data-motion="enabled"` を付与し、JS無効・失敗時は常時表示する。
 4. 支援データのDOM、ページ別JavaScript、URL、電話番号、外部リンクは変更しない。
 5. 320 / 375 / 390 / 768 / 1024 / 1280 / 1440px、JS無効、reduced motionを回帰確認する。
+
+## Design System準拠状況（2026-08-10）
+
+`Compliant` は共通Token・Layout・Componentだけで主要画面が成立している状態、`Partially Compliant` は共通基盤を読み込むが旧classまたはページ固有値が残る状態、`Non-Compliant` は共通基盤を読み込まない状態を表す。全公開HTMLがDesign Systemを読み込むため、現在のNon-Compliantは0件。
+
+| route | status | remaining work |
+|---|---|---|
+| `/` | Partially Compliant | 正式ルール策定前のAI生成Heroを権利確認済み実写または非人物Graphicへ置換 |
+| `/disaster.html` | Partially Compliant | Portal固有色をsemantic Tokenへ段階移行 |
+| `/affected.html` | Partially Compliant | 旧need-cardを`.ds-card` variantへ統合 |
+| `/guide.html` | Partially Compliant | 制度カードと目次を共通Componentへ統合 |
+| `/reconstruction.html` | Partially Compliant | feature CSSの色・余白をTokenへ移行。判定ロジックは維持 |
+| `/shelters.html` | Partially Compliant | Leaflet UIのfocus・Token整合を継続確認 |
+| `/municipalities.html` | Partially Compliant | 自治体カードを行単位の共通variantへ統合 |
+| `/municipality-updates.html` | Partially Compliant | 大量一覧固有のTypography値をTokenへ移行 |
+| `/official.html` | Partially Compliant | 出典カードをArticleCard variantへ統合 |
+| `/support.html` | Partially Compliant | 支援分類カードをSupportCard variantへ統合 |
+| `/supporters.html` | Partially Compliant | 参加CTAをButton variantへ統合 |
+| `/volunteer-centers.html` | Partially Compliant | 募集状態badgeをsemantic Badgeへ統合 |
+| `/uto-waste.html` | Partially Compliant | 自治体個別feature CSSをTokenへ移行 |
+| `/timeline.html` | Partially Compliant | 記録カードをArticleCardへ統合 |
+| `/meetings.html` | Partially Compliant | 議事録本文Componentをarticle幅Tokenへ移行 |
+| `/terms.html` | Partially Compliant | 用語カード・検索UIを共通Componentへ統合 |
+| `/about.html` | Partially Compliant | Timelineを共通Timeline primitiveへ統合 |
+| `/join.html` | Partially Compliant | 参加カードを`.ds-card` variantへ統合 |
+| `/contact.html` | Partially Compliant | ContactCardを共通Card variantへ統合 |
+| `/privacy.html` | Compliant | 本文中心。新規装飾を追加しない |
+| `/accessibility.html` | Compliant | 方針更新時に本書と同期 |
+| `/404.html` | Compliant | 主要3導線とno-JS navigationを維持 |
+
+### 段階統合順
+
+1. 共通Layout / Header / Footer（完了）
+2. Typography / Color Token（共通基盤完了、feature CSS移行中）
+3. Button / Link / Card（Primitive完了、既存class移行中）
+4. Motion preset（完了）
+5. Abstract Graphic（Primitive完了、ページ別適用は必要時のみ）
+6. 個別feature CSS（支援機能の回帰確認と一緒に段階移行）
