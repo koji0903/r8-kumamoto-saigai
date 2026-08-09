@@ -128,7 +128,7 @@ Code: [`design-system.css`](../design-system.css)
 - 写真にはwidth/height、alt、統一したaspect-ratio、object-fitを設定しCLSを防ぐ。
 - 抽象表現で十分な場所へdecorative stock illustrationを置かない。
 
-現行TOP Heroの生成画像は、この正式ルール策定前に制作された段階移行対象であり、Design System上は非準拠。権利確認済みの実写、または人物を描かないGraphic Primitive構成へ置き換えるまで新規流用・派生生成を禁止する。
+TOP Heroは2026-08-10に、生成された人物・地域風景から、人物を描かないGraphic Primitive構成へ移行した。旧生成画像は公開ページで使用せず、新規流用・派生生成も禁止する。
 
 ## 11. Components
 
