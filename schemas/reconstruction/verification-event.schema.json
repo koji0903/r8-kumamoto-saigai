@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://r8-kumamoto-saigai.local/schemas/reconstruction/verification-event.schema.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "entityType", "entityId", "action", "reviewerId", "reviewerName", "approverId", "approverName", "reviewedAt", "sourceIds", "sourceLinkIds", "result", "notes"],
+    "properties": {
+      "id": {"type": "string", "pattern": "^verification_event_[a-z0-9_]+$"},
+      "entityType": {"enum": ["disaster", "program", "application", "municipality_application_status", "application_period", "required_document", "contact", "next_action", "consultation_item", "organization"]},
+      "entityId": {"type": "string"},
+      "action": {"enum": ["reviewed", "approved", "rejected", "needs_revision", "reverified", "expired_review", "withdrawal_confirmed"]},
+      "reviewerId": {"type": ["string", "null"]},
+      "reviewerName": {"type": ["string", "null"]},
+      "approverId": {"type": ["string", "null"]},
+      "approverName": {"type": ["string", "null"]},
+      "reviewedAt": {"$ref": "common.schema.json#/$defs/nullableDateTime"},
+      "sourceIds": {"$ref": "common.schema.json#/$defs/idArray"},
+      "sourceLinkIds": {"$ref": "common.schema.json#/$defs/idArray"},
+      "result": {"enum": ["confirmed", "partially_confirmed", "rejected", "needs_revision", "expired", "withdrawn"]},
+      "notes": {"type": ["string", "null"]}
+    }
+  }
+}

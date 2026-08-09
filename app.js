@@ -1,3 +1,4 @@
+const organizationScript=document.createElement("script");organizationScript.src="org-site.js";document.head.append(organizationScript);
 // data/report-data.js は日々手で編集する。構文エラーや読み込み失敗で全ページが白紙になるのを避けるため、
 // 描画全体を try で囲み、失敗したら公式サイトへの導線を出して知らせる。
 const showDataError=err=>{

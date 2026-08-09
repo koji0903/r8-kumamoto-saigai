@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://r8-kumamoto-saigai.local/schemas/reconstruction/common.schema.json",
+  "$defs": {
+    "id": {"type":"string","pattern":"^[a-z][a-z0-9]*(?:_[a-z0-9]+)+$"},
+    "nullableDate": {"type":["string","null"],"pattern":"^\\d{4}-\\d{2}-\\d{2}$"},
+    "nullableDateTime": {"type":["string","null"],"pattern":"^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:Z|[+-]\\d{2}:\\d{2})$"},
+    "nullableDateOrDateTime": {"type":["string","null"],"pattern":"^\\d{4}-\\d{2}-\\d{2}(?:T\\d{2}:\\d{2}:\\d{2}(?:Z|[+-]\\d{2}:\\d{2}))?$"},
+    "idArray": {"type":"array","items":{"$ref":"#/$defs/id"},"uniqueItems":true},
+    "category": {"enum":["home","money","documents","health_care","family_education","work_business","agriculture_fishery","daily_life"]},
+    "providerType": {"enum":["public","private"]},
+    "governmentLevel": {"enum":["national","prefectural","municipal","none"]},
+    "publicationStatus": {"enum":["draft","published","withdrawn","archived"]},
+    "verificationStatus": {"enum":["verified","partially_verified","needs_review","pending","unverified","expired","withdrawn"]},
+    "freshnessStatus": {"enum":["fresh","review_due","stale","source_unreachable"]},
+    "applicationStatus": {"enum":["pending","active","paused","closed","expired","withdrawn","unknown"]},
+    "organizationType": {"enum":["national_government","ministry","prefecture","municipality","social_welfare_council","public_institution","npo","company","foundation","professional_association","other"]},
+    "sourceType": {"enum":["web_page","pdf","notice","guideline","application_guide","form","other"]},
+    "officiality": {"enum":["primary_official","official_reference","private_primary"]},
+    "sourceStatus": {"enum":["active","superseded","withdrawn","unreachable","archived"]},
+    "actionType": {"enum":["check","apply","prepare","photograph","preserve","consult","contact","check_before_contract","do_not_proceed","other"]},
+    "urgency": {"enum":["now","soon","before_deadline","when_needed"]},
+    "answerType": {"enum":["yes_no_unknown","single_choice","multiple_choice","date","number_range","free_text_not_saved"]},
+    "questionPriority": {"enum":["initial","additional","specialist"]},
+    "requiredLevel": {"enum":["required","conditional","recommended","check_with_office","unknown"]}
+  }
+}

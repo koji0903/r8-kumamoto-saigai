@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://r8-kumamoto-saigai.local/schemas/reconstruction/municipality-application-status.schema.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "applicationId", "municipalityId", "implementationStatus", "receptionStatus", "applicationMethodStatus", "contactStatus", "localGuidanceStatus", "contactPointIds", "applicationPeriodIds", "requiredDocumentIds", "sourceLinkIds", "verificationStatus", "freshnessStatus", "lastCheckedAt", "notes"],
+    "properties": {
+      "id": {"type": "string", "pattern": "^municipality_application_status_[a-z0-9_]+$"},
+      "applicationId": {"type": "string"},
+      "municipalityId": {"type": "string"},
+      "implementationStatus": {"enum": ["unknown", "pending", "confirmed", "paused", "closed", "not_applicable"]},
+      "receptionStatus": {"enum": ["unknown", "pending", "confirmed", "not_started", "paused", "closed", "not_applicable"]},
+      "applicationMethodStatus": {"enum": ["unknown", "pending", "confirmed", "not_applicable"]},
+      "contactStatus": {"enum": ["unknown", "pending", "confirmed", "not_applicable"]},
+      "localGuidanceStatus": {"enum": ["unknown", "pending", "confirmed", "not_applicable"]},
+      "contactPointIds": {"$ref": "common.schema.json#/$defs/idArray"},
+      "applicationPeriodIds": {"$ref": "common.schema.json#/$defs/idArray"},
+      "requiredDocumentIds": {"$ref": "common.schema.json#/$defs/idArray"},
+      "sourceLinkIds": {"$ref": "common.schema.json#/$defs/idArray"},
+      "verificationStatus": {"$ref": "common.schema.json#/$defs/verificationStatus"},
+      "freshnessStatus": {"$ref": "common.schema.json#/$defs/freshnessStatus"},
+      "lastCheckedAt": {"$ref": "common.schema.json#/$defs/nullableDateOrDateTime"},
+      "notes": {"type": ["string", "null"]}
+    }
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "verification_event_r8_repair_application_initial_review",
+    "entityType": "application",
+    "entityId": "application_r8_kumamoto_emergency_repair",
+    "action": "reviewed",
+    "reviewerId": "system_codex",
+    "reviewerName": "Codex（一次情報照合補助）",
+    "approverId": null,
+    "approverName": null,
+    "reviewedAt": "2026-08-09T07:20:05+09:00",
+    "sourceIds": ["source_cabinet_relief_act_application_r8_earthquake", "source_cabinet_disaster_relief_act_overview", "source_kumamoto_relief_act_application_r8_earthquake", "source_kumamoto_emergency_housing_repair_page", "source_kumamoto_emergency_housing_repair_user_guide", "source_kumamoto_emergency_housing_repair_guideline"],
+    "sourceLinkIds": ["source_link_application_repair_implemented", "source_link_application_repair_areas", "source_link_application_repair_eligibility", "source_link_application_repair_damage", "source_link_application_repair_scope", "source_link_application_repair_amount", "source_link_application_repair_office", "source_link_application_repair_uto_pending"],
+    "result": "partially_confirmed",
+    "notes": "機械的な一次情報照合の記録。人によるレビュー・承認・二重確認ではないため、verifiedへの昇格根拠には使用しない。"
+  }
+]

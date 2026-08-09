@@ -1,0 +1,20 @@
+[
+  {
+    "id": "municipality_application_status_r8_repair_uto",
+    "applicationId": "application_r8_kumamoto_emergency_repair",
+    "municipalityId": "municipality_uto",
+    "implementationStatus": "confirmed",
+    "receptionStatus": "pending",
+    "applicationMethodStatus": "pending",
+    "contactStatus": "pending",
+    "localGuidanceStatus": "pending",
+    "contactPointIds": [],
+    "applicationPeriodIds": ["period_r8_kumamoto_emergency_repair_application_pending"],
+    "requiredDocumentIds": [],
+    "sourceLinkIds": ["source_link_application_repair_areas", "source_link_application_repair_uto_pending", "source_link_application_repair_uto_index_checked"],
+    "verificationStatus": "partially_verified",
+    "freshnessStatus": "fresh",
+    "lastCheckedAt": "2026-08-09T18:03:00+09:00",
+    "notes": "宇土市が県実施対象に含まれることは確認済み。県ページの市町村窓口一覧では宇土市の担当課、開始日、連絡先、ホームページが全て確認中。宇土市公式の支援・申請一覧にも住宅の応急修理の個別案内は確認できないが、不在を受付未実施の根拠にはしない。県問い合わせ先を宇土市申請窓口として関連付けない。"
+  }
+]
