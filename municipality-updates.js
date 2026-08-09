@@ -1,5 +1,4 @@
 (() => {
-  const categoryStyles = document.createElement("link"); categoryStyles.rel = "stylesheet"; categoryStyles.href = "municipality-categories.css"; document.head.append(categoryStyles);
   const data = window.MUNICIPALITY_UPDATES;
   if (!data) return;
   const $ = selector => document.querySelector(selector);
