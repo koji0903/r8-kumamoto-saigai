@@ -22,14 +22,19 @@
     const description=document.querySelector('meta[name="description"]');
     if(description)description.content='一般社団法人よか隊ネット熊本は、2016年熊本地震をきっかけに活動を開始した災害支援・地域支援団体です。令和8年熊本地震の生活再建情報、支援情報、防災・地域づくりに関する情報を提供しています。';
   }
-  const seoTitles={'index.html':'ホーム','disaster.html':'令和8年熊本地震 支援情報','affected.html':'困りごとから探す','guide.html':'制度・生活支援','shelters.html':'開設中の避難所','municipalities.html':'自治体別情報','municipality-updates.html':'市町村からの公式発信','official.html':'国・県の公的情報','reconstruction.html':'生活再建','supporters.html':'支援する方へ','support.html':'支援分野別','volunteer-centers.html':'災害ボランティアセンター','timeline.html':'日々の記録','meetings.html':'火の国会議 議事録','terms.html':'災害用語集','about.html':'私たちについて','join.html':'支援・協力','contact.html':'お問い合わせ','privacy.html':'プライバシーポリシー','uto-waste.html':'宇土市 災害ごみ持ち込み案内'};
+  const seoTitles={'index.html':'ホーム','disaster.html':'令和8年熊本地震 支援情報','affected.html':'困りごとから探す','guide.html':'制度・生活支援','shelters.html':'開設中の避難所','municipalities.html':'自治体別情報','municipality-updates.html':'市町村からの公式発信','official.html':'国・県の公的情報','reconstruction.html':'生活再建','supporters.html':'支援する方へ','support.html':'支援分野別','volunteer-centers.html':'災害ボランティアセンター','timeline.html':'日々の記録','meetings.html':'火の国会議 議事録','terms.html':'災害用語集','about.html':'私たちについて','join.html':'支援・協力','contact.html':'お問い合わせ','privacy.html':'プライバシーポリシー','accessibility.html':'アクセシビリティ方針','404.html':'ページが見つかりません','uto-waste.html':'宇土市 災害ごみ持ち込み案内'};
   const canonical=path==='index.html'?'https://www.yokatainet.jp/':`https://www.yokatainet.jp/${path}`;
   const graph=[{'@type':'Organization','@id':'https://www.yokatainet.jp/#organization',name:'一般社団法人よか隊ネット熊本',url:'https://www.yokatainet.jp/',logo:'https://www.yokatainet.jp/yokatai-logo.png',address:{'@type':'PostalAddress',postalCode:'869-0404',addressRegion:'熊本県',addressLocality:'宇土市',streetAddress:'走潟町2235'},telephone:'090-2719-4037',email:'info.yokatai@gmail.com'},{'@type':'WebSite','@id':'https://www.yokatainet.jp/#website',url:'https://www.yokatainet.jp/',name:'一般社団法人よか隊ネット熊本',publisher:{'@id':'https://www.yokatainet.jp/#organization'},inLanguage:'ja'}];
   if(path!=='index.html')graph.push({'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'ホーム',item:'https://www.yokatainet.jp/'},{'@type':'ListItem',position:2,name:seoTitles[path]||document.title.split('｜')[0],item:canonical}]});
   const structured=document.createElement('script');structured.type='application/ld+json';structured.textContent=JSON.stringify({'@context':'https://schema.org','@graph':graph});document.head.append(structured);
   const supportPages=['disaster.html','affected.html','guide.html','shelters.html','terms.html','municipalities.html','municipality-updates.html','official.html','uto-waste.html','support.html','supporters.html','volunteer-centers.html'];
   const activityPages=['timeline.html','meetings.html'];
-  const organizationPages=['about.html','join.html','contact.html','privacy.html'];
+  const organizationPages=['about.html','join.html','contact.html','privacy.html','accessibility.html'];
+  const noMotionPages=['shelters.html','municipality-updates.html','timeline.html','meetings.html','privacy.html','accessibility.html','404.html','uto-waste.html'];
+  const standardMotionPages=['join.html','contact.html','supporters.html'];
+  const storyMotionPages=['index.html','about.html'];
+  const motionPreset=storyMotionPages.includes(path)?'story':noMotionPages.includes(path)?'none':standardMotionPages.includes(path)?'standard':'subtle';
+  document.body.dataset.motionPreset=motionPreset;
   const active=key=>key==='home'?path==='index.html':key==='support'?supportPages.includes(path):key==='reconstruction'?path==='reconstruction.html':key==='activity'?activityPages.includes(path):key==='organization'?organizationPages.includes(path):false;
   const currentAttr=key=>active(key)?' aria-current="page"':'';
   const currentClass=key=>active(key)?' is-current':'';
@@ -42,11 +47,25 @@
     document.addEventListener('click',event=>{if(!header.contains(event.target))header.querySelectorAll('details[open]').forEach(item=>item.removeAttribute('open'))});
     header.querySelectorAll('.org-nav-group').forEach(group=>group.addEventListener('toggle',()=>{if(group.open)header.querySelectorAll('.org-nav-group[open]').forEach(other=>{if(other!==group)other.removeAttribute('open')})}));
     if(path!=='index.html'&&organizationPages.includes(path))header.insertAdjacentHTML('afterend',`<div class="org-context-bar org-context-general"><div><p><a href="index.html">ホーム</a><span aria-hidden="true">›</span><b>団体情報</b></p><nav aria-label="団体情報のショートカット"><a href="about.html">私たちについて</a><a href="join.html">支援・協力</a><a href="contact.html">お問い合わせ</a></nav></div></div>`);
-    else if(path!=='index.html')header.insertAdjacentHTML('afterend',`<div class="org-context-bar"><div><p><b>令和8年熊本地震</b><span>一般社団法人よか隊ネット熊本が運営する支援情報サイトです</span></p><nav aria-label="災害支援のショートカット"><a href="disaster.html">支援情報トップ</a><a href="affected.html">困りごとから探す</a><a href="reconstruction.html">生活再建</a><a href="official.html">公的機関の情報</a></nav></div></div>`)
+    else if(path!=='index.html'&&path!=='404.html')header.insertAdjacentHTML('afterend',`<div class="org-context-bar"><div><p><b>令和8年熊本地震</b><span>一般社団法人よか隊ネット熊本が運営する支援情報サイトです</span></p><nav aria-label="災害支援のショートカット"><a href="disaster.html">支援情報トップ</a><a href="affected.html">困りごとから探す</a><a href="reconstruction.html">生活再建</a><a href="official.html">公的機関の情報</a></nav></div></div>`)
+  }
+  if(path!=='index.html'){
+    const supportParent=supportPages.includes(path)||path==='reconstruction.html';
+    const detailParent=path==='uto-waste.html';
+    const crumbs=[['index.html','ホーム']];
+    if(supportParent&&path!=='disaster.html')crumbs.push(['disaster.html','令和8年熊本地震']);
+    if(detailParent)crumbs.push(['municipalities.html','自治体別情報']);
+    if(organizationPages.includes(path)&&path!=='about.html')crumbs.push(['about.html','団体情報']);
+    crumbs.push(['',seoTitles[path]||document.querySelector('h1')?.textContent.trim()||'現在のページ']);
+    const breadcrumb=`<nav class="site-breadcrumb" aria-label="パンくずリスト"><ol>${crumbs.map(([href,label],index)=>`<li>${href&&index<crumbs.length-1?`<a href="${href}">${label}</a>`:`<span aria-current="page">${label}</span>`}</li>`).join('')}</ol></nav>`;
+    const context=document.querySelector('.org-context-bar');
+    (context||header)?.insertAdjacentHTML('afterend',breadcrumb);
   }
   if(path==='disaster.html'){
     document.title='令和8年熊本地震 支援情報ポータル｜一般社団法人よか隊ネット熊本';
     const main=document.querySelector('main');
+    const previousTitle=main?.querySelector('h1');
+    if(previousTitle){const sectionTitle=document.createElement('h2');[...previousTitle.attributes].forEach(attribute=>sectionTitle.setAttribute(attribute.name,attribute.value));sectionTitle.innerHTML=previousTitle.innerHTML;previousTitle.replaceWith(sectionTitle)}
     main?.insertAdjacentHTML('afterbegin',`<section class="disaster-portal" aria-labelledby="disaster-portal-title"><div class="disaster-portal-heading"><p class="kicker">2026 KUMAMOTO EARTHQUAKE</p><h1 id="disaster-portal-title">令和8年熊本地震<br><em>支援情報ポータル</em></h1><p>被災された方、地域の方、支援に関わる方が、必要な情報へ迷わず進むための入口です。</p></div><div class="disaster-portal-priority"><p>まず確認したい方へ</p><a href="affected.html"><span>被災された方・ご家族</span><b>困りごとから情報を探す</b><i>→</i></a><a href="reconstruction.html"><span>住まいの被害を受けた方</span><b>生活再建支援を確認する</b><i>→</i></a></div><nav class="disaster-service-grid" aria-label="令和8年熊本地震の情報メニュー"><a href="shelters.html"><span>01</span><b>避難所</b><small>開設中の避難所を確認</small></a><a href="municipalities.html"><span>02</span><b>自治体別情報</b><small>市町村ごとの被害・支援</small></a><a href="municipality-updates.html"><span>03</span><b>市町村の公式発信</b><small>自治体発表を時系列で確認</small></a><a href="timeline.html"><span>04</span><b>日ごとの動き</b><small>被災地の状況と支援経過</small></a><a href="meetings.html"><span>05</span><b>火の国会議 議事録</b><small>現場報告と原資料</small></a><a href="official.html"><span>06</span><b>国・県の公式情報</b><small>公的機関の一次情報</small></a><a href="volunteer-centers.html"><span>07</span><b>ボランティア</b><small>災害VCの募集・活動状況</small></a><a href="supporters.html"><span>08</span><b>支援する方へ</b><small>現場ニーズと支援情報</small></a></nav></section>`);
     const policy=document.querySelector('.archive-source-policy');
     const portal=document.querySelector('.disaster-portal');
@@ -80,6 +99,9 @@
     const marks=[['01','人'],['02','手'],['03','組'],['04','情']];
     marks.forEach(([number,mark],index)=>cards[index]?.insertAdjacentHTML('afterbegin',`<div class="join-card-mark"><span>${number}</span><b aria-hidden="true">${mark}</b></div>`));
     inner?.querySelector('.contact-actions')?.insertAdjacentHTML('beforebegin',`<div class="join-flow"><span>お問い合わせ</span><i aria-hidden="true">→</i><span>内容を確認</span><i aria-hidden="true">→</i><span>関わり方をご相談</span></div>`);
+  }
+  if(path==='contact.html'){
+    document.querySelector('.contact-section')?.insertAdjacentHTML('beforebegin',`<section class="contact-topics" aria-labelledby="contact-topics-title"><div><p class="kicker">相談内容から確認</p><h2 id="contact-topics-title">このようなご相談を受け付けています</h2><ul><li><b>支援について</b><span>被災地支援や生活再建に関する連携</span></li><li><b>活動について</b><span>活動内容や参加方法の確認</span></li><li><b>企業・団体連携</b><span>専門性・物資・場所を生かした協力</span></li><li><b>取材・情報提供</b><span>活動への取材、地域の支援情報</span></li></ul></div></section>`);
   }
   const visualIcon=(type)=>{
     const icons={
@@ -162,6 +184,31 @@
     sections.forEach(section=>observer.observe(section));
   };
   setupHomeMotion();
+  const setupSiteMotion=()=>{
+    if(path==='index.html'||motionPreset==='none'||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    const main=document.querySelector('main');
+    if(!main)return;
+    const candidates=[...main.querySelectorAll(':scope > section')].filter(section=>{
+      if(section.matches('.map-section,.minutes-page,.timeline-page,[aria-live]'))return false;
+      return section.getBoundingClientRect().height>0;
+    });
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+      if(!entry.isIntersecting)return;
+      entry.target.classList.add('is-revealed');
+      observer.unobserve(entry.target);
+    }),{rootMargin:'0px 0px -5% 0px',threshold:.04});
+    candidates.forEach((section,sectionIndex)=>{
+      section.classList.add('site-reveal');
+      if(motionPreset!=='subtle'){
+        const cards=[...section.querySelectorAll('.org-card,.activity-card,.contact-method,.illustration-card,.join-flow span')].slice(0,6);
+        cards.forEach((card,index)=>{card.classList.add('site-stagger-item');card.style.setProperty('--stagger-order',index%3)});
+      }
+      if(sectionIndex===0&&section.getBoundingClientRect().top<innerHeight*.9)section.classList.add('is-revealed');
+      else observer.observe(section);
+    });
+    document.documentElement.dataset.motion='enabled';
+  };
+  setupSiteMotion();
   const footer=document.querySelector('footer');
-  if(footer){footer.className='org-footer';footer.innerHTML=`<div class="org-footer-brand"><img src="yokatai-logo.png" alt="一般社団法人よか隊ネット熊本"><p>〒869-0404<br>熊本県宇土市走潟町2235<br>代表：土黒 功司</p><a href="mailto:info.yokatai@gmail.com">info.yokatai@gmail.com</a><a href="tel:09027194037">090-2719-4037</a></div><nav class="org-footer-sitemap" aria-label="フッターサイトマップ"><section><b>令和8年熊本地震</b><a href="disaster.html">支援情報トップ</a><a href="affected.html">困りごとから探す</a><a href="shelters.html">避難所</a><a href="municipalities.html">自治体別情報</a><a href="official.html">国・県の公的情報</a><a href="municipality-updates.html">市町村の公式発信</a></section><section><b>暮らし・支援</b><a href="reconstruction.html">生活再建</a><a href="guide.html">制度・生活支援</a><a href="supporters.html">支援する方へ</a><a href="support.html">支援分野別</a><a href="volunteer-centers.html">災害ボランティアセンター</a></section><section><b>記録・資料</b><a href="timeline.html">日々の記録</a><a href="meetings.html">火の国会議 議事録</a><a href="terms.html">災害用語集</a></section><section><b>団体情報</b><a href="about.html">私たちについて</a><a href="about.html#activities">活動について</a><a href="join.html">支援・協力</a><a href="contact.html">お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a></section></nav><p class="operator">本サイトは一般社団法人よか隊ネット熊本が運営する支援情報サイトです。行政機関の公式サイトではありません。制度の判断・申請時はリンク先の公的機関で最新情報をご確認ください。</p>`}
+  if(footer){footer.className='org-footer';footer.innerHTML=`<div class="org-footer-brand"><img src="yokatai-logo.png" alt="一般社団法人よか隊ネット熊本"><p>〒869-0404<br>熊本県宇土市走潟町2235<br>代表：土黒 功司</p><a href="mailto:info.yokatai@gmail.com">info.yokatai@gmail.com</a><a href="tel:09027194037">090-2719-4037</a></div><nav class="org-footer-sitemap" aria-label="フッターサイトマップ"><section><b>令和8年熊本地震</b><a href="disaster.html">支援情報トップ</a><a href="affected.html">困りごとから探す</a><a href="shelters.html">避難所</a><a href="municipalities.html">自治体別情報</a><a href="official.html">国・県の公的情報</a><a href="municipality-updates.html">市町村の公式発信</a></section><section><b>暮らし・支援</b><a href="reconstruction.html">生活再建</a><a href="guide.html">制度・生活支援</a><a href="supporters.html">支援する方へ</a><a href="support.html">支援分野別</a><a href="volunteer-centers.html">災害ボランティアセンター</a></section><section><b>記録・資料</b><a href="timeline.html">日々の記録</a><a href="meetings.html">火の国会議 議事録</a><a href="terms.html">災害用語集</a></section><section><b>団体情報</b><a href="about.html">私たちについて</a><a href="about.html#activities">活動について</a><a href="join.html">支援・協力</a><a href="contact.html">お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a><a href="accessibility.html">アクセシビリティ方針</a></section></nav><div class="org-footer-actions"><a href="disaster.html">災害支援情報を確認する</a><a href="contact.html">よか隊ネット熊本へ相談する</a></div><p class="operator">本サイトは一般社団法人よか隊ネット熊本が運営する支援情報サイトです。行政機関の公式サイトではありません。制度の判断・申請時はリンク先の公的機関で最新情報をご確認ください。</p>`}
 })();
