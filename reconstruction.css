@@ -6,3 +6,10 @@
 .reconstruction-page main{overflow:visible}.reconstruction-shell,.reconstruction-shell *{min-width:0}.reconstruction-hero h1,.reconstruction-lead,.reconstruction-role,.section-heading h2,.section-heading p,.first-checks li,.program-card{overflow-wrap:anywhere}.first-checks li{grid-template-columns:48px minmax(0,1fr)}@media(max-width:700px){.reconstruction-hero h1{font-size:clamp(2rem,10vw,2.35rem)}.first-checks li{grid-template-columns:42px minmax(0,1fr)}}@media(max-width:340px){.first-checks li{grid-template-columns:36px minmax(0,1fr)}}
 .demo-banner{display:flex;align-items:center;justify-content:center;gap:10px;padding:8px 16px;background:#f4ead1;color:#493b1c;letter-spacing:0}.demo-banner[hidden]{display:none}.demo-banner b{font-size:.86rem}.demo-banner span{font-size:.78rem;font-weight:600}@media(max-width:700px){.demo-banner{align-items:flex-start;flex-direction:column;gap:0;padding:8px 14px;text-align:left}.demo-banner span{line-height:1.45}}
 .contact-hours{margin-top:8px!important}.contact-official-link{display:inline-flex;align-items:center;justify-content:center;min-height:52px;margin-top:12px;padding:10px 16px;border:1px solid #a9c6bd;border-radius:10px;color:#106f63;font-weight:800;text-decoration:none}.contact-official-link:focus-visible{outline:4px solid #ffbf47;outline-offset:3px}@media(max-width:700px){.contact-official-link{width:100%;text-align:center}}
+
+/* Keep the numbered marker and its text in separate, non-overlapping columns. */
+.reconstruction-page .first-checks li{grid-template-columns:52px minmax(0,1fr);column-gap:20px}
+.reconstruction-page .first-checks li::before{position:static;width:44px;height:44px;margin:0;box-sizing:border-box;transform:none}
+.first-check-text{display:block;min-width:0;overflow-wrap:anywhere;word-break:normal}
+@media(max-width:700px){.reconstruction-page .first-checks li{grid-template-columns:46px minmax(0,1fr);column-gap:14px}.reconstruction-page .first-checks li::before{width:40px;height:40px}}
+@media(max-width:340px){.reconstruction-page .first-checks li{grid-template-columns:38px minmax(0,1fr);column-gap:10px}.reconstruction-page .first-checks li::before{width:34px;height:34px}}

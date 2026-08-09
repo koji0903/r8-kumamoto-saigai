@@ -59,7 +59,11 @@ function renderChecks(home, programs) {
   const checks = [...new Set([...actionChecks, ...(home.checks || safeHome.checks)])].slice(0, 3);
   $("#homeIntro").textContent = home.intro || safeHome.intro;
   const list = $("#firstChecks");
-  list.replaceChildren(...checks.map(check => create("li", "", check)));
+  list.replaceChildren(...checks.map(check => {
+    const item = create("li");
+    item.append(create("span", "first-check-text", check));
+    return item;
+  }));
 }
 
 function statusRow(label, value, pending = false, note = null) {
