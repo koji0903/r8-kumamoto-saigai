@@ -1,14 +1,19 @@
 # Top-page illustration assets
 
-## `hero-support-community.webp`
+## `hero-community-recovery-desktop.webp`
 
-- Use: top-page hero visual (`hero-support-community`)
+- Use: top-page desktop hero visual
 - Display ratio: 3:2 landscape
 - Source size: 1536 × 1024 px
-- Web delivery: WebP, approximately 184 KB
-- Content: Kumamoto residents of different generations, community staff, information, supplies, homes, and connecting lines. The scene represents a community gradually returning to everyday life.
-- Accessibility: the image supplements the adjacent text; its meaning is also stated in the `alt` text and page copy.
+- Theme: 災害支援から、暮らしへ。暮らしから、地域へ。
+- Scene: 熊本の住宅、住民、高齢者、支援スタッフ、家族、生活物資、地域の道と山
+- Accessibility: adjacent page copy and the image `alt` text communicate the same essential meaning.
 
-When replacing this asset, preserve the 3:2 ratio, calm off-white background, restrained teal/sage/beige palette, and generous outer padding. Avoid readable text, logos, sensational disaster imagery, injuries, collapsed buildings, or a one-directional “helper and victim” composition.
+## `hero-community-recovery-mobile.webp`
 
-The current illustration was generated with the built-in image generation tool using an `illustration-story` prompt and then converted to WebP for delivery.
+- Use: top-page mobile hero visual
+- Display ratio: 4:5 portrait
+- Source size: 1122 × 1402 px
+- Scene: 高齢者と支援スタッフの相談、スマートフォン、家族、住宅と山
+
+Both images contain no embedded text, labels, logos, diagrams, or watermarks. They were generated with the built-in image generation tool using an `illustration-story` prompt and converted to WebP for web delivery.

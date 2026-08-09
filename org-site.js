@@ -166,10 +166,8 @@
     sections.forEach(section=>{
       section.classList.add('motion-section');
       if(section.matches('.home-current-v2'))mark(section,[section.querySelector('.kicker'),section.querySelector('.home-current-label'),section.querySelector('h2'),section.querySelector('.home-current-heading>p:last-of-type'),...section.querySelectorAll('.home-current-visual li')]);
-      else if(section.matches('.home-about-v2')){
-        mark(section,[section.querySelector('.home-about-visual')],'motion-from-left');
-        mark(section,[...section.querySelectorAll(':scope>div:last-child>*')],'motion-from-right');
-      }else if(section.matches('.home-principle-v2'))mark(section,[section.querySelector('.kicker'),section.querySelector('h2'),section.querySelector('blockquote'),...section.querySelectorAll('.principle-flow li')]);
+      else if(section.matches('.home-about-v2'))mark(section,[...section.querySelectorAll(':scope>div>*')]);
+      else if(section.matches('.home-principle-v2'))mark(section,[section.querySelector('.kicker'),section.querySelector('h2'),section.querySelector('blockquote'),...section.querySelectorAll('.principle-flow li')]);
       else if(section.matches('.home-information-v2'))mark(section,[...section.querySelectorAll(':scope>div:first-child>*'),...section.querySelectorAll('.information-path>*')]);
       else if(section.matches('.home-history-v2'))mark(section,[...section.querySelectorAll(':scope>header>*'),...section.querySelectorAll('.history-timeline article'),section.querySelector('.home-story-link')]);
       else if(section.matches('.home-work-v2'))mark(section,[...section.querySelectorAll(':scope>header>*'),...section.querySelectorAll('.home-work-grid a')]);
