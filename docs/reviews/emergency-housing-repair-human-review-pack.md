@@ -30,6 +30,7 @@
 
 | Source ID | 発表主体 | 資料名・URL | 発表日 | 根拠として登録している内容 |
 |---|---|---|---|---|
+| `source_cabinet_notifications_r8_kumamoto_earthquake` | 内閣府 | [内閣府防災担当からの各都道府県等への通知等](https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html) | 一覧の最新掲載日 2026-08-07 | 令和8年熊本地震に関する国の通知6件への公式入口。2026-08-03付「被災者の住まいの確保に向けた留意事項について」を含む。金額・対象条件等は一覧だけで確定しない |
 | `source_cabinet_relief_act_application_r8_earthquake` | 内閣府 | [令和8年熊本地震に係る災害救助法の適用について](https://www.bousai.go.jp/pdf/260728.pdf) | 2026-07-28 | 宇土市を含む21市町村、法適用日2026-07-28 |
 | `source_cabinet_disaster_relief_act_overview` | 内閣府 | [災害救助法の概要](https://www.bousai.go.jp/taisaku/hisaisyagyousei/pdf/saigaikyujo_gaiyou.pdf) | 資料上の記載なし | 災害救助法による救助の種類に住宅の応急修理が含まれること |
 
@@ -111,6 +112,7 @@
 
 | sourceLink ID | source title / URL | PDF page・Web section | claimType | 現在登録されている値 | 人手確認 |
 |---|---|---|---|---|---|
+| `source_link_disaster_official_notifications_cabinet` | [内閣府・通知一覧](https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html) | Web「内閣府防災担当からの各都道府県等への通知等」 | `other` | 通知6件への公式入口。2026-08-03付の住まい確保に関する通知を含む。一覧単独では制度条件・金額の根拠にしない | □原文 □一致 □修正 □未確認 |
 | `source_link_disaster_relief_act_areas_cabinet` | [内閣府・法適用通知](https://www.bousai.go.jp/pdf/260728.pdf) | p.1／適用市町村表 | `disaster_application` | 21市町村、2026-07-28 | □原文 □一致 □修正 □未確認 |
 | `source_link_disaster_relief_act_areas` | [熊本県・法適用](https://www.pref.kumamoto.jp/soshiki/27/274494.html) | Web「1 災害救助法の適用」 | `disaster_application` | 21市町村、2026-07-28 | □原文 □一致 □修正 □未確認 |
 | `source_link_program_repair_general` | [内閣府・災害救助法の概要](https://www.bousai.go.jp/taisaku/hisaisyagyousei/pdf/saigaikyujo_gaiyou.pdf) | p.1「救助の種類」 | `general_description` | 救助の種類に住宅の応急修理 | □原文 □一致 □修正 □未確認 |

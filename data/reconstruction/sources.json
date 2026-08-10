@@ -1,5 +1,21 @@
 [
   {
+    "id": "source_cabinet_notifications_r8_kumamoto_earthquake",
+    "organizationId": "org_cabinet_office_disaster_management",
+    "sourceType": "web_page",
+    "title": "内閣府防災担当からの各都道府県等への通知等",
+    "url": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
+    "publishedAt": null,
+    "revisedAt": "2026-08-07",
+    "retrievedAt": "2026-08-10T15:50:00+09:00",
+    "checkedAt": "2026-08-10T15:50:00+09:00",
+    "contentHash": "sha256:f0a3a40563c1901508dd1173a2d42577ffcbbbf711ab728034f5079ce665d113",
+    "archivedPath": null,
+    "officiality": "primary_official",
+    "status": "active",
+    "notes": "令和8年熊本地震に関する内閣府防災担当の通知一覧。2026年8月10日取得時点で6件を掲載し、8月3日付『被災者の住まいの確保に向けた留意事項について』を含む。通知への公式入口として登録し、一覧ページ単独では金額・対象条件等の確定根拠に使用しない。"
+  },
+  {
     "id": "source_cabinet_relief_act_application_r8_earthquake",
     "organizationId": "org_cabinet_office_disaster_management",
     "sourceType": "notice",
@@ -103,12 +119,44 @@
     "url": "https://www.city.uto.lg.jp/article/list/1307.html",
     "publishedAt": null,
     "revisedAt": null,
-    "retrievedAt": "2026-08-09T18:03:00+09:00",
-    "checkedAt": "2026-08-09T18:03:00+09:00",
-    "contentHash": "sha256:07696e515c0c0a0da33b5b05347585193dd0d0458638afd3b3e62a18a57c8dfe",
+    "retrievedAt": "2026-08-10T12:55:39+09:00",
+    "checkedAt": "2026-08-10T12:55:39+09:00",
+    "contentHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
     "archivedPath": null,
     "officiality": "primary_official",
     "status": "active",
-    "notes": "宇土市公式の支援・申請記事一覧を確認。令和8年熊本地震の『住家の緊急修理』は掲載されているが、熊本県ページが住宅の応急修理とは別制度と明記しているため混同しない。住宅の応急修理の個別受付案内は確認できず、不在を受付未実施の根拠にはしない。"
+    "notes": "2026年8月10日に再取得。8月7日付の『災害救助法に基づく被災住宅の応急修理制度について』と『すまいの相談窓口』を確認。個別記事を別sourceとして登録したが、人手レビュー前のためverifiedへ変更しない。『住家の緊急修理』とは別制度として扱う。"
+  },
+  {
+    "id": "source_uto_emergency_housing_repair_page_r8_earthquake",
+    "organizationId": "org_uto_city",
+    "sourceType": "web_page",
+    "title": "災害救助法に基づく被災住宅の応急修理制度について",
+    "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
+    "publishedAt": "2026-08-07",
+    "revisedAt": null,
+    "retrievedAt": "2026-08-10T12:55:39+09:00",
+    "checkedAt": "2026-08-10T12:55:39+09:00",
+    "contentHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
+    "archivedPath": null,
+    "officiality": "primary_official",
+    "status": "active",
+    "notes": "宇土市の制度個別案内。対象、修理範囲、限度額、完了期限候補、注意事項、様式、問い合わせ先を含む。登録値との差分は人手レビュー対象であり、このsource登録だけでは確認済み・承認済みを意味しない。"
+  },
+  {
+    "id": "source_uto_housing_consultation_desk_r8_earthquake",
+    "organizationId": "org_uto_city",
+    "sourceType": "web_page",
+    "title": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
+    "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
+    "publishedAt": "2026-08-07",
+    "revisedAt": null,
+    "retrievedAt": "2026-08-10T12:55:39+09:00",
+    "checkedAt": "2026-08-10T12:55:39+09:00",
+    "contentHash": "sha256:83be58e3c56963e18140658412145c461d5542c4e79c399f4bb85f687ef7beab",
+    "archivedPath": null,
+    "officiality": "primary_official",
+    "status": "active",
+    "notes": "住まいの再建に関する相談・申請受付の総合窓口案内。住宅の応急修理の申請窓口・相談窓口としての役割範囲は人手で原文照合する。"
   }
 ]
