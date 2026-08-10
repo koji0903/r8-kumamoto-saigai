@@ -15,9 +15,13 @@
 ## 更新と確認
 
 ```sh
-node scripts/build-municipality-reconstruction-nav.mjs
+node scripts/run-municipality-official-nav-pipeline.mjs
 node scripts/test-municipality-reconstruction-nav.mjs
 ```
+
+単一パイプラインはネットワークへアクセスせず、正本 `sources/official/municipalities/municipality-updates.json` を読み込み、分類、重複・過去災害・公式ドメイン検査、validation、品質レポート生成を行います。検証に失敗した場合は表示用JSONを置き換えません。表示用の正規出力は `public-data/reconstruction/municipality-official-navigation.json`、監査出力は `reports/municipality-official-navigation-quality.json` です。
+
+confidenceは、カテゴリ一致語1件で medium、複数一致または合計スコア4以上で high、既存カテゴリだけの弱い根拠で low とします。lowは内部データに保持しますが通常表示しません。取得から12時間を超えた自治体、一時取得失敗、前回比50%を超える分類件数減少はwarningとし、自動削除や生成停止には使用しません。404は継続回数の確認が必要な削除候補、301/308は新URL確認候補としてwarningを分けます。入力0件または入力があるのに全カテゴリ0件の場合はエラーとして表示データの更新を中止します。
 
 現段階ではGitHub Actionsの必須チェックへ追加しません。既存3時間更新の後処理として組み込むのが次の段階です。電話番号・受付時間・担当課は原則として再管理せず、公式ページで確認してもらいます。
 

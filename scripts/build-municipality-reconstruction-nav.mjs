@@ -20,7 +20,7 @@ export const keywords = {
 const pastDisasterTerms=["平成28年熊本地震","令和2年7月豪雨","令和2年豪雨","過去の台風"];
 const legacy = {"住まい・証明":["home","documents"],"ごみ・生活":["daily_life"],"ライフライン":["daily_life"],"施設・学校":["family_education"],"支援・制度":["money"]};
 const hostAllowed = (url, official) => { try { const a=new URL(url).hostname,b=new URL(official).hostname; return a===b||a.endsWith(`.${b}`)||b.endsWith(`.${a}`); } catch { return false; } };
-const canonical = value => { try { const u=new URL(value); u.hash=""; return u.toString(); } catch { return value; } };
+export const canonical = value => { try { const u=new URL(value); u.hash=""; u.protocol="https:"; [...u.searchParams.keys()].filter(key=>/^utm_/i.test(key)||["fbclid","gclid"].includes(key)).forEach(key=>u.searchParams.delete(key)); u.pathname=u.pathname!=="/"?u.pathname.replace(/\/$/,""):u.pathname; return u.toString(); } catch { return value; } };
 export function classify(update) {
   const haystack=`${update.title||""} ${update.url||""}`.normalize("NFKC");
   const scores=new Map(), evidence={};
@@ -40,8 +40,8 @@ export function build(source, master) {
       if(!hostAllowed(update.url,meta.officialUrl)){issues.push({type:"non_official_url",municipality:meta.name,url:update.url});continue;}
       const key=canonical(update.url); if(seen.has(key)){issues.push({type:"duplicate_url",municipality:meta.name,url:update.url});continue;} seen.add(key);
       const classification=classify(update); if(!classification.length) continue;
-      const direct=/令和8年熊本地震|令和８年熊本地震|災害|被災|地震/.test(update.title); const urgency=/給水|断水|停電|避難所|休校|運休|通行止/.test(update.title)?"emergency":"reconstruction";
-      updates.push({originalTitle:update.title,displayTitle:update.title,url:update.url,publisher:meta.name,sourceType:"municipal_official",status:"active",disasterRelevance:direct?"direct":"inherited_from_disaster_collector",informationPhase:urgency,publishedAt:update.date?(update.time?`${update.date}T${update.time}:00+09:00`:update.date):null,updatedAt:null,retrievedAt:municipality.checkedAt||source.metadata?.retrievedAt||null,categories:classification.map(x=>x.category),classification,urlCheck:{state:"inherited_from_collector",checkedAt:municipality.checkedAt||null}});
+      const direct=/令和8年熊本地震|令和８年熊本地震|災害|被災|地震/.test(update.title); const urgency=/給水|断水|停電|避難所|休校|運休|通行止/.test(update.title)?"emergency":"reconstruction"; const confidence=classification.some(x=>x.confidence==="high")?"high":classification.some(x=>x.confidence==="medium")?"medium":"low"; const publishedAt=update.date?(update.time?`${update.date}T${update.time}:00+09:00`:update.date):null; const ageDays=publishedAt?Math.max(0,(Date.now()-Date.parse(publishedAt))/86400000):365;
+      updates.push({officialTitle:update.title,originalTitle:update.title,displayTitle:update.title,url:update.url,originalUrl:update.url,redirectHistory:[],officialDomain:new URL(meta.officialUrl).hostname,publisher:meta.name,sourceType:"municipal_official",status:"active",disasterRelevance:direct?"direct":"inherited_from_disaster_collector",disasterRelevanceEvidence:[direct?"disaster_keyword":"disaster_collection_source"],informationPhase:urgency,publishedAt,updatedAt:null,retrievedAt:municipality.checkedAt||source.metadata?.retrievedAt||null,categories:classification.map(x=>x.category),classificationConfidence:confidence,classification,displayPriority:(direct?30:10)+(confidence==="high"?20:confidence==="medium"?10:0)+Math.max(0,10-Math.floor(ageDays/7)),urlCheck:{state:"inherited_from_collector",checkedAt:municipality.checkedAt||null}});
     }
     return {municipalityId:meta.id,municipalityName:meta.name,officialUrl:meta.officialUrl,status:municipality.status||"unknown",checkedAt:municipality.checkedAt||null,retrievalIssues:municipality.errors||[],updates};
   }).filter(Boolean);
