@@ -291,3 +291,13 @@
 .illustrated-site.page-about .about-history .activity-card{display:flex;flex-direction:column;height:100%}
 .illustrated-site.page-about .about-history .activity-card>.message{width:calc(100% + 48px);min-height:66px;margin:auto -24px -28px!important;padding:19px 24px;display:flex;align-items:center;box-sizing:border-box}
 @media(max-width:800px){.illustrated-site.page-about .about-history .activity-card>.message{width:calc(100% + 48px);margin-top:24px!important}}
+
+/* Japanese typography: phrase-aware wrapping, strict kinsoku and no orphan glyphs. */
+.organization-site :where(h1,h2,h3,h4,h5,h6,blockquote,.principle,.message){max-width:100%;word-break:normal;word-break:auto-phrase;overflow-wrap:normal!important;line-break:strict;text-wrap:balance}
+.organization-site :where(p,li,dd,td,th,figcaption,small,label,summary){word-break:normal;overflow-wrap:break-word;line-break:strict;text-wrap:pretty}
+.organization-site :where(h1,h2,h3,h4,h5,h6)>br{display:none}
+.organization-site :is(.subpage-hero,.audience-hero,.waste-hero,.vc-hero,.org-hero) h1,.organization-site .reconstruction-hero h1{max-width:960px;font-size:clamp(34px,3.8vw,52px);letter-spacing:0}
+.organization-site .about-hero>div{max-width:1180px}
+.organization-site .about-hero h1{max-width:980px}
+@media(max-width:800px){.organization-site main :where(section,article,div,header,footer,nav,aside,form,fieldset){min-width:0}.organization-site main>*,.organization-site main>*>*{max-width:100%}.organization-site :is(.subpage-hero,.audience-hero,.waste-hero,.vc-hero,.org-hero)>*,.organization-site :is(.subpage-hero,.audience-hero,.waste-hero,.vc-hero,.org-hero)>*>*{min-width:0;max-width:100%}.organization-site :where(h1,h2,h3,h4,h5,h6,blockquote,.principle,.message){max-width:100%;word-break:normal;overflow-wrap:anywhere!important}.organization-site :is(.subpage-hero,.audience-hero,.waste-hero,.vc-hero,.org-hero) h1,.organization-site .reconstruction-hero h1{font-size:clamp(30px,8vw,38px);line-height:1.38}.organization-site :where(h2){line-height:1.45}}
+@media(max-width:480px){.organization-site :is(.subpage-hero,.audience-hero,.waste-hero,.vc-hero,.org-hero) h1,.organization-site .reconstruction-hero h1{font-size:clamp(28px,8.5vw,36px)}}

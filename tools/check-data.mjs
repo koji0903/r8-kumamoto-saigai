@@ -139,6 +139,8 @@ for (const file of htmlFiles) {
   if (!html.includes('<meta name="twitter:card" content="summary_large_image">')) errors.push(`${file} のTwitterカード設定が不正です`);
   if (!ogImage?.startsWith("https://www.yokatainet.jp/")) errors.push(`${file} のog:imageが正規ドメインを使用していません`);
   else if (!(await exists(ogImage.slice("https://www.yokatainet.jp/".length)))) errors.push(`${file} のog:image実体がありません`);
+  const headings = html.match(/<h[1-3]\b[^>]*>[\s\S]*?<\/h[1-3]>/gi) || [];
+  if (headings.some((heading) => /<br\b/i.test(heading))) errors.push(`${file} の見出しに画面幅へ追従しない強制改行があります`);
   if (html.includes("よか隊ネット災害支援レポート")) errors.push(`${file} に直前のサイト名称が残っています`);
   if (html.includes("火の国 災害支援レポート")) errors.push(`${file} に旧サイト名称が残っています`);
   for (const match of html.matchAll(/(?:href|src)="([^"#?]+)(?:[?#][^"]*)?"/g)) {
