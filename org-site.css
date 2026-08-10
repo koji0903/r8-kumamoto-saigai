@@ -242,7 +242,6 @@
 .municipality-feature-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}.municipality-feature-list .municipality-feature{margin:0!important;height:100%}
 @media(max-width:800px){.municipality-feature-list{grid-template-columns:1fr;gap:14px;margin:18px 12px 0}.municipality-feature-list .municipality-feature{margin:0!important}}
 .home-hero-primary span,.home-current-actions i{display:inline-block;transition:transform var(--motion-fast) var(--ease-out)}
-.home-current-actions{grid-template-columns:1fr}
 @media(max-width:800px){
   .home-scroll-cue{display:none}
     .history-timeline::before{transform:scaleY(1);transform-origin:top}
