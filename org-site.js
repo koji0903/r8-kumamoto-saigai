@@ -96,8 +96,13 @@
     const inner=section?.querySelector(':scope > div');
     inner?.insertAdjacentHTML('afterbegin',`<div class="join-heading"><div><p class="kicker">WAYS TO SUPPORT</p><span>支援のかたちは、ひとつではありません。</span></div><p>現地の状況と活動内容を確認しながら、無理なく続けられる協力の形をご案内します。</p></div>`);
     const cards=section?.querySelectorAll('.org-card');
-    const marks=[['01','人'],['02','手'],['03','組'],['04','情']];
-    marks.forEach(([number,mark],index)=>cards[index]?.insertAdjacentHTML('afterbegin',`<div class="join-card-mark"><span>${number}</span><b aria-hidden="true">${mark}</b></div>`));
+    const marks=[
+      ['01','<svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M18 8v8m-4-4h8"/></svg>'],
+      ['02','<svg viewBox="0 0 24 24"><path d="M7.5 12 4 10a2 2 0 0 0-3 1l6 6.5A3 3 0 0 0 9 18h3M16.5 12l3.5-2a2 2 0 0 1 3 1l-6 6.5a3 3 0 0 1-2 .5h-3"/><path d="M12 14 8 9.8A3 3 0 0 1 12 5a3 3 0 0 1 4 4.8Z"/></svg>'],
+      ['03','<svg viewBox="0 0 24 24"><path d="M3 21V8l7-4 7 4v13M1 21h22M7 11h2m3 0h2m-7 4h2m3 0h2"/><path d="M17 12h4v9"/></svg>'],
+      ['04','<svg viewBox="0 0 24 24"><path d="M4 14V9l12-5v15L4 14Z"/><path d="M16 9h3a3 3 0 0 1 0 6h-3M6 15l1.5 5h4L10 16"/></svg>']
+    ];
+    marks.forEach(([number,icon],index)=>cards[index]?.insertAdjacentHTML('afterbegin',`<div class="join-card-mark"><span>${number}</span><b aria-hidden="true">${icon}</b></div>`));
     inner?.querySelector('.contact-actions')?.insertAdjacentHTML('beforebegin',`<div class="join-flow"><span>お問い合わせ</span><i aria-hidden="true">→</i><span>内容を確認</span><i aria-hidden="true">→</i><span>関わり方をご相談</span></div>`);
   }
   if(path==='contact.html'){

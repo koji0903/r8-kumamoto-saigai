@@ -282,3 +282,7 @@
 .illustrated-site.page-about .about-values .org-card>h3{grid-column:2;grid-row:1;min-width:0;margin:0;padding-right:66px;line-height:1.5;overflow-wrap:anywhere}
 .illustrated-site.page-about .about-values .org-card>p{grid-column:1/-1;grid-row:2;min-width:0;margin:0;overflow-wrap:anywhere}
 @media(max-width:800px){.illustrated-site.page-about .about-values .org-card{grid-template-columns:54px minmax(0,1fr);column-gap:14px;row-gap:18px;padding:22px!important}.illustrated-site.page-about .about-values .org-card>.visual-pictogram{width:50px!important;height:50px!important}.illustrated-site.page-about .about-values .org-card>.value-mark{right:18px!important;top:20px!important;width:44px;height:44px}.illustrated-site.page-about .about-values .org-card>h3{padding-right:52px;font-size:20px}}
+
+/* Replace abstract one-character join marks with action-specific pictograms. */
+.illustrated-site.page-join .join-card-mark b{font-size:0}
+.illustrated-site.page-join .join-card-mark b svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
