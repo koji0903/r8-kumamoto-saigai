@@ -35,6 +35,31 @@ def draw_mark(draw, box, background="#0F172A"):
         draw.ellipse((x-r, y-r, x+r, y+r), fill=fill)
 
 
+def draw_house_mark(draw, box):
+    """団体ロゴの家と扉を、小サイズでも判別できる形で描く。"""
+    x0, y0, x1, y1 = box
+    width, height = x1 - x0, y1 - y0
+    red = "#C92B20"
+    cream = "#FFFAF5"
+    radius = int(min(width, height) * .22)
+    draw.rounded_rectangle(box, radius=radius, fill=cream)
+    stroke = max(3, int(width * .095))
+    roof = [
+        (x0 + width * .14, y0 + height * .45),
+        (x0 + width * .50, y0 + height * .20),
+        (x0 + width * .86, y0 + height * .45),
+    ]
+    draw.line(roof, fill=red, width=stroke, joint="curve")
+    draw.line((x0 + width * .22, y0 + height * .42, x0 + width * .22, y0 + height * .82), fill=red, width=stroke)
+    draw.line((x0 + width * .78, y0 + height * .42, x0 + width * .78, y0 + height * .82), fill=red, width=stroke)
+    door = (x0 + width * .39, y0 + height * .54, x0 + width * .63, y0 + height * .84)
+    draw.rectangle(door, fill=red)
+    draw.rectangle((x0 + width * .50, y0 + height * .62, x0 + width * .63, y0 + height * .84), fill=cream)
+    knob = width * .018
+    cx, cy = x0 + width * .56, y0 + height * .72
+    draw.ellipse((cx-knob, cy-knob, cx+knob, cy+knob), fill=red)
+
+
 def build_ogp():
     source = Image.open(BACKGROUND).convert("RGB")
     image = ImageOps.fit(source, (1200, 630), method=Image.Resampling.LANCZOS, centering=(.5, .5)).convert("RGBA")
@@ -58,9 +83,9 @@ def build_ogp():
 
 
 def build_icons():
-    master = Image.new("RGBA", (512, 512), "#FAFAFA")
+    master = Image.new("RGBA", (512, 512), (0, 0, 0, 0))
     draw = ImageDraw.Draw(master)
-    draw_mark(draw, (36, 36, 476, 476), background="#075985")
+    draw_house_mark(draw, (0, 0, 512, 512))
     master.resize((180, 180), Image.Resampling.LANCZOS).save(ROOT / "apple-touch-icon.png", optimize=True)
     master.resize((32, 32), Image.Resampling.LANCZOS).save(ROOT / "favicon.png", optimize=True)
 
