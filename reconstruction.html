@@ -79,6 +79,7 @@
         <button type="button" class="special-card consultation" data-open-consultation><span aria-hidden="true">話</span><b>とにかく誰かに相談したい</b><small>確認できている相談先へ進みます</small></button>
       </div>
     </section>
+    <noscript><p class="organizer-noscript rebuild-shell"><b>暮らし整理ナビを表示できません。</b><br>上の「困りごとから選ぶ」から直接お選びいただくか、<a href="contact.html">相談先を確認してください</a>。</p></noscript>
 
     <section id="topic-detail" class="rebuild-result rebuild-shell" aria-labelledby="topic-detail-title" hidden tabindex="-1">
       <p class="rebuild-kicker">選んだ困りごと</p>
@@ -88,10 +89,11 @@
     </section>
 
     <section id="organizer" class="rebuild-organizer rebuild-shell" aria-labelledby="organizer-title" hidden tabindex="-1">
-      <header class="rebuild-heading"><p class="rebuild-kicker">いくつ選んでも大丈夫です</p><h2 id="organizer-title">今、気になっていることを選んでください</h2><p>回答は保存・送信されません。このページを閉じると消えます。</p></header>
+      <header class="rebuild-heading"><p class="rebuild-kicker">何から始めればいいか分からないとき</p><h2 id="organizer-title">今、気になっていることを選んでください</h2><p>ひとつでも、いくつでも構いません。分からないものは選ばなくて大丈夫です。</p></header>
+      <p class="organizer-privacy"><span aria-hidden="true">鍵</span><b>選んだ内容は保存・送信されません。</b>このページを閉じるか再読み込みすると消えます。</p>
       <form id="organizer-form">
         <fieldset><legend>気になっていること</legend><div class="organizer-options" id="organizer-options"></div></fieldset>
-        <button type="submit" class="rebuild-primary">選んだ困りごとを整理する</button>
+        <div class="organizer-actions"><button type="submit" class="rebuild-primary">選んだ困りごとを整理する</button><button type="button" class="rebuild-secondary" data-consult-without-selection>よく分からないので相談先を見る</button><button type="button" class="rebuild-text-button" data-close-organizer>困りごとの入口へ戻る</button></div>
       </form>
       <div id="organizer-result" class="organizer-result" aria-live="polite" tabindex="-1" hidden></div>
     </section>
