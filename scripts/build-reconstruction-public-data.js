@@ -138,6 +138,10 @@ const publicPrograms = programs.filter(publicRecord).map(program => {
     officialName: program.officialName,
     summary: program.verificationStatus === "verified" || verifiedFact(program, ["general_description"]) ? (program.audienceSummary || program.shortDescription) : "制度の詳しい内容を公式情報で確認中です。",
     category: program.categories[0],
+    categories: program.categories,
+    benefitType: program.benefitType,
+    providerType: program.providerType,
+    governmentLevel: program.governmentLevel,
     availability: publicState(applicationConfirmed ? "confirmed" : application?.verificationStatus === "needs_review" ? "needs_review" : "pending"),
     municipalities: municipalityViews,
     nextSteps: publicActions,
@@ -157,9 +161,14 @@ const homeOutput = {
   checks: ["お住まいの自治体を選ぶ", "公式情報で確認済みの内容と、確認中の内容を分けて見る"],
   programs: publicPrograms.filter(program => program.category === "home")
 };
+const moneyOutput = {
+  title: "お金・支払い",
+  intro: "生活費や支払いの困りごとから、確認済みの支援を探します。",
+  programs: publicPrograms.filter(program => program.categories.includes("money") && program.availability.confirmed).slice(0, 5)
+};
 
 fs.mkdirSync(outputDir, { recursive: true });
-for (const [name, value] of [["programs.json", publicPrograms], ["municipalities.json", municipalityOutput], ["categories.json", categoryOutput], ["home.json", homeOutput]]) {
+for (const [name, value] of [["programs.json", publicPrograms], ["municipalities.json", municipalityOutput], ["categories.json", categoryOutput], ["home.json", homeOutput], ["money.json", moneyOutput]]) {
   fs.writeFileSync(path.join(outputDir, name), `${JSON.stringify(value, null, 2)}\n`);
 }
 

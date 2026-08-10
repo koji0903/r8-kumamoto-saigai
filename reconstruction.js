@@ -2,7 +2,7 @@
   "use strict";
   const topics = {
     housing:{label:"住まい",prompt:"家に住めない・修理したい",title:"住まいのことで困っていますか？",lead:"家に住めない、修理したい、仮の住まいを探している方へ。",checks:["今の家で安全に生活できるか","修理が必要な場所を記録できているか","市町村へ相談できているか"],links:[{label:"宇土市の住まいについて詳しく見る",href:"uto-housing.html"},{label:"自治体別情報を見る",href:"municipalities.html"}]},
-    money:{label:"お金・支払い",prompt:"生活費や支払いが心配",title:"生活費や支払いが心配ですか？",lead:"収入や毎月の支払いへの影響を、一つずつ整理します。",checks:["収入や仕事に変化があるか","住まいにも被害があるか","続いている支払いに心配があるか"],links:[{label:"制度・生活支援を見る",href:"guide.html"}]},
+    money:{label:"お金・支払い",prompt:"生活費や支払いが心配",title:"生活費や支払いが心配ですか？",lead:"収入や毎月の支払いへの影響を、一つずつ整理します。",checks:["収入や仕事に変化があるか","住まいにも被害があるか","続いている支払いに心配があるか"],links:[{label:"お金・支払いを詳しく整理する",href:"reconstruction-money.html"}]},
     paperwork:{label:"証明・手続き",prompt:"罹災証明や申請が分からない",title:"被害の証明や申請で困っていますか？",lead:"制度名を知らなくても、必要な手続きの入口を確認できます。",checks:["被害の状況を写真に残しているか","お住まいの市町村の案内を確認したか","申請前に必要な書類を確認したか"],links:[{label:"制度・生活支援を見る",href:"guide.html"},{label:"自治体別情報を見る",href:"municipalities.html"}]},
     health:{label:"健康・介護",prompt:"健康・介護のことが心配",title:"健康や介護のことで心配がありますか？",lead:"本人や家族の健康、高齢者、介護、障がい、心のケアについて整理します。",checks:["いつもの通院や薬を続けられているか","介護や福祉サービスに変化があるか","本人や家族が一人で抱え込んでいないか"],links:[]},
     family:{label:"子ども・家族",prompt:"子どもや家族のことで困っている",title:"子どもや家族のことで困っていますか？",lead:"学校、保育、学用品、子育て、家族の生活について整理します。",checks:["学校や保育の予定を確認できているか","子どもの生活用品に不足があるか","家族それぞれに別の困りごとがないか"],links:[{label:"自治体別情報を見る",href:"municipalities.html"}]},
@@ -38,4 +38,5 @@
     organizerResult.innerHTML=`<p class="print-memo-title">暮らしの再建 確認メモ</p><h3>選んだ困りごと</h3><ul class="selected-needs">${labels.map(label=>`<li><span aria-hidden="true">✓</span>${label}</li>`).join("")}</ul><p><b>${labels.length}つの困りごとを選びました。</b>表示順に優先順位の意味はありません。一つずつ確認してみましょう。</p><h4>次に確認する分野</h4><div class="result-topic-actions">${known.map(id=>`<button type="button" data-result-topic="${id}">${topics[id].label}を見る</button>`).join("")}${selected.some(id=>!topics[id])?'<a href="municipalities.html">説明しにくい困りごとの公的窓口を探す</a>':''}</div><div class="result-consult"><h4>自分だけでは整理しにくいとき</h4><p>専門機関・公的機関の公式案内を参照してください。</p>${publicReferenceLinks}</div><aside class="result-supporter"><b>相談を受けながら使っている方へ</b><p>選ばれた項目は、制度対象を判断するためのものではありません。困りごとを整理し、必要な情報や公的な相談先を確認するためにご利用ください。</p></aside><div class="result-actions"><button type="button" data-reset-organizer>選び直す</button><button type="button" data-print-organizer>確認メモを印刷する</button></div>`;
     organizerResult.hidden=false;organizerResult.querySelectorAll("[data-result-topic]").forEach(button=>button.addEventListener("click",()=>openTopic(button.dataset.resultTopic)));organizerResult.querySelector("[data-reset-organizer]")?.addEventListener("click",()=>{resetOrganizer();organizer.focus()});organizerResult.querySelector("[data-print-organizer]")?.addEventListener("click",()=>window.print());organizerResult.focus();
   });
+  if(location.hash==="#organizer"){detail.hidden=true;focusSection(organizer)}
 })();

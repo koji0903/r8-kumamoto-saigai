@@ -82,3 +82,27 @@ try {
 }
 
 console.log("生活再建公開データ生成テストOK（6条件）");
+
+const moneyRoot = fixture();
+try {
+  let targetId;
+  editJson(moneyRoot, "programs.json", rows => {
+    const program = rows.find(row => row.id === "program_emergency_housing_repair");
+    program.publicationStatus = "published";
+    program.categories = [...new Set([...program.categories, "money"])];
+    targetId = program.id;
+  });
+  editJson(moneyRoot, "applications.json", rows => {
+    rows.find(row => row.id === "application_r8_kumamoto_emergency_repair").publicationStatus = "published";
+  });
+  editJson(moneyRoot, "source-links.json", rows => {
+    Object.assign(rows.find(row => row.id === "source_link_application_repair_implemented"), { verifiedBy: "fixture_reviewer", verifiedAt: "2026-08-11T09:00:00+09:00" });
+  });
+  const built = build(moneyRoot);
+  const money = JSON.parse(fs.readFileSync(path.join(built.output, "money.json"), "utf8"));
+  if (money.programs.length !== 1 || money.programs[0].id !== targetId) throw new Error("確認済みmoney制度fixtureが表示対象になりませんでした");
+  if (money.programs[0].benefitType !== "in_kind_or_direct_payment") throw new Error("給付・貸付等の種別が公開データにありません");
+  console.log("お金カテゴリfixture OK: 確認済み制度のみ表示・支援種別を保持");
+} finally {
+  fs.rmSync(moneyRoot, { recursive: true, force: true });
+}
