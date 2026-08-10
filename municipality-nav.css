@@ -1,0 +1,15 @@
+.municipality-nav > label { display:block; margin-bottom:10px; font-size:18px; font-weight:950; }
+.municipality-nav select { width:min(100%,520px); min-height:58px; padding:12px 46px 12px 16px; border:3px solid var(--my-green); border-radius:13px; background:#fff; color:var(--my-text); font:inherit; font-size:18px; font-weight:800; }
+.municipality-results { margin-top:26px; }
+.municipality-results > p { color:var(--my-muted); font-size:17px; }
+.municipality-results h3 { margin:0 0 18px; font-size:clamp(25px,3vw,34px); }
+.municipality-results ul { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin:0 0 22px; padding:0; list-style:none; }
+.municipality-results li a { display:grid; gap:8px; height:100%; padding:20px; border:2px solid var(--my-line); border-radius:16px; background:#fff; color:var(--my-text); font-size:18px; font-weight:900; line-height:1.55; text-decoration:none; box-shadow:5px 5px 0 #e4eeeb; }
+.municipality-results li a:hover { border-color:var(--my-green); }
+.municipality-results small { color:var(--my-muted); font-size:14px; }
+.municipality-fallback { display:inline-flex; padding:15px 19px; border-radius:12px; background:var(--my-green); color:#fff; font-weight:950; text-decoration:none; }
+.municipality-safe-empty { margin-bottom:18px; padding:22px; border:2px solid #d8aa42; border-radius:14px; background:#fff9e8; }
+.municipality-safe-empty b { font-size:19px; }
+.municipality-safe-empty p { margin-bottom:0; font-size:16px; line-height:1.7; }
+@media (max-width:560px) { .municipality-results ul { grid-template-columns:1fr; } .municipality-results li a { padding:17px; font-size:16px; } }
+@media print { .municipality-nav select { border:1px solid #555; } .municipality-results li a,.municipality-safe-empty { box-shadow:none; border:1px solid #555; } }
