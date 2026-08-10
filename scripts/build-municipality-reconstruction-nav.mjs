@@ -33,10 +33,11 @@ export function build(source, master) {
     const meta=byName.get(municipality.name); if(!meta){issues.push({type:"municipality_mismatch",municipality:municipality.name});return null;}
     const seen=new Set(), updates=[];
     for(const update of municipality.updates||[]){
+      if(!String(update.title||"").trim()){issues.push({type:"missing_title",municipality:meta.name,url:update.url||null});continue;}
       if(!hostAllowed(update.url,meta.officialUrl)){issues.push({type:"non_official_url",municipality:meta.name,url:update.url});continue;}
       const key=canonical(update.url); if(seen.has(key)){issues.push({type:"duplicate_url",municipality:meta.name,url:update.url});continue;} seen.add(key);
       const classification=classify(update); if(!classification.length) continue;
-      updates.push({originalTitle:update.title,displayTitle:update.title,url:update.url,publisher:meta.name,publishedAt:update.date?(update.time?`${update.date}T${update.time}:00+09:00`:update.date):null,updatedAt:null,retrievedAt:municipality.checkedAt||source.metadata?.retrievedAt||null,categories:classification.map(x=>x.category),classification,urlCheck:{state:"inherited_from_collector",checkedAt:municipality.checkedAt||null}});
+      updates.push({originalTitle:update.title,displayTitle:update.title,url:update.url,publisher:meta.name,sourceType:"municipal_official",status:"active",publishedAt:update.date?(update.time?`${update.date}T${update.time}:00+09:00`:update.date):null,updatedAt:null,retrievedAt:municipality.checkedAt||source.metadata?.retrievedAt||null,categories:classification.map(x=>x.category),classification,urlCheck:{state:"inherited_from_collector",checkedAt:municipality.checkedAt||null}});
     }
     return {municipalityId:meta.id,municipalityName:meta.name,officialUrl:meta.officialUrl,status:municipality.status||"unknown",checkedAt:municipality.checkedAt||null,retrievalIssues:municipality.errors||[],updates};
   }).filter(Boolean);
