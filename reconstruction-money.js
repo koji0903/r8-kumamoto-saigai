@@ -25,19 +25,4 @@
     const programs = (data.programs || []).slice(0, 5); if (!programs.length) return;
     list.innerHTML = programs.map(program => { const type = typeLabels[program.benefitType] || ["支援", "詳しい内容は公式情報で確認してください"]; const sources = (program.officialSources || []).map(source => `<a href="${source.url}" target="_blank" rel="noopener">制度の公式情報を見る <span aria-hidden="true">↗</span></a>`).join(""); return `<article class="money-program-card"><p><span>${type[0]}</span>${type[1]}</p><h3>${program.title}</h3><p>${program.summary}</p><p class="money-status">${program.availability.label}</p><p><b>条件に当てはまれば利用できる可能性があります。</b>本人の条件と申請方法は公式窓口で確認してください。</p><div>${sources || '<span>公式情報へのリンクを確認中です</span>'}<a href="municipalities.html">この制度について公的窓口を確認する</a></div></article>`; }).join("");
   }).catch(() => { /* 静的な安全な空状態を維持する */ });
-  const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[char]);
-  const municipalitySelect = document.querySelector("#money-municipality-select");
-  const municipalityResults = document.querySelector("#municipality-money-results");
-  fetch("public-data/reconstruction/municipality-official-navigation.json", { credentials: "same-origin" }).then(response => { if (!response.ok) throw new Error("load"); return response.json(); }).then(data => {
-    const municipalities = data.municipalities || [];
-    municipalitySelect.insertAdjacentHTML("beforeend", municipalities.map(item => `<option value="${escapeHtml(item.municipalityId)}">${escapeHtml(item.municipalityName)}</option>`).join(""));
-    const render = () => {
-      const item = municipalities.find(entry => entry.municipalityId === municipalitySelect.value); if (!item) { municipalityResults.innerHTML = "<p>市町村を選ぶと、関連する公式ページを表示します。</p>"; return; }
-      const pages = (item.updates || []).filter(update => update.categories.includes("money")).slice(0, 12);
-      const fallback = `<a class="municipality-fallback" href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noopener">${escapeHtml(item.municipalityName)}公式サイトで最新情報を確認する <span aria-hidden="true">↗</span></a>`;
-      municipalityResults.innerHTML = `<h3>${escapeHtml(item.municipalityName)}の公式情報</h3>${pages.length ? `<ul>${pages.map(update => `<li><a href="${escapeHtml(update.url)}" target="_blank" rel="noopener"><span>${escapeHtml(update.displayTitle)}</span><small>お金・支払い / ${escapeHtml(item.municipalityName)}公式</small></a></li>`).join("")}</ul>` : `<div class="municipality-safe-empty"><b>関連する個別ページは、現在の自動収集では確認できませんでした。</b><p>制度や支援がないという意味ではありません。自治体公式サイトで最新情報をご確認ください。</p></div>`}${fallback}`;
-    };
-    municipalitySelect.addEventListener("change", render);
-    const requested = new URLSearchParams(location.search).get("municipality"); if (requested && municipalities.some(item => item.municipalityId === requested)) { municipalitySelect.value=requested; render(); }
-  }).catch(() => { municipalityResults.innerHTML='<div class="municipality-safe-empty"><b>公式情報一覧を読み込めませんでした。</b><p><a href="municipalities.html">市町村の公的情報一覧</a>から確認してください。</p></div>'; });
 })();

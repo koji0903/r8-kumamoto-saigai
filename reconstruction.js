@@ -10,6 +10,9 @@
     primary:{label:"農業・漁業",prompt:"農業・漁業への影響がある",title:"農業・漁業の再開で困っていますか？",lead:"生産設備、農地、漁具、経営への影響を整理します。",checks:["農地、船、設備などに被害があるか","生産や出荷を続けられるか","住まいや生活費にも影響があるか"],links:[]},
     daily:{label:"暮らし・移動",prompt:"車・移動・日常生活で困っている",title:"移動や日常生活で困っていますか？",lead:"車、交通、ごみ、水道、日用品など、毎日の暮らしへの影響を整理します。",checks:["移動する手段を確保できているか","水道やごみなど自治体情報を確認したか","必要な日用品が不足していないか"],links:[{label:"自治体別情報を見る",href:"municipalities.html"},{label:"市町村の公式発信を見る",href:"municipality-updates.html"}]}
   };
+  const topicCategories={housing:"home",money:"money",paperwork:"documents",health:"health_care",family:"family_education",work:"work_business",primary:"agriculture_fishery",daily:"daily_life"};
+  const currentMunicipality=(()=>{const value=new URLSearchParams(location.search).get("municipality");return /^(municipality_)?[a-z]+$/.test(value||"")?value:""})();
+  const officialNavHref=id=>`reconstruction-official.html?category=${topicCategories[id]}${currentMunicipality?`&municipality=${currentMunicipality}`:""}`;
   const detail = document.querySelector("#topic-detail");
   const detailTitle = document.querySelector("#topic-detail-title");
   const detailBody = document.querySelector("#topic-detail-body");
@@ -19,8 +22,8 @@
   const consultation = document.querySelector("#consultation");
   const focusSection = section => { section.hidden=false; section.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"}); section.focus({preventScroll:true}); };
   const publicReferenceLinks = '<div class="detail-links"><a href="municipalities.html">市町村の公的窓口を探す <span aria-hidden="true">→</span></a><a href="official.html">国・熊本県の公的情報を見る <span aria-hidden="true">→</span></a></div>';
-  const detailMarkup = topic => `<p class="detail-lead">${topic.lead}</p><h3>まず確認すること</h3><ul class="detail-checks">${topic.checks.map(item=>`<li>${item}</li>`).join("")}</ul>${topic.links.length?`<div class="detail-links">${topic.links.map(link=>`<a href="${link.href}">${link.label} <span aria-hidden="true">→</span></a>`).join("")}</div>`:`<p class="detail-preparing"><b>この分野の詳しい案内は現在準備中です。</b><br>未確認の窓口は掲載せず、市町村や国・熊本県の公式案内を参照できるようにしています。</p>${publicReferenceLinks}`}`;
-  const openTopic = id => { const topic=topics[id]; if(!topic)return; organizer.hidden=true; detailTitle.textContent=topic.title; detailBody.innerHTML=detailMarkup(topic); focusSection(detail); };
+  const detailMarkup = (topic,id) => `<p class="detail-lead">${topic.lead}</p><h3>まず確認すること</h3><ul class="detail-checks">${topic.checks.map(item=>`<li>${item}</li>`).join("")}</ul><div class="detail-links"><a href="${officialNavHref(id)}">${topic.label}の自治体公式情報を見る <span aria-hidden="true">→</span></a>${topic.links.map(link=>`<a href="${link.href}">${link.label} <span aria-hidden="true">→</span></a>`).join("")}</div>`;
+  const openTopic = id => { const topic=topics[id]; if(!topic)return; organizer.hidden=true; detailTitle.textContent=topic.title; detailBody.innerHTML=detailMarkup(topic,id); focusSection(detail); };
   document.querySelectorAll("[data-topic]").forEach(button=>button.addEventListener("click",()=>openTopic(button.dataset.topic)));
   const resetOrganizer = () => { document.querySelectorAll('#organizer input[name="topics"]').forEach(input=>{input.checked=false}); organizerResult.hidden=true; organizerResult.innerHTML=""; };
   document.querySelectorAll("[data-open-organizer]").forEach(button=>button.addEventListener("click",()=>{detail.hidden=true;focusSection(organizer)}));

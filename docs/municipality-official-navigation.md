@@ -20,3 +20,7 @@ node scripts/test-municipality-reconstruction-nav.mjs
 ```
 
 現段階ではGitHub Actionsの必須チェックへ追加しません。既存3時間更新の後処理として組み込むのが次の段階です。電話番号・受付時間・担当課は原則として再管理せず、公式ページで確認してもらいます。
+
+## 8カテゴリ共通UI
+
+`reconstruction-official.html` と `municipality-official-nav.js` が8カテゴリ・21市町村を共通処理します。URLの `category` と `municipality` は定義済み値との完全一致で検証し、未選択時に複数自治体を混在させません。通常表示は high / medium confidence の新しい情報を最大5件とし、残りは利用者が展開できます。low confidenceと過去災害は通常表示しません。
