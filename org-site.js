@@ -22,12 +22,12 @@
     const description=document.querySelector('meta[name="description"]');
     if(description)description.content='一般社団法人よか隊ネット熊本は、2016年熊本地震をきっかけに活動を開始した災害支援・地域支援団体です。令和8年熊本地震の生活再建情報、支援情報、防災・地域づくりに関する情報を提供しています。';
   }
-  const seoTitles={'index.html':'ホーム','disaster.html':'令和8年熊本地震 支援情報','affected.html':'困りごとから探す','guide.html':'制度・生活支援','shelters.html':'開設中の避難所','municipalities.html':'自治体別情報','municipality-updates.html':'市町村からの公式発信','official.html':'国・県の公的情報','reconstruction.html':'生活再建','supporters.html':'支援する方へ','support.html':'支援分野別','volunteer-centers.html':'災害ボランティアセンター','timeline.html':'日々の記録','meetings.html':'火の国会議 議事録','terms.html':'災害用語集','about.html':'私たちについて','join.html':'支援・協力','contact.html':'お問い合わせ','privacy.html':'プライバシーポリシー','accessibility.html':'アクセシビリティ方針','404.html':'ページが見つかりません','uto-waste.html':'宇土市 災害ごみ持ち込み案内'};
+  const seoTitles={'index.html':'ホーム','disaster.html':'令和8年熊本地震 支援情報','affected.html':'困りごとから探す','guide.html':'制度・生活支援','shelters.html':'開設中の避難所','municipalities.html':'自治体別情報','municipality-updates.html':'市町村からの公式発信','official.html':'国・県の公的情報','reconstruction.html':'生活再建','supporters.html':'支援する方へ','support.html':'支援分野別','volunteer-centers.html':'災害ボランティアセンター','timeline.html':'日々の記録','meetings.html':'火の国会議 議事録','terms.html':'災害用語集','about.html':'私たちについて','join.html':'支援・協力','contact.html':'お問い合わせ','privacy.html':'プライバシーポリシー','accessibility.html':'アクセシビリティ方針','404.html':'ページが見つかりません','uto-waste.html':'宇土市 災害ごみ持ち込み案内','uto-housing.html':'宇土市 住まいの相談・再建支援'};
   const canonical=path==='index.html'?'https://www.yokatainet.jp/':`https://www.yokatainet.jp/${path}`;
   const graph=[{'@type':'Organization','@id':'https://www.yokatainet.jp/#organization',name:'一般社団法人よか隊ネット熊本',url:'https://www.yokatainet.jp/',logo:'https://www.yokatainet.jp/yokatai-logo.png',address:{'@type':'PostalAddress',postalCode:'869-0404',addressRegion:'熊本県',addressLocality:'宇土市',streetAddress:'走潟町2235'},telephone:'090-2719-4037',email:'info.yokatai@gmail.com'},{'@type':'WebSite','@id':'https://www.yokatainet.jp/#website',url:'https://www.yokatainet.jp/',name:'一般社団法人よか隊ネット熊本',publisher:{'@id':'https://www.yokatainet.jp/#organization'},inLanguage:'ja'}];
   if(path!=='index.html')graph.push({'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'ホーム',item:'https://www.yokatainet.jp/'},{'@type':'ListItem',position:2,name:seoTitles[path]||document.title.split('｜')[0],item:canonical}]});
   const structured=document.createElement('script');structured.type='application/ld+json';structured.textContent=JSON.stringify({'@context':'https://schema.org','@graph':graph});document.head.append(structured);
-  const supportPages=['disaster.html','affected.html','guide.html','shelters.html','terms.html','municipalities.html','municipality-updates.html','official.html','uto-waste.html','support.html','supporters.html','volunteer-centers.html'];
+  const supportPages=['disaster.html','affected.html','guide.html','shelters.html','terms.html','municipalities.html','municipality-updates.html','official.html','uto-waste.html','uto-housing.html','support.html','supporters.html','volunteer-centers.html'];
   const activityPages=['timeline.html','meetings.html'];
   const organizationPages=['about.html','join.html','contact.html','privacy.html','accessibility.html'];
   const noMotionPages=['shelters.html','municipality-updates.html','timeline.html','meetings.html','privacy.html','accessibility.html','404.html','uto-waste.html'];
@@ -51,7 +51,7 @@
   }
   if(path!=='index.html'){
     const supportParent=supportPages.includes(path)||path==='reconstruction.html';
-    const detailParent=path==='uto-waste.html';
+    const detailParent=['uto-waste.html','uto-housing.html'].includes(path);
     const crumbs=[['index.html','ホーム']];
     if(supportParent&&path!=='disaster.html')crumbs.push(['disaster.html','令和8年熊本地震']);
     if(detailParent)crumbs.push(['municipalities.html','自治体別情報']);
