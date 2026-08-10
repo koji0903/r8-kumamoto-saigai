@@ -1,0 +1,13 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const yaml=fs.readFileSync(".github/workflows/refresh-official-data.yml","utf8");
+const index=label=>{const value=yaml.indexOf(label);assert.ok(value>=0,`${label} が必要`);return value};
+assert.ok(index("市町村公式発信を更新")<index("データ整合性を検査"));
+assert.ok(index("データ整合性を検査")<index("暮らしの再建・自治体公式情報ナビを生成"));
+assert.ok(index("暮らしの再建・自治体公式情報ナビを生成")<index("自治体公式情報ナビを検証・集計"));
+assert.ok(index("自治体公式情報ナビを検証・集計")<index("確認済みデータを反映"));
+for(const text of ["workflow_dispatch:","dry_run:","concurrency:","cancel-in-progress: false","timeout-minutes: 30","contents: write","run-municipality-official-nav-pipeline.mjs","validate-municipality-official-nav.mjs","test-refresh-official-workflow.mjs","public-data/reconstruction/municipality-official-navigation.json","reports/municipality-official-navigation-quality.json","git diff --check","git diff --cached --quiet"])assert.ok(yaml.includes(text),`${text} が必要`);
+assert.equal(/push[^\n]*--force|push[^\n]*-f\b/.test(yaml),false,"force push禁止");
+assert.ok(yaml.includes("inputs.dry_run != true"),"dry-runではcommitしない");
+assert.ok(yaml.includes("git push origin HEAD:main")&&!yaml.includes("git push --force"),"通常pushのみ");
+console.log("refresh Workflowの順序・dry-run・fail-safe・commit対象・権限を確認しました");

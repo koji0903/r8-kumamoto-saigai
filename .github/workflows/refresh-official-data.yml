@@ -5,6 +5,12 @@ on:
     # 3時間ごと（UTC基準）。実行時刻はGitHub側の混雑で多少前後します。
     - cron: "17 */3 * * *"
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "収集・分類・検証だけを実行し、commit/pushしない"
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -76,7 +82,26 @@ jobs:
           node --check tools/fetch-official-topics.mjs
           git diff --check
 
+      - name: 暮らしの再建・自治体公式情報ナビを生成
+        run: node scripts/run-municipality-official-nav-pipeline.mjs
+
+      - name: 自治体公式情報ナビを検証・集計
+        run: |
+          node scripts/validate-municipality-official-nav.mjs
+          node -e 'const r=require("./reports/municipality-official-navigation-quality.json"); console.log(`入力: ${r.inputCount}件 / 分類: ${r.classifiedPageCount}件 / 表示候補: ${r.displayCandidateCount}件 / 未分類: ${r.unclassifiedCount}件 / 除外: ${r.excludedCount}件 / warning: ${r.warningCount}件`); for(const [key,value] of Object.entries(r.categoryReport)) console.log(`${key}: ${value.total}件 (high ${value.high} / medium ${value.medium} / low ${value.low})`); console.log(`21市町村fallback: ${Object.values(r.municipalityReport).filter(x=>x.fallback).length}/21`); if(r.errors.length) process.exit(1);'
+          node --check scripts/run-municipality-official-nav-pipeline.mjs
+          node --check scripts/validate-municipality-official-nav.mjs
+          node scripts/test-refresh-official-workflow.mjs
+          git diff --check
+
+      - name: dry-run結果を記録
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == true }}
+        run: |
+          echo "dry-runのためcommit/pushは行いません。"
+          git status --short
+
       - name: 確認済みデータを反映
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.dry_run != true }}
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
@@ -93,11 +118,13 @@ jobs:
             sources/official/hq-damage \
             sources/official/hq-index.json \
             sources/official/municipalities/municipality-updates.json \
-            sources/official/topics/latest-topics.json
+            sources/official/topics/latest-topics.json \
+            public-data/reconstruction/municipality-official-navigation.json \
+            reports/municipality-official-navigation-quality.json
           if git diff --cached --quiet; then
             echo "反映対象の差分はありません。"
             exit 0
           fi
           checked_at="$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST')"
-          git commit -m "公式災害情報を自動更新 (${checked_at})"
+          git commit -m "公式災害情報と暮らし公式ナビを自動更新 (${checked_at})"
           git push origin HEAD:main

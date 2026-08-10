@@ -1,0 +1,12 @@
+import assert from "node:assert/strict";
+import crypto from "node:crypto";
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import { spawnSync } from "node:child_process";
+const temporary=fs.mkdtempSync(path.join(os.tmpdir(),"official-nav-pipeline-")),sourcePath=path.resolve("sources/official/municipalities/municipality-updates.json"),masterPath=path.resolve("data/reconstruction/municipalities.json"),output=path.join(temporary,"nav.json"),report=path.join(temporary,"report.json");
+const run=input=>spawnSync(process.execPath,["scripts/run-municipality-official-nav-pipeline.mjs"],{cwd:process.cwd(),encoding:"utf8",env:{...process.env,MUNICIPALITY_UPDATES_INPUT:input,MUNICIPALITY_MASTER_INPUT:masterPath,MUNICIPALITY_NAV_OUTPUT:output,MUNICIPALITY_NAV_REPORT_OUTPUT:report}}),hash=file=>crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
+let result=run(sourcePath);assert.equal(result.status,0,result.stderr);const first=[hash(output),hash(report)];result=run(sourcePath);assert.equal(result.status,0,result.stderr);assert.deepEqual([hash(output),hash(report)],first,"同一入力の生成物は同一");
+const sentinel='{"lastSuccessful":true}\n',empty=path.join(temporary,"empty.json");fs.writeFileSync(output,sentinel);fs.writeFileSync(empty,JSON.stringify({metadata:{},municipalities:[]}));result=run(empty);assert.notEqual(result.status,0,"入力0件はfailure");assert.equal(fs.readFileSync(output,"utf8"),sentinel,"failure時に公開用データを置換しない");
+const noCategory=path.join(temporary,"no-category.json"),master=JSON.parse(fs.readFileSync(masterPath,"utf8"));fs.writeFileSync(noCategory,JSON.stringify({metadata:{retrievedAt:"2026-08-11T00:00:00Z"},municipalities:[{name:master[0].name,officialUrl:master[0].officialUrl,checkedAt:"2026-08-11T00:00:00Z",updates:[{title:"定例のお知らせ",url:`${master[0].officialUrl}notice`,category:"その他"}]}]}));result=run(noCategory);assert.notEqual(result.status,0,"全カテゴリ0件はfailure");assert.equal(fs.readFileSync(output,"utf8"),sentinel,"分類failureでも公開用データを保持");
+console.log("パイプラインの通常生成・no-change・入力0件・全分類0件・build-then-replaceを確認しました");

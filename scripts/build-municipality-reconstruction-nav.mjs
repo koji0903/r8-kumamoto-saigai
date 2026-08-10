@@ -47,7 +47,8 @@ export function build(source, master) {
   }).filter(Boolean);
   for(const meta of master) if(!municipalities.some(x=>x.municipalityId===meta.id)){issues.push({type:"missing_municipality",municipality:meta.name});municipalities.push({municipalityId:meta.id,municipalityName:meta.name,officialUrl:meta.officialUrl,status:"not_collected",checkedAt:null,retrievalIssues:[],updates:[]});}
   const unclassifiedCount=(source.municipalities||[]).reduce((n,m)=>n+(m.updates||[]).length,0)-municipalities.reduce((n,m)=>n+m.updates.length,0);
-  return {schemaVersion:"1.1.0",generatedAt:new Date().toISOString(),source:{type:"existing_municipality_collector",path:"sources/official/municipalities/municipality-updates.json",retrievedAt:source.metadata?.retrievedAt||null},categories,categoryReport:confidenceStats(municipalities),municipalities,validation:{municipalityCount:municipalities.length,classifiedPageCount:municipalities.reduce((n,m)=>n+m.updates.length,0),unclassifiedCount,issues}};
+  const generatedAt=source.metadata?.retrievedAt||[...(source.municipalities||[])].map(m=>m.checkedAt).filter(Boolean).sort().at(-1)||new Date().toISOString();
+  return {schemaVersion:"1.1.0",generatedAt,source:{type:"existing_municipality_collector",path:"sources/official/municipalities/municipality-updates.json",retrievedAt:source.metadata?.retrievedAt||null},categories,categoryReport:confidenceStats(municipalities),municipalities,validation:{municipalityCount:municipalities.length,classifiedPageCount:municipalities.reduce((n,m)=>n+m.updates.length,0),unclassifiedCount,issues}};
 }
 if (process.argv[1]===fileURLToPath(import.meta.url)) {
   const result=build(JSON.parse(fs.readFileSync(input,"utf8")),JSON.parse(fs.readFileSync(masterPath,"utf8")));
