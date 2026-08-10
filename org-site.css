@@ -286,3 +286,8 @@
 /* Replace abstract one-character join marks with action-specific pictograms. */
 .illustrated-site.page-join .join-card-mark b{font-size:0}
 .illustrated-site.page-join .join-card-mark b svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* Keep every history card's closing message aligned to the bottom edge. */
+.illustrated-site.page-about .about-history .activity-card{display:flex;flex-direction:column;height:100%}
+.illustrated-site.page-about .about-history .activity-card>.message{width:calc(100% + 48px);min-height:66px;margin:auto -24px -28px!important;padding:19px 24px;display:flex;align-items:center;box-sizing:border-box}
+@media(max-width:800px){.illustrated-site.page-about .about-history .activity-card>.message{width:calc(100% + 48px);margin-top:24px!important}}
