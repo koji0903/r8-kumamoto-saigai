@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-08-11T04:43:17.176Z",
+  "generatedAt": "2026-08-11T07:41:32.933Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 410,
-  "displayCandidateCount": 223,
-  "classifiedPageCount": 278,
+  "inputCount": 411,
+  "displayCandidateCount": 224,
+  "classifiedPageCount": 279,
   "categoryReport": {
     "home": {
-      "total": 66,
+      "total": 67,
       "high": 31,
-      "medium": 10,
+      "medium": 11,
       "low": 25
     },
     "money": {
-      "total": 69,
-      "high": 8,
+      "total": 70,
+      "high": 9,
       "medium": 17,
       "low": 44
     },
@@ -49,10 +49,10 @@
       "low": 0
     },
     "daily_life": {
-      "total": 90,
+      "total": 88,
       "high": 29,
-      "medium": 60,
-      "low": 1
+      "medium": 59,
+      "low": 0
     }
   },
   "municipalityReport": {
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 37,
-      "displayCandidates": 30,
+      "classified": 35,
+      "displayCandidates": 29,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -147,8 +147,8 @@
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 4,
-      "displayCandidates": 3,
+      "classified": 7,
+      "displayCandidates": 5,
       "fallback": true
     },
     "municipality_ashikita": {
@@ -163,7 +163,7 @@
     }
   },
   "confidence": {
-    "high": 111,
+    "high": 112,
     "medium": 112,
     "low": 55
   },
@@ -411,12 +411,12 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年08月11日 令和8年熊本地震（7月28日発生）に関する情報（8月11日13時00分更新）",
+      "title": "2026年08月11日 令和8年熊本地震（7月28日発生）に関する情報（8月11日14時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年8月11日 令和8年熊本地震（7月28日発生）に関する情報（8月11日13時00分更新）",
+      "title": "2026年8月11日 令和8年熊本地震（7月28日発生）に関する情報（8月11日14時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2606699"
     },
     {
@@ -591,7 +591,7 @@
     },
     {
       "municipalityName": "氷川町",
-      "title": "藤本町長から町民へのメッセージ",
+      "title": "藤本町長から町民のみなさまへのメッセージ",
       "url": "https://www.town.hikawa.kumamoto.jp/kinkyu.html#kid30"
     },
     {
@@ -675,9 +675,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 1
+      "count": 2
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 276
+  "previousClassifiedPageCount": 278
 }
