@@ -1,8 +1,10 @@
 (() => {
   "use strict";
   const labels={home:"住まい",money:"お金・支払い",documents:"証明・申請",health_care:"健康・介護",family_education:"子ども・家族",work_business:"仕事・事業",agriculture_fishery:"農業・漁業",daily_life:"暮らし・移動"};
+  const municipalityIds=new Set(["municipality_kumamoto","municipality_yatsushiro","municipality_minamata","municipality_yamaga","municipality_kikuchi","municipality_uto","municipality_kamiamakusa","municipality_uki","municipality_amakusa","municipality_koshi","municipality_misato","municipality_ozu","municipality_kikuyo","municipality_nishihara","municipality_mifune","municipality_kashima","municipality_mashiki","municipality_kosa","municipality_hikawa","municipality_ashikita","municipality_tsunagi"]);
   const params=new URLSearchParams(location.search);
-  const municipality=params.get("municipality")||"";
+  const requestedMunicipality=params.get("municipality")||"";
+  const municipality=municipalityIds.has(requestedMunicipality)?requestedMunicipality:"";
   const href=category=>`reconstruction-official.html?category=${category}${municipality?`&municipality=${encodeURIComponent(municipality)}`:""}`;
   fetch("config/reconstruction-category-relations.json",{credentials:"same-origin"}).then(response=>{if(!response.ok)throw Error();return response.json()}).then(config=>{
     document.querySelectorAll("[data-category-relations]").forEach(root=>{

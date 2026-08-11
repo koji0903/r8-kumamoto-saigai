@@ -14,6 +14,8 @@ assert.doesNotMatch(fs.readFileSync("reconstruction-money.js","utf8"),/uto-housi
 const navCode=fs.readFileSync("municipality-official-nav.js","utf8");
 assert.match(navCode,/category==="home"&&municipality\.municipalityId==="municipality_uto"/);
 assert.match(navCode,/公式情報一覧を読み込めませんでした/);
+const relationCode=fs.readFileSync("reconstruction-category-relations.js","utf8");
+assert.match(relationCode,/municipalityIds\.has\(requestedMunicipality\)/,"関連カテゴリが不正な自治体パラメータを引き継がない");
 const money=JSON.parse(fs.readFileSync("public-data/reconstruction/money.json","utf8"));
 assert.equal(money.programs.length,0,"未承認制度カードは0件のまま公開する");
 const publicFiles=fs.readdirSync("public-data/reconstruction");
