@@ -41,6 +41,7 @@ jobs:
           node scripts/test-reconstruction-agriculture-fishery.mjs
           node --check reconstruction-agriculture-fishery.js
           node scripts/test-reconstruction-integrated-qa.mjs
+          node scripts/test-reconstruction-production-entry.mjs
           node --check app.js
           node --check tools/fetch-hq.mjs
           node --check tools/fetch-municipality-updates.mjs

@@ -11,8 +11,11 @@
     daily:{label:"暮らし・移動",prompt:"車・移動・日常生活で困っている",title:"移動や日常生活で困っていますか？",lead:"車、交通、ごみ、水道、日用品など、毎日の暮らしへの影響を整理します。",checks:["移動する手段を確保できているか","水道やごみなど自治体情報を確認したか","必要な日用品が不足していないか"],links:[{label:"自治体別情報を見る",href:"municipalities.html"},{label:"市町村の公式発信を見る",href:"municipality-updates.html"}]}
   };
   const topicCategories={housing:"home",money:"money",paperwork:"documents",health:"health_care",family:"family_education",work:"work_business",primary:"agriculture_fishery",daily:"daily_life"};
-  const currentMunicipality=(()=>{const value=new URLSearchParams(location.search).get("municipality");return /^(municipality_)?[a-z]+$/.test(value||"")?value:""})();
+  const municipalitySlugs=new Set(["kumamoto","yatsushiro","minamata","yamaga","kikuchi","uto","kamiamakusa","uki","amakusa","koshi","misato","ozu","kikuyo","nishihara","mifune","kashima","mashiki","kosa","hikawa","ashikita","tsunagi"]);
+  const municipalityNames={kumamoto:"熊本市",yatsushiro:"八代市",minamata:"水俣市",yamaga:"山鹿市",kikuchi:"菊池市",uto:"宇土市",kamiamakusa:"上天草市",uki:"宇城市",amakusa:"天草市",koshi:"合志市",misato:"美里町",ozu:"大津町",kikuyo:"菊陽町",nishihara:"西原村",mifune:"御船町",kashima:"嘉島町",mashiki:"益城町",kosa:"甲佐町",hikawa:"氷川町",ashikita:"芦北町",tsunagi:"津奈木町"};
+  const currentMunicipality=(()=>{const raw=new URLSearchParams(location.search).get("municipality")||"";const slug=raw.replace(/^municipality_/,"");return municipalitySlugs.has(slug)?`municipality_${slug}`:""})();
   const officialNavHref=id=>`reconstruction-official.html?category=${topicCategories[id]}${currentMunicipality?`&municipality=${currentMunicipality}`:""}`;
+  const withMunicipality=href=>{if(!currentMunicipality||!/^reconstruction-[a-z-]+\.html$/.test(href))return href;return `${href}?municipality=${currentMunicipality}`};
   const detail = document.querySelector("#topic-detail");
   const detailTitle = document.querySelector("#topic-detail-title");
   const detailBody = document.querySelector("#topic-detail-body");
@@ -20,9 +23,10 @@
   const organizerOptions = document.querySelector("#organizer-options");
   const organizerResult = document.querySelector("#organizer-result");
   const consultation = document.querySelector("#consultation");
+  if(currentMunicipality){const slug=currentMunicipality.replace("municipality_","");document.querySelector(".rebuild-provider")?.insertAdjacentHTML("afterend",`<p class="rebuild-municipality-context"><b>${municipalityNames[slug]}</b>を選択中です。カテゴリへ進んでもこの自治体を引き継ぎます。 <a href="municipalities.html?name=${encodeURIComponent(municipalityNames[slug])}">自治体別ページへ戻る</a></p>`)}
   const focusSection = section => { section.hidden=false; section.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"}); section.focus({preventScroll:true}); };
   const publicReferenceLinks = '<div class="detail-links"><a href="municipalities.html">市町村の公的窓口を探す <span aria-hidden="true">→</span></a><a href="official.html">国・熊本県の公的情報を見る <span aria-hidden="true">→</span></a></div>';
-  const detailMarkup = (topic,id) => `<p class="detail-lead">${topic.lead}</p><h3>まず確認すること</h3><ul class="detail-checks">${topic.checks.map(item=>`<li>${item}</li>`).join("")}</ul><div class="detail-links"><a href="${officialNavHref(id)}">${topic.label}の自治体公式情報を見る <span aria-hidden="true">→</span></a>${topic.links.map(link=>`<a href="${link.href}">${link.label} <span aria-hidden="true">→</span></a>`).join("")}</div>`;
+  const detailMarkup = (topic,id) => {const links=id==="housing"&&currentMunicipality!=="municipality_uto"?topic.links.filter(link=>link.href!=="uto-housing.html"):topic.links;return `<p class="detail-lead">${topic.lead}</p><h3>まず確認すること</h3><ul class="detail-checks">${topic.checks.map(item=>`<li>${item}</li>`).join("")}</ul><div class="detail-links"><a href="${officialNavHref(id)}">${topic.label}の自治体公式情報を見る <span aria-hidden="true">→</span></a>${links.map(link=>`<a href="${withMunicipality(link.href)}">${link.label} <span aria-hidden="true">→</span></a>`).join("")}</div>`};
   const openTopic = id => { const topic=topics[id]; if(!topic)return; organizer.hidden=true; detailTitle.textContent=topic.title; detailBody.innerHTML=detailMarkup(topic,id); focusSection(detail); };
   document.querySelectorAll("[data-topic]").forEach(button=>button.addEventListener("click",()=>openTopic(button.dataset.topic)));
   const resetOrganizer = () => { document.querySelectorAll('#organizer input[name="topics"]').forEach(input=>{input.checked=false}); organizerResult.hidden=true; organizerResult.innerHTML=""; };
