@@ -1,0 +1,12 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const html=fs.readFileSync("reconstruction-work-business.html","utf8"),css=fs.readFileSync("reconstruction-work-business.css","utf8")+fs.readFileSync("reconstruction-health-care.css","utf8"),js=fs.readFileSync("reconstruction-work-business.js","utf8"),data=JSON.parse(fs.readFileSync("public-data/reconstruction/municipality-official-navigation.json","utf8"));
+for(const text of ["仕事を休んでいる・収入が減った","職場や勤務先のことで困っている","仕事を探したい・働き方を相談したい","店・会社・事業所が被災した","事業を再開したい・資金繰りが心配","何に当てはまるか分からない","自治体・公的機関の公式情報","熊本県・国・公的機関の情報","農業・漁業の専用情報","暮らし全体の困りごとを整理する","相談を受けている方へ"])assert.ok(html.includes(text),`${text} が必要`);
+for(const text of ["<noscript>","data-municipality-select","aria-live=","aria-pressed=","type=\"button\""])assert.ok(html.includes(text),`${text} が必要`);
+for(const forbidden of ["localStorage","sessionStorage","document.cookie","gtag(","dataLayer.push","fetch(","<input"])assert.ok(!js.includes(forbidden)&&!html.includes(forbidden),`${forbidden} で事業情報を取得・保存・送信しない`);
+assert.ok(css.includes("@media print")&&css.includes("max-width:560px")&&css.includes(":focus-visible"),"print・mobile・focus CSS");
+const updates=data.municipalities.flatMap(m=>m.updates.map(u=>({...u,municipalityId:m.municipalityId}))),work=updates.filter(u=>u.categories.includes("work_business")&&u.classification.some(c=>c.category==="work_business"&&c.confidence!=="low"));
+assert.ok(work.length,"work_business公式情報あり");assert.ok(work.some(u=>/雇用|休業|賃金|労働|就労/.test(u.officialTitle)),"雇用情報あり");assert.ok(work.some(u=>/店舗|会社|事業所|営業|事業/.test(u.officialTitle)),"事業者情報あり");assert.ok(work.some(u=>/融資|保証|補助|助成|資金|経営/.test(u.officialTitle)),"資金繰り情報あり");
+assert.ok(data.municipalities.some(m=>!m.updates.some(u=>u.categories.includes("work_business")&&u.classification.some(c=>c.category==="work_business"&&c.confidence!=="low"))),"0件fallback対象あり");
+assert.ok(html.includes("公式リンクがあることと、制度条件まで検証済みであることは別"),"公式情報と確認済み制度を分離");assert.ok(html.includes("勤務先、会社名、売上、所得、借入、従業員数、被害額"),"個人・事業情報を取得しない");
+console.log(`仕事・事業ページの公式情報${work.length}件・雇用・事業者・資金繰り・fallback・事業情報非保存を確認しました`);

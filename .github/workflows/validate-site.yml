@@ -36,6 +36,8 @@ jobs:
           node --check reconstruction-health-care.js
           node scripts/test-reconstruction-family.mjs
           node --check reconstruction-family.js
+          node scripts/test-reconstruction-work-business.mjs
+          node --check reconstruction-work-business.js
           node --check app.js
           node --check tools/fetch-hq.mjs
           node --check tools/fetch-municipality-updates.mjs
