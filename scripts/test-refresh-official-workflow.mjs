@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 const yaml=fs.readFileSync(".github/workflows/refresh-official-data.yml","utf8");
+const validateYaml=fs.readFileSync(".github/workflows/validate-site.yml","utf8");
 const index=label=>{const value=yaml.indexOf(label);assert.ok(value>=0,`${label} が必要`);return value};
 assert.ok(index("市町村公式発信を更新")<index("データ整合性を検査"));
 assert.ok(index("開設中避難所を更新")<index("データ整合性を検査"));
@@ -8,6 +9,8 @@ assert.ok(index("データ整合性を検査")<index("暮らしの再建・自�
 assert.ok(index("暮らしの再建・自治体公式情報ナビを生成")<index("自治体公式情報ナビを検証・集計"));
 assert.ok(index("自治体公式情報ナビを検証・集計")<index("確認済みデータを反映"));
 for(const text of ["workflow_dispatch:","dry_run:","concurrency:","cancel-in-progress: false","timeout-minutes: 30","contents: write","run-municipality-official-nav-pipeline.mjs","validate-municipality-official-nav.mjs","test-refresh-official-workflow.mjs","public-data/reconstruction/municipality-official-navigation.json","reports/municipality-official-navigation-quality.json","git diff --check","git diff --cached --quiet","git fetch origin main","git rebase origin/main","for attempt in 1 2 3"])assert.ok(yaml.includes(text),`${text} が必要`);
+assert.match(yaml,/fetch-depth:\s*0/,"定期更新はSEO lastmod生成のため全履歴を取得する");
+assert.match(validateYaml,/fetch-depth:\s*0/,"整合性チェックはSEO lastmod検査のため全履歴を取得する");
 for(const text of ['cron: "17 */3 * * *"','portal.bousai.pref.kumamoto.jp/data/shelter/shelter.json','curl --fail --silent --show-error --location','tools/build-shelters.mjs','--retrieved-at=','data/generated/shelters-data.js','for attempt in 1 2 3','JSON.parse','Array.isArray(raw.items)','items.length===0','既存の検証済み避難所データを保持','::warning::'])assert.ok(yaml.includes(text),`避難所自動更新に ${text} が必要`);
 assert.ok(yaml.indexOf('JSON.parse')<yaml.indexOf('tools/build-shelters.mjs'),"避難所JSONは生成前に検証する");
 assert.equal(/push[^\n]*--force|push[^\n]*-f\b/.test(yaml),false,"force push禁止");

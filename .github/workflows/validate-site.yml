@@ -21,6 +21,10 @@ jobs:
     steps:
       - name: リポジトリを取得
         uses: actions/checkout@v5
+        with:
+          # sitemap.xml の lastmod は各HTMLの最終コミット日から生成する。
+          # shallow cloneではHTML以外だけを更新したcommitで履歴を取得できない。
+          fetch-depth: 0
 
       - name: Node.jsを準備
         uses: actions/setup-node@v5
