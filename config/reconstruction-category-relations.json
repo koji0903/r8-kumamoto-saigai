@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "categories": {
+    "home": [
+      {"category":"money","prompt":"修理費や生活費も気になりますか？"},
+      {"category":"documents","prompt":"罹災証明や必要書類を確認しますか？"},
+      {"category":"daily_life","prompt":"仮の住まい、車、移動も気になりますか？"}
+    ],
+    "money": [
+      {"category":"work_business","prompt":"収入減や休業、事業への影響もありますか？"},
+      {"category":"home","prompt":"修理費や住宅ローンも気になりますか？"},
+      {"category":"documents","prompt":"給付・減免の申請書類を確認しますか？"}
+    ],
+    "documents": [
+      {"category":"home","prompt":"住宅の修理や仮の住まいも確認しますか？"},
+      {"category":"money","prompt":"生活費、給付、減免も気になりますか？"},
+      {"category":"work_business","prompt":"仕事や事業の申請も確認しますか？"},
+      {"category":"agriculture_fishery","prompt":"農業・漁業の被害申請も確認しますか？"}
+    ],
+    "health_care": [
+      {"category":"daily_life","prompt":"通院や介護の移動も気になりますか？"},
+      {"category":"money","prompt":"医療費、保険料、生活費も気になりますか？"},
+      {"category":"family_education","prompt":"子どもや家族の健康も気になりますか？"}
+    ],
+    "family_education": [
+      {"category":"money","prompt":"生活費や子育て世帯向け情報も確認しますか？"},
+      {"category":"health_care","prompt":"子ども、妊産婦、こころの健康も気になりますか？"},
+      {"category":"daily_life","prompt":"通学、送迎、保育への移動も気になりますか？"},
+      {"category":"documents","prompt":"学校・保育・給付の手続きも確認しますか？"}
+    ],
+    "work_business": [
+      {"category":"money","prompt":"収入減や資金繰りも気になりますか？"},
+      {"category":"documents","prompt":"申請や必要書類も確認しますか？"},
+      {"category":"home","prompt":"自宅の被害もありますか？"},
+      {"category":"agriculture_fishery","prompt":"農業・漁業の事業情報も確認しますか？"}
+    ],
+    "agriculture_fishery": [
+      {"category":"work_business","prompt":"経営、雇用、事業再開も気になりますか？"},
+      {"category":"money","prompt":"資金繰り、融資、生活費も気になりますか？"},
+      {"category":"daily_life","prompt":"道路、農業用水、漁港への移動も確認しますか？"},
+      {"category":"documents","prompt":"被害報告や申請書類も確認しますか？"}
+    ],
+    "daily_life": [
+      {"category":"health_care","prompt":"通院、介護、福祉的な移動も気になりますか？"},
+      {"category":"family_education","prompt":"通学、送迎、保育への影響もありますか？"},
+      {"category":"home","prompt":"今の家での生活や仮の住まいも気になりますか？"}
+    ]
+  }
+}

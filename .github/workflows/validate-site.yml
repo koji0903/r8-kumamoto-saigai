@@ -44,6 +44,7 @@ jobs:
           node scripts/test-reconstruction-production-entry.mjs
           node scripts/build-site-phase.mjs --check
           node scripts/test-reconstruction-operations.mjs
+          node scripts/test-reconstruction-case-management.mjs
           node --check scripts/build-reconstruction-operations-status.mjs
           node --check app.js
           node --check tools/fetch-hq.mjs
