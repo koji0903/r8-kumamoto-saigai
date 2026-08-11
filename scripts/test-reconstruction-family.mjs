@@ -1,0 +1,13 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const html=fs.readFileSync("reconstruction-family.html","utf8"),css=fs.readFileSync("reconstruction-family.css","utf8")+fs.readFileSync("reconstruction-health-care.css","utf8"),js=fs.readFileSync("reconstruction-family.js","utf8"),data=JSON.parse(fs.readFileSync("public-data/reconstruction/municipality-official-navigation.json","utf8"));
+for(const text of ["学校・登校のことを確認したい","保育園・こども園などを確認したい","学用品や子どもの生活で困っている","子育て・家族の支援を確認したい","妊娠中・乳幼児のことで確認したい","どこへ相談すればよいか分からない","自治体・公的機関の公式情報","NPO・民間団体等による支援","暮らし全体の困りごとを整理する","相談を受けている方へ"])assert.ok(html.includes(text),`${text} が必要`);
+for(const text of ["<noscript>","data-municipality-select","aria-live=","aria-pressed=","type=\"button\""])assert.ok(html.includes(text),`${text} が必要`);
+for(const forbidden of ["localStorage","sessionStorage","document.cookie","gtag(","dataLayer.push","fetch(","<input"])assert.ok(!js.includes(forbidden)&&!html.includes(forbidden),`${forbidden} で家族情報を取得・保存・送信しない`);
+assert.ok(css.includes("@media print")&&css.includes("max-width:560px")&&css.includes(":focus-visible"),"print・mobile・focus CSS");
+const updates=data.municipalities.flatMap(m=>m.updates.map(u=>({...u,municipalityId:m.municipalityId}))),family=updates.filter(u=>u.categories.includes("family_education")&&u.classification.some(c=>c.category==="family_education"&&c.confidence!=="low"));
+assert.ok(family.length,"family_education公式情報あり");assert.ok(family.some(u=>/学校|登校|休校|授業|就学|教育/.test(u.officialTitle)),"学校情報あり");assert.ok(family.some(u=>/保育|こども園|幼稚園|学童|児童クラブ/.test(u.officialTitle)),"保育情報あり");assert.ok(family.some(u=>/子育て|家族|児童|福祉/.test(u.officialTitle)),"子育て情報あり");
+assert.ok(data.municipalities.some(m=>!m.updates.some(u=>u.categories.includes("family_education")&&u.classification.some(c=>c.category==="family_education"&&c.confidence!=="low"))),"0件fallback対象あり");
+assert.ok(html.includes("未確認の制度、施設の開所状況、窓口、電話番号は掲載していません"),"未確認情報を表示しない");
+assert.ok(html.includes("家族の情報や選択内容は保存・送信しません")&&html.includes("氏名、学校名、学年、年齢、住所"),"個人情報・機微情報を取得しない");
+console.log(`子ども・家族ページの公式情報${family.length}件・学校・保育・子育て・fallback・個人情報非取得を確認しました`);
