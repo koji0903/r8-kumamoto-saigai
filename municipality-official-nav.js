@@ -1,14 +1,14 @@
 (() => {
   "use strict";
   if (!document.querySelector('link[href^="reconstruction-action-nav.css"]')) {
-    const stylesheet=document.createElement("link");stylesheet.rel="stylesheet";stylesheet.href="reconstruction-action-nav.css?v=20260812-1";document.head.append(stylesheet);
+    const stylesheet=document.createElement("link");stylesheet.rel="stylesheet";stylesheet.href="reconstruction-action-nav.css?v=20260812-2";document.head.append(stylesheet);
   }
   document.querySelectorAll("[data-municipality-official-nav]").forEach(nav=>{
     if(nav.previousElementSibling?.matches("[data-reconstruction-action-nav]"))return;
     const actionRoot=document.createElement("section");actionRoot.className="action-nav";actionRoot.dataset.reconstructionActionNav="";actionRoot.dataset.actionCategory=nav.dataset.category||new URLSearchParams(location.search).get("category")||"home";actionRoot.setAttribute("aria-label","次に確認すること");nav.before(actionRoot);
   });
   if (!document.querySelector('script[src^="reconstruction-action-nav.js"]')) {
-    const script=document.createElement("script");script.src="reconstruction-action-nav.js?v=20260812-1";script.defer=true;document.head.append(script);
+    const script=document.createElement("script");script.src="reconstruction-action-nav.js?v=20260812-2";script.defer=true;document.head.append(script);
   }
   const labels={home:"住まい",money:"お金・支払い",documents:"証明・申請",health_care:"健康・介護",family_education:"子ども・家族",work_business:"仕事・事業",agriculture_fishery:"農業・漁業",daily_life:"暮らし・移動"};
   const validCategories=Object.keys(labels); const params=new URLSearchParams(location.search); const generalConsultation=params.get("view")==="general_consultation";

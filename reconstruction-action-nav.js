@@ -1,5 +1,8 @@
 (() => {
   "use strict";
+  if (!document.querySelector('link[href^="reconstruction-consultation-memo.css"]')) { const stylesheet=document.createElement("link");stylesheet.rel="stylesheet";stylesheet.href="reconstruction-consultation-memo.css?v=20260812-1";document.head.append(stylesheet); }
+  if (!document.querySelector('link[href^="reconstruction-consultation-memo-controls.css"]')) { const controls=document.createElement("link");controls.rel="stylesheet";controls.href="reconstruction-consultation-memo-controls.css?v=20260812-1";document.head.append(controls); }
+  if (!document.querySelector('script[src^="reconstruction-consultation-memo.js"]')) { const script=document.createElement("script");script.src="reconstruction-consultation-memo.js?v=20260812-1";script.defer=true;document.head.append(script); }
   const validCategories = new Set(["home","money","documents","health_care","family_education","work_business","agriculture_fishery","daily_life"]);
   const highRiskTypes = new Set(["check_before_contract","deadline","photograph","medical","safety","demolition","repair"]);
   const clean = value => String(value ?? "").replace(/[&<>"']/g, character => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[character]);
@@ -20,16 +23,21 @@
     return {config:await configResponse.json(),programs:programsResponse.ok?await programsResponse.json():[]};
   }
   let dataPromise;
+  const openMemo=options=>{if(window.ReconstructionConsultationMemo)return window.ReconstructionConsultationMemo.open(options);document.addEventListener("consultation-memo:ready",()=>window.ReconstructionConsultationMemo?.open(options),{once:true})};
+  async function getActions(category, municipalityId) {
+    if (!validCategories.has(category)) return [];
+    const {config,programs}=await (dataPromise ||= loadData());const general=config.categories?.[category];
+    return general?[{kind:"general_navigation",...general},...safeProgramSteps(programs,category,normalizedMunicipality(municipalityId))].slice(0,3):[];
+  }
   async function render(root, options = {}) {
     if (!root) return;
     const category = validCategories.has(options.category) ? options.category : validCategories.has(root.dataset.actionCategory) ? root.dataset.actionCategory : validCategories.has(params().get("category")) ? params().get("category") : "home";
     const municipalityId = normalizedMunicipality(options.municipalityId || params().get("municipality"));
     try {
-      const {config,programs} = await (dataPromise ||= loadData());
-      const general = config.categories?.[category];
-      const actions = general ? [{kind:"general_navigation",...general},...safeProgramSteps(programs,category,municipalityId)].slice(0,3) : [];
+      const actions=await getActions(category,municipalityId);const general=actions[0];
       root.dataset.renderedCategory = category;
-      root.innerHTML = `<div class="action-nav__heading"><p>次に確認すること</p><h2>${clean(general?.label || "この分野")}の次の一歩を整理する</h2><p>制度の対象判定や優先順位ではありません。本人と一緒に、公式情報を確認するための案内です。</p></div>${actions.length ? `<ol class="action-nav__list">${actions.map((action,index)=>card(action,index,category,municipalityId)).join("")}</ol>` : `<div class="action-nav__empty"><p>この分野の詳しい手順は、自治体等の公式情報をご確認ください。</p><a href="${clean(officialHref(category,municipalityId))}">公式情報ナビへ進む →</a></div>`}${!municipalityId ? '<p class="action-nav__municipality-note">お住まいの市町村を選ぶと、申請方法などの公式情報を確認できます。</p>' : ""}<a class="action-nav__organizer" href="reconstruction.html#organizer">ほかの困りごとも整理する →</a>`;
+      root.innerHTML = `<div class="action-nav__heading"><p>次に確認すること</p><h2>${clean(general?.label || "この分野")}の次の一歩を整理する</h2><p>制度の対象判定や優先順位ではありません。本人と一緒に、公式情報を確認するための案内です。</p></div>${actions.length ? `<ol class="action-nav__list">${actions.map((action,index)=>card(action,index,category,municipalityId)).join("")}</ol>` : `<div class="action-nav__empty"><p>この分野の詳しい手順は、自治体等の公式情報をご確認ください。</p><a href="${clean(officialHref(category,municipalityId))}">公式情報ナビへ進む →</a></div>`}${!municipalityId ? '<p class="action-nav__municipality-note">お住まいの市町村を選ぶと、申請方法などの公式情報を確認できます。</p>' : ""}<div class="action-nav__tools"><button type="button" data-action-memo>相談メモを見る</button><a class="action-nav__organizer" href="reconstruction.html#organizer">ほかの困りごとも整理する →</a></div>`;
+      root.querySelector("[data-action-memo]")?.addEventListener("click",()=>openMemo({categories:[category],municipalityId}));
     } catch {
       root.innerHTML = `<div class="action-nav__empty"><h2>次に確認すること</h2><p>この分野の詳しい手順は、自治体等の公式情報をご確認ください。</p><a href="${clean(officialHref(category,municipalityId))}">公式情報ナビへ進む →</a></div>`;
     }
@@ -43,5 +51,6 @@
     const root=nav.previousElementSibling?.matches("[data-reconstruction-action-nav]")?nav.previousElementSibling:null;
     if(root)render(root,{category:event.detail?.category || root.dataset.actionCategory,municipalityId:event.detail?.municipalityId});
   }));
-  window.ReconstructionActionNav = {render,safeProgramSteps};
+  window.ReconstructionActionNav = {render,safeProgramSteps,getActions};
+  window.openReconstructionConsultationMemo=openMemo;
 })();

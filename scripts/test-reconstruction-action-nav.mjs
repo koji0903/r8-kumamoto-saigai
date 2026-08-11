@@ -9,7 +9,7 @@ const config=JSON.parse(read("config/reconstruction-action-navigation.json"));
 assert.equal(Object.keys(config.categories).length,8,"8カテゴリの一般ナビ");
 for(const [id,item] of Object.entries(config.categories)){assert.ok(item.title&&item.reason,`${id}: 行動名と理由`);assert.doesNotMatch(item.title,/申請してください|契約してください|今日中|今すぐ/)}
 
-const context={window:{},location:{search:""},URLSearchParams,fetch:async()=>({ok:false}),document:{querySelectorAll:()=>[],querySelector:()=>null,addEventListener:()=>{}},console};
+const context={window:{},location:{search:""},URLSearchParams,fetch:async()=>({ok:false}),document:{querySelectorAll:()=>[],querySelector:selector=>selector.includes("consultation-memo")?{}:null,createElement:()=>({}),head:{append(){}},addEventListener:()=>{}},console};
 vm.createContext(context);vm.runInContext(code,context);
 const filter=context.window.ReconstructionActionNav.safeProgramSteps;
 const source={title:"県公式",url:"https://example.pref.kumamoto.jp/source"};

@@ -55,6 +55,7 @@ jobs:
           node scripts/test-reconstruction-case-management.mjs
           node scripts/test-reconstruction-gap-navigation.mjs
           node scripts/test-reconstruction-action-nav.mjs
+          node scripts/test-reconstruction-consultation-memo.mjs
           node scripts/test-reconstruction-documents.mjs
           node scripts/test-reconstruction-content-ux.mjs
           node scripts/test-reconstruction-release-readiness.mjs
@@ -68,6 +69,7 @@ jobs:
           node --check reconstruction-agriculture-fishery.js
           node --check reconstruction-category-relations.js
           node --check reconstruction-action-nav.js
+          node --check reconstruction-consultation-memo.js
           node --check scripts/build-reconstruction-operations-status.mjs
           node --check app.js
           node --check tools/fetch-hq.mjs
