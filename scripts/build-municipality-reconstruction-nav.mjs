@@ -6,6 +6,8 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const input = process.env.MUNICIPALITY_UPDATES_INPUT || path.join(root, "sources/official/municipalities/municipality-updates.json");
 const masterPath = process.env.MUNICIPALITY_MASTER_INPUT || path.join(root, "data/reconstruction/municipalities.json");
 const output = process.env.MUNICIPALITY_NAV_OUTPUT || path.join(root, "public-data/reconstruction/municipality-official-navigation.json");
+const overridePath=process.env.MUNICIPALITY_OVERRIDE_INPUT||path.join(root,"config/municipality-classification-overrides.json");
+const manualOverrides=fs.existsSync(overridePath)?JSON.parse(fs.readFileSync(overridePath,"utf8")).overrides||[]:[];
 export const categories = ["home","money","documents","health_care","family_education","work_business","agriculture_fishery","daily_life"];
 export const keywords = {
   home: ["応急修理","緊急修理","仮設住宅","みなし仮設","賃貸型応急住宅","公営住宅","住宅","住まい","修理","解体","ブルーシート","被災住宅","宅地","建物","住宅相談"],
@@ -22,11 +24,23 @@ const legacy = {"住まい・証明":["home","documents"],"ごみ・生活":["da
 const hostAllowed = (url, official) => { try { const a=new URL(url).hostname,b=new URL(official).hostname; return a===b||a.endsWith(`.${b}`)||b.endsWith(`.${a}`); } catch { return false; } };
 export const canonical = value => { try { const u=new URL(value); u.hash=""; u.protocol="https:"; [...u.searchParams.keys()].filter(key=>/^utm_/i.test(key)||["fbclid","gclid"].includes(key)).forEach(key=>u.searchParams.delete(key)); u.pathname=u.pathname!=="/"?u.pathname.replace(/\/$/,""):u.pathname; return u.toString(); } catch { return value; } };
 export function classify(update) {
+  const override=manualOverrides.find(item=>canonical(item.url)===canonical(update.url));
+  if(override)return (override.categories||[]).map(category=>({category,confidence:"high",evidence:[`manual_override:${override.reason}`]}));
   const haystack=`${update.title||""} ${update.url||""}`.normalize("NFKC");
   const scores=new Map(), evidence={};
   for (const category of categories) for (const word of keywords[category]) if (haystack.includes(word)) { scores.set(category,(scores.get(category)||0)+2); (evidence[category] ||= []).push(word); }
   for (const category of legacy[update.category]||[]) { scores.set(category,(scores.get(category)||0)+1); (evidence[category] ||= []).push(`既存カテゴリ:${update.category}`); }
   return [...scores].sort((a,b)=>b[1]-a[1]).map(([category,score])=>({category,confidence:score>=4?"high":score>=2?"medium":"low",evidence:evidence[category]}));
+}
+export function validateOverrides(items=manualOverrides){
+  const errors=[];
+  for(const [index,item] of items.entries()){
+    if(!item.url||!/^https:\/\//.test(item.url))errors.push(`overrides[${index}].url`);
+    if(!Array.isArray(item.categories)||item.categories.some(value=>!categories.includes(value)))errors.push(`overrides[${index}].categories`);
+    if(!String(item.reason||"").trim())errors.push(`overrides[${index}].reason`);
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(item.updatedAt||""))errors.push(`overrides[${index}].updatedAt`);
+  }
+  return errors;
 }
 const confidenceStats = municipalities => Object.fromEntries(categories.map(category=>{const items=municipalities.flatMap(m=>m.updates).map(u=>u.classification.find(c=>c.category===category)).filter(Boolean);return [category,{total:items.length,high:items.filter(x=>x.confidence==="high").length,medium:items.filter(x=>x.confidence==="medium").length,low:items.filter(x=>x.confidence==="low").length}];}));
 export function build(source, master) {
@@ -51,6 +65,8 @@ export function build(source, master) {
   return {schemaVersion:"1.1.0",generatedAt,source:{type:"existing_municipality_collector",path:"sources/official/municipalities/municipality-updates.json",retrievedAt:source.metadata?.retrievedAt||null},categories,categoryReport:confidenceStats(municipalities),municipalities,validation:{municipalityCount:municipalities.length,classifiedPageCount:municipalities.reduce((n,m)=>n+m.updates.length,0),unclassifiedCount,issues}};
 }
 if (process.argv[1]===fileURLToPath(import.meta.url)) {
+  const overrideErrors=validateOverrides();
+  if(overrideErrors.length)throw new Error(`manual overrideが不正です: ${overrideErrors.join(", ")}`);
   const result=build(JSON.parse(fs.readFileSync(input,"utf8")),JSON.parse(fs.readFileSync(masterPath,"utf8")));
   fs.mkdirSync(path.dirname(output),{recursive:true}); fs.writeFileSync(output,`${JSON.stringify(result,null,2)}\n`);
   console.log(`自治体公式情報ナビ: ${result.municipalities.length}市町村 / ${result.validation.classifiedPageCount}件 / 除外・重複 ${result.validation.issues.length}件`);

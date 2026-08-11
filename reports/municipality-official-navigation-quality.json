@@ -3,8 +3,8 @@
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 411,
-  "displayCandidateCount": 224,
-  "classifiedPageCount": 279,
+  "displayCandidateCount": 223,
+  "classifiedPageCount": 278,
   "categoryReport": {
     "home": {
       "total": 67,
@@ -43,9 +43,9 @@
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 15,
+      "total": 14,
       "high": 8,
-      "medium": 7,
+      "medium": 6,
       "low": 0
     },
     "daily_life": {
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 35,
-      "displayCandidates": 29,
+      "classified": 34,
+      "displayCandidates": 28,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -164,10 +164,10 @@
   },
   "confidence": {
     "high": 112,
-    "medium": 112,
+    "medium": 111,
     "low": 55
   },
-  "unclassifiedCount": 86,
+  "unclassifiedCount": 87,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -278,6 +278,11 @@
       "municipalityName": "宇土市",
       "title": "市民の皆さまへ",
       "url": "https://www.city.uto.lg.jp/article/view/1310/16427.html"
+    },
+    {
+      "municipalityName": "宇土市",
+      "title": "予約型乗合タクシー「のりのり号」の運行再開について",
+      "url": "https://www.city.uto.lg.jp/article/view/1304/16449.html"
     },
     {
       "municipalityName": "宇土市",

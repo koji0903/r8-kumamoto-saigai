@@ -95,6 +95,12 @@ jobs:
           node scripts/test-refresh-official-workflow.mjs
           git diff --check
 
+      - name: 暮らしの再建・運用ステータスを生成
+        run: |
+          node scripts/build-site-phase.mjs --check
+          node scripts/test-reconstruction-operations.mjs
+          node scripts/build-reconstruction-operations-status.mjs
+
       - name: dry-run結果を記録
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == true }}
         run: |
@@ -121,7 +127,9 @@ jobs:
             sources/official/municipalities/municipality-updates.json \
             sources/official/topics/latest-topics.json \
             public-data/reconstruction/municipality-official-navigation.json \
-            reports/municipality-official-navigation-quality.json
+            reports/municipality-official-navigation-quality.json \
+            reports/reconstruction-operations-status.json \
+            docs/reconstruction-operations-status.md
           if git diff --cached --quiet; then
             echo "反映対象の差分はありません。"
             exit 0
