@@ -80,6 +80,7 @@ jobs:
           node --check tools/fetch-hq.mjs
           node --check tools/fetch-municipality-updates.mjs
           node --check tools/fetch-official-topics.mjs
+          node --check tools/build-shelters.mjs
           git diff --check
 
       - name: 暮らしの再建・自治体公式情報ナビを生成

@@ -45,4 +45,6 @@ jobs:
           node --check tools/fetch-hq.mjs
           node --check tools/fetch-municipality-updates.mjs
           node --check tools/fetch-official-topics.mjs
+          node --check tools/build-shelters.mjs
+          node scripts/test-refresh-official-workflow.mjs
           git diff --check
