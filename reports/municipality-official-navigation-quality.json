@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-11T10:02:38.207Z",
+  "generatedAt": "2026-08-11T13:47:28.709Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 412,
-  "displayCandidateCount": 226,
+  "displayCandidateCount": 225,
   "classifiedPageCount": 279,
   "categoryReport": {
     "home": {
@@ -15,8 +15,8 @@
     "money": {
       "total": 69,
       "high": 8,
-      "medium": 18,
-      "low": 43
+      "medium": 17,
+      "low": 44
     },
     "documents": {
       "total": 68,
@@ -63,7 +63,7 @@
     },
     "municipality_yatsushiro": {
       "classified": 14,
-      "displayCandidates": 11,
+      "displayCandidates": 10,
       "fallback": true
     },
     "municipality_minamata": {
@@ -164,8 +164,8 @@
   },
   "confidence": {
     "high": 113,
-    "medium": 113,
-    "low": 53
+    "medium": 112,
+    "low": 54
   },
   "unclassifiedCount": 87,
   "unclassifiedItems": [
@@ -630,7 +630,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -684,5 +684,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 278
+  "previousClassifiedPageCount": 279
 }

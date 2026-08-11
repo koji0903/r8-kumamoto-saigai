@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-11T10:08:53.591Z",
+  "generatedAt": "2026-08-11T13:53:57.424Z",
   "status": "WARNING",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-11T10:02:38.207Z",
+    "generatedAt": "2026-08-11T13:47:28.709Z",
     "inputCount": 412,
     "classifiedPageCount": 279,
-    "displayCandidateCount": 226,
+    "displayCandidateCount": 225,
     "deltaFromPrevious": {
-      "inputCount": 1,
-      "classifiedPageCount": 1,
+      "inputCount": 0,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 27,
+      "ageHours": 31,
       "limitHours": 336
     }
   },
@@ -37,7 +37,7 @@
       },
       "municipality_yatsushiro": {
         "classified": 14,
-        "displayCandidates": 11,
+        "displayCandidates": 10,
         "fallback": true
       },
       "municipality_minamata": {
@@ -146,8 +146,8 @@
       "money": {
         "total": 69,
         "high": 8,
-        "medium": 18,
-        "low": 43
+        "medium": 17,
+        "low": 44
       },
       "documents": {
         "total": 68,
@@ -188,8 +188,8 @@
     },
     "confidence": {
       "high": 113,
-      "medium": 113,
-      "low": 53
+      "medium": 112,
+      "low": 54
     },
     "unclassifiedCount": 87,
     "excludedCount": 52,
@@ -215,7 +215,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
