@@ -1,5 +1,13 @@
 {
   "schemaVersion": "1.0.0",
+  "meaning": "一緒に確認することが多い分野。制度上の該当、対象判定、行動の優先順位を示さない。",
+  "confirmationGroups": [
+    {"id":"housing_costs","title":"住まいと費用","categories":["home","money"],"description":"家の修理や仮の住まいと、生活費・支払いを分けて確認できます。"},
+    {"id":"care_mobility","title":"通院・介護と移動","categories":["health_care","daily_life"],"description":"健康や介護のことと、通院・移動手段を分けて確認できます。"},
+    {"id":"income_living","title":"収入・事業と生活費","categories":["work_business","money"],"description":"仕事や事業への影響と、生活費・支払いを分けて確認できます。"},
+    {"id":"family_living","title":"家族・子どもと生活費","categories":["family_education","money"],"description":"家族や子どもの生活と、必要な費用を分けて確認できます。"},
+    {"id":"production_restart","title":"生産と事業再開","categories":["agriculture_fishery","work_business"],"description":"農業・漁業の生産と、雇用・事業の再開を分けて確認できます。"}
+  ],
   "categories": {
     "home": [
       {"category":"money","prompt":"修理費や生活費も気になりますか？"},

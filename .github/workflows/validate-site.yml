@@ -53,6 +53,7 @@ jobs:
           node scripts/build-site-phase.mjs --check
           node scripts/test-reconstruction-operations.mjs
           node scripts/test-reconstruction-case-management.mjs
+          node scripts/test-reconstruction-gap-navigation.mjs
           node scripts/test-reconstruction-documents.mjs
           node scripts/test-reconstruction-content-ux.mjs
           node scripts/test-reconstruction-release-readiness.mjs
