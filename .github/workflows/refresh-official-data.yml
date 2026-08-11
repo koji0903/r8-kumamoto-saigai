@@ -65,12 +65,28 @@ jobs:
       - name: 開設中避難所を更新
         shell: bash
         run: |
-          curl --fail --silent --show-error --location \
-            "https://portal.bousai.pref.kumamoto.jp/data/shelter/shelter.json" \
-            --output /tmp/kumamoto-open-shelters.json
-          retrieved_at="$(TZ=Asia/Tokyo date '+%Y-%m-%dT%H:%M:00+09:00')"
-          node tools/build-shelters.mjs /tmp/kumamoto-open-shelters.json \
-            "--retrieved-at=${retrieved_at}"
+          shelter_url="https://portal.bousai.pref.kumamoto.jp/data/shelter/shelter.json"
+          shelter_json=""
+          for attempt in 1 2 3; do
+            candidate="/tmp/kumamoto-open-shelters-${attempt}.json"
+            if curl --fail --silent --show-error --location \
+              --connect-timeout 20 --max-time 90 \
+              "${shelter_url}" --output "${candidate}" && \
+              node -e 'const fs=require("fs");const file=process.argv[1];const raw=JSON.parse(fs.readFileSync(file,"utf8"));if(!Array.isArray(raw.items)||raw.items.length===0)throw Error("items配列が空です")' "${candidate}"; then
+              shelter_json="${candidate}"
+              break
+            fi
+            echo "避難所JSONの取得または検証に失敗しました (${attempt}/3)。"
+            sleep $((attempt * 2))
+          done
+          if [[ -z "${shelter_json}" ]]; then
+            echo "::warning::熊本県の避難所JSONを3回検証できなかったため、既存の検証済み避難所データを保持します。"
+          else
+            retrieved_at="$(TZ=Asia/Tokyo date '+%Y-%m-%dT%H:%M:00+09:00')"
+            if ! node tools/build-shelters.mjs "${shelter_json}" "--retrieved-at=${retrieved_at}"; then
+              echo "::warning::取得した避難所JSONから安全な生成物を作れなかったため、既存データを保持します。"
+            fi
+          fi
 
       - name: データ整合性を検査
         run: |
