@@ -1,0 +1,11 @@
+/* 暮らしの再建共通: 高齢者を含む読みやすさの最低基準 */
+.reconstruction-page main p,.reconstruction-page main li{line-height:1.7}
+.reconstruction-page main button,.reconstruction-page main select{min-height:48px}
+.reconstruction-page main p{max-width:52rem}
+@media(max-width:360px){
+  .reconstruction-page .rebuild-shell{width:calc(100% - 20px)}
+  .reconstruction-page .rebuild-hero-copy{min-width:0}
+  .reconstruction-page .rebuild-hero h1{font-size:36px;line-height:1.25;overflow-wrap:anywhere;word-break:normal}
+  .reconstruction-page .rebuild-catch{font-size:21px}
+}
+@media print{.reconstruction-page main p,.reconstruction-page main li{font-size:11pt;line-height:1.55}}

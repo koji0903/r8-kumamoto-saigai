@@ -1,7 +1,7 @@
 (() => {
   "use strict";
   const topics = {
-    housing:{label:"住まい",prompt:"家に住めない・修理したい",title:"住まいのことで困っていますか？",lead:"家に住めない、修理したい、仮の住まいを探している方へ。",checks:["今の家で安全に生活できるか","修理が必要な場所を記録できているか","市町村へ相談できているか"],links:[{label:"宇土市の住まいについて詳しく見る",href:"uto-housing.html"},{label:"自治体別情報を見る",href:"municipalities.html"}]},
+    housing:{label:"住まい",prompt:"家に住めない・修理したい",title:"住まいのことで困っていますか？",lead:"家に住めない、修理したい、仮の住まいを探している方へ。",checks:["今の家で安全に生活できるか","修理が必要な場所を記録できているか","市町村へ相談できているか"],links:[{label:"宇土市の住まい支援を確認する",href:"uto-housing.html"},{label:"自治体別情報を見る",href:"municipalities.html"}]},
     money:{label:"お金・支払い",prompt:"生活費や支払いが心配",title:"生活費や支払いが心配ですか？",lead:"収入や毎月の支払いへの影響を、一つずつ整理します。",checks:["収入や仕事に変化があるか","住まいにも被害があるか","続いている支払いに心配があるか"],links:[{label:"お金・支払いを詳しく整理する",href:"reconstruction-money.html"}]},
     paperwork:{label:"証明・申請",prompt:"罹災証明や申請が分からない",title:"被害の証明や申請で困っていますか？",lead:"制度名を知らなくても、必要な手続きの入口を確認できます。",checks:["被害の状況を写真に残しているか","お住まいの市町村の案内を確認したか","申請前に必要な書類を確認したか"],links:[{label:"証明・申請を詳しく整理する",href:"reconstruction-documents.html"},{label:"制度・生活支援を見る",href:"guide.html"}]},
     health:{label:"健康・介護",prompt:"健康・介護のことが心配",title:"健康や介護のことで心配がありますか？",lead:"本人や家族の健康、高齢者、介護、障がい、心のケアについて整理します。",checks:["いつもの通院や薬を続けられているか","介護や福祉サービスに変化があるか","本人や家族が一人で抱え込んでいないか"],links:[{label:"健康・介護を詳しく整理する",href:"reconstruction-health-care.html"}]},
