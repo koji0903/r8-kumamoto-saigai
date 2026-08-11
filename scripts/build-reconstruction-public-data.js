@@ -126,7 +126,21 @@ const publicPrograms = programs.filter(publicRecord).map(program => {
     return municipality ? municipalityView(application, status, municipality) : null;
   }).filter(Boolean) : [];
 
-  const publicActions = actions.filter(action => action.programIds.includes(program.id) && action.publicationStatus === "published" && action.verificationStatus === "verified").map(action => ({ title: action.title, description: action.description }));
+  const publicActions = actions.filter(action => {
+    const actionSources = officialSources(action.sourceLinkIds);
+    return action.programIds.includes(program.id) && action.publicationStatus === "published" && action.verificationStatus === "verified" && actionSources.length > 0;
+  }).sort((a, b) => (a.order || 99) - (b.order || 99)).slice(0, 2).map(action => ({
+    title: action.title,
+    description: action.description,
+    actionType: action.actionType,
+    urgency: action.urgency,
+    order: action.order,
+    doBefore: action.doBefore || null,
+    doNotDoYet: action.doNotDoYet || null,
+    highRisk: ["check_before_contract", "deadline", "photograph", "medical", "safety", "demolition", "repair"].includes(action.actionType),
+    verificationStatus: action.verificationStatus,
+    officialSources: officialSources(action.sourceLinkIds)
+  }));
   const publicDocuments = application ? application.requiredDocumentIds.map(id => documentById.get(id)).filter(document => document?.verificationStatus === "verified").map(document => ({ name: document.name, requiredLevel: document.requiredLevel })) : [];
   const publicConsultationItems = consultationItems.filter(item => item.programIds.includes(program.id) && item.publicationStatus === "published" && item.verificationStatus === "verified").sort((a, b) => a.displayOrder - b.displayOrder).slice(0, 3).map(item => ({ prompt: item.supporterPrompt, reason: item.reason, unknownHandling: item.unknownHandling }));
   const sourceIds = [...(program.sourceLinkIds || []), ...(application?.sourceLinkIds || [])];
