@@ -28,28 +28,49 @@ jobs:
           node-version: 22
           package-manager-cache: false
 
-      - name: データ整合性を検査
+      - name: SEO生成物を検査
         run: |
           node tools/build-seo.mjs --check
+
+      - name: 災害データを検査
+        if: ${{ always() }}
+        run: |
           node tools/check-data.mjs
+
+      - name: 暮らしの再建ページを検査
+        if: ${{ always() }}
+        run: |
           node scripts/test-reconstruction-health-care.mjs
-          node --check reconstruction-health-care.js
           node scripts/test-reconstruction-family.mjs
-          node --check reconstruction-family.js
           node scripts/test-reconstruction-work-business.mjs
-          node --check reconstruction-work-business.js
           node scripts/test-reconstruction-agriculture-fishery.mjs
-          node --check reconstruction-agriculture-fishery.js
           node scripts/test-reconstruction-integrated-qa.mjs
           node scripts/test-reconstruction-production-entry.mjs
           node scripts/build-site-phase.mjs --check
           node scripts/test-reconstruction-operations.mjs
           node scripts/test-reconstruction-case-management.mjs
+
+      - name: JavaScript構文を検査
+        if: ${{ always() }}
+        run: |
+          node --check reconstruction-health-care.js
+          node --check reconstruction-family.js
+          node --check reconstruction-work-business.js
+          node --check reconstruction-agriculture-fishery.js
+          node --check reconstruction-category-relations.js
           node --check scripts/build-reconstruction-operations-status.mjs
           node --check app.js
           node --check tools/fetch-hq.mjs
           node --check tools/fetch-municipality-updates.mjs
           node --check tools/fetch-official-topics.mjs
           node --check tools/build-shelters.mjs
+
+      - name: Workflowの安全性を検査
+        if: ${{ always() }}
+        run: |
           node scripts/test-refresh-official-workflow.mjs
+
+      - name: 差分の空白エラーを検査
+        if: ${{ always() }}
+        run: |
           git diff --check
