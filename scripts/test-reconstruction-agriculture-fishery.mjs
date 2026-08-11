@@ -1,0 +1,11 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const html=fs.readFileSync("reconstruction-agriculture-fishery.html","utf8"),css=fs.readFileSync("reconstruction-agriculture-fishery.css","utf8")+fs.readFileSync("reconstruction-health-care.css","utf8"),js=fs.readFileSync("reconstruction-agriculture-fishery.js","utf8"),data=JSON.parse(fs.readFileSync("public-data/reconstruction/municipality-official-navigation.json","utf8"));
+for(const text of ["農地・農業施設が被災した","農機・資材・作物・家畜に被害がある","漁船・漁具・漁港などに被害がある","養殖施設・水産物に影響がある","生産再開・資金繰りが心配","どこへ相談すればよいか分からない","自治体・県・国の公式情報","農協・漁協等の関係機関情報","仕事・事業","お金","被害証明・申請・必要書類","暮らし全体の困りごとを整理する","相談を受けている方へ"])assert.ok(html.includes(text),`${text} が必要`);
+for(const text of ["<noscript>","data-municipality-select","aria-live=","aria-pressed=","type=\"button\""])assert.ok(html.includes(text),`${text} が必要`);
+for(const forbidden of ["localStorage","sessionStorage","document.cookie","gtag(","dataLayer.push","fetch(","<input"])assert.ok(!js.includes(forbidden)&&!html.includes(forbidden),`${forbidden} で事業情報を取得・保存・送信しない`);
+assert.ok(css.includes("@media print")&&css.includes("max-width:560px")&&css.includes(":focus-visible"),"print・mobile・focus CSS");
+const updates=data.municipalities.flatMap(m=>m.updates.map(u=>({...u,municipalityId:m.municipalityId}))),items=updates.filter(u=>u.categories.includes("agriculture_fishery")&&u.classification.some(c=>c.category==="agriculture_fishery"&&c.confidence!=="low"));
+assert.ok(items.length,"agriculture_fishery公式情報あり");assert.ok(items.some(u=>/農地|農道|用排水|ハウス|倉庫|農業施設/.test(u.officialTitle)),"農地・農業施設情報あり");assert.ok(items.some(u=>/農機|資材|作物|家畜|畜産|飼料/.test(u.officialTitle)),"農機・作物等の情報あり");assert.ok(!items.some(u=>/のりのり号/.test(u.officialTitle)),"交通情報を海苔情報と誤分類しない");
+assert.ok(data.municipalities.some(m=>!m.updates.some(u=>u.categories.includes("agriculture_fishery")&&u.classification.some(c=>c.category==="agriculture_fishery"&&c.confidence!=="low"))),"0件fallback対象あり");assert.ok(html.includes("公式リンクと検証済み制度は別"),"公式情報と確認済み制度を分離");assert.ok(html.includes("農地面積、売上、被害額、借入額、漁船番号"),"農業・漁業情報を取得しない");
+console.log(`農業・漁業ページの公式情報${items.length}件・農地・農機・fallback・関係機関分離・事業情報非保存を確認しました`);

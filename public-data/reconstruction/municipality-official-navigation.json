@@ -54,9 +54,9 @@
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 15,
+      "total": 14,
       "high": 8,
-      "medium": 7,
+      "medium": 6,
       "low": 0
     },
     "daily_life": {
@@ -3449,44 +3449,6 @@
               "confidence": "medium",
               "evidence": [
                 "バス"
-              ]
-            }
-          ],
-          "displayPriority": 29,
-          "urlCheck": {
-            "state": "inherited_from_collector",
-            "checkedAt": "2026-08-11T07:41:32.933Z"
-          }
-        },
-        {
-          "officialTitle": "予約型乗合タクシー「のりのり号」の運行再開について",
-          "originalTitle": "予約型乗合タクシー「のりのり号」の運行再開について",
-          "displayTitle": "予約型乗合タクシー「のりのり号」の運行再開について",
-          "url": "https://www.city.uto.lg.jp/article/view/1304/16449.html",
-          "originalUrl": "https://www.city.uto.lg.jp/article/view/1304/16449.html",
-          "redirectHistory": [],
-          "officialDomain": "www.city.uto.lg.jp",
-          "publisher": "宇土市",
-          "sourceType": "municipal_official",
-          "status": "active",
-          "disasterRelevance": "inherited_from_disaster_collector",
-          "disasterRelevanceEvidence": [
-            "disaster_collection_source"
-          ],
-          "informationPhase": "reconstruction",
-          "publishedAt": "2026-08-03",
-          "updatedAt": null,
-          "retrievedAt": "2026-08-11T07:41:32.933Z",
-          "categories": [
-            "agriculture_fishery"
-          ],
-          "classificationConfidence": "medium",
-          "classification": [
-            {
-              "category": "agriculture_fishery",
-              "confidence": "medium",
-              "evidence": [
-                "のり"
               ]
             }
           ],
@@ -11988,8 +11950,8 @@
   ],
   "validation": {
     "municipalityCount": 21,
-    "classifiedPageCount": 279,
-    "unclassifiedCount": 132,
+    "classifiedPageCount": 278,
+    "unclassifiedCount": 133,
     "issues": [
       {
         "type": "duplicate_url",
@@ -12251,7 +12213,6 @@
         "municipality": "氷川町",
         "url": "https://www.town.hikawa.kumamoto.jp/kinkyu.html#kid56"
       }
-    ],
-    "inputCount": 411
+    ]
   }
 }

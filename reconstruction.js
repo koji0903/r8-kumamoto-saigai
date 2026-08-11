@@ -7,7 +7,7 @@
     health:{label:"健康・介護",prompt:"健康・介護のことが心配",title:"健康や介護のことで心配がありますか？",lead:"本人や家族の健康、高齢者、介護、障がい、心のケアについて整理します。",checks:["いつもの通院や薬を続けられているか","介護や福祉サービスに変化があるか","本人や家族が一人で抱え込んでいないか"],links:[{label:"健康・介護を詳しく整理する",href:"reconstruction-health-care.html"}]},
     family:{label:"子ども・家族",prompt:"子どもや家族のことで困っている",title:"子どもや家族のことで困っていますか？",lead:"学校、保育、学用品、子育て、家族の生活について整理します。",checks:["学校や保育の予定を確認できているか","子どもの生活用品に不足があるか","家族それぞれに別の困りごとがないか"],links:[{label:"子ども・家族を詳しく整理する",href:"reconstruction-family.html"}]},
     work:{label:"仕事・事業",prompt:"仕事や事業への影響がある",title:"仕事や事業を続けることで困っていますか？",lead:"働くことへの影響と、店舗・会社・事業の再開を分けて整理します。",checks:["雇用や収入に影響があるか","店舗、設備、在庫に被害があるか","仕事と住まいの両方に影響があるか"],links:[{label:"仕事・事業を詳しく整理する",href:"reconstruction-work-business.html"}]},
-    primary:{label:"農業・漁業",prompt:"農業・漁業への影響がある",title:"農業・漁業の再開で困っていますか？",lead:"生産設備、農地、漁具、経営への影響を整理します。",checks:["農地、船、設備などに被害があるか","生産や出荷を続けられるか","住まいや生活費にも影響があるか"],links:[]},
+    primary:{label:"農業・漁業",prompt:"農業・漁業への影響がある",title:"農業・漁業の再開で困っていますか？",lead:"生産設備、農地、漁具、経営への影響を整理します。",checks:["農地、船、設備などに被害があるか","生産や出荷を続けられるか","住まいや生活費にも影響があるか"],links:[{label:"農業・漁業を詳しく整理する",href:"reconstruction-agriculture-fishery.html"}]},
     daily:{label:"暮らし・移動",prompt:"車・移動・日常生活で困っている",title:"移動や日常生活で困っていますか？",lead:"車、交通、ごみ、水道、日用品など、毎日の暮らしへの影響を整理します。",checks:["移動する手段を確保できているか","水道やごみなど自治体情報を確認したか","必要な日用品が不足していないか"],links:[{label:"自治体別情報を見る",href:"municipalities.html"},{label:"市町村の公式発信を見る",href:"municipality-updates.html"}]}
   };
   const topicCategories={housing:"home",money:"money",paperwork:"documents",health:"health_care",family:"family_education",work:"work_business",primary:"agriculture_fishery",daily:"daily_life"};

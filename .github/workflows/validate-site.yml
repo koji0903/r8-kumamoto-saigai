@@ -38,6 +38,8 @@ jobs:
           node --check reconstruction-family.js
           node scripts/test-reconstruction-work-business.mjs
           node --check reconstruction-work-business.js
+          node scripts/test-reconstruction-agriculture-fishery.mjs
+          node --check reconstruction-agriculture-fishery.js
           node --check app.js
           node --check tools/fetch-hq.mjs
           node --check tools/fetch-municipality-updates.mjs
