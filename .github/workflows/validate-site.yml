@@ -51,6 +51,7 @@ jobs:
           node scripts/test-reconstruction-case-management.mjs
           node scripts/test-reconstruction-documents.mjs
           node scripts/test-reconstruction-content-ux.mjs
+          node scripts/test-reconstruction-release-readiness.mjs
 
       - name: JavaScript構文を検査
         if: ${{ always() }}
