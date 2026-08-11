@@ -32,6 +32,8 @@ jobs:
         run: |
           node tools/build-seo.mjs --check
           node tools/check-data.mjs
+          node scripts/test-reconstruction-health-care.mjs
+          node --check reconstruction-health-care.js
           node --check app.js
           node --check tools/fetch-hq.mjs
           node --check tools/fetch-municipality-updates.mjs

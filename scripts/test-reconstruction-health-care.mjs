@@ -1,0 +1,13 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const html=fs.readFileSync("reconstruction-health-care.html","utf8"),css=fs.readFileSync("reconstruction-health-care.css","utf8"),js=fs.readFileSync("reconstruction-health-care.js","utf8"),data=JSON.parse(fs.readFileSync("public-data/reconstruction/municipality-official-navigation.json","utf8"));
+for(const text of ["体調や受診のことが心配","薬や治療を続けられるか心配","高齢者の生活・介護が心配","障がいのある方の支援を確認したい","こころの負担や不安が大きい","何に当てはまるか分からない","生命・身体に関わる緊急時","自治体の公式情報","熊本県等の公式情報","暮らし全体の困りごとを整理する","相談を受けている方へ"])assert.ok(html.includes(text),`${text} が必要`);
+for(const text of ["<noscript>","data-municipality-select","aria-live=","aria-pressed=","type=\"button\""])assert.ok(html.includes(text),`${text} が必要`);
+for(const forbidden of ["localStorage","sessionStorage","document.cookie","gtag(","dataLayer.push","fetch("])assert.ok(!js.includes(forbidden),`${forbidden} で機微情報を保存・送信しない`);
+assert.ok(css.includes("@media print")&&css.includes("max-width:560px")&&css.includes(":focus-visible"),"print・mobile・focus CSS");
+const updates=data.municipalities.flatMap(m=>m.updates.map(u=>({...u,municipalityId:m.municipalityId}))),health=updates.filter(u=>u.categories.includes("health_care")&&u.classification.some(c=>c.category==="health_care"&&c.confidence!=="low"));
+assert.ok(health.length,"health_care公式情報あり");
+assert.ok(data.municipalities.some(m=>!m.updates.some(u=>u.categories.includes("health_care")&&u.classification.some(c=>c.category==="health_care"&&c.confidence!=="low"))),"0件fallback対象あり");
+assert.ok(html.includes("未確認の制度条件、窓口、電話番号は掲載していません"),"未確認電話番号を表示しない");
+assert.ok(html.includes("医療診断")&&html.includes("介護・障がい認定")&&html.includes("選択内容は保存・送信しません"),"安全原則を表示");
+console.log(`健康・介護ページの安全性・公式情報${health.length}件・fallback・機微情報非保存・アクセシビリティを確認しました`);
