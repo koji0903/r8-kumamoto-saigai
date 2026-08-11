@@ -28,6 +28,7 @@
   if(path!=='index.html')graph.push({'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'ホーム',item:'https://www.yokatainet.jp/'},{'@type':'ListItem',position:2,name:seoTitles[path]||document.title.split('｜')[0],item:canonical}]});
   const structured=document.createElement('script');structured.type='application/ld+json';structured.textContent=JSON.stringify({'@context':'https://schema.org','@graph':graph});document.head.append(structured);
   const supportPages=['disaster.html','affected.html','guide.html','shelters.html','terms.html','municipalities.html','municipality-updates.html','official.html','uto-waste.html','uto-housing.html','support.html','supporters.html','volunteer-centers.html'];
+  const reconstructionPages=['reconstruction.html','reconstruction-money.html','reconstruction-documents.html','reconstruction-health-care.html','reconstruction-family.html','reconstruction-work-business.html','reconstruction-agriculture-fishery.html','reconstruction-official.html'];
   const activityPages=['timeline.html','meetings.html'];
   const organizationPages=['about.html','join.html','contact.html','privacy.html','accessibility.html'];
   const noMotionPages=['shelters.html','municipality-updates.html','timeline.html','meetings.html','privacy.html','accessibility.html','404.html','uto-waste.html'];
@@ -35,7 +36,7 @@
   const storyMotionPages=['index.html','about.html'];
   const motionPreset=storyMotionPages.includes(path)?'story':noMotionPages.includes(path)?'none':standardMotionPages.includes(path)?'standard':'subtle';
   document.body.dataset.motionPreset=motionPreset;
-  const active=key=>key==='home'?path==='index.html':key==='support'?supportPages.includes(path):key==='reconstruction'?path==='reconstruction.html':key==='activity'?activityPages.includes(path):key==='organization'?organizationPages.includes(path):false;
+  const active=key=>key==='home'?path==='index.html':key==='support'?supportPages.includes(path):key==='reconstruction'?reconstructionPages.includes(path):key==='activity'?activityPages.includes(path):key==='organization'?organizationPages.includes(path):false;
   const currentAttr=key=>active(key)?' aria-current="page"':'';
   const currentClass=key=>active(key)?' is-current':'';
   const header=document.querySelector('.site-header');
@@ -50,10 +51,12 @@
     else if(path!=='index.html'&&path!=='404.html')header.insertAdjacentHTML('afterend',`<div class="org-context-bar"><div><p><b>令和8年熊本地震</b><span>一般社団法人よか隊ネット熊本が運営する支援情報サイトです</span></p><nav aria-label="災害支援のショートカット"><a href="disaster.html">支援情報トップ</a><a href="affected.html">困りごとから探す</a><a href="reconstruction.html">暮らしの再建</a><a href="official.html">公的機関の情報</a></nav></div></div>`)
   }
   if(path!=='index.html'){
-    const supportParent=supportPages.includes(path)||path==='reconstruction.html';
+    const supportParent=supportPages.includes(path);
+    const reconstructionParent=reconstructionPages.includes(path);
     const detailParent=['uto-waste.html','uto-housing.html'].includes(path);
     const crumbs=[['index.html','ホーム']];
     if(supportParent&&path!=='disaster.html')crumbs.push(['disaster.html','令和8年熊本地震']);
+    if(reconstructionParent&&path!=='reconstruction.html')crumbs.push(['reconstruction.html','暮らしの再建']);
     if(detailParent)crumbs.push(['municipalities.html','自治体別情報']);
     if(organizationPages.includes(path)&&path!=='about.html')crumbs.push(['about.html','団体情報']);
     crumbs.push(['',seoTitles[path]||document.querySelector('h1')?.textContent.trim()||'現在のページ']);

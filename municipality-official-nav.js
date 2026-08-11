@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const labels={home:"住まい",money:"お金・支払い",documents:"証明・手続き",health_care:"健康・介護",family_education:"子ども・家族",work_business:"仕事・事業",agriculture_fishery:"農業・漁業",daily_life:"暮らし・移動"};
+  const labels={home:"住まい",money:"お金・支払い",documents:"証明・申請",health_care:"健康・介護",family_education:"子ども・家族",work_business:"仕事・事業",agriculture_fishery:"農業・漁業",daily_life:"暮らし・移動"};
   const validCategories=Object.keys(labels); const params=new URLSearchParams(location.search);
   const clean=value=>String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]);
   document.querySelectorAll("[data-municipality-official-nav]").forEach(root=>{
