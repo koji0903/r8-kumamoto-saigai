@@ -59,6 +59,7 @@ jobs:
           node scripts/test-reconstruction-official-search.mjs
           node scripts/test-reconstruction-ux-simplification.mjs
           node scripts/test-reconstruction-final-scenarios.mjs
+          node scripts/test-reconstruction-core-product.mjs
           node scripts/test-reconstruction-documents.mjs
           node scripts/test-reconstruction-content-ux.mjs
           node scripts/test-reconstruction-release-readiness.mjs
