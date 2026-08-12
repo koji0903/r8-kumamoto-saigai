@@ -24,7 +24,9 @@ const files = {
   documents: ["required-documents.json", "required-document.schema.json"],
   actions: ["next-actions.json", "next-action.schema.json"],
   consultationItems: ["consultation-items.json", "consultation-item.schema.json"],
-  verificationEvents: ["verification-events.json", "verification-event.schema.json"]
+  verificationEvents: ["verification-events.json", "verification-event.schema.json"],
+  sourceChangeEvents: ["source-change-events.json", "source-change-event.schema.json"],
+  sourceRevisions: ["source-revisions.json", "source-revision.schema.json"]
 };
 
 const errors = [];
@@ -203,6 +205,26 @@ for (const event of parsed.verificationEvents || []) {
     if (sourceId && !event.sourceIds.includes(sourceId)) errors.push(`${event.id}: sourceLinkの出典がsourceIdsに含まれていません: ${linkId}`);
   }
 }
+for (const event of parsed.sourceChangeEvents || []) {
+  refs(event.id, [event.sourceId], "sources", "変更source");
+  refs(event.id, event.relatedProgramIds, "programs", "関連制度");
+  refs(event.id, event.municipalityIds, "municipalities", "関連自治体");
+  for (const related of event.relatedEntities || []) {
+    if (!globalIds.has(related.entityId)) errors.push(`${event.id}: 関連対象がありません: ${related.entityId}`);
+    refs(event.id, [related.sourceLinkId], "sourceLinks", "関連sourceLink");
+  }
+  for (const impact of event.impactedEntities || []) {
+    if (!globalIds.has(impact.entityId)) errors.push(`${event.id}: 影響対象がありません: ${impact.entityId}`);
+    refs(event.id, [impact.sourceLinkId], "sourceLinks", "影響sourceLink");
+  }
+  if (event.resolved && (!event.reviewedAt || !event.reviewedBy)) errors.push(`${event.id}: 解決済み変更に確認日時または確認者IDがありません`);
+  if (!event.resolved && (event.reviewedAt || event.reviewedBy)) errors.push(`${event.id}: 未解決変更に解決確認値が設定されています`);
+}
+for (const revision of parsed.sourceRevisions || []) {
+  refs(revision.id, [revision.sourceId], "sources", "改訂source");
+  refs(revision.id, [revision.eventId], "sourceChangeEvents", "変更イベント");
+  if (revision.previousHash === revision.currentHash) errors.push(`${revision.id}: 旧新hashが同一です`);
+}
 
 const confirmed = new Set(["verified"]);
 function requireVerifiedSources(entity, fields) {
@@ -217,7 +239,7 @@ for (const program of parsed.programs || []) {
     const linkedSources = (program.sourceLinkIds || []).map(id => byType.sourceLinks.get(id)).filter(Boolean).map(link => byType.sources.get(link.sourceId)).filter(Boolean);
     if (!linkedSources.some(source => source.officiality === "primary_official")) errors.push(`${program.id}: verifiedの公的制度に正式な一次情報がありません`);
   }
-  if (program.publicationStatus === "published" && !["verified", "partially_verified"].includes(program.verificationStatus)) errors.push(`${program.id}: 未確認状態の制度をpublishedにできません`);
+  if (program.publicationStatus === "published" && !["verified", "partially_verified", "needs_review"].includes(program.verificationStatus)) errors.push(`${program.id}: 未確認状態の制度をpublishedにできません`);
 }
 
 for (const application of parsed.applications || []) {
@@ -230,8 +252,8 @@ for (const application of parsed.applications || []) {
     const hasDeadlineEvidence = claims.has("deadline") || (application.applicationPeriodIds || []).some(id => (byType.periods.get(id)?.sourceLinkIds || []).length);
     if (!hasDeadlineEvidence) errors.push(`${application.id}: 期限または「未発表」を確認した出典がありません`);
   }
-  if (application.applicationStatus === "active" && !["verified", "partially_verified"].includes(application.verificationStatus)) errors.push(`${application.id}: 未確認の災害適用をactiveにできません`);
-  if (application.publicationStatus === "published" && !["verified", "partially_verified"].includes(application.verificationStatus)) errors.push(`${application.id}: verifiedまたはpartially_verified以外の災害適用を公開候補にできません`);
+  if (application.applicationStatus === "active" && !["verified", "partially_verified", "needs_review"].includes(application.verificationStatus)) errors.push(`${application.id}: 未確認の災害適用をactiveにできません`);
+  if (application.publicationStatus === "published" && !["verified", "partially_verified", "needs_review"].includes(application.verificationStatus)) errors.push(`${application.id}: verified、partially_verifiedまたはneeds_review以外の災害適用を公開候補にできません`);
   if (application.publicationStatus === "published" && application.verificationStatus === "partially_verified" && !application.sourceLinkIds.length) errors.push(`${application.id}: partially_verifiedの公開候補に事実単位の出典がありません`);
   if (application.publicationStatus === "published" && application.applicationStatus !== "active") errors.push(`${application.id}: publishedの災害適用はactiveでなければなりません`);
   if (["closed", "expired", "withdrawn"].includes(application.applicationStatus) && application.publicationStatus === "published") errors.push(`${application.id}: 終了・撤回済み適用をpublishedにできません`);

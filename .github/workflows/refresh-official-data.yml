@@ -90,6 +90,12 @@ jobs:
             fi
           fi
 
+      - name: 厳密制度の公式根拠を変更監視
+        run: |
+          node scripts/monitor-reconstruction-sources.mjs
+          node scripts/build-reconstruction-public-data.js
+          node scripts/test-reconstruction-source-change.mjs
+
       - name: データ整合性を検査
         run: |
           node tools/build-seo.mjs
@@ -146,10 +152,27 @@ jobs:
             sources/official/hq-index.json \
             sources/official/municipalities/municipality-updates.json \
             sources/official/topics/latest-topics.json \
+            data/reconstruction/source-change-events.json \
+            data/reconstruction/source-revisions.json \
+            data/reconstruction/sources.json \
+            data/reconstruction/programs.json \
+            data/reconstruction/applications.json \
+            data/reconstruction/application-periods.json \
+            data/reconstruction/required-documents.json \
+            data/reconstruction/contacts.json \
+            data/reconstruction/next-actions.json \
+            public-data/reconstruction/programs.json \
+            public-data/reconstruction/municipalities.json \
+            public-data/reconstruction/categories.json \
+            public-data/reconstruction/home.json \
+            public-data/reconstruction/money.json \
             public-data/reconstruction/municipality-official-navigation.json \
             public-data/reconstruction/official-search-index.json \
             reports/municipality-official-navigation-quality.json \
+            reports/reconstruction-source-state.json \
+            reports/reconstruction-source-review-queue.json \
             reports/reconstruction-operations-status.json \
+            docs/reconstruction-source-review-queue.md \
             docs/reconstruction-operations-status.md \
             docs/reconstruction-information-quality-status.md
           if git diff --cached --quiet; then

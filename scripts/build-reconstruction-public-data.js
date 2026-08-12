@@ -24,7 +24,7 @@ function validate() {
 }
 
 function publicRecord(entity) {
-  return entity.publicationStatus === "published" && !["withdrawn", "expired", "unverified", "pending"].includes(entity.verificationStatus);
+  return entity.publicationStatus === "published" && !["withdrawn", "expired", "unverified", "pending", "needs_review", "source_unreachable"].includes(entity.verificationStatus);
 }
 
 function japaneseDate(value) {

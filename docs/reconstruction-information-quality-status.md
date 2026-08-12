@@ -136,9 +136,12 @@ A=自治体個別公式情報あり、B=国・県等の広域情報のみ、C=�
 - `publishedAt`を`retrievedAt`より優先。日付なしはエラーにしない。
 - LEVEL 2公式リンクの変更は正常。LEVEL 1 verified sourceのhash変更は`needs_review`へ送る。
 - verified source変更: 0件
+- needs_review entity: 0件
+- 未解決source変更: 0件（ACTION_REQUIRED 0件）
+- review queue: `docs/reconstruction-source-review-queue.md`（高リスク順）
 - refreshは自治体別errorsを保持し、空データ・fallback欠落・非公式URLをfailureにする。
 - 1自治体失敗時も既存データを空上書きしない設計を維持。生成は一時ファイルからrenameし、検証不合格時は公開しない。
-- ただし一般公式リンクの連続失敗回数は永続化されていない。単発404と継続404の自動判別は残る運用課題。
+- 厳密sourceは連続失敗回数を永続化し、単発404/timeoutはWARNING、継続404はACTION_REQUIREDとする。
 
 ## 検索品質
 - official-navと同じくlow、非公開、needs_review、source_unreachable、fixtureを除外する。

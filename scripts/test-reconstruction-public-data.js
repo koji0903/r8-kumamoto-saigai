@@ -83,6 +83,26 @@ try {
 
 console.log("生活再建公開データ生成テストOK（6条件）");
 
+const needsReviewRoot = fixture();
+try {
+  editJson(needsReviewRoot, "programs.json", rows => {
+    const program = rows.find(row => row.id === "program_emergency_housing_repair");
+    program.publicationStatus = "published";
+    program.verificationStatus = "needs_review";
+  });
+  editJson(needsReviewRoot, "applications.json", rows => {
+    const application = rows.find(row => row.id === "application_r8_kumamoto_emergency_repair");
+    application.publicationStatus = "published";
+    application.verificationStatus = "needs_review";
+  });
+  const built = build(needsReviewRoot);
+  const programs = JSON.parse(fs.readFileSync(path.join(built.output, "programs.json"), "utf8"));
+  if (programs.some(program => program.id === "program_emergency_housing_repair")) throw new Error("needs_review制度が確定制度として公開されました");
+  console.log("公開データ異常系OK: publicationStatusを維持したneeds_review制度を除外");
+} finally {
+  fs.rmSync(needsReviewRoot, { recursive: true, force: true });
+}
+
 const moneyRoot = fixture();
 try {
   let targetId;

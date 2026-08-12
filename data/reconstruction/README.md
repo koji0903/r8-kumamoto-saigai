@@ -25,6 +25,8 @@
 | `next-actions.json` | 次にすること、まだしないこと |
 | `consultation-items.json` | 相談時に確認する質問の定義。回答は保存しない |
 | `verification-events.json` | 誰が、どの根拠を、いつ確認・承認したかの履歴 |
+| `source-change-events.json` | 公式sourceの変更・継続到達不能と影響entityの未解決レビュー記録 |
+| `source-revisions.json` | 同一sourceの旧新hashと検知日時を結ぶ改訂履歴 |
 
 ## 正本と生成物
 

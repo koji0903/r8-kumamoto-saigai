@@ -61,6 +61,8 @@ jobs:
           node scripts/test-reconstruction-final-scenarios.mjs
           node scripts/test-reconstruction-core-product.mjs
           node scripts/test-reconstruction-information-quality.mjs
+          node scripts/test-reconstruction-source-change.mjs
+          node scripts/test-reconstruction-public-data.js
           node scripts/test-reconstruction-documents.mjs
           node scripts/test-reconstruction-content-ux.mjs
           node scripts/test-reconstruction-release-readiness.mjs
@@ -78,6 +80,8 @@ jobs:
           node --check reconstruction-search.js
           node --check scripts/build-reconstruction-search-index.mjs
           node --check scripts/build-reconstruction-operations-status.mjs
+          node --check scripts/monitor-reconstruction-sources.mjs
+          node --check scripts/reconstruction-source-change.mjs
           node --check app.js
           node --check tools/fetch-hq.mjs
           node --check tools/fetch-municipality-updates.mjs

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://r8-kumamoto-saigai.local/schemas/reconstruction/source-revision.schema.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "sourceId", "url", "detectedAt", "previousHash", "currentHash", "hashAlgorithm", "eventId"],
+    "properties": {
+      "id": {"type": "string", "pattern": "^source_revision_[a-zA-Z0-9_]+$"},
+      "sourceId": {"type": "string"},
+      "url": {"type": "string", "format": "uri"},
+      "detectedAt": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:Z|[+-]\\d{2}:\\d{2})$"},
+      "previousHash": {"type": "string"},
+      "currentHash": {"type": "string"},
+      "hashAlgorithm": {"enum": ["normalized-html-v1", "raw-pdf-v1"]},
+      "eventId": {"type": "string"}
+    }
+  }
+}
