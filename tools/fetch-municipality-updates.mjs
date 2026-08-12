@@ -13,11 +13,12 @@ const DISASTER_DATE = "2026-07-28";
 const END_DATE = new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Tokyo" }).format(new Date());
 const MAX_PAGES_PER_SITE = 80;
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+const domainAllowlist = JSON.parse(await readFile(join(ROOT, "config/municipality-official-domain-allowlist.json"), "utf8")).domains || [];
 
 const municipalities = [
   ["熊本市", "https://www.city.kumamoto.jp/", ["https://www.city.kumamoto.jp/list04828.html"]],
   ["八代市", "https://www.city.yatsushiro.lg.jp/", ["https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html", "https://www.city.yatsushiro.lg.jp/kinkyu.html"]],
-  ["水俣市", "https://localcms.city.minamata.lg.jp/", []],
+  ["水俣市", "https://localcms.city.minamata.lg.jp/", ["https://localcms.city.minamata.lg.jp/page257.html?type=top"]],
   ["山鹿市", "https://www.city.yamaga.kumamoto.jp/", ["https://www.city.yamaga.kumamoto.jp/kiji0033159/index.html"]],
   ["菊池市", "https://www.city.kikuchi.lg.jp/", []],
   ["宇土市", "https://www.city.uto.lg.jp/", ["https://www.city.uto.lg.jp/category/list/1301.html"]],
@@ -32,7 +33,7 @@ const municipalities = [
   ["大津町", "https://www.town.ozu.kumamoto.jp/", [], ["https://www.town.ozu.kumamoto.jp/page/26598.html"]],
   ["菊陽町", "https://www.town.kikuyo.lg.jp/", ["https://www.town.kikuyo.lg.jp/bousai/list00733.html"]],
   ["西原村", "https://www.vill.nishihara.kumamoto.jp/", []],
-  ["御船町", "https://www.town.mifune.kumamoto.jp/", []],
+  ["御船町", "https://www.town.mifune.kumamoto.jp/", ["https://www.town.mifune.kumamoto.jp/hpkiji/pub/list.aspx?c_id=3&class_id=1008&class_set_id=1"]],
   ["嘉島町", "https://www.town.kumamoto-kashima.lg.jp/", []],
   ["益城町", "https://www.town.mashiki.lg.jp/", ["https://www.town.mashiki.lg.jp/list00538.html", "https://www.town.mashiki.lg.jp/new_list.html"]],
   ["甲佐町", "https://www.town.kosa.lg.jp/", ["https://www.town.kosa.lg.jp/q/aview/55/13531.html"], ["https://www.town.kosa.lg.jp/q/aview/120/10636.html", "https://www.town.kosa.lg.jp/q/aview/119/6336.html"]],
@@ -42,7 +43,7 @@ const municipalities = [
   ]],
   ["芦北町", "https://www.town.ashikita.lg.jp/", []],
   ["津奈木町", "https://www.town.tsunagi.lg.jp/", []]
-].map(([name, officialUrl, hubs, details = []]) => ({ name, officialUrl, hubs, details }));
+].map(([name, officialUrl, hubs, details = []]) => ({ name, officialUrl, hubs, details, allowedDomains: domainAllowlist.filter(item=>item.municipalityName===name).map(item=>item.domain) }));
 // 宇土市の当該ページは、市が今回の災害情報だけを分類して掲載する専用集約ページ。
 // 「市民の皆様へ」等、表題だけでは地震関連性を判定できない記事も公式の掲載判断を尊重する。
 municipalities.find(municipality => municipality.name === "宇土市").trustAllHub = true;
@@ -111,10 +112,10 @@ function parseLeadingDate(value) {
   const parsed = parseDate(value);
   return { date, time: parsed?.date === date ? parsed.time : null };
 }
-function allowed(url, official) {
+function allowed(url, official, allowedDomains = []) {
   const host = new URL(url).hostname.replace(/^www\./, "");
   const officialHost = new URL(official).hostname.replace(/^www\./, "");
-  return host === officialHost || host.endsWith(`.${officialHost}`);
+  return host === officialHost || host.endsWith(`.${officialHost}`) || allowedDomains.some(domain=>host===domain||host.endsWith(`.${domain}`));
 }
 function articleLike(url) {
   return /(?:\/kiji\d+|\/article\/view\/|\/q\/aview\/|\/page\d+|\/kinkyu\/|\/news\/|\/topics\/)/iu.test(new URL(url).pathname);
@@ -150,7 +151,7 @@ function anchors(html, base, config) {
     let url;
     try { url = new URL(decode(match[1]), base); } catch { continue; }
     url.hash = "";
-    if (!/^https?:$/.test(url.protocol) || !allowed(url.href, config.officialUrl) || /\.(?:jpg|jpeg|png|gif|zip|docx?|xlsx?)$/i.test(url.pathname)) continue;
+    if (!/^https?:$/.test(url.protocol) || !allowed(url.href, config.officialUrl, config.allowedDomains) || /\.(?:jpg|jpeg|png|gif|zip|docx?|xlsx?)$/i.test(url.pathname)) continue;
     const context = text(html.slice(Math.max(0, match.index - 320), match.index + match[0].length + 320));
     result.push({ title, url: url.href, parsedDate: parseDate(context) });
   }
@@ -195,7 +196,7 @@ function pagination(html, base, config) {
     if (!/もっと見る|次へ|pagerhandler|[?&](?:pg|page)=\d+/iu.test(`${text(match[2])} ${match[1]}`)) continue;
     try {
       const url = new URL(decode(match[1]), base); url.hash = "";
-      if (allowed(url.href, config.officialUrl)) urls.push(url.href);
+      if (allowed(url.href, config.officialUrl, config.allowedDomains)) urls.push(url.href);
     } catch {}
   }
   return urls;

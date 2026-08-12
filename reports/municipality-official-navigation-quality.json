@@ -1,40 +1,40 @@
 {
-  "generatedAt": "2026-08-12T05:08:55.932Z",
+  "generatedAt": "2026-08-12T05:27:22.381Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 426,
-  "displayCandidateCount": 234,
-  "classifiedPageCount": 288,
+  "inputCount": 434,
+  "displayCandidateCount": 235,
+  "classifiedPageCount": 292,
   "categoryReport": {
     "home": {
-      "total": 73,
+      "total": 75,
       "high": 34,
-      "medium": 12,
-      "low": 27
+      "medium": 13,
+      "low": 28
     },
     "money": {
-      "total": 72,
+      "total": 71,
       "high": 9,
       "medium": 17,
-      "low": 46
+      "low": 45
     },
     "documents": {
-      "total": 73,
+      "total": 75,
       "high": 23,
-      "medium": 9,
-      "low": 41
+      "medium": 10,
+      "low": 42
     },
     "health_care": {
-      "total": 15,
+      "total": 14,
       "high": 7,
-      "medium": 8,
+      "medium": 7,
       "low": 0
     },
     "family_education": {
-      "total": 47,
-      "high": 4,
+      "total": 49,
+      "high": 3,
       "medium": 17,
-      "low": 26
+      "low": 29
     },
     "work_business": {
       "total": 13,
@@ -43,8 +43,8 @@
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 14,
-      "high": 8,
+      "total": 13,
+      "high": 7,
       "medium": 6,
       "low": 0
     },
@@ -57,7 +57,7 @@
   },
   "municipalityReport": {
     "municipality_kumamoto": {
-      "classified": 49,
+      "classified": 48,
       "displayCandidates": 36,
       "fallback": true
     },
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 37,
-      "displayCandidates": 32,
+      "classified": 36,
+      "displayCandidates": 31,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -127,8 +127,8 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 6,
-      "displayCandidates": 6,
+      "classified": 12,
+      "displayCandidates": 8,
       "fallback": true
     },
     "municipality_kashima": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 116,
-    "medium": 118,
-    "low": 54
+    "high": 115,
+    "medium": 120,
+    "low": 57
   },
-  "unclassifiedCount": 92,
+  "unclassifiedCount": 95,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -531,6 +531,21 @@
     },
     {
       "municipalityName": "御船町",
+      "title": "令和8年熊本地震に伴う災害ゴミ仮置場の開設時間の変更について",
+      "url": "https://www.town.mifune.kumamoto.jp/page9389.html"
+    },
+    {
+      "municipalityName": "御船町",
+      "title": "「令和8年熊本地震」によるがけ崩れ等の調査について",
+      "url": "https://www.town.mifune.kumamoto.jp/page9397.html"
+    },
+    {
+      "municipalityName": "御船町",
+      "title": "【滝川橋】令和8年地震に伴う全面通行止めのお知らせ",
+      "url": "https://www.town.mifune.kumamoto.jp/page9400.html"
+    },
+    {
+      "municipalityName": "御船町",
       "title": "ホテル等避難のご案内",
       "url": "https://www.town.mifune.kumamoto.jp/page9393.html?type=top"
     },
@@ -630,10 +645,11 @@
       "url": "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=35&pg=1"
     }
   ],
-  "excludedCount": 52,
+  "excludedCount": 53,
   "excludedByType": {
     "duplicate_url": 50,
-    "non_official_url": 2
+    "non_official_url": 2,
+    "non_disaster_context_excluded": 1
   },
   "warningCount": 16,
   "warnings": [
@@ -719,5 +735,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 283
+  "previousClassifiedPageCount": 282
 }

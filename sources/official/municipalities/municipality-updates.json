@@ -2,7 +2,7 @@
   "metadata": {
     "event": "令和8年熊本地震",
     "disasterDate": "2026-07-28",
-    "retrievedAt": "2026-08-12T05:08:55.932Z",
+    "retrievedAt": "2026-08-12T05:27:22.381Z",
     "scope": "各市町村の公式トップページ、確認済みの地震情報集約ページ、そのページに掲載された個別記事、および集約ページのページ送りを確認。令和8年7月28日以降の日付を公式ページ上で確認できた記事リンク",
     "caveat": "公式サイトの構造・公開方式・検索可否により網羅性は保証できません。未検出は情報が存在しないことを意味しません。内容と最新状況はリンク先の一次情報で確認してください。",
     "categoryNote": "分類は記事タイトルに基づく閲覧用の便宜的な分類です。"
@@ -11,7 +11,7 @@
     {
       "name": "熊本市",
       "officialUrl": "https://www.city.kumamoto.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -309,11 +309,11 @@
           "category": "住まい・証明"
         },
         {
-          "title": "【令和8年熊本地震】「くまもとアプリ」に熊本県内の災害ボランティア募集情報を掲載しています",
-          "url": "https://www.city.kumamoto.jp/kiji00372213/index.html",
+          "title": "令和8年熊本地震で被災された方への他自治体等における公営住宅の受入れについて",
+          "url": "https://www.city.kumamoto.jp/kiji00372347/index.html",
           "date": "2026-08-08",
           "time": null,
-          "category": "支援・制度"
+          "category": "住まい・証明"
         },
         {
           "title": "令和8年熊本地震被災者へ熊本市宿泊支援事業を実施します",
@@ -377,13 +377,6 @@
           "date": "2026-08-10",
           "time": null,
           "category": "その他"
-        },
-        {
-          "title": "令和8年熊本地震で被災された方への他自治体等における公営住宅の受入れについて",
-          "url": "https://www.city.kumamoto.jp/kiji00372347/index.html",
-          "date": "2026-08-10",
-          "time": null,
-          "category": "住まい・証明"
         },
         {
           "title": "令和8年熊本地震で被害を受けた事業所の家電4品目（テレビ・エアコン・冷蔵庫・洗濯機）の処分について",
@@ -498,7 +491,6 @@
         "https://www.city.kumamoto.jp/kiji00310012/index.html",
         "https://www.city.kumamoto.jp/kiji00366571/index.html",
         "https://www.city.kumamoto.jp/kiji00372347/index.html",
-        "https://www.city.kumamoto.jp/kiji00372213/index.html",
         "https://www.city.kumamoto.jp/kiji00372265/index.html",
         "https://www.city.kumamoto.jp/kiji00372296/index.html",
         "https://www.city.kumamoto.jp/kiji00372343/index.html",
@@ -529,7 +521,8 @@
         "https://www.city.kumamoto.jp/kiji0032451/index.html",
         "https://www.city.kumamoto.jp/kiji00372292/index.html",
         "https://www.city.kumamoto.jp/kiji00372126/index.html",
-        "https://www.city.kumamoto.jp/kiji00372079/index.html"
+        "https://www.city.kumamoto.jp/kiji00372079/index.html",
+        "https://www.city.kumamoto.jp/kiji00372096/index.html"
       ],
       "pagesFetched": 80,
       "errors": []
@@ -537,7 +530,7 @@
     {
       "name": "八代市",
       "officialUrl": "https://www.city.yatsushiro.lg.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -872,14 +865,14 @@
       ],
       "pagesFetched": 80,
       "errors": [
-        "https://www.city.yatsushiro.lg.jp/kiji00326813/index.html: 404 Not Found",
-        "https://www.city.yatsushiro.lg.jp/kiji00326743/index.html: 404 Not Found"
+        "https://www.city.yatsushiro.lg.jp/kiji00326813/index.html: 404 ",
+        "https://www.city.yatsushiro.lg.jp/kiji00326743/index.html: 404 "
       ]
     },
     {
       "name": "水俣市",
       "officialUrl": "https://localcms.city.minamata.lg.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -899,16 +892,17 @@
       ],
       "sourcesChecked": [
         "https://localcms.city.minamata.lg.jp/",
+        "https://localcms.city.minamata.lg.jp/page257.html?type=top",
         "https://localcms.city.minamata.lg.jp/page4805.html?type=top",
         "https://localcms.city.minamata.lg.jp/page4789.html?type=top"
       ],
-      "pagesFetched": 3,
+      "pagesFetched": 4,
       "errors": []
     },
     {
       "name": "山鹿市",
       "officialUrl": "https://www.city.yamaga.kumamoto.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -998,7 +992,7 @@
     {
       "name": "菊池市",
       "officialUrl": "https://www.city.kikuchi.lg.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -1077,7 +1071,7 @@
     {
       "name": "宇土市",
       "officialUrl": "https://www.city.uto.lg.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -1483,7 +1477,7 @@
     {
       "name": "上天草市",
       "officialUrl": "https://www.city.kamiamakusa.kumamoto.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -1713,13 +1707,13 @@
       ],
       "pagesFetched": 39,
       "errors": [
-        "https://www.city.kamiamakusa.kumamoto.jp/q/aview/73/21563.html: 404 Not Found"
+        "https://www.city.kamiamakusa.kumamoto.jp/q/aview/73/21563.html: 404 "
       ]
     },
     {
       "name": "宇城市",
       "officialUrl": "https://www.city.uki.kumamoto.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2083,7 +2077,7 @@
     {
       "name": "天草市",
       "officialUrl": "https://www.city.amakusa.kumamoto.jp/default.html?site=1",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2287,13 +2281,13 @@
       ],
       "pagesFetched": 27,
       "errors": [
-        "https://www.city.amakusa.kumamoto.jp/kiji00314537/index.html: 404 Not Found"
+        "https://www.city.amakusa.kumamoto.jp/kiji00314537/index.html: 404 "
       ]
     },
     {
       "name": "合志市",
       "officialUrl": "https://www.city.koshi.lg.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2336,13 +2330,13 @@
       ],
       "pagesFetched": 6,
       "errors": [
-        "https://www.city.koshi.lg.jp/kiji00313268/index.html: 404 Not Found"
+        "https://www.city.koshi.lg.jp/kiji00313268/index.html: 404 "
       ]
     },
     {
       "name": "美里町",
       "officialUrl": "https://www.town.kumamoto-misato.lg.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2391,7 +2385,7 @@
     {
       "name": "大津町",
       "officialUrl": "https://www.town.ozu.kumamoto.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2496,7 +2490,7 @@
     {
       "name": "菊陽町",
       "officialUrl": "https://www.town.kikuyo.lg.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2661,13 +2655,13 @@
       ],
       "pagesFetched": 30,
       "errors": [
-        "https://www.town.kikuyo.lg.jp/kiji0035654/index.html: 404 Not Found"
+        "https://www.town.kikuyo.lg.jp/kiji0035654/index.html: 404 "
       ]
     },
     {
       "name": "西原村",
       "officialUrl": "https://www.vill.nishihara.kumamoto.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "not-found-by-collector",
       "updates": [],
       "sourcesChecked": [
@@ -2679,9 +2673,72 @@
     {
       "name": "御船町",
       "officialUrl": "https://www.town.mifune.kumamoto.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
+        {
+          "title": "【重要】7月28日に発生した地震に伴う御船町公共施設の利用について",
+          "url": "https://www.town.mifune.kumamoto.jp/page9350.html",
+          "date": "2026-07-28",
+          "time": "19:00",
+          "category": "施設・学校"
+        },
+        {
+          "title": "【重要】7月28日に発生した地震に伴う御船町公共施設の利用について（7月29日時点）",
+          "url": "https://www.town.mifune.kumamoto.jp/page9360.html",
+          "date": "2026-07-29",
+          "time": null,
+          "category": "施設・学校"
+        },
+        {
+          "title": "【重要】7月28日に発生した地震に伴う御船町公共施設の利用について※一部利用再開（7月31日時点）",
+          "url": "https://www.town.mifune.kumamoto.jp/page9376.html",
+          "date": "2026-07-31",
+          "time": null,
+          "category": "施設・学校"
+        },
+        {
+          "title": "御船町災害ボランティアセンターの開設について",
+          "url": "https://www.town.mifune.kumamoto.jp/page9379.html",
+          "date": "2026-07-31",
+          "time": "20:34",
+          "category": "支援・制度"
+        },
+        {
+          "title": "令和8年熊本地震に伴う災害ゴミ仮置場の開設時間の変更について",
+          "url": "https://www.town.mifune.kumamoto.jp/page9389.html",
+          "date": "2026-08-04",
+          "time": "18:01",
+          "category": "その他"
+        },
+        {
+          "title": "令和8年熊本地震に伴う罹災証明交付申請について",
+          "url": "https://www.town.mifune.kumamoto.jp/page9346.html",
+          "date": "2026-08-04",
+          "time": "21:00",
+          "category": "住まい・証明"
+        },
+        {
+          "title": "「令和8年熊本地震」によるがけ崩れ等の調査について",
+          "url": "https://www.town.mifune.kumamoto.jp/page9397.html",
+          "date": "2026-08-05",
+          "time": "16:59",
+          "category": "その他"
+        },
+        {
+          "title": "県営住宅の一時的な入居【令和8年熊本地震被災者向け】",
+          "url": "https://www.town.mifune.kumamoto.jp/page9398.html",
+          "date": "2026-08-06",
+          "time": "18:51",
+          "category": "住まい・証明"
+        },
+        {
+          "title": "【滝川橋】令和8年地震に伴う全面通行止めのお知らせ",
+          "url": "https://www.town.mifune.kumamoto.jp/page9400.html",
+          "date": "2026-08-07",
+          "time": "12:14",
+          "category": "避難・安全"
+        },
         {
           "title": "令和8年熊本地震に係る賃貸型応急住宅（みなし仮設住宅）のお知らせ",
           "url": "https://www.town.mifune.kumamoto.jp/page9394.html?type=top",
@@ -2725,30 +2782,47 @@
           "category": "ごみ・生活"
         },
         {
-          "title": "【8月12日11時00分現在】罹災証明申請窓口の混雑状況について",
+          "title": "【8月12日14時30分現在】罹災証明申請窓口の混雑状況について",
           "url": "https://www.town.mifune.kumamoto.jp/page9406.html?type=top",
           "date": "2026-08-12",
-          "time": "11:00",
+          "time": "14:30",
           "category": "住まい・証明"
         }
       ],
       "sourcesChecked": [
         "https://www.town.mifune.kumamoto.jp/",
-        "https://www.town.mifune.kumamoto.jp/page9354.html?type=top",
+        "https://www.town.mifune.kumamoto.jp/hpkiji/pub/list.aspx?c_id=3&class_id=1008&class_set_id=1",
+        "https://www.town.mifune.kumamoto.jp/hpkiji/pub/HpKijiListPagerHandler.ashx?c_id=3&class_id=1008&class_set_id=1&pg=2&kbn=newlist&top_id=0",
+        "https://www.town.mifune.kumamoto.jp/hpkiji/pub/HpKijiListPagerHandler.ashx?c_id=3&class_set_id=1&class_id=1008&kbn=newlist&top_id=0&pg=3",
         "https://www.town.mifune.kumamoto.jp/page9406.html?type=top",
+        "https://www.town.mifune.kumamoto.jp/page9354.html?type=top",
         "https://www.town.mifune.kumamoto.jp/page9404.html?type=top",
         "https://www.town.mifune.kumamoto.jp/page9393.html?type=top",
         "https://www.town.mifune.kumamoto.jp/page9372.html?type=top",
         "https://www.town.mifune.kumamoto.jp/page9405.html?type=top",
-        "https://www.town.mifune.kumamoto.jp/page9394.html?type=top"
+        "https://www.town.mifune.kumamoto.jp/page9394.html?type=top",
+        "https://www.town.mifune.kumamoto.jp/page9406.html",
+        "https://www.town.mifune.kumamoto.jp/page9404.html",
+        "https://www.town.mifune.kumamoto.jp/page9393.html",
+        "https://www.town.mifune.kumamoto.jp/page9394.html",
+        "https://www.town.mifune.kumamoto.jp/page9400.html",
+        "https://www.town.mifune.kumamoto.jp/page9346.html",
+        "https://www.town.mifune.kumamoto.jp/page9376.html",
+        "https://www.town.mifune.kumamoto.jp/page9360.html",
+        "https://www.town.mifune.kumamoto.jp/page9350.html",
+        "https://www.town.mifune.kumamoto.jp/page8998.html",
+        "https://www.town.mifune.kumamoto.jp/page9398.html",
+        "https://www.town.mifune.kumamoto.jp/page9397.html",
+        "https://www.town.mifune.kumamoto.jp/page9389.html",
+        "https://www.town.mifune.kumamoto.jp/page9379.html"
       ],
-      "pagesFetched": 8,
+      "pagesFetched": 25,
       "errors": []
     },
     {
       "name": "嘉島町",
       "officialUrl": "https://www.town.kumamoto-kashima.lg.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2868,13 +2942,13 @@
       ],
       "pagesFetched": 20,
       "errors": [
-        "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6044.html: 404 Not Found"
+        "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6044.html: 404 "
       ]
     },
     {
       "name": "益城町",
       "officialUrl": "https://www.town.mashiki.lg.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3159,13 +3233,13 @@
       ],
       "pagesFetched": 59,
       "errors": [
-        "https://www.town.mashiki.lg.jp/bousai/list01014.html: 404 Not Found"
+        "https://www.town.mashiki.lg.jp/bousai/list01014.html: 404 "
       ]
     },
     {
       "name": "甲佐町",
       "officialUrl": "https://www.town.kosa.lg.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3388,15 +3462,15 @@
       ],
       "pagesFetched": 51,
       "errors": [
-        "https://www.town.kosa.lg.jp/q/aview/51/13607.html: 404 Not Found",
-        "https://www.town.kosa.lg.jp/q/aview/51/13604.html: 404 Not Found",
-        "https://www.town.kosa.lg.jp/q/aview/51/13540.html: 404 Not Found"
+        "https://www.town.kosa.lg.jp/q/aview/51/13607.html: 404 ",
+        "https://www.town.kosa.lg.jp/q/aview/51/13604.html: 404 ",
+        "https://www.town.kosa.lg.jp/q/aview/51/13540.html: 404 "
       ]
     },
     {
       "name": "氷川町",
       "officialUrl": "https://www.town.hikawa.kumamoto.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3766,7 +3840,7 @@
     {
       "name": "芦北町",
       "officialUrl": "https://www.town.ashikita.lg.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3786,7 +3860,7 @@
     {
       "name": "津奈木町",
       "officialUrl": "https://www.town.tsunagi.lg.jp/",
-      "checkedAt": "2026-08-12T05:08:55.932Z",
+      "checkedAt": "2026-08-12T05:27:22.381Z",
       "status": "confirmed",
       "updates": [
         {

@@ -4,8 +4,9 @@ import { fileURLToPath } from "node:url";
 import { canonical, categories } from "./build-municipality-reconstruction-nav.mjs";
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
+const domainAllowlist=JSON.parse(fs.readFileSync(path.join(root,"config/municipality-official-domain-allowlist.json"),"utf8")).domains||[];
 const allowedConfidence=new Set(["high","medium","low"]),allowedStatus=new Set(["active","inactive","candidate_for_removal"]);
-const hostAllowed=(url,official)=>{try{const a=new URL(url).hostname,b=new URL(official).hostname;return a===b||a.endsWith(`.${b}`)||b.endsWith(`.${a}`)}catch{return false}};
+const hostAllowed=(url,official)=>{try{const a=new URL(url).hostname,b=new URL(official).hostname;return a===b||a.endsWith(`.${b}`)||b.endsWith(`.${a}`)||domainAllowlist.some(item=>item.officialDomain===b&&(a===item.domain||a.endsWith(`.${item.domain}`)))}catch{return false}};
 const validDate=value=>value===null||value===undefined||(!Number.isNaN(Date.parse(value))&&/^\d{4}-\d{2}-\d{2}/.test(value));
 export function validateNav(data,master,{inputCount=0,now=new Date()}={}){
   const errors=[],warnings=[]; const known=new Map(master.map(m=>[m.id,m]));

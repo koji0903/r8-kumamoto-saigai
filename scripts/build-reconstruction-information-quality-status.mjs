@@ -1,0 +1,58 @@
+import fs from "node:fs";
+import {categories,canonical} from "./build-municipality-reconstruction-nav.mjs";
+import {freshnessDecision} from "./reconstruction-operations-policy.mjs";
+
+const read=file=>JSON.parse(fs.readFileSync(file,"utf8"));
+const nav=read("public-data/reconstruction/municipality-official-navigation.json");
+const source=read("sources/official/municipalities/municipality-updates.json");
+const quality=read("reports/municipality-official-navigation-quality.json");
+const search=read("public-data/reconstruction/official-search-index.json");
+const overrides=read("config/municipality-classification-overrides.json").overrides||[];
+const domainAllowlist=read("config/municipality-official-domain-allowlist.json").domains||[];
+const strictSources=read("data/reconstruction/sources.json");
+const baseline=read("reports/reconstruction-source-baseline.json");
+const labels={home:"住まい",money:"お金・支払い",documents:"証明・申請",health_care:"健康・介護",family_education:"子ども・家族",work_business:"仕事・事業",agriculture_fishery:"農業・漁業",daily_life:"暮らし・移動"};
+const visible=item=>item.status==="active"&&item.classificationConfidence!=="low";
+const visibleInCategory=(item,category)=>item.status==="active"&&item.classification?.some(entry=>entry.category===category&&entry.confidence!=="low");
+const all=nav.municipalities.flatMap(m=>m.updates.map(item=>({...item,municipalityId:m.municipalityId,municipalityName:m.municipalityName})));
+const display=all.filter(visible);
+const nationalCategories=new Set(search.items.filter(item=>!item.municipalityId).flatMap(item=>item.categories));
+const matrix=nav.municipalities.map(m=>({name:m.municipalityName,id:m.municipalityId,cells:Object.fromEntries(categories.map(category=>{const count=m.updates.filter(item=>visibleInCategory(item,category)).length;return [category,{grade:count?"A":nationalCategories.has(category)?"B":"C",count}]}))}));
+const domains=new Set(nav.municipalities.map(m=>new URL(m.officialUrl).hostname));
+const unofficial=all.filter(item=>{try{const m=nav.municipalities.find(x=>x.municipalityId===item.municipalityId);const a=new URL(item.url).hostname,b=new URL(m.officialUrl).hostname;return !(a===b||a.endsWith(`.${b}`)||b.endsWith(`.${a}`)||domainAllowlist.some(entry=>entry.municipalityId===item.municipalityId&&(a===entry.domain||a.endsWith(`.${entry.domain}`))));}catch{return true;}});
+const duplicate=[];for(const m of nav.municipalities){const seen=new Set();for(const item of m.updates){const key=canonical(item.url);if(seen.has(key))duplicate.push(item.url);seen.add(key);}}
+const past=all.filter(item=>/平成28年熊本地震|令和2年7月豪雨|令和2年豪雨|令和7年8月豪雨/.test(item.officialTitle||""));
+const freshness={fresh:0,stale:0,unknown:0};for(const item of display)freshness[freshnessDecision({informationPhase:item.informationPhase,publishedAt:item.publishedAt,now:Date.parse(nav.generatedAt)}).state]++;
+const sourceByName=new Map(source.municipalities.map(m=>[m.name,m]));
+const retrieval404=[];for(const m of source.municipalities)for(const error of m.errors||[])if(/: 404 /.test(error))retrieval404.push({municipality:m.name,url:error.replace(/: 404.*$/,""),state:"収集巡回中の単発404。表示カードとは限らない"});
+const redirects=all.flatMap(item=>(item.redirectHistory||[]).map(entry=>({municipality:item.municipalityName,url:item.url,entry})));
+const changedSources=strictSources.filter(item=>baseline[item.id]!==item.contentHash);
+const pdfs=source.municipalities.flatMap(m=>m.updates.filter(x=>/\.pdf(?:$|\?)/i.test(x.url)).map(x=>({municipality:m.name,...x})));
+const fallbackOnly=matrix.flatMap(row=>categories.filter(category=>row.cells[category].grade==="C").map(category=>({municipality:row.name,category})));
+const warnings=[];
+for(const m of source.municipalities)if(m.status!=="confirmed"||m.errors?.length)warnings.push(`${m.name}: ${m.status} / 取得エラー ${m.errors?.length||0}件`);
+if(quality.unclassifiedCount)warnings.push(`未分類 ${quality.unclassifiedCount}件。重要語の取りこぼしを週次確認`);
+if(retrieval404.length)warnings.push(`収集巡回中の404候補 ${retrieval404.length}件。連続失敗回数をまだ永続保持していない`);
+if(freshness.stale)warnings.push(`表示候補のうち機械的freshness判定でstale ${freshness.stale}件。自動削除せず公式原文を確認`);
+const actions=[];
+if(unofficial.length)actions.push(`非公式URL ${unofficial.length}件`);
+if(past.length)actions.push(`過去災害の明確なタイトル混入 ${past.length}件`);
+if(changedSources.length)actions.push(`厳密情報source変更 ${changedSources.length}件`);
+if(nav.municipalities.some(m=>!m.officialUrl))actions.push("fallback欠落");
+
+const lines=[];
+lines.push("# 暮らしの再建 情報品質ステータス",``, `最終監査日時: 2026-08-12（データ生成: ${nav.generatedAt}）`,``,"> 件数の少なさは支援の少なさを意味しません。自治体の発信方法・ページ構造・更新頻度の差として扱います。A/B/Cは品質状態であり自治体評価ではありません。","","## ACTION_REQUIRED",actions.length?actions.map(x=>`- ${x}`).join("\n"):"- なし","","## WARNING（上位）",...warnings.map(x=>`- ${x}`),"","## 現在の公式情報件数",`- collector入力: ${quality.inputCount}件`,`- classified: ${quality.classifiedPageCount}件`,`- 通常表示候補: ${quality.displayCandidateCount}件`,`- 検索index: ${search.count}件`,`- 未分類: ${quality.unclassifiedCount}件`,`- 除外・重複: ${quality.excludedCount}件`,`- confidence: high ${quality.confidence.high} / medium ${quality.confidence.medium} / low ${quality.confidence.low}`,`- fallback: ${nav.municipalities.filter(m=>m.officialUrl).length}/21`,`- manual override: ${overrides.length}件`);
+lines.push("","### 自治体別件数","","| 自治体 | collector | classified | 表示候補 | fallback | 取得状態 |","| --- | ---: | ---: | ---: | --- | --- |");for(const m of nav.municipalities){const s=sourceByName.get(m.municipalityName);lines.push(`| ${m.municipalityName} | ${s?.updates.length||0} | ${m.updates.length} | ${m.updates.filter(visible).length} | ${m.officialUrl?"あり":"欠落"} | ${s?.status||"不明"} |`)}
+lines.push("","### カテゴリ別件数","","| カテゴリ | 全分類 | high | medium | low | 通常表示候補 |","| --- | ---: | ---: | ---: | ---: | ---: |");for(const category of categories){const r=quality.categoryReport[category];lines.push(`| ${labels[category]} | ${r.total} | ${r.high} | ${r.medium} | ${r.low} | ${all.filter(x=>visibleInCategory(x,category)).length} |`)}
+lines.push("","## 21市町村×8カテゴリ品質マトリクス","","A=自治体個別公式情報あり、B=国・県等の広域情報のみ、C=公式fallbackのみ、D=公式到達不能・不正。複数カテゴリに分類される1ページは各セルへ数えます。","",`| 自治体 | ${categories.map(c=>labels[c]).join(" | ")} |`,`| --- | ${categories.map(()=>"---").join(" | ")} |`);for(const row of matrix)lines.push(`| ${row.name} | ${categories.map(c=>`${row.cells[c].grade}${row.cells[c].count?`(${row.cells[c].count})`:""}`).join(" | ")} |`);
+lines.push("","## 収集・公式性監査",`- 公式domain: ${domains.size}自治体domain。通常表示URLは自治体公式domainとの同一・サブdomain関係を必須化`,`- 外部公式サービスallowlist: ${domainAllowlist.length}件（自治体・用途・根拠URL・確認日を設定ファイルに記録）`,`- 非公式URL混入: ${unofficial.length}件`,`- SNS: 0件。公式Webと混在させていない`,`- 過去災害の明確なタイトル混入: ${past.length}件`,`- PDF: ${pdfs.length}件。タイトル・主体・URL・公開日・カテゴリのみ扱い、本文から制度条件を生成しない`,`- duplicate: ${duplicate.length}件`,`- redirect履歴: ${redirects.length}件`,`- 404候補: ${retrieval404.length}件（collector巡回時。表示リンクの継続404判定とは分離）`);
+lines.push("","### 入口・収集漏れリスク","- 全21自治体で公式トップを収集入口にしている。確認済み災害特設・緊急・重要ページは明示hubとして優先する。","- 水俣市の公式災害一覧と御船町の公式災害情報一覧を明示hubへ追加した。水俣市の別公式ホストは根拠付きallowlistで管理する。","- 明示hubがない自治体ではトップ・新着構造への依存が強い。西原村はcollector 0件のため週次確認を優先する。","- JavaScript描画が取得できない場合は無理なスクレイピングを追加せず公式トップfallbackを維持する。","- 深度上限は1自治体80ページ。災害hub・関連語を持つ記事だけを辿り、無制限巡回しない。","- サイト内検索にしか出ない情報の網羅性は保証できない。未検出を支援なしと解釈しない。" );
+lines.push("","## 分類品質","- 各カテゴリのhigh 5、medium 3、low 2（存在する範囲）をタイトル・根拠語で抽出監査した。全件人手確認ではないため精度率は算出しない。","- home: 応急修理・仮設住宅等は妥当。平時住宅募集は確認されず。","- money: 災害支援金・減免を表示。lowの一般的な『支援・制度』継承は非表示。","- documents: 罹災証明・災害申請を表示。lowは非表示。","- health_care: 『障害物』の『障害』部分一致を除外するよう修正。","- family_education: 入浴会場名の『中学校』だけでは教育分類しないよう修正。","- work_business: 被災事業者・雇用情報を表示。","- agriculture_fishery: 災害語のない物価高騰等の平時候補を除外するよう修正。","- daily_life: 断水・給水・道路・ごみ等。速報性が高いためstale警告と公式原文確認を優先。","- low confidenceは検索index・通常表示から除外済み。mediumは表示対象のため週次サンプル監査を続ける。" );
+lines.push("","## source・freshness・障害耐性",`- freshness（生成時点の機械判定）: fresh ${freshness.fresh} / stale ${freshness.stale} / unknown ${freshness.unknown}`,"- staleは自動削除しない。速報は公式ページで最新状況を確認する前提を維持する。","- `publishedAt`を`retrievedAt`より優先。日付なしはエラーにしない。","- LEVEL 2公式リンクの変更は正常。LEVEL 1 verified sourceのhash変更は`needs_review`へ送る。",`- verified source変更: ${changedSources.length}件`,"- refreshは自治体別errorsを保持し、空データ・fallback欠落・非公式URLをfailureにする。","- 1自治体失敗時も既存データを空上書きしない設計を維持。生成は一時ファイルからrenameし、検証不合格時は公開しない。","- ただし一般公式リンクの連続失敗回数は永続化されていない。単発404と継続404の自動判別は残る運用課題。" );
+lines.push("","## 検索品質","- official-navと同じくlow、非公開、needs_review、source_unreachable、fixtureを除外する。","- 代表語（家・住宅・修理／お金・税金・支援金／罹災証明・申請／健康・介護・薬／学校・子ども・保育／仕事・休業・事業／農業・漁業・農地／水道・ごみ・道路）を回帰テストする。","- 同義語辞書は表記揺れに限定し、利用ログを取らず根拠のない大量語追加をしない。","- verified制度情報は`sourceType=verified_program`として公式リンクと区別し、公式リンクを制度内容検証済みと扱わない。" );
+lines.push("","## 監査周期","### 日次（約5分）","- refresh成功、全件0でない、非公式URL0、21/21 fallback、ACTION_REQUIREDを確認。","### 週次","- 未分類、medium/low、404、redirect、stale、override、自治体・カテゴリ件数増減を確認。","### 月次相当","- 分類辞書、収集hub、使われなくなった速報、sitePhase、古いページを見直す。" );
+lines.push("","## 品質KPI","- 公式fallback 21/21","- 非公式URL 0","- 全件0異常検知","- 過去災害の明確な混入 0","- 壊れた内部リンク 0","- ACTION_REQUIRED未処理時間","","PV、滞在時間、困りごとの内容、公開制度数を品質KPIにしない。" );
+lines.push("","## 訂正フロー","1. 指摘内容を記録する。","2. 一次情報を確認する。口頭情報だけで制度条件を変更しない。","3. 重大な誤誘導なら該当カードを一時非表示にする。","4. データまたは分類を最小修正する。","5. validationと回帰テストを実行する。","6. deployする。","7. 本番表示と一次情報への到達を再確認する。","","現場情報は公式情報として表示せず、必要なら災害記録側の別情報種別で扱う。" );
+lines.push("","## 残るリスクと次のステップ","- 収集網羅性は自治体CMSと公式hubの公開方法に依存する。西原村と、明示hub追加後も分類候補0件の水俣市を次回週次監査の重点とする。","- 404候補は新URL発見と連続失敗記録を人手で確認する。fallbackは維持する。","- medium、変更URL、速報、PDFを優先して人手確認し、全ページ確認や精度率の推定は行わない。","- 新機能ではなく、公式情報の鮮度・分類・リンク・fallbackの改善を継続する。" );
+fs.writeFileSync("docs/reconstruction-information-quality-status.md",`${lines.join("\n")}\n`);
+console.log(`情報品質ステータス: ${quality.inputCount}入力 / ${quality.displayCandidateCount}表示候補 / ACTION_REQUIRED ${actions.length} / WARNING ${warnings.length}`);

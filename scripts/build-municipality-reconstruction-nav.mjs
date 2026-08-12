@@ -8,6 +8,7 @@ const masterPath = process.env.MUNICIPALITY_MASTER_INPUT || path.join(root, "dat
 const output = process.env.MUNICIPALITY_NAV_OUTPUT || path.join(root, "public-data/reconstruction/municipality-official-navigation.json");
 const overridePath=process.env.MUNICIPALITY_OVERRIDE_INPUT||path.join(root,"config/municipality-classification-overrides.json");
 const manualOverrides=fs.existsSync(overridePath)?JSON.parse(fs.readFileSync(overridePath,"utf8")).overrides||[]:[];
+const domainAllowlist=JSON.parse(fs.readFileSync(path.join(root,"config/municipality-official-domain-allowlist.json"),"utf8")).domains||[];
 export const categories = ["home","money","documents","health_care","family_education","work_business","agriculture_fishery","daily_life"];
 export const keywords = {
   home: ["応急修理","緊急修理","仮設住宅","みなし仮設","賃貸型応急住宅","公営住宅","住宅","住まい","修理","解体","ブルーシート","被災住宅","宅地","建物","住宅相談"],
@@ -22,14 +23,20 @@ export const keywords = {
 const pastDisasterTerms=["平成28年熊本地震","令和2年7月豪雨","令和2年豪雨","過去の台風"];
 const legacy = {"住まい・証明":["home","documents"],"ごみ・生活":["daily_life"],"ライフライン":["daily_life"],"施設・学校":["family_education"],"支援・制度":["money"]};
 const generalConsultationTerms=["被災者相談","総合相談","災害相談","生活相談","生活再建相談","支援相談","各種相談","被災者支援窓口"];
-const hostAllowed = (url, official) => { try { const a=new URL(url).hostname,b=new URL(official).hostname; return a===b||a.endsWith(`.${b}`)||b.endsWith(`.${a}`); } catch { return false; } };
+const hostAllowed = (url, official, municipalityId) => { try { const a=new URL(url).hostname,b=new URL(official).hostname; return a===b||a.endsWith(`.${b}`)||b.endsWith(`.${a}`)||domainAllowlist.some(item=>item.municipalityId===municipalityId&&(a===item.domain||a.endsWith(`.${item.domain}`))); } catch { return false; } };
 export const canonical = value => { try { const u=new URL(value); u.hash=""; u.protocol="https:"; [...u.searchParams.keys()].filter(key=>/^utm_/i.test(key)||["fbclid","gclid"].includes(key)).forEach(key=>u.searchParams.delete(key)); u.pathname=u.pathname!=="/"?u.pathname.replace(/\/$/,""):u.pathname; return u.toString(); } catch { return value; } };
 export function classify(update) {
   const override=manualOverrides.find(item=>canonical(item.url)===canonical(update.url));
   if(override)return (override.categories||[]).map(category=>({category,confidence:"high",evidence:[`manual_override:${override.reason}`]}));
   const haystack=`${update.title||""} ${update.url||""}`.normalize("NFKC");
   const scores=new Map(), evidence={};
-  for (const category of categories) for (const word of keywords[category]) if (haystack.includes(word)) { scores.set(category,(scores.get(category)||0)+2); (evidence[category] ||= []).push(word); }
+  for (const category of categories) for (const word of keywords[category]) {
+    if(!haystack.includes(word))continue;
+    // 「障害物」を障がい福祉、「入浴会場の中学校」を教育情報として扱わない。
+    if(category==="health_care"&&word==="障害"&&haystack.includes("障害物"))continue;
+    if(category==="family_education"&&["学校","中学校"].includes(word)&&/入浴|シャワー/.test(haystack)&&!/休校|授業|登校|給食|教育|児童|生徒/.test(haystack))continue;
+    scores.set(category,(scores.get(category)||0)+2); (evidence[category] ||= []).push(word);
+  }
   for (const category of legacy[update.category]||[]) { scores.set(category,(scores.get(category)||0)+1); (evidence[category] ||= []).push(`既存カテゴリ:${update.category}`); }
   return [...scores].sort((a,b)=>b[1]-a[1]).map(([category,score])=>({category,confidence:score>=4?"high":score>=2?"medium":"low",evidence:evidence[category]}));
 }
@@ -52,9 +59,11 @@ export function build(source, master) {
     for(const update of municipality.updates||[]){
       if(!String(update.title||"").trim()){issues.push({type:"missing_title",municipality:meta.name,url:update.url||null});continue;}
       if(pastDisasterTerms.some(term=>String(update.title).includes(term))){issues.push({type:"past_disaster_excluded",municipality:meta.name,url:update.url});continue;}
-      if(!hostAllowed(update.url,meta.officialUrl)){issues.push({type:"non_official_url",municipality:meta.name,url:update.url});continue;}
+      if(!hostAllowed(update.url,meta.officialUrl,meta.id)){issues.push({type:"non_official_url",municipality:meta.name,url:update.url});continue;}
       const key=canonical(update.url); if(seen.has(key)){issues.push({type:"duplicate_url",municipality:meta.name,url:update.url});continue;} seen.add(key);
-      const direct=/令和8年熊本地震|令和８年熊本地震|災害|被災|地震/.test(update.title); const serviceTags=direct&&generalConsultationTerms.some(term=>update.title.includes(term))?["general_consultation"]:[]; const classification=classify(update); if(!classification.length&&!serviceTags.length) continue;
+      const direct=/令和8年熊本地震|令和８年熊本地震|災害|被災|地震/.test(update.title); const serviceTags=direct&&generalConsultationTerms.some(term=>update.title.includes(term))?["general_consultation"]:[];
+      if(!direct&&/物価高騰|定例講習|通常募集/.test(update.title)){issues.push({type:"non_disaster_context_excluded",municipality:meta.name,url:update.url});continue;}
+      const classification=classify(update); if(!classification.length&&!serviceTags.length) continue;
       const urgency=/給水|断水|停電|避難所|休校|運休|通行止/.test(update.title)?"emergency":"reconstruction"; const confidence=classification.some(x=>x.confidence==="high")||serviceTags.length?"high":classification.some(x=>x.confidence==="medium")?"medium":"low"; const publishedAt=update.date?(update.time?`${update.date}T${update.time}:00+09:00`:update.date):null; const ageDays=publishedAt?Math.max(0,(Date.now()-Date.parse(publishedAt))/86400000):365;
       updates.push({officialTitle:update.title,originalTitle:update.title,displayTitle:update.title,url:update.url,originalUrl:update.url,redirectHistory:[],officialDomain:new URL(meta.officialUrl).hostname,publisher:meta.name,publisherGroup:"municipality",sourceType:"municipal_official",serviceTags,status:"active",disasterRelevance:direct?"direct":"inherited_from_disaster_collector",disasterRelevanceEvidence:[direct?"disaster_keyword":"disaster_collection_source"],informationPhase:urgency,publishedAt,updatedAt:null,retrievedAt:municipality.checkedAt||source.metadata?.retrievedAt||null,categories:classification.map(x=>x.category),classificationConfidence:confidence,classification,displayPriority:(direct?30:10)+(confidence==="high"?20:confidence==="medium"?10:0)+Math.max(0,10-Math.floor(ageDays/7)),urlCheck:{state:"inherited_from_collector",checkedAt:municipality.checkedAt||null}});
     }
