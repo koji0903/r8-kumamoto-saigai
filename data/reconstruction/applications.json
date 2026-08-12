@@ -33,9 +33,9 @@
     "effectiveUntil": null,
     "eligibleDamage": ["全壊（修理により居住可能となる場合）", "大規模半壊", "中規模半壊", "半壊", "準半壊"],
     "eligibilityConditions": [
-      {"condition":"大規模半壊、または中規模半壊・半壊・準半壊で自らの資力では応急修理できないこと","scope":"household"},
-      {"condition":"日常生活に必要な部分の被害により、現状では住めないこと","scope":"housing"},
-      {"condition":"応急修理を行うことで住めるようになると見込まれること","scope":"housing"}
+      {"id":"condition_repair_damage_and_resources","field":"housing_damage","description":"大規模半壊、または中規模半壊・半壊・準半壊で自らの資力では応急修理できないこと","plainLanguageDescription":"住家被害区分と、修理費を自力で負担できるかについて条件があります。市町村が公式書類等で確認します。","operator":"description_only","value":null,"logicalGroup":"repair_eligibility","groupOperator":"AND","certainty":"confirmed","scope":"disaster_application","municipalityIds":[],"sourceLinkIds":["source_link_application_repair_eligibility","source_link_application_repair_damage"],"checkedAt":"2026-08-09T18:03:00+09:00","verificationStatus":"partially_verified"},
+      {"id":"condition_repair_current_habitability","field":"residency_status","description":"日常生活に必要な部分の被害により、現状では住めないこと","plainLanguageDescription":"今の状態で生活できるかを確認します。本サイトは写真や自己申告から判定しません。","operator":"description_only","value":null,"logicalGroup":"repair_eligibility","groupOperator":"AND","certainty":"confirmed","scope":"disaster_application","municipalityIds":[],"sourceLinkIds":["source_link_application_repair_eligibility","source_link_application_repair_scope"],"checkedAt":"2026-08-09T18:03:00+09:00","verificationStatus":"partially_verified"},
+      {"id":"condition_repair_expected_habitability","field":"residency_status","description":"応急修理を行うことで住めるようになると見込まれること","plainLanguageDescription":"必要な部分を修理した後、その家で生活できる見込みを市町村へ確認します。","operator":"description_only","value":null,"logicalGroup":"repair_eligibility","groupOperator":"AND","certainty":"confirmed","scope":"disaster_application","municipalityIds":[],"sourceLinkIds":["source_link_application_repair_eligibility"],"checkedAt":"2026-08-09T18:03:00+09:00","verificationStatus":"partially_verified"}
     ],
     "specialRules": "全壊は原則対象外ですが、修理により居住可能となる場合は対象となり得ます。中規模半壊以下の資力要件は『資力に関する申出書』で確認されます。",
     "supportDescription": "市町村が修理業者へ依頼し、屋根等の基本部分、ドア等の開口部、上下水道等の配管・配線、トイレ等の衛生設備など、日常生活に必要な最小限度の部分を修理します。",

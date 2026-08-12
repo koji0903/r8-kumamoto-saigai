@@ -12,7 +12,7 @@ const pdfChanged = { kind: "pdf", status: 200, finalUrl: pdfPrevious.url, redire
 assert.equal(classifyFetch(previous, { ...htmlChanged, hash: previous.contentHash }, ["amount"]).eventType, "unchanged");
 assert.deepEqual(classifyFetch(previous, htmlChanged, ["amount"]), { eventType: "content_changed", status: "ACTION_REQUIRED", risk: "high", changed: true });
 assert.equal(classifyFetch(pdfPrevious, pdfChanged, ["deadline"]).eventType, "pdf_replaced");
-for (const claim of ["amount", "deadline", "eligibility", "required_document", "contact", "warning"]) assert.equal(riskForClaims([claim]), "high", claim);
+for (const claim of ["amount", "deadline", "eligibility", "required_document", "required_documents", "contact", "application_method", "warning"]) assert.equal(riskForClaims([claim]), "high", claim);
 assert.equal(riskForClaims(["benefit"]), "medium");
 assert.equal(riskForClaims(["general_description"]), "low");
 assert.equal(classifyFetch(previous, { kind: "html", status: 404 }, ["amount"]).status, "WARNING", "単発404");

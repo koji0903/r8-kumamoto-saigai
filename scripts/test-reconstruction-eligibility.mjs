@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import { isPublicCondition, findConditionConflicts } from "./reconstruction-eligibility-policy.mjs";
+const applications=JSON.parse(fs.readFileSync("data/reconstruction/applications.json","utf8"));
+const statuses=JSON.parse(fs.readFileSync("data/reconstruction/municipality-application-statuses.json","utf8"));
+const links=new Map(JSON.parse(fs.readFileSync("data/reconstruction/source-links.json","utf8")).map(x=>[x.id,x]));
+const sources=new Map(JSON.parse(fs.readFileSync("data/reconstruction/sources.json","utf8")).map(x=>[x.id,x]));
+const base={id:"condition_fixture",field:"housing_damage",description:"条件",plainLanguageDescription:"主な条件",operator:"description_only",value:null,logicalGroup:"g",groupOperator:"AND",certainty:"confirmed",scope:"disaster_application",municipalityIds:[],sourceLinkIds:[],checkedAt:"2026-08-12T00:00:00+09:00",verificationStatus:"verified"};
+assert.equal(isPublicCondition(base,links,sources),false,"A: 根拠なし条件は公開不可");
+assert.equal(isPublicCondition({...base,certainty:"pending"},links,sources),false,"B: pendingは公開不可");
+assert.equal(isPublicCondition({...base,certainty:"unknown"},links,sources),false,"C: unknownは公開不可");
+assert.equal(isPublicCondition({...base,certainty:"conflict"},links,sources),false,"D: conflictは公開不可");
+assert.equal(isPublicCondition({...base,checkedAt:null},links,sources),false,"E: 未確認日時は公開不可");
+assert.equal(isPublicCondition({...base,scope:"municipal",municipalityIds:["municipality_uto"]},links,sources,"municipality_kumamoto"),false,"F: 他自治体へ流用不可");
+assert.ok(findConditionConflicts([{...base,id:"a",operator:"equals",value:"a"},{...base,id:"b",operator:"equals",value:"b"}]).length,"G: AND矛盾を検出");
+assert.ok(findConditionConflicts([{...base,id:"a",groupOperator:"AND"},{...base,id:"b",groupOperator:"OR"}]).length,"H: AND/OR混在を検出");
+assert.ok(applications.every(a=>(a.eligibilityConditions||[]).every(c=>c.plainLanguageDescription)),"I: やさしい説明が必要");
+assert.ok(statuses.every(s=>(s.localEligibilityConditions||[]).every(c=>c.scope==="municipal")),"J: 自治体条件はmunicipal");
+const publicBuilder=fs.readFileSync("scripts/build-reconstruction-public-data.js","utf8");
+assert.match(publicBuilder,/slice\(0, 4\)/,"K: 主な条件は最大4件");
+for(const forbidden of [/type=["'](?:checkbox|radio)/i,/localStorage\b/,/sessionStorage\b/,/対象です|対象外です/]) assert.doesNotMatch(publicBuilder,forbidden,"L: 判定UI・保存・断定を作らない");
+console.log("対象条件のfixtures A-L、自治体分離、判定誤認防止を確認しました");

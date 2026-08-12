@@ -5,7 +5,7 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["id", "applicationId", "municipalityId", "implementationStatus", "receptionStatus", "applicationMethodStatus", "contactStatus", "localGuidanceStatus", "contactPointIds", "applicationPeriodIds", "requiredDocumentIds", "sourceLinkIds", "verificationStatus", "freshnessStatus", "lastCheckedAt", "notes"],
+    "required": ["id", "applicationId", "municipalityId", "implementationStatus", "receptionStatus", "applicationMethodStatus", "contactStatus", "localGuidanceStatus", "localEligibilityConditions", "contactPointIds", "applicationPeriodIds", "requiredDocumentIds", "sourceLinkIds", "verificationStatus", "freshnessStatus", "lastCheckedAt", "notes"],
     "properties": {
       "id": {"type": "string", "pattern": "^municipality_application_status_[a-z0-9_]+$"},
       "applicationId": {"type": "string"},
@@ -15,6 +15,7 @@
       "applicationMethodStatus": {"enum": ["unknown", "pending", "confirmed", "not_applicable"]},
       "contactStatus": {"enum": ["unknown", "pending", "confirmed", "not_applicable"]},
       "localGuidanceStatus": {"enum": ["unknown", "pending", "confirmed", "not_applicable"]},
+      "localEligibilityConditions": {"type":"array","items":{"$ref":"application.schema.json#/$defs/condition"}},
       "contactPointIds": {"$ref": "common.schema.json#/$defs/idArray"},
       "applicationPeriodIds": {"$ref": "common.schema.json#/$defs/idArray"},
       "requiredDocumentIds": {"$ref": "common.schema.json#/$defs/idArray"},

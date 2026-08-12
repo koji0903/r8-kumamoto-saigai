@@ -53,10 +53,14 @@ for (const [name, [dataFile, schemaFile]] of Object.entries(files)) {
 
 function resolveRef(ref) {
   if (ref.startsWith("#/$defs/")) {
-    return common?.$defs?.[ref.split("/").at(-1)];
+    const name = ref.split("/").at(-1);
+    return common?.$defs?.[name] || schemas.applications?.$defs?.[name];
   }
   if (ref.startsWith("common.schema.json#/$defs/")) {
     return common?.$defs?.[ref.split("/").at(-1)];
+  }
+  if (ref.startsWith("application.schema.json#/$defs/")) {
+    return schemas.applications?.$defs?.[ref.split("/").at(-1)];
   }
   return null;
 }
@@ -141,6 +145,34 @@ for (const application of parsed.applications || []) {
   refs(application.id, application.requiredDocumentIds, "documents", "必要書類");
   refs(application.id, application.contactPointIds, "contacts", "窓口");
   refs(application.id, application.sourceLinkIds, "sourceLinks", "出典リンク");
+  const conditionIds = new Set();
+  for (const condition of application.eligibilityConditions || []) {
+    if (conditionIds.has(condition.id)) errors.push(`${application.id}: 対象条件IDが重複しています: ${condition.id}`);
+    conditionIds.add(condition.id);
+    refs(condition.id, condition.municipalityIds, "municipalities", "対象自治体");
+    refs(condition.id, condition.sourceLinkIds, "sourceLinks", "条件根拠");
+    if (condition.scope === "municipal" && !condition.municipalityIds.length) errors.push(`${condition.id}: municipal条件に自治体IDがありません`);
+    if (condition.scope !== "municipal" && condition.municipalityIds.length) errors.push(`${condition.id}: ${condition.scope}条件へ自治体IDを設定しないでください`);
+    if (["pending", "unknown", "conflict"].includes(condition.certainty) && condition.verificationStatus === "verified") errors.push(`${condition.id}: ${condition.certainty}条件をverifiedにはできません`);
+    if (condition.verificationStatus === "verified" && (!condition.checkedAt || !condition.sourceLinkIds.length)) errors.push(`${condition.id}: verified条件に確認日時または根拠がありません`);
+    if (condition.verificationStatus === "verified") {
+      const claims = condition.sourceLinkIds.map(id => byType.sourceLinks.get(id)?.claimType);
+      if (!claims.some(claim => ["eligibility", "eligible_damage"].includes(claim))) errors.push(`${condition.id}: verified条件にeligibility系の根拠がありません`);
+    }
+  }
+  const groups = new Map();
+  for (const condition of application.eligibilityConditions || []) {
+    const key = `${condition.logicalGroup}|${condition.field}`;
+    const list = groups.get(key) || [];
+    list.push(condition);
+    groups.set(key, list);
+  }
+  for (const [key, list] of groups) {
+    const operators = new Set(list.map(item => item.groupOperator));
+    if (operators.size > 1) errors.push(`${application.id}: 同一条件グループのAND/ORが混在しています: ${key}`);
+    const equals = list.filter(item => item.certainty === "confirmed" && item.operator === "equals").map(item => JSON.stringify(item.value));
+    if (list[0]?.groupOperator === "AND" && new Set(equals).size > 1) errors.push(`${application.id}: 同時成立しない可能性がある条件値です: ${key}`);
+  }
 }
 for (const status of parsed.municipalityStatuses || []) {
   refs(status.id, [status.applicationId], "applications", "災害適用");
@@ -149,6 +181,12 @@ for (const status of parsed.municipalityStatuses || []) {
   refs(status.id, status.applicationPeriodIds, "periods", "受付期間");
   refs(status.id, status.requiredDocumentIds, "documents", "必要書類");
   refs(status.id, status.sourceLinkIds, "sourceLinks", "出典リンク");
+  for (const condition of status.localEligibilityConditions || []) {
+    refs(condition.id, condition.municipalityIds, "municipalities", "自治体条件");
+    refs(condition.id, condition.sourceLinkIds, "sourceLinks", "自治体条件根拠");
+    if (condition.scope !== "municipal" || condition.municipalityIds.length !== 1 || condition.municipalityIds[0] !== status.municipalityId) errors.push(`${condition.id}: 自治体条件のscopeまたは自治体IDが受付entityと一致しません`);
+    if (condition.verificationStatus === "verified" && (condition.certainty !== "confirmed" || !condition.checkedAt || !condition.sourceLinkIds.length)) errors.push(`${condition.id}: 公開可能な自治体条件の確認情報が不足しています`);
+  }
 }
 for (const source of parsed.sources || []) refs(source.id, [source.organizationId], "organizations", "発表主体");
 for (const relation of parsed.sourceVersionRelations || []) {
@@ -251,6 +289,7 @@ for (const application of parsed.applications || []) {
     }
     const hasDeadlineEvidence = claims.has("deadline") || (application.applicationPeriodIds || []).some(id => (byType.periods.get(id)?.sourceLinkIds || []).length);
     if (!hasDeadlineEvidence) errors.push(`${application.id}: 期限または「未発表」を確認した出典がありません`);
+    if (application.applicationMethod && !claims.has("application_method")) errors.push(`${application.id}: verifiedの申請方法にapplication_methodのsourceLinkがありません`);
   }
   if (application.applicationStatus === "active" && !["verified", "partially_verified", "needs_review"].includes(application.verificationStatus)) errors.push(`${application.id}: 未確認の災害適用をactiveにできません`);
   if (application.publicationStatus === "published" && !["verified", "partially_verified", "needs_review"].includes(application.verificationStatus)) errors.push(`${application.id}: verified、partially_verifiedまたはneeds_review以外の災害適用を公開候補にできません`);
@@ -276,6 +315,10 @@ for (const status of parsed.municipalityStatuses || []) {
   if (status.contactStatus === "confirmed" && !status.contactPointIds.length) errors.push(`${status.id}: 窓口confirmedですがcontactPointIdsが空です`);
   if (status.contactPointIds.length && ["unknown", "pending", "not_applicable"].includes(status.contactStatus)) errors.push(`${status.id}: 窓口未確認状態なのに自治体窓口が関連付けられています`);
   if (status.applicationMethodStatus === "confirmed" && status.receptionStatus === "not_applicable") errors.push(`${status.id}: 受付対象外なのに受付方法がconfirmedです`);
+  if (status.applicationMethodStatus === "confirmed") {
+    const claims = new Set(status.sourceLinkIds.map(id => byType.sourceLinks.get(id)?.claimType));
+    if (!claims.has("application_method")) errors.push(`${status.id}: 申請方法confirmedですがapplication_methodのsourceLinkがありません`);
+  }
   if (status.localGuidanceStatus === "confirmed" && !status.sourceLinkIds.length) errors.push(`${status.id}: 自治体独自案内confirmedですが出典がありません`);
   for (const periodId of status.applicationPeriodIds) {
     const period = byType.periods.get(periodId);
@@ -284,7 +327,11 @@ for (const status of parsed.municipalityStatuses || []) {
   for (const contactId of status.contactPointIds) {
     const contact = byType.contacts.get(contactId);
     if (contact?.municipalityId && contact.municipalityId !== status.municipalityId) errors.push(`${status.id}: 別自治体の窓口を参照しています: ${contactId}`);
-    if (status.contactStatus === "confirmed" && contact?.contactRole !== "application_office") errors.push(`${status.id}: 受付窓口confirmedにはapplication_officeの窓口が必要です: ${contactId}`);
+    if (status.contactStatus === "confirmed" && !new Set([contact?.contactRole, ...(contact?.contactRoles || [])]).has("application_office")) errors.push(`${status.id}: 受付窓口confirmedにはapplication_officeの窓口が必要です: ${contactId}`);
+  }
+  for (const documentId of status.requiredDocumentIds) {
+    const document = byType.documents.get(documentId);
+    if (document?.scopeLevel === "municipal" && !document.scopeMunicipalityIds.includes(status.municipalityId)) errors.push(`${status.id}: 別自治体の独自書類を参照しています: ${documentId}`);
   }
 }
 
@@ -298,6 +345,17 @@ for (const document of parsed.documents || []) {
   if (document.documentContext === "disaster_application" && !document.applicationIds.length) errors.push(`${document.id}: 今回災害の必要書類なのに災害適用IDがありません`);
   if (document.documentContext === "municipality_specific" && document.scopeLevel !== "municipal") errors.push(`${document.id}: 自治体固有書類はscopeLevel=municipalでなければなりません`);
   if (!document.programIds.length || !document.sourceLinkIds.length) errors.push(`${document.id}: 制度または一次情報への追跡情報が不足しています`);
+  if (document.requiredLevel === "required" && !document.sourceLinkIds.length) errors.push(`${document.id}: 必須書類ですがsourceLinkがありません`);
+  if (document.verificationStatus === "verified") {
+    const claims = new Set(document.sourceLinkIds.map(id => byType.sourceLinks.get(id)?.claimType));
+    if (![...claims].some(claim => ["required_document", "required_documents"].includes(claim))) errors.push(`${document.id}: verified書類にrequired_document根拠がありません`);
+  }
+  if (document.documentContext === "municipality_specific") {
+    for (const municipalityId of document.scopeMunicipalityIds) {
+      const linked = (parsed.municipalityStatuses || []).some(status => status.municipalityId === municipalityId && document.applicationIds.includes(status.applicationId) && status.requiredDocumentIds.includes(document.id));
+      if (!linked) errors.push(`${document.id}: 自治体独自書類が自治体別受付entityに関連付けられていません: ${municipalityId}`);
+    }
+  }
 }
 
 const now = new Date();
@@ -315,8 +373,20 @@ for (const period of parsed.periods || []) {
 }
 for (const contact of parsed.contacts || []) requireVerifiedSources(contact, ["name", "sourceLinkIds", "checkedAt"]);
 for (const contact of parsed.contacts || []) {
-  if (contact.contactRole === "application_office" && !contact.methods.length) errors.push(`${contact.id}: 申請窓口に受付方法がありません`);
-  if (contact.contactRole === "general_inquiry" && contact.municipalityId && !contact.sourceLinkIds.length) errors.push(`${contact.id}: 自治体問い合わせ先に出典がありません`);
+  const roles = new Set([contact.contactRole, ...(contact.contactRoles || [])]);
+  if (!roles.has(contact.contactRole)) errors.push(`${contact.id}: contactRoleがcontactRolesに含まれていません`);
+  if (roles.has("application_office") && !contact.methods.length) errors.push(`${contact.id}: 申請窓口に受付方法がありません`);
+  if (roles.has("general_inquiry") && contact.municipalityId && !contact.sourceLinkIds.length) errors.push(`${contact.id}: 自治体問い合わせ先に出典がありません`);
+  if (contact.verificationStatus === "verified" && contact.publicationStatus === "published" && (contact.phone || contact.hours || contact.address) && (!contact.checkedAt || !contact.sourceLinkIds.length)) errors.push(`${contact.id}: 公開する電話・時間・住所にcheckedAtまたはsourceLinkがありません`);
+  if (contact.isTemporary && !contact.validUntil) warnings.push(`${contact.id}: 臨時窓口の終了日が未確認です`);
+  if (contact.validFrom && contact.validUntil && new Date(contact.validFrom) > new Date(contact.validUntil)) errors.push(`${contact.id}: 窓口の有効期間が逆転しています`);
+}
+const contactSignatures = new Map();
+for (const contact of parsed.contacts || []) {
+  const signature = [contact.organizationId, contact.municipalityId, contact.name, contact.phone].join("|");
+  const existing = contactSignatures.get(signature);
+  if (existing) errors.push(`${contact.id}: 同一窓口の重複レコードです。contactRolesへ統合してください: ${existing.id}`);
+  contactSignatures.set(signature, contact);
 }
 for (const source of parsed.sources || []) {
   if (!source.url) errors.push(`${source.id}: source URLがありません`);

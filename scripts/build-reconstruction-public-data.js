@@ -67,6 +67,11 @@ const sourceLinkById = byId(sourceLinks);
 const contactById = byId(contacts);
 const periodById = byId(periods);
 const documentById = byId(documents);
+const roleLabels = { application_office: "申請するところ", general_inquiry: "制度について聞くところ", specialist_consultation: "個別の状況を相談するところ", document_submission: "追加書類を提出するところ", general_information: "一般的な案内を聞くところ", unknown: "役割を公式情報で確認" };
+const scopeLabels = { national: "国の案内で確認できる書類", prefectural: "熊本県の案内で確認できる書類", municipal: "市町村の受付で案内されている書類" };
+const requirementLabels = { required: "必要", conditional: "場合によって必要", recommended: "あると確認しやすい", check_with_office: "自治体の案内で確認", unknown: "必要か公式情報で確認" };
+const submissionLabels = { original: "原本", copy: "写し", either: "原本または写し", not_specified: "原本・写しの指定は公式情報で確認" };
+const conditionLabels = { housing_damage: "住まいの被害", household_type: "世帯", housing_type: "住まいの種類", residency_status: "現在の住まい方", income_condition: "収入・資力", age_condition: "年齢", disability_condition: "障害", care_condition: "介護", business_type: "仕事・事業", agriculture_fishery_condition: "農業・漁業", contract_status: "契約状況", other_program_usage: "ほかの制度", other_conditions: "その他" };
 
 function officialSources(linkIds) {
   const seen = new Set();
@@ -89,6 +94,24 @@ function verifiedFact(entity, claimTypes) {
   });
 }
 
+function contactRoles(contact) { return [...new Set([contact.contactRole, ...(contact.contactRoles || [])].filter(Boolean))]; }
+function isCurrentContact(contact) {
+  return contact && contact.publicationStatus === "published" && contact.verificationStatus === "verified" && contact.freshnessStatus === "fresh" && contact.checkedAt && (!contact.validUntil || new Date(contact.validUntil) >= new Date()) && officialSources(contact.sourceLinkIds).length > 0;
+}
+function contactView(contact) {
+  const roles = contactRoles(contact);
+  return { name: contact.name, organization: organizationById.get(contact.organizationId)?.name || "公的機関", roles, roleLabels: roles.map(role => roleLabels[role]), phone: contact.phone || null, hours: contact.hours || null, closedDays: contact.closedDays || null, address: contact.address || null, officialUrl: contact.officialUrl || officialSources(contact.sourceLinkIds)[0]?.url || null, methods: contact.methods, temporary: contact.isTemporary, validUntil: contact.validUntil };
+}
+function documentVisible(document, municipalityId) {
+  return document?.verificationStatus === "verified" && officialSources(document.sourceLinkIds).length > 0 && (document.scopeLevel !== "municipal" || document.scopeMunicipalityIds.includes(municipalityId));
+}
+function documentView(document) { return { id: document.id, name: document.name, description: document.plainLanguageDescription, requiredLevel: document.requiredLevel, requiredLabel: requirementLabels[document.requiredLevel], scope: document.scopeLevel, scopeLabel: document.scopeLevel === "municipal" ? "この市町村の受付で案内されている書類" : scopeLabels[document.scopeLevel], submissionForm: document.submissionForm, submissionLabel: submissionLabels[document.submissionForm] }; }
+function conditionVisible(condition, municipalityId = null) {
+  if (!condition || condition.certainty !== "confirmed" || condition.verificationStatus !== "verified" || !condition.checkedAt || !officialSources(condition.sourceLinkIds).length) return false;
+  return condition.scope !== "municipal" ? condition.municipalityIds.length === 0 : Boolean(municipalityId) && condition.municipalityIds.length === 1 && condition.municipalityIds[0] === municipalityId;
+}
+function conditionView(condition) { return { id: condition.id, label: conditionLabels[condition.field], description: condition.plainLanguageDescription, groupOperator: condition.groupOperator, scope: condition.scope }; }
+
 function municipalityView(application, status, municipality) {
   const implementationConfirmed = status && status.implementationStatus === "confirmed" && verifiedFact(status, ["eligible_area"]);
   const receptionConfirmed = status && status.receptionStatus === "confirmed" && status.verificationStatus === "verified";
@@ -98,10 +121,29 @@ function municipalityView(application, status, municipality) {
   else if (implementationConfirmed) statusLabel = `${municipality.name}は対象地域です。申請方法を確認中`;
 
   let contact = null;
+  const contactGroups = { application: [], inquiry: [], consultation: [], documentSubmission: [], generalInformation: [] };
   if (status?.contactStatus === "confirmed" && status.verificationStatus === "verified") {
-    const candidate = status.contactPointIds.map(id => contactById.get(id)).find(item => item && item.contactRole === "application_office" && item.publicationStatus === "published" && item.verificationStatus === "verified");
+    for (const candidate of status.contactPointIds.map(id => contactById.get(id)).filter(isCurrentContact)) {
+      const view = contactView(candidate), roles = new Set(view.roles);
+      if (roles.has("application_office")) contactGroups.application.push(view);
+      if (roles.has("general_inquiry")) contactGroups.inquiry.push(view);
+      if (roles.has("specialist_consultation")) contactGroups.consultation.push(view);
+      if (roles.has("document_submission")) contactGroups.documentSubmission.push(view);
+      if (roles.has("general_information")) contactGroups.generalInformation.push(view);
+    }
+    const candidate = contactGroups.application[0];
     if (candidate) contact = { name: candidate.name, phone: candidate.phone, hours: candidate.hours, url: candidate.officialUrl };
   }
+
+  const documentIds = [...new Set([...(application.requiredDocumentIds || []), ...(status?.requiredDocumentIds || [])])];
+  const municipalityDocuments = documentIds.map(id => documentById.get(id)).filter(document => documentVisible(document, municipality.id)).map(documentView);
+  const prefectureNames = new Set(municipalityDocuments.filter(item => item.scope === "prefectural").map(item => item.name));
+  const municipalNames = new Set(municipalityDocuments.filter(item => item.scope === "municipal").map(item => item.name));
+  const hasDocumentDifference = municipalNames.size > 0 && ([...prefectureNames].some(name => !municipalNames.has(name)) || [...municipalNames].some(name => !prefectureNames.has(name)));
+  const methodConfirmed = status?.applicationMethodStatus === "confirmed" && status.verificationStatus === "verified" && (status.sourceLinkIds || []).some(id => sourceLinkById.get(id)?.claimType === "application_method");
+  const generalConditions = (application.eligibilityConditions || []).filter(item => conditionVisible(item)).map(conditionView);
+  const localConditions = (status?.localEligibilityConditions || []).filter(item => conditionVisible(item, municipality.id)).map(conditionView);
+  const mainConditions = [...generalConditions, ...localConditions].slice(0, 4);
 
   const deadlinePeriod = status?.applicationPeriodIds.map(id => periodById.get(id)).find(item => item?.periodPurpose === "application_window" && item.deadlineAt && item.verificationStatus === "verified");
   return {
@@ -110,8 +152,14 @@ function municipalityView(application, status, municipality) {
     officialUrl: municipality.officialUrl,
     statusLabel,
     reception: publicState(receptionConfirmed ? "confirmed" : status?.receptionStatus === "closed" ? "expired" : "pending"),
-    applicationMethodLabel: status?.applicationMethodStatus === "confirmed" && status.verificationStatus === "verified" ? "申請方法を公式情報で確認済み" : "申請方法を確認中",
+    applicationMethodLabel: methodConfirmed ? "申請方法を公式情報で確認済み" : "申請方法を確認中",
+    applicationMethod: methodConfirmed ? application.applicationMethod : null,
     contact,
+    contacts: contactGroups,
+    documents: municipalityDocuments,
+    documentNotice: hasDocumentDifference ? "提出書類について自治体の最新案内をご確認ください。" : null,
+    mainConditions,
+    conditionNotice: mainConditions.length ? "ここにあるのは主な条件です。対象になるかどうかを判定するものではありません。詳しい条件は自治体の最新案内で確認してください。" : "対象条件の詳しい内容は、自治体の最新案内をご確認ください。",
     deadline: deadlinePeriod ? { label: `申込期限：${deadlinePeriod.deadlineAt.slice(0, 10)}`, date: deadlinePeriod.deadlineAt } : null,
     fallback: contact ? null : `最新情報は${municipality.name}公式情報をご確認ください。相談先が確認でき次第更新します。`
   };
@@ -141,8 +189,8 @@ const publicPrograms = programs.filter(publicRecord).map(program => {
     verificationStatus: action.verificationStatus,
     officialSources: officialSources(action.sourceLinkIds)
   }));
-  const publicDocuments = application ? application.requiredDocumentIds.map(id => documentById.get(id)).filter(document => document?.verificationStatus === "verified").map(document => ({ name: document.name, requiredLevel: document.requiredLevel })) : [];
-  const publicConsultationItems = consultationItems.filter(item => item.programIds.includes(program.id) && item.publicationStatus === "published" && item.verificationStatus === "verified").sort((a, b) => a.displayOrder - b.displayOrder).slice(0, 3).map(item => ({ prompt: item.supporterPrompt, reason: item.reason, unknownHandling: item.unknownHandling }));
+  const publicDocuments = application ? application.requiredDocumentIds.map(id => documentById.get(id)).filter(document => documentVisible(document, null) && document.scopeLevel !== "municipal").map(documentView) : [];
+  const publicConsultationItems = consultationItems.filter(item => item.programIds.includes(program.id) && item.publicationStatus === "published" && item.verificationStatus === "verified").sort((a, b) => a.displayOrder - b.displayOrder).slice(0, 3).map(item => ({ prompt: item.supporterPrompt, reason: item.reason, unknownHandling: item.unknownHandling, disclaimer: "対象かどうかを判断するチェック表ではありません。相談先で状況を伝えるための確認項目です。" }));
   const sourceIds = [...(program.sourceLinkIds || []), ...(application?.sourceLinkIds || [])];
   const lastChecked = application?.lastCheckedAt || program.updatedAt;
 
@@ -161,6 +209,8 @@ const publicPrograms = programs.filter(publicRecord).map(program => {
     nextSteps: publicActions,
     warnings: program.verificationStatus === "verified" ? program.importantWarnings : [],
     documents: publicDocuments,
+    mainConditions: application ? (application.eligibilityConditions || []).filter(item => conditionVisible(item)).slice(0, 4).map(conditionView) : [],
+    conditionNotice: "表示しているのは主な条件のみです。本サイトでは対象可否を判定しません。自治体の最新案内で確認してください。",
     consultationItems: publicConsultationItems,
     officialSources: officialSources(sourceIds),
     lastCheckedLabel: japaneseDate(lastChecked)

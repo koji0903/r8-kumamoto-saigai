@@ -1,7 +1,7 @@
 import crypto from "node:crypto";
 
-export const HIGH_RISK_CLAIMS = new Set(["amount", "deadline", "eligibility", "eligible_damage", "eligible_area", "required_document", "contact", "application_office", "warning"]);
-export const MEDIUM_RISK_CLAIMS = new Set(["benefit", "application_method", "disaster_application"]);
+export const HIGH_RISK_CLAIMS = new Set(["amount", "deadline", "eligibility", "eligible_damage", "eligible_area", "required_document", "required_documents", "contact", "application_office", "application_method", "warning"]);
+export const MEDIUM_RISK_CLAIMS = new Set(["benefit", "disaster_application"]);
 
 const decode = value => value
   .replace(/&nbsp;|&#160;/gi, " ")

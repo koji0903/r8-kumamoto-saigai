@@ -1,1 +1,32 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"https://r8-kumamoto-saigai.local/schemas/reconstruction/contact.schema.json","type":"array","items":{"type":"object","additionalProperties":false,"required":["id","name","contactRole","organizationId","municipalityId","address","phone","hours","closedDays","officialUrl","methods","sourceLinkIds","publicationStatus","verificationStatus","freshnessStatus","checkedAt"],"properties":{"id":{"type":"string","pattern":"^contact_[a-z0-9_]+$"},"name":{"type":"string","minLength":1},"contactRole":{"enum":["application_office","general_inquiry","specialist_consultation","unknown"]},"organizationId":{"type":"string"},"municipalityId":{"type":["string","null"]},"address":{"type":["string","null"]},"phone":{"type":["string","null"]},"hours":{"type":["string","null"]},"closedDays":{"type":["string","null"]},"officialUrl":{"type":["string","null"],"format":"uri"},"methods":{"type":"array","items":{"enum":["in_person","phone","postal","online","other"]}},"sourceLinkIds":{"$ref":"common.schema.json#/$defs/idArray"},"publicationStatus":{"$ref":"common.schema.json#/$defs/publicationStatus"},"verificationStatus":{"$ref":"common.schema.json#/$defs/verificationStatus"},"freshnessStatus":{"$ref":"common.schema.json#/$defs/freshnessStatus"},"checkedAt":{"$ref":"common.schema.json#/$defs/nullableDateOrDateTime"}}}}
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://r8-kumamoto-saigai.local/schemas/reconstruction/contact.schema.json",
+  "type":"array",
+  "items":{
+    "type":"object",
+    "additionalProperties":false,
+    "required":["id","name","contactRole","contactRoles","organizationId","municipalityId","address","phone","hours","closedDays","officialUrl","methods","validFrom","validUntil","isTemporary","sourceLinkIds","publicationStatus","verificationStatus","freshnessStatus","checkedAt"],
+    "properties":{
+      "id":{"type":"string","pattern":"^contact_[a-z0-9_]+$"},
+      "name":{"type":"string","minLength":1},
+      "contactRole":{"enum":["application_office","general_inquiry","specialist_consultation","document_submission","general_information","unknown"]},
+      "contactRoles":{"type":"array","items":{"enum":["application_office","general_inquiry","specialist_consultation","document_submission","general_information","unknown"]},"minItems":1,"uniqueItems":true},
+      "organizationId":{"type":"string"},
+      "municipalityId":{"type":["string","null"]},
+      "address":{"type":["string","null"]},
+      "phone":{"type":["string","null"]},
+      "hours":{"type":["string","null"]},
+      "closedDays":{"type":["string","null"]},
+      "officialUrl":{"type":["string","null"],"format":"uri"},
+      "methods":{"type":"array","items":{"enum":["in_person","phone","postal","online","other"]}},
+      "validFrom":{"$ref":"common.schema.json#/$defs/nullableDateOrDateTime"},
+      "validUntil":{"$ref":"common.schema.json#/$defs/nullableDateOrDateTime"},
+      "isTemporary":{"type":"boolean"},
+      "sourceLinkIds":{"$ref":"common.schema.json#/$defs/idArray"},
+      "publicationStatus":{"$ref":"common.schema.json#/$defs/publicationStatus"},
+      "verificationStatus":{"$ref":"common.schema.json#/$defs/verificationStatus"},
+      "freshnessStatus":{"$ref":"common.schema.json#/$defs/freshnessStatus"},
+      "checkedAt":{"$ref":"common.schema.json#/$defs/nullableDateOrDateTime"}
+    }
+  }
+}
