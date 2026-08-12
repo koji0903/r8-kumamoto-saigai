@@ -1,32 +1,32 @@
 {
-  "generatedAt": "2026-08-12T02:48:36.716Z",
+  "generatedAt": "2026-08-12T05:08:55.932Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 419,
-  "displayCandidateCount": 229,
-  "classifiedPageCount": 283,
+  "inputCount": 426,
+  "displayCandidateCount": 234,
+  "classifiedPageCount": 288,
   "categoryReport": {
     "home": {
-      "total": 71,
-      "high": 33,
+      "total": 73,
+      "high": 34,
       "medium": 12,
-      "low": 26
+      "low": 27
     },
     "money": {
-      "total": 71,
-      "high": 8,
+      "total": 72,
+      "high": 9,
       "medium": 17,
       "low": 46
     },
     "documents": {
-      "total": 71,
-      "high": 22,
+      "total": 73,
+      "high": 23,
       "medium": 9,
-      "low": 40
+      "low": 41
     },
     "health_care": {
-      "total": 14,
-      "high": 6,
+      "total": 15,
+      "high": 7,
       "medium": 8,
       "low": 0
     },
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 89,
-      "high": 28,
-      "medium": 61,
+      "total": 91,
+      "high": 29,
+      "medium": 62,
       "low": 0
     }
   },
@@ -77,8 +77,8 @@
       "fallback": true
     },
     "municipality_kikuchi": {
-      "classified": 2,
-      "displayCandidates": 0,
+      "classified": 6,
+      "displayCandidates": 4,
       "fallback": true
     },
     "municipality_uto": {
@@ -97,8 +97,8 @@
       "fallback": true
     },
     "municipality_amakusa": {
-      "classified": 18,
-      "displayCandidates": 16,
+      "classified": 19,
+      "displayCandidates": 17,
       "fallback": true
     },
     "municipality_koshi": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 112,
-    "medium": 117,
+    "high": 116,
+    "medium": 118,
     "low": 54
   },
-  "unclassifiedCount": 90,
+  "unclassifiedCount": 92,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -263,6 +263,11 @@
       "municipalityName": "山鹿市",
       "title": "震度速報 8月12日 8時52分",
       "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html"
+    },
+    {
+      "municipalityName": "菊池市",
+      "title": "2026年08月12日 被災された方に菊池温泉を開放します",
+      "url": "https://www.city.kikuchi.lg.jp/article/view/1350/18758.html"
     },
     {
       "municipalityName": "宇土市",
@@ -431,12 +436,12 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年08月12日 令和8年熊本地震（7月28日発生）に関する情報（8月12日11時00分更新）",
+      "title": "2026年08月12日 令和8年熊本地震（7月28日発生）に関する情報（8月12日12時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年8月12日 令和8年熊本地震（7月28日発生）に関する情報（8月12日11時00分更新）",
+      "title": "2026年8月12日 令和8年熊本地震（7月28日発生）に関する情報（8月12日12時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2606699"
     },
     {
@@ -456,13 +461,13 @@
     },
     {
       "municipalityName": "天草市",
-      "title": "震度速報",
-      "url": "https://www.city.amakusa.kumamoto.jp/kinkyu.html"
+      "title": "令和８年熊本地震 関連情報",
+      "url": "https://www.city.amakusa.kumamoto.jp/bousai/kiji00313681/index.html"
     },
     {
       "municipalityName": "天草市",
-      "title": "令和８年熊本地震 関連情報",
-      "url": "https://www.city.amakusa.kumamoto.jp/bousai/kiji00313681/index.html"
+      "title": "震度速報",
+      "url": "https://www.city.amakusa.kumamoto.jp/kinkyu.html"
     },
     {
       "municipalityName": "合志市",
@@ -550,6 +555,11 @@
       "url": "https://www.town.mashiki.lg.jp/kiji0035566/index.html"
     },
     {
+      "municipalityName": "益城町",
+      "title": "地震情報",
+      "url": "https://www.town.mashiki.lg.jp/kinkyu.html"
+    },
+    {
       "municipalityName": "甲佐町",
       "title": "通行止め箇所(宮内・甲佐・竜野)(PDF 約970KB)",
       "url": "https://www.town.kosa.lg.jp/dl?q=252264_filelib_eaa54a25a5a5e943f7f67f0b22b8b970.pdf"
@@ -635,7 +645,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 1
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -709,5 +719,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 278
+  "previousClassifiedPageCount": 283
 }
