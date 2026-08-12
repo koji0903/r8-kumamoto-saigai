@@ -49,6 +49,7 @@ validate();
 const programs = read("programs.json");
 const organizations = read("organizations.json");
 const applications = read("applications.json");
+const amountBenefits = read("amount-benefits.json");
 const statuses = read("municipality-application-statuses.json");
 const municipalities = read("municipalities.json");
 const sources = read("sources.json");
@@ -61,6 +62,7 @@ const consultationItems = read("consultation-items.json");
 
 const byId = list => new Map(list.map(item => [item.id, item]));
 const municipalityById = byId(municipalities);
+const programById = byId(programs);
 const organizationById = byId(organizations);
 const sourceById = byId(sources);
 const sourceLinkById = byId(sourceLinks);
@@ -71,6 +73,8 @@ const roleLabels = { application_office: "申請するところ", general_inquir
 const scopeLabels = { national: "国の案内で確認できる書類", prefectural: "熊本県の案内で確認できる書類", municipal: "市町村の受付で案内されている書類" };
 const requirementLabels = { required: "必要", conditional: "場合によって必要", recommended: "あると確認しやすい", check_with_office: "自治体の案内で確認", unknown: "必要か公式情報で確認" };
 const submissionLabels = { original: "原本", copy: "写し", either: "原本または写し", not_specified: "原本・写しの指定は公式情報で確認" };
+const benefitLabels = { grant: { label: "返済不要の給付", notice: "対象条件の確認が必要です。" }, loan: { label: "返済が必要な貸付", notice: "返済条件を公式情報で確認してください。" }, reduction: { label: "負担を軽くする減額", notice: "現金を受け取る制度ではありません。" }, exemption: { label: "支払いを免除する制度", notice: "対象となる税・料金と条件を確認してください。" }, deferral: { label: "支払い時期を延ばす制度", notice: "支払いが免除される制度ではありません。" }, in_kind: { label: "品物・サービスによる支援", notice: "本人への現金給付ではありません。" }, direct_payment: { label: "実施主体から業者等への直接支払い", notice: "本人への現金給付ではありません。" }, housing: { label: "住まいを提供する支援", notice: "金額による給付とは限りません。" }, consultation: { label: "相談・手続き支援", notice: "相談先で状況を確認します。" }, guarantee: { label: "融資等の保証", notice: "直接現金を受け取る制度ではありません。" }, other: { label: "その他の支援", notice: "支援方式を公式情報で確認してください。" } };
+const amountUnitLabels = { per_household: "1世帯あたり", per_person: "1人あたり", per_case: "1件あたり", per_home: "1住宅あたり", individual_calculation: "個別計算", not_applicable: "金額の支援ではありません", unknown: "単位を確認中" };
 const conditionLabels = { housing_damage: "住まいの被害", household_type: "世帯", housing_type: "住まいの種類", residency_status: "現在の住まい方", income_condition: "収入・資力", age_condition: "年齢", disability_condition: "障害", care_condition: "介護", business_type: "仕事・事業", agriculture_fishery_condition: "農業・漁業", contract_status: "契約状況", other_program_usage: "ほかの制度", other_conditions: "その他" };
 
 function officialSources(linkIds) {
@@ -111,8 +115,15 @@ function conditionVisible(condition, municipalityId = null) {
   return condition.scope !== "municipal" ? condition.municipalityIds.length === 0 : Boolean(municipalityId) && condition.municipalityIds.length === 1 && condition.municipalityIds[0] === municipalityId;
 }
 function conditionView(condition) { return { id: condition.id, label: conditionLabels[condition.field], description: condition.plainLanguageDescription, groupOperator: condition.groupOperator, scope: condition.scope }; }
+function amountVisible(item, program, application) {
+  if (!item || item.publicationStatus !== "published" || item.verificationStatus !== "verified" || item.freshnessStatus !== "fresh" || item.certainty !== "confirmed" || !item.checkedAt || program.publicationStatus !== "published" || program.verificationStatus !== "verified" || program.benefitType !== item.benefitType) return false;
+  if (item.applicationId && (!application || item.applicationId !== application.id || application.publicationStatus !== "published")) return false;
+  return item.sourceLinkIds.some(id => { const link = sourceLinkById.get(id), source = link && sourceById.get(link.sourceId); return link?.claimType === "amount" && link.verifiedAt && source?.status === "active"; });
+}
+function amountView(item) { return { amountType: item.amountType, formattedAmount: item.amount === null ? null : `${new Intl.NumberFormat("ja-JP").format(item.amount)}円`, unitLabel: amountUnitLabels[item.unit], taxTreatment: item.taxTreatment, rate: item.rate, description: item.description, notice: item.amountType === "maximum" ? "上限額であり、全員がこの額になるわけではありません。" : "条件により内容が異なります。" }; }
 
 function municipalityView(application, status, municipality) {
+  const program = programById.get(application.programId);
   const implementationConfirmed = status && status.implementationStatus === "confirmed" && verifiedFact(status, ["eligible_area"]);
   const receptionConfirmed = status && status.receptionStatus === "confirmed" && status.verificationStatus === "verified";
   let statusLabel = `${municipality.name}での個別受付情報を確認中`;
@@ -144,6 +155,7 @@ function municipalityView(application, status, municipality) {
   const generalConditions = (application.eligibilityConditions || []).filter(item => conditionVisible(item)).map(conditionView);
   const localConditions = (status?.localEligibilityConditions || []).filter(item => conditionVisible(item, municipality.id)).map(conditionView);
   const mainConditions = [...generalConditions, ...localConditions].slice(0, 4);
+  const localAmounts = amountBenefits.filter(item => item.applicationId === application.id && item.municipalityIds.length === 1 && item.municipalityIds[0] === municipality.id && amountVisible(item, program, application)).map(amountView);
 
   const deadlinePeriod = status?.applicationPeriodIds.map(id => periodById.get(id)).find(item => item?.periodPurpose === "application_window" && item.deadlineAt && item.verificationStatus === "verified");
   return {
@@ -160,6 +172,8 @@ function municipalityView(application, status, municipality) {
     documentNotice: hasDocumentDifference ? "提出書類について自治体の最新案内をご確認ください。" : null,
     mainConditions,
     conditionNotice: mainConditions.length ? "ここにあるのは主な条件です。対象になるかどうかを判定するものではありません。詳しい条件は自治体の最新案内で確認してください。" : "対象条件の詳しい内容は、自治体の最新案内をご確認ください。",
+    amounts: localAmounts,
+    amountNotice: localAmounts.length ? "この市町村独自の金額です。国・県等の制度と合算せず、最新条件を公式情報で確認してください。" : null,
     deadline: deadlinePeriod ? { label: `申込期限：${deadlinePeriod.deadlineAt.slice(0, 10)}`, date: deadlinePeriod.deadlineAt } : null,
     fallback: contact ? null : `最新情報は${municipality.name}公式情報をご確認ください。相談先が確認でき次第更新します。`
   };
@@ -193,6 +207,8 @@ const publicPrograms = programs.filter(publicRecord).map(program => {
   const publicConsultationItems = consultationItems.filter(item => item.programIds.includes(program.id) && item.publicationStatus === "published" && item.verificationStatus === "verified").sort((a, b) => a.displayOrder - b.displayOrder).slice(0, 3).map(item => ({ prompt: item.supporterPrompt, reason: item.reason, unknownHandling: item.unknownHandling, disclaimer: "対象かどうかを判断するチェック表ではありません。相談先で状況を伝えるための確認項目です。" }));
   const sourceIds = [...(program.sourceLinkIds || []), ...(application?.sourceLinkIds || [])];
   const lastChecked = application?.lastCheckedAt || program.updatedAt;
+  const supportType = benefitLabels[program.benefitType] || benefitLabels.other;
+  const amounts = amountBenefits.filter(item => item.programId === program.id && item.municipalityIds.length === 0 && amountVisible(item, program, application)).map(amountView);
 
   return {
     id: program.id,
@@ -202,6 +218,7 @@ const publicPrograms = programs.filter(publicRecord).map(program => {
     category: program.categories[0],
     categories: program.categories,
     benefitType: program.benefitType,
+    supportType,
     providerType: program.providerType,
     governmentLevel: program.governmentLevel,
     availability: publicState(applicationConfirmed ? "confirmed" : application?.verificationStatus === "needs_review" ? "needs_review" : "pending"),
@@ -209,6 +226,8 @@ const publicPrograms = programs.filter(publicRecord).map(program => {
     nextSteps: publicActions,
     warnings: program.verificationStatus === "verified" ? program.importantWarnings : [],
     documents: publicDocuments,
+    amounts,
+    amountNotice: amounts.length ? "金額だけで対象可否や実際の支援額を判断しないでください。最新の金額・条件は公式情報で再確認してください。" : "金額は公式情報で確認してください。未確認を0円として扱っていません。",
     mainConditions: application ? (application.eligibilityConditions || []).filter(item => conditionVisible(item)).slice(0, 4).map(conditionView) : [],
     conditionNotice: "表示しているのは主な条件のみです。本サイトでは対象可否を判定しません。自治体の最新案内で確認してください。",
     consultationItems: publicConsultationItems,

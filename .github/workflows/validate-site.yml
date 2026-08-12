@@ -64,6 +64,7 @@ jobs:
           node scripts/test-reconstruction-source-change.mjs
           node scripts/test-reconstruction-contact-document.mjs
           node scripts/test-reconstruction-eligibility.mjs
+          node scripts/test-reconstruction-amount-benefit.mjs
           node scripts/test-reconstruction-public-data.js
           node scripts/test-reconstruction-documents.mjs
           node scripts/test-reconstruction-content-ux.mjs
@@ -88,6 +89,8 @@ jobs:
           node --check scripts/reconstruction-eligibility-policy.mjs
           node --check scripts/build-reconstruction-contact-document-status.mjs
           node --check scripts/build-reconstruction-eligibility-status.mjs
+          node --check scripts/reconstruction-amount-benefit-policy.mjs
+          node --check scripts/build-reconstruction-amount-benefit-status.mjs
           node --check app.js
           node --check tools/fetch-hq.mjs
           node --check tools/fetch-municipality-updates.mjs

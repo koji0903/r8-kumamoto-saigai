@@ -97,6 +97,7 @@ jobs:
           node scripts/test-reconstruction-source-change.mjs
           node scripts/test-reconstruction-contact-document.mjs
           node scripts/test-reconstruction-eligibility.mjs
+          node scripts/test-reconstruction-amount-benefit.mjs
 
       - name: データ整合性を検査
         run: |
@@ -129,6 +130,7 @@ jobs:
           node scripts/build-reconstruction-information-quality-status.mjs
           node scripts/build-reconstruction-contact-document-status.mjs
           node scripts/build-reconstruction-eligibility-status.mjs
+          node scripts/build-reconstruction-amount-benefit-status.mjs
           node scripts/test-reconstruction-information-quality.mjs
 
       - name: dry-run結果を記録
@@ -161,6 +163,7 @@ jobs:
             data/reconstruction/sources.json \
             data/reconstruction/programs.json \
             data/reconstruction/applications.json \
+            data/reconstruction/amount-benefits.json \
             data/reconstruction/application-periods.json \
             data/reconstruction/required-documents.json \
             data/reconstruction/contacts.json \
@@ -180,7 +183,8 @@ jobs:
             docs/reconstruction-operations-status.md \
             docs/reconstruction-information-quality-status.md \
             docs/reconstruction-contact-document-status.md \
-            docs/reconstruction-eligibility-status.md
+            docs/reconstruction-eligibility-status.md \
+            docs/reconstruction-amount-benefit-status.md
           if git diff --cached --quiet; then
             echo "反映対象の差分はありません。"
             exit 0

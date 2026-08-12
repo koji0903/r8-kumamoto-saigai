@@ -13,6 +13,7 @@ const writeAtomic = (file, value) => { const target = path.join(root, file); fs.
 const collections = {
   program: ["data/reconstruction/programs.json", read("data/reconstruction/programs.json")],
   application: ["data/reconstruction/applications.json", read("data/reconstruction/applications.json")],
+  amount: ["data/reconstruction/amount-benefits.json", read("data/reconstruction/amount-benefits.json")],
   application_period: ["data/reconstruction/application-periods.json", read("data/reconstruction/application-periods.json")],
   required_document: ["data/reconstruction/required-documents.json", read("data/reconstruction/required-documents.json")],
   contact: ["data/reconstruction/contacts.json", read("data/reconstruction/contacts.json")],
@@ -85,6 +86,11 @@ for (const source of monitored) {
         if (application && impactEntity(application, { ...decision, risk: "high" })) { dirtyCollections.add("application"); impacted.push({ entityType: "application", entityId: application.id, sourceLinkId: link.id, claimType: link.claimType, previousVerificationStatus: "verified", nextVerificationStatus: "needs_review", propagatedFrom: link.entityId }); }
       }
     }
+    for (const amount of collections.amount[1].filter(item => item.sourceLinkIds.includes(link.id))) {
+      if (!relatedEntities.some(item => item.entityType === "amount" && item.entityId === amount.id)) relatedEntities.push({ entityType: "amount", entityId: amount.id, sourceLinkId: link.id, claimType: "amount", lastVerifiedAt: verificationEvents.filter(item => item.entityId === amount.id).map(item => item.reviewedAt).filter(Boolean).sort().at(-1) || null });
+      relatedProgramIds.add(amount.programId); for (const id of amount.municipalityIds || []) municipalityIds.add(id);
+      if (impactEntity(amount, { ...decision, risk: "high" })) { dirtyCollections.add("amount"); impacted.push({ entityType: "amount", entityId: amount.id, sourceLinkId: link.id, claimType: "amount", previousVerificationStatus: "verified", nextVerificationStatus: "needs_review" }); }
+    }
   }
   const event = { id: `source_change_${now.replace(/\D/g, "").slice(0, 14)}_${source.id}`, fingerprint, sourceId: source.id, sourceTitle: source.title, sourceUrl: source.url, eventType: decision.eventType, detectedAt: now, previousHash: previous.contentHash || null, currentHash: result.hash || null, previousUrl: previous.url || source.url, currentUrl: result.finalUrl || source.url, claimTypes, risk: decision.risk, impactAssessment: decision.risk === "high" ? "POTENTIALLY_RELEVANT" : "UNKNOWN", operationalStatus: decision.status, relatedProgramIds: [...relatedProgramIds], municipalityIds: [...municipalityIds], relatedEntities, impactedEntities: impacted, resolved: false, reviewedAt: null, reviewedBy: null, resolutionNotes: null };
   events.push(event); newEvents.push(event);
@@ -106,7 +112,8 @@ if (newEvents.some(event => event.eventType === "content_changed" || event.event
 for (const type of dirtyCollections) writeAtomic(collections[type][0], collections[type][1]);
 
 const riskOrder = { high: 0, medium: 1, low: 2 };
-const unresolved = events.filter(event => !event.resolved).sort((a, b) => riskOrder[a.risk] - riskOrder[b.risk] || b.detectedAt.localeCompare(a.detectedAt));
+const amountPriority=event=>(event.claimTypes||[]).includes("amount")?0:1;
+const unresolved = events.filter(event => !event.resolved).sort((a, b) => riskOrder[a.risk] - riskOrder[b.risk] || amountPriority(a)-amountPriority(b) || b.detectedAt.localeCompare(a.detectedAt));
 const queue = { schemaVersion: "1.0.0", generatedAt: now, summary: { unresolved: unresolved.length, actionRequired: unresolved.filter(event => event.operationalStatus === "ACTION_REQUIRED").length, needsReviewEntities: [...new Set(unresolved.flatMap(event => event.impactedEntities.map(item => `${item.entityType}:${item.entityId}`)))].length }, items: unresolved };
 writeAtomic("reports/reconstruction-source-review-queue.json", queue);
 const rows = unresolved.map(event => `| ${event.risk} | ${event.operationalStatus} | ${event.sourceTitle} | ${event.claimTypes.join(" / ")} | ${(event.relatedProgramIds || []).join("<br>") || "-"} | ${(event.municipalityIds || []).join("<br>") || "広域・未特定"} | ${(event.relatedEntities || event.impactedEntities).map(item => `${item.entityType}:${item.entityId}`).join("<br>") || "影響確認待ち"} | ${(event.relatedEntities || []).map(item => item.lastVerifiedAt).filter(Boolean).sort().at(-1) || "未記録"} | ${event.detectedAt} | [原文](${event.sourceUrl}) |`);

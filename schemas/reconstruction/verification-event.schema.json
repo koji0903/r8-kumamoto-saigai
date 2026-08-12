@@ -8,7 +8,7 @@
     "required": ["id", "entityType", "entityId", "action", "reviewerId", "reviewerName", "approverId", "approverName", "reviewedAt", "sourceIds", "sourceLinkIds", "result", "notes"],
     "properties": {
       "id": {"type": "string", "pattern": "^verification_event_[a-z0-9_]+$"},
-      "entityType": {"enum": ["disaster", "program", "application", "municipality_application_status", "application_period", "required_document", "contact", "next_action", "consultation_item", "organization"]},
+      "entityType": {"enum": ["disaster", "program", "application", "municipality_application_status", "application_period", "required_document", "contact", "next_action", "consultation_item", "organization", "amount"]},
       "entityId": {"type": "string"},
       "action": {"enum": ["reviewed", "approved", "rejected", "needs_revision", "reverified", "expired_review", "withdrawal_confirmed"]},
       "reviewerId": {"type": ["string", "null"]},

@@ -15,6 +15,7 @@ const files = {
   organizations: ["organizations.json", "organization.schema.json"],
   programs: ["programs.json", "program.schema.json"],
   applications: ["applications.json", "application.schema.json"],
+  amounts: ["amount-benefits.json", "amount-benefit.schema.json"],
   municipalityStatuses: ["municipality-application-statuses.json", "municipality-application-status.schema.json"],
   sources: ["sources.json", "source.schema.json"],
   sourceVersionRelations: ["source-version-relations.json", "source-version-relation.schema.json"],
@@ -174,6 +175,31 @@ for (const application of parsed.applications || []) {
     if (list[0]?.groupOperator === "AND" && new Set(equals).size > 1) errors.push(`${application.id}: 同時成立しない可能性がある条件値です: ${key}`);
   }
 }
+for (const amount of parsed.amounts || []) {
+  refs(amount.id,[amount.programId],"programs","制度");
+  if(amount.applicationId) refs(amount.id,[amount.applicationId],"applications","災害適用");
+  refs(amount.id,amount.municipalityIds,"municipalities","対象自治体");
+  refs(amount.id,amount.sourceLinkIds,"sourceLinks","金額根拠");
+  const program=byType.programs.get(amount.programId),application=amount.applicationId&&byType.applications.get(amount.applicationId);
+  if(program&&program.benefitType!==amount.benefitType) errors.push(`${amount.id}: benefitTypeが制度と一致しません`);
+  if(application&&application.programId!==amount.programId) errors.push(`${amount.id}: applicationとprogramが一致しません`);
+  if(application&&amount.municipalityIds.some(id=>!application.municipalityIds.includes(id))) errors.push(`${amount.id}: application対象外の自治体金額です`);
+  if(amount.municipalityIds.length&&!amount.applicationId) errors.push(`${amount.id}: 自治体金額に災害applicationがありません`);
+  if(amount.amount===null&&!["individual_calculation","not_monetary","unknown","conflict","rate"].includes(amount.amountType)) errors.push(`${amount.id}: 金額種別${amount.amountType}に数値がありません`);
+  if(amount.amount!==null&&["individual_calculation","not_monetary","unknown","conflict"].includes(amount.amountType)) errors.push(`${amount.id}: ${amount.amountType}へ確定数値を設定しないでください`);
+  if(amount.amount===null&&amount.currency!==null) errors.push(`${amount.id}: 金額nullを0円相当として扱わないでください`);
+  if(amount.certainty==="conflict"&&amount.verificationStatus==="verified") errors.push(`${amount.id}: conflict金額をverifiedにはできません`);
+  if(amount.verificationStatus==="verified") {
+    if(!amount.checkedAt||!amount.sourceLinkIds.length) errors.push(`${amount.id}: verified金額に確認日時またはsourceLinkがありません`);
+    const amountLinks=amount.sourceLinkIds.map(id=>byType.sourceLinks.get(id)).filter(Boolean);
+    if(!amountLinks.some(link=>link.claimType==="amount"&&link.verifiedAt&&byType.sources.get(link.sourceId)?.status==="active")) errors.push(`${amount.id}: verified金額に有効な人手確認済みamount根拠がありません`);
+  }
+  const text=`${amount.description} ${program?.shortDescription||""}`;
+  if(amount.benefitType==="loan"&&/返済不要|返す必要[はが]ない/.test(text)) errors.push(`${amount.id}: 貸付を返済不要と説明しています`);
+  if(amount.benefitType==="grant"&&/返済が必要|貸付/.test(text)) errors.push(`${amount.id}: 給付を貸付と説明しています`);
+  if(amount.publicationStatus==="published"&&amount.verificationStatus!=="verified") errors.push(`${amount.id}: 未確認金額をpublishedにできません`);
+}
+for(const application of parsed.applications||[]){if(application.amountDescription&&!parsed.amounts.some(item=>item.applicationId===application.id))errors.push(`${application.id}: amountDescriptionがありますが監査可能なamount recordがありません`);}
 for (const status of parsed.municipalityStatuses || []) {
   refs(status.id, [status.applicationId], "applications", "災害適用");
   refs(status.id, [status.municipalityId], "municipalities", "自治体");
@@ -233,7 +259,7 @@ for (const event of parsed.verificationEvents || []) {
     disaster: "disasters", program: "programs", application: "applications",
     municipality_application_status: "municipalityStatuses", application_period: "periods",
     required_document: "documents", contact: "contacts", next_action: "actions",
-    consultation_item: "consultationItems", organization: "organizations"
+    consultation_item: "consultationItems", organization: "organizations", amount: "amounts"
   }[event.entityType];
   if (expectedCollection && !byType[expectedCollection]?.has(event.entityId)) errors.push(`${event.id}: entityType=${event.entityType}とentityId=${event.entityId}が一致しません`);
   refs(event.id, event.sourceIds, "sources", "出典");

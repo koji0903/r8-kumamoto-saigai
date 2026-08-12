@@ -676,7 +676,7 @@ erDiagram
     "operatorOrganizationId": null,
     "categories": ["home"],
     "subCategories": ["repair"],
-    "benefitType": "in_kind_or_direct_payment",
+    "benefitType": "direct_payment",
     "defaultSupportDescription": null,
     "generalConditions": [],
     "audienceSummary": "住まいの修理について支援を受けられる可能性があります。",

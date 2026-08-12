@@ -121,7 +121,7 @@ try {
   const built = build(moneyRoot);
   const money = JSON.parse(fs.readFileSync(path.join(built.output, "money.json"), "utf8"));
   if (money.programs.length !== 1 || money.programs[0].id !== targetId) throw new Error("確認済みmoney制度fixtureが表示対象になりませんでした");
-  if (money.programs[0].benefitType !== "in_kind_or_direct_payment") throw new Error("給付・貸付等の種別が公開データにありません");
+  if (money.programs[0].benefitType !== "direct_payment") throw new Error("給付・貸付等の種別が公開データにありません");
   console.log("お金カテゴリfixture OK: 確認済み制度のみ表示・支援種別を保持");
 } finally {
   fs.rmSync(moneyRoot, { recursive: true, force: true });
