@@ -1,24 +1,23 @@
 # 暮らしの再建 運用ステータス
 
 - 状態: **WARNING**
-- 生成: 2026-08-12T05:14:29.321Z
+- 生成: 2026-08-12T08:02:33.028Z
 - sitePhase: **emergency**
-- 収集: 426件 / 分類 288件 / 表示候補 234件
+- 収集: 438件 / 分類 297件 / 表示候補 238件
 - fallback: 21/21
-- 未分類: 92件
-- low confidence: 54件
+- 未分類: 93件
+- low confidence: 59件
 - manual override: 0件
 - 鮮度（公式ナビ）: fresh
 - 鮮度（厳密制度）: fresh
 - 厳密制度source変更: 0件（変更時は needs_review）
 - ACTION_REQUIRED: 0件
-- WARNING: 17件
+- WARNING: 16件
 
 ## ACTION_REQUIRED
 - なし
 
 ## WARNING
-- HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE
 - HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE

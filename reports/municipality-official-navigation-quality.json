@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-08-12T05:27:22.381Z",
+  "generatedAt": "2026-08-12T07:56:27.458Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 434,
-  "displayCandidateCount": 235,
-  "classifiedPageCount": 292,
+  "inputCount": 438,
+  "displayCandidateCount": 238,
+  "classifiedPageCount": 297,
   "categoryReport": {
     "home": {
-      "total": 75,
-      "high": 34,
+      "total": 76,
+      "high": 35,
       "medium": 13,
       "low": 28
     },
     "money": {
-      "total": 71,
+      "total": 73,
       "high": 9,
       "medium": 17,
-      "low": 45
+      "low": 47
     },
     "documents": {
-      "total": 75,
+      "total": 76,
       "high": 23,
       "medium": 10,
-      "low": 42
+      "low": 43
     },
     "health_care": {
       "total": 14,
@@ -31,39 +31,39 @@
       "low": 0
     },
     "family_education": {
-      "total": 49,
+      "total": 48,
       "high": 3,
       "medium": 17,
-      "low": 29
+      "low": 28
     },
     "work_business": {
-      "total": 13,
+      "total": 16,
       "high": 5,
-      "medium": 8,
+      "medium": 11,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 13,
-      "high": 7,
+      "total": 12,
+      "high": 6,
       "medium": 6,
       "low": 0
     },
     "daily_life": {
-      "total": 91,
+      "total": 94,
       "high": 29,
-      "medium": 62,
+      "medium": 65,
       "low": 0
     }
   },
   "municipalityReport": {
     "municipality_kumamoto": {
       "classified": 48,
-      "displayCandidates": 36,
+      "displayCandidates": 35,
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 15,
-      "displayCandidates": 10,
+      "classified": 16,
+      "displayCandidates": 11,
       "fallback": true
     },
     "municipality_minamata": {
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 34,
-      "displayCandidates": 28,
+      "classified": 36,
+      "displayCandidates": 30,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 36,
-      "displayCandidates": 31,
+      "classified": 37,
+      "displayCandidates": 32,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -127,7 +127,7 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 12,
+      "classified": 13,
       "displayCandidates": 8,
       "fallback": true
     },
@@ -164,10 +164,10 @@
   },
   "confidence": {
     "high": 115,
-    "medium": 120,
-    "low": 57
+    "medium": 123,
+    "low": 59
   },
-  "unclassifiedCount": 95,
+  "unclassifiedCount": 93,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -186,8 +186,8 @@
     },
     {
       "municipalityName": "熊本市",
-      "title": "災害時の食中毒を予防しましょう（被災者の皆様へ）",
-      "url": "https://www.city.kumamoto.jp/kiji00372173/index.html"
+      "title": "【重要】災害対応のため、一部を除き窓口を閉鎖します（建築指導課、建築審査室）",
+      "url": "https://www.city.kumamoto.jp/kiji00372322/index.html"
     },
     {
       "municipalityName": "熊本市",
@@ -196,28 +196,18 @@
     },
     {
       "municipalityName": "熊本市",
-      "title": "主要地方道熊本嘉島線の全面通行止め解除について",
-      "url": "https://www.city.kumamoto.jp/kiji00372341/index.html"
-    },
-    {
-      "municipalityName": "熊本市",
       "title": "令和8年熊本地震における感染症予防対策について",
       "url": "https://www.city.kumamoto.jp/kiji00372295/index.html"
     },
     {
       "municipalityName": "熊本市",
-      "title": "【重要】災害対応のため、一部を除き窓口を閉鎖します（建築指導課、建築審査室）",
-      "url": "https://www.city.kumamoto.jp/kiji00372322/index.html"
-    },
-    {
-      "municipalityName": "熊本市",
-      "title": "被災者へ食事を提供される方へ",
-      "url": "https://www.city.kumamoto.jp/kiji00372215/index.html"
-    },
-    {
-      "municipalityName": "熊本市",
       "title": "【令和8年熊本地震】熊本市から他市町村へ避難されている皆様へ",
       "url": "https://www.city.kumamoto.jp/kiji00372342/index.html"
+    },
+    {
+      "municipalityName": "熊本市",
+      "title": "主要地方道熊本嘉島線の全面通行止め解除について",
+      "url": "https://www.city.kumamoto.jp/kiji00372341/index.html"
     },
     {
       "municipalityName": "熊本市",
@@ -436,12 +426,12 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年08月12日 令和8年熊本地震（7月28日発生）に関する情報（8月12日12時00分更新）",
+      "title": "2026年08月12日 令和8年熊本地震（7月28日発生）に関する情報（8月12日16時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年8月12日 令和8年熊本地震（7月28日発生）に関する情報（8月12日12時00分更新）",
+      "title": "2026年8月12日 令和8年熊本地震（7月28日発生）に関する情報（8月12日16時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2606699"
     },
     {
@@ -645,26 +635,31 @@
       "url": "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=35&pg=1"
     }
   ],
-  "excludedCount": 53,
+  "excludedCount": 54,
   "excludedByType": {
-    "duplicate_url": 50,
+    "duplicate_url": 51,
     "non_official_url": 2,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 16,
+  "warningCount": 15,
   "warnings": [
     {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_yatsushiro",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
       "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_yatsushiro",
+      "municipalityId": "municipality_kumamoto",
       "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_yatsushiro",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_yatsushiro",
+      "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_kamiamakusa",
       "message": "継続回数を確認後に表示除外を判断してください"
     },
@@ -701,16 +696,6 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuyo",
-      "count": 1
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_kashima",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kashima",
       "count": 1
     },
     {
@@ -735,5 +720,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 282
+  "previousClassifiedPageCount": 292
 }
