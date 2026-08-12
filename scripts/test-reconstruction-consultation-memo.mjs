@@ -16,11 +16,11 @@ const unselected=await memo.build({categories:["home"]});assert.equal(unselected
 const uto=await memo.build({categories:["home"],municipalityId:"municipality_uto"});assert.equal(uto.municipalityName,"宇土市");assert.equal(uto.entries[0].official.organization,"宇土市（自治体）");assert.match(uto.entries[0].official.url,/very\/long/);assert.equal(uto.entries[0].actions.length,1);
 const other=await memo.build({categories:["home"],municipalityId:"municipality_yatsushiro"});assert.equal(other.municipalityName,"八代市");assert.equal(other.entries[0].official.fallback,true);assert.doesNotMatch(other.entries[0].official.url,/uto/);
 const noAction=await memo.build({categories:["money"],municipalityId:"municipality_uto"});assert.equal(noAction.entries[0].actions.length,0);
-for(const text of ["相談メモ","診断結果、申請書、行政の公式書類ではありません","選んだ困りごと","次に確認すること","参考にする公式情報","このメモを作成","情報更新の注意","サーバーに保存されません","気になること・確認したいこと","重要"])assert.ok(code.includes(text),`${text} が必要`);
-assert.match(actions,/data-action-memo/);assert.match(main,/相談メモを見る/);assert.match(main,/ReconstructionConsultationMemo/);
+for(const text of ["確認メモ","診断結果、申請書、行政の公式書類ではありません","選んだ困りごと","次に確認すること","参考にする公式情報","このメモを作成","情報更新の注意","サーバーに保存されません","気になること・確認したいこと","重要"])assert.ok(code.includes(text),`${text} が必要`);
+assert.match(actions,/data-action-memo/);assert.match(main,/確認メモを見る/);assert.match(main,/ReconstructionConsultationMemo/);
 assert.match(css,/@page\{size:A4 portrait/);assert.match(css,/@media print/);assert.match(css,/@media\(max-width:430px\)/);assert.match(css,/word-break:break-all/);assert.match(css,/:focus-visible/);assert.match(controls,/min-height:48px/);
 assert.doesNotMatch(`${code}\n${main}`,/localStorage|sessionStorage|document\.cookie|gtag\(|dataLayer|navigator\.share|mailto:|line\.me/i);
 assert.doesNotMatch(code,/支援者名|相談記録|対応結果|氏名|住所|電話番号|生年月日|所得|病歴|借金/);
 assert.doesNotMatch(code,/あなたの診断|判定結果|支援対象|ケース結果|該当制度なし/);
 for(const file of ["reconstruction.html","reconstruction-money.html","reconstruction-documents.html","reconstruction-health-care.html","reconstruction-family.html","reconstruction-work-business.html","reconstruction-agriculture-fishery.html","reconstruction-official.html"])assert.match(read(file),/<noscript>/,`${file}: JS無効でも通常印刷可能`);
-console.log("相談メモ: 自治体未選択・宇土市・別自治体・1/3/6カテゴリ・actionあり/0件・公式あり/fallback・高リスク・切替・A4・白黒・長URL・JS無効・320px・keyboard・privacy OK");
+console.log("確認メモ: 自治体未選択・宇土市・別自治体・1/3/6カテゴリ・actionあり/0件・公式あり/fallback・高リスク・切替・A4・白黒・長URL・JS無効・320px・keyboard・privacy OK");
