@@ -1,12 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { classifyFetch, hashBody, impactEntity, riskForClaims, validateRetrievedBody } from "./reconstruction-source-change.mjs";
+import { classifyFetch, hashBody, impactEntity, jstTimestamp, riskForClaims, validateRetrievedBody } from "./reconstruction-source-change.mjs";
 
 const root = path.resolve(process.env.RECONSTRUCTION_ROOT || path.join(path.dirname(fileURLToPath(import.meta.url)), ".."));
 const dataDir = path.join(root, "data/reconstruction");
 const reportsDir = path.join(root, "reports");
-const now = process.env.SOURCE_MONITOR_NOW || new Date().toISOString();
+// sources.checkedAt / retrievedAt、source-change-events.detectedAt などに入るため
+// スキーマが許す JST・秒精度に正規化する。SOURCE_MONITOR_NOW で渡された値も同じ形に揃える。
+const now = jstTimestamp(process.env.SOURCE_MONITOR_NOW || new Date());
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file), "utf8"));
 const writeAtomic = (file, value) => { const target = path.join(root, file); fs.mkdirSync(path.dirname(target), { recursive: true }); const temporary = `${target}.tmp`; fs.writeFileSync(temporary, `${JSON.stringify(value, null, 2)}\n`); fs.renameSync(temporary, target); };
 

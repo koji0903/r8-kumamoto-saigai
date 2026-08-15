@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
-import { classifyFetch, hashBody, impactEntity, normalizeHtml, riskForClaims, shouldExcludeFromPublic, validateRetrievedBody } from "./reconstruction-source-change.mjs";
+import fs from "node:fs";
+import { classifyFetch, hashBody, impactEntity, jstTimestamp, normalizeHtml, riskForClaims, shouldExcludeFromPublic, validateRetrievedBody } from "./reconstruction-source-change.mjs";
 
 const htmlA = "<html><header>更新時刻</header><main><h1>制度</h1><p>限度額 757,000円</p></main><footer>共通</footer></html>";
 const htmlNoise = "<html><header>別の更新時刻</header><main><h1>制度</h1><p>限度額 757,000円</p></main><footer>別共通</footer></html>";
@@ -34,4 +35,19 @@ assert.equal(shouldExcludeFromPublic({ publicationStatus: "published", verificat
 assert.equal(shouldExcludeFromPublic({ publicationStatus: "published", verificationStatus: "verified" }), false);
 const sharedSourceLinks = [{ entityId: "application-a" }, { entityId: "contact-a" }, { entityId: "action-a" }];
 assert.equal(new Set(sharedSourceLinks.map(() => "source-one")).size, 1, "複数entity参照でもURL単位で1回取得");
-console.log("source変更監視: 変更なし・HTML・PDF・amount/deadline/eligibility/documents/contact/warning・404・redirect・timeout・複数entity・needs_review・公開除外 OK");
+// 監視が書き込む日時は data/reconstruction のスキーマに適合しなければならない。
+// Date#toISOString() のミリ秒付きUTCをそのまま入れて定期実行が落ちたことがあるため、
+// スキーマの正規表現そのものを読んで突き合わせる。
+const dateTimePattern = new RegExp(JSON.parse(fs.readFileSync(new URL("../schemas/reconstruction/common.schema.json", import.meta.url), "utf8")).$defs.nullableDateTime.pattern);
+for (const input of [new Date("2026-08-15T21:44:49.625Z"), "2026-08-15T21:44:49.625Z", "2026-08-15T21:44:49Z", "2026-08-10T15:50:00+09:00", 1786000000000]) {
+  const stamp = jstTimestamp(input);
+  assert.match(stamp, dateTimePattern, `スキーマに適合しない日時: ${String(input)} -> ${stamp}`);
+  assert.equal(stamp.endsWith("+09:00"), true, "既存データと同じJST表記に揃える");
+  assert.equal(jstTimestamp(stamp), stamp, "正規化は冪等でなければならない");
+}
+assert.equal(jstTimestamp("2026-08-15T21:44:49.625Z"), "2026-08-16T06:44:49+09:00");
+assert.throws(() => jstTimestamp("not-a-date"), /日時として解釈できません/);
+// 監視が生成するイベントIDは日時から作られるので、正規化で桁が崩れないこと
+assert.equal(jstTimestamp("2026-08-15T21:44:49.625Z").replace(/\D/g, "").slice(0, 14).length, 14);
+
+console.log("source変更監視: 変更なし・HTML・PDF・amount/deadline/eligibility/documents/contact/warning・404・redirect・timeout・複数entity・needs_review・公開除外・日時形式 OK");

@@ -72,3 +72,16 @@ export function impactEntity(entity, decision) {
 export function shouldExcludeFromPublic(entity) {
   return !entity || entity.publicationStatus !== "published" || ["withdrawn", "expired", "unverified", "pending", "needs_review", "source_unreachable"].includes(entity.verificationStatus);
 }
+
+// data/reconstruction のタイムスタンプは JST・秒精度に揃える。
+// schemas/reconstruction/common.schema.json の nullableDateTime は
+//   ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})$
+// で、Date#toISOString() が付けるミリ秒を許さない。加えて既存データは
+// すべて +09:00 表記であり、Z と混在させると文字列比較での前後判定
+// （lastVerifiedAt などの .sort() ）が壊れるため、オフセットも揃える。
+export function jstTimestamp(value = new Date()) {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) throw new Error(`日時として解釈できません: ${value}`);
+  const jst = new Date(date.getTime() + 9 * 60 * 60 * 1000);
+  return `${jst.toISOString().slice(0, 19)}+09:00`;
+}
