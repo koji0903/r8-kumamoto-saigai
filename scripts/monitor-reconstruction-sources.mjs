@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { classifyFetch, hashBody, impactEntity, riskForClaims } from "./reconstruction-source-change.mjs";
+import { classifyFetch, hashBody, impactEntity, riskForClaims, validateRetrievedBody } from "./reconstruction-source-change.mjs";
 
 const root = path.resolve(process.env.RECONSTRUCTION_ROOT || path.join(path.dirname(fileURLToPath(import.meta.url)), ".."));
 const dataDir = path.join(root, "data/reconstruction");
@@ -44,6 +44,8 @@ async function retrieve(source) {
     const response = await fetch(source.url, { redirect: "follow", signal: controller.signal, headers: { "user-agent": "YokataiNet-OfficialSourceMonitor/1.0 (+https://www.yokatainet.jp/)" } });
     const isPdf = source.sourceType === "pdf" || source.sourceType === "guideline" || source.sourceType === "application_guide" || /\.pdf(?:$|\?)/i.test(response.url || source.url) || /application\/pdf/i.test(response.headers.get("content-type") || "");
     const body = isPdf ? Buffer.from(await response.arrayBuffer()) : await response.text();
+    const validation = response.ok ? validateRetrievedBody(body, isPdf ? "pdf" : "html", response.headers.get("content-type") || "") : { valid: true };
+    if (!validation.valid) return { kind: "network_error", status: 0, finalUrl: response.url || source.url, redirected: response.redirected, hash: null, hashAlgorithm: null, error: validation.reason };
     return { kind: isPdf ? "pdf" : "html", status: response.status, finalUrl: response.url, redirected: response.redirected, hash: response.ok ? hashBody(body, isPdf ? "pdf" : "html") : null, hashAlgorithm: isPdf ? "raw-pdf-v1" : "normalized-html-v1", etag: response.headers.get("etag"), lastModified: response.headers.get("last-modified") };
   } catch (error) {
     return { kind: error?.name === "AbortError" ? "timeout" : "network_error", status: 0, finalUrl: source.url, redirected: false, hash: null, hashAlgorithm: null, error: String(error?.message || error) };

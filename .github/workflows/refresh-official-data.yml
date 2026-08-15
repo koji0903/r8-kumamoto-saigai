@@ -91,13 +91,22 @@ jobs:
           fi
 
       - name: 厳密制度の公式根拠を変更監視
-        run: |
-          node scripts/monitor-reconstruction-sources.mjs
-          node scripts/build-reconstruction-public-data.js
-          node scripts/test-reconstruction-source-change.mjs
-          node scripts/test-reconstruction-contact-document.mjs
-          node scripts/test-reconstruction-eligibility.mjs
-          node scripts/test-reconstruction-amount-benefit.mjs
+        run: node scripts/monitor-reconstruction-sources.mjs
+
+      - name: 暮らしの再建公開データを生成
+        run: node scripts/build-reconstruction-public-data.js
+
+      - name: 公式根拠変更監視を検査
+        run: node scripts/test-reconstruction-source-change.mjs
+
+      - name: 必要書類・窓口を検査
+        run: node scripts/test-reconstruction-contact-document.mjs
+
+      - name: 対象条件を検査
+        run: node scripts/test-reconstruction-eligibility.mjs
+
+      - name: 金額・支援種別を検査
+        run: node scripts/test-reconstruction-amount-benefit.mjs
 
       - name: データ整合性を検査
         run: |

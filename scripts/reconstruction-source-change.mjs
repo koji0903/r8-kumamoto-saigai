@@ -25,6 +25,26 @@ export function hashBody(body, kind = "html") {
   return `sha256:${crypto.createHash("sha256").update(input).digest("hex")}`;
 }
 
+export function validateRetrievedBody(body, kind = "html", contentType = "") {
+  if (kind === "pdf") {
+    const bytes = Buffer.isBuffer(body) ? body : Buffer.from(body || "");
+    return bytes.length >= 5 && bytes.subarray(0, 5).toString("ascii") === "%PDF-"
+      ? { valid: true }
+      : { valid: false, reason: "PDF署名を確認できません" };
+  }
+
+  const html = String(body || "");
+  const normalized = normalizeHtml(html);
+  if (!/html|xhtml/i.test(contentType) && !/<(?:html|main|article|body)\b/i.test(html)) {
+    return { valid: false, reason: "HTML応答を確認できません" };
+  }
+  if (normalized.length < 40) return { valid: false, reason: "本文が短すぎます" };
+  if (/(?:captcha|access denied|forbidden|cloudflare|temporarily unavailable|service unavailable|bot verification)/i.test(`${html}\n${normalized}`)) {
+    return { valid: false, reason: "アクセス制限または一時エラーページです" };
+  }
+  return { valid: true };
+}
+
 export function riskForClaims(claimTypes = []) {
   if (claimTypes.some(type => HIGH_RISK_CLAIMS.has(type))) return "high";
   if (claimTypes.some(type => MEDIUM_RISK_CLAIMS.has(type))) return "medium";

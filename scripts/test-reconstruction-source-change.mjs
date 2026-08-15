@@ -1,10 +1,15 @@
 import assert from "node:assert/strict";
-import { classifyFetch, hashBody, impactEntity, normalizeHtml, riskForClaims, shouldExcludeFromPublic } from "./reconstruction-source-change.mjs";
+import { classifyFetch, hashBody, impactEntity, normalizeHtml, riskForClaims, shouldExcludeFromPublic, validateRetrievedBody } from "./reconstruction-source-change.mjs";
 
 const htmlA = "<html><header>更新時刻</header><main><h1>制度</h1><p>限度額 757,000円</p></main><footer>共通</footer></html>";
 const htmlNoise = "<html><header>別の更新時刻</header><main><h1>制度</h1><p>限度額 757,000円</p></main><footer>別共通</footer></html>";
 assert.equal(normalizeHtml(htmlA), "制度 限度額 757,000円");
 assert.equal(hashBody(htmlA), hashBody(htmlNoise), "header/footerだけの変化を本文変更にしない");
+assert.equal(validateRetrievedBody(`${htmlA}<main>公式制度の対象条件、申請方法、必要書類、受付窓口、受付期間について詳しく案内しています。</main>`, "html", "text/html").valid, true);
+assert.equal(validateRetrievedBody("<html><body>Access Denied by Cloudflare bot verification</body></html>", "html", "text/html").valid, false, "WAF応答を本文変更にしない");
+assert.equal(validateRetrievedBody("{\"error\":\"temporary\"}", "html", "application/json").valid, false, "HTML以外を本文変更にしない");
+assert.equal(validateRetrievedBody(Buffer.from("%PDF-1.7 fixture"), "pdf", "application/pdf").valid, true);
+assert.equal(validateRetrievedBody(Buffer.from("<html>error</html>"), "pdf", "text/html").valid, false, "PDF URLのHTML応答を本文変更にしない");
 const previous = { contentHash: hashBody(htmlA), hashAlgorithm: "normalized-html-v1", url: "https://example.go.jp/a", consecutiveFailures: 0 };
 const htmlChanged = { kind: "html", status: 200, finalUrl: previous.url, redirected: false, hash: hashBody("<main>限度額 800,000円</main>"), hashAlgorithm: "normalized-html-v1" };
 const pdfPrevious = { contentHash: hashBody(Buffer.from("pdf-a"), "pdf"), hashAlgorithm: "raw-pdf-v1", url: "https://example.go.jp/a.pdf", consecutiveFailures: 0 };
