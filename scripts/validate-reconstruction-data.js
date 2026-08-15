@@ -197,7 +197,7 @@ for (const amount of parsed.amounts || []) {
   const text=`${amount.description} ${program?.shortDescription||""}`;
   if(amount.benefitType==="loan"&&/返済不要|返す必要[はが]ない/.test(text)) errors.push(`${amount.id}: 貸付を返済不要と説明しています`);
   if(amount.benefitType==="grant"&&/返済が必要|貸付/.test(text)) errors.push(`${amount.id}: 給付を貸付と説明しています`);
-  if(amount.publicationStatus==="published"&&amount.verificationStatus!=="verified") errors.push(`${amount.id}: 未確認金額をpublishedにできません`);
+  if(amount.publicationStatus==="published"&&!["verified","needs_review"].includes(amount.verificationStatus)) errors.push(`${amount.id}: verifiedまたはneeds_review以外の金額をpublishedにできません`);
 }
 for(const application of parsed.applications||[]){if(application.amountDescription&&!parsed.amounts.some(item=>item.applicationId===application.id))errors.push(`${application.id}: amountDescriptionがありますが監査可能なamount recordがありません`);}
 for (const status of parsed.municipalityStatuses || []) {

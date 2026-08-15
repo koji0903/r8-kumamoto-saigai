@@ -30,6 +30,25 @@ function runCase(name, mutate, expectedMessage) {
   }
 }
 
+function runPassCase(name, mutate) {
+  const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "reconstruction-validator-"));
+  try {
+    fs.mkdirSync(path.join(tempRoot, "data"), { recursive: true });
+    fs.mkdirSync(path.join(tempRoot, "schemas"), { recursive: true });
+    fs.mkdirSync(path.join(tempRoot, "scripts"), { recursive: true });
+    fs.cpSync(path.join(root, "data", "reconstruction"), path.join(tempRoot, "data", "reconstruction"), { recursive: true });
+    fs.cpSync(path.join(root, "schemas", "reconstruction"), path.join(tempRoot, "schemas", "reconstruction"), { recursive: true });
+    fs.copyFileSync(path.join(root, "data", "report-data.js"), path.join(tempRoot, "data", "report-data.js"));
+    fs.copyFileSync(path.join(root, "scripts", "validate-reconstruction-data.js"), path.join(tempRoot, "scripts", "validate-reconstruction-data.js"));
+    mutate(tempRoot);
+    const result = spawnSync(process.execPath, [path.join(tempRoot, "scripts", "validate-reconstruction-data.js")], { encoding: "utf8" });
+    if (result.status !== 0) throw new Error(`${name}: 正常系が失敗しました\n${result.stdout}\n${result.stderr}`);
+    console.log(`正常系OK: ${name}`);
+  } finally {
+    fs.rmSync(tempRoot, { recursive: true, force: true });
+  }
+}
+
 function editJson(tempRoot, file, updater) {
   const target = path.join(tempRoot, "data", "reconstruction", file);
   const json = JSON.parse(fs.readFileSync(target, "utf8"));
@@ -70,4 +89,13 @@ runCase("受付pendingなのにconfirmed表示相当", tempRoot => {
   });
 }, "受付confirmedを表示可能にするにはverificationStatus=verifiedが必要です");
 
-console.log("生活再建データ検証の異常系テストOK（4件）");
+runPassCase("公式根拠変更後の金額を公開候補のままneeds_reviewへ移行", tempRoot => {
+  editJson(tempRoot, "amount-benefits.json", rows => {
+    const amount = rows[0];
+    amount.publicationStatus = "published";
+    amount.verificationStatus = "needs_review";
+    amount.freshnessStatus = "review_due";
+  });
+});
+
+console.log("生活再建データ検証OK（異常系4件・正常系1件）");
