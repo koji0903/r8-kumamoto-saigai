@@ -71,6 +71,10 @@ const municipalities = [
 // 宇土市の当該ページは、市が今回の災害情報だけを分類して掲載する専用集約ページ。
 // 「市民の皆様へ」等、表題だけでは地震関連性を判定できない記事も公式の掲載判断を尊重する。
 municipalities.find(municipality => municipality.name === "宇土市").trustAllHub = true;
+// 八代市の hubs も、市が令和8年熊本地震の情報だけを集約した専用ページと緊急情報ページ。
+// 「生活用水の配布について」「試験通水の実施について」「こどもの居場所」のように、
+// 表題に地震・災害の語がなくても被災者に必要な情報が多数ぶら下がっている。
+municipalities.find(municipality => municipality.name === "八代市").trustAllHub = true;
 // 集約ページから外れた後も、過去に公式原文と日付を確認済みの資料はアーカイブとして保持する。
 municipalities.find(municipality => municipality.name === "八代市").preserved = [{
   title: "避難所開設状況一覧（再編）（R8.8.1 12時時点）（PDF：479.6キロバイト）",
@@ -181,7 +185,14 @@ function anchors(html, base, config) {
   }
   return result;
 }
-function selfRecord(html, url, trustedByHub, verifiedDetail = false) {
+// <title> を使うと「記事名 / 熊本県八代市」のようにサイト名が付く。
+// 一覧に並べたときのノイズになるため、末尾の自治体名だけを落とす。
+function stripSiteName(title, municipalityName = "") {
+  if (!municipalityName) return title;
+  const escaped = municipalityName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return title.replace(new RegExp(`\\s*[/｜|・－–—-]\\s*(?:熊本県)?${escaped}\\s*$`, "u"), "").trim() || title;
+}
+function selfRecord(html, url, trustedByHub, verifiedDetail = false, trustedHubDetail = false, municipalityName = "") {
   const h1 = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i);
   const ogTitle = html.match(/<meta\b[^>]*property=["']og:title["'][^>]*content=["']([^"']+)/i)?.[1];
   const titleTag = html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1];
@@ -189,7 +200,7 @@ function selfRecord(html, url, trustedByHub, verifiedDetail = false) {
   // 空でないため h1 を採用してしまい、表題が空になって記事ごと捨てられていた。
   // タグを除去した結果が空でない最初の候補を表題とする。
   const title = [h1?.[1], ogTitle, titleTag].map(value => clean(text(value || ""))).find(Boolean) || "";
-  if (!title || excluded(title) || /くらし・手続き\s+健康・福祉/u.test(title) || (!verifiedDetail && !relevant(title) && !(trustedByHub && contextual(title)))) return null;
+  if (!title || excluded(title) || /くらし・手続き\s+健康・福祉/u.test(title) || (!verifiedDetail && !trustedHubDetail && !relevant(title) && !(trustedByHub && contextual(title)))) return null;
   const structuredDates = [...html.matchAll(/(?:datePublished|dateModified|datetime)["'=:\s]+([0-9T:+-]{10,})/gi)]
     .map(match => parseDate(match[1])).filter(Boolean).sort((a, b) => `${a.date} ${a.time || ""}`.localeCompare(`${b.date} ${b.time || ""}`));
   const around = h1 ? html.slice(Math.max(0, h1.index - 1000), Math.min(html.length, h1.index + h1[0].length + 2600)) : html.slice(0, 7000);
@@ -197,7 +208,8 @@ function selfRecord(html, url, trustedByHub, verifiedDetail = false) {
   // 最終日時を使う。ページ本文からの推定は最後の手段とする。
   const statedTitleDate = parseLeadingDate(title) || (/更新|時点|現在|掲載|発表/u.test(title) ? parseDate(title) : null);
   const date = statedTitleDate || structuredDates.at(-1) || parseDate(text(around)) || parseDate(text(html.slice(0, 18000)));
-  return date ? { title, url, ...date, category: category(title) } : null;
+  const displayTitle = stripSiteName(title, municipalityName);
+  return date ? { title: displayTitle, url, ...date, category: category(displayTitle) } : null;
 }
 // 八代市・氷川町の緊急情報は個別ページではなく、1ページ内の article 単位で更新される。
 // 各記事の公式アンカーを原文リンクとして保存する。
@@ -260,7 +272,7 @@ for (const config of municipalities) {
       const { html, finalUrl } = await get(item.url);
       fetched++;
       for (const update of inlineEmergencyRecords(html, finalUrl)) updates.set(update.url, update);
-      const self = selfRecord(html, finalUrl, item.trustedByHub && item.kind === "detail", item.verifiedDetail);
+      const self = selfRecord(html, finalUrl, item.trustedByHub && item.kind === "detail", item.verifiedDetail, Boolean(config.trustAllHub && item.trustedByHub && item.kind === "detail"), config.name);
       if (self) updates.set(self.url, self);
       const found = anchors(html, finalUrl, config);
       for (const link of found) {
@@ -272,7 +284,12 @@ for (const config of municipalities) {
         if (discoveredHub && !seen.has(link.url) && !queued.has(link.url)) {
           queue.push({ url: link.url, kind: "hub", trustedByHub: true }); queued.add(link.url);
         }
-        const shouldInspect = !discoveredHub && !/\.(?:pdf|docx?|xlsx?|zip)$/i.test(new URL(link.url).pathname) && articleLike(link.url) && (relevant(link.title) || (item.kind === "hub" && (contextual(link.title) || config.trustAllHub)));
+        // 記事URLの形は自治体ごとに違う（美里町は /town_news/ や /soshiki/… で、
+        // articleLike の想定に当てはまらない）。災害ハブに載っている時点で自治体が
+        // 関連情報として掲載しているので、ハブ由来はURLの形を問わず本文を確認する。
+        // トップページ等から辿ったリンクは、サイト全体の巡回を避けるため従来どおり絞る。
+        const inspectableUrl = articleLike(link.url) || item.kind === "hub";
+        const shouldInspect = !discoveredHub && !/\.(?:pdf|docx?|xlsx?|zip)$/i.test(new URL(link.url).pathname) && inspectableUrl && (relevant(link.title) || (item.kind === "hub" && (contextual(link.title) || config.trustAllHub)));
         if (shouldInspect && !seen.has(link.url) && !queued.has(link.url)) {
           queue.push({ url: link.url, kind: "detail", trustedByHub: item.kind === "hub" });
           queued.add(link.url);

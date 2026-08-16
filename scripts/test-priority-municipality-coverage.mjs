@@ -24,6 +24,21 @@ for (const name of PRIORITY) {
   }
 }
 
+// <title> 由来の表題に付くサイト名を落とすこと。一覧のノイズになる。
+assert.match(collector, /function stripSiteName/, "表題末尾の自治体名を落とす処理が必要です");
+for (const name of PRIORITY) {
+  const municipality = nav.municipalities.find(item => item.municipalityName === name);
+  const dirty = (municipality.updates || []).filter(update => new RegExp(`[/｜|]\\s*(?:熊本県)?${name}\\s*$`, "u").test(update.displayTitle || ""));
+  assert.equal(dirty.length, 0, `${name}: 表題にサイト名が残っています（${dirty[0]?.displayTitle}）`);
+}
+
+// 災害ハブに載っている記事は、表題に災害の語がなくても取りこぼさないこと。
+// 「生活用水の配布について」「こどもの居場所」などが落ちていた。
+assert.match(collector, /municipalities\.find\(municipality => municipality\.name === "八代市"\)\.trustAllHub = true;/,
+  "八代市の災害ハブの掲載判断を尊重する設定が必要です");
+assert.match(collector, /const inspectableUrl = articleLike\(link\.url\) \|\| item\.kind === "hub";/,
+  "ハブ由来のリンクはURLの形を問わず本文を確認する必要があります");
+
 // 表題抽出のフォールバック。h1 が画像だけのサイトで記事が落ちないこと。
 assert.match(collector, /\[h1\?\.\[1\], ogTitle, titleTag\]\.map\(value => clean\(text\(value \|\| ""\)\)\)\.find\(Boolean\)/,
   "h1が空のときに og:title / title へ落とす表題抽出が必要です");
