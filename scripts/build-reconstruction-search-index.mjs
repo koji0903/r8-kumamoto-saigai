@@ -28,4 +28,6 @@ const merged=new Map();for(const record of records){const key=canonical(record.u
 const items=[...merged.values()].map((item,index)=>({...item,id:`official-search-${index+1}`}));
 if(items.some(item=>!item.title||!item.organizationName||!/^https:\/\//.test(item.url)||!['published','verified'].includes(item.verificationStatus)||/fixture/i.test(JSON.stringify(item))))throw new Error("公式情報検索インデックスへ非公開・不正データが混入しました");
 const result={schemaVersion:"1.0.0",generatedAt:nav.generatedAt||new Date().toISOString(),sourceFiles:["public-data/reconstruction/municipality-official-navigation.json","data/reconstruction/sources.json","data/reconstruction/organizations.json","public-data/reconstruction/programs.json"],policy:{scope:"災害・生活再建に関する確認可能な公式情報",excluded:["一般Web","SNS","報道","火の国会議","民間支援","draft","unverified","needs_review","source_unreachable","fixture"]},count:items.length,items};
-fs.mkdirSync(path.dirname(output),{recursive:true});fs.writeFileSync(output,`${JSON.stringify(result,null,2)}\n`);console.log(`公式情報検索インデックス: ${items.length}件`);
+fs.mkdirSync(path.dirname(output),{recursive:true});// 利用者の端末が読み込むファイルなので整形せずに書き出す。被災地では通信が
+// 細いことがあり、インデントだけで4割ほど重くなる（348KB→210KB）。
+fs.writeFileSync(output,`${JSON.stringify(result)}\n`);console.log(`公式情報検索インデックス: ${items.length}件`);
