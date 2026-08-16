@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-08-16T02:00:00.613Z",
+  "generatedAt": "2026-08-16T04:03:21.509Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 453,
-  "displayCandidateCount": 252,
-  "classifiedPageCount": 310,
+  "displayCandidateCount": 250,
+  "classifiedPageCount": 309,
   "categoryReport": {
     "home": {
-      "total": 82,
-      "high": 35,
+      "total": 81,
+      "high": 34,
       "medium": 19,
       "low": 28
     },
     "money": {
-      "total": 84,
+      "total": 85,
       "high": 15,
       "medium": 21,
-      "low": 48
+      "low": 49
     },
     "documents": {
-      "total": 79,
+      "total": 78,
       "high": 23,
       "medium": 10,
-      "low": 46
+      "low": 45
     },
     "health_care": {
       "total": 16,
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 91,
-      "high": 28,
+      "total": 90,
+      "high": 27,
       "medium": 63,
       "low": 0
     }
@@ -87,13 +87,13 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 21,
-      "displayCandidates": 18,
+      "classified": 22,
+      "displayCandidates": 19,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 44,
-      "displayCandidates": 39,
+      "classified": 43,
+      "displayCandidates": 38,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -147,8 +147,8 @@
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 19,
-      "displayCandidates": 16,
+      "classified": 18,
+      "displayCandidates": 14,
       "fallback": true
     },
     "municipality_ashikita": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 119,
+    "high": 117,
     "medium": 133,
-    "low": 58
+    "low": 59
   },
-  "unclassifiedCount": 96,
+  "unclassifiedCount": 97,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -273,6 +273,11 @@
       "municipalityName": "山鹿市",
       "title": "令和8年熊本地震（7月28日発生）に関する情報",
       "url": "https://www.city.yamaga.kumamoto.jp/kiji0033159/index.html"
+    },
+    {
+      "municipalityName": "山鹿市",
+      "title": "震度速報 8月16日 12時5分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html"
     },
     {
       "municipalityName": "宇土市",
@@ -393,6 +398,11 @@
       "municipalityName": "上天草市",
       "title": "令和8年8月10日時点全面通行止め一覧(位置図、写真)(PDF 約2MB)",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/dl?q=123089_filelib_0e10a2cfcb8651b3f19b8389a6aaa912.pdf"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "2026年7月28日 市役所の窓口業務を閉鎖します",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2606668"
     },
     {
       "municipalityName": "宇城市",
@@ -555,11 +565,6 @@
       "url": "https://www.town.mifune.kumamoto.jp/page9393.html"
     },
     {
-      "municipalityName": "御船町",
-      "title": "「令和8年熊本地震」セーフティーネット保証4号について",
-      "url": "https://www.town.mifune.kumamoto.jp/page9412.html?type=top"
-    },
-    {
       "municipalityName": "嘉島町",
       "title": "(スマホ表示用)令和8年熊本地震に関する情報 2026.8.10更新(PDF 約750KB)",
       "url": "https://www.town.kumamoto-kashima.lg.jp/dl?q=44590_filelib_abe8fca0e7c102929730e67b11208e36.pdf"
@@ -656,7 +661,7 @@
     "non_official_url": 1,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 6,
+  "warningCount": 8,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -687,8 +692,18 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_mashiki",
       "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_hikawa",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_hikawa",
+      "count": 1
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 297
+  "previousClassifiedPageCount": 310
 }
