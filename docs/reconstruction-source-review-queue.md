@@ -1,15 +1,16 @@
 # 公式情報変更レビューキュー
 
-生成日時: 2026-08-16T13:33:43+09:00
+生成日時: 2026-08-16T16:10:18+09:00
 
-- 未解決変更: 7件
-- ACTION_REQUIRED: 4件
+- 未解決変更: 8件
+- ACTION_REQUIRED: 5件
 - needs_review対象: 0件
 
 > 上から高リスク順です。変更内容を一次資料で確認し、人によるレビュー・承認後にのみ verified へ戻してください。
 
 | リスク | 状態 | source | claimType | program | 自治体 | 関連entity | 最終確認 | 検知日時 | 原文 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| high | ACTION_REQUIRED | 災害救助法に基づく被災住宅の応急修理制度について | eligibility / amount / deadline / warning | program_emergency_housing_repair | municipality_yatsushiro<br>municipality_minamata<br>municipality_yamaga<br>municipality_kikuchi<br>municipality_uto<br>municipality_kamiamakusa<br>municipality_uki<br>municipality_amakusa<br>municipality_koshi<br>municipality_misato<br>municipality_ozu<br>municipality_kikuyo<br>municipality_nishihara<br>municipality_mifune<br>municipality_kashima<br>municipality_mashiki<br>municipality_kosa<br>municipality_hikawa<br>municipality_ashikita<br>municipality_tsunagi | application:application_r8_kumamoto_emergency_repair<br>application:application_r8_kumamoto_emergency_repair<br>application:application_r8_kumamoto_emergency_repair<br>application:application_r8_kumamoto_emergency_repair | 2026-08-09T07:20:05+09:00 | 2026-08-16T16:10:18+09:00 | [原文](https://www.city.uto.lg.jp/article/view/1243/16523.html) |
 | high | ACTION_REQUIRED | 災害救助法に基づく被災住宅の応急修理制度について | eligibility / amount / deadline / warning | program_emergency_housing_repair | municipality_yatsushiro<br>municipality_minamata<br>municipality_yamaga<br>municipality_kikuchi<br>municipality_uto<br>municipality_kamiamakusa<br>municipality_uki<br>municipality_amakusa<br>municipality_koshi<br>municipality_misato<br>municipality_ozu<br>municipality_kikuyo<br>municipality_nishihara<br>municipality_mifune<br>municipality_kashima<br>municipality_mashiki<br>municipality_kosa<br>municipality_hikawa<br>municipality_ashikita<br>municipality_tsunagi | application:application_r8_kumamoto_emergency_repair<br>application:application_r8_kumamoto_emergency_repair<br>application:application_r8_kumamoto_emergency_repair<br>application:application_r8_kumamoto_emergency_repair | 2026-08-09T07:20:05+09:00 | 2026-08-16T11:06:34+09:00 | [原文](https://www.city.uto.lg.jp/article/view/1243/16523.html) |
 | high | ACTION_REQUIRED | 令和8年熊本地震被害に関する「すまいの相談窓口」の開設について | application_office | program_emergency_housing_repair | municipality_yatsushiro<br>municipality_minamata<br>municipality_yamaga<br>municipality_kikuchi<br>municipality_uto<br>municipality_kamiamakusa<br>municipality_uki<br>municipality_amakusa<br>municipality_koshi<br>municipality_misato<br>municipality_ozu<br>municipality_kikuyo<br>municipality_nishihara<br>municipality_mifune<br>municipality_kashima<br>municipality_mashiki<br>municipality_kosa<br>municipality_hikawa<br>municipality_ashikita<br>municipality_tsunagi | application:application_r8_kumamoto_emergency_repair | 2026-08-09T07:20:05+09:00 | 2026-08-16T13:09:53+09:00 | [原文](https://www.city.uto.lg.jp/article/view/1307/16522.html) |
 | high | ACTION_REQUIRED | 【令和8年熊本地震】被災した住宅の応急修理について | disaster_application / other / deadline | program_emergency_housing_repair | municipality_yatsushiro<br>municipality_minamata<br>municipality_yamaga<br>municipality_kikuchi<br>municipality_uto<br>municipality_kamiamakusa<br>municipality_uki<br>municipality_amakusa<br>municipality_koshi<br>municipality_misato<br>municipality_ozu<br>municipality_kikuyo<br>municipality_nishihara<br>municipality_mifune<br>municipality_kashima<br>municipality_mashiki<br>municipality_kosa<br>municipality_hikawa<br>municipality_ashikita<br>municipality_tsunagi | application:application_r8_kumamoto_emergency_repair<br>application:application_r8_kumamoto_emergency_repair<br>application_period:period_r8_kumamoto_emergency_repair_application_pending | 2026-08-09T07:20:05+09:00 | 2026-08-16T11:06:34+09:00 | [原文](https://www.pref.kumamoto.jp/soshiki/27/275109.html) |

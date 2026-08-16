@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-16T04:34:40.819Z",
+  "generatedAt": "2026-08-16T07:10:29.988Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-16T04:24:50.574Z",
-    "inputCount": 453,
-    "classifiedPageCount": 310,
-    "displayCandidateCount": 251,
+    "generatedAt": "2026-08-16T07:03:28.798Z",
+    "inputCount": 470,
+    "classifiedPageCount": 326,
+    "displayCandidateCount": 264,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 1,
-      "unclassifiedCount": -1
+      "inputCount": 17,
+      "classifiedPageCount": 16,
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -51,8 +51,8 @@
         "fallback": true
       },
       "municipality_kikuchi": {
-        "classified": 0,
-        "displayCandidates": 0,
+        "classified": 8,
+        "displayCandidates": 6,
         "fallback": true
       },
       "municipality_uto": {
@@ -96,13 +96,13 @@
         "fallback": true
       },
       "municipality_nishihara": {
-        "classified": 0,
-        "displayCandidates": 0,
+        "classified": 8,
+        "displayCandidates": 7,
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 13,
-        "displayCandidates": 7,
+        "classified": 11,
+        "displayCandidates": 6,
         "fallback": true
       },
       "municipality_kashima": {
@@ -121,13 +121,13 @@
         "fallback": true
       },
       "municipality_hikawa": {
-        "classified": 18,
+        "classified": 19,
         "displayCandidates": 14,
         "fallback": true
       },
       "municipality_ashikita": {
-        "classified": 1,
-        "displayCandidates": 1,
+        "classified": 2,
+        "displayCandidates": 2,
         "fallback": true
       },
       "municipality_tsunagi": {
@@ -138,26 +138,26 @@
     },
     "categoryReport": {
       "home": {
-        "total": 81,
-        "high": 34,
+        "total": 86,
+        "high": 37,
         "medium": 19,
-        "low": 28
+        "low": 30
       },
       "money": {
-        "total": 85,
+        "total": 88,
         "high": 15,
-        "medium": 21,
-        "low": 49
+        "medium": 22,
+        "low": 51
       },
       "documents": {
-        "total": 78,
-        "high": 23,
-        "medium": 10,
-        "low": 45
+        "total": 84,
+        "high": 25,
+        "medium": 11,
+        "low": 48
       },
       "health_care": {
-        "total": 16,
-        "high": 8,
+        "total": 17,
+        "high": 9,
         "medium": 8,
         "low": 0
       },
@@ -180,18 +180,18 @@
         "low": 0
       },
       "daily_life": {
-        "total": 91,
-        "high": 28,
-        "medium": 63,
+        "total": 97,
+        "high": 30,
+        "medium": 67,
         "low": 0
       }
     },
     "confidence": {
-      "high": 118,
-      "medium": 133,
-      "low": 59
+      "high": 126,
+      "medium": 138,
+      "low": 62
     },
-    "unclassifiedCount": 96,
+    "unclassifiedCount": 97,
     "excludedCount": 54,
     "overrideCount": 0
   },
@@ -236,7 +236,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:e49d7edd0c2fd41913904337fc124c8af1aa8e22abefc65cfeb67435acb1644d",
+        "currentHash": "sha256:9defcc91765da226b7b370984a3d589cb798e61017bc1d9d18c1049832fb3bc2",
         "verificationStatus": "needs_review"
       }
     },
@@ -295,7 +295,7 @@
     },
     {
       "code": "UNCLASSIFIED_INCREASE",
-      "count": 96
+      "count": 97
     }
   ],
   "strictSources": {
@@ -331,7 +331,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:e49d7edd0c2fd41913904337fc124c8af1aa8e22abefc65cfeb67435acb1644d",
+        "currentHash": "sha256:9defcc91765da226b7b370984a3d589cb798e61017bc1d9d18c1049832fb3bc2",
         "verificationStatus": "needs_review"
       },
       {
