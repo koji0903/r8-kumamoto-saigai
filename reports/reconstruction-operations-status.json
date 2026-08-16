@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-16T10:00:02.509Z",
+  "generatedAt": "2026-08-16T13:17:18.103Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-16T09:46:06.678Z",
-    "inputCount": 653,
+    "generatedAt": "2026-08-16T13:04:02.676Z",
+    "inputCount": 654,
     "classifiedPageCount": 460,
     "displayCandidateCount": 363,
     "deltaFromPrevious": {
-      "inputCount": 183,
-      "classifiedPageCount": 134,
-      "unclassifiedCount": 69
+      "inputCount": 1,
+      "classifiedPageCount": 0,
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 3,
+      "ageHours": 6,
       "limitHours": 336
     }
   },
@@ -168,9 +168,9 @@
         "low": 47
       },
       "work_business": {
-        "total": 23,
+        "total": 24,
         "high": 7,
-        "medium": 16,
+        "medium": 17,
         "low": 0
       },
       "agriculture_fishery": {
@@ -191,7 +191,7 @@
       "medium": 200,
       "low": 97
     },
-    "unclassifiedCount": 166,
+    "unclassifiedCount": 167,
     "excludedCount": 28,
     "overrideCount": 0
   },
@@ -310,7 +310,7 @@
     },
     {
       "code": "UNCLASSIFIED_INCREASE",
-      "count": 166
+      "count": 167
     }
   ],
   "strictSources": {
