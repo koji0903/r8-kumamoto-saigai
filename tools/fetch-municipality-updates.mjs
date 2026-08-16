@@ -12,6 +12,12 @@ const UA = "Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com
 const DISASTER_DATE = "2026-07-28";
 const END_DATE = new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Tokyo" }).format(new Date());
 const MAX_PAGES_PER_SITE = 80;
+// 重点被災地は公式ページの数が桁違いに多い。八代市の災害ハブは記事リンクだけで
+// 149件あり、80ページの上限では罹災証明・応急修理・みなし仮設まで到達できなかった。
+// 被害が大きい市町ほど確認したい情報が多いため、この4市町だけ巡回予算を広げる。
+const PRIORITY_MUNICIPALITIES = new Set(["宇土市", "宇城市", "氷川町", "八代市"]);
+const PRIORITY_MAX_PAGES = 220;
+const pageBudget = name => PRIORITY_MUNICIPALITIES.has(name) ? PRIORITY_MAX_PAGES : MAX_PAGES_PER_SITE;
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 const domainAllowlist = JSON.parse(await readFile(join(ROOT, "config/municipality-official-domain-allowlist.json"), "utf8")).domains || [];
 
@@ -179,7 +185,10 @@ function selfRecord(html, url, trustedByHub, verifiedDetail = false) {
   const h1 = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i);
   const ogTitle = html.match(/<meta\b[^>]*property=["']og:title["'][^>]*content=["']([^"']+)/i)?.[1];
   const titleTag = html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1];
-  const title = clean(text(h1?.[1] || ogTitle || titleTag || ""));
+  // h1 が画像だけの自治体サイトがある（八代市はヘッダー画像が h1）。生のHTMLは
+  // 空でないため h1 を採用してしまい、表題が空になって記事ごと捨てられていた。
+  // タグを除去した結果が空でない最初の候補を表題とする。
+  const title = [h1?.[1], ogTitle, titleTag].map(value => clean(text(value || ""))).find(Boolean) || "";
   if (!title || excluded(title) || /くらし・手続き\s+健康・福祉/u.test(title) || (!verifiedDetail && !relevant(title) && !(trustedByHub && contextual(title)))) return null;
   const structuredDates = [...html.matchAll(/(?:datePublished|dateModified|datetime)["'=:\s]+([0-9T:+-]{10,})/gi)]
     .map(match => parseDate(match[1])).filter(Boolean).sort((a, b) => `${a.date} ${a.time || ""}`.localeCompare(`${b.date} ${b.time || ""}`));
@@ -233,8 +242,8 @@ try {
 } catch {}
 for (const config of municipalities) {
   const queue = [
-    { url: config.officialUrl, kind: "home", trustedByHub: false },
     ...config.hubs.map(url => ({ url, kind: "hub", trustedByHub: true })),
+    { url: config.officialUrl, kind: "home", trustedByHub: false },
     // details は公式検索と原文確認を経て登録した個別記事。
     ...config.details.map(url => ({ url, kind: "detail", trustedByHub: true, verifiedDetail: true }))
   ];
@@ -242,7 +251,8 @@ for (const config of municipalities) {
   for (const update of config.preserved || []) updates.set(update.url, update);
   for (const update of preservedEmergency.get(config.name) || []) updates.set(update.url, update);
   let fetched = 0;
-  while (queue.length && fetched < MAX_PAGES_PER_SITE) {
+  const budget = pageBudget(config.name);
+  while (queue.length && fetched < budget) {
     const item = queue.shift();
     if (seen.has(item.url)) continue;
     seen.add(item.url);

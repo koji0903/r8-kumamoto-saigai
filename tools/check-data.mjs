@@ -15,6 +15,8 @@ const loadWindowData = async (file, key) => {
   return window[key];
 };
 const exists = async file => access(path.join(root, file)).then(() => true, () => false);
+// 収集側（tools/fetch-municipality-updates.mjs）と同じ許可リストを使う。
+const domainAllowlist = JSON.parse(await readFile(path.join(root, "config/municipality-official-domain-allowlist.json"), "utf8")).domains || [];
 const unique = (rows, key, label) => {
   const seen = new Set();
   for (const row of rows) {
@@ -50,7 +52,14 @@ for (const municipality of municipalityUpdates.municipalities) {
     if (update.date < municipalityUpdates.metadata.disasterDate) errors.push(`${municipality.name}の発信日が発災前: ${update.date}`);
     const officialHost = new URL(municipality.officialUrl).hostname.replace(/^www\./, "");
     const updateHost = new URL(update.url).hostname.replace(/^www\./, "");
-    if (updateHost !== officialHost && !updateHost.endsWith(`.${officialHost}`)) errors.push(`${municipality.name}の非公式URL: ${update.url}`);
+    // 別ドメインで記事を配信している自治体がある（水俣市はCMSと公開サイトでホストが違う）。
+    // 収集側と同じ許可リストを見ないと、正規の公式記事を非公式として弾いてしまう。
+    const allowedHosts = domainAllowlist
+      .filter(item => item.municipalityName === municipality.name)
+      .map(item => item.domain.replace(/^www\./, ""));
+    const permitted = host => host === officialHost || host.endsWith(`.${officialHost}`)
+      || allowedHosts.some(allowedHost => host === allowedHost || host.endsWith(`.${allowedHost}`));
+    if (!permitted(updateHost)) errors.push(`${municipality.name}の非公式URL: ${update.url}`);
   }
 }
 if (!officialTopics.national.length) errors.push("国の最新トピックスがありません");
