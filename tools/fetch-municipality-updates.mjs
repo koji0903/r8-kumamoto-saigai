@@ -18,9 +18,16 @@ const domainAllowlist = JSON.parse(await readFile(join(ROOT, "config/municipalit
 const municipalities = [
   ["熊本市", "https://www.city.kumamoto.jp/", ["https://www.city.kumamoto.jp/list04828.html"]],
   ["八代市", "https://www.city.yatsushiro.lg.jp/", ["https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html", "https://www.city.yatsushiro.lg.jp/kinkyu.html"]],
-  ["水俣市", "https://localcms.city.minamata.lg.jp/", ["https://localcms.city.minamata.lg.jp/page257.html?type=top"]],
+  ["水俣市", "https://localcms.city.minamata.lg.jp/", [
+    "https://localcms.city.minamata.lg.jp/page257.html?type=top",
+    "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1209",
+    "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1186"
+  ], [
+    "https://www.city.minamata.lg.jp/kiji0031914/index.html",
+    "https://www.city.minamata.lg.jp/kankyo/kiji0031913/index.html"
+  ]],
   ["山鹿市", "https://www.city.yamaga.kumamoto.jp/", ["https://www.city.yamaga.kumamoto.jp/kiji0033159/index.html"]],
-  ["菊池市", "https://www.city.kikuchi.lg.jp/", []],
+  ["菊池市", "https://www.city.kikuchi.lg.jp/", ["https://www.city.kikuchi.lg.jp/article/list/1350.html"]],
   ["宇土市", "https://www.city.uto.lg.jp/", ["https://www.city.uto.lg.jp/category/list/1301.html"]],
   ["上天草市", "https://www.city.kamiamakusa.kumamoto.jp/", ["https://www.city.kamiamakusa.kumamoto.jp/q/new.html?pg=0"]],
   ["宇城市", "https://www.city.uki.kumamoto.jp/", [
@@ -32,7 +39,13 @@ const municipalities = [
   ["美里町", "https://www.town.kumamoto-misato.lg.jp/", ["https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html"]],
   ["大津町", "https://www.town.ozu.kumamoto.jp/", [], ["https://www.town.ozu.kumamoto.jp/page/26598.html"]],
   ["菊陽町", "https://www.town.kikuyo.lg.jp/", ["https://www.town.kikuyo.lg.jp/bousai/list00733.html"]],
-  ["西原村", "https://www.vill.nishihara.kumamoto.jp/", []],
+  ["西原村", "https://www.vill.nishihara.kumamoto.jp/", [
+    "https://www.vill.nishihara.kumamoto.jp/default.html",
+    "https://www.vill.nishihara.kumamoto.jp/bousai/list00306.html",
+    "https://www.vill.nishihara.kumamoto.jp/bousai/list00307.html",
+    "https://www.vill.nishihara.kumamoto.jp/bousai/list00325.html",
+    "https://www.vill.nishihara.kumamoto.jp/bousai/list00344.html"
+  ]],
   ["御船町", "https://www.town.mifune.kumamoto.jp/", ["https://www.town.mifune.kumamoto.jp/hpkiji/pub/list.aspx?c_id=3&class_id=1008&class_set_id=1"]],
   ["嘉島町", "https://www.town.kumamoto-kashima.lg.jp/", []],
   ["益城町", "https://www.town.mashiki.lg.jp/", ["https://www.town.mashiki.lg.jp/list00538.html", "https://www.town.mashiki.lg.jp/new_list.html"]],
@@ -41,8 +54,13 @@ const municipalities = [
     "https://www.town.hikawa.kumamoto.jp/list00849.html",
     "https://www.town.hikawa.kumamoto.jp/kinkyu.html"
   ]],
-  ["芦北町", "https://www.town.ashikita.lg.jp/", []],
-  ["津奈木町", "https://www.town.tsunagi.lg.jp/", []]
+  ["芦北町", "https://www.town.ashikita.lg.jp/", [
+    "https://www.town.ashikita.lg.jp/bosai_site/",
+    "https://www.town.ashikita.lg.jp/bosai_site/oshirase_bosai"
+  ]],
+  ["津奈木町", "https://www.town.tsunagi.lg.jp/", [
+    "https://www.town.tsunagi.lg.jp/kinkyu/pub/default.aspx?c_id=9"
+  ]]
 ].map(([name, officialUrl, hubs, details = []]) => ({ name, officialUrl, hubs, details, allowedDomains: domainAllowlist.filter(item=>item.municipalityName===name).map(item=>item.domain) }));
 // 宇土市の当該ページは、市が今回の災害情報だけを分類して掲載する専用集約ページ。
 // 「市民の皆様へ」等、表題だけでは地震関連性を判定できない記事も公式の掲載判断を尊重する。

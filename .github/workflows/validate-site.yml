@@ -68,6 +68,7 @@ jobs:
           node scripts/test-reconstruction-public-data.js
           node scripts/test-reconstruction-documents.mjs
           node scripts/test-reconstruction-content-ux.mjs
+          node scripts/test-reconstruction-municipality-handoff.mjs
           node scripts/test-reconstruction-release-readiness.mjs
 
       - name: JavaScript構文を検査

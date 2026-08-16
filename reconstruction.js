@@ -21,7 +21,17 @@
   const currentMunicipality=(()=>{const raw=new URLSearchParams(location.search).get("municipality")||"";const slug=raw.replace(/^municipality_/,"");return municipalitySlugs.has(slug)?`municipality_${slug}`:""})();
   const officialNavHref=id=>`reconstruction-official.html?category=${topicCategories[id]}${currentMunicipality?`&municipality=${currentMunicipality}`:""}`;
   const generalConsultationHref=`reconstruction-official.html?view=general_consultation${currentMunicipality?`&municipality=${currentMunicipality}`:""}`;
-  const withMunicipality=href=>{if(!currentMunicipality||!/^reconstruction-[a-z-]+\.html$/.test(href))return href;return `${href}?municipality=${currentMunicipality}`};
+  const withMunicipality=href=>{
+    if(!currentMunicipality)return href;
+    if(/^reconstruction-[a-z-]+\.html$/.test(href))return `${href}?municipality=${currentMunicipality}`;
+    // municipalities.html と municipality-updates.html は ?name=市町村名 を読む。
+    // 選択済みの自治体を引き継がないと、利用者が同じ選択をやり直すことになる。
+    if(/^municipality-updates\.html$/.test(href)||/^municipalities\.html$/.test(href)){
+      const name=municipalityNames[currentMunicipality.replace(/^municipality_/,"")];
+      return name?`${href}?name=${encodeURIComponent(name)}`:href;
+    }
+    return href;
+  };
   const detail = document.querySelector("#topic-detail");
   const detailTitle = document.querySelector("#topic-detail-title");
   const detailBody = document.querySelector("#topic-detail-body");
