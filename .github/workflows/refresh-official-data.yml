@@ -61,6 +61,9 @@ jobs:
       - name: 市町村公式発信を更新
         run: node tools/fetch-municipality-updates.mjs
 
+      - name: 災害ボランティアセンター（市町村社協）の発信を更新
+        run: node tools/fetch-volunteer-centers.mjs
+
       - name: トップページの公的最新トピックスを更新
         run: node tools/fetch-official-topics.mjs
 
@@ -116,6 +119,7 @@ jobs:
           node --check tools/fetch-hq.mjs
           node --check tools/fetch-municipality-updates.mjs
           node --check tools/fetch-official-topics.mjs
+          node --check tools/fetch-volunteer-centers.mjs
           node --check tools/build-shelters.mjs
           git diff --check
 
@@ -128,6 +132,7 @@ jobs:
           node scripts/build-official-timeline.mjs
           node scripts/build-water-recovery.mjs
           node scripts/build-response-tracks.mjs
+          node scripts/test-volunteer-centers.mjs
           node -e 'const r=require("./reports/municipality-official-navigation-quality.json"); console.log(`入力: ${r.inputCount}件 / 分類: ${r.classifiedPageCount}件 / 表示候補: ${r.displayCandidateCount}件 / 未分類: ${r.unclassifiedCount}件 / 除外: ${r.excludedCount}件 / warning: ${r.warningCount}件`); for(const [key,value] of Object.entries(r.categoryReport)) console.log(`${key}: ${value.total}件 (high ${value.high} / medium ${value.medium} / low ${value.low})`); console.log(`21市町村fallback: ${Object.values(r.municipalityReport).filter(x=>x.fallback).length}/21`); if(r.errors.length) process.exit(1);'
           node --check scripts/run-municipality-official-nav-pipeline.mjs
           node --check scripts/validate-municipality-official-nav.mjs
@@ -165,11 +170,13 @@ jobs:
             data/generated/hq-latest.js \
             data/generated/municipality-updates.js \
             data/generated/official-topics.js \
+            data/generated/volunteer-center-updates.js \
             data/generated/shelters-data.js \
             sources/official/hq-damage \
             sources/official/hq-index.json \
             sources/official/municipalities/municipality-updates.json \
             sources/official/topics/latest-topics.json \
+            sources/official/volunteer-centers/volunteer-center-updates.json \
             data/reconstruction/source-change-events.json \
             data/reconstruction/source-revisions.json \
             data/reconstruction/sources.json \

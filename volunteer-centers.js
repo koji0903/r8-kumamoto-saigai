@@ -8,10 +8,18 @@
   if (!latest) { $("#vcList").innerHTML = '<p class="vc-empty">保存済み議事録から災害VC情報を読み込めませんでした。</p>'; return; }
   const centers = latest.table.rows.map(row => {
     const municipality = official.find(item => item.name === row.name);
-    const updates = (municipality?.updates || []).filter(update => /災害(?:VC|ボランティアセンター)|ボランティア募集/u.test(update.title)).sort((a,b) => `${b.date} ${b.time || ""}`.localeCompare(`${a.date} ${a.time || ""}`));
+    // 災害VCを運営するのは社協。社協サイトの発信を第一に、市の発信を補助として並べる。
+    // 出所が違うため、どちらの発信かを画面上でも区別する。
+    const council = (window.VOLUNTEER_CENTER_UPDATES?.councils || []).find(item => item.municipality === row.name);
+    const councilUpdates = (council?.updates || []).map(update => ({ ...update, from: "council", fromLabel: council.name }));
+    const cityUpdates = (municipality?.updates || [])
+      .filter(update => /災害(?:VC|ボランティアセンター)|ボランティア募集/u.test(update.title))
+      .map(update => ({ ...update, from: "municipality", fromLabel: `${row.name}（市町村）` }));
+    const updates = [...councilUpdates, ...cityUpdates]
+      .sort((a,b) => `${b.date} ${b.time || ""}`.localeCompare(`${a.date} ${a.time || ""}`));
     const history = tables.map(item => ({meeting:item.meeting.meeting,date:item.meeting.date,pdf:item.meeting.pdf,page:item.table.page,row:item.table.rows.find(candidate => candidate.name === row.name)})).filter(item => item.row).filter((item,index,items) => index === 0 || `${item.row.status}|${item.row.detail}` !== `${items[index-1].row.status}|${items[index-1].row.detail}`);
     const place = row.detail.split("。")[0];
-    return {...row, municipality, updates, history, place};
+    return {...row, municipality, council, updates, history, place};
   });
   const statusTone = status => /活動開始|活動中/.test(status) ? "active" : /予定|決定|目標/.test(status) ? "scheduled" : "preparing";
   if ($("#updated")) $("#updated").textContent = `会議資料 ${latest.meeting.date.replaceAll("-","/")} 時点`;
@@ -23,7 +31,11 @@
     $("#vcList").innerHTML = filtered.map(center => {
       const mapQuery = encodeURIComponent(`熊本県 ${center.name} ${center.place}`);
       const officialLink=center.municipality?.url?`<a href="${esc(center.municipality.url)}" target="_blank" rel="noopener">${esc(center.name)}公式サイト ↗</a>`:"";
-      return `<article class="vc-card status-${statusTone(center.status)}" id="${encodeURIComponent(center.name)}"><header><div><span>${esc(center.name)}</span><h2>${esc(center.name)}災害ボランティアセンター</h2></div><b>${esc(center.status)}</b></header><div class="vc-card-body"><section class="vc-place"><span>設置場所（会議記載）</span><h3>${esc(center.place)}</h3><p>${esc(center.detail)}</p><div><a href="https://www.google.com/maps/search/?api=1&query=${mapQuery}" target="_blank" rel="noopener">地図で場所を確認 ↗</a>${officialLink}</div></section><section class="vc-updates"><header><b>募集・活動の公式発信</b><span>${center.updates.length}件</span></header>${center.updates.length?center.updates.slice(0,4).map(update=>`<a href="${esc(update.url)}" target="_blank" rel="noopener"><time datetime="${esc(update.date)}">${esc(update.date.replaceAll("-","/"))}${update.time?` ${esc(update.time)}`:""}</time><b>${esc(update.title)}</b><span>公式ページ ↗</span></a>`).join(""):`<div class="vc-no-update"><b>災害VCの記事は未収集です</b><p>募集がないという意味ではありません。自治体公式サイトで最新情報をご確認ください。</p>${officialLink}</div>`}</section></div><details class="vc-history"><summary>活動状況の推移と会議原本（${center.history.length}件）</summary><ol>${[...center.history].reverse().map(item=>`<li><time>${esc(item.date.replaceAll("-","/"))}</time><div><b>${esc(item.row.status)}</b><p>${esc(item.row.detail)}</p><a href="${encodeURI(`${item.pdf}#page=${item.page}`)}" target="_blank" rel="noopener">第${item.meeting}回 p.${item.page} ↗</a></div></li>`).join("")}</ol></details></article>`;
+      // 災害VCの運営主体は社協。記事の有無にかかわらず一次情報源として示す。
+      const councilLink=center.council?.url?`<a href="${esc(center.council.url)}" target="_blank" rel="noopener">${esc(center.council.name)} ↗</a>`:"";
+      const updateItem=update=>`<a href="${esc(update.url)}" target="_blank" rel="noopener"><time datetime="${esc(update.date)}">${esc(update.date.replaceAll("-","/"))}${update.time?` ${esc(update.time)}`:""}</time><b>${esc(update.title)}</b><span class="vc-update-from is-${esc(update.from||"municipality")}">${esc(update.fromLabel||"公式ページ")} ↗</span></a>`;
+      const shown=center.updates.slice(0,6), rest=center.updates.slice(6);
+      return `<article class="vc-card status-${statusTone(center.status)}" id="${encodeURIComponent(center.name)}"><header><div><span>${esc(center.name)}</span><h2>${esc(center.name)}災害ボランティアセンター</h2></div><b>${esc(center.status)}</b></header><div class="vc-card-body"><section class="vc-place"><span>設置場所（会議記載）</span><h3>${esc(center.place)}</h3><p>${esc(center.detail)}</p><div><a href="https://www.google.com/maps/search/?api=1&query=${mapQuery}" target="_blank" rel="noopener">地図で場所を確認 ↗</a>${officialLink}</div></section><section class="vc-updates"><header><b>募集・活動の公式発信</b><span>${center.updates.length}件</span></header>${center.updates.length?shown.map(updateItem).join("")+(rest.length?`<details class="vc-update-more"><summary>これより前の発信をすべて見る（${rest.length}件）</summary>${rest.map(updateItem).join("")}</details>`:""):`<div class="vc-no-update"><b>災害VCの記事は未収集です</b><p>募集がないという意味ではありません。運営する社会福祉協議会のサイトやSNSで最新情報をご確認ください。</p>${councilLink}${officialLink}</div>`}${councilLink&&center.updates.length?`<p class="vc-council-note">この災害VCを運営しているのは${esc(center.council.name)}です。${councilLink}</p>`:""}</section></div><details class="vc-history"><summary>活動状況の推移と会議原本（${center.history.length}件）</summary><ol>${[...center.history].reverse().map(item=>`<li><time>${esc(item.date.replaceAll("-","/"))}</time><div><b>${esc(item.row.status)}</b><p>${esc(item.row.detail)}</p><a href="${encodeURI(`${item.pdf}#page=${item.page}`)}" target="_blank" rel="noopener">第${item.meeting}回 p.${item.page} ↗</a></div></li>`).join("")}</ol></details></article>`;
     }).join("") || '<p class="vc-empty">条件に合う災害ボランティアセンターはありません。</p>';
   };
   $("#vcSearch").addEventListener("input", render);
