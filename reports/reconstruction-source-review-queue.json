@@ -1,10 +1,318 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-12T08:02:19.431Z",
+  "generatedAt": "2026-08-16T11:06:34+09:00",
   "summary": {
-    "unresolved": 0,
-    "actionRequired": 0,
+    "unresolved": 5,
+    "actionRequired": 3,
     "needsReviewEntities": 0
   },
-  "items": []
+  "items": [
+    {
+      "id": "source_change_20260816110634_source_uto_emergency_housing_repair_page_r8_earthquake",
+      "fingerprint": "source_uto_emergency_housing_repair_page_r8_earthquake:content_changed:sha256:e49d7edd0c2fd41913904337fc124c8af1aa8e22abefc65cfeb67435acb1644d",
+      "sourceId": "source_uto_emergency_housing_repair_page_r8_earthquake",
+      "sourceTitle": "災害救助法に基づく被災住宅の応急修理制度について",
+      "sourceUrl": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
+      "eventType": "content_changed",
+      "detectedAt": "2026-08-16T11:06:34+09:00",
+      "previousHash": "sha256:3f3a679b1125379e1d067cf22d9401e231243993ee4de38d201a2da226224f73",
+      "currentHash": "sha256:e49d7edd0c2fd41913904337fc124c8af1aa8e22abefc65cfeb67435acb1644d",
+      "previousUrl": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
+      "currentUrl": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
+      "claimTypes": [
+        "eligibility",
+        "amount",
+        "deadline",
+        "warning"
+      ],
+      "risk": "high",
+      "impactAssessment": "POTENTIALLY_RELEVANT",
+      "operationalStatus": "ACTION_REQUIRED",
+      "relatedProgramIds": [
+        "program_emergency_housing_repair"
+      ],
+      "municipalityIds": [
+        "municipality_yatsushiro",
+        "municipality_minamata",
+        "municipality_yamaga",
+        "municipality_kikuchi",
+        "municipality_uto",
+        "municipality_kamiamakusa",
+        "municipality_uki",
+        "municipality_amakusa",
+        "municipality_koshi",
+        "municipality_misato",
+        "municipality_ozu",
+        "municipality_kikuyo",
+        "municipality_nishihara",
+        "municipality_mifune",
+        "municipality_kashima",
+        "municipality_mashiki",
+        "municipality_kosa",
+        "municipality_hikawa",
+        "municipality_ashikita",
+        "municipality_tsunagi"
+      ],
+      "relatedEntities": [
+        {
+          "entityType": "application",
+          "entityId": "application_r8_kumamoto_emergency_repair",
+          "sourceLinkId": "source_link_application_repair_uto_eligibility_candidate",
+          "claimType": "eligibility",
+          "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+        },
+        {
+          "entityType": "application",
+          "entityId": "application_r8_kumamoto_emergency_repair",
+          "sourceLinkId": "source_link_application_repair_uto_amount_candidate",
+          "claimType": "amount",
+          "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+        },
+        {
+          "entityType": "application",
+          "entityId": "application_r8_kumamoto_emergency_repair",
+          "sourceLinkId": "source_link_application_repair_uto_deadline_candidate",
+          "claimType": "deadline",
+          "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+        },
+        {
+          "entityType": "application",
+          "entityId": "application_r8_kumamoto_emergency_repair",
+          "sourceLinkId": "source_link_application_repair_uto_warning_candidate",
+          "claimType": "warning",
+          "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+        }
+      ],
+      "impactedEntities": [],
+      "resolved": false,
+      "reviewedAt": null,
+      "reviewedBy": null,
+      "resolutionNotes": null
+    },
+    {
+      "id": "source_change_20260816110634_source_kumamoto_emergency_housing_repair_page",
+      "fingerprint": "source_kumamoto_emergency_housing_repair_page:content_changed:sha256:6a3c1aac75e075983d59cf0a2dccb3d26f2102df1d4e2d4b6f4ffa74a98de983",
+      "sourceId": "source_kumamoto_emergency_housing_repair_page",
+      "sourceTitle": "【令和8年熊本地震】被災した住宅の応急修理について",
+      "sourceUrl": "https://www.pref.kumamoto.jp/soshiki/27/275109.html",
+      "eventType": "content_changed",
+      "detectedAt": "2026-08-16T11:06:34+09:00",
+      "previousHash": "sha256:10671c73fcba56365221262a4ecc1d8282b784ac784fde03275ca9e6bd508ede",
+      "currentHash": "sha256:6a3c1aac75e075983d59cf0a2dccb3d26f2102df1d4e2d4b6f4ffa74a98de983",
+      "previousUrl": "https://www.pref.kumamoto.jp/soshiki/27/275109.html",
+      "currentUrl": "https://www.pref.kumamoto.jp/soshiki/27/275109.html",
+      "claimTypes": [
+        "disaster_application",
+        "other",
+        "deadline"
+      ],
+      "risk": "high",
+      "impactAssessment": "POTENTIALLY_RELEVANT",
+      "operationalStatus": "ACTION_REQUIRED",
+      "relatedProgramIds": [
+        "program_emergency_housing_repair"
+      ],
+      "municipalityIds": [
+        "municipality_yatsushiro",
+        "municipality_minamata",
+        "municipality_yamaga",
+        "municipality_kikuchi",
+        "municipality_uto",
+        "municipality_kamiamakusa",
+        "municipality_uki",
+        "municipality_amakusa",
+        "municipality_koshi",
+        "municipality_misato",
+        "municipality_ozu",
+        "municipality_kikuyo",
+        "municipality_nishihara",
+        "municipality_mifune",
+        "municipality_kashima",
+        "municipality_mashiki",
+        "municipality_kosa",
+        "municipality_hikawa",
+        "municipality_ashikita",
+        "municipality_tsunagi"
+      ],
+      "relatedEntities": [
+        {
+          "entityType": "application",
+          "entityId": "application_r8_kumamoto_emergency_repair",
+          "sourceLinkId": "source_link_application_repair_implemented",
+          "claimType": "disaster_application",
+          "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+        },
+        {
+          "entityType": "application",
+          "entityId": "application_r8_kumamoto_emergency_repair",
+          "sourceLinkId": "source_link_application_repair_uto_pending",
+          "claimType": "other",
+          "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+        },
+        {
+          "entityType": "application_period",
+          "entityId": "period_r8_kumamoto_emergency_repair_application_pending",
+          "sourceLinkId": "source_link_period_application_pending",
+          "claimType": "deadline",
+          "lastVerifiedAt": null
+        }
+      ],
+      "impactedEntities": [],
+      "resolved": false,
+      "reviewedAt": null,
+      "reviewedBy": null,
+      "resolutionNotes": null
+    },
+    {
+      "id": "source_change_20260816110634_source_uto_housing_consultation_desk_r8_earthquake",
+      "fingerprint": "source_uto_housing_consultation_desk_r8_earthquake:content_changed:sha256:9ecfa41028a4e151a3a85a3018a6ffa4cbdf68b0ba95de353ed9aa5936b828a8",
+      "sourceId": "source_uto_housing_consultation_desk_r8_earthquake",
+      "sourceTitle": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
+      "sourceUrl": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
+      "eventType": "content_changed",
+      "detectedAt": "2026-08-16T11:06:34+09:00",
+      "previousHash": "sha256:da6e8e83f6285be679e8a05b33443923ec2ca57eb25d338764319683d4e01343",
+      "currentHash": "sha256:9ecfa41028a4e151a3a85a3018a6ffa4cbdf68b0ba95de353ed9aa5936b828a8",
+      "previousUrl": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
+      "currentUrl": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
+      "claimTypes": [
+        "application_office"
+      ],
+      "risk": "high",
+      "impactAssessment": "POTENTIALLY_RELEVANT",
+      "operationalStatus": "ACTION_REQUIRED",
+      "relatedProgramIds": [
+        "program_emergency_housing_repair"
+      ],
+      "municipalityIds": [
+        "municipality_yatsushiro",
+        "municipality_minamata",
+        "municipality_yamaga",
+        "municipality_kikuchi",
+        "municipality_uto",
+        "municipality_kamiamakusa",
+        "municipality_uki",
+        "municipality_amakusa",
+        "municipality_koshi",
+        "municipality_misato",
+        "municipality_ozu",
+        "municipality_kikuyo",
+        "municipality_nishihara",
+        "municipality_mifune",
+        "municipality_kashima",
+        "municipality_mashiki",
+        "municipality_kosa",
+        "municipality_hikawa",
+        "municipality_ashikita",
+        "municipality_tsunagi"
+      ],
+      "relatedEntities": [
+        {
+          "entityType": "application",
+          "entityId": "application_r8_kumamoto_emergency_repair",
+          "sourceLinkId": "source_link_application_repair_uto_office_candidate",
+          "claimType": "application_office",
+          "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+        }
+      ],
+      "impactedEntities": [],
+      "resolved": false,
+      "reviewedAt": null,
+      "reviewedBy": null,
+      "resolutionNotes": null
+    },
+    {
+      "id": "source_change_20260816110634_source_cabinet_notifications_r8_kumamoto_earthquake",
+      "fingerprint": "source_cabinet_notifications_r8_kumamoto_earthquake:content_changed:sha256:2621019a12293548fa83d89302c8632850cf356b598e3b537bfd57c7d5fa8b6d",
+      "sourceId": "source_cabinet_notifications_r8_kumamoto_earthquake",
+      "sourceTitle": "内閣府防災担当からの各都道府県等への通知等",
+      "sourceUrl": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
+      "eventType": "content_changed",
+      "detectedAt": "2026-08-16T11:06:34+09:00",
+      "previousHash": "sha256:15ce0caadfcb81fe5df14c3172d28fa1db0af1ba007f6c1d17da899fda487b89",
+      "currentHash": "sha256:2621019a12293548fa83d89302c8632850cf356b598e3b537bfd57c7d5fa8b6d",
+      "previousUrl": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
+      "currentUrl": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
+      "claimTypes": [
+        "other"
+      ],
+      "risk": "low",
+      "impactAssessment": "UNKNOWN",
+      "operationalStatus": "WARNING",
+      "relatedProgramIds": [],
+      "municipalityIds": [],
+      "relatedEntities": [
+        {
+          "entityType": "disaster",
+          "entityId": "disaster_2026_kumamoto_earthquake",
+          "sourceLinkId": "source_link_disaster_official_notifications_cabinet",
+          "claimType": "other",
+          "lastVerifiedAt": null
+        }
+      ],
+      "impactedEntities": [],
+      "resolved": false,
+      "reviewedAt": null,
+      "reviewedBy": null,
+      "resolutionNotes": null
+    },
+    {
+      "id": "source_change_20260816110634_source_uto_support_application_index_r8_earthquake",
+      "fingerprint": "source_uto_support_application_index_r8_earthquake:content_changed:sha256:45c8ea66ca1fe554f6c71f255aa84e8fdce1ccf053d0dde1ead637f4452559ee",
+      "sourceId": "source_uto_support_application_index_r8_earthquake",
+      "sourceTitle": "支援・申請",
+      "sourceUrl": "https://www.city.uto.lg.jp/article/list/1307.html",
+      "eventType": "content_changed",
+      "detectedAt": "2026-08-16T11:06:34+09:00",
+      "previousHash": "sha256:90511e530262bcbfab92716a1d2fc9f6480daedeb033a64c045a7a633d0fbb8e",
+      "currentHash": "sha256:45c8ea66ca1fe554f6c71f255aa84e8fdce1ccf053d0dde1ead637f4452559ee",
+      "previousUrl": "https://www.city.uto.lg.jp/article/list/1307.html",
+      "currentUrl": "https://www.city.uto.lg.jp/article/list/1307.html",
+      "claimTypes": [
+        "other"
+      ],
+      "risk": "low",
+      "impactAssessment": "UNKNOWN",
+      "operationalStatus": "WARNING",
+      "relatedProgramIds": [
+        "program_emergency_housing_repair"
+      ],
+      "municipalityIds": [
+        "municipality_yatsushiro",
+        "municipality_minamata",
+        "municipality_yamaga",
+        "municipality_kikuchi",
+        "municipality_uto",
+        "municipality_kamiamakusa",
+        "municipality_uki",
+        "municipality_amakusa",
+        "municipality_koshi",
+        "municipality_misato",
+        "municipality_ozu",
+        "municipality_kikuyo",
+        "municipality_nishihara",
+        "municipality_mifune",
+        "municipality_kashima",
+        "municipality_mashiki",
+        "municipality_kosa",
+        "municipality_hikawa",
+        "municipality_ashikita",
+        "municipality_tsunagi"
+      ],
+      "relatedEntities": [
+        {
+          "entityType": "application",
+          "entityId": "application_r8_kumamoto_emergency_repair",
+          "sourceLinkId": "source_link_application_repair_uto_index_checked",
+          "claimType": "other",
+          "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+        }
+      ],
+      "impactedEntities": [],
+      "resolved": false,
+      "reviewedAt": null,
+      "reviewedBy": null,
+      "resolutionNotes": null
+    }
+  ]
 }
