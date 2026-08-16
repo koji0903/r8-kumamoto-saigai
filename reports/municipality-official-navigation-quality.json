@@ -3,67 +3,67 @@
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 657,
-  "displayCandidateCount": 366,
-  "classifiedPageCount": 464,
+  "displayCandidateCount": 450,
+  "classifiedPageCount": 538,
   "categoryReport": {
     "home": {
-      "total": 110,
-      "high": 45,
-      "medium": 25,
+      "total": 127,
+      "high": 49,
+      "medium": 38,
       "low": 40
     },
     "money": {
-      "total": 122,
-      "high": 17,
-      "medium": 30,
+      "total": 130,
+      "high": 18,
+      "medium": 37,
       "low": 75
     },
     "documents": {
-      "total": 107,
+      "total": 124,
       "high": 33,
-      "medium": 14,
+      "medium": 31,
       "low": 60
     },
     "health_care": {
-      "total": 28,
-      "high": 15,
-      "medium": 13,
+      "total": 40,
+      "high": 17,
+      "medium": 23,
       "low": 0
     },
     "family_education": {
-      "total": 74,
-      "high": 4,
-      "medium": 23,
+      "total": 78,
+      "high": 6,
+      "medium": 25,
       "low": 47
     },
     "work_business": {
-      "total": 24,
-      "high": 7,
-      "medium": 17,
+      "total": 30,
+      "high": 9,
+      "medium": 21,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 15,
-      "high": 6,
-      "medium": 9,
+      "total": 17,
+      "high": 7,
+      "medium": 10,
       "low": 0
     },
     "daily_life": {
-      "total": 149,
-      "high": 39,
-      "medium": 106,
+      "total": 181,
+      "high": 56,
+      "medium": 121,
       "low": 4
     }
   },
   "municipalityReport": {
     "municipality_kumamoto": {
-      "classified": 50,
-      "displayCandidates": 36,
+      "classified": 58,
+      "displayCandidates": 48,
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 103,
-      "displayCandidates": 68,
+      "classified": 133,
+      "displayCandidates": 101,
       "fallback": true
     },
     "municipality_minamata": {
@@ -77,43 +77,43 @@
       "fallback": true
     },
     "municipality_kikuchi": {
-      "classified": 10,
-      "displayCandidates": 8,
-      "fallback": true
-    },
-    "municipality_uto": {
-      "classified": 37,
-      "displayCandidates": 30,
-      "fallback": true
-    },
-    "municipality_kamiamakusa": {
-      "classified": 22,
-      "displayCandidates": 19,
-      "fallback": true
-    },
-    "municipality_uki": {
-      "classified": 57,
-      "displayCandidates": 52,
-      "fallback": true
-    },
-    "municipality_amakusa": {
-      "classified": 16,
-      "displayCandidates": 15,
-      "fallback": true
-    },
-    "municipality_koshi": {
-      "classified": 8,
-      "displayCandidates": 7,
-      "fallback": true
-    },
-    "municipality_misato": {
-      "classified": 12,
+      "classified": 13,
       "displayCandidates": 11,
       "fallback": true
     },
-    "municipality_ozu": {
-      "classified": 9,
+    "municipality_uto": {
+      "classified": 46,
+      "displayCandidates": 39,
+      "fallback": true
+    },
+    "municipality_kamiamakusa": {
+      "classified": 24,
+      "displayCandidates": 22,
+      "fallback": true
+    },
+    "municipality_uki": {
+      "classified": 64,
+      "displayCandidates": 59,
+      "fallback": true
+    },
+    "municipality_amakusa": {
+      "classified": 17,
+      "displayCandidates": 16,
+      "fallback": true
+    },
+    "municipality_koshi": {
+      "classified": 10,
       "displayCandidates": 9,
+      "fallback": true
+    },
+    "municipality_misato": {
+      "classified": 13,
+      "displayCandidates": 12,
+      "fallback": true
+    },
+    "municipality_ozu": {
+      "classified": 10,
+      "displayCandidates": 10,
       "fallback": true
     },
     "municipality_kikuyo": {
@@ -127,8 +127,8 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 17,
-      "displayCandidates": 12,
+      "classified": 20,
+      "displayCandidates": 15,
       "fallback": true
     },
     "municipality_kashima": {
@@ -138,17 +138,17 @@
     },
     "municipality_mashiki": {
       "classified": 30,
-      "displayCandidates": 25,
+      "displayCandidates": 26,
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 18,
-      "displayCandidates": 16,
+      "classified": 23,
+      "displayCandidates": 21,
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 21,
-      "displayCandidates": 15,
+      "classified": 22,
+      "displayCandidates": 17,
       "fallback": true
     },
     "municipality_ashikita": {
@@ -157,23 +157,18 @@
       "fallback": true
     },
     "municipality_tsunagi": {
-      "classified": 1,
-      "displayCandidates": 1,
+      "classified": 2,
+      "displayCandidates": 2,
       "fallback": true
     }
   },
   "confidence": {
-    "high": 165,
-    "medium": 201,
-    "low": 98
+    "high": 193,
+    "medium": 257,
+    "low": 88
   },
-  "unclassifiedCount": 166,
+  "unclassifiedCount": 92,
   "unclassifiedItems": [
-    {
-      "municipalityName": "熊本市",
-      "title": "令和8年熊本地震に伴う区役所窓口対応について",
-      "url": "https://www.city.kumamoto.jp/kiji00372108/index.html"
-    },
     {
       "municipalityName": "熊本市",
       "title": "主要地方道 熊本嘉島線 一部区間全面通行止めのお知らせ",
@@ -181,33 +176,8 @@
     },
     {
       "municipalityName": "熊本市",
-      "title": "令和8年熊本地震で発生したブロック、瓦等のがれきを撤去します",
-      "url": "https://www.city.kumamoto.jp/kiji00372176/index.html"
-    },
-    {
-      "municipalityName": "熊本市",
-      "title": "災害時の食中毒を予防しましょう（被災者の皆様へ）",
-      "url": "https://www.city.kumamoto.jp/kiji00372173/index.html"
-    },
-    {
-      "municipalityName": "熊本市",
-      "title": "地震発生に伴う公設公営の育成クラブの運営について（8月4日更新）",
-      "url": "https://www.city.kumamoto.jp/kiji00372096/index.html"
-    },
-    {
-      "municipalityName": "熊本市",
       "title": "被災者へ食事を提供される方へ",
       "url": "https://www.city.kumamoto.jp/kiji00372215/index.html"
-    },
-    {
-      "municipalityName": "熊本市",
-      "title": "【重要】災害対応のため、一部を除き窓口を閉鎖します（建築指導課、建築審査室）",
-      "url": "https://www.city.kumamoto.jp/kiji00372322/index.html"
-    },
-    {
-      "municipalityName": "熊本市",
-      "title": "令和8年熊本地震における感染症予防対策について",
-      "url": "https://www.city.kumamoto.jp/kiji00372295/index.html"
     },
     {
       "municipalityName": "熊本市",
@@ -225,16 +195,6 @@
       "url": "https://www.city.kumamoto.jp/kiji00372126/index.html"
     },
     {
-      "municipalityName": "熊本市",
-      "title": "令和8年熊本地震に係る被服、寝具その他生活必需品の支給について",
-      "url": "https://www.city.kumamoto.jp/kiji00372292/index.html"
-    },
-    {
-      "municipalityName": "熊本市",
-      "title": "【令和8年熊本地震】休日の臨時窓口開庁のお知らせ",
-      "url": "https://www.city.kumamoto.jp/kiji00372378/index.html"
-    },
-    {
       "municipalityName": "八代市",
       "title": "R8熊本地震解放公園一覧表（PDF：126.8キロバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326775/3_26775_157958_up_wga044eq.pdf"
@@ -243,11 +203,6 @@
       "municipalityName": "八代市",
       "title": "第2回災害対策本部会議資料（令和８年７月２９日（水曜日）午前１１時００分）（PDF：3.57メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_157927_up_8g3s7w0l.pdf"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "熊本地震ペット救護本部によるペット（犬・猫）の一時預かりについて",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326847/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -266,18 +221,8 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和８年熊本地震に伴う本庁舎の窓口対応について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326790/index.html"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "第5回災害対策本部会議資料（令和８年７月３１日（金曜日）午後６時００分）（PDF：48.93メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_157923_up_igaycdp6.pdf"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "令和８年熊本地震に伴う確認申請等の取扱いについて",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326800/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -291,28 +236,8 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "資源物の収集実施について（８月３日～）",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326811/index.html"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "第7回災害対策本部会議資料（令和８年８月２日（日曜日）午後４時００分）（PDF：26.28メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_157926_up_1i6ruwll.pdf"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "延長窓口の休止について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326783/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "親子安心ステーションの開設について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326821/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "手押しポンプが使えます",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326823/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -326,16 +251,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震に伴う応急仮設建築物の取扱いについて",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00324773/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "資源集積所の「ガラス・陶磁器」について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326844/index.html"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "第9回災害対策本部会議資料（令和８年８月４日（火曜日）午後６時００分）（PDF：19.37メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_158014_up_31r6ms0c.pdf"
     },
@@ -346,11 +261,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "熊本地震ペット救護本部によるペット（犬・猫）の一時預かりについて",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326847/index.html"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "災害に便乗した犯罪に関する注意喚起",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326855/index.html"
     },
@@ -358,21 +268,6 @@
       "municipalityName": "八代市",
       "title": "第10回災害対策本部会議資料（令和８年８月５日（水曜日）午後４時００分）（PDF：24.42メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_158075_up_0h1a42vg.pdf"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "令和８年熊本地震仮置場お知らせ（8月6日発行）（PDF：704.7キロバイト）",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00324627/3_24627_158078_up_h23zu4n5.pdf"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "外国人市民（がいこくじん しみん）のみなさんへ",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326780/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "令和８年熊本地震によって被災された方の定期予防接種のお知らせ",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326803/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -388,11 +283,6 @@
       "municipalityName": "八代市",
       "title": "津波災害等における緊急一時避難施設に関する協定の締結について",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji0031834/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "令和８年熊本地震による家屋の損壊等により校区外に転居された方へ",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326860/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -416,43 +306,13 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "セーフティネット保証4号（令和八年熊本地震）について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326866/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "災害サポート・レンタカーの貸出がはじまります！",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326874/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "インスタントハウスの設置希望者募集について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326871/index.html"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "第13回災害対策本部会議資料（令和８年８月８日（土曜日）午後５時００分）（PDF：25.29メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_158129_up_ikbqywz0.pdf"
     },
     {
       "municipalityName": "八代市",
-      "title": "熊本地震被災犬猫保護情報掲載サイトの運用開始について",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326889/index.html"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "第14回災害対策本部会議資料（令和８年８月９日（日曜日）午後４時００分）（PDF：13.82メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_158147_up_lchwelc2.pdf"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "被災建築物応急危険度判定について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326840/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "熊本地震被災犬猫保護情報掲載サイトの運用開始について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326889/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -466,16 +326,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "【熊本地震】井戸水が出ないなどお困りの方へ",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326901/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "家の被害状況を写真で記録するとたいへん役に立ちます！",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326898/index.html"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "第17回災害対策本部会議資料（令和８年８月１２日（水曜日）午後４時００分）（PDF：21.28メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_158214_up_bjxkz7dq.pdf"
     },
@@ -486,18 +336,8 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "クーリングシェルター（指定暑熱避難施設）・Yatsushiro涼み処（熱中症予防休憩所）を開設しています",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00322098/index.html"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "第18回災害対策本部会議資料（令和８年８月１３日（木曜日）午後４時００分）（PDF：24.87メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_158251_up_u1y84ozu.pdf"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "【令和8年熊本地震】ホテル等への避難をご希望の方へ",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326824/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -511,31 +351,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "【熊本地震に関するお知らせ】前立腺がん検診（八代市）",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00325158/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "【熊本地震に関するお知らせ】令和８年度八代市健診申し込みのご案内",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00325618/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "【熊本地震に関するお知らせ】八代市のがん検診",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00319501/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "【熊本地震に関するお知らせ】大腸がん検診（八代市）",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00319593/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "【熊本地震に関するお知らせ】子宮頸がん検診（八代市）",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00319596/index.html"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "第20回災害対策本部会議資料（令和８年８月１５日（土曜日）午後４時００分）（PDF：20.05メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_158323_up_hl0nuehm.pdf"
     },
@@ -543,11 +358,6 @@
       "municipalityName": "八代市",
       "title": "第21回災害対策本部会議資料（令和８年８月１６日（日曜日）午後４時００分）（PDF：12.65メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_158330_up_q5y78q86.pdf"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "【令和8年熊本地震】ホテル等への避難をご希望の方へ",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326824/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -581,23 +391,8 @@
     },
     {
       "municipalityName": "菊池市",
-      "title": "2026年07月29日 地震発生に伴うきくちべんりカー及びきくちあいのりタクシーの運行について",
-      "url": "https://www.city.kikuchi.lg.jp/article/view/2152/18718.html"
-    },
-    {
-      "municipalityName": "菊池市",
-      "title": "2026年07月31日 （プレスリリース）令和８年熊本地震で被災された方に菊池温泉を開放しています！",
-      "url": "https://www.city.kikuchi.lg.jp/article/view/1016/18784.html"
-    },
-    {
-      "municipalityName": "菊池市",
       "title": "地震関連情報",
       "url": "https://www.city.kikuchi.lg.jp/article/list/1350.html"
-    },
-    {
-      "municipalityName": "菊池市",
-      "title": "被災された方に菊池温泉を開放します",
-      "url": "https://www.city.kikuchi.lg.jp/article/view/1350/18758.html"
     },
     {
       "municipalityName": "宇土市",
@@ -616,11 +411,6 @@
     },
     {
       "municipalityName": "宇土市",
-      "title": "【熊本県信用保証協会】令和8年熊本地震に係る緊急時短期資金保証制度等について",
-      "url": "https://www.city.uto.lg.jp/article/view/1321/16462.html"
-    },
-    {
-      "municipalityName": "宇土市",
       "title": "キーワード「2026」の記事一覧",
       "url": "https://www.city.uto.lg.jp/article/keyword/22145.html"
     },
@@ -631,53 +421,13 @@
     },
     {
       "municipalityName": "宇土市",
-      "title": "予約型乗合タクシー「のりのり号」の運行再開について",
-      "url": "https://www.city.uto.lg.jp/article/view/1304/16449.html"
-    },
-    {
-      "municipalityName": "宇土市",
-      "title": "【熊本地震】強風時の高所作業にご注意ください。",
-      "url": "https://www.city.uto.lg.jp/article/view/1310/16544.html"
-    },
-    {
-      "municipalityName": "宇土市",
       "title": "市民の皆様へお願いです",
       "url": "https://www.city.uto.lg.jp/article/view/1308/16473.html"
     },
     {
       "municipalityName": "宇土市",
-      "title": "キーワードマッチ 2026年08月10日 「令和8年熊本地震」セーフティネット保証4号について",
-      "url": "https://www.city.uto.lg.jp/article/view/1114/16441.html"
-    },
-    {
-      "municipalityName": "宇土市",
-      "title": "マイナンバーカードの休日と時間外窓口を休止します",
-      "url": "https://www.city.uto.lg.jp/article/view/1310/16469.html"
-    },
-    {
-      "municipalityName": "宇土市",
-      "title": "ファミリーサポートセンター及びつどいの広場サンサンは8月12日（水曜）から再開します",
-      "url": "https://www.city.uto.lg.jp/article/view/1305/16552.html"
-    },
-    {
-      "municipalityName": "宇土市",
       "title": "令和8年熊本地震による宇土市道の通行規制について",
       "url": "https://www.city.uto.lg.jp/article/view/1306/16413.html"
-    },
-    {
-      "municipalityName": "宇土市",
-      "title": "漏水時の対応",
-      "url": "https://www.city.uto.lg.jp/article/view/1308/16543.html"
-    },
-    {
-      "municipalityName": "宇土市",
-      "title": "【熊本地震】8月15・16日（土・日）の窓口業務について",
-      "url": "https://www.city.uto.lg.jp/article/view/1310/16528.html"
-    },
-    {
-      "municipalityName": "宇土市",
-      "title": "「行長しゃん号」の運行再開について",
-      "url": "https://www.city.uto.lg.jp/article/view/1304/16466.html"
     },
     {
       "municipalityName": "上天草市",
@@ -711,16 +461,6 @@
     },
     {
       "municipalityName": "上天草市",
-      "title": "災害時の熱中症予防について～避難生活・片付け作業時の注意点～",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/547/23285.html"
-    },
-    {
-      "municipalityName": "上天草市",
-      "title": "上島地区乗合タクシーの臨時運行について",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23220.html"
-    },
-    {
-      "municipalityName": "上天草市",
       "title": "令和8年8月10日時点全面通行止め一覧(位置図、写真)(PDF 約2MB)",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/dl?q=123089_filelib_0e10a2cfcb8651b3f19b8389a6aaa912.pdf"
     },
@@ -731,43 +471,13 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "被災建築物応急危険度判定の実施について（令和8年8月4日更新）",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/2607344"
-    },
-    {
-      "municipalityName": "宇城市",
-      "title": "市役所の窓口業務を閉鎖します",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606668"
-    },
-    {
-      "municipalityName": "宇城市",
       "title": "04_報道資料（令和8年熊本地震の発災から1週間を受けて：令和8年8月3日） (PDF 264KB)",
       "url": "https://www.city.uki.kumamoto.jp/resource.php?e=47f88b653c8282ff4e755b97eab14a07486b5d3f5594b37e551d7a8daaf856bedebab382912a44e233560d46f130c342"
     },
     {
       "municipalityName": "宇城市",
-      "title": "市役所の窓口業務を閉鎖します",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2606668"
-    },
-    {
-      "municipalityName": "宇城市",
-      "title": "被災されてホテル等への避難を希望される方への宿泊施設提供事業を実施します（令和8年8月13日更新）",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/sonota_sumai/2609591"
-    },
-    {
-      "municipalityName": "宇城市",
-      "title": "被災されてホテル等への避難を希望される方への宿泊施設提供事業を実施します",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2609591"
-    },
-    {
-      "municipalityName": "宇城市",
       "title": "南海トラフ地震臨時情報（巨大地震注意）について",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2422985"
-    },
-    {
-      "municipalityName": "宇城市",
-      "title": "2023年12月5日 毎週木曜日の延長窓口を廃止します",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2136905"
     },
     {
       "municipalityName": "宇城市",
@@ -795,16 +505,6 @@
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2606699"
     },
     {
-      "municipalityName": "宇城市",
-      "title": "市民課窓口を臨時開庁しています",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/juminhyo/2609997"
-    },
-    {
-      "municipalityName": "天草市",
-      "title": "「令和８年熊本地震」の発生に伴う応急仮設建築物の取り扱い",
-      "url": "https://www.city.amakusa.kumamoto.jp/bousai/kiji00314546/index.html"
-    },
-    {
       "municipalityName": "天草市",
       "title": "県内の被災自治体に応援職員を派遣しています",
       "url": "https://www.city.amakusa.kumamoto.jp/kiji00314581/index.html"
@@ -820,16 +520,6 @@
       "url": "https://www.city.koshi.lg.jp/bousai/kiji00325658/index.html"
     },
     {
-      "municipalityName": "合志市",
-      "title": "地震後の水稲栽培における水管理の技術対策について",
-      "url": "https://www.city.koshi.lg.jp/kiji00325682/index.html"
-    },
-    {
-      "municipalityName": "合志市",
-      "title": "地震後のトマト苗の管理や定植時における水の確保と利用について",
-      "url": "https://www.city.koshi.lg.jp/kiji00325692/index.html"
-    },
-    {
       "municipalityName": "美里町",
       "title": "通行止め",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/doro_kotsu/3/3903.html"
@@ -841,11 +531,6 @@
     },
     {
       "municipalityName": "美里町",
-      "title": "令和8年熊本地震に伴う宿泊提供事業について",
-      "url": "https://www.town.kumamoto-misato.lg.jp/soshiki/fukushi/3919.html"
-    },
-    {
-      "municipalityName": "美里町",
       "title": "令和8年熊本地震（7月28日発生）に関する情報（8月15日14時30分更新）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html"
     },
@@ -853,11 +538,6 @@
       "municipalityName": "大津町",
       "title": "地震情報",
       "url": "https://www.town.ozu.kumamoto.jp/page/26559.html"
-    },
-    {
-      "municipalityName": "大津町",
-      "title": "令和8年熊本地震に伴う「ワンストップ窓口」を開設しました",
-      "url": "https://www.town.ozu.kumamoto.jp/page/26732.html"
     },
     {
       "municipalityName": "大津町",
@@ -891,16 +571,6 @@
     },
     {
       "municipalityName": "御船町",
-      "title": "令和8年熊本地震に伴う災害ゴミ仮置場の開設時間の変更について",
-      "url": "https://www.town.mifune.kumamoto.jp/page9389.html"
-    },
-    {
-      "municipalityName": "御船町",
-      "title": "「令和8年熊本地震」によるがけ崩れ等の調査について",
-      "url": "https://www.town.mifune.kumamoto.jp/page9397.html"
-    },
-    {
-      "municipalityName": "御船町",
       "title": "【滝川橋】令和8年地震に伴う全面通行止めのお知らせ",
       "url": "https://www.town.mifune.kumamoto.jp/page9400.html"
     },
@@ -908,11 +578,6 @@
       "municipalityName": "御船町",
       "title": "緊急避難場所",
       "url": "https://www.town.mifune.kumamoto.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1004"
-    },
-    {
-      "municipalityName": "御船町",
-      "title": "ホテル等避難のご案内",
-      "url": "https://www.town.mifune.kumamoto.jp/page9393.html"
     },
     {
       "municipalityName": "嘉島町",
@@ -941,43 +606,13 @@
     },
     {
       "municipalityName": "甲佐町",
-      "title": "【熊本県信用保証協会】令和8年熊本地震に係る緊急時短期資金保...",
-      "url": "https://www.town.kosa.lg.jp/q/aview/129/13543.html"
-    },
-    {
-      "municipalityName": "甲佐町",
-      "title": "セーフティネット保証4号(令和8年熊本地震分)について",
-      "url": "https://www.town.kosa.lg.jp/q/aview/55/13599.html"
-    },
-    {
-      "municipalityName": "甲佐町",
       "title": "その他熊本地震に関すること",
       "url": "https://www.town.kosa.lg.jp/q/aview/1/13531.html"
     },
     {
       "municipalityName": "甲佐町",
-      "title": "地震に伴う宅内漏水の確認について",
-      "url": "https://www.town.kosa.lg.jp/q/aview/51/13592.html"
-    },
-    {
-      "municipalityName": "甲佐町",
       "title": "「甲佐・乙女河原」(津志田河川自然公園)のご利用案内",
       "url": "https://www.town.kosa.lg.jp/q/aview/102/425.html"
-    },
-    {
-      "municipalityName": "甲佐町",
-      "title": "(8/8更新)ホテル等避難案内チラシ(PDF 約741KB)",
-      "url": "https://www.town.kosa.lg.jp/dl?q=253646_filelib_f546aef68831294f845a9e2183b6fdc8.pdf"
-    },
-    {
-      "municipalityName": "甲佐町",
-      "title": "令和8年熊本地震被災者へホテル等避難のご案内",
-      "url": "https://www.town.kosa.lg.jp/q/aview/51/13572.html"
-    },
-    {
-      "municipalityName": "氷川町",
-      "title": "【令和8年熊本地震】被災者の方がホテル等に避難できます",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036760/index.html"
     },
     {
       "municipalityName": "氷川町",
@@ -993,11 +628,6 @@
       "municipalityName": "津奈木町",
       "title": "広報つなぎ／公民館報",
       "url": "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=615"
-    },
-    {
-      "municipalityName": "津奈木町",
-      "title": "クーリングシェルター(指定暑熱避難施設)について",
-      "url": "https://www.town.tsunagi.lg.jp/page4406.html"
     }
   ],
   "excludedCount": 28,
@@ -1065,5 +695,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 464
+  "previousClassifiedPageCount": 538
 }

@@ -40,3 +40,18 @@
   .professional-support{border-left-width:2px}
   .professional-phone{color:#000}
 }
+
+/* 0件で行き止まりにしないための案内 */
+/* 災害情報ページは公式サイトトップより先に置く。塗りは既定のボタンのまま
+   （背景だけ薄くすると、白文字が読めなくなる） */
+.municipality-fallback.is-hub{margin-block:10px 8px;font-weight:800;box-shadow:0 0 0 2px #cfe3dd}
+.municipality-uncertain{margin:14px 0 0;padding:12px 14px;border:1px dashed #c9d6d1;border-radius:8px;background:#fbfaf6}
+.municipality-uncertain>summary{cursor:pointer;font-size:14px;font-weight:800;color:#1f5448;min-height:44px;display:flex;align-items:center}
+.municipality-uncertain>p{margin:6px 0 10px;font-size:13px;line-height:1.8;color:#4a5551}
+.municipality-other-categories{margin:16px 0 0;padding:14px;border:1px solid #d5e0dc;border-radius:8px;background:#f4f8f6}
+.municipality-other-categories>b{display:block;margin-bottom:10px;font-size:14px;color:#1f5448}
+.municipality-other-categories>div{display:flex;flex-wrap:wrap;gap:8px}
+.municipality-other-categories a{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:8px 13px;border:1.5px solid #cfdeda;border-radius:7px;background:#fff;color:#1f5448;font-size:14px;font-weight:700;text-decoration:none}
+.municipality-other-categories a:hover{border-color:#168174;background:#edf7f4}
+.municipality-other-categories a span{font-size:12px;font-weight:900;color:#e45e35}
+@media print{.municipality-other-categories,.municipality-uncertain{display:none}}

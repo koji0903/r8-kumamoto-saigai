@@ -9,12 +9,15 @@
   fetch("config/reconstruction-category-relations.json",{credentials:"same-origin"}).then(response=>{if(!response.ok)throw Error();return response.json()}).then(config=>{
     document.querySelectorAll("[data-category-relations]").forEach(root=>{
       const select=document.querySelector("[data-category-select]");
+      // 初回は URL の分野を優先する。select の値は別のスクリプトが URL から
+      // 反映するので、その前に読むと既定値（住まい）のまま描いてしまう。
+      let userChanged=false;
       const render=()=>{
-        const category=select?.value||params.get("category")||root.dataset.categoryRelations;
+        const category=(userChanged?select?.value:null)||params.get("category")||select?.value||root.dataset.categoryRelations;
         const relations=config.categories?.[category]||[];
         root.innerHTML=`<header><p>ほかにも気になることがありますか？</p><h2>${labels[category]||"選んだ分野"}と一緒に確認できること</h2><p>支援対象という意味ではありません。気になる項目だけ確認してください。</p></header><div>${relations.map(item=>`<a href="${href(item.category)}"><b>${labels[item.category]}</b><span>${item.prompt}</span></a>`).join("")}</div><a class="cross-category-organizer" href="reconstruction.html#organizer">暮らし全体の困りごとを整理する →</a>`;
       };
-      select?.addEventListener("change",render);render();
+      select?.addEventListener("change",()=>{userChanged=true;render()});render();
     });
   }).catch(()=>document.querySelectorAll("[data-category-relations]").forEach(root=>root.innerHTML='<a class="cross-category-organizer" href="reconstruction.html#organizer">暮らし全体の困りごとを整理する →</a>'));
 })();

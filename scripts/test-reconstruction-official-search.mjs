@@ -1,5 +1,9 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
+// 被災地の通信環境を考えて上限を置いている。GitHub Pages は圧縮して配信するので、
+// 利用者が実際に落とす量（gzip後）で測る。生のバイト数はその何倍にもなるため、
+// 生の方は暴走を止めるための上限として別に見る。
+import { gzipSync } from "node:zlib";
 import vm from "node:vm";
 import {spawnSync} from "node:child_process";
 const read=file=>fs.readFileSync(file,"utf8"),code=read("reconstruction-search.js"),html=read("reconstruction-search.html"),css=read("reconstruction-search.css"),workflow=read(".github/workflows/refresh-official-data.yml"),pipeline=read("scripts/run-municipality-official-nav-pipeline.mjs");
@@ -13,6 +17,6 @@ const uto=api.search(index.items,"ごみ","municipality_uto",synonyms.groups),ya
 const fixtureBase={title:"税金",keywords:["市税"],summary:"公式",url:"https://example.go.jp/a",publicationStatus:"published",verificationStatus:"verified",freshnessStatus:"current"};assert.equal(api.search([fixtureBase],"税金","",synonyms.groups).length,1,"published verified");for(const [field,value] of [["publicationStatus","draft"],["verificationStatus","needs_review"],["verificationStatus","unverified"],["freshnessStatus","source_unreachable"],["freshnessStatus","fixture"]])assert.equal(api.search([{...fixtureBase,[field]:value}],"税金","",synonyms.groups).length,0,`${value}除外`);assert.equal(api.search([{...fixtureBase,freshnessStatus:"expired"}],"税金","",synonyms.groups).length,1,"expiredは明示して検索可能");
 for(const text of ["公式情報を探す","知りたいことを入力","氏名・住所・電話番号","maxlength=\"50\"","autocomplete=\"off\"","検索例","aria-live","掲載中の公式情報を見つけられませんでした","支援制度や公式情報が存在しないという意味ではありません","暮らしの困りごとから探す","自治体の災害関連公式情報を見る","<noscript>"])assert.ok(`${html}\n${code}`.includes(text),`${text} が必要`);
 assert.doesNotMatch(code,/localStorage|sessionStorage|document\.cookie|gtag\(|dataLayer|fetch\([^)]*keyword|URLSearchParams[^;]*keyword/i);assert.doesNotMatch(html,/サイト内検索|人気の検索|よか隊ネットへ相談/);assert.doesNotMatch(JSON.stringify(index.items),/火の国会議|facebook|twitter|instagram|fixture/i);
-assert.match(css,/@media\(max-width:700px\)/);assert.match(css,/:focus-visible/);assert.match(css,/@media print/);assert.ok(fs.statSync("public-data/reconstruction/official-search-index.json").size<300*1024,"検索インデックス300KB未満");assert.match(workflow,/official-search-index\.json/);assert.match(pipeline,/build-reconstruction-search-index\.mjs/);
+assert.match(css,/@media\(max-width:700px\)/);assert.match(css,/:focus-visible/);assert.match(css,/@media print/);assert.ok(gzipSync(fs.readFileSync("public-data/reconstruction/official-search-index.json")).length<120*1024,"検索インデックスの転送量120KB未満");assert.ok(fs.statSync("public-data/reconstruction/official-search-index.json").size<700*1024,"検索インデックス700KB未満");assert.match(workflow,/official-search-index\.json/);assert.match(pipeline,/build-reconstruction-search-index\.mjs/);
 const build=spawnSync(process.execPath,["scripts/build-reconstruction-search-index.mjs"],{encoding:"utf8"});assert.equal(build.status,0,build.stderr);assert.match(build.stdout,/公式情報検索インデックス/);
 console.log("公式情報検索: 14語・誤検索6種・宇土市/別自治体2件/未選択・published/verified/expired/needs_review/source_unreachable/draft/fixture・privacy・mobile・keyboard・noscript OK");
