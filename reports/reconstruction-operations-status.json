@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-16T13:17:18.103Z",
+  "generatedAt": "2026-08-16T15:54:12.984Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-16T13:04:02.676Z",
-    "inputCount": 654,
-    "classifiedPageCount": 460,
-    "displayCandidateCount": 363,
+    "generatedAt": "2026-08-16T15:40:41.446Z",
+    "inputCount": 655,
+    "classifiedPageCount": 462,
+    "displayCandidateCount": 364,
     "deltaFromPrevious": {
       "inputCount": 1,
-      "classifiedPageCount": 0,
-      "unclassifiedCount": 1
+      "classifiedPageCount": 2,
+      "unclassifiedCount": -1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 6,
+      "ageHours": 9,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 100,
-        "displayCandidates": 65,
+        "classified": 101,
+        "displayCandidates": 66,
         "fallback": true
       },
       "municipality_minamata": {
@@ -66,7 +66,7 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 56,
+        "classified": 57,
         "displayCandidates": 52,
         "fallback": true
       },
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 108,
-        "high": 44,
+        "total": 109,
+        "high": 45,
         "medium": 25,
         "low": 39
       },
       "money": {
-        "total": 121,
+        "total": 122,
         "high": 17,
         "medium": 30,
-        "low": 74
+        "low": 75
       },
       "documents": {
-        "total": 105,
+        "total": 106,
         "high": 32,
         "medium": 14,
-        "low": 59
+        "low": 60
       },
       "health_care": {
         "total": 28,
@@ -187,11 +187,11 @@
       }
     },
     "confidence": {
-      "high": 163,
+      "high": 164,
       "medium": 200,
-      "low": 97
+      "low": 98
     },
-    "unclassifiedCount": 167,
+    "unclassifiedCount": 166,
     "excludedCount": 28,
     "overrideCount": 0
   },
@@ -310,7 +310,7 @@
     },
     {
       "code": "UNCLASSIFIED_INCREASE",
-      "count": 167
+      "count": 166
     }
   ],
   "strictSources": {
