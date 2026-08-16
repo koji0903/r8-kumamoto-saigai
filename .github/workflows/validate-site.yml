@@ -73,6 +73,7 @@ jobs:
           node scripts/test-professional-support.mjs
           node scripts/test-official-timeline.mjs
           node scripts/test-water-recovery.mjs
+          node scripts/test-response-tracks.mjs
           node scripts/test-reconstruction-release-readiness.mjs
 
       - name: JavaScript構文を検査
