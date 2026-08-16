@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-16T15:40:41.446Z",
+  "generatedAt": "2026-08-16T18:49:49.834Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 655,
-  "displayCandidateCount": 364,
-  "classifiedPageCount": 462,
+  "inputCount": 657,
+  "displayCandidateCount": 366,
+  "classifiedPageCount": 464,
   "categoryReport": {
     "home": {
-      "total": 109,
+      "total": 110,
       "high": 45,
       "medium": 25,
-      "low": 39
+      "low": 40
     },
     "money": {
       "total": 122,
@@ -19,8 +19,8 @@
       "low": 75
     },
     "documents": {
-      "total": 106,
-      "high": 32,
+      "total": 107,
+      "high": 33,
       "medium": 14,
       "low": 60
     },
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 148,
+      "total": 149,
       "high": 39,
-      "medium": 105,
+      "medium": 106,
       "low": 4
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 101,
-      "displayCandidates": 66,
+      "classified": 103,
+      "displayCandidates": 68,
       "fallback": true
     },
     "municipality_minamata": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 164,
-    "medium": 200,
+    "high": 165,
+    "medium": 201,
     "low": 98
   },
   "unclassifiedCount": 166,
@@ -1065,5 +1065,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 460
+  "previousClassifiedPageCount": 462
 }

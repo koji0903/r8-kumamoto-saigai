@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-16T15:54:12.984Z",
+  "generatedAt": "2026-08-16T19:02:36.773Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-16T15:40:41.446Z",
-    "inputCount": 655,
-    "classifiedPageCount": 462,
-    "displayCandidateCount": 364,
+    "generatedAt": "2026-08-16T18:49:49.834Z",
+    "inputCount": 657,
+    "classifiedPageCount": 464,
+    "displayCandidateCount": 366,
     "deltaFromPrevious": {
-      "inputCount": 1,
+      "inputCount": 2,
       "classifiedPageCount": 2,
-      "unclassifiedCount": -1
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 9,
+      "ageHours": 12,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 101,
-        "displayCandidates": 66,
+        "classified": 103,
+        "displayCandidates": 68,
         "fallback": true
       },
       "municipality_minamata": {
@@ -138,10 +138,10 @@
     },
     "categoryReport": {
       "home": {
-        "total": 109,
+        "total": 110,
         "high": 45,
         "medium": 25,
-        "low": 39
+        "low": 40
       },
       "money": {
         "total": 122,
@@ -150,8 +150,8 @@
         "low": 75
       },
       "documents": {
-        "total": 106,
-        "high": 32,
+        "total": 107,
+        "high": 33,
         "medium": 14,
         "low": 60
       },
@@ -180,15 +180,15 @@
         "low": 0
       },
       "daily_life": {
-        "total": 148,
+        "total": 149,
         "high": 39,
-        "medium": 105,
+        "medium": 106,
         "low": 4
       }
     },
     "confidence": {
-      "high": 164,
-      "medium": 200,
+      "high": 165,
+      "medium": 201,
       "low": 98
     },
     "unclassifiedCount": 166,
