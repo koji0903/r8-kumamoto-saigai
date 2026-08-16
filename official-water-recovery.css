@@ -1,0 +1,66 @@
+/* 水の復旧と、統計に表れない水の問題 */
+.water-hero p{max-width:780px}
+.water-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;max-width:1180px;margin:0 auto;background:#e0e4de;border:1px solid #e0e4de;border-radius:6px;overflow:hidden}
+.water-summary-item{background:#fff;padding:18px 20px}
+.water-summary-item span{display:block;font-size:11.5px;color:#6b7671;margin-bottom:4px}
+.water-summary-item b{font-size:27px;font-weight:800;line-height:1.2}
+.water-summary-item b small{font-size:12px;font-weight:700;margin-left:3px;color:#6b7671}
+.water-summary-item.is-remaining{background:#fbf7ef}
+.water-summary-item.is-remaining b{color:#ba4324}
+
+.water-measured{display:grid;gap:2px}
+.water-row{display:grid;grid-template-columns:150px minmax(0,1fr) 190px;gap:16px;align-items:center;padding:10px 0;border-bottom:1px solid #eceee9}
+.water-row-name b{display:block;font-size:14px}
+.water-row-name span{display:block;font-size:11px;color:#6b7671}
+.water-chart{width:100%;height:54px;display:block}
+.water-row-state b{font-size:20px;font-weight:800}
+.water-row-state b small{font-size:11px;font-weight:700;margin-left:2px;color:#6b7671}
+.water-row-state b.is-zero{color:#6b7671}
+.water-tag{display:inline-block;margin-left:8px;font-size:10.5px;padding:2px 8px;border-radius:3px}
+.water-tag.is-ongoing{background:#fbeee9;color:#ba4324}
+.water-tag.is-resolved{background:#eef2ef;color:#5a6560}
+.water-row.is-ongoing{background:#fcfbf8}
+.water-axis-note{margin:14px 0 0;font-size:11.5px;color:#6b7671}
+
+.water-invisible-section{background:#faf9f5}
+.water-invisible{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:26px}
+.water-invisible-item{display:block;background:#fff;border:1px solid #e0e4de;border-left:4px solid #2d79a8;border-radius:5px;padding:14px 16px;text-decoration:none;color:#17231f}
+.water-invisible-item:hover .water-invisible-title{color:#ba4324;text-decoration:underline}
+.water-state-tag{display:inline-block;font-size:10.5px;font-weight:700;color:#2d79a8;background:#eaf2f7;border-radius:3px;padding:2px 8px;margin-bottom:6px}
+.water-invisible-meta{display:block;font-size:10.5px;color:#6b7671;margin-bottom:3px}
+.water-invisible-title{display:block;font-size:13.5px;line-height:1.7;font-weight:700}
+.water-empty{font-size:13px;color:#6b7671}
+
+.water-notes-head{display:block;font-size:13px;margin-bottom:10px}
+.water-note{margin:0 0 10px;background:#fff;border:1px solid #e0e4de;border-radius:5px;padding:14px 16px}
+.water-note p{margin:0 0 6px;font-size:13px;line-height:1.85}
+.water-note cite{font-style:normal;font-size:11px;color:#6b7671}
+.water-note cite a{color:#e45e35;font-weight:700;text-decoration:none;margin-left:6px}
+.water-note cite a:hover{text-decoration:underline}
+
+.water-publications{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.water-pub-group{background:#fff;border:1px solid #e0e4de;border-radius:5px;padding:16px 18px}
+.water-pub-group h3{margin:0 0 8px;font-size:15px;display:flex;align-items:baseline;gap:8px}
+.water-pub-group h3 span{font-size:11px;font-weight:400;color:#6b7671}
+.water-pub-group ul{list-style:none;margin:0;padding:0}
+.water-pub-group li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px;padding:7px 0;border-top:1px dashed #eceee9;font-size:12.5px;line-height:1.7}
+.water-pub-group li:first-child{border-top:0}
+.water-pub-day{font-size:10.5px;color:#6b7671;padding-top:2px}
+.water-pub-group a{color:#17231f;text-decoration:none}
+.water-pub-group a:hover{color:#ba4324;text-decoration:underline}
+
+@media(max-width:900px){
+  .water-summary{grid-template-columns:1fr 1fr}
+  .water-invisible,.water-publications{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .water-summary{margin:0 16px}
+  .water-row{grid-template-columns:1fr auto;gap:4px 12px}
+  .water-chart{grid-column:1/-1;order:3;height:44px}
+  .water-row-state{text-align:right}
+  .water-tag{display:block;margin:3px 0 0}
+}
+@media print{
+  .timeline-links{display:none}
+  .water-row{break-inside:avoid}
+}
