@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-16T04:03:21.509Z",
+  "generatedAt": "2026-08-16T04:24:50.574Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 453,
-  "displayCandidateCount": 250,
-  "classifiedPageCount": 309,
+  "displayCandidateCount": 251,
+  "classifiedPageCount": 310,
   "categoryReport": {
     "home": {
       "total": 81,
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 90,
-      "high": 27,
+      "total": 91,
+      "high": 28,
       "medium": 63,
       "low": 0
     }
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 43,
-      "displayCandidates": 38,
+      "classified": 44,
+      "displayCandidates": 39,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 117,
+    "high": 118,
     "medium": 133,
     "low": 59
   },
-  "unclassifiedCount": 97,
+  "unclassifiedCount": 96,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -398,11 +398,6 @@
       "municipalityName": "上天草市",
       "title": "令和8年8月10日時点全面通行止め一覧(位置図、写真)(PDF 約2MB)",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/dl?q=123089_filelib_0e10a2cfcb8651b3f19b8389a6aaa912.pdf"
-    },
-    {
-      "municipalityName": "宇城市",
-      "title": "2026年7月28日 市役所の窓口業務を閉鎖します",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2606668"
     },
     {
       "municipalityName": "宇城市",
@@ -705,5 +700,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 310
+  "previousClassifiedPageCount": 309
 }
