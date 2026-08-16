@@ -5,3 +5,38 @@
 @media(max-width:760px){.action-nav{margin:1.5rem max(.75rem,env(safe-area-inset-left));padding:1rem;border-radius:18px;box-shadow:5px 5px 0 #dcebe7}.action-nav__list{grid-template-columns:1fr}.action-card{grid-template-columns:2.5rem 1fr;padding:1rem}.action-card__number{width:2.35rem;height:2.35rem}}
 @media(max-width:430px){.action-guidance{padding:.85rem}.action-guidance__contact{padding:.85rem}.action-guidance h3,.action-guidance__contact b,.action-guidance__phone{font-size:1rem}}
 @media print{.action-nav{break-inside:avoid;margin:1.5rem 0;padding:1rem;border:2px solid #333;box-shadow:none;background:#fff}.action-nav__list{display:block}.action-card{break-inside:avoid;margin:.75rem 0;border:1px solid #555}.action-nav a[href]::after{content:"（" attr(href) "）";font-weight:400;overflow-wrap:anywhere}.action-nav__organizer{display:none}.action-guidance{break-inside:avoid;border:1px solid #333}.action-guidance__contact{border-left:3px solid #000;background:#fff}.action-guidance__phone{text-decoration:none}}
+
+/* 専門家による無料相談（士業団体・専門家）。
+   国・県・市町村の公式情報とは出所が違うため、枠と色を変えて明確に分ける。 */
+.professional-support{margin-top:28px;border:1px solid #d9ded8;border-left:4px solid #6577a6;border-radius:6px;background:#fbfaf7;padding:20px 22px}
+.professional-support h3{margin:0 0 8px;font-size:17px}
+.professional-scope{margin:0 0 16px;font-size:12px;line-height:1.7;color:#5a6560;background:#fff;border:1px solid #e6e9e3;border-radius:4px;padding:10px 12px}
+.professional-support article{border-top:1px solid #e6e9e3;padding:16px 0 4px}
+.professional-support article:first-of-type{border-top:0}
+.professional-support header{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin-bottom:4px}
+.professional-support header b{font-size:14px}
+.professional-support header span{font-size:11px;color:#6b7671;border:1px solid #d9ded8;border-radius:3px;padding:1px 7px;background:#fff}
+.professional-support h4{margin:2px 0 6px;font-size:15px}
+.professional-support article>p{margin:0 0 8px;font-size:13px;line-height:1.75}
+.professional-operator{color:#5a6560;font-size:12px!important}
+.professional-fee{font-size:12px!important;color:#5a6560}
+.professional-caution{font-size:12px!important;color:#8a5a2b;background:#fdf6ec;border-radius:4px;padding:8px 10px}
+.professional-contacts{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:8px}
+.professional-contacts li{background:#fff;border:1px solid #e6e9e3;border-radius:4px;padding:10px 12px;font-size:12px;line-height:1.7}
+.professional-contacts b{display:block;font-size:12px;margin-bottom:2px}
+.professional-contacts span{display:block;color:#5a6560}
+.professional-contacts small{display:block;margin-top:3px;color:#6b7671}
+.professional-phone{display:inline-block;font-size:17px;font-weight:800;color:#1f5448;text-decoration:none;letter-spacing:.02em}
+.professional-phone:hover{text-decoration:underline}
+.professional-support>section article>a{display:inline-block;margin-right:14px;font-size:12px;font-weight:700;color:#e45e35;text-decoration:none}
+.professional-support article>a{display:inline-block;margin:2px 14px 4px 0;font-size:12px;font-weight:700;color:#e45e35;text-decoration:none}
+.professional-support article>a:hover{text-decoration:underline}
+.professional-reference{color:#5a6560!important;font-weight:400!important}
+@media(max-width:700px){
+  .professional-support{padding:16px 14px}
+  .professional-phone{font-size:19px}
+}
+@media print{
+  .professional-support{border-left-width:2px}
+  .professional-phone{color:#000}
+}

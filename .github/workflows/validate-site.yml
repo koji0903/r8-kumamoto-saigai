@@ -70,6 +70,7 @@ jobs:
           node scripts/test-reconstruction-content-ux.mjs
           node scripts/test-reconstruction-municipality-handoff.mjs
           node scripts/test-priority-municipality-coverage.mjs
+          node scripts/test-professional-support.mjs
           node scripts/test-reconstruction-release-readiness.mjs
 
       - name: JavaScript構文を検査
