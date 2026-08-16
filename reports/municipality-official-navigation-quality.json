@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-16T08:22:27.632Z",
+  "generatedAt": "2026-08-16T09:46:06.678Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 655,
-  "displayCandidateCount": 366,
-  "classifiedPageCount": 463,
+  "inputCount": 653,
+  "displayCandidateCount": 363,
+  "classifiedPageCount": 460,
   "categoryReport": {
     "home": {
-      "total": 109,
+      "total": 108,
       "high": 44,
       "medium": 25,
-      "low": 40
+      "low": 39
     },
     "money": {
       "total": 121,
@@ -19,8 +19,8 @@
       "low": 74
     },
     "documents": {
-      "total": 106,
-      "high": 33,
+      "total": 105,
+      "high": 32,
       "medium": 14,
       "low": 59
     },
@@ -37,9 +37,9 @@
       "low": 47
     },
     "work_business": {
-      "total": 24,
+      "total": 23,
       "high": 7,
-      "medium": 17,
+      "medium": 16,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 150,
+      "total": 148,
       "high": 39,
-      "medium": 107,
+      "medium": 105,
       "low": 4
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 102,
-      "displayCandidates": 67,
+      "classified": 100,
+      "displayCandidates": 65,
       "fallback": true
     },
     "municipality_minamata": {
@@ -147,8 +147,8 @@
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 22,
-      "displayCandidates": 16,
+      "classified": 21,
+      "displayCandidates": 15,
       "fallback": true
     },
     "municipality_ashikita": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 164,
-    "medium": 202,
+    "high": 163,
+    "medium": 200,
     "low": 97
   },
   "unclassifiedCount": 166,
@@ -541,7 +541,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html"
     },
     {
@@ -551,13 +551,13 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html"
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html"
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html"
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html"
     },
     {
       "municipalityName": "山鹿市",
@@ -1000,9 +1000,9 @@
       "url": "https://www.town.tsunagi.lg.jp/page4406.html"
     }
   ],
-  "excludedCount": 27,
+  "excludedCount": 28,
   "excludedByType": {
-    "duplicate_url": 25,
+    "duplicate_url": 26,
     "non_official_url": 1,
     "non_disaster_context_excluded": 1
   },
@@ -1065,5 +1065,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 409
+  "previousClassifiedPageCount": 463
 }
