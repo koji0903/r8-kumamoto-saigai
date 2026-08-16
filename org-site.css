@@ -342,3 +342,13 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
   .organization-site .principle-flow li{grid-template-columns:34px minmax(0,1fr);padding:16px 14px}
   .organization-site .principle-flow li:not(:last-child)::after{left:18px}
 }
+
+/* メガメニュー内の小見出し（原資料と、そこから読み解いたページを分ける） */
+.organization-site .org-mega-head{grid-column:1/-1;margin:2px 0 0;color:#5d706a;font-size:11.5px;font-weight:900;letter-spacing:.08em}
+.organization-site .org-mega-links>.org-mega-head:not(:first-child){margin-top:9px;padding-top:11px;border-top:1px solid #dbe7e3}
+
+/* 「記録・資料」はメニュー内で右寄りにあり、既定の位置だと画面右にはみ出す */
+.organization-site .org-mega-records{right:-88px}
+.organization-site .org-mega-records::before{right:120px}
+@media(max-width:1050px) and (min-width:801px){.organization-site .org-mega-records{right:-58px}}
+@media(max-width:800px){.organization-site .org-mega-records{right:auto}}

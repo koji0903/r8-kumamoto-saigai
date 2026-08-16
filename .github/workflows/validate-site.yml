@@ -75,6 +75,7 @@ jobs:
           node scripts/test-water-recovery.mjs
           node scripts/test-response-tracks.mjs
           node scripts/test-volunteer-centers.mjs
+          node scripts/test-site-navigation.mjs
           node scripts/test-reconstruction-release-readiness.mjs
 
       - name: JavaScript構文を検査

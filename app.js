@@ -156,10 +156,12 @@ if($("#sectionLinks")){
     ["日ごとのまとめ","火の国会議から現場の変化を追う","timeline.html","日"],
     ["市町村の公式発信","7月28日以降の自治体発表を時系列で確認","municipality-updates.html","公"],
     ["自治体別に見る","被災市町村の情報を同じ基準で確認","municipalities.html","市"],
-    ["議事録を読む","県の報告・災害VC・現地の声を回ごとに","meetings.html","録"]
+    ["議事録を読む","県の報告・災害VC・現地の声を回ごとに","meetings.html","録"],
+    ["災害ボランティアセンター","各地の設置場所と、社協からの募集・活動の発信","volunteer-centers.html","ボ"],
+    ["発信から読み解く","局面の移り変わり、水の復旧、5つの対応の流れ","official-timeline.html","解"]
   ];
   $("#sectionLinks").innerHTML=links.map(([h,p,u,m])=>`<a href="${u}"><span>${m}</span><div><h3>${h}</h3><p>${p}</p></div><b>→</b></a>`).join("");
-  const icons={"日":'<svg viewBox="0 0 24 24"><path d="M6 3v3M18 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1Z"/></svg>',"公":'<svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9l6-5 6 5v11M9 12h6M9 15h6"/></svg>',"市":'<svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V6h8v14M14 10h4v10M9 9h2M9 13h2M9 17h2"/></svg>',"録":'<svg viewBox="0 0 24 24"><path d="M7 3h10v4H7zM5 5H3v16h14v-2M8 10h9M8 14h9M8 18h6M17 6h4v15H7"/></svg>'};
+  const icons={"日":'<svg viewBox="0 0 24 24"><path d="M6 3v3M18 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1Z"/></svg>',"公":'<svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9l6-5 6 5v11M9 12h6M9 15h6"/></svg>',"市":'<svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V6h8v14M14 10h4v10M9 9h2M9 13h2M9 17h2"/></svg>',"録":'<svg viewBox="0 0 24 24"><path d="M7 3h10v4H7zM5 5H3v16h14v-2M8 10h9M8 14h9M8 18h6M17 6h4v15H7"/></svg>',"ボ":'<svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.6-7 9-7 9Z"/></svg>',"解":'<svg viewBox="0 0 24 24"><path d="M4 19h16M6 19v-6M11 19V7M16 19v-9M21 19V4"/></svg>'};
   $$("#sectionLinks>a>span").forEach(span=>{span.innerHTML=icons[span.textContent]||span.textContent});
 }
 const municipalitySummary=document.querySelector(".municipality-summary");

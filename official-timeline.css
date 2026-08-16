@@ -98,3 +98,28 @@
 .timeline-crosslink a{font-size:13px;font-weight:700;color:#e45e35;text-decoration:none}
 .timeline-crosslink a:hover{text-decoration:underline}
 @media(max-width:700px){.timeline-crosslink{margin:0 16px 30px;padding:16px 18px}}
+
+/* 市町村の発信から読み解く3ページの帯。
+   同じ収集データを材料にした3ページが1組だと分かるよう、どのページでも
+   同じ並び・同じ順で出し、いま見ているページを抜いて示す。 */
+.reading-set{display:block;margin:0 max(7vw,20px) 34px;padding:18px 20px;border:1px solid #d5e0dc;border-radius:8px;background:#f4f8f6}
+.reading-set-lead{margin:0 0 12px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.reading-set-lead b{font-size:14px;color:#1f5448}
+.reading-set-lead span{font-size:12.5px;line-height:1.7;color:#4a5551}
+.reading-set ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none;counter-reset:reading}
+.reading-set li{margin:0;counter-increment:reading}
+.reading-set li>a,.reading-set li>span{display:block;height:100%;padding:12px 14px 12px 38px;position:relative;border:1.5px solid #cfdeda;border-radius:7px;background:#fff;text-decoration:none;color:inherit}
+.reading-set li>a::before,.reading-set li>span::before{content:counter(reading);position:absolute;left:13px;top:12px;width:18px;height:18px;border-radius:50%;background:#1f5448;color:#fff;font-size:11px;font-weight:900;line-height:18px;text-align:center}
+.reading-set li>a:hover{border-color:#168174;background:#edf7f4}
+.reading-set li>a:focus-visible{outline:3px solid #e45e35;outline-offset:2px}
+.reading-set b{display:block;font-size:13.5px;line-height:1.5;color:#1f5448}
+.reading-set small{display:block;margin-top:3px;font-size:12px;line-height:1.6;color:#5d706a}
+.reading-set li>span{background:#eef3f0;border-color:#1f5448;border-style:solid}
+.reading-set li>span::before{background:#e45e35}
+.reading-set i{display:block;margin-top:6px;font-size:11px;font-style:normal;font-weight:900;color:#e45e35}
+@media(max-width:760px){
+  .reading-set{margin:0 16px 26px;padding:15px 16px}
+  .reading-set ol{grid-template-columns:1fr;gap:8px}
+  .reading-set li>a,.reading-set li>span{min-height:56px}
+}
+@media print{.reading-set{display:none}}
