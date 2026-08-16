@@ -64,3 +64,11 @@
   .timeline-links{display:none}
   .water-row{break-inside:avoid}
 }
+
+/* 対応の種類の凡例 */
+.water-response-legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:12px;font-size:11.5px;color:#4a5551}
+.water-response-legend span{display:flex;align-items:center;gap:6px}
+.water-response-legend i{width:10px;height:10px;border-radius:50%;display:block;flex:0 0 auto}
+.water-response-legend b{font-size:10px;font-weight:700;color:#ba4324;background:#fbeee9;border-radius:3px;padding:1px 6px}
+.water-pub-group li{grid-template-columns:72px minmax(0,1fr)}
+.water-pub-response{display:inline-block;font-size:10px;color:#5a6560;background:#f2f4f1;border-radius:3px;padding:1px 6px;margin-right:6px}

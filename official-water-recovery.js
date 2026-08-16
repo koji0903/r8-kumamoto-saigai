@@ -9,6 +9,12 @@
   const dateLabel = iso => new Intl.DateTimeFormat("ja-JP", { month: "numeric", day: "numeric" })
     .format(new Date(`${iso}T00:00:00+09:00`));
 
+  // 対応の種類ごとの色。断水の折れ線（青）と重ねても見分けられる色にする。
+  const RESPONSE_COLORS = {
+    status: "#7a6a63", deliver: "#3b8a78", restrict: "#d39b2b", well: "#a8577a",
+    restored: "#5b8c3a", repair: "#6577a6", relief: "#e45e35", hygiene: "#2d79a8", other: "#9aa5a0"
+  };
+
   fetch("public-data/reconstruction/water-recovery.json", { credentials: "same-origin" })
     .then(response => { if (!response.ok) throw new Error(); return response.json(); })
     .then(data => {
@@ -27,6 +33,14 @@
       // ---- 市町村ごとの推移 ----------------------------------------------
       const peakMax = Math.max(...data.measured.map(item => item.peak), 1);
       const W = 300, H = 54, pad = 3;
+      // 発信を市町村ごとにまとめ、断水の折れ線と同じ時間軸に落とす
+      const firstDay = axis[0]?.day ?? 1, lastDay = axis.at(-1)?.day ?? 1;
+      const dayToX = day => pad + ((Math.min(Math.max(day, firstDay), lastDay) - firstDay) / Math.max(1, lastDay - firstDay)) * (W - pad * 2);
+      const eventsByMunicipality = new Map();
+      for (const item of data.publications || []) {
+        const list = eventsByMunicipality.get(item.municipalityName) || [];
+        list.push(item); eventsByMunicipality.set(item.municipalityName, list);
+      }
       host.innerHTML = data.measured.map(item => {
         const points = item.series.map((value, index) => {
           if (value == null) return null;
@@ -48,6 +62,9 @@
                aria-label="${esc(item.name)}の断水戸数は、ピーク${num(item.peak)}戸から${esc(dateLabel(asOf.date))}時点で${num(item.latest)}戸">
             <line x1="${pad}" y1="${H - pad}" x2="${W - pad}" y2="${H - pad}" stroke="#e0e4de"/>
             ${segments.map(segment => `<polyline fill="none" stroke="${ongoing ? "#2d79a8" : "#9fb3ab"}" stroke-width="2.5" points="${segment.join(" ")}"/>`).join("")}
+            ${(eventsByMunicipality.get(item.name) || []).map(event =>
+              `<circle cx="${Math.round(dayToX(event.day) * 10) / 10}" cy="${H - pad}" r="3.4"
+                       fill="${RESPONSE_COLORS[event.response] || RESPONSE_COLORS.other}" stroke="#fff" stroke-width="1.2"><title>発災${event.day}日目 ${event.responseLabel}：${event.title}</title></circle>`).join("")}
           </svg>
           <div class="water-row-state">
             ${ongoing
@@ -56,13 +73,16 @@
           </div>
         </article>`;
       }).join("")
-        + `<p class="water-axis-note">横軸は ${esc(dateLabel(axis[0]?.date))}（発災${axis[0]?.day}日目）〜 ${esc(dateLabel(axis.at(-1)?.date))}（発災${axis.at(-1)?.day}日目）。縦軸は全市町村で共通です。</p>`;
+        + `<p class="water-axis-note">横軸は ${esc(dateLabel(axis[0]?.date))}（発災${axis[0]?.day}日目）〜 ${esc(dateLabel(axis.at(-1)?.date))}（発災${axis.at(-1)?.day}日目）。縦軸は全市町村で共通です。`
+          + `折れ線の下の丸は、その日にその市町村が出した水に関する発信で、色は対応の種類を表します。</p>`
+        + `<div class="water-response-legend">${(data.responseTypes || []).map(type =>
+            `<span><i style="background:${RESPONSE_COLORS[type.id] || RESPONSE_COLORS.other}"></i>${esc(type.label)}${type.invisible ? "<b>断水戸数に出ない</b>" : ""}</span>`).join("")}</div>`;
 
       // ---- 統計に表れない状態 ---------------------------------------------
       const invisible = (data.publications || []).filter(item => item.invisibleInStats);
       document.querySelector("#waterInvisible").innerHTML = invisible.length
         ? invisible.map(item => `<a class="water-invisible-item" href="${esc(item.url)}" target="_blank" rel="noopener">
-            <span class="water-state-tag">${esc(item.stateLabel)}</span>
+            <span class="water-state-tag">${esc(item.responseLabel)}</span>
             <span class="water-invisible-meta">${esc(item.municipalityName)} ／ ${esc(dateLabel(item.date))}（発災${item.day}日目）</span>
             <span class="water-invisible-title">${esc(item.title)} ↗</span>
           </a>`).join("")
@@ -93,7 +113,8 @@
           <h3>${esc(name)}<span>${items.length}件</span></h3>
           <ul>${items.map(item => `<li>
             <span class="water-pub-day">発災${item.day}日目</span>
-            <a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)} ↗</a>
+            <span><span class="water-pub-response" style="border-left:3px solid ${RESPONSE_COLORS[item.response] || RESPONSE_COLORS.other}">${esc(item.responseLabel)}</span>
+            <a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)} ↗</a></span>
           </li>`).join("")}</ul>
         </section>`).join("");
 

@@ -64,17 +64,27 @@ const measured = hq.municipalityOrder
   .filter(Boolean)
   .sort((a, b) => b.latest - a.latest || b.peak - a.peak);
 
-// ---- 発信：水に関する公式ページ ---------------------------------------------
-// 表題から状態を読み取る。断水戸数では0と数えられてしまう状態に印をつける。
-const STATE_RULES = [
-  { id: "turbid", label: "濁り・飲用不可", pattern: /濁り|濁水|飲用をお?控え|飲めない/, invisible: true },
-  { id: "partial", label: "時間断水・減圧", pattern: /時間断水|減圧|時間給水|試験通水/, invisible: true },
-  { id: "well", label: "井戸水", pattern: /井戸/, invisible: true },
-  { id: "supply", label: "給水所・応急給水", pattern: /給水所|給水車|応急給水|給水|飲料水.*配布/, invisible: false },
-  { id: "restored", label: "復旧・解消", pattern: /復旧|解消|通水(?!.*試験)/, invisible: false },
-  { id: "outage", label: "断水の案内", pattern: /断水/, invisible: false },
-  { id: "fee", label: "料金の減免", pattern: /料金|減免/, invisible: false },
-  { id: "sewer", label: "下水道", pattern: /下水道/, invisible: false }
+// ---- 発信：市町村の「対応」として読む -----------------------------------
+// 断水そのものは県が数える。市町村側で起きているのは、水を届ける・使用を
+// 抑える・復旧を知らせる・負担を軽くする、といった対応の連なり。表題から
+// その種類を読み取り、断水戸数の推移と同じ時間軸に置けるようにする。
+// invisible は、断水戸数では0戸として扱われてしまう状態を指す。
+const RESPONSE_RULES = [
+  { id: "restrict", label: "使用の制限・節水", order: 3, invisible: true,
+    pattern: /給水量制限|時間断水|時間給水|減圧|試験通水|節水|飲用をお?控え|濁り|濁水/ },
+  { id: "well", label: "井戸水への対応", order: 3, invisible: true, pattern: /井戸/ },
+  { id: "deliver", label: "水を届ける（応急給水・配布）", order: 2, invisible: false,
+    pattern: /給水車|応急給水|給水所|給水スポット|飲料水|生活用水|ペットボトル|配布|給水・/ },
+  { id: "restored", label: "復旧・解消の知らせ", order: 4, invisible: false,
+    pattern: /復旧|解消|解除|終了/ },
+  { id: "repair", label: "修理の案内（指定事業者）", order: 5, invisible: false,
+    pattern: /指定給水装置|給水工事装置|工事事業者/ },
+  { id: "relief", label: "負担の軽減（料金の減免）", order: 6, invisible: false,
+    pattern: /減免|料金/ },
+  { id: "hygiene", label: "衛生・下水道", order: 7, invisible: false,
+    pattern: /食品衛生|下水道|排水|浄化槽/ },
+  { id: "status", label: "状況の周知", order: 1, invisible: false,
+    pattern: /状況|お知らせ|情報|被災状況|現況調査|閉鎖/ }
 ];
 const WATER_PATTERN = /断水|給水|通水|水道|濁り|飲料水|生活用水|井戸/;
 
@@ -91,12 +101,12 @@ for (const municipality of nav.municipalities || []) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) continue;
     const day = dayNumber(date);
     if (day < 1) continue;
-    const rule = STATE_RULES.find(item => item.pattern.test(title));
+    const rule = RESPONSE_RULES.find(item => item.pattern.test(title));
     publications.push({
       municipalityName: municipality.municipalityName,
       date, day, title, url: update.url,
-      state: rule?.id ?? "other",
-      stateLabel: rule?.label ?? "その他の水の情報",
+      response: rule?.id ?? "other",
+      responseLabel: rule?.label ?? "その他の水の情報",
       invisibleInStats: Boolean(rule?.invisible)
     });
   }
@@ -144,7 +154,9 @@ const output = {
     remainingMunicipalities: measured.filter(item => item.latest > 0).length
   },
   publications,
-  invisibleStates: STATE_RULES.filter(rule => rule.invisible).map(rule => ({ id: rule.id, label: rule.label })),
+  responseTypes: [...RESPONSE_RULES].sort((a, b) => a.order - b.order)
+    .map(rule => ({ id: rule.id, label: rule.label, invisible: rule.invisible })),
+  invisibleStates: RESPONSE_RULES.filter(rule => rule.invisible).map(rule => ({ id: rule.id, label: rule.label })),
   notes,
   caveats: [
     "断水戸数は水が出るか出ないかだけを数えます。濁り水で飲めない、時間断水、減圧給水はいずれも統計上0戸として扱われます。",

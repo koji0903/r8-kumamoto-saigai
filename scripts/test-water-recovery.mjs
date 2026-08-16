@@ -27,8 +27,20 @@ for (const item of data.measured) {
 assert.ok(data.measured.some(item => item.latest > 0) && data.measured.some(item => item.latest === 0),
   "継続中と解消済みの両方がなければ復旧の差を示せません");
 
-// 統計に表れない状態を必ず扱うこと
-assert.ok(data.invisibleStates?.length >= 3, "統計に表れない状態の定義が不足しています");
+// 市町村の対応として分類できていること
+assert.ok(data.responseTypes?.length >= 6, "対応の種類の定義が不足しています");
+for (const type of data.responseTypes) assert.ok(type.id && type.label, "対応の種類に id と表示名が必要です");
+const classified = (data.publications || []).filter(item => item.response !== "other").length;
+assert.ok(classified / (data.publications || []).length >= 0.8,
+  `対応を判別できた発信が${classified}/${data.publications.length}件しかありません`);
+// 「水を届ける」は断水対応の中心。これが拾えていなければ分類が壊れている。
+assert.ok((data.publications || []).some(item => item.response === "deliver"),
+  "応急給水・水の配布の発信を拾えていません");
+
+// 統計に表れない状態を必ず扱うこと。使用の制限（濁り・時間断水・減圧）と
+// 井戸水は、いずれも断水戸数では0戸になる。
+assert.ok(data.invisibleStates?.some(state => state.id === "restrict"), "使用の制限・節水を扱う必要があります");
+assert.ok(data.invisibleStates?.some(state => state.id === "well"), "井戸水を扱う必要があります");
 const invisible = (data.publications || []).filter(item => item.invisibleInStats);
 assert.ok(invisible.length >= 1, "統計に表れない状態の発信が1件もありません");
 for (const item of invisible) assert.match(item.url, /^https?:\/\//, "発信のURLが不正です");
@@ -50,6 +62,9 @@ assert.match(code, /water-recovery\.json/, "生成データを読む必要があ
 assert.match(code, /waterCaveats/, "但し書きを画面に出す必要があります");
 assert.match(code, /catch\(/, "読み込み失敗時の代替導線が必要です");
 assert.match(html, /<noscript>/, "JavaScript無効時の導線が必要です");
+assert.match(code, /RESPONSE_COLORS/, "対応の種類を色で示す必要があります");
+assert.match(code, /water-response-legend/, "対応の種類の凡例が必要です");
+assert.match(html, /折れ線|対応/, "対応の読み方の説明が必要です");
 assert.match(css, /@media\(max-width:700px\)/, "狭い画面への対応が必要です");
 assert.match(css, /@media print/, "印刷への対応が必要です");
 
