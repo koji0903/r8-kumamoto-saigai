@@ -26,7 +26,8 @@ const FLEXIBLE = [
   ["timeline-redesign.css", ".modern-site .actions"],
   ["uto-waste.css", ".accepted-list"],
   ["uto-waste.css", ".waste-filter"],
-  ["org-site.css", ".page-municipality-updates .feed-filter-control fieldset div"]
+  ["org-site.css", ".page-municipality-updates .feed-filter-control fieldset div"],
+  ["styles.css", ".need-grid"]
 ];
 for (const [file, selector] of FLEXIBLE) {
   const source = css(file);
@@ -71,7 +72,23 @@ for (const [file, selector] of [
     `${file}: ${selector} の grid-column は2カラムになる幅に限定してください`);
 }
 
-// ---- 4. 絶対配置の印の居場所 --------------------------------------------------
+// ---- 4. カードの並びを、器ごとカードにしない --------------------------------
+// .supporter-needs はカードの並びそのもの。器にも枠と背景を付けると二重枠に
+// なり、枚数が列数で割り切れないときは空いた側が空の枠として残る（支援する方
+// ページで5枚目が枠からはみ出して見えていた）。
+const orgSiteCss = css("org-site.css");
+// 器（パネル）に枠と背景を与えているブロック。.minutes-toolbar を含む方で、
+// カード1枚1枚に与えている .need-grid>a のブロックとは別物。
+const panel = [...orgSiteCss.matchAll(/\.illustrated-site :is\([^)]*\)\{[^}]*\}/g)]
+  .map(match => match[0])
+  .find(block => block.includes(".minutes-toolbar") && /border:2px solid/.test(block));
+assert.ok(panel, "org-site.css: 器の枠の指定が見つかりません");
+for (const selector of [".supporter-needs", ".need-grid", ".section-links", ".compact-steps"]) {
+  assert.ok(!panel.includes(`${selector},`) && !panel.includes(`${selector})`),
+    `org-site.css: ${selector} はカードの並びなので、器にカードの枠を付けないでください（二重枠になり、枚数が半端なときは空の枠が残ります）`);
+}
+
+// ---- 5. 絶対配置の印の居場所 --------------------------------------------------
 // チェックマークや番号は position:absolute で置き、本文側は padding で場所を
 // 空けている。あとから padding を一括指定で上書きすると、その余白が消えて印が
 // 文字に重なる（「この日に進んだ対応」の1文字目がチェックの下に隠れていた）。
@@ -92,7 +109,7 @@ for (const file of ["timeline-redesign.css", "org-site.css"]) {
   }
 }
 
-// ---- 5. 暗い帯・白いカードの文字色 -------------------------------------------
+// ---- 6. 暗い帯・白いカードの文字色 -------------------------------------------
 // このサイトは、同じ節に「暗い帯を敷く指定」と「中身を白いカードに変える指定」が
 // 別ファイルで重なっている。片方だけ変えると、白地に白・緑地に緑で文字が丸ごと
 // 消える。実際に「活動前の確認事項」「一次情報を必ず確認」「議事録原本の一覧」
@@ -115,7 +132,7 @@ assert.match(categoriesCss, /button\[aria-pressed="true"\] b\{color:#fff\}/,
 assert.doesNotMatch(categoriesCss, /button\[aria-pressed="true"\] b\{color:var\(--category\)\}/,
   "municipality-categories.css: 件数を分野色にすると塗りつぶしの地色と同じになります");
 
-// ---- 6. 変更した資産のキャッシュバスター --------------------------------------
+// ---- 7. 変更した資産のキャッシュバスター --------------------------------------
 // @import で読むCSSは HTML の ?v= では更新されない。
 const styles = read("styles.css");
 for (const name of ["home-redesign.css", "timeline-redesign.css", "navigation-enhancements.css"]) {
@@ -123,4 +140,4 @@ for (const name of ["home-redesign.css", "timeline-redesign.css", "navigation-en
     `styles.css: ${name} の @import に版が必要です`);
 }
 
-console.log(`レイアウト: 可変列${FLEXIBLE.length}箇所 / 2カラム前提とHTMLの一致 / 列指定の適用幅 / 地色と同色の文字の防止 / 印と文字の重なり / @importの版 OK`);
+console.log(`レイアウト: 可変列${FLEXIBLE.length}箇所 / 2カラム前提とHTMLの一致 / 列指定の適用幅 / 地色と同色の文字の防止 / 印と文字の重なり / 二重枠の防止 / @importの版 OK`);
