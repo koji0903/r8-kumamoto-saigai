@@ -71,7 +71,28 @@ for (const [file, selector] of [
     `${file}: ${selector} の grid-column は2カラムになる幅に限定してください`);
 }
 
-// ---- 4. 暗い帯・白いカードの文字色 -------------------------------------------
+// ---- 4. 絶対配置の印の居場所 --------------------------------------------------
+// チェックマークや番号は position:absolute で置き、本文側は padding で場所を
+// 空けている。あとから padding を一括指定で上書きすると、その余白が消えて印が
+// 文字に重なる（「この日に進んだ対応」の1文字目がチェックの下に隠れていた）。
+const timelineCss = css("timeline-redesign.css");
+const marker = timelineCss.match(/\.page-timeline \.actions li:before\{[^}]*\}/);
+assert.ok(marker, "timeline-redesign.css: 印の定義が見つかりません");
+const markerLeft = Number(marker[0].match(/left:(\d+)px/)[1]);
+const markerWidth = Number(marker[0].match(/width:(\d+)px/)[1]);
+for (const file of ["timeline-redesign.css", "org-site.css"]) {
+  for (const block of css(file).matchAll(/\.page-timeline \.actions li\{([^}]*)\}/g)) {
+    const padding = block[1].match(/(?:^|;)padding:([^;]+)/)?.[1];
+    if (!padding) continue;
+    const parts = padding.trim().split(/\s+/);
+    // padding の左は 1値→[0] / 2・3値→[1] / 4値→[3]
+    const paddingLeft = Number((parts.length === 1 ? parts[0] : parts.length === 4 ? parts[3] : parts[1]).replace("px", ""));
+    assert.ok(paddingLeft >= markerLeft + markerWidth,
+      `${file}: .page-timeline .actions li の左余白が${paddingLeft}pxでは、左${markerLeft}px・幅${markerWidth}pxの印が文字に重なります`);
+  }
+}
+
+// ---- 5. 暗い帯・白いカードの文字色 -------------------------------------------
 // このサイトは、同じ節に「暗い帯を敷く指定」と「中身を白いカードに変える指定」が
 // 別ファイルで重なっている。片方だけ変えると、白地に白・緑地に緑で文字が丸ごと
 // 消える。実際に「活動前の確認事項」「一次情報を必ず確認」「議事録原本の一覧」
@@ -94,7 +115,7 @@ assert.match(categoriesCss, /button\[aria-pressed="true"\] b\{color:#fff\}/,
 assert.doesNotMatch(categoriesCss, /button\[aria-pressed="true"\] b\{color:var\(--category\)\}/,
   "municipality-categories.css: 件数を分野色にすると塗りつぶしの地色と同じになります");
 
-// ---- 5. 変更した資産のキャッシュバスター --------------------------------------
+// ---- 6. 変更した資産のキャッシュバスター --------------------------------------
 // @import で読むCSSは HTML の ?v= では更新されない。
 const styles = read("styles.css");
 for (const name of ["home-redesign.css", "timeline-redesign.css", "navigation-enhancements.css"]) {
@@ -102,4 +123,4 @@ for (const name of ["home-redesign.css", "timeline-redesign.css", "navigation-en
     `styles.css: ${name} の @import に版が必要です`);
 }
 
-console.log(`レイアウト: 可変列${FLEXIBLE.length}箇所 / 2カラム前提とHTMLの一致 / 列指定の適用幅 / 地色と同色の文字の防止 / @importの版 OK`);
+console.log(`レイアウト: 可変列${FLEXIBLE.length}箇所 / 2カラム前提とHTMLの一致 / 列指定の適用幅 / 地色と同色の文字の防止 / 印と文字の重なり / @importの版 OK`);
