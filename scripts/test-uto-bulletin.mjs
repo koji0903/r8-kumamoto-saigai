@@ -102,11 +102,22 @@ assert.match(text, /制度の内容・金額・期限・電話番号は紙面の
   "紙面の内容を変えていないことの明示が必要です");
 const situations = (html.match(/class="bulletin-situations"/g) || []).length;
 assert.equal(situations, data.sections.length, `「こんなときに」が${situations}件で章の数と合いません`);
-const icons = (html.match(/class="bulletin-icon"/g) || []).length;
-assert.equal(icons, data.sections.length, `絵記号が${icons}件で章の数と合いません`);
-// 絵記号は読み上げの対象にしない
-for (const match of html.matchAll(/<span class="bulletin-icon"([^>]*)>/g)) {
-  assert.match(match[1], /aria-hidden="true"/, "絵記号は aria-hidden にしてください");
+const icons = (html.match(/class="bulletin-art"/g) || []).length;
+assert.equal(icons, data.sections.length, `章のイラストが${icons}件で章の数と合いません`);
+// 主要な項目にもイラストを置く
+const cardArt = (html.match(/class="bulletin-card-art"/g) || []).length;
+assert.ok(cardArt >= 8, `項目のイラストが${cardArt}件しかありません`);
+assert.equal((html.match(/class="deadline-art"/g) || []).length, data.deadlines.length,
+  "期限それぞれにカレンダーのイラストが必要です");
+// イラストは読み上げの対象にしない
+for (const match of html.matchAll(/<span class="(?:bulletin-art|bulletin-card-art|deadline-art)"([^>]*)>/g)) {
+  assert.match(match[1], /aria-hidden="true"/, "イラストは aria-hidden にしてください");
+}
+// uto-waste と同じ配色の語彙を使う（宇土市の2ページを揃えるため）
+const bulletinCss = read("uto-bulletin.css");
+for (const tone of ["art-teal", "art-orange", "art-blue", "art-yellow", "art-slate"]) {
+  assert.ok(bulletinCss.includes(`.${tone}{`), `${tone} の配色定義が必要です`);
+  assert.ok(html.includes(`class="${tone}"`), `${tone} を使ったイラストがありません`);
 }
 
 // ---- 残り日数は、日付を書き換えずに足したものであること ------------------------
@@ -139,4 +150,4 @@ const pages = fs.readdirSync(new URL("..", import.meta.url)).filter(file => file
 const inbound = pages.filter(page => page !== "uto-bulletin.html" && read(page).includes('href="uto-bulletin.html'));
 assert.ok(inbound.length >= 2, `他ページからのリンクが${inbound.length}件しかありません`);
 
-console.log(`宇土市 災害臨時号vol.1: 章${data.sections.length}（絵記号${icons}・こんなときに${situations}） / 電話${tels.size}件・限度額3件・期限${data.deadlines.length}件を紙面と一致 / 未定${pendingTitles.length}件を未定として表示 / 導線${inbound.length}ページ OK`);
+console.log(`宇土市 災害臨時号vol.1: 章${data.sections.length}（イラスト${icons}＋項目${cardArt}・こんなときに${situations}） / 電話${tels.size}件・限度額3件・期限${data.deadlines.length}件を紙面と一致 / 未定${pendingTitles.length}件を未定として表示 / 導線${inbound.length}ページ OK`);

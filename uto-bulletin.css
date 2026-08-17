@@ -38,7 +38,7 @@
 .deadline-list{display:grid;gap:14px;margin:0;padding:0;list-style:none;counter-reset:none}
 .deadline-item{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:18px;align-items:start;padding:18px 20px;border:2px solid var(--ub-line);border-radius:11px;background:#fff}
 .deadline-item.is-near{border-color:#d8552f;background:#fff7f3;box-shadow:5px 5px 0 #f6e0d6}
-.deadline-date{color:#123f38;font-size:15px;font-weight:800;line-height:1.5;font-variant-numeric:tabular-nums}
+.deadline-date{display:block;color:#123f38;font-size:15px;font-weight:800;line-height:1.5;font-variant-numeric:tabular-nums}
 .deadline-date>b{font-size:34px;line-height:1.1}
 .deadline-date small{display:block;margin-top:2px;color:var(--ub-muted);font-size:13px;font-weight:700}
 .deadline-item.is-near .deadline-date{color:#9a3413}
@@ -143,21 +143,48 @@
 .bulletin-card{container-type:inline-size}
 @container (max-width:440px){.bulletin-facts>div{grid-template-columns:1fr;gap:5px}}
 
-/* 章のアイコン。紙面の絵記号の意味をなぞる線画。装飾なので読み上げない */
-.bulletin-icon{display:grid;place-items:center;flex:0 0 auto;width:38px;height:38px;border-radius:9px;background:rgba(255,255,255,.22)}
-.bulletin-icon svg{width:24px;height:24px}
-.bulletin-head .bulletin-icon{margin-left:auto}
+/* 絵は uto-waste.html と同じ語彙（線は currentColor、面は art-* の色）。
+   装飾なので読み上げない。 */
+.page-uto-bulletin svg{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.art-teal{fill:#2dd4bf;stroke:#0f766e}
+.art-orange{fill:#fb923c;stroke:#c2410c}
+.art-blue{fill:#93c5fd;stroke:#1d4ed8}
+.art-yellow{fill:#fde047;stroke:#a16207}
+.art-slate{fill:#cbd5e1;stroke:#475569}
+
+/* 章の絵。大きく見せて、ひと目でどの話か分かるようにする */
+.bulletin-art{display:grid;place-items:center;flex:0 0 auto;width:132px;height:96px;border-radius:11px;background:#fff;border:1.5px solid #dbe6e2}
+.bulletin-art svg{width:112px;height:78px;color:#33443f}
+
+/* 期限のカレンダー */
+.deadline-art{display:grid;place-items:center;width:96px;height:70px;margin:0 0 10px;border-radius:9px;background:#fff;border:1.5px solid #e2ded1}
+.deadline-art svg{width:82px;height:60px;color:#33443f}
+.deadline-item.is-near .deadline-art{border-color:#eabfa9}
+
+/* 項目の絵。見出しの左に置く */
+h3.has-art,b.has-art{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;align-items:center}
+.bulletin-card-art{display:grid;place-items:center;width:96px;height:70px;border-radius:9px;background:#f7faf9;border:1.5px solid #e2e9e6}
+.bulletin-card-art svg{width:84px;height:60px;color:#33443f}
 
 /* 「こんなときに」— 被災者の状況からの言い換え。紙面の言葉ではないので、
    カードと違う見た目にして区別できるようにする */
-.bulletin-situations{display:grid;grid-template-columns:minmax(0,120px) minmax(0,1fr);gap:8px 16px;align-items:start;margin:0 0 20px;padding:14px 18px;border-left:5px solid #7aa9a0;border-radius:0 8px 8px 0;background:#f2f7f6}
-.bulletin-situations>b{color:#1f5448;font-size:13.5px;font-weight:900;letter-spacing:.04em;line-height:2}
+.bulletin-situations{display:grid;grid-template-columns:132px minmax(0,1fr);gap:18px;align-items:center;margin:0 0 20px;padding:16px 18px;border-left:5px solid #7aa9a0;border-radius:0 10px 10px 0;background:#f2f7f6}
+.bulletin-situations-body{display:grid;gap:9px}
+.bulletin-situations b{color:#1f5448;font-size:13.5px;font-weight:900;letter-spacing:.04em}
 .bulletin-situations ul{display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;list-style:none}
 .bulletin-situations li{padding:6px 12px;border:1.5px solid #cfdeda;border-radius:999px;background:#fff;color:#264a43;font-size:14.5px;line-height:1.7}
 @media(max-width:760px){
-  .bulletin-situations{grid-template-columns:1fr;gap:9px;padding:13px 15px}
-  .bulletin-icon{width:32px;height:32px}
-  .bulletin-icon svg{width:20px;height:20px}
+  .bulletin-situations{grid-template-columns:104px minmax(0,1fr);gap:13px;padding:13px 14px}
+  .bulletin-art{width:104px;height:78px}
+  .bulletin-art svg{width:90px;height:64px}
+  h3.has-art,b.has-art{grid-template-columns:76px minmax(0,1fr);gap:11px}
+  .bulletin-card-art{width:76px;height:58px}
+  .bulletin-card-art svg{width:66px;height:50px}
+  .deadline-art{width:82px;height:60px}
+  .deadline-art svg{width:70px;height:52px}
+}
+@media(max-width:430px){
+  .bulletin-situations{grid-template-columns:1fr;justify-items:start}
 }
 @media print{.bulletin-situations{border-left-color:#999;background:#f6f6f6}}
 
