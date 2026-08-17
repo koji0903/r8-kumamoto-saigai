@@ -230,3 +230,42 @@ h3.has-art,b.has-art{display:grid;grid-template-columns:96px minmax(0,1fr);gap:1
 }
 @media(max-width:430px){.bulletin-sources-head{grid-template-columns:1fr;justify-items:start}}
 @media print{.bulletin-sources-inner{border-color:#999;background:#fff;box-shadow:none}.bulletin-sources-related{display:none}}
+
+/* ===== 章ごとの色分け =====
+   紙面は章ごとに色が決まっている。ページでも見出しの帯だけでなく、
+   節の地色・カードの縁・小見出しの帯まで同じ色を通して、どこからどこまでが
+   同じ話か目で切り分けられるようにする。 */
+.tone-blue  {--tone:#1a5b93;--tone-ink:#12405f;--tone-soft:#e8f1f8;--tone-wash:#f4f9fc;--tone-edge:#b6d0e4}
+.tone-sky   {--tone:#2d79a8;--tone-ink:#1c5479;--tone-soft:#e9f3f9;--tone-wash:#f5fafd;--tone-edge:#b8d5e7}
+.tone-teal  {--tone:#0f8a72;--tone-ink:#0a5f4f;--tone-soft:#e6f5f1;--tone-wash:#f4fbf9;--tone-edge:#aeddd1}
+.tone-amber {--tone:#c9821b;--tone-ink:#8a5810;--tone-soft:#fdf3e2;--tone-wash:#fffaf1;--tone-edge:#eed6ab}
+.tone-green {--tone:#4f8f2f;--tone-ink:#376520;--tone-soft:#eef6e8;--tone-wash:#f7fbf4;--tone-edge:#c8dfb8}
+.tone-orange{--tone:#d8552f;--tone-ink:#993a1e;--tone-soft:#fdeee9;--tone-wash:#fff7f4;--tone-edge:#f2c5b5}
+.tone-pink  {--tone:#c2557f;--tone-ink:#8a3a59;--tone-soft:#fbedf3;--tone-wash:#fff6fa;--tone-edge:#eec3d5}
+.tone-purple{--tone:#6a5aa8;--tone-ink:#4a3e77;--tone-soft:#f0eefa;--tone-wash:#f8f7fd;--tone-edge:#cdc6ea}
+
+/* 節ごとに薄い地色を敷いて、章の切れ目を見えるようにする */
+.bulletin-section[class*="tone-"]{padding-top:34px;background:var(--tone-wash)}
+.bulletin-section[class*="tone-"]+.bulletin-section[class*="tone-"]{border-top:1px solid var(--tone-edge)}
+
+/* カードは白のまま（読みやすさ優先）。左に章の色の帯を入れて所属を示す */
+.bulletin-section[class*="tone-"] .bulletin-card{border-color:var(--tone-edge);border-left:7px solid var(--tone);box-shadow:4px 4px 0 var(--tone-soft)}
+/* 小見出しは章の色の帯にして、カードの中の区切りをはっきりさせる */
+.bulletin-section[class*="tone-"] .bulletin-card>h3{margin:-20px -22px 14px;padding:12px 20px;border-radius:0;background:var(--tone-soft);color:var(--tone-ink);border-bottom:2px solid var(--tone-edge)}
+.bulletin-section[class*="tone-"] .bulletin-card>h3.has-art{padding-block:10px}
+/* 「こんなときに」も章の色に合わせる */
+.bulletin-section[class*="tone-"] .bulletin-situations{border-left-color:var(--tone);background:var(--tone-soft)}
+.bulletin-section[class*="tone-"] .bulletin-situations b{color:var(--tone-ink)}
+.bulletin-section[class*="tone-"] .bulletin-situations li{border-color:var(--tone-edge)}
+/* 項目の見出し（カード内の小分け）と、事実の表のラベル */
+.bulletin-section[class*="tone-"] .bulletin-card b.has-art>span,
+.bulletin-section[class*="tone-"] .bulletin-facts dt{color:var(--tone-ink)}
+.bulletin-section[class*="tone-"] .bulletin-art{border-color:var(--tone-edge)}
+
+@media(max-width:760px){
+  .bulletin-section[class*="tone-"] .bulletin-card>h3{margin:-17px -16px 12px;padding:11px 15px}
+}
+@media print{
+  .bulletin-section[class*="tone-"]{background:#fff}
+  .bulletin-section[class*="tone-"] .bulletin-card{box-shadow:none}
+}

@@ -12,6 +12,7 @@ import fs from "node:fs";
 const read = file => fs.readFileSync(new URL(`../${file}`, import.meta.url), "utf8");
 const data = JSON.parse(read("data/reconstruction/uto-bulletin-vol1.json"));
 const html = read("uto-bulletin.html");
+const bulletinCss = read("uto-bulletin.css");
 const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
 
 // ---- 出典 -------------------------------------------------------------------
@@ -114,11 +115,35 @@ for (const match of html.matchAll(/<span class="(?:bulletin-art|bulletin-card-ar
   assert.match(match[1], /aria-hidden="true"/, "イラストは aria-hidden にしてください");
 }
 // uto-waste と同じ配色の語彙を使う（宇土市の2ページを揃えるため）
-const bulletinCss = read("uto-bulletin.css");
 for (const tone of ["art-teal", "art-orange", "art-blue", "art-yellow", "art-slate"]) {
   assert.ok(bulletinCss.includes(`.${tone}{`), `${tone} の配色定義が必要です`);
   assert.ok(html.includes(`class="${tone}"`), `${tone} を使ったイラストがありません`);
 }
+
+// ---- 章ごとの色分け ----------------------------------------------------------
+// 支援の説明が続くので、どこからどこまでが同じ章か目で切り分けられるように、
+// 見出しの帯だけでなく節の地色・カードの縁・小見出しの帯まで同じ色を通す。
+const TONES = ["tone-blue", "tone-sky", "tone-teal", "tone-amber", "tone-green", "tone-orange", "tone-pink", "tone-purple"];
+const sectionTones = [...html.matchAll(/<section class="bulletin-section (tone-[a-z]+)" id="([a-z]+)">/g)]
+  .map(match => ({ tone: match[1], id: match[2] }));
+assert.equal(sectionTones.length, data.sections.length, "すべての章に色が付いている必要があります");
+// 章ごとに違う色（同じ色が続くと切れ目が見えない）
+assert.equal(new Set(sectionTones.map(item => item.tone)).size, sectionTones.length, "章の色が重複しています");
+for (const { tone, id } of sectionTones) {
+  assert.ok(TONES.includes(tone), `${id}: 未定義の色 ${tone}`);
+  // 見出しの帯と節の色が食い違わないこと
+  const head = html.match(new RegExp(`id="${id}"[\\s\\S]{0,300}?class="bulletin-head (tone-[a-z]+)"`));
+  assert.ok(head, `${id}: 見出しの色が読み取れません`);
+  assert.equal(head[1], tone, `${id}: 節と見出しで色が違います`);
+}
+// 色は変数でまとめて持つ（1か所で決まるようにする）
+for (const tone of TONES) {
+  assert.match(bulletinCss, new RegExp(`\\.${tone}\\s*\\{[^}]*--tone:#[0-9a-f]{6}[^}]*--tone-ink:#[0-9a-f]{6}[^}]*--tone-soft:#[0-9a-f]{6}`),
+    `${tone} の色の組（--tone / --tone-ink / --tone-soft）が必要です`);
+}
+// カードは章の色で縁取る
+assert.match(bulletinCss, /\.bulletin-card\{border-color:var\(--tone-edge\);border-left:7px solid var\(--tone\)/,
+  "カードの左に章の色の帯が必要です");
 
 // ---- 残り日数は、日付を書き換えずに足したものであること ------------------------
 const script = read("uto-bulletin.js");
@@ -150,4 +175,4 @@ const pages = fs.readdirSync(new URL("..", import.meta.url)).filter(file => file
 const inbound = pages.filter(page => page !== "uto-bulletin.html" && read(page).includes('href="uto-bulletin.html'));
 assert.ok(inbound.length >= 2, `他ページからのリンクが${inbound.length}件しかありません`);
 
-console.log(`宇土市 災害臨時号vol.1: 章${data.sections.length}（イラスト${icons}＋項目${cardArt}・こんなときに${situations}） / 電話${tels.size}件・限度額3件・期限${data.deadlines.length}件を紙面と一致 / 未定${pendingTitles.length}件を未定として表示 / 導線${inbound.length}ページ OK`);
+console.log(`宇土市 災害臨時号vol.1: 章${data.sections.length}（イラスト${icons}＋項目${cardArt}・こんなときに${situations}） / 電話${tels.size}件・限度額3件・期限${data.deadlines.length}件を紙面と一致 / 未定${pendingTitles.length}件を未定として表示 / 章の色${sectionTones.length}色 / 導線${inbound.length}ページ OK`);
