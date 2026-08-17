@@ -1,18 +1,18 @@
 # 暮らしの再建 運用ステータス
 
 - 状態: **ACTION_REQUIRED**
-- 生成: 2026-08-17T10:17:28.382Z
+- 生成: 2026-08-17T13:29:21.937Z
 - sitePhase: **emergency**
-- 収集: 672件 / 分類 549件 / 表示候補 457件
+- 収集: 672件 / 分類 549件 / 表示候補 455件
 - fallback: 21/21
 - 未分類: 96件
-- low confidence: 92件
+- low confidence: 94件
 - manual override: 0件
 - 鮮度（公式ナビ）: fresh
 - 鮮度（厳密制度）: fresh
 - 厳密制度source変更: 5件（変更時は needs_review）
 - ACTION_REQUIRED: 5件
-- WARNING: 14件
+- WARNING: 11件
 
 ## ACTION_REQUIRED
 - STRICT_SOURCE_CHANGED: 内閣府防災担当からの各都道府県等への通知等
@@ -22,7 +22,6 @@
 - STRICT_SOURCE_CHANGED: 令和8年熊本地震被害に関する「すまいの相談窓口」の開設について
 
 ## WARNING
-- RETRIEVAL_ISSUE
 - HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE
 - HTTP_404_CANDIDATE
@@ -31,8 +30,6 @@
 - RETRIEVAL_ISSUE
 - HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE
-- RETRIEVAL_ISSUE
-- HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE
 - HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE

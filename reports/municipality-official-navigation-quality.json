@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-08-17T10:00:54.830Z",
+  "generatedAt": "2026-08-17T13:10:36.771Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 672,
-  "displayCandidateCount": 457,
+  "displayCandidateCount": 455,
   "classifiedPageCount": 549,
   "categoryReport": {
     "home": {
-      "total": 130,
+      "total": 131,
       "high": 53,
       "medium": 39,
-      "low": 38
+      "low": 39
     },
     "money": {
-      "total": 133,
+      "total": 135,
       "high": 19,
       "medium": 38,
-      "low": 76
+      "low": 78
     },
     "documents": {
       "total": 127,
-      "high": 32,
-      "medium": 29,
+      "high": 33,
+      "medium": 28,
       "low": 66
     },
     "health_care": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 190,
+      "total": 188,
       "high": 57,
-      "medium": 129,
+      "medium": 127,
       "low": 4
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 128,
-      "displayCandidates": 96,
+      "classified": 126,
+      "displayCandidates": 94,
       "fallback": true
     },
     "municipality_minamata": {
@@ -83,7 +83,7 @@
     },
     "municipality_uto": {
       "classified": 48,
-      "displayCandidates": 41,
+      "displayCandidates": 40,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 63,
-      "displayCandidates": 58,
+      "classified": 64,
+      "displayCandidates": 59,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -142,7 +142,7 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 25,
+      "classified": 26,
       "displayCandidates": 22,
       "fallback": true
     },
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 198,
-    "medium": 259,
-    "low": 92
+    "high": 199,
+    "medium": 256,
+    "low": 94
   },
   "unclassifiedCount": 96,
   "unclassifiedItems": [
@@ -361,18 +361,8 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "令和８年熊本地震により被災した合併処理浄化槽の補助制度",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00324966/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html"
     },
     {
       "municipalityName": "八代市",
@@ -383,6 +373,16 @@
       "municipalityName": "八代市",
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html"
     },
     {
       "municipalityName": "山鹿市",
@@ -656,13 +656,8 @@
     "non_official_url": 1,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 14,
+  "warningCount": 11,
   "warnings": [
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kumamoto",
-      "count": 5
-    },
     {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_yatsushiro",
@@ -717,18 +712,8 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_mashiki",
       "count": 1
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_kosa",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kosa",
-      "count": 1
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 552
+  "previousClassifiedPageCount": 549
 }
