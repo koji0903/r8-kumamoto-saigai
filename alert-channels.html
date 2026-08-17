@@ -1,0 +1,64 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#1d2925"><meta name="description" content="令和8年熊本地震で、各市町村がお知らせを届けている手段（公式LINE・メール配信・防災行政無線・アプリ）を市町村ごとにまとめています。ホームページに載らない発信を受け取るための案内です"><title>お知らせの受け取り方｜令和8年熊本地震｜よか隊ネット熊本</title><link rel="icon" href="favicon.png" sizes="32x32"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="stylesheet" href="styles.css?v=20260817-3"><link rel="stylesheet" href="design-system.css?v=20260810-1"><link rel="stylesheet" href="org-site.css?v=20260817-16"><link rel="stylesheet" href="official-timeline.css?v=20260817-2"><link rel="stylesheet" href="alert-channels.css?v=20260817-1">
+  <link rel="canonical" href="https://www.yokatainet.jp/alert-channels.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="よか隊ネット熊本　災害・支援状況レポート">
+  <meta property="og:title" content="お知らせの受け取り方">
+  <meta property="og:description" content="令和8年熊本地震で、各市町村がお知らせを届けている手段（公式LINE・メール配信・防災行政無線・アプリ）を市町村ごとにまとめています。ホームページに載らない発信を受け取るための案内です">
+  <meta property="og:url" content="https://www.yokatainet.jp/alert-channels.html">
+  <meta property="og:image" content="https://www.yokatainet.jp/ogp-disaster.png">
+  <meta property="og:image:secure_url" content="https://www.yokatainet.jp/ogp-disaster.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="お知らせの受け取り方｜よか隊ネット熊本　災害・支援状況レポート">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="お知らせの受け取り方">
+  <meta name="twitter:description" content="令和8年熊本地震で、各市町村がお知らせを届けている手段（公式LINE・メール配信・防災行政無線・アプリ）を市町村ごとにまとめています。ホームページに載らない発信を受け取るための案内です">
+  <meta name="twitter:image" content="https://www.yokatainet.jp/ogp-disaster.png">
+</head><body class="organization-site"><a class="skip" href="#main">本文へ移動</a><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">よ</span><span>よか隊ネット熊本<br><b>災害・支援状況レポート</b></span></a><nav aria-label="メインメニュー"><a href="disaster.html">支援情報トップ</a><a href="affected.html">被災された方</a><a href="supporters.html">支援する方</a><a href="municipalities.html">地域・避難所</a><a href="reconstruction.html">暮らしの再建</a><a href="timeline.html">日々の記録</a><a href="meetings.html">議事録</a></nav><span class="updated" id="updated"></span></header><main id="main">
+
+<noscript><div class="noscript-notice"><b>この一覧は JavaScript で表示しています。</b><p>JavaScriptが無効なため一覧を表示できません。お住まいの市町村の公式サイトで「公式LINE」「メール配信」「防災行政無線」をお探しください。</p><a href="municipalities.html">自治体別情報を見る</a></div></noscript>
+
+<section class="subpage-hero">
+  <p class="kicker">HOW TO RECEIVE</p>
+  <h1>お知らせの受け取り方</h1>
+  <p>いま、市町村からのお知らせは公式LINEやメールで届くことが増えています。ホームページには載らない放送内容が、LINEだけで流れていることもあります。お住まいの市町村がどの手段を使っているかを、公式ページで確認したうえでまとめました。</p>
+</section>
+
+<section class="channels-caution">
+  <b>このページで案内しているのは「受け取り方」だけです</b>
+  <p>公式LINEで配信された本文は、友だち登録した方のトーク画面にだけ届きます。第三者が読む手段がないため、このサイトでは配信内容を収集していません。何が配信されたかを知るには、ご自身で友だち追加してください。</p>
+</section>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>お住まいの市町村を選ぶ</h2>
+    <p>市町村ごとに、確認できた受け取り方と、その案内が載っている公式ページを表示します。</p>
+  </div>
+  <label class="channels-select"><span>市町村</span><select id="channelSelect"></select></label>
+  <div id="channelResult" class="channels-result" aria-live="polite"></div>
+</section>
+
+<section class="timeline-section channels-overview-section">
+  <div class="timeline-heading">
+    <h2>21市町村の状況</h2>
+    <p id="channelSummary"></p>
+  </div>
+  <div id="channelOverview" class="channels-overview"></div>
+</section>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>このページの調べ方</h2>
+  </div>
+  <ul id="channelCaveats" class="timeline-caveats"></ul>
+  <div class="timeline-links">
+    <a href="municipalities.html">自治体別の被害状況を見る →</a>
+    <a href="municipality-updates.html">市町村の公式発信を見る →</a>
+    <a href="reconstruction.html">暮らしの再建から探す →</a>
+  </div>
+</section>
+
+</main><footer><div class="brand footer-brand"><span class="brand-mark" aria-hidden="true">よ</span><span>よか隊ネット熊本<br><b>災害・支援状況レポート</b></span></div><p>受け取り方の案内です。配信された内容はこのサイトでは取得していません。</p><a href="municipalities.html">自治体別情報へ</a></footer><script src="data/report-data.js"></script><script src="org-site.js?v=20260817-16"></script><script src="app.js?v=20260817-1"></script><script src="alert-channels.js?v=20260817-1"></script></body></html>
