@@ -27,7 +27,8 @@ const FLEXIBLE = [
   ["uto-waste.css", ".accepted-list"],
   ["uto-waste.css", ".waste-filter"],
   ["org-site.css", ".page-municipality-updates .feed-filter-control fieldset div"],
-  ["styles.css", ".need-grid"]
+  ["styles.css", ".need-grid"],
+  ["uto-bulletin.css", ".waste-facilities"]
 ];
 for (const [file, selector] of FLEXIBLE) {
   const source = css(file);

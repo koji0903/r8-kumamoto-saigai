@@ -136,6 +136,7 @@ jobs:
           node scripts/test-volunteer-centers.mjs
           node scripts/test-reconstruction-coverage.mjs
           node scripts/test-alert-channels.mjs
+          node scripts/test-uto-bulletin.mjs
           node -e 'const r=require("./reports/municipality-official-navigation-quality.json"); console.log(`入力: ${r.inputCount}件 / 分類: ${r.classifiedPageCount}件 / 表示候補: ${r.displayCandidateCount}件 / 未分類: ${r.unclassifiedCount}件 / 除外: ${r.excludedCount}件 / warning: ${r.warningCount}件`); for(const [key,value] of Object.entries(r.categoryReport)) console.log(`${key}: ${value.total}件 (high ${value.high} / medium ${value.medium} / low ${value.low})`); console.log(`21市町村fallback: ${Object.values(r.municipalityReport).filter(x=>x.fallback).length}/21`); if(r.errors.length) process.exit(1);'
           node --check scripts/run-municipality-official-nav-pipeline.mjs
           node --check scripts/validate-municipality-official-nav.mjs
