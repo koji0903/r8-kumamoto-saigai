@@ -49,11 +49,11 @@
 
 /* 電話応答装置 */
 .bulletin-phone{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;align-items:center;padding:22px;border:2px solid var(--ub-blue);border-radius:11px;background:#f3f8fc}
-.bulletin-phone span{display:block;margin-bottom:5px;color:var(--ub-blue);font-size:12.5px;font-weight:900;letter-spacing:.06em}
+.bulletin-phone span{display:block;margin-bottom:5px;color:var(--ub-blue);font-size:13.5px;font-weight:900;letter-spacing:.06em}
 .bulletin-phone b{display:block;font-size:17px;line-height:1.6;color:#123f38}
 .bulletin-phone p{margin:8px 0 0;font-size:14px;line-height:1.8;color:#3f5d55}
 .bulletin-phone-warn{color:#9a3413;font-weight:800}
-.bulletin-note{margin:12px 0 0;font-size:12.5px;line-height:1.8;color:var(--ub-muted)}
+.bulletin-note{margin:12px 0 0;font-size:14px;line-height:1.8;color:var(--ub-muted)}
 
 .bulletin-tel{display:inline-flex;flex-direction:column;justify-content:center;min-height:60px;padding:10px 18px;border:2px solid #145e54;border-radius:9px;background:#145e54;color:#fff;font-size:24px;font-weight:900;text-decoration:none;font-variant-numeric:tabular-nums;letter-spacing:.02em}
 .bulletin-tel small{font-size:11.5px;font-weight:800;letter-spacing:.02em;opacity:.92}
@@ -84,7 +84,7 @@
 .bulletin-facts>div{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:16px;padding:12px 0;border-top:1px solid var(--ub-line)}
 .bulletin-facts>div:last-child{border-bottom:1px solid var(--ub-line)}
 .bulletin-facts dt{color:#1f5448;font-size:14px;font-weight:800;line-height:1.6}
-.bulletin-facts dt small{display:block;margin-top:3px;color:var(--ub-muted);font-size:12.5px;font-weight:700}
+.bulletin-facts dt small{display:block;margin-top:3px;color:var(--ub-muted);font-size:13.5px;font-weight:700}
 .bulletin-facts dd{margin:0;font-size:15.5px;line-height:1.85;color:#33443f}
 .bulletin-amount{font-size:22px;color:#9a3413;font-variant-numeric:tabular-nums}
 
@@ -110,7 +110,7 @@
 .bulletin-inline-contact{margin:14px 0 0!important;display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:14.5px;font-weight:800;color:#1f5448}
 .bulletin-inline-contact small{font-size:13px;font-weight:700;color:var(--ub-muted)}
 .bulletin-contact{margin-top:16px;padding:18px 20px;border:2px solid #cfdeda;border-radius:11px;background:#f4f8f6}
-.bulletin-contact>b{display:block;margin-bottom:4px;font-size:12.5px;font-weight:900;letter-spacing:.06em;color:#1f5448}
+.bulletin-contact>b{display:block;margin-bottom:4px;font-size:13.5px;font-weight:900;letter-spacing:.06em;color:#1f5448}
 .bulletin-contact>p{margin:0 0 12px;font-size:16px;font-weight:800;color:#123f38}
 .bulletin-contact>div{display:flex;flex-wrap:wrap;gap:9px}
 .bulletin-related{display:inline-flex;align-items:center;min-height:44px;margin-top:14px;color:#0d766a;font-size:14px;font-weight:800}
@@ -196,3 +196,37 @@ h3.has-art,b.has-art{display:grid;grid-template-columns:96px minmax(0,1fr);gap:1
 .deadline-item.is-past{border-color:#c3cbc8;background:#f4f5f4;box-shadow:none}
 .deadline-item.is-past .deadline-date{color:#5d6b66}
 .deadline-past-note{margin:10px 0 0!important;padding:11px 14px;border-left:5px solid #5d6b66;border-radius:6px;background:#eef0ef;color:#3c4744!important;font-size:14.5px!important;font-weight:800}
+
+/* 一次情報の節。素のままだと画面いっぱいに小さな文字が並んで読みにくいので、
+   ほかの節と同じ版面に収め、リンクは押せるカードにする */
+.bulletin-sources{padding:0 max(7vw,20px) 56px}
+.bulletin-sources-inner{padding:28px 30px 30px;border:2px solid #cfdeda;border-radius:14px;background:#f4f8f6;box-shadow:6px 6px 0 #e3ece9}
+.bulletin-sources-head{display:grid;grid-template-columns:120px minmax(0,1fr);gap:20px;align-items:center;margin-bottom:24px}
+.bulletin-sources-art{display:grid;place-items:center;width:120px;height:88px;border-radius:11px;background:#fff;border:1.5px solid #dbe6e2}
+.bulletin-sources-art svg{width:100px;height:72px;color:#33443f}
+.bulletin-sources-head h2{margin:0 0 8px!important;color:#123f38!important;font-size:clamp(20px,2.4vw,26px)!important;line-height:1.45}
+.bulletin-sources-head p{margin:0!important;color:#3f544e!important;font-size:15.5px!important;line-height:1.9}
+
+.bulletin-sources-label{margin:0 0 11px!important;padding-left:11px;border-left:5px solid #145e54;color:#123f38!important;font-size:14px!important;font-weight:900;letter-spacing:.06em}
+.bulletin-sources-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-bottom:26px}
+.bulletin-sources-grid a{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px;min-height:88px;padding:16px 18px;border:2px solid #cfdeda;border-radius:10px;background:#fff;color:#123f38;text-decoration:none}
+.bulletin-sources-grid a:hover{border-color:#168174;background:#edf7f4;box-shadow:4px 4px 0 #dceae6}
+.bulletin-sources-grid b{font-size:16px;line-height:1.55}
+.bulletin-sources-grid small{grid-column:1;color:#5d706a;font-size:13px;line-height:1.6}
+.bulletin-sources-grid i{grid-row:1/-1;grid-column:2;color:#0d766a;font-size:19px;font-style:normal;font-weight:900}
+
+.bulletin-sources-related{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+.bulletin-sources-related a{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:56px;padding:13px 17px;border:2px solid #145e54;border-radius:9px;background:#145e54;color:#fff;font-size:15px;font-weight:800;text-decoration:none}
+.bulletin-sources-related a:hover{background:#0f5147;box-shadow:4px 4px 0 #dceae6}
+.bulletin-sources-related i{font-style:normal;font-size:17px}
+
+@media(max-width:760px){
+  .bulletin-sources{padding-inline:16px}
+  .bulletin-sources-inner{padding:20px 17px 22px}
+  .bulletin-sources-head{grid-template-columns:92px minmax(0,1fr);gap:14px;margin-bottom:20px}
+  .bulletin-sources-art{width:92px;height:70px}
+  .bulletin-sources-art svg{width:78px;height:58px}
+  .bulletin-sources-grid,.bulletin-sources-related{grid-template-columns:1fr}
+}
+@media(max-width:430px){.bulletin-sources-head{grid-template-columns:1fr;justify-items:start}}
+@media print{.bulletin-sources-inner{border-color:#999;background:#fff;box-shadow:none}.bulletin-sources-related{display:none}}
