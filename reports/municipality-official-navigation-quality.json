@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-08-17T07:26:21.753Z",
+  "generatedAt": "2026-08-17T10:00:54.830Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 673,
-  "displayCandidateCount": 459,
-  "classifiedPageCount": 552,
+  "inputCount": 672,
+  "displayCandidateCount": 457,
+  "classifiedPageCount": 549,
   "categoryReport": {
     "home": {
       "total": 130,
       "high": 53,
-      "medium": 38,
-      "low": 39
+      "medium": 39,
+      "low": 38
     },
     "money": {
-      "total": 134,
+      "total": 133,
       "high": 19,
-      "medium": 39,
+      "medium": 38,
       "low": 76
     },
     "documents": {
-      "total": 128,
-      "high": 33,
+      "total": 127,
+      "high": 32,
       "medium": 29,
       "low": 66
     },
@@ -31,10 +31,10 @@
       "low": 0
     },
     "family_education": {
-      "total": 80,
+      "total": 79,
       "high": 6,
       "medium": 25,
-      "low": 49
+      "low": 48
     },
     "work_business": {
       "total": 30,
@@ -43,15 +43,15 @@
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 18,
+      "total": 17,
       "high": 7,
-      "medium": 11,
+      "medium": 10,
       "low": 0
     },
     "daily_life": {
       "total": 190,
-      "high": 58,
-      "medium": 128,
+      "high": 57,
+      "medium": 129,
       "low": 4
     }
   },
@@ -77,13 +77,13 @@
       "fallback": true
     },
     "municipality_kikuchi": {
-      "classified": 13,
-      "displayCandidates": 11,
+      "classified": 12,
+      "displayCandidates": 10,
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 47,
-      "displayCandidates": 40,
+      "classified": 48,
+      "displayCandidates": 41,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 66,
-      "displayCandidates": 60,
+      "classified": 63,
+      "displayCandidates": 58,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -102,8 +102,8 @@
       "fallback": true
     },
     "municipality_koshi": {
-      "classified": 10,
-      "displayCandidates": 9,
+      "classified": 9,
+      "displayCandidates": 8,
       "fallback": true
     },
     "municipality_misato": {
@@ -142,8 +142,8 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 24,
-      "displayCandidates": 21,
+      "classified": 25,
+      "displayCandidates": 22,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 200,
+    "high": 198,
     "medium": 259,
-    "low": 93
+    "low": 92
   },
-  "unclassifiedCount": 94,
+  "unclassifiedCount": 96,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -376,6 +376,11 @@
     },
     {
       "municipalityName": "八代市",
+      "title": "熊本地震の影響による昭和運動広場及び郡築八番町運動広場の利用休止について",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326924/index.html"
+    },
+    {
+      "municipalityName": "八代市",
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html"
     },
@@ -408,6 +413,11 @@
       "municipalityName": "宇土市",
       "title": "キーワード「2026」の記事一覧",
       "url": "https://www.city.uto.lg.jp/article/keyword/29211.html"
+    },
+    {
+      "municipalityName": "宇土市",
+      "title": "キーワード「補助金」の記事一覧",
+      "url": "https://www.city.uto.lg.jp/article/keyword/240.html"
     },
     {
       "municipalityName": "宇土市",
@@ -506,7 +516,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年08月17日 令和8年熊本地震（7月28日発生）に関する情報（8月17日13時00分更新）",
+      "title": "2026年08月17日 令和8年熊本地震（7月28日発生）に関する情報（8月17日17時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
@@ -646,8 +656,13 @@
     "non_official_url": 1,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 11,
+  "warningCount": 14,
   "warnings": [
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kumamoto",
+      "count": 5
+    },
     {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_yatsushiro",
@@ -659,11 +674,6 @@
       "count": 2
     },
     {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kikuchi",
-      "count": 1
-    },
-    {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_kamiamakusa",
       "message": "継続回数を確認後に表示除外を判断してください"
@@ -681,7 +691,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 4
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -694,6 +704,11 @@
       "count": 1
     },
     {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kashima",
+      "count": 1
+    },
+    {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_mashiki",
       "message": "継続回数を確認後に表示除外を判断してください"
@@ -701,9 +716,19 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_mashiki",
+      "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_kosa",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kosa",
       "count": 1
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 553
+  "previousClassifiedPageCount": 552
 }
