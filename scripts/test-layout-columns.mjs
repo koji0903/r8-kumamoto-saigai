@@ -88,7 +88,39 @@ for (const selector of [".supporter-needs", ".need-grid", ".section-links", ".co
     `org-site.css: ${selector} はカードの並びなので、器にカードの枠を付けないでください（二重枠になり、枚数が半端なときは空の枠が残ります）`);
 }
 
-// ---- 5. 絶対配置の印の居場所 --------------------------------------------------
+// ---- 5. 重ねて出すパネルは、閉じられること ------------------------------------
+// 避難所の詳細は画面に重ねて出す。ヘッダーより後ろに置くと×ボタンがヘッダーの
+// 下に隠れ、クリックがヘッダーに吸われて開いたら閉じられなくなる。
+const shelterJs = read("shelters.js");
+// 同じセレクタの指定が複数ファイルに散っているので、宣言されている中で
+// 一番大きい値（実際に効く値）どうしを比べる。
+const zOf = selector => {
+  const escaped = selector.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const values = ["styles.css", "org-site.css", "global-modern.css"]
+    .flatMap(file => [...css(file).matchAll(new RegExp(`${escaped}\\{[^}]*z-index:(\\d+)`, "g"))])
+    .map(match => Number(match[1]));
+  return values.length ? Math.max(...values) : null;
+};
+const headerZ = zOf(".site-header");
+const panelZ = zOf(".shelter-detail");
+assert.ok(headerZ != null, "ヘッダーの重なり順が読み取れません");
+assert.ok(panelZ != null, "詳細パネルの重なり順が読み取れません");
+assert.ok(panelZ > headerZ,
+  `詳細パネル(${panelZ})はヘッダー(${headerZ})より前に出す必要があります。後ろだと閉じるボタンが押せません`);
+// 閉じ方は複数用意する（×が見つからなくても行き止まりにしない）
+assert.match(shelterJs, /const closeDetail=/, "閉じる処理が必要です");
+assert.match(shelterJs, /\.detail-close"\)\.onclick=closeDetail/, "×ボタンで閉じる必要があります");
+assert.match(shelterJs, /shelterBackdrop"\)\.onclick=closeDetail/, "背景で閉じる必要があります");
+assert.match(shelterJs, /event\.key==="Escape"/, "Escで閉じる必要があります");
+// 押せる大きさにする
+const closeCss = css("org-site.css").match(/\.detail-close\{[^}]*\}/);
+assert.ok(closeCss, "閉じるボタンの指定が見つかりません");
+for (const axis of ["width", "height"]) {
+  const size = Number(closeCss[0].match(new RegExp(`${axis}:(\\d+)px`))?.[1]);
+  assert.ok(size >= 44, `閉じるボタンの${axis}が${size}pxでは押しにくいです`);
+}
+
+// ---- 6. 絶対配置の印の居場所 --------------------------------------------------
 // チェックマークや番号は position:absolute で置き、本文側は padding で場所を
 // 空けている。あとから padding を一括指定で上書きすると、その余白が消えて印が
 // 文字に重なる（「この日に進んだ対応」の1文字目がチェックの下に隠れていた）。
@@ -109,7 +141,7 @@ for (const file of ["timeline-redesign.css", "org-site.css"]) {
   }
 }
 
-// ---- 6. 暗い帯・白いカードの文字色 -------------------------------------------
+// ---- 7. 暗い帯・白いカードの文字色 -------------------------------------------
 // このサイトは、同じ節に「暗い帯を敷く指定」と「中身を白いカードに変える指定」が
 // 別ファイルで重なっている。片方だけ変えると、白地に白・緑地に緑で文字が丸ごと
 // 消える。実際に「活動前の確認事項」「一次情報を必ず確認」「議事録原本の一覧」
@@ -132,7 +164,7 @@ assert.match(categoriesCss, /button\[aria-pressed="true"\] b\{color:#fff\}/,
 assert.doesNotMatch(categoriesCss, /button\[aria-pressed="true"\] b\{color:var\(--category\)\}/,
   "municipality-categories.css: 件数を分野色にすると塗りつぶしの地色と同じになります");
 
-// ---- 7. 変更した資産のキャッシュバスター --------------------------------------
+// ---- 8. 変更した資産のキャッシュバスター --------------------------------------
 // @import で読むCSSは HTML の ?v= では更新されない。
 const styles = read("styles.css");
 for (const name of ["home-redesign.css", "timeline-redesign.css", "navigation-enhancements.css"]) {
@@ -140,4 +172,4 @@ for (const name of ["home-redesign.css", "timeline-redesign.css", "navigation-en
     `styles.css: ${name} の @import に版が必要です`);
 }
 
-console.log(`レイアウト: 可変列${FLEXIBLE.length}箇所 / 2カラム前提とHTMLの一致 / 列指定の適用幅 / 地色と同色の文字の防止 / 印と文字の重なり / 二重枠の防止 / @importの版 OK`);
+console.log(`レイアウト: 可変列${FLEXIBLE.length}箇所 / 2カラム前提とHTMLの一致 / 列指定の適用幅 / 地色と同色の文字の防止 / 印と文字の重なり / 二重枠の防止 / パネルを閉じられること / @importの版 OK`);

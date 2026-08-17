@@ -387,3 +387,19 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
 /* 出典リンクも白いカードに変わる。暗い帯前提の白文字が残って消えていた */
 .illustrated-site :is(.official-sources,.source-links) a{color:var(--org-deep)}
 .illustrated-site :is(.official-sources,.source-links) a :is(b,span){color:inherit}
+
+/* 避難所の詳細は画面右に重ねて出すパネル。ヘッダー（z-index:100）より下に
+   置いていたため、×ボタンがヘッダーの下に隠れて押せず、開くと閉じられなく
+   なっていた。パネルと背景をヘッダーより前に出す。 */
+.shelter-backdrop{position:fixed;inset:0;z-index:110;background:rgba(15,32,28,.34)}
+.shelter-backdrop[hidden]{display:none}
+/* 広い画面ではパネルの左に一覧が見えている。背景で塞ぐと施設を続けて
+   見比べられなくなるので、画面いっぱいに出る狭い幅でだけ背景を敷く。 */
+@media(min-width:801px){.shelter-backdrop{display:none}}
+.shelter-detail{z-index:120!important}
+.detail-close{display:grid!important;place-items:center;width:44px!important;height:44px!important;right:12px!important;top:12px!important;border:1.5px solid #cfdeda!important;border-radius:50%!important;background:#fff!important;color:#1f5448!important;line-height:1!important}
+.detail-close:hover{border-color:#168174!important;background:#edf7f4!important}
+.detail-close:focus-visible{outline:3px solid #e45e35;outline-offset:2px}
+/* ×に重ならないように見出しの右側を空ける */
+.shelter-detail header{padding-right:56px}
+@media print{.shelter-backdrop,.shelter-detail{display:none!important}}
