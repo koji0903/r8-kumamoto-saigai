@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T13:10:36.771Z",
+  "generatedAt": "2026-08-17T19:01:57.764Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 672,
@@ -7,9 +7,9 @@
   "classifiedPageCount": 549,
   "categoryReport": {
     "home": {
-      "total": 131,
+      "total": 130,
       "high": 53,
-      "medium": 39,
+      "medium": 38,
       "low": 39
     },
     "money": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 188,
-      "high": 57,
-      "medium": 127,
+      "total": 189,
+      "high": 56,
+      "medium": 129,
       "low": 4
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 126,
-      "displayCandidates": 94,
+      "classified": 128,
+      "displayCandidates": 96,
       "fallback": true
     },
     "municipality_minamata": {
@@ -127,8 +127,8 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 22,
-      "displayCandidates": 17,
+      "classified": 20,
+      "displayCandidates": 15,
       "fallback": true
     },
     "municipality_kashima": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 199,
-    "medium": 256,
+    "high": 198,
+    "medium": 257,
     "low": 94
   },
   "unclassifiedCount": 96,
@@ -491,11 +491,6 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "【報道機関の皆さまへ】令和８年熊本地震の取材・撮影について",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181"
-    },
-    {
-      "municipalityName": "宇城市",
       "title": "【宇城市長 末松直洋】被災された市民の皆さまへ",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2612010"
     },
@@ -508,6 +503,11 @@
       "municipalityName": "宇城市",
       "title": "南海トラフ地震臨時情報（巨大地震注意）対応 (PDF 379KB)",
       "url": "https://www.city.uki.kumamoto.jp/resource.php?e=bfde61d7ad88d30131e8a60e7fc5ade6f05151a42d7eaa781e831626cd6348c317f2a69ce0b36766a4b73a35d4621a5a"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "2026年08月16日 【報道機関の皆さまへ】令和８年熊本地震の取材・撮影について",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181"
     },
     {
       "municipalityName": "宇城市",
@@ -656,7 +656,7 @@
     "non_official_url": 1,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 11,
+  "warningCount": 10,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -696,11 +696,6 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_koshi",
-      "count": 1
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kashima",
       "count": 1
     },
     {
