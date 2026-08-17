@@ -80,6 +80,7 @@ jobs:
           node scripts/test-layout-columns.mjs
           node scripts/test-alert-channels.mjs
           node scripts/test-uto-bulletin.mjs
+          node scripts/test-ogp.mjs
           node scripts/test-reconstruction-release-readiness.mjs
 
       - name: JavaScript構文を検査

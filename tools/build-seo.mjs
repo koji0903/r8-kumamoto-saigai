@@ -8,7 +8,18 @@ const origin = "https://www.yokatainet.jp";
 const siteName = "よか隊ネット熊本　災害・支援状況レポート";
 const excluded = new Set(["404.html"]);
 const organizationPages = new Set(["404.html", "index.html", "about.html", "join.html", "contact.html", "privacy.html", "accessibility.html"]);
-const specialImages = new Map([["uto-waste.html", "/ogp-uto-waste.png"]]);
+// ページ専用のOGP画像。python3 tools/build-ogp-images.py で作る。
+// ここに足したら画像も作ること（scripts/test-ogp.mjs が実体を確認する）。
+const specialImages = new Map([
+  ["uto-waste.html", "/ogp-uto-waste.png"],
+  ["uto-bulletin.html", "/ogp-uto-bulletin.png"],
+  ["uto-housing.html", "/ogp-uto-housing.png"],
+  ["alert-channels.html", "/ogp-alert-channels.png"],
+  ["volunteer-centers.html", "/ogp-volunteer-centers.png"],
+  ["official-timeline.html", "/ogp-official-timeline.png"],
+  ["official-water-recovery.html", "/ogp-official-water.png"],
+  ["official-response-tracks.html", "/ogp-official-tracks.png"]
+]);
 const checkOnly = process.argv.includes("--check");
 const stale = [];
 const todayInJapan = new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Tokyo" }).format(new Date());
