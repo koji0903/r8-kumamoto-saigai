@@ -93,6 +93,41 @@ for (const warning of [
   assert.ok(text.includes(warning), `注意書き「${warning}」がページにありません`);
 }
 
+// ---- 足した言葉と、紙面の言葉を混ぜない --------------------------------------
+// 「こんなときに」と絵記号はこちらで付けたもの。紙面の言葉と区別できるよう、
+// 付けたことを1か所で断り、見た目も分ける。
+assert.match(text, /「こんなときに」と絵記号は、探しやすくするためによか隊ネット熊本が付けたもの/,
+  "こちらで足した言葉であることの断りが必要です");
+assert.match(text, /制度の内容・金額・期限・電話番号は紙面のとおりで、書き換えていません/,
+  "紙面の内容を変えていないことの明示が必要です");
+const situations = (html.match(/class="bulletin-situations"/g) || []).length;
+assert.equal(situations, data.sections.length, `「こんなときに」が${situations}件で章の数と合いません`);
+const icons = (html.match(/class="bulletin-icon"/g) || []).length;
+assert.equal(icons, data.sections.length, `絵記号が${icons}件で章の数と合いません`);
+// 絵記号は読み上げの対象にしない
+for (const match of html.matchAll(/<span class="bulletin-icon"([^>]*)>/g)) {
+  assert.match(match[1], /aria-hidden="true"/, "絵記号は aria-hidden にしてください");
+}
+
+// ---- 残り日数は、日付を書き換えずに足したものであること ------------------------
+const script = read("uto-bulletin.js");
+for (const [date] of data.deadlines.map(item => [item.date])) {
+  assert.ok(html.includes(`data-deadline="${date}"`), `期限 ${date} に残り日数の目印がありません`);
+}
+// 過ぎた期限を残っているように見せない
+assert.match(script, /期限を過ぎています/, "期限切れの表示が必要です");
+assert.match(script, /延長されている場合があるため、担当課へご確認ください/, "期限切れのときの案内が必要です");
+assert.match(script, /本日まで/, "当日の表示が必要です");
+// いつ時点の計算かを示す
+assert.match(script, /時点の計算です/, "残り日数がいつ時点かを示す必要があります");
+assert.match(script, /紙面の日付そのものは変えていません/, "日付を変えていないことの明示が必要です");
+// JavaScript が無くても日付は読めること（残り日数だけが増えない）
+for (const deadline of data.deadlines) {
+  const [, month, day] = deadline.date.split("-");
+  assert.ok(text.includes(`${Number(month)}月${Number(day)}日`), `${deadline.label} の日付が本文にありません`);
+}
+assert.ok(!/あと\d+日/.test(html), "残り日数をHTMLに書き込んではいけません（古い日数が残ります）");
+
 // ---- 章 ---------------------------------------------------------------------
 for (const section of data.sections) {
   assert.ok(html.includes(`id="${section.id}"`), `${section.label} の章がありません`);
@@ -104,4 +139,4 @@ const pages = fs.readdirSync(new URL("..", import.meta.url)).filter(file => file
 const inbound = pages.filter(page => page !== "uto-bulletin.html" && read(page).includes('href="uto-bulletin.html'));
 assert.ok(inbound.length >= 2, `他ページからのリンクが${inbound.length}件しかありません`);
 
-console.log(`宇土市 災害臨時号vol.1: 章${data.sections.length} / 電話${tels.size}件・限度額3件・期限${data.deadlines.length}件を紙面と一致 / 未定${pendingTitles.length}件を未定として表示 / 導線${inbound.length}ページ OK`);
+console.log(`宇土市 災害臨時号vol.1: 章${data.sections.length}（絵記号${icons}・こんなときに${situations}） / 電話${tels.size}件・限度額3件・期限${data.deadlines.length}件を紙面と一致 / 未定${pendingTitles.length}件を未定として表示 / 導線${inbound.length}ページ OK`);
