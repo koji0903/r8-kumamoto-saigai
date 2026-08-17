@@ -132,8 +132,8 @@
 /* 市町村公式発信：分類・時系列・絞り込みをゆったり見せる */
 .page-municipality-updates .feed-category-overview{padding:42px 40px 44px;background:#f8fafc}.page-municipality-updates .feed-category-overview>header{align-items:flex-end;margin-bottom:26px}.page-municipality-updates .feed-category-overview>header div span{margin-bottom:8px;font-size:13px;letter-spacing:.08em}.page-municipality-updates .feed-category-overview>header div b{font-size:24px;line-height:1.5}.page-municipality-updates .feed-category-overview>header small{font-size:13px}.page-municipality-updates .feed-category-overview>div{gap:18px}.page-municipality-updates .feed-category-overview button{grid-template-columns:64px minmax(0,1fr) auto;gap:18px;min-height:126px;padding:22px 24px;border-width:2px;border-radius:14px}.page-municipality-updates .feed-category-overview .category-symbol{width:58px;height:58px;min-width:58px;min-height:58px}.page-municipality-updates .feed-category-overview .category-symbol svg{width:27px;height:27px}.page-municipality-updates .feed-category-overview button b{font-size:18px;line-height:1.55}.page-municipality-updates .feed-category-overview button small{margin-top:5px;font-size:13px;line-height:1.6;white-space:normal}.page-municipality-updates .feed-category-overview button strong{padding-left:12px;font-size:30px}.page-municipality-updates .feed-category-overview button strong small{font-size:12px}.page-municipality-updates .feed-category-overview button i{height:5px}
 .page-municipality-updates .feed-period-nav{padding:34px 40px 38px}.page-municipality-updates .feed-period-nav>header{margin-bottom:22px}.page-municipality-updates .feed-period-nav>header span{font-size:23px}.page-municipality-updates .feed-period-nav>header small{font-size:13px}.page-municipality-updates .feed-period-nav>div{gap:16px}.page-municipality-updates .feed-period-nav button{min-height:112px;padding:20px 22px;gap:16px;border-width:2px;border-radius:13px}.page-municipality-updates .feed-period-nav button i{width:42px;height:42px;font-size:14px}.page-municipality-updates .feed-period-nav button b{font-size:18px;line-height:1.5}.page-municipality-updates .feed-period-nav button small{margin-top:5px;font-size:13px;line-height:1.55}.page-municipality-updates .feed-period-nav button strong{font-size:18px}
-.page-municipality-updates .feed-controls{grid-template-columns:minmax(280px,.85fr) minmax(520px,1.75fr);gap:24px;padding:38px 40px 42px;align-items:stretch}.page-municipality-updates .feed-search-control,.page-municipality-updates .feed-filter-control{min-height:230px;padding:26px!important}.page-municipality-updates .feed-search-control>header,.page-municipality-updates .feed-filter-control>header{margin-bottom:24px!important}.page-municipality-updates .feed-search-control header b,.page-municipality-updates .feed-filter-control header b{font-size:19px}.page-municipality-updates .feed-search-control header small,.page-municipality-updates .feed-filter-control header small{font-size:13px}.page-municipality-updates .feed-search-control label>span,.page-municipality-updates .feed-filter-control legend{margin-bottom:9px;font-size:14px}.page-municipality-updates .feed-filter-control fieldset div{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.page-municipality-updates .feed-filter-control fieldset button{justify-content:flex-start;min-height:54px;padding:10px 12px;font-size:14px}.page-municipality-updates .feed-filter-control fieldset button b{margin-left:auto;font-size:11px}.page-municipality-updates .feed-order-control{grid-column:1/-1;flex-direction:row!important;align-items:center!important;justify-content:flex-end!important;gap:14px!important}.page-municipality-updates .feed-order-control>span{font-size:13px!important}.page-municipality-updates .feed-order-control button{min-width:150px;min-height:50px!important;font-size:14px!important}
-@media(max-width:1200px){.page-municipality-updates .feed-controls{grid-template-columns:1fr}.page-municipality-updates .feed-filter-control fieldset div{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.page-municipality-updates .feed-controls{grid-template-columns:minmax(280px,.85fr) minmax(520px,1.75fr);gap:24px;padding:38px 40px 42px;align-items:stretch}.page-municipality-updates .feed-search-control,.page-municipality-updates .feed-filter-control{min-height:230px;padding:26px!important}.page-municipality-updates .feed-search-control>header,.page-municipality-updates .feed-filter-control>header{margin-bottom:24px!important}.page-municipality-updates .feed-search-control header b,.page-municipality-updates .feed-filter-control header b{font-size:19px}.page-municipality-updates .feed-search-control header small,.page-municipality-updates .feed-filter-control header small{font-size:13px}.page-municipality-updates .feed-search-control label>span,.page-municipality-updates .feed-filter-control legend{margin-bottom:9px;font-size:14px}.page-municipality-updates .feed-filter-control fieldset div{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.page-municipality-updates .feed-filter-control fieldset button{justify-content:flex-start;min-height:54px;padding:10px 12px;font-size:14px}.page-municipality-updates .feed-filter-control fieldset button b{margin-left:auto;font-size:11px}.page-municipality-updates .feed-order-control{grid-column:1/-1;flex-direction:row!important;align-items:center!important;justify-content:flex-end!important;gap:14px!important}.page-municipality-updates .feed-order-control>span{font-size:13px!important}.page-municipality-updates .feed-order-control button{min-width:150px;min-height:50px!important;font-size:14px!important}
+@media(max-width:1200px){.page-municipality-updates .feed-controls{grid-template-columns:1fr}}
 @media(max-width:800px){.page-municipality-updates .feed-category-overview{padding:30px 20px 34px}.page-municipality-updates .feed-category-overview>header{display:block;margin-bottom:22px}.page-municipality-updates .feed-category-overview>header small{display:block;margin-top:8px}.page-municipality-updates .feed-category-overview>div{gap:14px}.page-municipality-updates .feed-category-overview button{grid-template-columns:54px minmax(0,1fr) auto;gap:13px;min-height:112px;padding:18px 16px}.page-municipality-updates .feed-category-overview .category-symbol{width:50px;height:50px;min-width:50px;min-height:50px}.page-municipality-updates .feed-category-overview button b{font-size:16px}.page-municipality-updates .feed-category-overview button small{font-size:12px}.page-municipality-updates .feed-category-overview button strong{padding-left:4px;font-size:24px}.page-municipality-updates .feed-period-nav{padding:28px 20px 32px}.page-municipality-updates .feed-period-nav>header{display:block}.page-municipality-updates .feed-period-nav>header small{display:block;margin-top:7px}.page-municipality-updates .feed-period-nav>div{grid-template-columns:1fr;gap:12px}.page-municipality-updates .feed-period-nav button{min-height:104px}.page-municipality-updates .feed-controls{gap:18px;padding:28px 20px 32px}.page-municipality-updates .feed-search-control,.page-municipality-updates .feed-filter-control{min-height:0;padding:22px!important}.page-municipality-updates .feed-filter-control fieldset div{grid-template-columns:1fr 1fr;gap:10px}.page-municipality-updates .feed-filter-control fieldset button{min-height:52px}.page-municipality-updates .feed-order-control{justify-content:stretch!important}.page-municipality-updates .feed-order-control button{flex:1}}
 
 /* 共通ページ案内：淡色背景と淡色文字の競合を解消し、読みやすさを優先 */
@@ -352,3 +352,38 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
 .organization-site .org-mega-records::before{right:120px}
 @media(max-width:1050px) and (min-width:801px){.organization-site .org-mega-records{right:-58px}}
 @media(max-width:800px){.organization-site .org-mega-records{right:auto}}
+
+/* 見出しの色指定が濃い緑固定なので、暗い帯の中では地の色と同じになって
+   完全に見えなくなる（supporters.html「活動前の確認事項」が消えていた） */
+.organization-site :is(.dark,.dark-block,.reconstruction-about) :is(.summary-heading h2,.audience-heading h2,.section-heading h2,.org-section h2){color:#fff}
+
+/* .illustrated-site が .official-shortcut を白いカードに変えているのに、
+   文字色は濃い地の前提のまま白だった。白地に白で見出しと本文が消えていた。 */
+.illustrated-site .official-shortcut :is(h2,p){color:var(--org-deep)}
+.illustrated-site .official-shortcut .kicker{color:#3d6c62}
+
+/* 選択中のボタンは塗りつぶし。件数の色を橙のままにすると地色と近くて読めない
+   （支援分野別・自治体別の「◯件」が消えていた） */
+.illustrated-site :is(.support-picker,.municipality-picker) button.active b{color:#fff}
+/* 選択中は青の塗り。件数の色をそのままにすると地色と同じで消える */
+.modern-site .feed-sidebar button.active b{color:#fff}
+/* 選択中のタブは緑の塗り。ラベルの薄い灰色をそのままにすると読めない */
+.illustrated-site .metric-button.active :is(span,small){color:#dbeae6}
+/* 暗い帯の中でも kicker は薄緑のチップのまま。上流で文字を白にしていると
+   薄緑地に白文字で読めなくなる（「掲載基準と出典」が消えていた） */
+.illustrated-site :is(.dark,.dark-block,.feed-method,.reconstruction-about,.terms-related,.minutes-doc-head) .kicker{color:#0e6e63}
+
+/* ヘッダーの文字を白にする指定に、薄緑チップの状態バッジまで含めていた */
+.illustrated-site .vc-card>header>b{color:#0f5b53!important}
+
+/* 暗い帯の中でも、この見た目では1行1行が白いカードになる。
+   帯が暗いときの白文字指定が残っていて、白地に白で日付と表題が消えていた */
+.illustrated-site :is(.dark,.dark-block) .archive-row{color:var(--org-deep)}
+.illustrated-site :is(.dark,.dark-block) .archive-row span{color:#5d706a}
+/* 議事録原本の見出しは暗い帯の上に直接置く */
+.illustrated-site .minutes-doc-head :is(h2,h3,p,time){color:#fff}
+/* 用語集の関連セクションも暗い帯。見出しの色指定が濃いままで消えていた */
+.illustrated-site .terms-related :is(h2,h3,p:not(.kicker)){color:#fff}
+/* 出典リンクも白いカードに変わる。暗い帯前提の白文字が残って消えていた */
+.illustrated-site :is(.official-sources,.source-links) a{color:var(--org-deep)}
+.illustrated-site :is(.official-sources,.source-links) a :is(b,span){color:inherit}

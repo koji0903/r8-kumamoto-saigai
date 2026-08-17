@@ -77,6 +77,7 @@ jobs:
           node scripts/test-volunteer-centers.mjs
           node scripts/test-site-navigation.mjs
           node scripts/test-reconstruction-coverage.mjs
+          node scripts/test-layout-columns.mjs
           node scripts/test-reconstruction-release-readiness.mjs
 
       - name: JavaScript構文を検査

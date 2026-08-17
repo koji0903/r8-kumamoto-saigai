@@ -72,3 +72,7 @@
   .timeline-links{display:none}
   .tracks-dot,.tracks-diamond{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
+
+/* 節目の行は「発災◯日目 / ◆内容 / 出典」の3つ。2カラムのままだと3つ目が
+   次の行の日付列（80px）に落ちて数文字ごとに折り返される */
+@media(min-width:701px){.tracks-detail-block li>*:not(.tracks-detail-day){grid-column:2}}
