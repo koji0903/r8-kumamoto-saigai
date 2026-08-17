@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-16T21:53:55.176Z",
+  "generatedAt": "2026-08-17T02:16:18.346Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-16T21:37:48.980Z",
-    "inputCount": 657,
-    "classifiedPageCount": 464,
-    "displayCandidateCount": 366,
+    "generatedAt": "2026-08-17T01:58:03.356Z",
+    "inputCount": 648,
+    "classifiedPageCount": 532,
+    "displayCandidateCount": 442,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
-      "unclassifiedCount": 0
+      "inputCount": -9,
+      "classifiedPageCount": 68,
+      "unclassifiedCount": -77
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 15,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -31,13 +31,13 @@
     "municipalityFallbackRate": "21/21",
     "municipalityReport": {
       "municipality_kumamoto": {
-        "classified": 50,
-        "displayCandidates": 36,
+        "classified": 59,
+        "displayCandidates": 47,
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 103,
-        "displayCandidates": 68,
+        "classified": 132,
+        "displayCandidates": 100,
         "fallback": true
       },
       "municipality_minamata": {
@@ -51,43 +51,43 @@
         "fallback": true
       },
       "municipality_kikuchi": {
-        "classified": 10,
-        "displayCandidates": 8,
-        "fallback": true
-      },
-      "municipality_uto": {
-        "classified": 37,
-        "displayCandidates": 30,
-        "fallback": true
-      },
-      "municipality_kamiamakusa": {
-        "classified": 22,
-        "displayCandidates": 19,
-        "fallback": true
-      },
-      "municipality_uki": {
-        "classified": 57,
-        "displayCandidates": 52,
-        "fallback": true
-      },
-      "municipality_amakusa": {
-        "classified": 16,
-        "displayCandidates": 15,
-        "fallback": true
-      },
-      "municipality_koshi": {
-        "classified": 8,
-        "displayCandidates": 7,
-        "fallback": true
-      },
-      "municipality_misato": {
-        "classified": 12,
+        "classified": 13,
         "displayCandidates": 11,
         "fallback": true
       },
+      "municipality_uto": {
+        "classified": 48,
+        "displayCandidates": 40,
+        "fallback": true
+      },
+      "municipality_kamiamakusa": {
+        "classified": 27,
+        "displayCandidates": 25,
+        "fallback": true
+      },
+      "municipality_uki": {
+        "classified": 62,
+        "displayCandidates": 57,
+        "fallback": true
+      },
+      "municipality_amakusa": {
+        "classified": 19,
+        "displayCandidates": 18,
+        "fallback": true
+      },
+      "municipality_koshi": {
+        "classified": 11,
+        "displayCandidates": 10,
+        "fallback": true
+      },
+      "municipality_misato": {
+        "classified": 13,
+        "displayCandidates": 12,
+        "fallback": true
+      },
       "municipality_ozu": {
-        "classified": 9,
-        "displayCandidates": 9,
+        "classified": 10,
+        "displayCandidates": 10,
         "fallback": true
       },
       "municipality_kikuyo": {
@@ -101,28 +101,28 @@
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 17,
-        "displayCandidates": 12,
+        "classified": 22,
+        "displayCandidates": 17,
         "fallback": true
       },
       "municipality_kashima": {
-        "classified": 15,
-        "displayCandidates": 13,
+        "classified": 0,
+        "displayCandidates": 0,
         "fallback": true
       },
       "municipality_mashiki": {
         "classified": 30,
-        "displayCandidates": 25,
+        "displayCandidates": 26,
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 18,
-        "displayCandidates": 16,
+        "classified": 23,
+        "displayCandidates": 20,
         "fallback": true
       },
       "municipality_hikawa": {
-        "classified": 21,
-        "displayCandidates": 15,
+        "classified": 23,
+        "displayCandidates": 18,
         "fallback": true
       },
       "municipality_ashikita": {
@@ -131,67 +131,67 @@
         "fallback": true
       },
       "municipality_tsunagi": {
-        "classified": 1,
-        "displayCandidates": 1,
+        "classified": 2,
+        "displayCandidates": 2,
         "fallback": true
       }
     },
     "categoryReport": {
       "home": {
-        "total": 110,
-        "high": 45,
-        "medium": 25,
-        "low": 40
+        "total": 124,
+        "high": 51,
+        "medium": 35,
+        "low": 38
       },
       "money": {
-        "total": 122,
-        "high": 17,
-        "medium": 30,
-        "low": 75
+        "total": 132,
+        "high": 19,
+        "medium": 37,
+        "low": 76
       },
       "documents": {
-        "total": 107,
-        "high": 33,
-        "medium": 14,
+        "total": 122,
+        "high": 32,
+        "medium": 30,
         "low": 60
       },
       "health_care": {
-        "total": 28,
-        "high": 15,
-        "medium": 13,
+        "total": 41,
+        "high": 17,
+        "medium": 24,
         "low": 0
       },
       "family_education": {
-        "total": 74,
-        "high": 4,
-        "medium": 23,
-        "low": 47
+        "total": 76,
+        "high": 6,
+        "medium": 24,
+        "low": 46
       },
       "work_business": {
-        "total": 24,
-        "high": 7,
-        "medium": 17,
+        "total": 28,
+        "high": 9,
+        "medium": 19,
         "low": 0
       },
       "agriculture_fishery": {
-        "total": 15,
-        "high": 6,
-        "medium": 9,
+        "total": 17,
+        "high": 7,
+        "medium": 10,
         "low": 0
       },
       "daily_life": {
-        "total": 149,
-        "high": 39,
-        "medium": 106,
+        "total": 177,
+        "high": 54,
+        "medium": 119,
         "low": 4
       }
     },
     "confidence": {
-      "high": 165,
-      "medium": 201,
-      "low": 98
+      "high": 193,
+      "medium": 249,
+      "low": 90
     },
-    "unclassifiedCount": 166,
+    "unclassifiedCount": 89,
     "excludedCount": 28,
     "overrideCount": 0
   },
@@ -214,7 +214,7 @@
         "title": "【令和8年熊本地震】被災した住宅の応急修理について",
         "url": "https://www.pref.kumamoto.jp/soshiki/27/275109.html",
         "previousHash": "sha256:b35977e35e937bbd53b09f435851c2bef9b8d6003567ca2ef70ba188f1da13e8",
-        "currentHash": "sha256:6a3c1aac75e075983d59cf0a2dccb3d26f2102df1d4e2d4b6f4ffa74a98de983",
+        "currentHash": "sha256:e839dfce52df6fe251f85d98490d41c16c0191b78a05c3a8e978ed7a1bb693e4",
         "verificationStatus": "needs_review"
       }
     },
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:e92d3e59cd0a75fc498e41b79b7f41ac9e3e9e409d971afdc7e6588d1f145faa",
+        "currentHash": "sha256:6456859a58b4686384bbd143dad29a0ddc40e6afd50def3505cd4dec2188d6fe",
         "verificationStatus": "needs_review"
       }
     },
@@ -276,41 +276,37 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
+      "count": 3
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_koshi",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_koshi",
+      "count": 1
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kashima",
+      "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_mashiki",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_mashiki",
+      "count": 1
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kosa",
       "count": 2
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_koshi",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_koshi",
-      "count": 1
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_mashiki",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_mashiki",
-      "count": 1
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_hikawa",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_hikawa",
-      "count": 1
-    },
-    {
-      "code": "UNCLASSIFIED_INCREASE",
-      "count": 166
     }
   ],
   "strictSources": {
@@ -330,7 +326,7 @@
         "title": "【令和8年熊本地震】被災した住宅の応急修理について",
         "url": "https://www.pref.kumamoto.jp/soshiki/27/275109.html",
         "previousHash": "sha256:b35977e35e937bbd53b09f435851c2bef9b8d6003567ca2ef70ba188f1da13e8",
-        "currentHash": "sha256:6a3c1aac75e075983d59cf0a2dccb3d26f2102df1d4e2d4b6f4ffa74a98de983",
+        "currentHash": "sha256:e839dfce52df6fe251f85d98490d41c16c0191b78a05c3a8e978ed7a1bb693e4",
         "verificationStatus": "needs_review"
       },
       {
@@ -338,7 +334,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:e92d3e59cd0a75fc498e41b79b7f41ac9e3e9e409d971afdc7e6588d1f145faa",
+        "currentHash": "sha256:6456859a58b4686384bbd143dad29a0ddc40e6afd50def3505cd4dec2188d6fe",
         "verificationStatus": "needs_review"
       },
       {
