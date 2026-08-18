@@ -114,10 +114,13 @@ for (const municipality of nav.municipalities || []) {
 publications.sort((a, b) => a.date.localeCompare(b.date));
 
 // ---- 会議記録：統計に表れない水の問題 ---------------------------------------
-const MINUTE_PATTERN = /井戸|濁り|生活用水|水道未契約|時間通水|試験通水|減圧/;
+const MINUTE_PATTERN = /井戸|濁り|生活用水|水道未契約|時間通水|試験通水|減圧|行水|給水タンク/;
 const minuteNotes = [];
 for (const meeting of minutes.meetings || []) {
   for (const section of meeting.sections || []) {
+    // 県報告の節は統計そのもの。ここで拾うのは統計が数えていない状態なので除く
+    // （毎回ほぼ同じ「試験通水実施中」が上位を占めて、現場の報告を押し出す）
+    if (section.key === "pref") continue;
     for (const group of section.groups || []) {
       for (const item of group.items || []) {
         if (!MINUTE_PATTERN.test(item.text || "")) continue;
