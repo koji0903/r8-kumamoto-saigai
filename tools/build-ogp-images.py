@@ -73,6 +73,12 @@ ART = {
                  '<circle fill="#fb923c" stroke="#c2410c" cx="90" cy="26" r="10"/>'
                  '<path fill="#fb923c" stroke="#c2410c" d="M76 76V58c0-8 6-14 14-14s14 6 14 14v18z"/>'
                  '<path fill="#fde047" stroke="#a16207" d="M50 58h20v18H50z"/><path d="M50 65h20M60 58v7"/>',
+    # 会議資料＝紙と数字。棒は資料に並ぶ数字の推移を表す
+    "hq": '<path fill="#cbd5e1" stroke="#475569" d="M16 10h60v62H16z"/><path d="M26 22h40M26 32h28"/>'
+          '<path fill="#93c5fd" stroke="#1d4ed8" d="M28 66V46h10v20z"/>'
+          '<path fill="#2dd4bf" stroke="#0f766e" d="M44 66V38h10v28z"/>'
+          '<path fill="#fb923c" stroke="#c2410c" d="M60 66V52h10v14z"/>'
+          '<path fill="#fde047" stroke="#a16207" d="M86 24h22v48H86z"/><path d="M92 36h10M92 48h10M92 60h6"/>',
     "housing": '<path fill="#cbd5e1" stroke="#475569" d="m18 42 34-26 34 26"/><path d="M26 40v34h52V40"/>'
                '<path fill="#93c5fd" stroke="#1d4ed8" d="M52 14 92 44l-9 7-31-24-31 24-9-7Z"/>'
                '<path fill="#fb923c" stroke="#c2410c" d="M44 74V56h16v18"/>'
@@ -108,6 +114,14 @@ PAGES = [
          label="宇土市",
          title="住まいの相談・再建支援",
          lead="応急修理・みなし仮設・公費解体など、住まいの再建に関する宇土市の公式情報への入口です。"),
+    dict(file="hq-kumamoto.html", out="ogp-hq-kumamoto.png", tone="pink", art="hq",
+         label="熊本市",
+         title="災害対策本部会議/のまとめ",
+         lead="第1回から公開されている会議資料を並べ、避難者数・住家被害・り災証明の推移を追えるようにしました。"),
+    dict(file="hq-yatsushiro.html", out="ogp-hq-yatsushiro.png", tone="green", art="hq",
+         label="八代市",
+         title="災害対策本部会議/のまとめ",
+         lead="第2回から公開されている会議資料を並べ、避難者数と住家被害の内訳の動きを追えるようにしました。"),
 ]
 
 

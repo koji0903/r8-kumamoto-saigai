@@ -64,7 +64,8 @@ for (const page of pages) {
 const builder = read("tools/build-seo.mjs");
 const generator = read("tools/build-ogp-images.py");
 const DEDICATED = ["uto-waste.html", "uto-bulletin.html", "uto-housing.html", "alert-channels.html",
-  "volunteer-centers.html", "official-timeline.html", "official-water-recovery.html", "official-response-tracks.html"];
+  "volunteer-centers.html", "official-timeline.html", "official-water-recovery.html", "official-response-tracks.html",
+  "hq-kumamoto.html", "hq-yatsushiro.html"];
 for (const page of DEDICATED) {
   const file = used.get(page);
   assert.ok(file, `${page} が見つかりません`);

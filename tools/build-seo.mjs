@@ -18,7 +18,9 @@ const specialImages = new Map([
   ["volunteer-centers.html", "/ogp-volunteer-centers.png"],
   ["official-timeline.html", "/ogp-official-timeline.png"],
   ["official-water-recovery.html", "/ogp-official-water.png"],
-  ["official-response-tracks.html", "/ogp-official-tracks.png"]
+  ["official-response-tracks.html", "/ogp-official-tracks.png"],
+  ["hq-kumamoto.html", "/ogp-hq-kumamoto.png"],
+  ["hq-yatsushiro.html", "/ogp-hq-yatsushiro.png"]
 ]);
 const checkOnly = process.argv.includes("--check");
 const stale = [];

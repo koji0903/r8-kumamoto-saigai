@@ -58,6 +58,11 @@ jobs:
           node tools/fetch-hq.mjs
           python tools/build-hq-damage.py
 
+      - name: 市町村の災害対策本部会議資料を更新
+        run: |
+          node tools/fetch-municipality-hq.mjs
+          python tools/build-municipality-hq.py
+
       - name: 市町村公式発信を更新
         run: node tools/fetch-municipality-updates.mjs
 
@@ -117,6 +122,7 @@ jobs:
           node tools/check-data.mjs
           node --check app.js
           node --check tools/fetch-hq.mjs
+          node --check tools/fetch-municipality-hq.mjs
           node --check tools/fetch-municipality-updates.mjs
           node --check tools/fetch-official-topics.mjs
           node --check tools/fetch-volunteer-centers.mjs
@@ -138,6 +144,7 @@ jobs:
           node scripts/test-alert-channels.mjs
           node scripts/test-uto-bulletin.mjs
           node scripts/test-ogp.mjs
+          node scripts/test-municipality-hq.mjs
           node -e 'const r=require("./reports/municipality-official-navigation-quality.json"); console.log(`入力: ${r.inputCount}件 / 分類: ${r.classifiedPageCount}件 / 表示候補: ${r.displayCandidateCount}件 / 未分類: ${r.unclassifiedCount}件 / 除外: ${r.excludedCount}件 / warning: ${r.warningCount}件`); for(const [key,value] of Object.entries(r.categoryReport)) console.log(`${key}: ${value.total}件 (high ${value.high} / medium ${value.medium} / low ${value.low})`); console.log(`21市町村fallback: ${Object.values(r.municipalityReport).filter(x=>x.fallback).length}/21`); if(r.errors.length) process.exit(1);'
           node --check scripts/run-municipality-official-nav-pipeline.mjs
           node --check scripts/validate-municipality-official-nav.mjs
@@ -173,12 +180,15 @@ jobs:
             data/generated/hq-damage-data.js \
             data/generated/hq-index.js \
             data/generated/hq-latest.js \
+            data/generated/municipality-hq-data.js \
             data/generated/municipality-updates.js \
             data/generated/official-topics.js \
             data/generated/volunteer-center-updates.js \
             data/generated/shelters-data.js \
             sources/official/hq-damage \
             sources/official/hq-index.json \
+            sources/official/municipality-hq-index.json \
+            sources/official/municipality-hq-text \
             sources/official/municipalities/municipality-updates.json \
             sources/official/topics/latest-topics.json \
             sources/official/volunteer-centers/volunteer-center-updates.json \

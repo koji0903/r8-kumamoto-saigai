@@ -1,0 +1,30 @@
+{
+  "note": "市町村が公開している災害対策本部会議資料の一覧ページ。ここに足せば tools/fetch-municipality-hq.mjs が拾う。市町村がページを作ったら追記すること。",
+  "disasterDate": "2026-07-28",
+  "municipalities": [
+    {
+      "key": "kumamoto",
+      "name": "熊本市",
+      "page": "hq-kumamoto.html",
+      "indexUrl": "https://www.city.kumamoto.jp/kiji00372080/index.html",
+      "indexTitle": "【報道資料】熊本市災害対策本部会議資料",
+      "origin": "https://www.city.kumamoto.jp",
+      "department": "熊本市 災害対策本部",
+      "documentKind": "会議資料",
+      "note": "一覧ページに会議ごとの本文（支援団体・被害の状況・避難所開設状況・その他）が載っている。数値はそこから読む。PDFは資料本体で、市の公開URLへリンクするだけで手元には落とさない。",
+      "source": "html"
+    },
+    {
+      "key": "yatsushiro",
+      "name": "八代市",
+      "page": "hq-yatsushiro.html",
+      "indexUrl": "https://www.city.yatsushiro.lg.jp/kiji00326750/index.html",
+      "indexTitle": "令和8年熊本地震　関連情報",
+      "origin": "https://www.city.yatsushiro.lg.jp",
+      "department": "八代市",
+      "documentKind": "会議資料",
+      "note": "一覧ページはPDFのリンクだけ。数値は資料PDFの「現在の状況等」から読む。第1回は資料の公開がない。",
+      "source": "pdf"
+    }
+  ]
+}

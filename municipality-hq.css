@@ -1,0 +1,92 @@
+/* 市町村の災害対策本部会議のまとめ（hq-kumamoto.html / hq-yatsushiro.html） */
+
+.page-municipality-hq main {
+  --hq-ink: #123f38;
+  --hq-muted: #46605a;
+  --hq-line: #d8e2df;
+  --hq-wash: #f2f7f5;
+  --hq-accent: #0f766e;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+.hq-hero { padding: 40px 0 28px; }
+.hq-hero .kicker { color: var(--hq-accent); letter-spacing: .12em; font-size: 13px; font-weight: 700; margin: 0 0 10px; }
+.hq-hero h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.25; margin: 0 0 14px; color: var(--hq-ink); }
+.hq-hero > p { font-size: 17px; line-height: 1.85; color: var(--hq-muted); max-width: 46em; margin: 0; }
+
+.hq-range { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 24px 0 0; }
+.hq-range div { background: var(--hq-wash); border: 1px solid var(--hq-line); border-radius: 12px; padding: 14px 16px; }
+.hq-range b { display: block; font-size: 22px; color: var(--hq-ink); line-height: 1.3; }
+.hq-range span { display: block; font-size: 13px; color: var(--hq-muted); margin-top: 4px; }
+
+.hq-source { border: 2px solid var(--hq-accent); border-radius: 14px; padding: 20px 22px; margin: 28px 0 0; background: #fff; }
+.hq-source b { display: block; font-size: 16px; color: var(--hq-accent); margin-bottom: 8px; }
+.hq-source p { margin: 0 0 12px; font-size: 15px; line-height: 1.8; color: var(--hq-ink); }
+/* 指で押せる大きさ（44px）を確保する。ここは一次情報への入口なので特に */
+.hq-source a { display: inline-flex; align-items: center; min-height: 44px; margin: 0 16px 4px 0; font-weight: 700; color: var(--hq-accent); }
+
+.hq-section { margin: 52px 0 0; }
+.hq-section > h2 { font-size: clamp(21px, 2.6vw, 27px); color: var(--hq-ink); margin: 0 0 8px; }
+.hq-section > p.hq-section-lead { margin: 0 0 20px; color: var(--hq-muted); font-size: 15px; line-height: 1.8; }
+
+.hq-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.hq-metric { border: 1px solid var(--hq-line); border-radius: 14px; padding: 18px; background: #fff; }
+.hq-metric.is-lead { background: var(--hq-wash); border-color: #b9d3cc; }
+.hq-metric h3 { font-size: 15px; margin: 0 0 10px; color: var(--hq-ink); }
+.hq-metric-latest { margin: 0; display: flex; align-items: baseline; gap: 4px; }
+.hq-metric-latest b { font-size: 32px; line-height: 1.1; color: var(--hq-ink); font-variant-numeric: tabular-nums; }
+.hq-metric-latest small { font-size: 14px; color: var(--hq-muted); }
+.hq-metric-when { margin: 4px 0 12px; font-size: 13px; color: var(--hq-muted); }
+
+.hq-spark { display: flex; align-items: flex-end; gap: 2px; height: 54px; margin: 0 0 12px; }
+.hq-spark span { flex: 1 1 0; min-width: 3px; background: var(--hq-accent); opacity: .55; border-radius: 2px 2px 0 0; }
+.hq-spark span:last-child { opacity: 1; }
+
+.hq-metric-range { display: flex; flex-wrap: wrap; gap: 14px; margin: 0; font-size: 13px; }
+.hq-metric-range dt { color: var(--hq-muted); margin: 0 0 2px; }
+.hq-metric-range dd { margin: 0; color: var(--hq-ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.hq-metric-range dd small { font-weight: 400; color: var(--hq-muted); }
+.hq-metric-note { margin: 12px 0 0; font-size: 13px; line-height: 1.7; color: var(--hq-muted); border-top: 1px solid var(--hq-line); padding-top: 10px; }
+
+.hq-findings { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.hq-findings li { border-left: 4px solid var(--hq-accent); background: var(--hq-wash); border-radius: 0 10px 10px 0; padding: 14px 18px; font-size: 15px; line-height: 1.85; color: var(--hq-ink); }
+
+.hq-records { display: grid; gap: 10px; }
+.hq-record { border: 1px solid var(--hq-line); border-radius: 12px; background: #fff; }
+.hq-record > summary { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; padding: 16px 18px; cursor: pointer; min-height: 44px; }
+.hq-record > summary::-webkit-details-marker { display: none; }
+.hq-record > summary b { font-size: 17px; color: var(--hq-ink); }
+.hq-record > summary span { font-size: 15px; color: var(--hq-ink); }
+.hq-record > summary i { font-style: normal; font-size: 13px; color: var(--hq-muted); }
+.hq-record[open] > summary { border-bottom: 1px solid var(--hq-line); }
+.hq-record-body { padding: 18px; }
+.hq-record-venue { margin: 0 0 14px; font-size: 14px; color: var(--hq-muted); }
+
+.hq-record-figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 0 0 18px; }
+.hq-record-figures > div { background: var(--hq-wash); border-radius: 10px; padding: 10px 12px; }
+.hq-record-figures dt { font-size: 12px; color: var(--hq-muted); margin-bottom: 2px; }
+.hq-record-figures dd { margin: 0; font-size: 19px; font-weight: 700; color: var(--hq-ink); font-variant-numeric: tabular-nums; }
+.hq-record-figures dd small { font-size: 12px; font-weight: 400; color: var(--hq-muted); margin-left: 2px; }
+
+.hq-record-section { margin: 0 0 16px; }
+.hq-record-section h4 { font-size: 15px; color: var(--hq-accent); margin: 0 0 6px; }
+.hq-record-section p { margin: 0; font-size: 15px; line-height: 1.9; color: var(--hq-ink); }
+.hq-record-empty, .hq-record-page { font-size: 13px; color: var(--hq-muted); margin: 0 0 12px; }
+.hq-record-links { margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 14px; }
+.hq-record-links a { font-size: 14px; font-weight: 700; color: var(--hq-accent); min-height: 44px; display: inline-flex; align-items: center; }
+
+.hq-method { margin: 0; padding: 0 0 0 20px; }
+.hq-method li { font-size: 14px; line-height: 1.9; color: var(--hq-muted); margin-bottom: 6px; }
+
+.hq-other { margin: 44px 0 0; border-top: 1px solid var(--hq-line); padding-top: 20px; }
+.hq-other b { display: block; font-size: 15px; color: var(--hq-ink); margin-bottom: 8px; }
+.hq-other a { display: inline-block; margin-right: 18px; font-weight: 700; color: var(--hq-accent); min-height: 44px; line-height: 44px; }
+
+.hq-empty { border: 1px dashed var(--hq-line); border-radius: 12px; padding: 20px; color: var(--hq-muted); }
+
+@media (max-width: 640px) {
+  .hq-hero { padding-top: 28px; }
+  .hq-metric-latest b { font-size: 28px; }
+}
