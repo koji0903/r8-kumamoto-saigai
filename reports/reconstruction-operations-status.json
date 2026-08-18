@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-18T10:08:38.535Z",
+  "generatedAt": "2026-08-18T13:30:41.669Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-18T09:52:06.607Z",
-    "inputCount": 687,
-    "classifiedPageCount": 560,
-    "displayCandidateCount": 462,
+    "generatedAt": "2026-08-18T13:12:20.024Z",
+    "inputCount": 683,
+    "classifiedPageCount": 556,
+    "displayCandidateCount": 458,
     "deltaFromPrevious": {
-      "inputCount": 9,
-      "classifiedPageCount": 7,
-      "unclassifiedCount": 2
+      "inputCount": -4,
+      "classifiedPageCount": -4,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 6,
+      "ageHours": 9,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 129,
-        "displayCandidates": 95,
+        "classified": 127,
+        "displayCandidates": 93,
         "fallback": true
       },
       "municipality_minamata": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 64,
-        "displayCandidates": 59,
+        "classified": 62,
+        "displayCandidates": 57,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,10 +138,10 @@
     },
     "categoryReport": {
       "home": {
-        "total": 130,
-        "high": 54,
-        "medium": 38,
-        "low": 38
+        "total": 126,
+        "high": 52,
+        "medium": 37,
+        "low": 37
       },
       "money": {
         "total": 144,
@@ -150,10 +150,10 @@
         "low": 83
       },
       "documents": {
-        "total": 126,
-        "high": 33,
+        "total": 122,
+        "high": 32,
         "medium": 27,
-        "low": 66
+        "low": 63
       },
       "health_care": {
         "total": 40,
@@ -187,8 +187,8 @@
       }
     },
     "confidence": {
-      "high": 203,
-      "medium": 259,
+      "high": 200,
+      "medium": 258,
       "low": 98
     },
     "unclassifiedCount": 100,
@@ -261,7 +261,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -281,7 +281,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 3
+      "count": 5
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -311,7 +311,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 3
+      "count": 2
     }
   ],
   "strictSources": {
