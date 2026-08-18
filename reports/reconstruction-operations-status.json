@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-17T19:20:12.032Z",
+  "generatedAt": "2026-08-18T02:11:34.741Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-17T19:01:57.764Z",
-    "inputCount": 672,
-    "classifiedPageCount": 549,
-    "displayCandidateCount": 455,
+    "generatedAt": "2026-08-18T01:53:53.689Z",
+    "inputCount": 666,
+    "classifiedPageCount": 544,
+    "displayCandidateCount": 448,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
-      "unclassifiedCount": 0
+      "inputCount": -6,
+      "classifiedPageCount": -5,
+      "unclassifiedCount": -1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 9,
+      "ageHours": 16,
       "limitHours": 336
     }
   },
@@ -31,13 +31,13 @@
     "municipalityFallbackRate": "21/21",
     "municipalityReport": {
       "municipality_kumamoto": {
-        "classified": 59,
-        "displayCandidates": 47,
+        "classified": 54,
+        "displayCandidates": 42,
         "fallback": true
       },
       "municipality_yatsushiro": {
         "classified": 128,
-        "displayCandidates": 96,
+        "displayCandidates": 95,
         "fallback": true
       },
       "municipality_minamata": {
@@ -62,12 +62,12 @@
       },
       "municipality_kamiamakusa": {
         "classified": 29,
-        "displayCandidates": 26,
+        "displayCandidates": 25,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 64,
-        "displayCandidates": 59,
+        "classified": 63,
+        "displayCandidates": 58,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -101,8 +101,8 @@
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 20,
-        "displayCandidates": 15,
+        "classified": 21,
+        "displayCandidates": 16,
         "fallback": true
       },
       "municipality_kashima": {
@@ -140,37 +140,37 @@
       "home": {
         "total": 130,
         "high": 53,
-        "medium": 38,
-        "low": 39
+        "medium": 39,
+        "low": 38
       },
       "money": {
-        "total": 135,
+        "total": 136,
         "high": 19,
         "medium": 38,
-        "low": 78
+        "low": 79
       },
       "documents": {
         "total": 127,
-        "high": 33,
+        "high": 32,
         "medium": 28,
-        "low": 66
+        "low": 67
       },
       "health_care": {
-        "total": 36,
-        "high": 16,
-        "medium": 20,
+        "total": 35,
+        "high": 17,
+        "medium": 18,
         "low": 0
       },
       "family_education": {
-        "total": 79,
+        "total": 78,
         "high": 6,
-        "medium": 25,
+        "medium": 24,
         "low": 48
       },
       "work_business": {
-        "total": 30,
+        "total": 29,
         "high": 10,
-        "medium": 20,
+        "medium": 19,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,18 +180,18 @@
         "low": 0
       },
       "daily_life": {
-        "total": 189,
-        "high": 56,
-        "medium": 129,
+        "total": 184,
+        "high": 54,
+        "medium": 126,
         "low": 4
       }
     },
     "confidence": {
-      "high": 198,
-      "medium": 257,
-      "low": 94
+      "high": 196,
+      "medium": 252,
+      "low": 96
     },
-    "unclassifiedCount": 96,
+    "unclassifiedCount": 95,
     "excludedCount": 28,
     "overrideCount": 0
   },
@@ -254,6 +254,11 @@
   ],
   "warnings": [
     {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kumamoto",
+      "count": 1
+    },
+    {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_yatsushiro",
       "message": "継続回数を確認後に表示除外を判断してください"
@@ -271,7 +276,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 1
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",

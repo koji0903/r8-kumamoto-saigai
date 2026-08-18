@@ -1,45 +1,45 @@
 {
-  "generatedAt": "2026-08-17T19:01:57.764Z",
+  "generatedAt": "2026-08-18T01:53:53.689Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 672,
-  "displayCandidateCount": 455,
-  "classifiedPageCount": 549,
+  "inputCount": 666,
+  "displayCandidateCount": 448,
+  "classifiedPageCount": 544,
   "categoryReport": {
     "home": {
       "total": 130,
       "high": 53,
-      "medium": 38,
-      "low": 39
+      "medium": 39,
+      "low": 38
     },
     "money": {
-      "total": 135,
+      "total": 136,
       "high": 19,
       "medium": 38,
-      "low": 78
+      "low": 79
     },
     "documents": {
       "total": 127,
-      "high": 33,
+      "high": 32,
       "medium": 28,
-      "low": 66
+      "low": 67
     },
     "health_care": {
-      "total": 36,
-      "high": 16,
-      "medium": 20,
+      "total": 35,
+      "high": 17,
+      "medium": 18,
       "low": 0
     },
     "family_education": {
-      "total": 79,
+      "total": 78,
       "high": 6,
-      "medium": 25,
+      "medium": 24,
       "low": 48
     },
     "work_business": {
-      "total": 30,
+      "total": 29,
       "high": 10,
-      "medium": 20,
+      "medium": 19,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,21 +49,21 @@
       "low": 0
     },
     "daily_life": {
-      "total": 189,
-      "high": 56,
-      "medium": 129,
+      "total": 184,
+      "high": 54,
+      "medium": 126,
       "low": 4
     }
   },
   "municipalityReport": {
     "municipality_kumamoto": {
-      "classified": 59,
-      "displayCandidates": 47,
+      "classified": 54,
+      "displayCandidates": 42,
       "fallback": true
     },
     "municipality_yatsushiro": {
       "classified": 128,
-      "displayCandidates": 96,
+      "displayCandidates": 95,
       "fallback": true
     },
     "municipality_minamata": {
@@ -88,12 +88,12 @@
     },
     "municipality_kamiamakusa": {
       "classified": 29,
-      "displayCandidates": 26,
+      "displayCandidates": 25,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 64,
-      "displayCandidates": 59,
+      "classified": 63,
+      "displayCandidates": 58,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -127,8 +127,8 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 20,
-      "displayCandidates": 15,
+      "classified": 21,
+      "displayCandidates": 16,
       "fallback": true
     },
     "municipality_kashima": {
@@ -163,16 +163,21 @@
     }
   },
   "confidence": {
-    "high": 198,
-    "medium": 257,
-    "low": 94
+    "high": 196,
+    "medium": 252,
+    "low": 96
   },
-  "unclassifiedCount": 96,
+  "unclassifiedCount": 95,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
       "title": "主要地方道 熊本嘉島線 一部区間全面通行止めのお知らせ",
       "url": "https://www.city.kumamoto.jp/kiji00372103/index.html"
+    },
+    {
+      "municipalityName": "熊本市",
+      "title": "「2026年ベネズエラ地震救援金募金」について",
+      "url": "https://www.city.kumamoto.jp/kiji00363393/index.html"
     },
     {
       "municipalityName": "熊本市",
@@ -188,11 +193,6 @@
       "municipalityName": "熊本市",
       "title": "【令和8年熊本地震】熊本市から他市町村へ避難されている皆様へ",
       "url": "https://www.city.kumamoto.jp/kiji00372342/index.html"
-    },
-    {
-      "municipalityName": "熊本市",
-      "title": "令和8年熊本地震に伴う市政だより配布の遅延について",
-      "url": "https://www.city.kumamoto.jp/kiji00372126/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -361,6 +361,11 @@
     },
     {
       "municipalityName": "八代市",
+      "title": "第22回災害対策本部会議資料（令和８年８月１７日（月曜日）午後４時００分）（PDF：24メガバイト）",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_158360_up_b7w4jvuy.pdf"
+    },
+    {
+      "municipalityName": "八代市",
       "title": "令和８年熊本地震により被災した合併処理浄化槽の補助制度",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00324966/index.html"
     },
@@ -371,8 +376,8 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html"
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -381,8 +386,8 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html"
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html"
     },
     {
       "municipalityName": "山鹿市",
@@ -398,6 +403,11 @@
       "municipalityName": "山鹿市",
       "title": "震度速報 8月17日 15時40分",
       "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html"
+    },
+    {
+      "municipalityName": "山鹿市",
+      "title": "避難行動支援システム更新業務の委託に係るプロポーザルの参加者を募集します",
+      "url": "https://www.city.yamaga.kumamoto.jp/kiji0033173/index.html"
     },
     {
       "municipalityName": "菊池市",
@@ -446,33 +456,18 @@
     },
     {
       "municipalityName": "上天草市",
+      "title": "龍ヶ岳山頂自然公園キャンプ場",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/133/15601.html"
+    },
+    {
+      "municipalityName": "上天草市",
       "title": "姫戸白嶽森林公園",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/136/189.html"
     },
     {
       "municipalityName": "上天草市",
       "title": "令和8年熊本地震からの復旧・復興のための「企業版ふるさと納税」を受け付けています",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/547/23317.html"
-    },
-    {
-      "municipalityName": "上天草市",
-      "title": "姫戸白嶽(しらたけ)森林公園キャンプ場",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/133/160.html"
-    },
-    {
-      "municipalityName": "上天草市",
-      "title": "龍ヶ岳山頂自然公園キャンプ場",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/133/15601.html"
-    },
-    {
-      "municipalityName": "上天草市",
-      "title": "小島公園キャンプ場",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/133/159.html"
-    },
-    {
-      "municipalityName": "上天草市",
-      "title": "諏訪公園キャンプ場",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/133/162.html"
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/36/23317.html"
     },
     {
       "municipalityName": "上天草市",
@@ -511,13 +506,13 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年08月17日 避難者数",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320"
+      "title": "2026年08月17日 令和8年熊本地震（7月28日発生）に関する情報（8月17日17時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年08月17日 令和8年熊本地震（7月28日発生）に関する情報（8月17日17時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
+      "title": "2026年08月18日 避難者数",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320"
     },
     {
       "municipalityName": "天草市",
@@ -656,8 +651,13 @@
     "non_official_url": 1,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 10,
+  "warningCount": 11,
   "warnings": [
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kumamoto",
+      "count": 1
+    },
     {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_yatsushiro",
@@ -676,7 +676,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 1
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
