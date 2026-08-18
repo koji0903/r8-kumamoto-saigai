@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-18T02:11:34.741Z",
+  "generatedAt": "2026-08-18T04:21:03.558Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-18T01:53:53.689Z",
-    "inputCount": 666,
-    "classifiedPageCount": 544,
-    "displayCandidateCount": 448,
+    "generatedAt": "2026-08-18T04:01:46.770Z",
+    "inputCount": 678,
+    "classifiedPageCount": 553,
+    "displayCandidateCount": 459,
     "deltaFromPrevious": {
-      "inputCount": -6,
-      "classifiedPageCount": -5,
-      "unclassifiedCount": -1
+      "inputCount": 12,
+      "classifiedPageCount": 9,
+      "unclassifiedCount": 3
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 16,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -31,13 +31,13 @@
     "municipalityFallbackRate": "21/21",
     "municipalityReport": {
       "municipality_kumamoto": {
-        "classified": 54,
-        "displayCandidates": 42,
+        "classified": 59,
+        "displayCandidates": 47,
         "fallback": true
       },
       "municipality_yatsushiro": {
         "classified": 128,
-        "displayCandidates": 95,
+        "displayCandidates": 97,
         "fallback": true
       },
       "municipality_minamata": {
@@ -61,13 +61,13 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 29,
-        "displayCandidates": 25,
+        "classified": 30,
+        "displayCandidates": 26,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 63,
-        "displayCandidates": 58,
+        "classified": 66,
+        "displayCandidates": 61,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -76,8 +76,8 @@
         "fallback": true
       },
       "municipality_koshi": {
-        "classified": 9,
-        "displayCandidates": 8,
+        "classified": 10,
+        "displayCandidates": 9,
         "fallback": true
       },
       "municipality_misato": {
@@ -101,8 +101,8 @@
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 21,
-        "displayCandidates": 16,
+        "classified": 20,
+        "displayCandidates": 15,
         "fallback": true
       },
       "municipality_kashima": {
@@ -138,39 +138,39 @@
     },
     "categoryReport": {
       "home": {
-        "total": 130,
+        "total": 129,
         "high": 53,
-        "medium": 39,
+        "medium": 38,
         "low": 38
       },
       "money": {
-        "total": 136,
+        "total": 139,
         "high": 19,
-        "medium": 38,
-        "low": 79
+        "medium": 42,
+        "low": 78
       },
       "documents": {
-        "total": 127,
-        "high": 32,
+        "total": 126,
+        "high": 33,
         "medium": 28,
-        "low": 67
+        "low": 65
       },
       "health_care": {
-        "total": 35,
+        "total": 37,
         "high": 17,
-        "medium": 18,
+        "medium": 20,
         "low": 0
       },
       "family_education": {
-        "total": 78,
+        "total": 79,
         "high": 6,
-        "medium": 24,
+        "medium": 25,
         "low": 48
       },
       "work_business": {
-        "total": 29,
+        "total": 31,
         "high": 10,
-        "medium": 19,
+        "medium": 21,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,18 +180,18 @@
         "low": 0
       },
       "daily_life": {
-        "total": 184,
-        "high": 54,
-        "medium": 126,
+        "total": 191,
+        "high": 58,
+        "medium": 129,
         "low": 4
       }
     },
     "confidence": {
-      "high": 196,
-      "medium": 252,
-      "low": 96
+      "high": 200,
+      "medium": 259,
+      "low": 94
     },
-    "unclassifiedCount": 95,
+    "unclassifiedCount": 98,
     "excludedCount": 28,
     "overrideCount": 0
   },
@@ -203,7 +203,7 @@
         "title": "内閣府防災担当からの各都道府県等への通知等",
         "url": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
         "previousHash": "sha256:f0a3a40563c1901508dd1173a2d42577ffcbbbf711ab728034f5079ce665d113",
-        "currentHash": "sha256:24c89c030617df358fe2f8e32674df0aa49704706d10b7486959356de9d9e8e2",
+        "currentHash": "sha256:26c129ebf313ce5fe1612d24183c1cc7a433f6b026aa1710645f882fa4741f6e",
         "verificationStatus": "needs_review"
       }
     },
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:dd014259d0d7fcfb06b79d922194313e2b683ffd07c1235bb0a11926b268ad5b",
+        "currentHash": "sha256:e393c69f918988ac8a626d8b4c151ee48f7a514f3791a25e9d379a0398abceab",
         "verificationStatus": "needs_review"
       }
     },
@@ -236,7 +236,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:72fda72ecc5c6c27232f1218c743c9ce57d762d2dac0f47f86231c4dacf5061f",
+        "currentHash": "sha256:d5ec7b1f33a7f9ac8fa475b3d5c266254363128befbab23bb6df6af6bd6f41e9",
         "verificationStatus": "needs_review"
       }
     },
@@ -247,17 +247,12 @@
         "title": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
         "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
         "previousHash": "sha256:83be58e3c56963e18140658412145c461d5542c4e79c399f4bb85f687ef7beab",
-        "currentHash": "sha256:2f5488e36fcbb8b8f23202eb2a2532701eb600c9a069afd11cdb9bbf17ca8234",
+        "currentHash": "sha256:4df6be4b59fbff73f30923360b86dae753b10aaead98498ed56ee0bb18b65faf",
         "verificationStatus": "needs_review"
       }
     }
   ],
   "warnings": [
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kumamoto",
-      "count": 1
-    },
     {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_yatsushiro",
@@ -266,7 +261,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 2
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -318,7 +313,7 @@
         "title": "内閣府防災担当からの各都道府県等への通知等",
         "url": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
         "previousHash": "sha256:f0a3a40563c1901508dd1173a2d42577ffcbbbf711ab728034f5079ce665d113",
-        "currentHash": "sha256:24c89c030617df358fe2f8e32674df0aa49704706d10b7486959356de9d9e8e2",
+        "currentHash": "sha256:26c129ebf313ce5fe1612d24183c1cc7a433f6b026aa1710645f882fa4741f6e",
         "verificationStatus": "needs_review"
       },
       {
@@ -334,7 +329,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:dd014259d0d7fcfb06b79d922194313e2b683ffd07c1235bb0a11926b268ad5b",
+        "currentHash": "sha256:e393c69f918988ac8a626d8b4c151ee48f7a514f3791a25e9d379a0398abceab",
         "verificationStatus": "needs_review"
       },
       {
@@ -342,7 +337,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:72fda72ecc5c6c27232f1218c743c9ce57d762d2dac0f47f86231c4dacf5061f",
+        "currentHash": "sha256:d5ec7b1f33a7f9ac8fa475b3d5c266254363128befbab23bb6df6af6bd6f41e9",
         "verificationStatus": "needs_review"
       },
       {
@@ -350,7 +345,7 @@
         "title": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
         "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
         "previousHash": "sha256:83be58e3c56963e18140658412145c461d5542c4e79c399f4bb85f687ef7beab",
-        "currentHash": "sha256:2f5488e36fcbb8b8f23202eb2a2532701eb600c9a069afd11cdb9bbf17ca8234",
+        "currentHash": "sha256:4df6be4b59fbff73f30923360b86dae753b10aaead98498ed56ee0bb18b65faf",
         "verificationStatus": "needs_review"
       }
     ]
