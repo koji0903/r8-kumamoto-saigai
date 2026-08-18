@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-08-18T13:30:41.669Z",
+  "generatedAt": "2026-08-18T23:41:32.363Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
     "generatedAt": "2026-08-18T13:12:20.024Z",
     "inputCount": 683,
-    "classifiedPageCount": 556,
-    "displayCandidateCount": 458,
+    "classifiedPageCount": 570,
+    "displayCandidateCount": 472,
     "deltaFromPrevious": {
-      "inputCount": -4,
-      "classifiedPageCount": -4,
-      "unclassifiedCount": 0
+      "inputCount": 0,
+      "classifiedPageCount": 14,
+      "unclassifiedCount": -98
     }
   },
   "freshness": {
     "officialNavigation": {
-      "state": "fresh",
-      "status": "OK",
-      "ageHours": 0,
+      "state": "stale",
+      "status": "WARNING",
+      "ageHours": 10,
       "limitHours": 6
     },
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 9,
+      "ageHours": 19,
       "limitHours": 336
     }
   },
@@ -31,13 +31,13 @@
     "municipalityFallbackRate": "21/21",
     "municipalityReport": {
       "municipality_kumamoto": {
-        "classified": 60,
-        "displayCandidates": 48,
+        "classified": 62,
+        "displayCandidates": 50,
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 127,
-        "displayCandidates": 93,
+        "classified": 131,
+        "displayCandidates": 97,
         "fallback": true
       },
       "municipality_minamata": {
@@ -56,18 +56,18 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 47,
-        "displayCandidates": 39,
+        "classified": 50,
+        "displayCandidates": 42,
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 31,
-        "displayCandidates": 27,
+        "classified": 32,
+        "displayCandidates": 28,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 62,
-        "displayCandidates": 57,
+        "classified": 63,
+        "displayCandidates": 58,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -81,8 +81,8 @@
         "fallback": true
       },
       "municipality_misato": {
-        "classified": 13,
-        "displayCandidates": 12,
+        "classified": 14,
+        "displayCandidates": 13,
         "fallback": true
       },
       "municipality_ozu": {
@@ -101,8 +101,8 @@
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 21,
-        "displayCandidates": 16,
+        "classified": 22,
+        "displayCandidates": 17,
         "fallback": true
       },
       "municipality_kashima": {
@@ -116,8 +116,8 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 26,
-        "displayCandidates": 22,
+        "classified": 27,
+        "displayCandidates": 23,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -138,15 +138,15 @@
     },
     "categoryReport": {
       "home": {
-        "total": 126,
+        "total": 128,
         "high": 52,
-        "medium": 37,
+        "medium": 39,
         "low": 37
       },
       "money": {
-        "total": 144,
+        "total": 147,
         "high": 20,
-        "medium": 41,
+        "medium": 44,
         "low": 83
       },
       "documents": {
@@ -180,18 +180,18 @@
         "low": 0
       },
       "daily_life": {
-        "total": 192,
-        "high": 60,
-        "medium": 128,
+        "total": 204,
+        "high": 66,
+        "medium": 134,
         "low": 4
       }
     },
     "confidence": {
-      "high": 200,
-      "medium": 258,
+      "high": 206,
+      "medium": 266,
       "low": 98
     },
-    "unclassifiedCount": 100,
+    "unclassifiedCount": 2,
     "excludedCount": 28,
     "overrideCount": 0
   },

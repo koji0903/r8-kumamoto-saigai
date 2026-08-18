@@ -18,15 +18,15 @@
   ],
   "categoryReport": {
     "home": {
-      "total": 126,
+      "total": 128,
       "high": 52,
-      "medium": 37,
+      "medium": 39,
       "low": 37
     },
     "money": {
-      "total": 144,
+      "total": 147,
       "high": 20,
-      "medium": 41,
+      "medium": 44,
       "low": 83
     },
     "documents": {
@@ -60,9 +60,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 192,
-      "high": 60,
-      "medium": 128,
+      "total": 204,
+      "high": 66,
+      "medium": 134,
       "low": 4
     }
   },
@@ -356,6 +356,47 @@
             }
           ],
           "displayPriority": 48,
+          "urlCheck": {
+            "state": "inherited_from_collector",
+            "checkedAt": "2026-08-18T13:12:20.024Z"
+          }
+        },
+        {
+          "officialTitle": "主要地方道 熊本嘉島線 一部区間全面通行止めのお知らせ",
+          "originalTitle": "主要地方道 熊本嘉島線 一部区間全面通行止めのお知らせ",
+          "displayTitle": "主要地方道 熊本嘉島線 一部区間全面通行止めのお知らせ",
+          "url": "https://www.city.kumamoto.jp/kiji00372103/index.html",
+          "originalUrl": "https://www.city.kumamoto.jp/kiji00372103/index.html",
+          "redirectHistory": [],
+          "officialDomain": "www.city.kumamoto.jp",
+          "publisher": "熊本市",
+          "publisherGroup": "municipality",
+          "sourceType": "municipal_official",
+          "serviceTags": [],
+          "status": "active",
+          "disasterRelevance": "inherited_from_disaster_collector",
+          "disasterRelevanceEvidence": [
+            "disaster_collection_source"
+          ],
+          "informationPhase": "emergency",
+          "publishedAt": "2026-07-29T01:07:00+09:00",
+          "updatedAt": null,
+          "retrievedAt": "2026-08-18T13:12:20.024Z",
+          "categories": [
+            "daily_life"
+          ],
+          "classificationConfidence": "high",
+          "classification": [
+            {
+              "category": "daily_life",
+              "confidence": "high",
+              "evidence": [
+                "通行止",
+                "地方道"
+              ]
+            }
+          ],
+          "displayPriority": 37,
           "urlCheck": {
             "state": "inherited_from_collector",
             "checkedAt": "2026-08-18T13:12:20.024Z"
@@ -954,6 +995,47 @@
               "confidence": "low",
               "evidence": [
                 "既存カテゴリ:支援・制度"
+              ]
+            }
+          ],
+          "displayPriority": 39,
+          "urlCheck": {
+            "state": "inherited_from_collector",
+            "checkedAt": "2026-08-18T13:12:20.024Z"
+          }
+        },
+        {
+          "officialTitle": "主要地方道熊本嘉島線の全面通行止め解除について",
+          "originalTitle": "主要地方道熊本嘉島線の全面通行止め解除について",
+          "displayTitle": "主要地方道熊本嘉島線の全面通行止め解除について",
+          "url": "https://www.city.kumamoto.jp/kiji00372341/index.html",
+          "originalUrl": "https://www.city.kumamoto.jp/kiji00372341/index.html",
+          "redirectHistory": [],
+          "officialDomain": "www.city.kumamoto.jp",
+          "publisher": "熊本市",
+          "publisherGroup": "municipality",
+          "sourceType": "municipal_official",
+          "serviceTags": [],
+          "status": "active",
+          "disasterRelevance": "inherited_from_disaster_collector",
+          "disasterRelevanceEvidence": [
+            "disaster_collection_source"
+          ],
+          "informationPhase": "emergency",
+          "publishedAt": "2026-08-06T09:27:00+09:00",
+          "updatedAt": null,
+          "retrievedAt": "2026-08-18T13:12:20.024Z",
+          "categories": [
+            "daily_life"
+          ],
+          "classificationConfidence": "high",
+          "classification": [
+            {
+              "category": "daily_life",
+              "confidence": "high",
+              "evidence": [
+                "通行止",
+                "地方道"
               ]
             }
           ],
@@ -2728,6 +2810,46 @@
       ],
       "updates": [
         {
+          "officialTitle": "R8熊本地震解放公園一覧表（PDF：126.8キロバイト）",
+          "originalTitle": "R8熊本地震解放公園一覧表（PDF：126.8キロバイト）",
+          "displayTitle": "R8熊本地震解放公園一覧表（PDF：126.8キロバイト）",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00326775/3_26775_157958_up_wga044eq.pdf",
+          "originalUrl": "https://www.city.yatsushiro.lg.jp/kiji00326775/3_26775_157958_up_wga044eq.pdf",
+          "redirectHistory": [],
+          "officialDomain": "www.city.yatsushiro.lg.jp",
+          "publisher": "八代市",
+          "publisherGroup": "municipality",
+          "sourceType": "municipal_official",
+          "serviceTags": [],
+          "status": "active",
+          "disasterRelevance": "direct",
+          "disasterRelevanceEvidence": [
+            "disaster_keyword"
+          ],
+          "informationPhase": "reconstruction",
+          "publishedAt": "2026-07-28",
+          "updatedAt": null,
+          "retrievedAt": "2026-08-18T13:12:20.024Z",
+          "categories": [
+            "daily_life"
+          ],
+          "classificationConfidence": "medium",
+          "classification": [
+            {
+              "category": "daily_life",
+              "confidence": "medium",
+              "evidence": [
+                "解放公園"
+              ]
+            }
+          ],
+          "displayPriority": 47,
+          "urlCheck": {
+            "state": "inherited_from_collector",
+            "checkedAt": "2026-08-18T13:12:20.024Z"
+          }
+        },
+        {
           "officialTitle": "7月29日（水曜日） 以降のもえるごみの収集について",
           "originalTitle": "7月29日（水曜日） 以降のもえるごみの収集について",
           "displayTitle": "7月29日（水曜日） 以降のもえるごみの収集について",
@@ -3475,27 +3597,28 @@
           "updatedAt": null,
           "retrievedAt": "2026-08-18T13:12:20.024Z",
           "categories": [
-            "health_care",
-            "daily_life"
+            "daily_life",
+            "health_care"
           ],
-          "classificationConfidence": "medium",
+          "classificationConfidence": "high",
           "classification": [
+            {
+              "category": "daily_life",
+              "confidence": "high",
+              "evidence": [
+                "避難所",
+                "車中泊"
+              ]
+            },
             {
               "category": "health_care",
               "confidence": "medium",
               "evidence": [
                 "健康"
               ]
-            },
-            {
-              "category": "daily_life",
-              "confidence": "medium",
-              "evidence": [
-                "避難所"
-              ]
             }
           ],
-          "displayPriority": 28,
+          "displayPriority": 38,
           "urlCheck": {
             "state": "inherited_from_collector",
             "checkedAt": "2026-08-18T13:12:20.024Z"
@@ -4576,6 +4699,46 @@
           }
         },
         {
+          "officialTitle": "災害に便乗した犯罪に関する注意喚起",
+          "originalTitle": "災害に便乗した犯罪に関する注意喚起",
+          "displayTitle": "災害に便乗した犯罪に関する注意喚起",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00326855/index.html",
+          "originalUrl": "https://www.city.yatsushiro.lg.jp/kiji00326855/index.html",
+          "redirectHistory": [],
+          "officialDomain": "www.city.yatsushiro.lg.jp",
+          "publisher": "八代市",
+          "publisherGroup": "municipality",
+          "sourceType": "municipal_official",
+          "serviceTags": [],
+          "status": "active",
+          "disasterRelevance": "direct",
+          "disasterRelevanceEvidence": [
+            "disaster_keyword"
+          ],
+          "informationPhase": "reconstruction",
+          "publishedAt": "2026-08-05T19:33:00+09:00",
+          "updatedAt": null,
+          "retrievedAt": "2026-08-18T13:12:20.024Z",
+          "categories": [
+            "money"
+          ],
+          "classificationConfidence": "medium",
+          "classification": [
+            {
+              "category": "money",
+              "confidence": "medium",
+              "evidence": [
+                "便乗"
+              ]
+            }
+          ],
+          "displayPriority": 49,
+          "urlCheck": {
+            "state": "inherited_from_collector",
+            "checkedAt": "2026-08-18T13:12:20.024Z"
+          }
+        },
+        {
           "officialTitle": "被災者への入浴支援事業について",
           "originalTitle": "被災者への入浴支援事業について",
           "displayTitle": "被災者への入浴支援事業について",
@@ -4810,6 +4973,7 @@
           "retrievedAt": "2026-08-18T13:12:20.024Z",
           "categories": [
             "daily_life",
+            "home",
             "agriculture_fishery"
           ],
           "classificationConfidence": "high",
@@ -4821,6 +4985,13 @@
                 "水道",
                 "下水道",
                 "既存カテゴリ:ライフライン"
+              ]
+            },
+            {
+              "category": "home",
+              "confidence": "medium",
+              "evidence": [
+                "浄化槽"
               ]
             },
             {
@@ -4913,6 +5084,46 @@
             }
           ],
           "displayPriority": 39,
+          "urlCheck": {
+            "state": "inherited_from_collector",
+            "checkedAt": "2026-08-18T13:12:20.024Z"
+          }
+        },
+        {
+          "officialTitle": "📌災害時における避難・車中泊可能な公園のご案内",
+          "originalTitle": "📌災害時における避難・車中泊可能な公園のご案内",
+          "displayTitle": "📌災害時における避難・車中泊可能な公園のご案内",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00326775/index.html",
+          "originalUrl": "https://www.city.yatsushiro.lg.jp/kiji00326775/index.html",
+          "redirectHistory": [],
+          "officialDomain": "www.city.yatsushiro.lg.jp",
+          "publisher": "八代市",
+          "publisherGroup": "municipality",
+          "sourceType": "municipal_official",
+          "serviceTags": [],
+          "status": "active",
+          "disasterRelevance": "direct",
+          "disasterRelevanceEvidence": [
+            "disaster_keyword"
+          ],
+          "informationPhase": "reconstruction",
+          "publishedAt": "2026-08-07T14:05:00+09:00",
+          "updatedAt": null,
+          "retrievedAt": "2026-08-18T13:12:20.024Z",
+          "categories": [
+            "daily_life"
+          ],
+          "classificationConfidence": "medium",
+          "classification": [
+            {
+              "category": "daily_life",
+              "confidence": "medium",
+              "evidence": [
+                "車中泊"
+              ]
+            }
+          ],
+          "displayPriority": 49,
           "urlCheck": {
             "state": "inherited_from_collector",
             "checkedAt": "2026-08-18T13:12:20.024Z"
@@ -7675,6 +7886,54 @@
           }
         },
         {
+          "officialTitle": "令和８年熊本地震により被災した合併処理浄化槽の補助制度",
+          "originalTitle": "令和８年熊本地震により被災した合併処理浄化槽の補助制度",
+          "displayTitle": "令和８年熊本地震により被災した合併処理浄化槽の補助制度",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00324966/index.html",
+          "originalUrl": "https://www.city.yatsushiro.lg.jp/kiji00324966/index.html",
+          "redirectHistory": [],
+          "officialDomain": "www.city.yatsushiro.lg.jp",
+          "publisher": "八代市",
+          "publisherGroup": "municipality",
+          "sourceType": "municipal_official",
+          "serviceTags": [],
+          "status": "active",
+          "disasterRelevance": "direct",
+          "disasterRelevanceEvidence": [
+            "disaster_keyword"
+          ],
+          "informationPhase": "reconstruction",
+          "publishedAt": "2026-08-17T16:26:00+09:00",
+          "updatedAt": null,
+          "retrievedAt": "2026-08-18T13:12:20.024Z",
+          "categories": [
+            "home",
+            "money"
+          ],
+          "classificationConfidence": "medium",
+          "classification": [
+            {
+              "category": "home",
+              "confidence": "medium",
+              "evidence": [
+                "浄化槽"
+              ]
+            },
+            {
+              "category": "money",
+              "confidence": "medium",
+              "evidence": [
+                "補助制度"
+              ]
+            }
+          ],
+          "displayPriority": 50,
+          "urlCheck": {
+            "state": "inherited_from_collector",
+            "checkedAt": "2026-08-18T13:12:20.024Z"
+          }
+        },
+        {
           "officialTitle": "【令和８年熊本地震】支援物資「配達サービス」の活用について",
           "originalTitle": "【令和８年熊本地震】支援物資「配達サービス」の活用について",
           "displayTitle": "【令和８年熊本地震】支援物資「配達サービス」の活用について",
@@ -9191,6 +9450,46 @@
       "retrievalIssues": [],
       "updates": [
         {
+          "officialTitle": "長部田海床路の通行止めについて",
+          "originalTitle": "長部田海床路の通行止めについて",
+          "displayTitle": "長部田海床路の通行止めについて",
+          "url": "https://www.city.uto.lg.jp/article/view/1306/16355.html",
+          "originalUrl": "https://www.city.uto.lg.jp/article/view/1306/16355.html",
+          "redirectHistory": [],
+          "officialDomain": "www.city.uto.lg.jp",
+          "publisher": "宇土市",
+          "publisherGroup": "municipality",
+          "sourceType": "municipal_official",
+          "serviceTags": [],
+          "status": "active",
+          "disasterRelevance": "inherited_from_disaster_collector",
+          "disasterRelevanceEvidence": [
+            "disaster_collection_source"
+          ],
+          "informationPhase": "emergency",
+          "publishedAt": "2026-07-28",
+          "updatedAt": null,
+          "retrievedAt": "2026-08-18T13:12:20.024Z",
+          "categories": [
+            "daily_life"
+          ],
+          "classificationConfidence": "medium",
+          "classification": [
+            {
+              "category": "daily_life",
+              "confidence": "medium",
+              "evidence": [
+                "通行止"
+              ]
+            }
+          ],
+          "displayPriority": 27,
+          "urlCheck": {
+            "state": "inherited_from_collector",
+            "checkedAt": "2026-08-18T13:12:20.024Z"
+          }
+        },
+        {
           "officialTitle": "文化施設の臨時休館のお知らせ",
           "originalTitle": "文化施設の臨時休館のお知らせ",
           "displayTitle": "文化施設の臨時休館のお知らせ",
@@ -10150,6 +10449,46 @@
           }
         },
         {
+          "officialTitle": "公民館開放",
+          "originalTitle": "公民館開放",
+          "displayTitle": "公民館開放",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16629.html",
+          "originalUrl": "https://www.city.uto.lg.jp/article/view/1305/16629.html",
+          "redirectHistory": [],
+          "officialDomain": "www.city.uto.lg.jp",
+          "publisher": "宇土市",
+          "publisherGroup": "municipality",
+          "sourceType": "municipal_official",
+          "serviceTags": [],
+          "status": "active",
+          "disasterRelevance": "inherited_from_disaster_collector",
+          "disasterRelevanceEvidence": [
+            "disaster_collection_source"
+          ],
+          "informationPhase": "reconstruction",
+          "publishedAt": "2026-08-12",
+          "updatedAt": null,
+          "retrievedAt": "2026-08-18T13:12:20.024Z",
+          "categories": [
+            "daily_life"
+          ],
+          "classificationConfidence": "medium",
+          "classification": [
+            {
+              "category": "daily_life",
+              "confidence": "medium",
+              "evidence": [
+                "公民館開放"
+              ]
+            }
+          ],
+          "displayPriority": 30,
+          "urlCheck": {
+            "state": "inherited_from_collector",
+            "checkedAt": "2026-08-18T13:12:20.024Z"
+          }
+        },
+        {
           "officialTitle": "図書館の休館について",
           "originalTitle": "図書館の休館について",
           "displayTitle": "図書館の休館について",
@@ -10451,6 +10790,47 @@
             }
           ],
           "displayPriority": 30,
+          "urlCheck": {
+            "state": "inherited_from_collector",
+            "checkedAt": "2026-08-18T13:12:20.024Z"
+          }
+        },
+        {
+          "officialTitle": "令和8年熊本地震による宇土市道の通行規制について",
+          "originalTitle": "令和8年熊本地震による宇土市道の通行規制について",
+          "displayTitle": "令和8年熊本地震による宇土市道の通行規制について",
+          "url": "https://www.city.uto.lg.jp/article/view/1306/16413.html",
+          "originalUrl": "https://www.city.uto.lg.jp/article/view/1306/16413.html",
+          "redirectHistory": [],
+          "officialDomain": "www.city.uto.lg.jp",
+          "publisher": "宇土市",
+          "publisherGroup": "municipality",
+          "sourceType": "municipal_official",
+          "serviceTags": [],
+          "status": "active",
+          "disasterRelevance": "direct",
+          "disasterRelevanceEvidence": [
+            "disaster_keyword"
+          ],
+          "informationPhase": "reconstruction",
+          "publishedAt": "2026-08-13",
+          "updatedAt": null,
+          "retrievedAt": "2026-08-18T13:12:20.024Z",
+          "categories": [
+            "daily_life"
+          ],
+          "classificationConfidence": "high",
+          "classification": [
+            {
+              "category": "daily_life",
+              "confidence": "high",
+              "evidence": [
+                "通行規制",
+                "市道"
+              ]
+            }
+          ],
+          "displayPriority": 60,
           "urlCheck": {
             "state": "inherited_from_collector",
             "checkedAt": "2026-08-18T13:12:20.024Z"
@@ -11845,6 +12225,46 @@
           }
         },
         {
+          "officialTitle": "令和8年8月10日時点全面通行止め一覧(位置図、写真)(PDF 約2MB)",
+          "originalTitle": "令和8年8月10日時点全面通行止め一覧(位置図、写真)(PDF 約2MB)",
+          "displayTitle": "令和8年8月10日時点全面通行止め一覧(位置図、写真)(PDF 約2MB)",
+          "url": "https://www.city.kamiamakusa.kumamoto.jp/dl?q=123089_filelib_0e10a2cfcb8651b3f19b8389a6aaa912.pdf",
+          "originalUrl": "https://www.city.kamiamakusa.kumamoto.jp/dl?q=123089_filelib_0e10a2cfcb8651b3f19b8389a6aaa912.pdf",
+          "redirectHistory": [],
+          "officialDomain": "www.city.kamiamakusa.kumamoto.jp",
+          "publisher": "上天草市",
+          "publisherGroup": "municipality",
+          "sourceType": "municipal_official",
+          "serviceTags": [],
+          "status": "active",
+          "disasterRelevance": "inherited_from_disaster_collector",
+          "disasterRelevanceEvidence": [
+            "disaster_collection_source"
+          ],
+          "informationPhase": "emergency",
+          "publishedAt": "2026-08-10",
+          "updatedAt": null,
+          "retrievedAt": "2026-08-18T13:12:20.024Z",
+          "categories": [
+            "daily_life"
+          ],
+          "classificationConfidence": "medium",
+          "classification": [
+            {
+              "category": "daily_life",
+              "confidence": "medium",
+              "evidence": [
+                "通行止"
+              ]
+            }
+          ],
+          "displayPriority": 29,
+          "urlCheck": {
+            "state": "inherited_from_collector",
+            "checkedAt": "2026-08-18T13:12:20.024Z"
+          }
+        },
+        {
           "officialTitle": "断水時の食品衛生",
           "originalTitle": "断水時の食品衛生",
           "displayTitle": "断水時の食品衛生",
@@ -12488,17 +12908,18 @@
           "categories": [
             "daily_life"
           ],
-          "classificationConfidence": "medium",
+          "classificationConfidence": "high",
           "classification": [
             {
               "category": "daily_life",
-              "confidence": "medium",
+              "confidence": "high",
               "evidence": [
-                "道路"
+                "道路",
+                "通行規制"
               ]
             }
           ],
-          "displayPriority": 30,
+          "displayPriority": 40,
           "urlCheck": {
             "state": "inherited_from_collector",
             "checkedAt": "2026-08-18T13:12:20.024Z"
@@ -14172,6 +14593,46 @@
           }
         },
         {
+          "officialTitle": "2026年08月18日 避難者数",
+          "originalTitle": "2026年08月18日 避難者数",
+          "displayTitle": "2026年08月18日 避難者数",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
+          "originalUrl": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
+          "redirectHistory": [],
+          "officialDomain": "www.city.uki.kumamoto.jp",
+          "publisher": "宇城市",
+          "publisherGroup": "municipality",
+          "sourceType": "municipal_official",
+          "serviceTags": [],
+          "status": "active",
+          "disasterRelevance": "inherited_from_disaster_collector",
+          "disasterRelevanceEvidence": [
+            "disaster_collection_source"
+          ],
+          "informationPhase": "reconstruction",
+          "publishedAt": "2026-08-18",
+          "updatedAt": null,
+          "retrievedAt": "2026-08-18T13:12:20.024Z",
+          "categories": [
+            "daily_life"
+          ],
+          "classificationConfidence": "medium",
+          "classification": [
+            {
+              "category": "daily_life",
+              "confidence": "medium",
+              "evidence": [
+                "避難者数"
+              ]
+            }
+          ],
+          "displayPriority": 30,
+          "urlCheck": {
+            "state": "inherited_from_collector",
+            "checkedAt": "2026-08-18T13:12:20.024Z"
+          }
+        },
+        {
           "officialTitle": "「令和８年熊本地震」住まいと生活状況に関する調査へのご協力のお願い",
           "originalTitle": "「令和８年熊本地震」住まいと生活状況に関する調査へのご協力のお願い",
           "displayTitle": "「令和８年熊本地震」住まいと生活状況に関する調査へのご協力のお願い",
@@ -15394,7 +15855,7 @@
               ]
             }
           ],
-          "displayPriority": 58,
+          "displayPriority": 57,
           "urlCheck": {
             "state": "inherited_from_collector",
             "checkedAt": "2026-08-18T13:12:20.024Z"
@@ -16785,6 +17246,46 @@
             }
           ],
           "displayPriority": 18,
+          "urlCheck": {
+            "state": "inherited_from_collector",
+            "checkedAt": "2026-08-18T13:12:20.024Z"
+          }
+        },
+        {
+          "officialTitle": "通行止め",
+          "originalTitle": "通行止め",
+          "displayTitle": "通行止め",
+          "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/doro_kotsu/3/3903.html",
+          "originalUrl": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/doro_kotsu/3/3903.html",
+          "redirectHistory": [],
+          "officialDomain": "www.town.kumamoto-misato.lg.jp",
+          "publisher": "美里町",
+          "publisherGroup": "municipality",
+          "sourceType": "municipal_official",
+          "serviceTags": [],
+          "status": "active",
+          "disasterRelevance": "inherited_from_disaster_collector",
+          "disasterRelevanceEvidence": [
+            "disaster_collection_source"
+          ],
+          "informationPhase": "emergency",
+          "publishedAt": "2026-08-04",
+          "updatedAt": null,
+          "retrievedAt": "2026-08-18T13:12:20.024Z",
+          "categories": [
+            "daily_life"
+          ],
+          "classificationConfidence": "medium",
+          "classification": [
+            {
+              "category": "daily_life",
+              "confidence": "medium",
+              "evidence": [
+                "通行止"
+              ]
+            }
+          ],
+          "displayPriority": 28,
           "urlCheck": {
             "state": "inherited_from_collector",
             "checkedAt": "2026-08-18T13:12:20.024Z"
@@ -18733,7 +19234,7 @@
               ]
             }
           ],
-          "displayPriority": 58,
+          "displayPriority": 57,
           "urlCheck": {
             "state": "inherited_from_collector",
             "checkedAt": "2026-08-18T13:12:20.024Z"
@@ -18774,7 +19275,7 @@
               ]
             }
           ],
-          "displayPriority": 28,
+          "displayPriority": 27,
           "urlCheck": {
             "state": "inherited_from_collector",
             "checkedAt": "2026-08-18T13:12:20.024Z"
@@ -19527,6 +20028,46 @@
           }
         },
         {
+          "officialTitle": "【滝川橋】令和8年地震に伴う全面通行止めのお知らせ",
+          "originalTitle": "【滝川橋】令和8年地震に伴う全面通行止めのお知らせ",
+          "displayTitle": "【滝川橋】令和8年地震に伴う全面通行止めのお知らせ",
+          "url": "https://www.town.mifune.kumamoto.jp/page9400.html",
+          "originalUrl": "https://www.town.mifune.kumamoto.jp/page9400.html",
+          "redirectHistory": [],
+          "officialDomain": "www.town.mifune.kumamoto.jp",
+          "publisher": "御船町",
+          "publisherGroup": "municipality",
+          "sourceType": "municipal_official",
+          "serviceTags": [],
+          "status": "active",
+          "disasterRelevance": "direct",
+          "disasterRelevanceEvidence": [
+            "disaster_keyword"
+          ],
+          "informationPhase": "emergency",
+          "publishedAt": "2026-08-07T12:14:00+09:00",
+          "updatedAt": null,
+          "retrievedAt": "2026-08-18T13:12:20.024Z",
+          "categories": [
+            "daily_life"
+          ],
+          "classificationConfidence": "medium",
+          "classification": [
+            {
+              "category": "daily_life",
+              "confidence": "medium",
+              "evidence": [
+                "通行止"
+              ]
+            }
+          ],
+          "displayPriority": 49,
+          "urlCheck": {
+            "state": "inherited_from_collector",
+            "checkedAt": "2026-08-18T13:12:20.024Z"
+          }
+        },
+        {
           "officialTitle": "令和8年熊本地震に係る賃貸型応急住宅（みなし仮設住宅）のお知らせ",
           "originalTitle": "令和8年熊本地震に係る賃貸型応急住宅（みなし仮設住宅）のお知らせ",
           "displayTitle": "令和8年熊本地震に係る賃貸型応急住宅（みなし仮設住宅）のお知らせ",
@@ -20230,7 +20771,8 @@
           "updatedAt": null,
           "retrievedAt": "2026-08-18T13:12:20.024Z",
           "categories": [
-            "daily_life"
+            "daily_life",
+            "money"
           ],
           "classificationConfidence": "high",
           "classification": [
@@ -20242,6 +20784,13 @@
                 "災害ごみ",
                 "仮置場",
                 "既存カテゴリ:ごみ・生活"
+              ]
+            },
+            {
+              "category": "money",
+              "confidence": "medium",
+              "evidence": [
+                "便乗"
               ]
             }
           ],
@@ -22237,6 +22786,46 @@
           }
         },
         {
+          "officialTitle": "通行止め箇所(宮内・甲佐・竜野)(PDF 約970KB)",
+          "originalTitle": "通行止め箇所(宮内・甲佐・竜野)(PDF 約970KB)",
+          "displayTitle": "通行止め箇所(宮内・甲佐・竜野)(PDF 約970KB)",
+          "url": "https://www.town.kosa.lg.jp/dl?q=252264_filelib_eaa54a25a5a5e943f7f67f0b22b8b970.pdf",
+          "originalUrl": "https://www.town.kosa.lg.jp/dl?q=252264_filelib_eaa54a25a5a5e943f7f67f0b22b8b970.pdf",
+          "redirectHistory": [],
+          "officialDomain": "www.town.kosa.lg.jp",
+          "publisher": "甲佐町",
+          "publisherGroup": "municipality",
+          "sourceType": "municipal_official",
+          "serviceTags": [],
+          "status": "active",
+          "disasterRelevance": "inherited_from_disaster_collector",
+          "disasterRelevanceEvidence": [
+            "disaster_collection_source"
+          ],
+          "informationPhase": "emergency",
+          "publishedAt": "2026-07-30",
+          "updatedAt": null,
+          "retrievedAt": "2026-08-18T13:12:20.024Z",
+          "categories": [
+            "daily_life"
+          ],
+          "classificationConfidence": "medium",
+          "classification": [
+            {
+              "category": "daily_life",
+              "confidence": "medium",
+              "evidence": [
+                "通行止"
+              ]
+            }
+          ],
+          "displayPriority": 28,
+          "urlCheck": {
+            "state": "inherited_from_collector",
+            "checkedAt": "2026-08-18T13:12:20.024Z"
+          }
+        },
+        {
           "officialTitle": "【中小企業庁】令和8年熊本地震に係る中小企業・小規模事業者へ...",
           "originalTitle": "【中小企業庁】令和8年熊本地震に係る中小企業・小規模事業者へ...",
           "displayTitle": "【中小企業庁】令和8年熊本地震に係る中小企業・小規模事業者へ...",
@@ -23016,17 +23605,18 @@
           "categories": [
             "daily_life"
           ],
-          "classificationConfidence": "medium",
+          "classificationConfidence": "high",
           "classification": [
             {
               "category": "daily_life",
-              "confidence": "medium",
+              "confidence": "high",
               "evidence": [
-                "道路"
+                "道路",
+                "通行止"
               ]
             }
           ],
-          "displayPriority": 50,
+          "displayPriority": 60,
           "urlCheck": {
             "state": "inherited_from_collector",
             "checkedAt": "2026-08-18T13:12:20.024Z"
@@ -24711,8 +25301,8 @@
   ],
   "validation": {
     "municipalityCount": 21,
-    "classifiedPageCount": 556,
-    "unclassifiedCount": 127,
+    "classifiedPageCount": 570,
+    "unclassifiedCount": 113,
     "issues": [
       {
         "type": "duplicate_url",

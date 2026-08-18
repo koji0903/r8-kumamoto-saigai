@@ -8,7 +8,7 @@
 // 無かったのが原因なので、代表例を名指しで固定する。
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { classify, categories } from "./build-municipality-reconstruction-nav.mjs";
+import { classify, categories, validateOutOfScopeRules } from "./build-municipality-reconstruction-nav.mjs";
 
 const read = file => fs.readFileSync(new URL(`../${file}`, import.meta.url), "utf8");
 const nav = JSON.parse(read("public-data/reconstruction/municipality-official-navigation.json"));
@@ -56,8 +56,44 @@ assert.ok(classified >= 530, `分類できた公式ページが${classified}件�
 // nav 側の unclassifiedCount は重複・非公式URL等で除いた分も含む。分野を1つも
 // 当てられなかった純粋な取りこぼしは品質レポートの unclassifiedItems の方。
 const report = JSON.parse(read("reports/municipality-official-navigation-quality.json"));
-assert.ok(report.unclassifiedCount <= 100,
+// 会議資料・広報紙・入口ページなど、8分野に載せないと決めた種類は config/
+// reconstruction-out-of-scope.json で「対象外」にする。ここに残るのは、本当に
+// 分野を当てられなかったもの＝人が1件ずつ見るべき取りこぼしだけ。
+assert.ok(report.unclassifiedCount <= 20,
   `分野を当てられなかった公式ページが${report.unclassifiedCount}件あります。reports/municipality-official-navigation-quality.json の unclassifiedItems を1件ずつ確認してください`);
+
+// どの記事も「分類・対象外・未分類・除外」のどれか1つに入る。合計が入力と
+// 合わなければ、どこかで記事が消えているか二重に数えている。
+const accounted = report.classifiedPageCount + report.outOfScopeCount + report.unclassifiedCount + report.excludedCount;
+assert.equal(accounted, report.inputCount,
+  `収集した${report.inputCount}件のうち${accounted}件しか説明できていません（分類${report.classifiedPageCount}/対象外${report.outOfScopeCount}/未分類${report.unclassifiedCount}/除外${report.excludedCount}）`);
+
+// ---- 対象外の扱い -----------------------------------------------------------
+// 「対象外」は取りこぼしを隠す抜け道になりうる。次の3つで抜け道にしない。
+const outOfScopeConfig = JSON.parse(read("config/reconstruction-out-of-scope.json"));
+assert.ok(!validateOutOfScopeRules(outOfScopeConfig.rules).length,
+  `対象外ルールが不正です: ${validateOutOfScopeRules(outOfScopeConfig.rules).join(", ")}`);
+
+// ① 理由が書かれていること。あとから見て納得できない除外を残さない
+for (const rule of outOfScopeConfig.rules) {
+  assert.ok(rule.reason.length >= 20, `対象外ルール ${rule.id} の理由が短すぎます`);
+}
+// ② 使われていないルールを置かない。表題の書き方が変わって空振りしている
+//    ルールに気づけなくなる（実際、全角括弧のまま書いて空振りしていた）
+for (const rule of outOfScopeConfig.rules) {
+  assert.ok(report.outOfScopeByRule?.[rule.id] > 0,
+    `対象外ルール ${rule.id} に当たる記事が1件もありません。表題の書き方が変わったか、もう要らないルールです`);
+}
+// ③ 分野を当てられる記事を対象外にしないこと。対象外は分類できなかった記事に
+//    しか使わない約束なので、これが破れると支援情報が消える
+for (const item of report.outOfScopeItems || []) {
+  assert.equal(classify({ title: item.title, url: item.url }).length, 0,
+    `「${item.title}」は分野を当てられるのに対象外にされています`);
+}
+// 会議資料は「対象外」だが読めなくなるわけではない。市ごとのまとめページがある
+const hqRule = outOfScopeConfig.rules.find(rule => rule.id === "hq_meeting_material");
+assert.ok(hqRule && fs.existsSync(new URL(`../${hqRule.seeAlso}`, import.meta.url)),
+  "会議資料を対象外にするなら、代わりに読めるページを示してください");
 for (const category of categories) {
   const total = nav.municipalities.reduce(
     (sum, m) => sum + (m.updates || []).filter(u => u.categories.includes(category)).length, 0);
@@ -92,4 +128,4 @@ assert.match(relationsCode, /userChanged/, "初回描画で URL の分野を優�
 assert.match(relationsCode, /userChanged\?select\?\.value:null\)\|\|params\.get\("category"\)/,
   "初回は URL の分野を先に見る必要があります");
 
-console.log(`暮らしの再建の到達性: 落とせない支援${MUST_CLASSIFY.length}件 / 分類${classified}件・未分類${nav.validation.unclassifiedCount}件 / 逃がし先${withHub.length}市町村 / 0件時のケア OK`);
+console.log(`暮らしの再建の到達性: 落とせない支援${MUST_CLASSIFY.length}件 / 分類${classified}件・対象外${report.outOfScopeCount}件・未分類${report.unclassifiedCount}件 / 逃がし先${withHub.length}市町村 / 0件時のケア OK`);

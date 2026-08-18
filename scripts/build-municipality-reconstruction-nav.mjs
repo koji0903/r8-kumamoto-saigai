@@ -12,6 +12,10 @@ const domainAllowlist=JSON.parse(fs.readFileSync(path.join(root,"config/municipa
 // ある分野の公式情報が1件も無いとき、市町村トップページではなく災害情報ページへ逃がす。
 const hubPath=process.env.MUNICIPALITY_HUB_INPUT||path.join(root,"config/municipality-disaster-hubs.json");
 const disasterHubs=fs.existsSync(hubPath)?JSON.parse(fs.readFileSync(hubPath,"utf8")).hubs||[]:[];
+// 8分野に当てはめないと決めた種類のページ。分野を当てられなかった記事だけに
+// 効く（分類できた記事を消すことはできない）ので、これで支援が隠れることはない。
+const outOfScopePath=process.env.RECONSTRUCTION_OUT_OF_SCOPE_INPUT||path.join(root,"config/reconstruction-out-of-scope.json");
+export const outOfScopeRules=fs.existsSync(outOfScopePath)?JSON.parse(fs.readFileSync(outOfScopePath,"utf8")).rules||[]:[];
 export const categories = ["home","money","documents","health_care","family_education","work_business","agriculture_fishery","daily_life"];
 // 語が1つも当たらない記事は「暮らしの再建」に一切出ない。実際、ホテル等避難
 // （宿泊施設提供事業）、セーフティネット保証4号、応急危険度判定、インスタント
@@ -22,9 +26,9 @@ export const categories = ["home","money","documents","health_care","family_educ
 export const keywords = {
   home: ["応急修理","緊急修理","仮設住宅","みなし仮設","賃貸型応急住宅","公営住宅","住宅","住まい","修理","解体","ブルーシート","被災住宅","宅地","建物","住宅相談",
     // 取りこぼしていた語
-    "ホテル等","宿泊施設提供","宿泊提供","宿泊施設","応急危険度判定","応急仮設建築","仮設建築物","インスタントハウス","がけ崩れ","確認申請","高所作業","屋根"],
+    "ホテル等","宿泊施設提供","宿泊提供","宿泊施設","応急危険度判定","応急仮設建築","仮設建築物","インスタントハウス","がけ崩れ","確認申請","高所作業","屋根","浄化槽"],
   money: ["支援金","義援金","見舞金","減免","免除","猶予","市税","国民健康保険","国保","介護保険料","年金","保険料","生活費","貸付","給付","生活再建支援","手数料","納付","住宅ローン","債務","借金",
-    "セーフティネット保証","資金保証","信用保証","生活必需品","便乗商法","詐欺"],
+    "セーフティネット保証","資金保証","信用保証","生活必需品","便乗商法","便乗","詐欺","補助制度"],
   documents: ["罹災証明","り災証明","被災証明","証明書","住家被害認定","被害認定","申請書","オンライン申請","手続き",
     // 窓口の開閉は申請できるかどうかに直結する。ただし「相談窓口」は別分野なので拾わない。
     "窓口業務","窓口対応","窓口を閉鎖","臨時窓口","臨時開庁","延長窓口","ワンストップ窓口","マイナンバー","被害状況を写真","確認申請"],
@@ -38,7 +42,9 @@ export const keywords = {
     "水稲","苗の管理","定植","作付"],
   // 「災害ゴミ」のようにカタカナで書く自治体があり、ひらがなの「ごみ」だけでは拾えなかった。
   daily_life: ["給水","水道","ごみ","災害ごみ","廃棄物","交通","道路","移動","バス","鉄道","入浴","風呂","ライフライン","断水","停電","電気","ガス","下水道","し尿","シャワー","物資","避難所",
-    "ゴミ","仮置場","資源物","資源集積","がれき","乗合タクシー","タクシー","レンタカー","運行","漏水","手押しポンプ","井戸","生活必需品","日用品","寝具","被服","ペット","犬・猫","被災犬猫","温泉を開放","外国人"]
+    "ゴミ","仮置場","資源物","資源集積","がれき","乗合タクシー","タクシー","レンタカー","運行","漏水","手押しポンプ","井戸","生活必需品","日用品","寝具","被服","ペット","犬・猫","被災犬猫","温泉を開放","外国人",
+    // 通行止めは「移動」の情報。道路という語を使わない市が多く、丸ごと落ちていた
+    "通行止","通行規制","市道","町道","県道","地方道","路線バス","避難者数","車中泊","公園を開放","解放公園","公民館開放"]
 };
 const pastDisasterTerms=["平成28年熊本地震","令和2年7月豪雨","令和2年豪雨","過去の台風"];
 const legacy = {"住まい・証明":["home","documents"],"ごみ・生活":["daily_life"],"ライフライン":["daily_life"],"施設・学校":["family_education"],"支援・制度":["money"]};
@@ -59,6 +65,26 @@ export function classify(update) {
   }
   for (const category of legacy[update.category]||[]) { scores.set(category,(scores.get(category)||0)+1); (evidence[category] ||= []).push(`既存カテゴリ:${update.category}`); }
   return [...scores].sort((a,b)=>b[1]-a[1]).map(([category,score])=>({category,confidence:score>=4?"high":score>=2?"medium":"low",evidence:evidence[category]}));
+}
+// その記事が「対象外」に当たるならルールを返す。分野が1つでも当たる記事には
+// 使わない（呼ぶ側で classify() の結果が空のときだけ渡すこと）。
+export function outOfScope(update){
+  const haystack=`${update.title||""}`.normalize("NFKC");
+  for(const rule of outOfScopeRules) for(const pattern of rule.patterns||[]){
+    if(new RegExp(pattern).test(haystack))return {id:rule.id,label:rule.label,reason:rule.reason,matched:pattern};
+  }
+  return null;
+}
+export function validateOutOfScopeRules(rules=outOfScopeRules){
+  const errors=[];
+  for(const [index,rule] of rules.entries()){
+    if(!String(rule.id||"").trim())errors.push(`rules[${index}].id`);
+    if(!String(rule.label||"").trim())errors.push(`rules[${index}].label`);
+    if(!String(rule.reason||"").trim())errors.push(`rules[${index}].reason`);
+    if(!Array.isArray(rule.patterns)||!rule.patterns.length)errors.push(`rules[${index}].patterns`);
+    for(const pattern of rule.patterns||[]){ try{new RegExp(pattern)}catch{errors.push(`rules[${index}].patterns:${pattern}`)} }
+  }
+  return errors;
 }
 export function validateOverrides(items=manualOverrides){
   const errors=[];
