@@ -142,6 +142,70 @@ def yatsushiro_figures(text):
     }
 
 
+# ---- 行政の書き方を、市民が探すときの並びに読み替える -------------------------
+# 資料の見出しも本文も書き換えない。どのまとまりがどの関心事かを結びつけ、
+# 平たい説明を添えるだけ。対応表は config/hq-reading-guide.json。
+GUIDE = json.loads((ROOT / "config/hq-reading-guide.json").read_text(encoding="utf-8"))
+
+NUMBERED = re.compile(r"^\(?([0-9０-９]{1,2})\)\s*(.*)$")
+BRACKETED = re.compile(r"^【([^】]+)】\s*(.*)$")
+
+
+def split_blocks(title, text):
+    """資料の1節を、読み手が拾える大きさのまとまりに割る。
+
+    「(1) 人的被害」「【災害救助法】」のように、資料自身が付けている区切りを
+    使う。区切りが無ければ節そのものを1つのまとまりとして扱う。
+    見出しの取り方が2つの書き方で違う。
+      (1) 人的被害        … 番号の後ろがその見出し
+      【災害救助法】・…   … 括弧の中が見出しで、後ろは本文の1行目
+    """
+    lines = (text or "").split("\n")
+    for pattern, title_group, rest_group in ((NUMBERED, 2, None), (BRACKETED, 1, 2)):
+        marks = [index for index, line in enumerate(lines) if pattern.match(line.strip())]
+        if len(marks) < 2:
+            continue
+        blocks = []
+        # 最初の区切りより前は、節の前置き
+        if marks[0] > 0 and any(line.strip() for line in lines[:marks[0]]):
+            blocks.append({"title": title, "text": "\n".join(lines[:marks[0]]).strip()})
+        for order, start in enumerate(marks):
+            stop = marks[order + 1] if order + 1 < len(marks) else len(lines)
+            match = pattern.match(lines[start].strip())
+            head = (match.group(title_group) or "").strip()
+            body = "\n".join(lines[start + 1:stop]).strip()
+            if rest_group:
+                lead = (match.group(rest_group) or "").strip()
+                body = f"{lead}\n{body}".strip() if lead else body
+            # 見出しだけで中身が無い回は、その見出しを本文として扱う
+            if head and not body:
+                body, head = head, ""
+            blocks.append({"title": (head or title).strip(), "text": body.strip()})
+        return [block for block in blocks if block["text"]]
+    return [{"title": title, "text": (text or "").strip()}]
+
+
+def theme_of(*texts):
+    """関心事を1つ決める。見出しで決まらなければ本文で見る。"""
+    for text in texts:
+        if not text:
+            continue
+        for rule in GUIDE["blockRules"]:
+            if any(word in text for word in rule["patterns"]):
+                return rule["theme"]
+    return None
+
+
+def hint_of(*texts):
+    for text in texts:
+        if not text:
+            continue
+        for hint in GUIDE["hints"]:
+            if any(word in text for word in hint["patterns"]):
+                return hint["text"]
+    return None
+
+
 def main():
     if not INDEX.exists():
         sys.exit("先に node tools/fetch-municipality-hq.mjs を実行してください")
@@ -189,6 +253,21 @@ def main():
                     record["sections"] = yatsushiro_sections(saved.get("text"))
                     record["figures"] = yatsushiro_figures(saved.get("text"))
             record["figures"] = {key: value for key, value in record["figures"].items() if value is not None}
+            # 行政の並びのまま（sections）と、関心事ごと（blocks）の両方を持たせる。
+            # 資料の文字はどちらも書き換えない。
+            blocks = []
+            for section in record["sections"]:
+                for block in split_blocks(section["title"], section["text"]):
+                    if not block["text"] and not block["title"]:
+                        continue
+                    blocks.append({
+                        "sectionTitle": section["title"],
+                        "title": block["title"],
+                        "text": block["text"],
+                        "theme": theme_of(block["title"], section["title"], block["text"]),
+                        "hint": hint_of(block["title"], section["title"]),
+                    })
+            record["blocks"] = blocks
             meetings.append(record)
 
         output.append({
@@ -208,8 +287,9 @@ def main():
         "// 市町村の災害対策本部会議資料（生成物・直接編集しない）\n"
         "// tools/fetch-municipality-hq.mjs → tools/build-municipality-hq.py で作る\n"
         "window.MUNICIPALITY_HQ = " + json.dumps({
-            "schemaVersion": "1.0.0",
+            "schemaVersion": "1.1.0",
             "retrievedAt": index["retrievedAt"],
+            "themes": GUIDE["themes"],
             "disasterDate": index["disasterDate"],
             "municipalities": output,
         }, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")

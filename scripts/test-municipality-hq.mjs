@@ -75,8 +75,9 @@ assert.equal(pages.size, data.municipalities.length, "ページが市町村ご�
 const viewer = read("municipality-hq.js");
 assert.ok(viewer.includes("homesReported") && viewer.includes("homesSurveyed"),
   "住家被害の2つの数え方が別々に扱われていません");
-assert.ok(/数え方は第\$\{[^}]+\}回で変わりました/.test(viewer) || viewer.includes("数え方は第"),
-  "数え方が変わったことを知らせる文がありません");
+// 8,897件→779件と激減して見えるので、続きの数字ではないと必ず断ること
+assert.ok(viewer.includes("続きではありません"),
+  "住家被害の2つの数え方が別物であることを、読み手に伝える文がありません");
 const kumamoto = data.municipalities.find(item => item.key === "kumamoto");
 if (kumamoto) {
   const reported = kumamoto.meetings.filter(meeting => meeting.figures?.homesReported != null);
@@ -99,6 +100,59 @@ assert.ok(read(".gitignore").includes("sources/official/municipality-hq/"), "資
 const fetcher = read("tools/fetch-municipality-hq.mjs");
 assert.ok(fetcher.includes("TEXT_DIR"), "抽出済みの回を飛ばす仕組みがありません");
 
+// ---- 行政の書き方を読み替えても、資料の文は変えていないこと --------------------
+// このページの値打ちは「市が書いたとおりであること」なので、並べ替えや説明を
+// 足した結果、原文が1文字でも変わっていないかを見る。
+const guide = JSON.parse(read("config/hq-reading-guide.json"));
+const themeIds = new Set(guide.themes.map(theme => theme.id));
+assert.ok(themeIds.size >= 4, "関心事の分け方が少なすぎます");
+for (const theme of guide.themes) {
+  for (const field of ["id", "label", "question", "tone"]) {
+    assert.ok(String(theme[field] || "").trim(), `関心事 ${theme.id} の ${field} がありません`);
+  }
+}
+for (const rule of guide.blockRules) {
+  assert.ok(themeIds.has(rule.theme), `対応表に知らない関心事があります: ${rule.theme}`);
+  assert.ok(rule.patterns?.length, `${rule.theme} の見分け方がありません`);
+}
+assert.deepEqual(data.themes?.map(theme => theme.id), guide.themes.map(theme => theme.id),
+  "生成物の関心事が config と一致しません");
+
+for (const municipality of data.municipalities) {
+  for (const meeting of municipality.meetings) {
+    // 資料自身の「(2)」「【…】」という番号付けだけは、ページ側の見出しに
+    // 置き換わる。それ以外の文字が変わっていないことを見たいので、番号は外して比べる。
+    const bare = line => line.trim().replace(/^\(?[0-9０-９]{1,2}\)\s*/, "").replace(/^【[^】]*】\s*/, "").trim();
+    const source = (meeting.sections || []).map(section => section.text).join("\n");
+    const sourceLines = new Set(source.split("\n").map(bare).filter(Boolean));
+    for (const block of meeting.blocks || []) {
+      assert.ok(block.theme === null || themeIds.has(block.theme),
+        `${municipality.name} 第${meeting.meeting}回: 知らない関心事 ${block.theme}`);
+      for (const line of block.text.split("\n").map(bare).filter(Boolean)) {
+        assert.ok(sourceLines.has(line),
+          `${municipality.name} 第${meeting.meeting}回: 資料に無い文が入っています「${line.slice(0, 40)}」`);
+      }
+    }
+    // 節を割った結果、資料の行が落ちていないこと（読み替えで情報が消えたら意味がない）
+    // 見出しになった行もページには出ているので、落ちた扱いにしない
+    const kept = new Set((meeting.blocks || []).flatMap(block =>
+      [bare(block.title), ...block.text.split("\n").map(bare)]));
+    const lost = [...sourceLines].filter(line => !kept.has(line));
+    assert.equal(lost.length, 0,
+      `${municipality.name} 第${meeting.meeting}回: 読み替えで${lost.length}行が落ちています「${lost[0]?.slice(0, 40) ?? ""}」`);
+  }
+}
+
+// ---- 言葉の説明は用語集と共有していること ------------------------------------
+// 同じ言葉の説明が2か所にあると必ず食い違う。
+const glossary = read("data/glossary-data.js");
+assert.ok(glossary.includes("window.GLOSSARY"), "用語データが共有の形になっていません");
+assert.ok(read("terms.js").includes("window.GLOSSARY"), "用語集ページが共有データを読んでいません");
+assert.ok(!/const terms=\[\n\{id:/.test(read("terms.js")), "用語集ページに用語が直接書かれたままです");
+for (const page of [...data.municipalities.map(item => item.page), "terms.html"]) {
+  assert.ok(read(page).includes("data/glossary-data.js"), `${page} が用語データを読み込んでいません`);
+}
+
 // ---- 導線 ---------------------------------------------------------------------
 const orgSite = read("org-site.js");
 for (const municipality of data.municipalities) {
@@ -112,4 +166,5 @@ for (const municipality of data.municipalities) {
 const total = data.municipalities.reduce((sum, item) => sum + item.meetings.length, 0);
 const figures = data.municipalities.reduce(
   (sum, item) => sum + item.meetings.filter(meeting => Object.keys(meeting.figures || {}).length).length, 0);
-console.log(`市町村の本部会議: ${data.municipalities.length}市 ${total}回（数値あり${figures}回）/ 出典・数え方の分離・補完なし・自動更新・導線 OK`);
+const blocks = data.municipalities.reduce((sum, item) => sum + item.meetings.reduce((n, meeting) => n + (meeting.blocks || []).length, 0), 0);
+console.log(`市町村の本部会議: ${data.municipalities.length}市 ${total}回・${blocks}項目（数値あり${figures}回）/ 出典・数え方の分離・原文どおり・行の欠落なし・用語集と共有・自動更新・導線 OK`);
