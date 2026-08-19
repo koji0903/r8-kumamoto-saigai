@@ -99,11 +99,141 @@
       .map(meeting => ({ meeting: meeting.meeting, date: meeting.date, value: meeting.figures[key] }));
   }
   const latestFigure = key => series(key).at(-1) || null;
+
+  // ---- 時間軸 ---------------------------------------------------------------
+  // 会議の「回」ではなく「日付」で並べる。回を等間隔に並べると、1日に3回
+  // 開かれた日も、2日空いた区間も同じ幅になり、状況の動きが読めなくなる。
+  const DAY_MS = 86400000;
+  const dayOf = date => Math.round(
+    (Date.parse(`${date}T00:00:00+09:00`) - Date.parse(`${data.disasterDate}T00:00:00+09:00`)) / DAY_MS) + 1;
+  const lastDay = dayOf(last.date);
+  // 同じ日に複数回開かれた日は、その日の最後の回（＝その日の締めの数字）を使う
+  const byDate = points => {
+    const map = new Map();
+    for (const point of points) map.set(point.date, point);
+    return [...map.values()].sort((a, b) => a.date.localeCompare(b.date));
+  };
+
+  // SVGの塗りにはCSS変数が使えない場面があるので、色は表で持つ（CSSと同じ値）
+  const TONE_COLOR = {
+    shelter: "#0f766e", home: "#b26a12", lifeline: "#1f6ea8",
+    support: "#4f8f2f", people: "#b2436c", city: "#5f57a0", other: "#5c6d68"
+  };
+  const colorOf = id => TONE_COLOR[id] || TONE_COLOR.other;
+
+  const CHART = { width: 720, height: 190, left: 52, right: 14, top: 16, bottom: 34 };
+  const plotX = (index, left = CHART.left) =>
+    left + ((index - 1) / Math.max(1, lastDay - 1)) * (CHART.width - left - CHART.right);
+  const plotY = (value, peak) => CHART.top + (1 - value / (peak || 1)) * (CHART.height - CHART.top - CHART.bottom);
+
+  // 横軸の目盛り。発災1日目を起点に7日ごと＋最終日
+  const axisTicks = () => {
+    const marks = [];
+    for (let index = 1; index <= lastDay; index += 7) marks.push(index);
+    if (marks.at(-1) !== lastDay) marks.push(lastDay);
+    return marks;
+  };
+  const dateOfDay = index => {
+    const date = new Date(Date.parse(`${data.disasterDate}T00:00:00+09:00`) + (index - 1) * DAY_MS);
+    return `${date.getMonth() + 1}/${date.getDate()}`;
+  };
+
+  const niceTop = value => {
+    if (value <= 10) return Math.max(1, value);
+    const scale = 10 ** (String(Math.round(value)).length - 2);
+    return Math.ceil(value / scale) * scale;
+  };
+
+  // 折れ線。会議が2日以上あいた区間は破線にして、間が空いたことを見せる
+  const lineChart = (seriesList, { peak, label, tall }) => {
+    const top = niceTop(peak);
+    const height = tall ? CHART.height + 40 : CHART.height;
+    const bottomY = CHART.top + (height - CHART.top - CHART.bottom);
+    const y = value => CHART.top + (1 - value / top) * (height - CHART.top - CHART.bottom);
+    const grid = [0, top / 2, top].map(value => `
+      <line x1="${CHART.left}" y1="${y(value)}" x2="${CHART.width - CHART.right}" y2="${y(value)}" stroke="#e2eae7"/>
+      <text x="${CHART.left - 8}" y="${y(value) + 4}" text-anchor="end" class="hq-axis">${num(Math.round(value))}</text>`).join("");
+    const ticks = axisTicks().map(index => `
+      <text x="${plotX(index)}" y="${bottomY + 18}" text-anchor="middle" class="hq-axis">${dateOfDay(index)}</text>
+      <text x="${plotX(index)}" y="${bottomY + 30}" text-anchor="middle" class="hq-axis hq-axis-day">${index}日目</text>`).join("");
+    const paths = seriesList.map(item => {
+      const points = byDate(item.points);
+      const segments = points.slice(1).map((point, order) => {
+        const previous = points[order];
+        const gap = dayOf(point.date) - dayOf(previous.date);
+        return `<line x1="${plotX(dayOf(previous.date))}" y1="${y(previous.value)}" x2="${plotX(dayOf(point.date))}" y2="${y(point.value)}"
+          stroke="${item.color}" stroke-width="2.5" stroke-linecap="round"${gap > 1 ? ' stroke-dasharray="3 4"' : ""}/>`;
+      }).join("");
+      const dots = points.map(point =>
+        `<circle cx="${plotX(dayOf(point.date))}" cy="${y(point.value)}" r="3.5" fill="${item.color}"><title>${dateOfDay(dayOf(point.date))} ${num(point.value)}</title></circle>`).join("");
+      return segments + dots;
+    }).join("");
+    // 狭い画面では図を縮めず、箱ごと横に送れるようにする（縮めると軸の文字が
+    // 5px相当まで潰れて読めなくなる）
+    return `<div class="hq-chart-scroll"><svg viewBox="0 0 ${CHART.width} ${height}" class="hq-chart" role="img" aria-label="${esc(label)}">
+      ${grid}${ticks}${paths}
+    </svg></div>`;
+  };
   // 数字も本文も無い関心事は出さない（空の見出しが並ぶと探しにくくなる）
   const themes = (data.themes || []).filter(theme =>
     METRICS.some(metric => metric.theme === theme.id && series(metric.key).length)
     || municipality.meetings.some(meeting => (meeting.blocks || []).some(block => block.theme === theme.id)));
 
+
+  // 会議の開かれ方そのものが、市の動きの段階を表す。1日に何回開いたかを
+  // 日付軸の棒で出し、開かれなかった日は空けたままにする。
+  const meetingsByDay = new Map();
+  for (const meeting of meetings) meetingsByDay.set(dayOf(meeting.date), (meetingsByDay.get(dayOf(meeting.date)) || 0) + 1);
+  const cadenceChart = () => {
+    const height = 130, bottomY = height - 34, maxCount = Math.max(...meetingsByDay.values());
+    const barWidth = Math.max(4, (CHART.width - CHART.left - CHART.right) / lastDay - 3);
+    const bars = [];
+    for (let index = 1; index <= lastDay; index += 1) {
+      const count = meetingsByDay.get(index) || 0;
+      const barHeight = count ? (count / maxCount) * (bottomY - CHART.top) : 0;
+      bars.push(count
+        ? `<rect x="${plotX(index) - barWidth / 2}" y="${bottomY - barHeight}" width="${barWidth}" height="${barHeight}" rx="2" fill="var(--tone)"><title>${dateOfDay(index)} ${count}回</title></rect>`
+        : `<rect x="${plotX(index) - barWidth / 2}" y="${bottomY - 3}" width="${barWidth}" height="3" rx="1.5" fill="#e2eae7"><title>${dateOfDay(index)} 開催なし</title></rect>`);
+    }
+    const ticks = axisTicks().map(index => `
+      <text x="${plotX(index)}" y="${bottomY + 18}" text-anchor="middle" class="hq-axis">${dateOfDay(index)}</text>
+      <text x="${plotX(index)}" y="${bottomY + 30}" text-anchor="middle" class="hq-axis hq-axis-day">${index}日目</text>`).join("");
+    return `<div class="hq-chart-scroll"><svg viewBox="0 0 ${CHART.width} ${height}" class="hq-chart" role="img" aria-label="日ごとの会議の開催回数">
+      <line x1="${CHART.left}" y1="${bottomY}" x2="${CHART.width - CHART.right}" y2="${bottomY}" stroke="#e2eae7"/>
+      ${bars.join("")}${ticks}</svg></div>`;
+  };
+
+  // どの話題が、いつ資料に載っていたか。市の検討内容の移り変わりを見るための帯。
+  const themeDays = new Map();
+  for (const meeting of withText) {
+    for (const block of meeting.blocks || []) {
+      if (!block.theme) continue;
+      if (!themeDays.has(block.theme)) themeDays.set(block.theme, new Set());
+      themeDays.get(block.theme).add(dayOf(meeting.date));
+    }
+  }
+  const topicStrip = () => {
+    const rows = themes.filter(theme => themeDays.has(theme.id));
+    // 話題名は「水・電気・ごみ・交通」まであるので、左の余白を広く取る
+    const left = 132;
+    const rowHeight = 30, height = rows.length * rowHeight + 40;
+    const cellWidth = Math.max(4, (CHART.width - left - CHART.right) / lastDay - 2);
+    const body = rows.map((theme, order) => {
+      const y = 10 + order * rowHeight;
+      const cells = [];
+      for (let index = 1; index <= lastDay; index += 1) {
+        const on = themeDays.get(theme.id).has(index);
+        cells.push(`<rect x="${plotX(index, left) - cellWidth / 2}" y="${y}" width="${cellWidth}" height="18" rx="3"
+          fill="${on ? colorOf(theme.id) : "#eef2f1"}"><title>${dateOfDay(index)} ${esc(theme.label)}${on ? "：資料に記載あり" : "：記載なし"}</title></rect>`);
+      }
+      return `<text x="${left - 10}" y="${y + 13}" text-anchor="end" class="hq-axis hq-axis-row">${esc(theme.label)}</text>${cells.join("")}`;
+    }).join("");
+    const bottomY = 10 + rows.length * rowHeight;
+    const ticks = axisTicks().map(index => `
+      <text x="${plotX(index, left)}" y="${bottomY + 14}" text-anchor="middle" class="hq-axis">${dateOfDay(index)}</text>
+      <text x="${plotX(index, left)}" y="${bottomY + 26}" text-anchor="middle" class="hq-axis hq-axis-day">${index}日目</text>`).join("");
+    return `<div class="hq-chart-scroll"><svg viewBox="0 0 ${CHART.width} ${height}" class="hq-chart hq-chart-strip" role="img" aria-label="話題ごとに、資料へ載っていた日">${body}${ticks}</svg></div>`;
+  };
 
   // ---- 見出し ---------------------------------------------------------------
   $("#hqTitle").textContent = `${municipality.name}の災害対策本部会議`;
@@ -166,6 +296,114 @@
     </article>`).join("");
   $("#hqNowWhen").textContent = `第${last.meeting}回（${day(last.date)}${last.time ? ` ${last.time}` : ""}）の資料より`;
 
+  // ---- 時間の流れで見る -----------------------------------------------------
+  // 「第何回」ではなく「発災から何日目」で並べる。回を等間隔に並べると、
+  // 1日に3回開かれた日も2日空いた区間も同じ幅になり、動きが読めなくなる。
+  const charts = [];
+  const evacueeSeries = series("evacuees");
+  if (evacueeSeries.length >= 2) {
+    const peak = evacueeSeries.reduce((best, point) => point.value > best.value ? point : best, evacueeSeries[0]);
+    const now = evacueeSeries.at(-1);
+    charts.push({
+      theme: "shelter", title: "避難している人の数",
+      lead: `発災${dayOf(peak.date)}日目（${day(peak.date)}）の${num(peak.value)}人がいちばん多く、`
+        + `${dayOf(now.date)}日目（${day(now.date)}）は${num(now.value)}人です。`
+        + `いちばん多かったときの${Math.round((now.value / peak.value) * 100)}%にあたります。`,
+      svg: lineChart([{ points: evacueeSeries, color: colorOf("shelter") }],
+        { peak: Math.max(...evacueeSeries.map(point => point.value)), label: `避難者数の推移。発災${dayOf(evacueeSeries[0].date)}日目${num(evacueeSeries[0].value)}人から${dayOf(now.date)}日目${num(now.value)}人へ`, tall: true })
+    });
+  }
+  const shelterSeries = series("shelters");
+  if (shelterSeries.length >= 2) {
+    const peak = shelterSeries.reduce((best, point) => point.value > best.value ? point : best, shelterSeries[0]);
+    const now = shelterSeries.at(-1);
+    charts.push({
+      theme: "shelter", title: "開いている避難所の数",
+      lead: `発災${dayOf(peak.date)}日目（${day(peak.date)}）の${num(peak.value)}か所から、`
+        + `${dayOf(now.date)}日目（${day(now.date)}）は${num(now.value)}か所になりました。`
+        + "避難所は少しずつ閉じて集約されていきます。行く前に市の最新の開設状況をご確認ください。",
+      svg: lineChart([{ points: shelterSeries, color: colorOf("shelter") }],
+        { peak: peak.value, label: `開設避難所数の推移。発災${dayOf(peak.date)}日目${num(peak.value)}か所から${dayOf(now.date)}日目${num(now.value)}か所へ`, tall: true })
+    });
+  }
+  const applySeries = series("certificateApplications"), issueSeries = series("certificateIssued");
+  if (applySeries.length >= 2 && issueSeries.length >= 2) {
+    const start = applySeries[0], nowApply = applySeries.at(-1), nowIssue = issueSeries.at(-1);
+    charts.push({
+      theme: "home", title: "り災証明の申請と交付",
+      lead: `申請の件数が資料に載り始めたのは発災${dayOf(start.date)}日目（${day(start.date)}）です。`
+        + `${dayOf(nowApply.date)}日目には申請${num(nowApply.value)}件・交付${num(nowIssue.value)}件。`
+        + `2本の線の開きが、証明書を待っている人の数です。`,
+      legend: [["申請", colorOf("home")], ["交付", "#e0a94f"]],
+      svg: lineChart([
+        { points: applySeries, color: colorOf("home") },
+        { points: issueSeries, color: "#e0a94f" }
+      ], { peak: Math.max(...applySeries.map(point => point.value)), label: `り災証明の申請と交付の推移。${dayOf(nowApply.date)}日目で申請${num(nowApply.value)}件・交付${num(nowIssue.value)}件`, tall: true })
+    });
+  }
+  const breakdown = [["homesFull", "全壊"], ["homesPartial", "一部損壊"], ["homesUnclassified", "分類未確定"]]
+    .map(([key, label], order) => ({ key, label, points: series(key), color: [colorOf("home"), "#e0a94f", "#c7b299"][order] }))
+    .filter(item => item.points.length >= 2);
+  if (breakdown.length >= 2) {
+    const unclassified = breakdown.find(item => item.key === "homesUnclassified");
+    charts.push({
+      theme: "home", title: "住家被害の内訳が決まっていく動き",
+      lead: unclassified
+        ? `区分がまだ決まっていないものは、発災${dayOf(unclassified.points[0].date)}日目の${num(unclassified.points[0].value)}件から`
+          + `${dayOf(unclassified.points.at(-1).date)}日目の${num(unclassified.points.at(-1).value)}件へ減りました。`
+          + "総数が動かないまま内訳だけが移っていくのは、判定が進んでいるためです。"
+        : "区分ごとの件数の移り変わりです。",
+      legend: breakdown.map(item => [item.label, item.color]),
+      svg: lineChart(breakdown, { peak: Math.max(...breakdown.flatMap(item => item.points.map(point => point.value))), label: "住家被害の区分ごとの推移", tall: true })
+    });
+  }
+  $("#hqCharts").innerHTML = charts.map(chart => `
+    <article class="hq-chart-card tone-${esc(chart.theme)}">
+      <h3>${esc(chart.title)}</h3>
+      <p>${esc(chart.lead)}</p>
+      ${chart.legend ? `<p class="hq-legend">${chart.legend.map(([label, color]) => `<span><i style="background:${color}"></i>${esc(label)}</span>`).join("")}</p>` : ""}
+      ${chart.svg}
+    </article>`).join("");
+
+  // 会議の開かれ方
+  const busiest = [...meetingsByDay].reduce((best, item) => item[1] > best[1] ? item : best, [0, 0]);
+  const missing = [];
+  for (let index = dayOf(first.date); index <= lastDay; index += 1) if (!meetingsByDay.has(index)) missing.push(index);
+  $("#hqCadence").innerHTML = `
+    <p>${esc(`発災${dayOf(first.date)}日目から${lastDay}日目までの${lastDay - dayOf(first.date) + 1}日間に${meetings.length}回。`
+      + `いちばん多い日は${busiest[0] === 1 ? "発災当日" : `発災${busiest[0]}日目`}（${dateOfDay(busiest[0])}）の${busiest[1]}回です。`
+      + (missing.length
+        ? `開催がなかったのは${missing.map(index => `${dateOfDay(index)}（発災${index}日目）`).join("・")}の${missing.length}日です。`
+        : "いまのところ、開催がなかった日はありません。"))}</p>
+    ${cadenceChart()}
+    <p class="hq-chart-note">棒の高さはその日の開催回数、細い線は開催のなかった日です。開く回数そのものが、市の対応の段階を表します。</p>`;
+
+  // 話題の移り変わり
+  // 「いつからいつまで」だけだと、どの話題もだいたい同じ答えになって情報に
+  // ならない。会議のあった日のうち何日載ったか、直近はどうかで濃さを示す。
+  const meetingDays = [...new Set(withText.map(meeting => dayOf(meeting.date)))].sort((a, b) => a - b);
+  const recentDays = meetingDays.slice(-7);
+  const spans = [...themeDays].map(([id, days]) => {
+    const sorted = [...days].sort((a, b) => a - b);
+    const theme = themes.find(item => item.id === id);
+    const items = withText.reduce((sum, meeting) =>
+      sum + (meeting.blocks || []).filter(block => block.theme === id).length, 0);
+    return {
+      id, label: theme?.label || id, from: sorted[0], to: sorted.at(-1),
+      days: sorted.length, items,
+      recent: recentDays.filter(dayIndex => days.has(dayIndex)).length
+    };
+  }).sort((a, b) => b.recent - a.recent || b.days - a.days);
+  $("#hqTopics").innerHTML = `
+    ${topicStrip()}
+    <ul class="hq-spans">${spans.map(span => `<li class="tone-${esc(span.id)}">
+      <b>${esc(span.label)}</b>
+      <span>会議のあった${meetingDays.length}日のうち<b>${span.days}日</b>に記載（項目${num(span.items)}件）。
+      直近${recentDays.length}日では${span.recent}日。
+      発災${span.from}日目（${dateOfDay(span.from)}）から${span.to === lastDay ? "いまも" : `${span.to}日目（${dateOfDay(span.to)}）まで`}。</span>
+    </li>`).join("")}</ul>
+    <p class="hq-chart-note">色が付いた日は、その話題が資料に載っていた日です。載らない日があるのは、その日の資料に記載がなかったということで、対応が止まったという意味ではありません。</p>`;
+
   // ---- 知りたいことから -----------------------------------------------------
   $("#hqThemeNav").innerHTML = themes.map(theme => `
     <a href="#theme-${esc(theme.id)}" class="tone-${esc(theme.id)}">
@@ -173,13 +411,27 @@
     </a>`).join("");
 
   // ---- 関心事ごとのまとまり -------------------------------------------------
-  const sparkline = (points, unit) => {
-    const peak = Math.max(...points.map(point => point.value)) || 1;
-    return points.map(point => {
-      const height = Math.max(3, Math.round((point.value / peak) * 100));
-      return `<span style="height:${height}%" title="第${point.meeting}回 ${day(point.date)} ${num(point.value)}${unit}"></span>`;
+  // 小さな推移も日付軸で描く。棒を回ごとに等間隔に並べると、1日3回の日と
+  // 2日空いた区間が同じ幅になり、時間の流れが読めなくなる。
+  const miniChart = (points, { color, unit }) => {
+    const width = 260, height = 54, peak = Math.max(...points.map(point => point.value)) || 1;
+    const at = point => ({
+      x: 3 + ((dayOf(point.date) - 1) / Math.max(1, lastDay - 1)) * (width - 6),
+      y: 5 + (1 - point.value / peak) * (height - 10)
+    });
+    const daily = byDate(points);
+    const segments = daily.slice(1).map((point, order) => {
+      const previous = daily[order], a = at(previous), b = at(point);
+      const gap = dayOf(point.date) - dayOf(previous.date);
+      return `<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="${color}" stroke-width="2" stroke-linecap="round"${gap > 1 ? ' stroke-dasharray="2 3"' : ""}/>`;
     }).join("");
+    const dots = daily.map(point => {
+      const spot = at(point);
+      return `<circle cx="${spot.x}" cy="${spot.y}" r="2.4" fill="${color}"><title>${dateOfDay(dayOf(point.date))} ${num(point.value)}${unit}</title></circle>`;
+    }).join("");
+    return `<svg viewBox="0 0 ${width} ${height}" class="hq-mini" role="img" aria-label="発災${dayOf(daily[0].date)}日目${num(daily[0].value)}${unit}から${dayOf(daily.at(-1).date)}日目${num(daily.at(-1).value)}${unit}までの推移">${segments}${dots}</svg>`;
   };
+
   const metricCard = metric => {
     const points = series(metric.key);
     if (points.length < 1) return "";
@@ -189,10 +441,10 @@
       <article class="hq-metric${metric.lead ? " is-lead" : ""}">
         <h4>${esc(metric.label)}</h4>
         <p class="hq-metric-latest"><b>${num(latest.value)}</b><small>${esc(metric.unit)}</small></p>
-        <p class="hq-metric-when">第${latest.meeting}回（${day(latest.date)}）時点</p>
-        ${points.length >= 2 ? `<div class="hq-spark" role="img" aria-label="第${points[0].meeting}回${num(points[0].value)}${metric.unit}から第${latest.meeting}回${num(latest.value)}${metric.unit}まで">${sparkline(points, metric.unit)}</div>` : ""}
+        <p class="hq-metric-when">発災${dayOf(latest.date)}日目（${day(latest.date)}）時点・第${latest.meeting}回</p>
+        ${points.length >= 2 ? miniChart(points, { color: colorOf(metric.theme), unit: metric.unit }) : ""}
         ${points.length >= 2 ? `<dl class="hq-metric-range">
-          <div><dt>はじめ</dt><dd>${num(points[0].value)}</dd></div>
+          <div><dt>はじめ</dt><dd>発災${dayOf(points[0].date)}日目 ${num(points[0].value)}</dd></div>
           <div><dt>いちばん多いとき</dt><dd>${num(peak)}</dd></div>
           <div><dt>資料に記載</dt><dd>${points.length}回${missing > 0 ? `<small>／${missing}回はなし</small>` : ""}</dd></div>
         </dl>` : ""}
@@ -281,18 +533,23 @@
       // 項目名として並べるので、末尾の件数は落とす（数字は変化の行で見せる）
       .map(block => headOf(block.title).replace(/\s*計?\s*[0-9０-９,，]+\s*[件棟人名か世]\S*.*$/, "").trim() || headOf(block.title));
     if (!moved.length && !fresh.length) continue;
-    changeRows.push({ meeting: current, moved, fresh });
+    changeRows.push({ meeting: current, moved, fresh, gap: dayOf(current.date) - dayOf(previous.date) });
   }
   $("#hqChanges").innerHTML = [...changeRows].reverse().map(row => `
     <li>
-      <div class="hq-change-when"><b>${day(row.meeting.date)}</b><span>第${row.meeting.meeting}回</span></div>
+      <div class="hq-change-when">
+        <b>発災${dayOf(row.meeting.date)}日目</b>
+        <span>${day(row.meeting.date)}・第${row.meeting.meeting}回</span>
+        ${row.gap > 1 ? `<i>前の会議から${row.gap}日</i>` : ""}
+      </div>
       <div class="hq-change-body">
         ${row.moved.length ? `<ul class="hq-change-moved">${row.moved.map(text => `<li>${esc(text)}</li>`).join("")}</ul>` : ""}
         ${row.fresh.length ? `<p class="hq-change-fresh"><b>この回から新しく載った項目</b>${row.fresh.map(title => `<span>${esc(title)}</span>`).join("")}</p>` : ""}
       </div>
     </li>`).join("");
   $("#hqChangesLead").textContent = changeRows.length
-    ? `資料に載った数字が前の回から動いたところと、その回から新しく出てきた項目を並べています。${changeRows.length}回ぶん。`
+    ? `発災からの日数で並べています。資料に載った数字が前の回から動いたところと、その回から新しく出てきた項目です。`
+      + `${changeRows.length}回ぶん。会議が2日以上あいたところは、間隔も書き添えています。`
     : "前の回と比べられる数字がまだありません。";
 
   // ---- 言葉の説明 -----------------------------------------------------------

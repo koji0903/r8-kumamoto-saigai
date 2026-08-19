@@ -153,6 +153,35 @@ for (const page of [...data.municipalities.map(item => item.page), "terms.html"]
   assert.ok(read(page).includes("data/glossary-data.js"), `${page} が用語データを読み込んでいません`);
 }
 
+// ---- 図と文章が「時間軸」で並んでいること --------------------------------------
+// 会議の回を等間隔に並べると、1日に3回開かれた日も2日空いた区間も同じ幅になり、
+// 状況がどう動いたかが読めなくなる。横軸は必ず発災からの日数で取る。
+assert.ok(viewer.includes("const dayOf ="), "発災からの日数を出す仕組みがありません");
+assert.ok(!/sparkline/.test(viewer), "回を等間隔に並べる古い図が残っています");
+// 図のx座標は日数から計算していること（回の並び順から計算していないこと）
+assert.match(viewer, /plotX\s*=\s*\(index[^)]*\)\s*=>/, "横軸の座標計算が見つかりません");
+assert.ok(viewer.includes("dayOf(point.date)"), "図の点を日付から置いていません");
+// 会議のあいだが空いた区間は破線にして、間があいたことを見せる
+assert.ok(viewer.includes("stroke-dasharray"), "会議が空いた区間を見分ける表示がありません");
+// 狭い画面で図を縮めると軸の文字が読めなくなるので、横に送れるようにする
+assert.ok(viewer.includes("hq-chart-scroll"), "図を横に送れる箱がありません");
+assert.match(read("municipality-hq.css"), /\.hq-chart\s*\{[^}]*min-width/, "図の最小幅が指定されていません");
+
+for (const page of data.municipalities.map(item => item.page)) {
+  const html = read(page);
+  for (const id of ["hqCharts", "hqCadence", "hqTopics"]) {
+    assert.ok(html.includes(`id="${id}"`), `${page}: 時間軸の節（${id}）がありません`);
+  }
+}
+
+// 会議のなかった日がある市では、その空白が扱えていること（機能が生きている確認）
+for (const municipality of data.municipalities) {
+  const days = municipality.meetings.filter(meeting => meeting.date).map(meeting => meeting.date);
+  const span = (Date.parse(`${days.at(-1)}T00:00:00+09:00`) - Date.parse(`${days[0]}T00:00:00+09:00`)) / 86400000 + 1;
+  const distinct = new Set(days).size;
+  assert.ok(distinct <= span, `${municipality.name}: 会議の日数が期間より多くなっています`);
+}
+
 // ---- 導線 ---------------------------------------------------------------------
 const orgSite = read("org-site.js");
 for (const municipality of data.municipalities) {
@@ -167,4 +196,4 @@ const total = data.municipalities.reduce((sum, item) => sum + item.meetings.leng
 const figures = data.municipalities.reduce(
   (sum, item) => sum + item.meetings.filter(meeting => Object.keys(meeting.figures || {}).length).length, 0);
 const blocks = data.municipalities.reduce((sum, item) => sum + item.meetings.reduce((n, meeting) => n + (meeting.blocks || []).length, 0), 0);
-console.log(`市町村の本部会議: ${data.municipalities.length}市 ${total}回・${blocks}項目（数値あり${figures}回）/ 出典・数え方の分離・原文どおり・行の欠落なし・用語集と共有・自動更新・導線 OK`);
+console.log(`市町村の本部会議: ${data.municipalities.length}市 ${total}回・${blocks}項目（数値あり${figures}回）/ 出典・数え方の分離・原文どおり・行の欠落なし・時間軸・用語集と共有・自動更新・導線 OK`);

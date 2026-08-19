@@ -86,10 +86,6 @@
 .hq-metric-latest small { font-size: 14px; color: var(--hq-muted); }
 .hq-metric-when { margin: 6px 0 14px; font-size: 13px; color: var(--hq-muted); }
 
-.hq-spark { display: flex; align-items: flex-end; gap: 2px; height: 52px; margin: 0 0 14px; }
-.hq-spark span { flex: 1 1 0; min-width: 3px; background: var(--tone); opacity: .45; border-radius: 2px 2px 0 0; }
-.hq-spark span:last-child { opacity: 1; }
-
 .hq-metric-range { display: flex; flex-wrap: wrap; gap: 16px; margin: 0; font-size: 13px; }
 .hq-metric-range dt { color: var(--hq-muted); margin: 0 0 3px; }
 .hq-metric-range dd { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; }
@@ -105,12 +101,41 @@
 .hq-block-hint { margin: 0 0 10px; font-size: 14px; line-height: 1.9; color: var(--hq-muted); background: var(--tone-soft); border-radius: 8px; padding: 10px 14px; }
 .hq-block-text { margin: 0; font-size: 15.5px; line-height: 2.05; white-space: normal; }
 
+/* ---- 時間の流れ ---------------------------------------------------------- */
+.hq-sub { font-size: clamp(19px, 2.4vw, 23px); margin: 0 0 16px; }
+.hq-charts { display: grid; gap: 20px; }
+.hq-chart-card { border: 1px solid var(--hq-line); border-left: 6px solid var(--tone); border-radius: 14px; padding: 24px 26px; background: var(--hq-paper); }
+.hq-chart-card h3 { font-size: 20px; margin: 0 0 10px; color: var(--tone-ink); }
+.hq-chart-card > p { margin: 0 0 14px; font-size: 15.5px; line-height: 1.95; }
+/* 図は縮めない。狭い画面では箱ごと横に送る（縮めると軸の文字が読めなくなる） */
+.hq-chart-scroll { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; margin: 0 -4px; padding: 0 4px; }
+.hq-chart { width: 100%; min-width: 860px; height: auto; display: block; overflow: visible; }
+.hq-chart .hq-axis { font-size: 12px; fill: #5c716c; }
+.hq-chart .hq-axis-day { font-size: 11px; fill: #8a9d99; }
+.hq-chart .hq-axis-row { font-size: 12px; fill: #3d534e; font-weight: 700; }
+.hq-chart-note { margin: 12px 0 0; font-size: 13.5px; line-height: 1.85; color: var(--hq-muted); }
+.hq-legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 0 0 12px; font-size: 14px; }
+.hq-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.hq-legend i { width: 16px; height: 3px; border-radius: 2px; }
+
+.hq-cadence, .hq-topics { border: 1px solid var(--hq-line); border-radius: 14px; padding: 22px 24px; background: var(--hq-paper); }
+.hq-cadence > p { margin: 0 0 16px; font-size: 15.5px; line-height: 1.95; }
+
+.hq-spans { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+.hq-spans li { border-left: 4px solid var(--tone); background: var(--tone-soft); border-radius: 0 10px 10px 0; padding: 10px 14px; }
+.hq-spans b { display: block; font-size: 15px; color: var(--tone-ink); }
+.hq-spans span { display: block; font-size: 13.5px; color: var(--hq-muted); margin-top: 3px; line-height: 1.7; }
+
+/* カード内の小さな推移も日付軸。線が途切れているところは会議のなかった日 */
+.hq-mini { width: 100%; height: auto; display: block; margin: 0 0 14px; }
+
 /* ---- 日ごとの変化 -------------------------------------------------------- */
 .hq-changes { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
-.hq-changes li { display: grid; grid-template-columns: 120px 1fr; gap: 20px; padding: 20px 0; border-top: 1px solid var(--hq-line); }
+.hq-changes li { display: grid; grid-template-columns: 140px 1fr; gap: 20px; padding: 20px 0; border-top: 1px solid var(--hq-line); }
 .hq-changes li:first-child { border-top: none; }
 .hq-change-when b { display: block; font-size: 17px; }
 .hq-change-when span { display: block; font-size: 13px; color: var(--hq-muted); margin-top: 3px; }
+.hq-change-when i { display: inline-block; font-style: normal; font-size: 12.5px; margin-top: 6px; padding: 2px 8px; border-radius: 999px; background: #f0eefa; color: #4a4380; }
 .hq-change-moved { margin: 0; padding: 0; list-style: none; display: grid; gap: 7px; }
 /* 折り返した2行目が行頭に戻らないよう、印のぶんだけ下げる */
 .hq-change-moved li { display: block; padding: 0 0 0 1.1em; text-indent: -1.1em; border: none; font-size: 15.5px; line-height: 1.85; }
