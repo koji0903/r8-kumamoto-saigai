@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-19T19:17:06.423Z",
+  "generatedAt": "2026-08-19T22:00:56.541Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-19T18:56:50.115Z",
-    "inputCount": 707,
-    "classifiedPageCount": 586,
-    "displayCandidateCount": 489,
+    "generatedAt": "2026-08-19T21:44:35.764Z",
+    "inputCount": 706,
+    "classifiedPageCount": 585,
+    "displayCandidateCount": 488,
     "deltaFromPrevious": {
-      "inputCount": 2,
-      "classifiedPageCount": 2,
+      "inputCount": -1,
+      "classifiedPageCount": -1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 9,
+      "ageHours": 12,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 65,
-        "displayCandidates": 60,
+        "classified": 64,
+        "displayCandidates": 59,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -180,14 +180,14 @@
         "low": 0
       },
       "daily_life": {
-        "total": 203,
-        "high": 66,
+        "total": 202,
+        "high": 65,
         "medium": 133,
         "low": 4
       }
     },
     "confidence": {
-      "high": 213,
+      "high": 212,
       "medium": 276,
       "low": 97
     },
@@ -294,11 +294,6 @@
       "count": 1
     },
     {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kashima",
-      "count": 1
-    },
-    {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_mashiki",
       "message": "継続回数を確認後に表示除外を判断してください"
@@ -316,7 +311,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 3
+      "count": 1
     }
   ],
   "strictSources": {
