@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-19T15:49:43.700Z",
+  "generatedAt": "2026-08-19T18:56:50.115Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 705,
-  "displayCandidateCount": 487,
-  "classifiedPageCount": 584,
+  "inputCount": 707,
+  "displayCandidateCount": 489,
+  "classifiedPageCount": 586,
   "categoryReport": {
     "home": {
       "total": 135,
@@ -13,9 +13,9 @@
       "low": 37
     },
     "money": {
-      "total": 153,
+      "total": 154,
       "high": 25,
-      "medium": 46,
+      "medium": 47,
       "low": 82
     },
     "documents": {
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 202,
-      "high": 65,
+      "total": 203,
+      "high": 66,
       "medium": 133,
       "low": 4
     }
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 64,
-      "displayCandidates": 59,
+      "classified": 65,
+      "displayCandidates": 60,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -142,8 +142,8 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 29,
-      "displayCandidates": 26,
+      "classified": 30,
+      "displayCandidates": 27,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 212,
-    "medium": 275,
+    "high": 213,
+    "medium": 276,
     "low": 97
   },
   "unclassifiedCount": 6,
@@ -817,7 +817,7 @@
     "non_official_url": 2,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 12,
+  "warningCount": 13,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -860,6 +860,11 @@
       "count": 1
     },
     {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kashima",
+      "count": 1
+    },
+    {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_mashiki",
       "message": "継続回数を確認後に表示除外を判断してください"
@@ -877,9 +882,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 4
+      "count": 3
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 588
+  "previousClassifiedPageCount": 584
 }
