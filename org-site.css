@@ -292,6 +292,14 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
   .home-motion-ready .information-path i{transform:rotate(90deg) scaleX(0)}
   .home-motion-ready .home-information-v2.is-visible .information-path i{transform:rotate(90deg) scaleX(1)}
 }
+
+/* 支援者向け注意枠は2つの確認先を1つの操作グループとして扱う。 */
+.page-supporters .audience-alert-actions{display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:210px}
+.page-supporters .audience-alert-actions a{display:inline-flex;align-items:center;min-height:34px;white-space:nowrap}
+@media(max-width:800px){
+  .page-supporters .audience-alert-actions{grid-column:1/-1;flex-flow:row wrap;min-width:0}
+  .page-supporters .audience-alert-actions a{white-space:normal}
+}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto!important}
   .home-story *,.home-story *::before,.home-story *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0ms!important}
