@@ -98,7 +98,28 @@
 /* 資料の原文。説明と見分けられるよう地色を敷く */
 .hq-block { border-left: 3px solid var(--tone-soft); padding: 0 0 0 16px; margin: 0 0 20px; }
 .hq-block h4 { font-size: 16.5px; margin: 0 0 6px; color: var(--tone-ink); line-height: 1.6; }
-.hq-block-hint { margin: 0 0 10px; font-size: 14px; line-height: 1.9; color: var(--hq-muted); background: var(--tone-soft); border-radius: 8px; padding: 10px 14px; }
+.page-municipality-hq .hq-block-hint {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px 12px;
+  align-items: baseline;
+  margin: 0 0 12px;
+  padding: 10px 14px;
+  border-left: 3px solid var(--tone);
+  border-radius: 0 8px 8px 0;
+  background: var(--tone-soft);
+  color: var(--hq-muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+.page-municipality-hq .hq-block-hint::before {
+  content: "読み方の補足";
+  color: var(--tone-ink);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  white-space: nowrap;
+}
 .hq-block-text { margin: 0; font-size: 15.5px; line-height: 2.05; white-space: normal; }
 
 /* ---- 時間の流れ ---------------------------------------------------------- */
@@ -203,6 +224,7 @@
   .hq-facts dt { color: var(--hq-muted); font-size: 13.5px; }
   .hq-metric-latest b { font-size: 30px; }
   .hq-now { padding: 20px; }
+  .page-municipality-hq .hq-block-hint { grid-template-columns: 1fr; gap: 3px; }
   .hq-changes li { grid-template-columns: 1fr; gap: 10px; }
   .hq-change-when { display: flex; align-items: baseline; gap: 10px; }
   .hq-change-when span { margin-top: 0; }
