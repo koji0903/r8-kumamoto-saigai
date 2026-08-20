@@ -20,7 +20,8 @@ const specialImages = new Map([
   ["official-water-recovery.html", "/ogp-official-water.png"],
   ["official-response-tracks.html", "/ogp-official-tracks.png"],
   ["hq-kumamoto.html", "/ogp-hq-kumamoto.png"],
-  ["hq-yatsushiro.html", "/ogp-hq-yatsushiro.png"]
+  ["hq-yatsushiro.html", "/ogp-hq-yatsushiro.png"],
+  ["risai-certificate.html", "/ogp-risai-certificate.png"]
 ]);
 const checkOnly = process.argv.includes("--check");
 const stale = [];
@@ -95,3 +96,4 @@ if (sitemap !== currentSitemap) stale.push("sitemap.xml");
 if (!checkOnly) await writeFile(sitemapPath, sitemap);
 if (checkOnly && stale.length) throw new Error(`SEO生成物が未更新です: ${stale.join(", ")}。node tools/build-seo.mjs を実行してください`);
 console.log(`SEOメタ情報 ${files.length}ページ / サイトマップ ${sitemapFiles.length}URL ${checkOnly ? "検査OK" : "を更新"}`);
+execFileSync(process.execPath,["tools/build-site-search.mjs",...(checkOnly?["--check"]:[])],{cwd:root,stdio:"inherit"});

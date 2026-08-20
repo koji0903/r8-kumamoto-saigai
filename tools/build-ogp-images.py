@@ -83,9 +83,17 @@ ART = {
                '<path fill="#93c5fd" stroke="#1d4ed8" d="M52 14 92 44l-9 7-31-24-31 24-9-7Z"/>'
                '<path fill="#fb923c" stroke="#c2410c" d="M44 74V56h16v18"/>'
                '<path fill="#2dd4bf" stroke="#0f766e" d="M100 30c-5 7-8 11-8 15a8 8 0 0 0 16 0c0-4-3-8-8-15Z"/>',
+    "risai": '<path fill="#cbd5e1" stroke="#475569" d="m8 40 30-23 30 23"/><path d="M15 38v36h46V38"/>'
+             '<path fill="#fb923c" stroke="#c2410c" d="M37 17 31 39l11 8-7 27"/>'
+             '<path fill="#fde047" stroke="#a16207" d="M76 12h34v56H76z"/><path d="M84 25h18M84 36h18M84 47h10"/>'
+             '<path fill="#2dd4bf" stroke="#0f766e" d="m84 57 5 5 12-13"/>',
 }
 
 PAGES = [
+    dict(file="risai-certificate.html", out="ogp-risai-certificate.png", tone="teal", art="risai",
+         label="令和8年熊本地震 / 熊本県全域",
+         title="り災証明書を/いちから分かりやすく",
+         lead="写真・調査・判定・支援金・再調査。被災後の流れを絵と大きな文字で説明します。"),
     dict(file="uto-bulletin.html", out="ogp-uto-bulletin.png", tone="blue", art="bulletin",
          label="宇土市の広報を読み解く",
          title="広報うと 災害臨時号vol.1/の読み方",
