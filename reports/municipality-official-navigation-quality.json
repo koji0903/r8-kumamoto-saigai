@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-20T13:15:23.985Z",
+  "generatedAt": "2026-08-20T15:51:44.999Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 710,
-  "displayCandidateCount": 484,
-  "classifiedPageCount": 583,
+  "inputCount": 707,
+  "displayCandidateCount": 482,
+  "classifiedPageCount": 581,
   "categoryReport": {
     "home": {
       "total": 134,
@@ -13,9 +13,9 @@
       "low": 38
     },
     "money": {
-      "total": 161,
+      "total": 162,
       "high": 29,
-      "medium": 46,
+      "medium": 47,
       "low": 86
     },
     "documents": {
@@ -31,9 +31,9 @@
       "low": 0
     },
     "family_education": {
-      "total": 87,
+      "total": 86,
       "high": 5,
-      "medium": 30,
+      "medium": 29,
       "low": 52
     },
     "work_business": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 191,
+      "total": 189,
       "high": 60,
-      "medium": 128,
+      "medium": 126,
       "low": 3
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 128,
-      "displayCandidates": 93,
+      "classified": 126,
+      "displayCandidates": 91,
       "fallback": true
     },
     "municipality_minamata": {
@@ -87,8 +87,8 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 33,
-      "displayCandidates": 27,
+      "classified": 34,
+      "displayCandidates": 28,
       "fallback": true
     },
     "municipality_uki": {
@@ -102,8 +102,8 @@
       "fallback": true
     },
     "municipality_koshi": {
-      "classified": 11,
-      "displayCandidates": 10,
+      "classified": 10,
+      "displayCandidates": 9,
       "fallback": true
     },
     "municipality_misato": {
@@ -164,10 +164,10 @@
   },
   "confidence": {
     "high": 210,
-    "medium": 274,
+    "medium": 272,
     "low": 99
   },
-  "unclassifiedCount": 11,
+  "unclassifiedCount": 10,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -203,11 +203,6 @@
       "municipalityName": "菊池市",
       "title": "2026年08月20日 きくちべんりカーの一部運休について",
       "url": "https://www.city.kikuchi.lg.jp/article/view/2152/19042.html"
-    },
-    {
-      "municipalityName": "上天草市",
-      "title": "令和8年熊本地震により被災された方の旅券(...",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/64/23391.html"
     },
     {
       "municipalityName": "菊陽町",
@@ -592,6 +587,13 @@
     },
     {
       "municipalityName": "上天草市",
+      "title": "小島公園キャンプ場",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/133/159.html",
+      "ruleId": "facility_notice",
+      "ruleLabel": "公共施設の休止・再開・紹介"
+    },
+    {
+      "municipalityName": "上天草市",
       "title": "姫戸白嶽森林公園",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/136/189.html",
       "ruleId": "facility_notice",
@@ -601,13 +603,6 @@
       "municipalityName": "上天草市",
       "title": "龍ヶ岳山頂自然公園キャンプ場",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/133/15601.html",
-      "ruleId": "facility_notice",
-      "ruleLabel": "公共施設の休止・再開・紹介"
-    },
-    {
-      "municipalityName": "上天草市",
-      "title": "小島公園キャンプ場",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/133/159.html",
       "ruleId": "facility_notice",
       "ruleLabel": "公共施設の休止・再開・紹介"
     },
@@ -899,5 +894,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 585
+  "previousClassifiedPageCount": 583
 }
