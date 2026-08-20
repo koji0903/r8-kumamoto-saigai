@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-19T22:00:56.541Z",
+  "generatedAt": "2026-08-20T02:13:55.832Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-19T21:44:35.764Z",
-    "inputCount": 706,
+    "generatedAt": "2026-08-20T01:54:47.027Z",
+    "inputCount": 705,
     "classifiedPageCount": 585,
-    "displayCandidateCount": 488,
+    "displayCandidateCount": 487,
     "deltaFromPrevious": {
       "inputCount": -1,
-      "classifiedPageCount": -1,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 12,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 133,
-        "displayCandidates": 98,
+        "classified": 134,
+        "displayCandidates": 99,
         "fallback": true
       },
       "municipality_minamata": {
@@ -56,8 +56,8 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 51,
-        "displayCandidates": 43,
+        "classified": 50,
+        "displayCandidates": 42,
         "fallback": true
       },
       "municipality_kamiamakusa": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 64,
-        "displayCandidates": 59,
+        "classified": 61,
+        "displayCandidates": 56,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -91,8 +91,8 @@
         "fallback": true
       },
       "municipality_kikuyo": {
-        "classified": 18,
-        "displayCandidates": 11,
+        "classified": 19,
+        "displayCandidates": 12,
         "fallback": true
       },
       "municipality_nishihara": {
@@ -111,12 +111,12 @@
         "fallback": true
       },
       "municipality_mashiki": {
-        "classified": 31,
-        "displayCandidates": 27,
+        "classified": 32,
+        "displayCandidates": 28,
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 30,
+        "classified": 31,
         "displayCandidates": 27,
         "fallback": true
       },
@@ -138,39 +138,39 @@
     },
     "categoryReport": {
       "home": {
-        "total": 135,
-        "high": 54,
+        "total": 131,
+        "high": 51,
         "medium": 44,
-        "low": 37
+        "low": 36
       },
       "money": {
-        "total": 154,
-        "high": 25,
+        "total": 157,
+        "high": 26,
         "medium": 47,
-        "low": 82
+        "low": 84
       },
       "documents": {
-        "total": 129,
-        "high": 32,
+        "total": 125,
+        "high": 31,
         "medium": 28,
-        "low": 69
+        "low": 66
       },
       "health_care": {
-        "total": 42,
-        "high": 18,
-        "medium": 24,
+        "total": 43,
+        "high": 17,
+        "medium": 26,
         "low": 0
       },
       "family_education": {
-        "total": 84,
+        "total": 85,
         "high": 5,
-        "medium": 28,
+        "medium": 29,
         "low": 51
       },
       "work_business": {
-        "total": 30,
+        "total": 29,
         "high": 9,
-        "medium": 21,
+        "medium": 20,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,16 +180,16 @@
         "low": 0
       },
       "daily_life": {
-        "total": 202,
+        "total": 203,
         "high": 65,
-        "medium": 133,
+        "medium": 134,
         "low": 4
       }
     },
     "confidence": {
-      "high": 212,
-      "medium": 276,
-      "low": 97
+      "high": 208,
+      "medium": 279,
+      "low": 98
     },
     "unclassifiedCount": 6,
     "excludedCount": 30,
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:c48863b3eb17a4a4adcd00122c355fcbe29d9454832847771b17282366d4cbf5",
+        "currentHash": "sha256:41077107c88f14cd2fe7584cd26dc827d73db7eb2d450aa7094f36136d05e7ff",
         "verificationStatus": "needs_review"
       }
     },
@@ -247,7 +247,7 @@
         "title": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
         "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
         "previousHash": "sha256:83be58e3c56963e18140658412145c461d5542c4e79c399f4bb85f687ef7beab",
-        "currentHash": "sha256:4df6be4b59fbff73f30923360b86dae753b10aaead98498ed56ee0bb18b65faf",
+        "currentHash": "sha256:f675f04c3845eb530e11d5b27f0bf0673db674a1808231eca708024efa52ab38",
         "verificationStatus": "needs_review"
       }
     }
@@ -281,7 +281,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -302,11 +302,6 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_mashiki",
       "count": 1
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_kosa",
-      "message": "継続回数を確認後に表示除外を判断してください"
     },
     {
       "code": "RETRIEVAL_ISSUE",
@@ -339,7 +334,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:c48863b3eb17a4a4adcd00122c355fcbe29d9454832847771b17282366d4cbf5",
+        "currentHash": "sha256:41077107c88f14cd2fe7584cd26dc827d73db7eb2d450aa7094f36136d05e7ff",
         "verificationStatus": "needs_review"
       },
       {
@@ -355,7 +350,7 @@
         "title": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
         "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
         "previousHash": "sha256:83be58e3c56963e18140658412145c461d5542c4e79c399f4bb85f687ef7beab",
-        "currentHash": "sha256:4df6be4b59fbff73f30923360b86dae753b10aaead98498ed56ee0bb18b65faf",
+        "currentHash": "sha256:f675f04c3845eb530e11d5b27f0bf0673db674a1808231eca708024efa52ab38",
         "verificationStatus": "needs_review"
       }
     ]
