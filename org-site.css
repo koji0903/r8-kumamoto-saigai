@@ -261,7 +261,7 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto!important}
   .home-story *,.home-story *::before,.home-story *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0ms!important}
-  .home-motion-ready .motion-section .motion-item){opacity:1!important;transform:none!important}
+  .home-motion-ready .motion-section .motion-item{opacity:1!important;transform:none!important}
   .home-motion-ready .principle-flow li:not(:last-child)::after,.home-motion-ready .information-path i,.home-motion-ready .history-timeline::before{opacity:1!important;transform:none!important}
 }
 

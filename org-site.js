@@ -31,10 +31,9 @@
   const reconstructionPages=['reconstruction.html','reconstruction-money.html','reconstruction-documents.html','reconstruction-health-care.html','reconstruction-family.html','reconstruction-work-business.html','reconstruction-agriculture-fishery.html','reconstruction-official.html'];
   const activityPages=['timeline.html','meetings.html','official-timeline.html','official-water-recovery.html','official-response-tracks.html','hq-kumamoto.html','hq-yatsushiro.html'];
   const organizationPages=['about.html','join.html','contact.html','privacy.html','accessibility.html'];
-  const noMotionPages=['shelters.html','municipality-updates.html','timeline.html','meetings.html','official-timeline.html','official-water-recovery.html','official-response-tracks.html','volunteer-centers.html','alert-channels.html','privacy.html','accessibility.html','404.html','uto-waste.html','uto-bulletin.html','hq-kumamoto.html','hq-yatsushiro.html'];
   const standardMotionPages=['join.html','contact.html','supporters.html'];
   const storyMotionPages=['index.html','about.html'];
-  const motionPreset=storyMotionPages.includes(path)?'story':noMotionPages.includes(path)?'none':standardMotionPages.includes(path)?'standard':'subtle';
+  const motionPreset=storyMotionPages.includes(path)?'story':standardMotionPages.includes(path)?'standard':'subtle';
   document.body.dataset.motionPreset=motionPreset;
   const active=key=>key==='home'?path==='index.html':key==='support'?supportPages.includes(path):key==='reconstruction'?reconstructionPages.includes(path):key==='activity'?activityPages.includes(path):key==='organization'?organizationPages.includes(path):false;
   const currentAttr=key=>active(key)?' aria-current="page"':'';
@@ -191,13 +190,14 @@
   };
   setupHomeMotion();
   const setupSiteMotion=()=>{
-    if(path==='index.html'||motionPreset==='none'||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    if(path==='index.html'||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
     const main=document.querySelector('main');
     if(!main)return;
-    const candidates=[...main.querySelectorAll(':scope > section')].filter(section=>{
-      if(section.matches('.map-section,.minutes-page,.timeline-page,[aria-live]'))return false;
+    const candidates=[...main.querySelectorAll(':scope > section, :scope > .policy-content, :scope > nav.reading-set')].filter(section=>{
+      if(section.matches('[aria-live]'))return false;
       return section.getBoundingClientRect().height>0;
     });
+    document.documentElement.dataset.motion='enabled';
     const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
       if(!entry.isIntersecting)return;
       entry.target.classList.add('is-revealed');
@@ -209,10 +209,9 @@
         const cards=[...section.querySelectorAll('.org-card,.activity-card,.contact-method,.illustration-card,.join-flow span')].slice(0,6);
         cards.forEach((card,index)=>{card.classList.add('site-stagger-item');card.style.setProperty('--stagger-order',index%3)});
       }
-      if(sectionIndex===0&&section.getBoundingClientRect().top<innerHeight*.9)section.classList.add('is-revealed');
+      if(sectionIndex===0&&section.getBoundingClientRect().top<innerHeight*.9)requestAnimationFrame(()=>requestAnimationFrame(()=>section.classList.add('is-revealed')));
       else observer.observe(section);
     });
-    document.documentElement.dataset.motion='enabled';
   };
   setupSiteMotion();
   const footer=document.querySelector('footer');
