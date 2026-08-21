@@ -27,7 +27,7 @@
   const graph=[{'@type':'Organization','@id':'https://www.yokatainet.jp/#organization',name:'一般社団法人よか隊ネット熊本',url:'https://www.yokatainet.jp/',logo:'https://www.yokatainet.jp/yokatai-logo.png',address:{'@type':'PostalAddress',postalCode:'869-0404',addressRegion:'熊本県',addressLocality:'宇土市',streetAddress:'走潟町2235'},telephone:'090-2719-4037',email:'info.yokatai@gmail.com'},{'@type':'WebSite','@id':'https://www.yokatainet.jp/#website',url:'https://www.yokatainet.jp/',name:'一般社団法人よか隊ネット熊本',publisher:{'@id':'https://www.yokatainet.jp/#organization'},inLanguage:'ja'}];
   if(path!=='index.html')graph.push({'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'ホーム',item:'https://www.yokatainet.jp/'},{'@type':'ListItem',position:2,name:seoTitles[path]||document.title.split('｜')[0],item:canonical}]});
   const structured=document.createElement('script');structured.type='application/ld+json';structured.textContent=JSON.stringify({'@context':'https://schema.org','@graph':graph});document.head.append(structured);
-  const supportPages=['disaster.html','affected.html','guide.html','shelters.html','terms.html','municipalities.html','municipality-updates.html','official.html','uto-waste.html','uto-housing.html','uto-bulletin.html','support.html','supporters.html','volunteer-centers.html','alert-channels.html'];
+  const supportPages=['disaster.html','affected.html','guide.html','shelters.html','terms.html','municipalities.html','municipality-updates.html','official.html','uto-waste.html','uto-housing.html','uto-bulletin.html','hikawa-support.html','support.html','supporters.html','volunteer-centers.html','alert-channels.html'];
   const reconstructionPages=['reconstruction.html','reconstruction-money.html','reconstruction-documents.html','reconstruction-health-care.html','reconstruction-family.html','reconstruction-work-business.html','reconstruction-agriculture-fishery.html','reconstruction-official.html'];
   const activityPages=['timeline.html','meetings.html','official-timeline.html','official-water-recovery.html','official-response-tracks.html','hq-kumamoto.html','hq-yatsushiro.html'];
   const organizationPages=['about.html','join.html','contact.html','privacy.html','accessibility.html'];
@@ -62,7 +62,7 @@
   if(path!=='index.html'){
     const supportParent=supportPages.includes(path);
     const reconstructionParent=reconstructionPages.includes(path);
-    const detailParent=['uto-waste.html','uto-housing.html','uto-bulletin.html'].includes(path);
+    const detailParent=['uto-waste.html','uto-housing.html','uto-bulletin.html','hikawa-support.html'].includes(path);
     const crumbs=[['index.html','ホーム']];
     if(supportParent&&path!=='disaster.html')crumbs.push(['disaster.html','令和8年熊本地震']);
     if(reconstructionParent&&path!=='reconstruction.html')crumbs.push(['reconstruction.html','暮らしの再建']);
