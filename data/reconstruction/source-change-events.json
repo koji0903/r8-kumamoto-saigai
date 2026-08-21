@@ -1705,5 +1705,110 @@
     "reviewedAt": null,
     "reviewedBy": null,
     "resolutionNotes": null
+  },
+  {
+    "id": "source_change_20260822011116_source_hikawa_support_programs_20260820",
+    "fingerprint": "source_hikawa_support_programs_20260820:source_unreachable:https://www.town.hikawa.kumamoto.jp/dynamic/_error/error404.aspx",
+    "sourceId": "source_hikawa_support_programs_20260820",
+    "sourceTitle": "令和8年熊本地震で被災された方に対する支援制度について（氷川町）",
+    "sourceUrl": "https://www.town.hikawa.kumamoto.jp/kiji0036782/3_6782_8258_up_e0ciixhm.pdf",
+    "eventType": "source_unreachable",
+    "detectedAt": "2026-08-22T01:11:16+09:00",
+    "previousHash": "sha256:c01a88a89b5184260a589e6e0ed472017a8076b48a09d0dff9157adc29c7bb2f",
+    "currentHash": null,
+    "previousUrl": "https://www.town.hikawa.kumamoto.jp/kiji0036782/3_6782_8258_up_e0ciixhm.pdf",
+    "currentUrl": "https://www.town.hikawa.kumamoto.jp/dynamic/_error/error404.aspx",
+    "claimTypes": [
+      "disaster_application",
+      "eligibility",
+      "application_office",
+      "warning",
+      "eligible_damage"
+    ],
+    "risk": "high",
+    "impactAssessment": "POTENTIALLY_RELEVANT",
+    "operationalStatus": "ACTION_REQUIRED",
+    "relatedProgramIds": [
+      "program_emergency_housing_repair",
+      "program_livelihood_reconstruction_support_grant"
+    ],
+    "municipalityIds": [
+      "municipality_yatsushiro",
+      "municipality_minamata",
+      "municipality_yamaga",
+      "municipality_kikuchi",
+      "municipality_uto",
+      "municipality_kamiamakusa",
+      "municipality_uki",
+      "municipality_amakusa",
+      "municipality_koshi",
+      "municipality_misato",
+      "municipality_ozu",
+      "municipality_kikuyo",
+      "municipality_nishihara",
+      "municipality_mifune",
+      "municipality_kashima",
+      "municipality_mashiki",
+      "municipality_kosa",
+      "municipality_hikawa",
+      "municipality_ashikita",
+      "municipality_tsunagi"
+    ],
+    "relatedEntities": [
+      {
+        "entityType": "application",
+        "entityId": "application_r8_kumamoto_emergency_repair",
+        "sourceLinkId": "source_link_hikawa_repair_application",
+        "claimType": "disaster_application",
+        "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+      },
+      {
+        "entityType": "application",
+        "entityId": "application_r8_kumamoto_emergency_repair",
+        "sourceLinkId": "source_link_hikawa_repair_eligibility",
+        "claimType": "eligibility",
+        "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+      },
+      {
+        "entityType": "contact",
+        "entityId": "contact_hikawa_housing_repair",
+        "sourceLinkId": "source_link_hikawa_repair_office",
+        "claimType": "application_office",
+        "lastVerifiedAt": null
+      },
+      {
+        "entityType": "application",
+        "entityId": "application_r8_kumamoto_emergency_repair",
+        "sourceLinkId": "source_link_hikawa_repair_housing_warning",
+        "claimType": "warning",
+        "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+      },
+      {
+        "entityType": "application",
+        "entityId": "application_r8_kumamoto_livelihood_reconstruction_pending",
+        "sourceLinkId": "source_link_hikawa_livelihood_grant_application",
+        "claimType": "disaster_application",
+        "lastVerifiedAt": null
+      },
+      {
+        "entityType": "application",
+        "entityId": "application_r8_kumamoto_livelihood_reconstruction_pending",
+        "sourceLinkId": "source_link_hikawa_livelihood_grant_eligibility",
+        "claimType": "eligible_damage",
+        "lastVerifiedAt": null
+      },
+      {
+        "entityType": "contact",
+        "entityId": "contact_hikawa_welfare_reconstruction_grant",
+        "sourceLinkId": "source_link_hikawa_livelihood_grant_office",
+        "claimType": "application_office",
+        "lastVerifiedAt": null
+      }
+    ],
+    "impactedEntities": [],
+    "resolved": false,
+    "reviewedAt": null,
+    "reviewedBy": null,
+    "resolutionNotes": null
   }
 ]

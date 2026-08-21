@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-21T13:08:08.061Z",
+  "generatedAt": "2026-08-21T16:11:31.404Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-21T12:48:38.607Z",
-    "inputCount": 718,
-    "classifiedPageCount": 588,
-    "displayCandidateCount": 485,
+    "generatedAt": "2026-08-21T15:51:29.019Z",
+    "inputCount": 721,
+    "classifiedPageCount": 589,
+    "displayCandidateCount": 487,
     "deltaFromPrevious": {
-      "inputCount": 8,
-      "classifiedPageCount": 5,
-      "unclassifiedCount": 3
+      "inputCount": 3,
+      "classifiedPageCount": 1,
+      "unclassifiedCount": 2
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 3,
       "limitHours": 336
     }
   },
@@ -61,13 +61,13 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 31,
+        "classified": 30,
         "displayCandidates": 25,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 70,
-        "displayCandidates": 61,
+        "classified": 71,
+        "displayCandidates": 62,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -101,8 +101,8 @@
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 25,
-        "displayCandidates": 19,
+        "classified": 26,
+        "displayCandidates": 20,
         "fallback": true
       },
       "municipality_kashima": {
@@ -144,10 +144,10 @@
         "low": 38
       },
       "money": {
-        "total": 165,
+        "total": 164,
         "high": 29,
         "medium": 48,
-        "low": 88
+        "low": 87
       },
       "documents": {
         "total": 130,
@@ -180,18 +180,18 @@
         "low": 0
       },
       "daily_life": {
-        "total": 193,
-        "high": 63,
-        "medium": 127,
+        "total": 195,
+        "high": 64,
+        "medium": 128,
         "low": 3
       }
     },
     "confidence": {
-      "high": 211,
-      "medium": 274,
-      "low": 103
+      "high": 212,
+      "medium": 275,
+      "low": 102
     },
-    "unclassifiedCount": 14,
+    "unclassifiedCount": 16,
     "excludedCount": 33,
     "overrideCount": 2
   },
@@ -292,7 +292,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 2
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -302,7 +302,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
