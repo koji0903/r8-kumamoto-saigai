@@ -1,0 +1,19 @@
+.hk-map,
+.hk-service-grid .hk-map {
+  display: inline;
+  margin: 0;
+  color: #086b60;
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.hk-map span {
+  white-space: nowrap;
+}
+
+.hk-map:focus-visible {
+  outline: 4px solid #ffbf47;
+  outline-offset: 3px;
+}

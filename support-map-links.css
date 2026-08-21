@@ -1,0 +1,29 @@
+.bulletin-map-link,
+.counter-card dd .housing-map-link {
+  color: #0d6b61;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.counter-card dd .housing-map-link {
+  color: var(--housing-deep);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.counter-card dd .housing-map-link b {
+  font-size: 20px;
+}
+
+.bulletin-map-link span,
+.housing-map-link span {
+  white-space: nowrap;
+}
+
+.bulletin-map-link:focus-visible,
+.housing-map-link:focus-visible {
+  outline: 4px solid #ffbf47;
+  outline-offset: 3px;
+}
