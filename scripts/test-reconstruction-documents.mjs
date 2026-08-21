@@ -1,10 +1,10 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 const html=fs.readFileSync("reconstruction-documents.html","utf8"),css=fs.readFileSync("reconstruction-documents.css","utf8"),js=fs.readFileSync("reconstruction-documents.js","utf8"),shared=fs.readFileSync("municipality-official-nav.js","utf8"),data=JSON.parse(fs.readFileSync("public-data/reconstruction/municipality-official-navigation.json","utf8"));
-for(const text of ["家の被害を証明したい","どんな申請が必要か分からない","必要な書類を確認したい","申請期限が心配","オンラインで申請できるか知りたい","何に当てはまるか分からない","内容を確認した手続き情報","自治体の公式情報","暮らし全体の困りごとを整理する","相談を受けている方へ"])assert.ok(html.includes(text),`${text} が必要`);
+for(const text of ["家の被害を証明したい","どんな申請が必要か分からない","必要な書類を確認したい","申請期限が心配","オンラインで申請できるか知りたい","何に当てはまるか分からない","り災証明を詳しく知る","り災証明書 完全ガイド","自治体の公式情報","暮らし全体の困りごとを整理する","相談を受けている方へ"])assert.ok(html.includes(text),`${text} が必要`);
 for(const text of ["<noscript>","data-municipality-select","aria-live=","aria-pressed=","type=\"button\"","data-related-category"])assert.ok(html.includes(text),`${text} が必要`);
 assert.ok(css.includes("@media print")&&css.includes("max-width:560px")&&css.includes(":focus-visible"),"print・mobile・focus CSS");
 assert.ok(js.includes("municipality-nav:filter")&&shared.includes("data.titleFilter")===false&&shared.includes("dataset.titleFilter"),"公式タイトル絞り込み");
 const updates=data.municipalities.flatMap(m=>m.updates.map(u=>({...u,municipalityId:m.municipalityId}))),documents=updates.filter(u=>u.categories.includes("documents")&&u.classification.some(c=>c.category==="documents"&&c.confidence!=="low"));assert.ok(documents.length,"documents公式情報あり");assert.ok(documents.some(u=>/罹災証明|り災証明/.test(u.officialTitle)),"罹災証明関連あり");assert.ok(documents.some(u=>/オンライン|電子申請|マイナポータル|ぴったりサービス/.test(u.officialTitle)),"オンライン申請あり");assert.ok(data.municipalities.some(m=>!m.updates.some(u=>u.categories.includes("documents")&&u.classification.some(c=>c.category==="documents"&&c.confidence!=="low"))),"0件fallback対象あり");assert.ok(updates.some(u=>u.categories.includes("documents")&&u.categories.length>1),"複数カテゴリページあり");
-assert.ok(html.includes("未確認の期限・必要書類・窓口は掲載していません"),"未確認期限を表示しない");
+assert.ok(html.includes("期限、必要書類、申請先はリンク先で確認してください"),"期限等は公式ページで確認することを明示");
 console.log("証明・申請ページの困りごと・公式情報・fallback・オンライン・期限安全性・アクセシビリティを確認しました");

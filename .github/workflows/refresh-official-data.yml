@@ -177,6 +177,7 @@ jobs:
           git add \
             '*.html' \
             sitemap.xml \
+            public-data/site-search-index.json \
             data/generated/hq-damage-data.js \
             data/generated/hq-index.js \
             data/generated/hq-latest.js \
@@ -223,12 +224,20 @@ jobs:
             docs/reconstruction-contact-document-status.md \
             docs/reconstruction-eligibility-status.md \
             docs/reconstruction-amount-benefit-status.md
+          # 生成スクリプトが更新した追跡済みファイルを取りこぼさない。
+          # 未ステージ差分が残ると後続のgit rebaseが必ず失敗する。
+          git add -u
           if git diff --cached --quiet; then
             echo "反映対象の差分はありません。"
             exit 0
           fi
           checked_at="$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST')"
           git commit -m "公式災害情報と暮らし公式ナビを自動更新 (${checked_at})"
+          if ! git diff --quiet; then
+            echo "::error::コミット対象外の生成差分が残っています。"
+            git status --short
+            exit 1
+          fi
           for attempt in 1 2 3; do
             git fetch origin main
             if ! git rebase origin/main; then

@@ -103,10 +103,21 @@ def parse_damage(pdf_path):
     page = doc[0]
     # タイトルは必ずしも1行目に来ない（PDFによって描画順が違う）ので本文から探す
     text = page.get_text()
-    title = next((ln.strip() for ln in text.split("\n") if "人的被害等の状況" in ln), "")
-    if not title:
+    title_candidates = [ln.strip() for ln in text.split("\n") if "人的被害等の状況" in ln]
+    if not title_candidates:
         raise ValueError(f"表題を見つけられません: {pdf_path.name}")
-    date, time = parse_asof(title)
+    # 編集用の注意書きにも「人的被害等の状況」が含まれることがある。
+    # 描画順の先頭ではなく、時点を読み取れる実際の表題を選ぶ。
+    title = ""
+    for candidate in title_candidates:
+        try:
+            date, time = parse_asof(candidate)
+            title = candidate
+            break
+        except ValueError:
+            continue
+    if not title:
+        raise ValueError(f"時点付きの表題を見つけられません: {pdf_path.name}")
 
     tables = page.find_tables().tables
     if not tables:

@@ -1,0 +1,9 @@
+{
+  "name": "r8-kumamoto-saigai",
+  "private": true,
+  "scripts": {
+    "build": "node tools/build-seo.mjs",
+    "check": "node tools/validate-site.mjs",
+    "preflight": "node tools/validate-site.mjs --fix"
+  }
+}
