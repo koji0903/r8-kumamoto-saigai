@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-21T19:21:11.696Z",
+  "generatedAt": "2026-08-21T22:02:30.953Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-21T19:00:50.000Z",
+    "generatedAt": "2026-08-21T21:43:08.595Z",
     "inputCount": 720,
     "classifiedPageCount": 588,
     "displayCandidateCount": 486,
     "deltaFromPrevious": {
-      "inputCount": -1,
-      "classifiedPageCount": -1,
+      "inputCount": 0,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 6,
+      "ageHours": 9,
       "limitHours": 336
     }
   },
@@ -292,7 +292,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -332,7 +332,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 4
+      "count": 3
     }
   ],
   "strictSources": {
