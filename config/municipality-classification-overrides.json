@@ -1,4 +1,17 @@
 {
   "schemaVersion": "1.0.0",
-  "overrides": []
+  "overrides": [
+    {
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036782/3_6782_8258_up_e0ciixhm.pdf",
+      "categories": ["home", "money", "documents", "family_education", "daily_life"],
+      "reason": "PDF本文に罹災・被災証明、住宅修理・仮設住宅、手数料免除・支援金、一時保育・母子避難所、給水・入浴・洗濯・ごみ等の複数分野を明記",
+      "updatedAt": "2026-08-21"
+    },
+    {
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036782/index.html",
+      "categories": ["home", "money", "documents", "family_education", "daily_life"],
+      "reason": "上記支援制度PDFの公式掲載ページであり同じ支援分野への導線",
+      "updatedAt": "2026-08-21"
+    }
+  ]
 }

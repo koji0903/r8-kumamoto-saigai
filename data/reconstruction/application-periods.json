@@ -13,5 +13,20 @@
     "sourceLinkIds":["source_link_period_application_pending"],
     "verificationStatus":"partially_verified",
     "notes":"宇土市固有の受付開始日・申込期限は熊本県の受付窓口表で確認中。工事完了期限と制度適用期間の終期も本パイロットで確認できず、推定登録しない。"
+  },
+  {
+    "id":"period_r8_kumamoto_emergency_repair_hikawa_pending",
+    "applicationId":"application_r8_kumamoto_emergency_repair",
+    "periodPurpose":"application_window",
+    "municipalityId":"municipality_hikawa",
+    "startsAt":null,
+    "deadlineAt":null,
+    "deadlineType":"pending",
+    "isExtended":false,
+    "previousDeadlineAt":null,
+    "status":"pending_announcement",
+    "sourceLinkIds":["source_link_hikawa_repair_office"],
+    "verificationStatus":"partially_verified",
+    "notes":"氷川町の応急修理受付窓口は確認できるが、受付開始日と申込期限は令和8年8月20日版PDFに記載がないため推定しない。"
   }
 ]

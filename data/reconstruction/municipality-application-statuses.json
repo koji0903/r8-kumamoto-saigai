@@ -17,5 +17,43 @@
     "freshnessStatus": "fresh",
     "lastCheckedAt": "2026-08-09T18:03:00+09:00",
     "notes": "宇土市が県実施対象に含まれることは確認済み。県ページの市町村窓口一覧では宇土市の担当課、開始日、連絡先、ホームページが全て確認中。宇土市公式の支援・申請一覧にも住宅の応急修理の個別案内は確認できないが、不在を受付未実施の根拠にはしない。県問い合わせ先を宇土市申請窓口として関連付けない。"
+  },
+  {
+    "id": "municipality_application_status_r8_repair_hikawa",
+    "applicationId": "application_r8_kumamoto_emergency_repair",
+    "municipalityId": "municipality_hikawa",
+    "implementationStatus": "confirmed",
+    "receptionStatus": "pending",
+    "applicationMethodStatus": "pending",
+    "contactStatus": "confirmed",
+    "localGuidanceStatus": "confirmed",
+    "localEligibilityConditions": [],
+    "contactPointIds": ["contact_hikawa_housing_repair"],
+    "applicationPeriodIds": ["period_r8_kumamoto_emergency_repair_hikawa_pending"],
+    "requiredDocumentIds": [],
+    "sourceLinkIds": ["source_link_hikawa_repair_application", "source_link_hikawa_repair_eligibility", "source_link_hikawa_repair_office", "source_link_hikawa_repair_housing_warning"],
+    "verificationStatus": "partially_verified",
+    "freshnessStatus": "fresh",
+    "lastCheckedAt": "2026-08-21",
+    "notes": "氷川町の応急修理は受付窓口と電話番号、対象の概要を町の8月20日版PDFで確認。申請期限と必要書類は同PDFに記載がないため未登録。みなし仮設へ先に入居すると応急修理を利用できず、建設型仮設とも併用できない。"
+  },
+  {
+    "id": "municipality_application_status_r8_livelihood_grant_hikawa",
+    "applicationId": "application_r8_kumamoto_livelihood_reconstruction_pending",
+    "municipalityId": "municipality_hikawa",
+    "implementationStatus": "confirmed",
+    "receptionStatus": "pending",
+    "applicationMethodStatus": "pending",
+    "contactStatus": "confirmed",
+    "localGuidanceStatus": "confirmed",
+    "localEligibilityConditions": [],
+    "contactPointIds": ["contact_hikawa_welfare_reconstruction_grant"],
+    "applicationPeriodIds": [],
+    "requiredDocumentIds": [],
+    "sourceLinkIds": ["source_link_hikawa_livelihood_grant_application", "source_link_hikawa_livelihood_grant_eligibility", "source_link_hikawa_livelihood_grant_office"],
+    "verificationStatus": "partially_verified",
+    "freshnessStatus": "fresh",
+    "lastCheckedAt": "2026-08-21",
+    "notes": "氷川町の被災者生活再建支援金は受付中と確認。対象は中規模半壊以上が主だが、半壊以上でも対象となる場合がある。金額、必要書類、申請期限は同PDFに記載がない。"
   }
 ]
