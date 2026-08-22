@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-21T22:02:30.953Z",
+  "generatedAt": "2026-08-22T02:13:08.697Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-21T21:43:08.595Z",
-    "inputCount": 720,
-    "classifiedPageCount": 588,
-    "displayCandidateCount": 486,
+    "generatedAt": "2026-08-22T01:54:10.856Z",
+    "inputCount": 725,
+    "classifiedPageCount": 592,
+    "displayCandidateCount": 489,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
+      "inputCount": 5,
+      "classifiedPageCount": 4,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 9,
+      "ageHours": 13,
       "limitHours": 336
     }
   },
@@ -36,7 +36,7 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 128,
+        "classified": 129,
         "displayCandidates": 92,
         "fallback": true
       },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 70,
-        "displayCandidates": 61,
+        "classified": 71,
+        "displayCandidates": 62,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -106,8 +106,8 @@
         "fallback": true
       },
       "municipality_kashima": {
-        "classified": 14,
-        "displayCandidates": 12,
+        "classified": 16,
+        "displayCandidates": 14,
         "fallback": true
       },
       "municipality_mashiki": {
@@ -138,20 +138,20 @@
     },
     "categoryReport": {
       "home": {
-        "total": 134,
+        "total": 135,
         "high": 52,
         "medium": 44,
-        "low": 38
+        "low": 39
       },
       "money": {
-        "total": 164,
+        "total": 165,
         "high": 29,
         "medium": 48,
-        "low": 87
+        "low": 88
       },
       "documents": {
-        "total": 130,
-        "high": 33,
+        "total": 131,
+        "high": 34,
         "medium": 30,
         "low": 67
       },
@@ -168,9 +168,9 @@
         "low": 54
       },
       "work_business": {
-        "total": 30,
+        "total": 31,
         "high": 10,
-        "medium": 20,
+        "medium": 21,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,16 +180,16 @@
         "low": 0
       },
       "daily_life": {
-        "total": 194,
-        "high": 63,
-        "medium": 128,
+        "total": 196,
+        "high": 64,
+        "medium": 129,
         "low": 3
       }
     },
     "confidence": {
-      "high": 211,
-      "medium": 275,
-      "low": 102
+      "high": 213,
+      "medium": 276,
+      "low": 103
     },
     "unclassifiedCount": 16,
     "excludedCount": 33,
@@ -292,7 +292,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 1
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
