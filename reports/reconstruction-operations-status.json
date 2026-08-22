@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-22T19:09:51.612Z",
+  "generatedAt": "2026-08-22T21:57:26.690Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-22T18:52:13.714Z",
-    "inputCount": 728,
-    "classifiedPageCount": 594,
-    "displayCandidateCount": 493,
+    "generatedAt": "2026-08-22T21:40:45.491Z",
+    "inputCount": 717,
+    "classifiedPageCount": 583,
+    "displayCandidateCount": 484,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
-      "unclassifiedCount": 0
+      "inputCount": -11,
+      "classifiedPageCount": -11,
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 30,
+      "ageHours": 33,
       "limitHours": 336
     }
   },
@@ -31,8 +31,8 @@
     "municipalityFallbackRate": "21/21",
     "municipalityReport": {
       "municipality_kumamoto": {
-        "classified": 64,
-        "displayCandidates": 53,
+        "classified": 54,
+        "displayCandidates": 45,
         "fallback": true
       },
       "municipality_yatsushiro": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 74,
-        "displayCandidates": 65,
+        "classified": 73,
+        "displayCandidates": 64,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,33 +138,33 @@
     },
     "categoryReport": {
       "home": {
-        "total": 137,
+        "total": 136,
         "high": 53,
         "medium": 45,
-        "low": 39
+        "low": 38
       },
       "money": {
-        "total": 164,
-        "high": 29,
+        "total": 160,
+        "high": 28,
         "medium": 49,
-        "low": 86
+        "low": 83
       },
       "documents": {
-        "total": 132,
-        "high": 34,
-        "medium": 30,
+        "total": 129,
+        "high": 33,
+        "medium": 28,
         "low": 68
       },
       "health_care": {
-        "total": 41,
+        "total": 38,
         "high": 17,
-        "medium": 24,
+        "medium": 21,
         "low": 0
       },
       "family_education": {
-        "total": 88,
+        "total": 87,
         "high": 6,
-        "medium": 28,
+        "medium": 27,
         "low": 54
       },
       "work_business": {
@@ -180,18 +180,18 @@
         "low": 0
       },
       "daily_life": {
-        "total": 198,
+        "total": 196,
         "high": 65,
-        "medium": 130,
+        "medium": 128,
         "low": 3
       }
     },
     "confidence": {
-      "high": 215,
-      "medium": 278,
-      "low": 101
+      "high": 213,
+      "medium": 271,
+      "low": 99
     },
-    "unclassifiedCount": 16,
+    "unclassifiedCount": 17,
     "excludedCount": 33,
     "overrideCount": 2
   },
@@ -264,6 +264,11 @@
     }
   ],
   "warnings": [
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kumamoto",
+      "count": 2
+    },
     {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_yatsushiro",
