@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-22T13:21:13.513Z",
+  "generatedAt": "2026-08-22T15:59:34.086Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-22T13:04:41.691Z",
+    "generatedAt": "2026-08-22T15:39:46.224Z",
     "inputCount": 728,
-    "classifiedPageCount": 593,
-    "displayCandidateCount": 491,
+    "classifiedPageCount": 594,
+    "displayCandidateCount": 493,
     "deltaFromPrevious": {
-      "inputCount": 1,
-      "classifiedPageCount": 0,
+      "inputCount": 0,
+      "classifiedPageCount": 1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 24,
+      "ageHours": 27,
       "limitHours": 336
     }
   },
@@ -66,12 +66,12 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 73,
-        "displayCandidates": 64,
+        "classified": 74,
+        "displayCandidates": 65,
         "fallback": true
       },
       "municipality_amakusa": {
-        "classified": 20,
+        "classified": 19,
         "displayCandidates": 18,
         "fallback": true
       },
@@ -116,8 +116,8 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 31,
-        "displayCandidates": 28,
+        "classified": 32,
+        "displayCandidates": 29,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 135,
-        "high": 52,
+        "total": 137,
+        "high": 53,
         "medium": 45,
-        "low": 38
+        "low": 39
       },
       "money": {
-        "total": 165,
+        "total": 164,
         "high": 29,
         "medium": 49,
-        "low": 87
+        "low": 86
       },
       "documents": {
-        "total": 130,
-        "high": 33,
+        "total": 132,
+        "high": 34,
         "medium": 30,
-        "low": 67
+        "low": 68
       },
       "health_care": {
         "total": 41,
@@ -187,9 +187,9 @@
       }
     },
     "confidence": {
-      "high": 213,
+      "high": 215,
       "medium": 278,
-      "low": 102
+      "low": 101
     },
     "unclassifiedCount": 16,
     "excludedCount": 33,
@@ -332,7 +332,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 4
+      "count": 3
     }
   ],
   "strictSources": {
