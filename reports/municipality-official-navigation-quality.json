@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T01:54:10.856Z",
+  "generatedAt": "2026-08-22T03:59:59.878Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 725,
@@ -7,20 +7,20 @@
   "classifiedPageCount": 592,
   "categoryReport": {
     "home": {
-      "total": 135,
+      "total": 133,
       "high": 52,
       "medium": 44,
-      "low": 39
+      "low": 37
     },
     "money": {
-      "total": 165,
+      "total": 166,
       "high": 29,
-      "medium": 48,
+      "medium": 49,
       "low": 88
     },
     "documents": {
-      "total": 131,
-      "high": 34,
+      "total": 129,
+      "high": 32,
       "medium": 30,
       "low": 67
     },
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 196,
+      "total": 197,
       "high": 64,
-      "medium": 129,
+      "medium": 130,
       "low": 3
     }
   },
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 213,
-    "medium": 276,
+    "high": 211,
+    "medium": 278,
     "low": 103
   },
   "unclassifiedCount": 16,
@@ -526,15 +526,15 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -934,5 +934,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 588
+  "previousClassifiedPageCount": 592
 }

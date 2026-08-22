@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-22T02:13:08.697Z",
+  "generatedAt": "2026-08-22T04:16:35.608Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-22T01:54:10.856Z",
+    "generatedAt": "2026-08-22T03:59:59.878Z",
     "inputCount": 725,
     "classifiedPageCount": 592,
     "displayCandidateCount": 489,
     "deltaFromPrevious": {
-      "inputCount": 5,
-      "classifiedPageCount": 4,
+      "inputCount": 0,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 13,
+      "ageHours": 15,
       "limitHours": 336
     }
   },
@@ -138,20 +138,20 @@
     },
     "categoryReport": {
       "home": {
-        "total": 135,
+        "total": 133,
         "high": 52,
         "medium": 44,
-        "low": 39
+        "low": 37
       },
       "money": {
-        "total": 165,
+        "total": 166,
         "high": 29,
-        "medium": 48,
+        "medium": 49,
         "low": 88
       },
       "documents": {
-        "total": 131,
-        "high": 34,
+        "total": 129,
+        "high": 32,
         "medium": 30,
         "low": 67
       },
@@ -180,15 +180,15 @@
         "low": 0
       },
       "daily_life": {
-        "total": 196,
+        "total": 197,
         "high": 64,
-        "medium": 129,
+        "medium": 130,
         "low": 3
       }
     },
     "confidence": {
-      "high": 213,
-      "medium": 276,
+      "high": 211,
+      "medium": 278,
       "low": 103
     },
     "unclassifiedCount": 16,
