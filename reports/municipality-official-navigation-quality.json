@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-23T07:06:02.681Z",
+  "generatedAt": "2026-08-23T09:47:18.328Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 725,
-  "displayCandidateCount": 489,
-  "classifiedPageCount": 589,
+  "inputCount": 728,
+  "displayCandidateCount": 490,
+  "classifiedPageCount": 590,
   "categoryReport": {
     "home": {
-      "total": 135,
+      "total": 136,
       "high": 51,
       "medium": 45,
-      "low": 39
+      "low": 40
     },
     "money": {
       "total": 164,
@@ -19,15 +19,15 @@
       "low": 86
     },
     "documents": {
-      "total": 130,
-      "high": 34,
-      "medium": 30,
+      "total": 129,
+      "high": 35,
+      "medium": 28,
       "low": 66
     },
     "health_care": {
-      "total": 43,
+      "total": 42,
       "high": 18,
-      "medium": 25,
+      "medium": 24,
       "low": 0
     },
     "family_education": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 198,
-      "high": 65,
-      "medium": 130,
+      "total": 201,
+      "high": 67,
+      "medium": 131,
       "low": 3
     }
   },
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 50,
-      "displayCandidates": 42,
+      "classified": 51,
+      "displayCandidates": 43,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 212,
-    "medium": 277,
+    "high": 215,
+    "medium": 275,
     "low": 100
   },
   "unclassifiedCount": 17,
@@ -196,6 +196,11 @@
     },
     {
       "municipalityName": "八代市",
+      "title": "令和８年度８月補正予算（８月２１日専決分）の概要について",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326964/index.html"
+    },
+    {
+      "municipalityName": "八代市",
       "title": "【図書館】返却ポスト利用再開のお知らせ",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326962/index.html"
     },
@@ -213,11 +218,6 @@
       "municipalityName": "八代市",
       "title": "令和８年８月23日以降の休日当番医の変更について",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326854/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "令和８年度８月補正予算（８月２１日専決分）の概要について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326964/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -255,11 +255,11 @@
       "url": "https://www.town.mashiki.lg.jp/kiji0037475/index.html"
     }
   ],
-  "outOfScopeCount": 85,
+  "outOfScopeCount": 87,
   "outOfScopeByRule": {
     "donation_appeal": 2,
-    "public_relations": 10,
-    "hq_meeting_material": 26,
+    "public_relations": 11,
+    "hq_meeting_material": 27,
     "facility_notice": 10,
     "mutual_aid": 3,
     "disaster_preparedness": 7,
@@ -524,13 +524,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "第27回災害対策本部会議資料（令和８年８月２２日（土曜日）午後４時００分）（PDF：27.29メガバイト）",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_158610_up_m1e8wq7y.pdf",
-      "ruleId": "hq_meeting_material",
-      "ruleLabel": "災害対策本部会議の資料"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
@@ -538,15 +531,36 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
+      "title": "第27回災害対策本部会議資料（令和８年８月２２日（土曜日）午後４時００分）（PDF：27.29メガバイト）",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_158610_up_m1e8wq7y.pdf",
+      "ruleId": "hq_meeting_material",
+      "ruleLabel": "災害対策本部会議の資料"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "第28回災害対策本部会議資料（令和８年８月２３日（日曜日）午後４時００分）（PDF：20.09メガバイト）",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_158626_up_z4lcc0ug.pdf",
+      "ruleId": "hq_meeting_material",
+      "ruleLabel": "災害対策本部会議の資料"
     },
     {
       "municipalityName": "八代市",
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "広報やつしろ 災害臨時号 vol.1・2要約版（令和8年熊本地震）",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326972/index.html",
+      "ruleId": "public_relations",
+      "ruleLabel": "広報紙・その配布"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -671,6 +685,13 @@
     },
     {
       "municipalityName": "宇城市",
+      "title": "【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
+      "ruleId": "press",
+      "ruleLabel": "報道機関向け"
+    },
+    {
+      "municipalityName": "宇城市",
       "title": "南海トラフ地震臨時情報（巨大地震注意）について",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2422985",
       "ruleId": "disaster_preparedness",
@@ -692,14 +713,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年08月22日 【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
-      "ruleId": "press",
-      "ruleLabel": "報道機関向け"
-    },
-    {
-      "municipalityName": "宇城市",
-      "title": "2026年08月23日 令和8年熊本地震（7月28日発生）に関する情報（8月23日9時00分更新）",
+      "title": "2026年08月23日 令和8年熊本地震（7月28日発生）に関する情報（8月23日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -872,7 +886,7 @@
     "non_official_url": 4,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 12,
+  "warningCount": 11,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -905,14 +919,9 @@
       "count": 2
     },
     {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_uki",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 4
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -932,9 +941,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 4
+      "count": 3
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 597
+  "previousClassifiedPageCount": 589
 }

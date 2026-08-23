@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-23T07:21:40.391Z",
+  "generatedAt": "2026-08-23T10:04:21.273Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-23T07:06:02.681Z",
-    "inputCount": 725,
-    "classifiedPageCount": 589,
-    "displayCandidateCount": 489,
+    "generatedAt": "2026-08-23T09:47:18.328Z",
+    "inputCount": 728,
+    "classifiedPageCount": 590,
+    "displayCandidateCount": 490,
     "deltaFromPrevious": {
-      "inputCount": -8,
-      "classifiedPageCount": -8,
+      "inputCount": 3,
+      "classifiedPageCount": 1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 42,
+      "ageHours": 45,
       "limitHours": 336
     }
   },
@@ -56,8 +56,8 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 50,
-        "displayCandidates": 42,
+        "classified": 51,
+        "displayCandidates": 43,
         "fallback": true
       },
       "municipality_kamiamakusa": {
@@ -138,10 +138,10 @@
     },
     "categoryReport": {
       "home": {
-        "total": 135,
+        "total": 136,
         "high": 51,
         "medium": 45,
-        "low": 39
+        "low": 40
       },
       "money": {
         "total": 164,
@@ -150,15 +150,15 @@
         "low": 86
       },
       "documents": {
-        "total": 130,
-        "high": 34,
-        "medium": 30,
+        "total": 129,
+        "high": 35,
+        "medium": 28,
         "low": 66
       },
       "health_care": {
-        "total": 43,
+        "total": 42,
         "high": 18,
-        "medium": 25,
+        "medium": 24,
         "low": 0
       },
       "family_education": {
@@ -180,15 +180,15 @@
         "low": 0
       },
       "daily_life": {
-        "total": 198,
-        "high": 65,
-        "medium": 130,
+        "total": 201,
+        "high": 67,
+        "medium": 131,
         "low": 3
       }
     },
     "confidence": {
-      "high": 212,
-      "medium": 277,
+      "high": 215,
+      "medium": 275,
       "low": 100
     },
     "unclassifiedCount": 17,
@@ -295,14 +295,9 @@
       "count": 2
     },
     {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_uki",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 4
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -322,7 +317,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 4
+      "count": 3
     }
   ],
   "strictSources": {
