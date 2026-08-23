@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-08-23T13:05:46.625Z",
+  "generatedAt": "2026-08-23T15:41:26.521Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 715,
-  "displayCandidateCount": 481,
-  "classifiedPageCount": 579,
+  "inputCount": 724,
+  "displayCandidateCount": 487,
+  "classifiedPageCount": 587,
   "categoryReport": {
     "home": {
-      "total": 134,
-      "high": 50,
+      "total": 136,
+      "high": 51,
       "medium": 45,
-      "low": 39
+      "low": 40
     },
     "money": {
-      "total": 160,
+      "total": 163,
       "high": 28,
-      "medium": 48,
-      "low": 84
+      "medium": 49,
+      "low": 86
     },
     "documents": {
-      "total": 127,
-      "high": 34,
+      "total": 129,
+      "high": 35,
       "medium": 28,
-      "low": 65
+      "low": 66
     },
     "health_care": {
       "total": 42,
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 196,
+      "total": 199,
       "high": 66,
-      "medium": 127,
+      "medium": 130,
       "low": 3
     }
   },
@@ -77,12 +77,12 @@
       "fallback": true
     },
     "municipality_kikuchi": {
-      "classified": 0,
-      "displayCandidates": 0,
+      "classified": 7,
+      "displayCandidates": 6,
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 51,
+      "classified": 52,
       "displayCandidates": 43,
       "fallback": true
     },
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 212,
-    "medium": 269,
-    "low": 98
+    "high": 214,
+    "medium": 273,
+    "low": 100
   },
   "unclassifiedCount": 16,
   "unclassifiedItems": [
@@ -250,7 +250,7 @@
       "url": "https://www.town.mashiki.lg.jp/kiji0037475/index.html"
     }
   ],
-  "outOfScopeCount": 86,
+  "outOfScopeCount": 87,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "public_relations": 11,
@@ -259,7 +259,7 @@
     "mutual_aid": 3,
     "disaster_preparedness": 7,
     "event_notice": 3,
-    "index_page": 16,
+    "index_page": 17,
     "mayor_message": 2,
     "overall_guide": 3,
     "press": 2
@@ -581,6 +581,13 @@
       "ruleLabel": "平時の防災・今後への備え"
     },
     {
+      "municipalityName": "菊池市",
+      "title": "地震関連情報",
+      "url": "https://www.city.kikuchi.lg.jp/article/list/1350.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
       "municipalityName": "宇土市",
       "title": "キーワード「2026」の記事一覧",
       "url": "https://www.city.uto.lg.jp/article/keyword/29211.html",
@@ -631,13 +638,6 @@
     },
     {
       "municipalityName": "上天草市",
-      "title": "小島公園キャンプ場",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/133/159.html",
-      "ruleId": "facility_notice",
-      "ruleLabel": "公共施設の休止・再開・紹介"
-    },
-    {
-      "municipalityName": "上天草市",
       "title": "姫戸白嶽森林公園",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/136/189.html",
       "ruleId": "facility_notice",
@@ -647,6 +647,13 @@
       "municipalityName": "上天草市",
       "title": "龍ヶ岳山頂自然公園キャンプ場",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/133/15601.html",
+      "ruleId": "facility_notice",
+      "ruleLabel": "公共施設の休止・再開・紹介"
+    },
+    {
+      "municipalityName": "上天草市",
+      "title": "小島公園キャンプ場",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/133/159.html",
       "ruleId": "facility_notice",
       "ruleLabel": "公共施設の休止・再開・紹介"
     },
@@ -874,7 +881,7 @@
     "non_official_url": 4,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 11,
+  "warningCount": 12,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -885,6 +892,11 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
       "count": 2
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kikuchi",
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -933,5 +945,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 590
+  "previousClassifiedPageCount": 579
 }

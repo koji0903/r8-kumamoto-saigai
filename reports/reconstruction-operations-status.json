@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-23T13:23:15.321Z",
+  "generatedAt": "2026-08-23T16:01:38.080Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-23T13:05:46.625Z",
-    "inputCount": 715,
-    "classifiedPageCount": 579,
-    "displayCandidateCount": 481,
+    "generatedAt": "2026-08-23T15:41:26.521Z",
+    "inputCount": 724,
+    "classifiedPageCount": 587,
+    "displayCandidateCount": 487,
     "deltaFromPrevious": {
-      "inputCount": -13,
-      "classifiedPageCount": -11,
-      "unclassifiedCount": -1
+      "inputCount": 9,
+      "classifiedPageCount": 8,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 48,
+      "ageHours": 51,
       "limitHours": 336
     }
   },
@@ -51,12 +51,12 @@
         "fallback": true
       },
       "municipality_kikuchi": {
-        "classified": 0,
-        "displayCandidates": 0,
+        "classified": 7,
+        "displayCandidates": 6,
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 51,
+        "classified": 52,
         "displayCandidates": 43,
         "fallback": true
       },
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 134,
-        "high": 50,
+        "total": 136,
+        "high": 51,
         "medium": 45,
-        "low": 39
+        "low": 40
       },
       "money": {
-        "total": 160,
+        "total": 163,
         "high": 28,
-        "medium": 48,
-        "low": 84
+        "medium": 49,
+        "low": 86
       },
       "documents": {
-        "total": 127,
-        "high": 34,
+        "total": 129,
+        "high": 35,
         "medium": 28,
-        "low": 65
+        "low": 66
       },
       "health_care": {
         "total": 42,
@@ -180,16 +180,16 @@
         "low": 0
       },
       "daily_life": {
-        "total": 196,
+        "total": 199,
         "high": 66,
-        "medium": 127,
+        "medium": 130,
         "low": 3
       }
     },
     "confidence": {
-      "high": 212,
-      "medium": 269,
-      "low": 98
+      "high": 214,
+      "medium": 273,
+      "low": 100
     },
     "unclassifiedCount": 16,
     "excludedCount": 34,
@@ -273,6 +273,11 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
       "count": 2
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kikuchi",
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
