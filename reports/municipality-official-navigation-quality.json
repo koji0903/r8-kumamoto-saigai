@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-08-23T09:47:18.328Z",
+  "generatedAt": "2026-08-23T13:05:46.625Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 728,
-  "displayCandidateCount": 490,
-  "classifiedPageCount": 590,
+  "inputCount": 715,
+  "displayCandidateCount": 481,
+  "classifiedPageCount": 579,
   "categoryReport": {
     "home": {
-      "total": 136,
-      "high": 51,
+      "total": 134,
+      "high": 50,
       "medium": 45,
-      "low": 40
+      "low": 39
     },
     "money": {
-      "total": 164,
+      "total": 160,
       "high": 28,
-      "medium": 50,
-      "low": 86
+      "medium": 48,
+      "low": 84
     },
     "documents": {
-      "total": 129,
-      "high": 35,
+      "total": 127,
+      "high": 34,
       "medium": 28,
-      "low": 66
+      "low": 65
     },
     "health_care": {
       "total": 42,
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 201,
-      "high": 67,
-      "medium": 131,
+      "total": 196,
+      "high": 66,
+      "medium": 127,
       "low": 3
     }
   },
@@ -77,8 +77,8 @@
       "fallback": true
     },
     "municipality_kikuchi": {
-      "classified": 11,
-      "displayCandidates": 9,
+      "classified": 0,
+      "displayCandidates": 0,
       "fallback": true
     },
     "municipality_uto": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 215,
-    "medium": 275,
-    "low": 100
+    "high": 212,
+    "medium": 269,
+    "low": 98
   },
-  "unclassifiedCount": 17,
+  "unclassifiedCount": 16,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -225,11 +225,6 @@
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326858/index.html"
     },
     {
-      "municipalityName": "菊池市",
-      "title": "2026年08月20日 きくちべんりカーの一部運休について",
-      "url": "https://www.city.kikuchi.lg.jp/article/view/2152/19042.html"
-    },
-    {
       "municipalityName": "上天草市",
       "title": "令和8年熊本地震により被災された方の旅券(...",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/64/23391.html"
@@ -255,7 +250,7 @@
       "url": "https://www.town.mashiki.lg.jp/kiji0037475/index.html"
     }
   ],
-  "outOfScopeCount": 87,
+  "outOfScopeCount": 86,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "public_relations": 11,
@@ -264,8 +259,8 @@
     "mutual_aid": 3,
     "disaster_preparedness": 7,
     "event_notice": 3,
+    "index_page": 16,
     "mayor_message": 2,
-    "index_page": 17,
     "overall_guide": 3,
     "press": 2
   },
@@ -524,13 +519,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "第27回災害対策本部会議資料（令和８年８月２２日（土曜日）午後４時００分）（PDF：27.29メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_158610_up_m1e8wq7y.pdf",
       "ruleId": "hq_meeting_material",
@@ -545,13 +533,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "広報やつしろ 災害臨時号 vol.1・2要約版（令和8年熊本地震）",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326972/index.html",
       "ruleId": "public_relations",
@@ -561,6 +542,20 @@
       "municipalityName": "八代市",
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -584,13 +579,6 @@
       "url": "https://www.city.yamaga.kumamoto.jp/kiji0033173/index.html",
       "ruleId": "disaster_preparedness",
       "ruleLabel": "平時の防災・今後への備え"
-    },
-    {
-      "municipalityName": "菊池市",
-      "title": "地震関連情報",
-      "url": "https://www.city.kikuchi.lg.jp/article/list/1350.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "宇土市",
@@ -945,5 +933,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 589
+  "previousClassifiedPageCount": 590
 }

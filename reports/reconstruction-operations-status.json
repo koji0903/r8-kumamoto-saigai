@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-23T10:04:21.273Z",
+  "generatedAt": "2026-08-23T13:23:15.321Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-23T09:47:18.328Z",
-    "inputCount": 728,
-    "classifiedPageCount": 590,
-    "displayCandidateCount": 490,
+    "generatedAt": "2026-08-23T13:05:46.625Z",
+    "inputCount": 715,
+    "classifiedPageCount": 579,
+    "displayCandidateCount": 481,
     "deltaFromPrevious": {
-      "inputCount": 3,
-      "classifiedPageCount": 1,
-      "unclassifiedCount": 0
+      "inputCount": -13,
+      "classifiedPageCount": -11,
+      "unclassifiedCount": -1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 45,
+      "ageHours": 48,
       "limitHours": 336
     }
   },
@@ -51,8 +51,8 @@
         "fallback": true
       },
       "municipality_kikuchi": {
-        "classified": 11,
-        "displayCandidates": 9,
+        "classified": 0,
+        "displayCandidates": 0,
         "fallback": true
       },
       "municipality_uto": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 136,
-        "high": 51,
+        "total": 134,
+        "high": 50,
         "medium": 45,
-        "low": 40
+        "low": 39
       },
       "money": {
-        "total": 164,
+        "total": 160,
         "high": 28,
-        "medium": 50,
-        "low": 86
+        "medium": 48,
+        "low": 84
       },
       "documents": {
-        "total": 129,
-        "high": 35,
+        "total": 127,
+        "high": 34,
         "medium": 28,
-        "low": 66
+        "low": 65
       },
       "health_care": {
         "total": 42,
@@ -180,18 +180,18 @@
         "low": 0
       },
       "daily_life": {
-        "total": 201,
-        "high": 67,
-        "medium": 131,
+        "total": 196,
+        "high": 66,
+        "medium": 127,
         "low": 3
       }
     },
     "confidence": {
-      "high": 215,
-      "medium": 275,
-      "low": 100
+      "high": 212,
+      "medium": 269,
+      "low": 98
     },
-    "unclassifiedCount": 17,
+    "unclassifiedCount": 16,
     "excludedCount": 34,
     "overrideCount": 2
   },
