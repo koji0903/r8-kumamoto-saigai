@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-23T15:41:26.521Z",
+  "generatedAt": "2026-08-23T18:51:27.477Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 724,
-  "displayCandidateCount": 487,
-  "classifiedPageCount": 587,
+  "inputCount": 728,
+  "displayCandidateCount": 489,
+  "classifiedPageCount": 590,
   "categoryReport": {
     "home": {
       "total": 136,
@@ -13,10 +13,10 @@
       "low": 40
     },
     "money": {
-      "total": 163,
+      "total": 165,
       "high": 28,
-      "medium": 49,
-      "low": 86
+      "medium": 50,
+      "low": 87
     },
     "documents": {
       "total": 129,
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 199,
-      "high": 66,
+      "total": 200,
+      "high": 67,
       "medium": 130,
       "low": 3
     }
@@ -77,8 +77,8 @@
       "fallback": true
     },
     "municipality_kikuchi": {
-      "classified": 7,
-      "displayCandidates": 6,
+      "classified": 10,
+      "displayCandidates": 8,
       "fallback": true
     },
     "municipality_uto": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 214,
-    "medium": 273,
-    "low": 100
+    "high": 215,
+    "medium": 274,
+    "low": 101
   },
-  "unclassifiedCount": 16,
+  "unclassifiedCount": 17,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -223,6 +223,11 @@
       "municipalityName": "八代市",
       "title": "令和８年熊本地震関連「被災者応援ガイドブック」について",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326858/index.html"
+    },
+    {
+      "municipalityName": "菊池市",
+      "title": "2026年08月20日 きくちべんりカーの一部運休について",
+      "url": "https://www.city.kikuchi.lg.jp/article/view/2152/19042.html"
     },
     {
       "municipalityName": "上天草市",
@@ -881,7 +886,7 @@
     "non_official_url": 4,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 12,
+  "warningCount": 11,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -892,11 +897,6 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
       "count": 2
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kikuchi",
-      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -945,5 +945,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 579
+  "previousClassifiedPageCount": 587
 }

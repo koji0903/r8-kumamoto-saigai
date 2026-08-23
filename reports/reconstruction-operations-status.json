@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-23T16:01:38.080Z",
+  "generatedAt": "2026-08-23T19:10:22.263Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-23T15:41:26.521Z",
-    "inputCount": 724,
-    "classifiedPageCount": 587,
-    "displayCandidateCount": 487,
+    "generatedAt": "2026-08-23T18:51:27.477Z",
+    "inputCount": 728,
+    "classifiedPageCount": 590,
+    "displayCandidateCount": 489,
     "deltaFromPrevious": {
-      "inputCount": 9,
-      "classifiedPageCount": 8,
-      "unclassifiedCount": 0
+      "inputCount": 4,
+      "classifiedPageCount": 3,
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 51,
+      "ageHours": 54,
       "limitHours": 336
     }
   },
@@ -51,8 +51,8 @@
         "fallback": true
       },
       "municipality_kikuchi": {
-        "classified": 7,
-        "displayCandidates": 6,
+        "classified": 10,
+        "displayCandidates": 8,
         "fallback": true
       },
       "municipality_uto": {
@@ -144,10 +144,10 @@
         "low": 40
       },
       "money": {
-        "total": 163,
+        "total": 165,
         "high": 28,
-        "medium": 49,
-        "low": 86
+        "medium": 50,
+        "low": 87
       },
       "documents": {
         "total": 129,
@@ -180,18 +180,18 @@
         "low": 0
       },
       "daily_life": {
-        "total": 199,
-        "high": 66,
+        "total": 200,
+        "high": 67,
         "medium": 130,
         "low": 3
       }
     },
     "confidence": {
-      "high": 214,
-      "medium": 273,
-      "low": 100
+      "high": 215,
+      "medium": 274,
+      "low": 101
     },
-    "unclassifiedCount": 16,
+    "unclassifiedCount": 17,
     "excludedCount": 34,
     "overrideCount": 2
   },
@@ -273,11 +273,6 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
       "count": 2
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kikuchi",
-      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
