@@ -43,6 +43,7 @@ const syntaxTargets = [
   "reconstruction-search.js",
   "scripts/build-reconstruction-search-index.mjs",
   "scripts/build-reconstruction-operations-status.mjs",
+  "scripts/report-municipality-nav-quality.mjs",
   "scripts/monitor-reconstruction-sources.mjs",
   "scripts/reconstruction-source-change.mjs",
   "scripts/reconstruction-contact-document-policy.mjs",

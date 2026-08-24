@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 const yaml=fs.readFileSync(".github/workflows/refresh-official-data.yml","utf8");
 const validateYaml=fs.readFileSync(".github/workflows/validate-site.yml","utf8");
+const qualitySummary=fs.readFileSync("scripts/report-municipality-nav-quality.mjs","utf8");
 const index=label=>{const value=yaml.indexOf(label);assert.ok(value>=0,`${label} が必要`);return value};
 assert.ok(index("市町村公式発信を更新")<index("データ整合性を検査"));
 assert.ok(index("開設中避難所を更新")<index("データ整合性を検査"));
@@ -9,7 +10,10 @@ assert.ok(index("厳密制度の公式根拠を変更監視")<index("データ�
 assert.ok(index("データ整合性を検査")<index("暮らしの再建・自治体公式情報ナビを生成"));
 assert.ok(index("暮らしの再建・自治体公式情報ナビを生成")<index("自治体公式情報ナビを検証・集計"));
 assert.ok(index("自治体公式情報ナビを検証・集計")<index("確認済みデータを反映"));
+assert.ok(index("自治体公式情報ナビを検証・集計")<index("自治体公式情報ナビの未分類を記録"));
 for(const text of ["workflow_dispatch:","dry_run:","concurrency:","cancel-in-progress: false","timeout-minutes: 30","contents: write","run-municipality-official-nav-pipeline.mjs","validate-municipality-official-nav.mjs","test-refresh-official-workflow.mjs","monitor-reconstruction-sources.mjs","build-reconstruction-public-data.js","reconstruction-source-state.json","reconstruction-source-review-queue.json","source-change-events.json","public-data/reconstruction/municipality-official-navigation.json","reports/municipality-official-navigation-quality.json","public-data/site-search-index.json","git diff --check","git add -u","git diff --cached --quiet","git diff --quiet","git fetch origin main","git rebase origin/main","for attempt in 1 2 3"])assert.ok(yaml.includes(text),`${text} が必要`);
+assert.match(yaml,/自治体公式情報ナビの未分類を記録[\s\S]*if: \$\{\{ always\(\) \}\}[\s\S]*report-municipality-nav-quality\.mjs/,"検証失敗時も未分類一覧をWorkflow summaryへ残す");
+assert.match(qualitySummary,/GITHUB_STEP_SUMMARY/,"未分類一覧をGitHub ActionsのSummaryへ出力する");
 assert.match(yaml,/fetch-depth:\s*0/,"定期更新はSEO lastmod生成のため全履歴を取得する");
 assert.match(validateYaml,/fetch-depth:\s*0/,"整合性チェックはSEO lastmod検査のため全履歴を取得する");
 assert.match(validateYaml,/npm run check/,"GitHub Actionsはローカルと同じ統一検査を使う");

@@ -151,6 +151,12 @@ jobs:
           node scripts/test-refresh-official-workflow.mjs
           git diff --check
 
+      # 検証に失敗しても未分類の表題とURLをrun画面に残す。次回調査で、失敗時の
+      # 未コミット生成物をローカルに再現する必要がなくなる。
+      - name: 自治体公式情報ナビの未分類を記録
+        if: ${{ always() }}
+        run: node scripts/report-municipality-nav-quality.mjs
+
       - name: 暮らしの再建・運用ステータスを生成
         run: |
           node scripts/build-site-phase.mjs --check
