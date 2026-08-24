@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T21:36:44.582Z",
+  "generatedAt": "2026-08-24T21:54:54.868Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 737,
@@ -37,9 +37,9 @@
       "low": 53
     },
     "work_business": {
-      "total": 28,
+      "total": 29,
       "high": 9,
-      "medium": 19,
+      "medium": 20,
       "low": 0
     },
     "agriculture_fishery": {
@@ -577,7 +577,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -971,9 +971,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 5
+      "count": 6
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 591
+  "previousClassifiedPageCount": 593
 }
