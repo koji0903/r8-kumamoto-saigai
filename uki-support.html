@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="design-system.css?v=20260810-1">
   <link rel="stylesheet" href="org-site.css?v=20260820-2">
   <link rel="stylesheet" href="hikawa-support.css?v=20260821-1">
-  <link rel="stylesheet" href="uki-support.css?v=20260825-2">
+  <link rel="stylesheet" href="uki-support.css?v=20260825-3">
   <link rel="canonical" href="https://www.yokatainet.jp/uki-support.html">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
@@ -37,13 +37,26 @@
   <main id="main">
     <section class="hk-hero"><div class="hk-shell">
       <p class="hk-kicker">宇城市｜令和8年熊本地震</p>
-      <h1>住家の被害判定から探せる <span>被災者支援制度ガイド</span></h1>
-      <p class="hk-lead">「自分の判定で何が使えるか」を入口に、36の支援メニューから金額・必要書類・期限・窓口までたどれます。</p>
-      <div class="hk-hero-actions"><a href="#damage-guide">判定から探す</a><a href="#first-steps">申請の順番</a><a href="#contacts">電話で相談</a></div>
-      <p class="hk-version">宇城市公式「支援制度等一覧・各種制度の概要 第1版」（令和8年8月19日現在／公式掲載8月23日）をもとに整理</p>
+      <h1>宇城市の被災者支援制度を <span>スマホで分かりやすく</span></h1>
+      <p class="hk-lead">宇城市が公表した36の支援制度を、住家の被害判定と困りごとから探せるように並べ直しました。制度の対象・金額・書類・窓口は、宇城市の資料に書かれた内容を要約しています。</p>
+      <div class="hk-hero-actions"><a href="#quick-damage">被害判定を選ぶ</a><a href="#first-steps">申請の流れを見る</a><a href="#contacts">担当課へ電話する</a></div>
+      <p class="hk-version"><b>情報源：宇城市公式</b>「支援制度等一覧・各種制度の概要 第1版」（令和8年8月19日現在／公式掲載8月23日）</p>
     </div></section>
 
-    <aside class="hk-alert"><div class="hk-shell"><b>判定だけで自動的に対象が決まるとは限りません</b><p>「●」でも所得・世帯・居住状況などの要件があります。「条件付き」は解体、自力での確保が困難、修理期間などの追加要件があります。支援内容・実施予定日・受付場所は変更になる場合があるため、契約・解体・支払いの前に担当課へ確認してください。</p></div></aside>
+    <aside class="hk-alert"><div class="hk-shell"><b>このページは、宇城市の公式情報を読みやすく整理したものです</b><p>対象可否を独自に判定するページではありません。「●」でも所得・世帯・居住状況などの要件があります。内容は変更される場合があるため、申請・契約・解体・支払いの前に、各制度の「宇城市公式」と担当課で最新情報をご確認ください。</p></div></aside>
+
+    <section class="uki-quick" id="quick-damage"><div class="hk-shell">
+      <p class="uki-quick-label">罹災証明書の「住家の被害程度」を選ぶ</p>
+      <div class="uki-quick-grid">
+        <a href="#damage-full"><b>全壊</b><span>対象制度を見る</span></a>
+        <a href="#damage-large"><b>大規模半壊</b><span>対象制度を見る</span></a>
+        <a href="#damage-middle"><b>中規模半壊</b><span>対象制度を見る</span></a>
+        <a href="#damage-half"><b>半壊</b><span>条件付き制度も確認</span></a>
+        <a href="#damage-semi"><b>準半壊</b><span>修理制度を確認</span></a>
+        <a href="#damage-minor"><b>一部損壊</b><span>判定によらない制度も確認</span></a>
+      </div>
+      <p class="uki-quick-help">まだ罹災証明書がない方は、先に<a href="#first-steps">申請の流れ</a>を確認してください。</p>
+    </div></section>
 
     <section class="hk-section uki-first" id="first-steps"><div class="hk-shell">
       <header class="hk-heading"><p class="hk-kicker">START HERE</p><h2>まず行うこと</h2><p>制度を逃さず、後から必要な証拠を失わないための順番です。</p></header>
@@ -76,7 +89,14 @@
         </table>
       </div>
       <p class="uki-table-note">半壊の生活再建支援金は、やむを得ず住宅を解体した世帯などが対象です。医療・介護は住家被害以外にも、主たる生計維持者の死亡・重篤な傷病・失職・廃業等で対象になる場合があります。</p>
-      <div class="uki-damage-cards"><article><h3>全壊</h3><p>生活再建支援金、仮設住宅、修理（居住可能になる場合）、障害物除去（元の住家に住み続ける場合）、解体などを検討。</p></article><article><h3>大規模・中規模半壊</h3><p>生活再建支援金と応急修理が中心。仮設住宅は解体・長期修理など追加要件を確認。</p></article><article><h3>半壊</h3><p>応急修理、解体、医療・介護免除など。生活再建支援金・仮設住宅は解体等の条件付き。</p></article><article><h3>準半壊</h3><p>緊急修理と応急修理が候補。援護資金は状況による。福祉用具・証明手数料等も確認。</p></article><article><h3>一部損壊</h3><p>住まいの主要制度は対象外が多い一方、奨学金、福祉用具、証明手数料等は候補です。</p></article></div>
+      <div class="uki-damage-cards">
+        <article id="damage-full"><span>判定</span><h3>全壊</h3><p>生活再建支援金、仮設住宅、修理（居住可能になる場合）、障害物除去（住み続ける場合）、解体などが候補です。</p><div><a href="#rebuild-money">支援金</a><a href="#temporary-housing">仮設住宅</a><a href="#regular-repair">応急修理</a><a href="#demolition">解体</a></div></article>
+        <article id="damage-large"><span>判定</span><h3>大規模半壊</h3><p>生活再建支援金と応急修理などが候補です。仮設住宅は解体・長期修理などの追加要件があります。</p><div><a href="#rebuild-money">支援金</a><a href="#temporary-housing">仮設住宅</a><a href="#regular-repair">応急修理</a><a href="#demolition">解体</a></div></article>
+        <article id="damage-middle"><span>判定</span><h3>中規模半壊</h3><p>生活再建支援金と応急修理などが候補です。仮設住宅は解体・長期修理などの追加要件があります。</p><div><a href="#rebuild-money">支援金</a><a href="#temporary-housing">仮設住宅</a><a href="#regular-repair">応急修理</a><a href="#demolition">解体</a></div></article>
+        <article id="damage-half"><span>判定</span><h3>半壊</h3><p>応急修理、解体、医療・介護免除などが候補です。支援金・仮設住宅は解体等の条件付きです。</p><div><a href="#regular-repair">応急修理</a><a href="#demolition">解体</a><a href="#medical">医療・介護</a><a href="#rebuild-money">条件付き支援金</a></div></article>
+        <article id="damage-semi"><span>判定</span><h3>準半壊</h3><p>緊急修理と応急修理が候補です。援護資金は状況によります。判定によらない制度も確認してください。</p><div><a href="#emergency-repair">緊急修理</a><a href="#regular-repair">応急修理</a><a href="#loans">援護資金</a><a href="#all-menus">その他</a></div></article>
+        <article id="damage-minor"><span>判定</span><h3>一部損壊</h3><p>住まいの主要制度は対象外が多い一方、奨学金、福祉用具、証明手数料などは候補です。</p><div><a href="#all-menus">判定によらない制度</a><a href="#contacts">窓口に確認</a></div></article>
+      </div>
     </div></section>
 
     <section class="hk-section" id="housing"><div class="hk-shell"><header class="hk-heading"><p class="hk-kicker">HOUSING</p><h2>住まいを直す・確保する・解体する</h2></header><div class="hk-warning"><b>工事契約・支払い・解体の前に相談してください</b><p>市が施工業者へ直接支払う制度や、市の基準額までしか償還されない制度があります。</p></div><div class="uki-detail-stack">

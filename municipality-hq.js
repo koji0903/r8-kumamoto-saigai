@@ -8,7 +8,7 @@
 //   いちばん細かく毎日たどれる一次情報。ただし書き方が行政向けで、そのまま
 //   出しても市民には読めない。そこで
 //     ・「知りたいこと」から入れるようにする（家・避難所・水・支援…）
-//     ・数字には意味を添える（申請と交付の差＝待っている人）
+//     ・数字には意味を添える（申請と交付の差など、単純比較の限界も示す）
 //     ・前の回から何が変わったかを文にする（時間軸で追えるように）
 //     ・行政の言葉に説明を添える（資料の文字は書き換えない）
 //   資料の文そのものは一字も変えない。足すのは説明と並べ替えだけ。
@@ -71,7 +71,7 @@
     { key: "certificateApplications", label: "り災証明 申請", unit: "件", theme: "home", lead: true,
       plain: "家の被害を証明してほしいと申し込まれた件数です。" },
     { key: "certificateIssued", label: "り災証明 交付", unit: "件", theme: "home", lead: true,
-      plain: "実際に証明書が渡された件数です。申請との差が、待っている人の多さです。" },
+      plain: "実際に証明書が渡された件数です。申請との差は進み具合を見る目安ですが、未交付の人数そのものではありません。" },
     { key: "homesSurveyed", label: "被害認定調査 実施", unit: "件", theme: "home",
       note: "職員が現地で見て判定した件数。届出をもとにした速報の続きではありません。" },
     { key: "homesReported", label: "住家被害（届出の速報）", unit: "件", theme: "home",
@@ -264,7 +264,7 @@
     const rate = Math.round((issued.value / applied.value) * 1000) / 10;
     now.push({
       theme: "home", headline: `り災証明は${num(applied.value)}件の申請のうち${num(issued.value)}件が交付済み`,
-      body: `交付は申請の${rate}%です。差し引き${num(applied.value - issued.value)}件が、調査や判定を待っている状態にあたります。`,
+      body: `交付数は申請数の${rate}%です。単純な差は${num(applied.value - issued.value)}件ですが、申請と交付の集計時点などが異なるため、未交付件数そのものとは限りません。`,
       bar: rate,
       note: "り災証明は、支援金・住宅の応急修理・税の減免などの申請で必要になります。"
     });
@@ -295,6 +295,60 @@
       ${item.note ? `<p class="hq-now-note">${esc(item.note)}</p>` : ""}
     </article>`).join("");
   $("#hqNowWhen").textContent = `第${last.meeting}回（${day(last.date)}${last.time ? ` ${last.time}` : ""}）の資料より`;
+
+  // 局面名は市の公式区分ではなく、日付・話題・数値を追いやすくするための案内。
+  const phaseDefinitions = [
+    { start: 1, end: 3, label: "緊急対応", description: "本部設置、避難、救助、被害の第一報を集める段階" },
+    { start: 4, end: 7, label: "避難生活と応急対応", description: "避難所・食事・ライフラインなど、生活を維持する対応を広げる段階" },
+    { start: 8, end: 14, label: "被害把握と制度の立ち上げ", description: "住家被害の把握、り災証明、支援制度へ対応の軸が移る段階" },
+    { start: 15, end: lastDay, label: "生活再建への移行", description: "避難生活を続けながら、被害認定・証明交付・住まい再建を進める段階" }
+  ];
+  const phaseMetricKeys = ["evacuees", "shelters", "homesReported", "homesSurveyed", "certificateApplications", "certificateIssued"];
+  const phaseMetric = (subset, key) => {
+    const metric = metricOf(key), points = subset.filter(meeting => meeting.figures?.[key] != null);
+    if (!metric || !points.length) return null;
+    const startValue = points[0].figures[key], endValue = points.at(-1).figures[key];
+    return `<span><b>${esc(metric.label)}</b>${points.length > 1 && startValue !== endValue ? `${num(startValue)}→${num(endValue)}${metric.unit}` : `${num(endValue)}${metric.unit}`}</span>`;
+  };
+  const phaseCards = phaseDefinitions.map((phase, order) => {
+    if (phase.end < phase.start) return "";
+    const subset = meetings.filter(meeting => dayOf(meeting.date) >= phase.start && dayOf(meeting.date) <= phase.end);
+    if (!subset.length) return "";
+    const topicCounts = new Map();
+    for (const meeting of subset) for (const block of meeting.blocks || []) if (block.theme) topicCounts.set(block.theme, (topicCounts.get(block.theme) || 0) + 1);
+    const topics = [...topicCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([id]) => themes.find(theme => theme.id === id)).filter(Boolean);
+    const metrics = phaseMetricKeys.map(key => phaseMetric(subset, key)).filter(Boolean).slice(0, 3);
+    const actualStart = dayOf(subset[0].date), actualEnd = dayOf(subset.at(-1).date);
+    return `<article class="hq-phase"><div class="hq-phase-number" aria-hidden="true">${order + 1}</div><div class="hq-phase-body">
+      <p class="hq-phase-date">発災${actualStart}${actualEnd !== actualStart ? `〜${actualEnd}` : ""}日目・${day(subset[0].date)}${subset.at(-1).date !== subset[0].date ? `〜${day(subset.at(-1).date)}` : ""}</p>
+      <h3>${esc(phase.label)}</h3><p>${esc(phase.description)}</p><p class="hq-phase-count">この期間の公開会議 ${subset.length}回</p>
+      ${topics.length ? `<div class="hq-phase-topics" aria-label="資料に多く現れた話題">${topics.map(topic => `<span class="tone-${esc(topic.id)}">${esc(topic.label)}</span>`).join("")}</div>` : ""}
+      ${metrics.length ? `<div class="hq-phase-metrics">${metrics.join("")}</div>` : ""}</div></article>`;
+  }).filter(Boolean);
+  $("#hqPhases").innerHTML = `<ol class="hq-phase-list">${phaseCards.map(card => `<li>${card}</li>`).join("")}</ol><p class="hq-reading-note">「4つの局面」は、このサイトが会議資料を読みやすくするために設けた区分で、市の公式な区分ではありません。</p>`;
+
+  const forwardPattern = /(今後|予定|見込み|準備|調整|検討|進め|努め|継続|調査中)/;
+  const officialActions = [];
+  for (const meeting of [...meetings].reverse().slice(0, 7)) {
+    for (const block of meeting.blocks || []) for (const line of block.text.split("\n").map(item => item.trim()).filter(Boolean)) {
+      if (!forwardPattern.test(line) || officialActions.some(item => item.text === line)) continue;
+      officialActions.push({ text: line, meeting, url: meeting.documents?.[0]?.url });
+      if (officialActions.length >= 5) break;
+    }
+    if (officialActions.length >= 5) break;
+  }
+  const challenges = [];
+  if (evacuees?.value > 0) challenges.push(`${num(evacuees.value)}人が避難所で生活しており、避難所運営と生活環境への対応が続く状況です。`);
+  if (applied && issued) challenges.push(`申請${num(applied.value)}件と交付${num(issued.value)}件の差は${num(applied.value - issued.value)}件です。調査・交付が続く段階ですが、この差は未交付件数や人数そのものとは限りません。`);
+  const surveyedSeries = series("homesSurveyed");
+  if (surveyedSeries.length >= 2) challenges.push(`住家の被害認定調査は前回掲載値から${num(surveyedSeries.at(-1).value - surveyedSeries.at(-2).value)}件増え、累計${num(surveyedSeries.at(-1).value)}件です。`);
+  const unclassifiedPeople = latestFigure("injuredUnclassified");
+  if (unclassifiedPeople?.value > 0) challenges.push(`人的被害では分類未確定${num(unclassifiedPeople.value)}名が最新資料に残っています。`);
+  if (shelters?.value > 0) challenges.push(`避難所は${num(shelters.value)}か所が開設中で、状況に応じた運営・集約が引き続き必要な段階です。`);
+  $("#hqDirection").innerHTML = `<article class="hq-direction-card is-official"><p class="hq-direction-label">資料に明記された今後の対応</p>${officialActions.length
+    ? `<ul>${officialActions.map(item => `<li><p>${esc(readable(item.text))}</p><a href="${esc(item.url)}" target="_blank" rel="noopener">第${item.meeting.meeting}回（${day(item.meeting.date)}）の資料PDF</a></li>`).join("")}</ul>`
+    : `<p class="hq-direction-empty">直近7回の資料には、「今後の対応」として読める記述を確認できませんでした。</p>`}</article>
+    <article class="hq-direction-card is-reading"><p class="hq-direction-label">数値から見える継続課題</p><ul>${challenges.slice(0, 4).map(text => `<li>${esc(text)}</li>`).join("")}</ul><p class="hq-reading-note">会議資料の数値を比較した、このサイトの読み取りです。行政の計画・決定事項ではありません。</p></article>`;
 
   // ---- 時間の流れで見る -----------------------------------------------------
   // 「第何回」ではなく「発災から何日目」で並べる。回を等間隔に並べると、
@@ -333,7 +387,7 @@
       theme: "home", title: "り災証明の申請と交付",
       lead: `申請の件数が資料に載り始めたのは発災${dayOf(start.date)}日目（${day(start.date)}）です。`
         + `${dayOf(nowApply.date)}日目には申請${num(nowApply.value)}件・交付${num(nowIssue.value)}件。`
-        + `2本の線の開きが、証明書を待っている人の数です。`,
+        + "2本の線の開きは手続きの進み具合を見る目安ですが、未交付の人数そのものではありません。",
       legend: [["申請", colorOf("home")], ["交付", "#e0a94f"]],
       svg: lineChart([
         { points: applySeries, color: colorOf("home") },

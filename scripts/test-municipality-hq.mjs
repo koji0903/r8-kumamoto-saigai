@@ -169,10 +169,19 @@ assert.match(read("municipality-hq.css"), /\.hq-chart\s*\{[^}]*min-width/, "図�
 
 for (const page of data.municipalities.map(item => item.page)) {
   const html = read(page);
-  for (const id of ["hqCharts", "hqCadence", "hqTopics"]) {
+  for (const id of ["hqPhases", "hqDirection", "hqCharts", "hqCadence", "hqTopics"]) {
     assert.ok(html.includes(`id="${id}"`), `${page}: 時間軸の節（${id}）がありません`);
   }
 }
+for (const label of ["緊急対応", "避難生活と応急対応", "被害把握と制度の立ち上げ", "生活再建への移行"]) {
+  assert.ok(viewer.includes(label), `行政対応の局面「${label}」がありません`);
+}
+assert.ok(viewer.includes("市の公式な区分ではありません"), "局面が独自整理であることを明記していません");
+assert.ok(viewer.includes("資料に明記された今後の対応") && viewer.includes("数値から見える継続課題"),
+  "公式記載とサイトの読み取りが分離されていません");
+assert.ok(viewer.includes("行政の計画・決定事項ではありません"), "数値からの読み取りに注意書きがありません");
+assert.match(viewer, /forwardPattern[^\n]+努め/, "今後の対応を資料本文から探す仕組みがありません");
+assert.match(read("municipality-hq.css"), /\.hq-phase-list\s*\{/, "行政対応の時間軸のスタイルがありません");
 
 // 会議のなかった日がある市では、その空白が扱えていること（機能が生きている確認）
 for (const municipality of data.municipalities) {
