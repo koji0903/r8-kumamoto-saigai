@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-25T02:13:34.001Z",
+  "generatedAt": "2026-08-25T04:20:10.198Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-25T01:56:06.450Z",
-    "inputCount": 730,
-    "classifiedPageCount": 587,
-    "displayCandidateCount": 487,
+    "generatedAt": "2026-08-25T04:04:23.754Z",
+    "inputCount": 751,
+    "classifiedPageCount": 604,
+    "displayCandidateCount": 502,
     "deltaFromPrevious": {
-      "inputCount": -7,
-      "classifiedPageCount": -6,
-      "unclassifiedCount": 1
+      "inputCount": 21,
+      "classifiedPageCount": 17,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 131,
-        "displayCandidates": 98,
+        "classified": 132,
+        "displayCandidates": 99,
         "fallback": true
       },
       "municipality_minamata": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 75,
-        "displayCandidates": 66,
+        "classified": 74,
+        "displayCandidates": 65,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -106,8 +106,8 @@
         "fallback": true
       },
       "municipality_kashima": {
-        "classified": 0,
-        "displayCandidates": 0,
+        "classified": 17,
+        "displayCandidates": 15,
         "fallback": true
       },
       "municipality_mashiki": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 137,
-        "high": 52,
-        "medium": 45,
-        "low": 40
+        "total": 143,
+        "high": 56,
+        "medium": 48,
+        "low": 39
       },
       "money": {
-        "total": 167,
+        "total": 171,
         "high": 33,
-        "medium": 47,
-        "low": 87
+        "medium": 49,
+        "low": 89
       },
       "documents": {
-        "total": 135,
+        "total": 140,
         "high": 35,
-        "medium": 31,
-        "low": 69
+        "medium": 30,
+        "low": 75
       },
       "health_care": {
         "total": 40,
@@ -162,15 +162,15 @@
         "low": 0
       },
       "family_education": {
-        "total": 86,
+        "total": 89,
         "high": 6,
-        "medium": 28,
-        "low": 52
+        "medium": 30,
+        "low": 53
       },
       "work_business": {
-        "total": 29,
+        "total": 31,
         "high": 10,
-        "medium": 19,
+        "medium": 21,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,16 +180,16 @@
         "low": 0
       },
       "daily_life": {
-        "total": 197,
-        "high": 65,
-        "medium": 129,
+        "total": 203,
+        "high": 67,
+        "medium": 133,
         "low": 3
       }
     },
     "confidence": {
-      "high": 218,
-      "medium": 269,
-      "low": 100
+      "high": 224,
+      "medium": 278,
+      "low": 102
     },
     "unclassifiedCount": 23,
     "excludedCount": 36,
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:432fd2c3afcc49698baf44ab49e7264f00a982dc4589430c8def14777a09fd72",
+        "currentHash": "sha256:fe2bf058e1bddfb513344804f3c0069612d21b7027eb8863b4b977bfb1fc594f",
         "verificationStatus": "needs_review"
       }
     },
@@ -302,12 +302,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 4
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kashima",
-      "count": 1
+      "count": 6
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -355,7 +350,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:432fd2c3afcc49698baf44ab49e7264f00a982dc4589430c8def14777a09fd72",
+        "currentHash": "sha256:fe2bf058e1bddfb513344804f3c0069612d21b7027eb8863b4b977bfb1fc594f",
         "verificationStatus": "needs_review"
       },
       {

@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-08-25T01:56:06.450Z",
+  "generatedAt": "2026-08-25T04:04:23.754Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 730,
-  "displayCandidateCount": 487,
-  "classifiedPageCount": 587,
+  "inputCount": 751,
+  "displayCandidateCount": 502,
+  "classifiedPageCount": 604,
   "categoryReport": {
     "home": {
-      "total": 137,
-      "high": 52,
-      "medium": 45,
-      "low": 40
+      "total": 143,
+      "high": 56,
+      "medium": 48,
+      "low": 39
     },
     "money": {
-      "total": 167,
+      "total": 171,
       "high": 33,
-      "medium": 47,
-      "low": 87
+      "medium": 49,
+      "low": 89
     },
     "documents": {
-      "total": 135,
+      "total": 140,
       "high": 35,
-      "medium": 31,
-      "low": 69
+      "medium": 30,
+      "low": 75
     },
     "health_care": {
       "total": 40,
@@ -31,15 +31,15 @@
       "low": 0
     },
     "family_education": {
-      "total": 86,
+      "total": 89,
       "high": 6,
-      "medium": 28,
-      "low": 52
+      "medium": 30,
+      "low": 53
     },
     "work_business": {
-      "total": 29,
+      "total": 31,
       "high": 10,
-      "medium": 19,
+      "medium": 21,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 197,
-      "high": 65,
-      "medium": 129,
+      "total": 203,
+      "high": 67,
+      "medium": 133,
       "low": 3
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 131,
-      "displayCandidates": 98,
+      "classified": 132,
+      "displayCandidates": 99,
       "fallback": true
     },
     "municipality_minamata": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 75,
-      "displayCandidates": 66,
+      "classified": 74,
+      "displayCandidates": 65,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -132,8 +132,8 @@
       "fallback": true
     },
     "municipality_kashima": {
-      "classified": 0,
-      "displayCandidates": 0,
+      "classified": 17,
+      "displayCandidates": 15,
       "fallback": true
     },
     "municipality_mashiki": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 218,
-    "medium": 269,
-    "low": 100
+    "high": 224,
+    "medium": 278,
+    "low": 102
   },
   "unclassifiedCount": 23,
   "unclassifiedItems": [
@@ -206,6 +206,11 @@
     },
     {
       "municipalityName": "八代市",
+      "title": "政府への要望活動（令和８年熊本地震に関する緊急要望）",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326975/index.html"
+    },
+    {
+      "municipalityName": "八代市",
       "title": "【図書館】返却ポスト利用再開のお知らせ",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326962/index.html"
     },
@@ -228,11 +233,6 @@
       "municipalityName": "八代市",
       "title": "令和８年熊本地震関連「被災者応援ガイドブック」について",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326858/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "政府への要望活動（令和8年熊本地震に関する緊急要望）",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326975/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -285,16 +285,16 @@
       "url": "https://www.town.mashiki.lg.jp/kiji0037475/index.html"
     }
   ],
-  "outOfScopeCount": 84,
+  "outOfScopeCount": 88,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "public_relations": 11,
-    "hq_meeting_material": 28,
+    "hq_meeting_material": 29,
     "facility_notice": 10,
     "disaster_preparedness": 7,
     "event_notice": 3,
     "mayor_message": 2,
-    "index_page": 14,
+    "index_page": 17,
     "mutual_aid": 2,
     "overall_guide": 3,
     "press": 2
@@ -582,15 +582,15 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -656,6 +656,13 @@
       "url": "https://www.city.uto.lg.jp/article/view/1310/16632.html",
       "ruleId": "public_relations",
       "ruleLabel": "広報紙・その配布"
+    },
+    {
+      "municipalityName": "宇土市",
+      "title": "令和8年熊本地震 災害対策本部会議",
+      "url": "https://www.city.uto.lg.jp/article/view/1310/16725.html",
+      "ruleId": "hq_meeting_material",
+      "ruleLabel": "災害対策本部会議の資料"
     },
     {
       "municipalityName": "上天草市",
@@ -840,6 +847,27 @@
       "ruleLabel": "平時の防災・今後への備え"
     },
     {
+      "municipalityName": "嘉島町",
+      "title": "令和8年熊本地震に関する情報",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6035.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "嘉島町",
+      "title": "(スマホ表示用)令和8年熊本地震に関する情報 2026.8.19更新(PDF 約980KB)",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/dl?q=44880_filelib_5d49e3018e61b801673a02b2bce95acd.pdf",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "嘉島町",
+      "title": "(PC・印刷用)令和8年熊本地震に関する情報 2026.8.19更新(PDF 約1,017KB)",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/dl?q=44881_filelib_2aa9f84af5e3d08470f7bf11b2ac4fc7.pdf",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
       "municipalityName": "益城町",
       "title": "潮井自然公園について",
       "url": "https://www.town.mashiki.lg.jp/kiji0035566/index.html",
@@ -895,7 +923,7 @@
     "non_official_url": 5,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 13,
+  "warningCount": 12,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -935,12 +963,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 4
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kashima",
-      "count": 1
+      "count": 6
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -964,5 +987,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 593
+  "previousClassifiedPageCount": 587
 }
