@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-25T13:32:08.171Z",
+  "generatedAt": "2026-08-25T16:23:07.843Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-25T13:15:27.024Z",
-    "inputCount": 762,
-    "classifiedPageCount": 616,
-    "displayCandidateCount": 512,
+    "generatedAt": "2026-08-25T16:03:43.706Z",
+    "inputCount": 761,
+    "classifiedPageCount": 615,
+    "displayCandidateCount": 511,
     "deltaFromPrevious": {
       "inputCount": -1,
       "classifiedPageCount": -1,
-      "unclassifiedCount": 0
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 6,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 82,
-        "displayCandidates": 71,
+        "classified": 81,
+        "displayCandidates": 70,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -168,9 +168,9 @@
         "low": 56
       },
       "work_business": {
-        "total": 28,
+        "total": 29,
         "high": 9,
-        "medium": 19,
+        "medium": 20,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,19 +180,19 @@
         "low": 0
       },
       "daily_life": {
-        "total": 204,
-        "high": 70,
+        "total": 203,
+        "high": 69,
         "medium": 132,
         "low": 2
       }
     },
     "confidence": {
-      "high": 230,
+      "high": 229,
       "medium": 282,
       "low": 104
     },
-    "unclassifiedCount": 22,
-    "excludedCount": 36,
+    "unclassifiedCount": 23,
+    "excludedCount": 35,
     "overrideCount": 2
   },
   "actions": [
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:fe2bf058e1bddfb513344804f3c0069612d21b7027eb8863b4b977bfb1fc594f",
+        "currentHash": "sha256:71ec1e23b29884f6105245485184f7dc3b062a707ee732c27ff9282c719a7709",
         "verificationStatus": "needs_review"
       }
     },
@@ -292,7 +292,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -350,7 +350,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:fe2bf058e1bddfb513344804f3c0069612d21b7027eb8863b4b977bfb1fc594f",
+        "currentHash": "sha256:71ec1e23b29884f6105245485184f7dc3b062a707ee732c27ff9282c719a7709",
         "verificationStatus": "needs_review"
       },
       {

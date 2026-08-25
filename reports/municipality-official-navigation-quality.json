@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-25T13:15:27.024Z",
+  "generatedAt": "2026-08-25T16:03:43.706Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 762,
-  "displayCandidateCount": 512,
-  "classifiedPageCount": 616,
+  "inputCount": 761,
+  "displayCandidateCount": 511,
+  "classifiedPageCount": 615,
   "categoryReport": {
     "home": {
       "total": 149,
@@ -37,9 +37,9 @@
       "low": 56
     },
     "work_business": {
-      "total": 28,
+      "total": 29,
       "high": 9,
-      "medium": 19,
+      "medium": 20,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 204,
-      "high": 70,
+      "total": 203,
+      "high": 69,
       "medium": 132,
       "low": 2
     }
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 82,
-      "displayCandidates": 71,
+      "classified": 81,
+      "displayCandidates": 70,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 230,
+    "high": 229,
     "medium": 282,
     "low": 104
   },
-  "unclassifiedCount": 22,
+  "unclassifiedCount": 23,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -268,6 +268,11 @@
       "municipalityName": "御船町",
       "title": "「令和8年熊本地震」セーフティーネット保証4号について",
       "url": "https://www.town.mifune.kumamoto.jp/page9412.html?type=top"
+    },
+    {
+      "municipalityName": "嘉島町",
+      "title": "【熊本地震のため延期】8月27日(木)に『お出かけ知事室』～ともに未来を語る会～が嘉島町で開催されます - その他",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/140/5980.html"
     },
     {
       "municipalityName": "益城町",
@@ -570,7 +575,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -912,10 +917,10 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 36,
+  "excludedCount": 35,
   "excludedByType": {
     "duplicate_url": 31,
-    "non_official_url": 4,
+    "non_official_url": 3,
     "non_disaster_context_excluded": 1
   },
   "warningCount": 12,
@@ -948,7 +953,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -982,5 +987,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 617
+  "previousClassifiedPageCount": 616
 }
