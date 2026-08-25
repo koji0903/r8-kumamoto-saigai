@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-08-25T04:04:23.754Z",
+  "generatedAt": "2026-08-25T07:12:30.815Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 751,
-  "displayCandidateCount": 502,
-  "classifiedPageCount": 604,
+  "inputCount": 754,
+  "displayCandidateCount": 506,
+  "classifiedPageCount": 609,
   "categoryReport": {
     "home": {
-      "total": 143,
+      "total": 145,
       "high": 56,
-      "medium": 48,
-      "low": 39
+      "medium": 49,
+      "low": 40
     },
     "money": {
-      "total": 171,
+      "total": 172,
       "high": 33,
-      "medium": 49,
+      "medium": 50,
       "low": 89
     },
     "documents": {
       "total": 140,
       "high": 35,
-      "medium": 30,
-      "low": 75
+      "medium": 31,
+      "low": 74
     },
     "health_care": {
       "total": 40,
@@ -31,39 +31,39 @@
       "low": 0
     },
     "family_education": {
-      "total": 89,
+      "total": 90,
       "high": 6,
       "medium": 30,
-      "low": 53
+      "low": 54
     },
     "work_business": {
-      "total": 31,
-      "high": 10,
-      "medium": 21,
+      "total": 29,
+      "high": 9,
+      "medium": 20,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 14,
-      "high": 7,
+      "total": 15,
+      "high": 8,
       "medium": 7,
       "low": 0
     },
     "daily_life": {
-      "total": 203,
+      "total": 204,
       "high": 67,
-      "medium": 133,
+      "medium": 134,
       "low": 3
     }
   },
   "municipalityReport": {
     "municipality_kumamoto": {
-      "classified": 67,
-      "displayCandidates": 55,
+      "classified": 68,
+      "displayCandidates": 56,
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 132,
-      "displayCandidates": 99,
+      "classified": 130,
+      "displayCandidates": 97,
       "fallback": true
     },
     "municipality_minamata": {
@@ -87,13 +87,13 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 33,
-      "displayCandidates": 28,
+      "classified": 34,
+      "displayCandidates": 29,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 74,
-      "displayCandidates": 65,
+      "classified": 77,
+      "displayCandidates": 68,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -147,8 +147,8 @@
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 31,
-      "displayCandidates": 28,
+      "classified": 33,
+      "displayCandidates": 29,
       "fallback": true
     },
     "municipality_ashikita": {
@@ -164,10 +164,10 @@
   },
   "confidence": {
     "high": 224,
-    "medium": 278,
-    "low": 102
+    "medium": 282,
+    "low": 103
   },
-  "unclassifiedCount": 23,
+  "unclassifiedCount": 22,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -248,11 +248,6 @@
       "municipalityName": "宇土市",
       "title": "水質検査の結果を公表します",
       "url": "https://www.city.uto.lg.jp/article/view/1308/16737.html"
-    },
-    {
-      "municipalityName": "上天草市",
-      "title": "令和8年熊本地震により被災された方の旅券(...",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/64/23391.html"
     },
     {
       "municipalityName": "宇城市",
@@ -722,6 +717,13 @@
     },
     {
       "municipalityName": "宇城市",
+      "title": "【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
+      "ruleId": "press",
+      "ruleLabel": "報道機関向け"
+    },
+    {
+      "municipalityName": "宇城市",
       "title": "南海トラフ地震臨時情報（巨大地震注意）について",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2422985",
       "ruleId": "disaster_preparedness",
@@ -740,13 +742,6 @@
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2612010",
       "ruleId": "overall_guide",
       "ruleLabel": "被災者向けの総合案内"
-    },
-    {
-      "municipalityName": "宇城市",
-      "title": "2026年08月24日 【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
-      "ruleId": "press",
-      "ruleLabel": "報道機関向け"
     },
     {
       "municipalityName": "宇城市",
@@ -792,7 +787,7 @@
     },
     {
       "municipalityName": "美里町",
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（8月24日16時00分更新）",
+      "title": "令和8年熊本地震（7月28日発生）に関する情報（8月25日15時30分更新）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -883,15 +878,15 @@
     },
     {
       "municipalityName": "甲佐町",
-      "title": "『広報こうさ』号外第1報(令和8年熊本地震関連情報)",
-      "url": "https://www.town.kosa.lg.jp/q/aview/1/13555.html",
+      "title": "『広報こうさ』号外第2報(令和8年熊本地震関連情報)",
+      "url": "https://www.town.kosa.lg.jp/q/aview/1/13631.html",
       "ruleId": "public_relations",
       "ruleLabel": "広報紙・その配布"
     },
     {
       "municipalityName": "甲佐町",
-      "title": "『広報こうさ』号外第2報(令和8年熊本地震関連情報)",
-      "url": "https://www.town.kosa.lg.jp/q/aview/1/13631.html",
+      "title": "『広報こうさ』号外第1報(令和8年熊本地震関連情報)",
+      "url": "https://www.town.kosa.lg.jp/q/aview/1/13555.html",
       "ruleId": "public_relations",
       "ruleLabel": "広報紙・その配布"
     },
@@ -917,10 +912,10 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 36,
+  "excludedCount": 35,
   "excludedByType": {
     "duplicate_url": 30,
-    "non_official_url": 5,
+    "non_official_url": 4,
     "non_disaster_context_excluded": 1
   },
   "warningCount": 12,
@@ -963,7 +958,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 6
+      "count": 5
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -983,9 +978,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 3
+      "count": 4
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 587
+  "previousClassifiedPageCount": 604
 }
