@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-25T16:23:07.843Z",
+  "generatedAt": "2026-08-25T19:19:03.479Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-25T16:03:43.706Z",
+    "generatedAt": "2026-08-25T19:02:11.771Z",
     "inputCount": 761,
     "classifiedPageCount": 615,
     "displayCandidateCount": 511,
     "deltaFromPrevious": {
-      "inputCount": -1,
-      "classifiedPageCount": -1,
-      "unclassifiedCount": 1
+      "inputCount": 0,
+      "classifiedPageCount": 0,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 3,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 81,
-        "displayCandidates": 70,
+        "classified": 82,
+        "displayCandidates": 71,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -116,8 +116,8 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 33,
-        "displayCandidates": 29,
+        "classified": 32,
+        "displayCandidates": 28,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -150,9 +150,9 @@
         "low": 91
       },
       "documents": {
-        "total": 143,
+        "total": 142,
         "high": 36,
-        "medium": 31,
+        "medium": 30,
         "low": 76
       },
       "health_care": {
@@ -180,15 +180,15 @@
         "low": 0
       },
       "daily_life": {
-        "total": 203,
-        "high": 69,
+        "total": 204,
+        "high": 70,
         "medium": 132,
         "low": 2
       }
     },
     "confidence": {
-      "high": 229,
-      "medium": 282,
+      "high": 230,
+      "medium": 281,
       "low": 104
     },
     "unclassifiedCount": 23,
@@ -322,7 +322,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 3
+      "count": 4
     }
   ],
   "strictSources": {
