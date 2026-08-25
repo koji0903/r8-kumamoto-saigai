@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-25T19:02:11.771Z",
+  "generatedAt": "2026-08-25T21:47:39.791Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 761,
-  "displayCandidateCount": 511,
-  "classifiedPageCount": 615,
+  "inputCount": 762,
+  "displayCandidateCount": 512,
+  "classifiedPageCount": 616,
   "categoryReport": {
     "home": {
       "total": 149,
@@ -19,9 +19,9 @@
       "low": 91
     },
     "documents": {
-      "total": 142,
+      "total": 143,
       "high": 36,
-      "medium": 30,
+      "medium": 31,
       "low": 76
     },
     "health_care": {
@@ -142,8 +142,8 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 32,
-      "displayCandidates": 28,
+      "classified": 33,
+      "displayCandidates": 29,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 230,
-    "medium": 281,
+    "medium": 282,
     "low": 104
   },
   "unclassifiedCount": 23,
@@ -983,7 +983,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 4
+      "count": 3
     }
   ],
   "errors": [],
