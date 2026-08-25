@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-25T09:54:42.977Z",
+  "generatedAt": "2026-08-25T13:15:27.024Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 763,
+  "inputCount": 762,
   "displayCandidateCount": 512,
-  "classifiedPageCount": 617,
+  "classifiedPageCount": 616,
   "categoryReport": {
     "home": {
       "total": 149,
@@ -37,9 +37,9 @@
       "low": 56
     },
     "work_business": {
-      "total": 29,
+      "total": 28,
       "high": 9,
-      "medium": 20,
+      "medium": 19,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,10 +49,10 @@
       "low": 0
     },
     "daily_life": {
-      "total": 205,
+      "total": 204,
       "high": 70,
       "medium": 132,
-      "low": 3
+      "low": 2
     }
   },
   "municipalityReport": {
@@ -62,7 +62,7 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 131,
+      "classified": 130,
       "displayCandidates": 98,
       "fallback": true
     },
@@ -165,7 +165,7 @@
   "confidence": {
     "high": 230,
     "medium": 282,
-    "low": 105
+    "low": 104
   },
   "unclassifiedCount": 22,
   "unclassifiedItems": [
@@ -570,22 +570,22 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "八代市",
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -745,7 +745,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年08月25日 令和8年熊本地震（7月28日発生）に関する情報（8月25日9時00分更新）",
+      "title": "2026年08月25日 令和8年熊本地震（7月28日発生）に関する情報（8月25日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -948,7 +948,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 1
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -982,5 +982,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 609
+  "previousClassifiedPageCount": 617
 }
