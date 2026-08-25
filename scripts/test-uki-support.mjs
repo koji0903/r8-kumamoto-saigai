@@ -7,16 +7,20 @@ const css = read("uki-support.css");
 const app = read("app.js");
 const reconstruction = read("reconstruction.html");
 const reconstructionJs = read("reconstruction.js");
+const orgSiteJs = read("org-site.js");
 const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
 
 assert.match(html, /<title>[^<]+<\/title>/);
 assert.match(html, /<meta name="description" content="[^"]+">/);
 assert.match(text, /令和8年8月19日現在/);
 assert.match(text, /内容は変更される場合/);
-assert.match(text, /宇城市の公式情報を読みやすく整理/);
-assert.match(text, /対象可否を独自に判定するページではありません/);
+assert.match(text, /宇城市公式PDFの内容を、要点が見つかる形に再構成/);
+assert.match(text, /支援制度等一覧/);
+assert.match(text, /各種制度の概要/);
+assert.doesNotMatch(html, /スマホで分かりやすく/);
+assert.match(text, /対象可否を独自に判定するものではありません/);
 
-for (const id of ["quick-damage", "first-steps", "damage-guide", "housing", "money", "daily-life", "cleanup", "contacts"]) {
+for (const id of ["guide-map", "quick-damage", "first-steps", "damage-guide", "housing", "money", "daily-life", "cleanup", "contacts", "official-sources"]) {
   assert.ok(html.includes(`id="${id}"`), `${id} の章がありません`);
 }
 for (const title of ["罹災証明書", "被災者生活再建支援金", "被災住宅の緊急修理", "被災住宅の応急修理", "賃貸型応急住宅", "建設型応急住宅", "公費解体", "災害ごみ仮置場", "医療費の窓口負担", "介護サービス利用料"]) {
@@ -37,6 +41,8 @@ assert.ok((html.match(/class="uki-official-link"/g) || []).length >= 10, "制度
 assert.match(app, /selectedMunicipality==="宇城市"[\s\S]*uki-support\.html/);
 assert.match(reconstruction, /rebuild-uki-entry[\s\S]*uki-support\.html/);
 assert.match(reconstructionJs, /slug==="uki"[\s\S]*rebuild-uki-entry/);
+assert.match(orgSiteJs, /document\.querySelector\(['"]\.site-footer['"]\)/, "制度カードの footer をサイト全体のフッターとして上書きしないでください");
+assert.doesNotMatch(orgSiteJs, /document\.querySelector\(['"]footer['"]\)/, "フッターは .site-footer に限定してください");
 assert.match(css, /@media\(max-width:760px\)/);
 assert.match(css, /@media\(max-width:760px\)[\s\S]*\.uki-table-scroll\{display:none\}/, "スマホでは横長表より判定カードを優先してください");
 assert.match(css, /@media print/);
