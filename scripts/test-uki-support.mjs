@@ -30,6 +30,7 @@ for (const warning of ["工事契約・支払い・解体の前に相談して�
   assert.ok(text.includes(warning), `重要な注意「${warning}」がありません`);
 }
 assert.equal((html.match(/<ol class="uki-all-menus">[\s\S]*?<\/ol>/)?.[0].match(/<li>/g) || []).length, 36, "全36制度を一覧に残す必要があります");
+assert.equal((html.match(/<ol class="uki-all-menus">[\s\S]*?<\/ol>/)?.[0].match(/<a href="#[^"]+">/g) || []).length, 36, "全36制度から関連する詳細・窓口へ移動できる必要があります");
 assert.ok((html.match(/href="tel:/g) || []).length >= 16, "電話リンクが不足しています");
 assert.ok((html.match(/city\.uki\.kumamoto\.jp/g) || []).length >= 13, "宇城市の個別制度ページと2つのPDFへのリンクが必要です");
 for (const damage of ["全壊", "大規模半壊", "中規模半壊", "半壊", "準半壊", "一部損壊"]) assert.ok(text.includes(damage), `${damage} の判定案内がありません`);
@@ -46,6 +47,9 @@ assert.doesNotMatch(orgSiteJs, /document\.querySelector\(['"]footer['"]\)/, "フ
 assert.match(css, /@media\(max-width:760px\)/);
 assert.match(css, /@media\(max-width:760px\)[\s\S]*\.uki-table-scroll\{display:none\}/, "スマホでは横長表より判定カードを優先してください");
 assert.match(css, /@media print/);
+assert.match(css, /\.uki-detail-stack footer\{[^}]*background:transparent[^}]*color:inherit/, "制度カードの連絡先にサイトフッターの暗色背景を適用しないでください");
+assert.match(css, /\.uki-detail-stack footer>a\{[^}]*margin:0/, "制度カードの連絡先を右端に押し出さないでください");
+assert.match(css, /\.uki-support-page \.hk-sources\{[^}]*padding:72px 0 88px/, "公式資料セクションの上下に余白が必要です");
 assert.doesNotMatch(`${html}\n${css}`, /localStorage|sessionStorage|document\.cookie|fetch\(/);
 
 const pages = fs.readdirSync(new URL("..", import.meta.url)).filter(file => file.endsWith(".html"));
