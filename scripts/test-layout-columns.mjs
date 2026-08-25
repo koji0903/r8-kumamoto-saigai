@@ -51,6 +51,7 @@ for (const [file, selector] of FLEXIBLE) {
 // 「相談を受けている方へ」は、アイコンを置いていないのに2カラムのままで、
 // 本文がアイコン用の80px列に入っていた。
 const reconstructionCss = css("reconstruction.css");
+const orgSiteCss = css("org-site.css");
 const reconstructionHtml = read("reconstruction.html");
 const supporter = reconstructionHtml.match(/<section class="rebuild-supporter">([\s\S]*?)<\/section>/);
 assert.ok(supporter, "reconstruction.html に rebuild-supporter がありません");
@@ -58,6 +59,8 @@ const hasIcon = /supporter-icon/.test(supporter[1]);
 assert.ok(!hasIcon, "アイコンを足したなら .rebuild-supporter>div の列指定も戻してください");
 assert.match(reconstructionCss, /\.rebuild-supporter>div\{grid-template-columns:minmax\(0,1fr\)\}/,
   "アイコンが無いので1カラムにする必要があります");
+assert.match(orgSiteCss,/\.page-supporters \.page-local-nav\+\.audience-alert\{[^}]*margin-top:24px/,
+  "支援者ページのページ内ナビと注意カードを重ねないでください");
 
 // ---- 3. 列位置の指定は、2カラムになる幅だけに効かせること ---------------------
 // 1カラムのモバイルで grid-column:2 を残すと、存在しない2列目が作られて
@@ -77,7 +80,6 @@ for (const [file, selector] of [
 // .supporter-needs はカードの並びそのもの。器にも枠と背景を付けると二重枠に
 // なり、枚数が列数で割り切れないときは空いた側が空の枠として残る（支援する方
 // ページで5枚目が枠からはみ出して見えていた）。
-const orgSiteCss = css("org-site.css");
 // 器（パネル）に枠と背景を与えているブロック。.minutes-toolbar を含む方で、
 // カード1枚1枚に与えている .need-grid>a のブロックとは別物。
 const panel = [...orgSiteCss.matchAll(/\.illustrated-site :is\([^)]*\)\{[^}]*\}/g)]
