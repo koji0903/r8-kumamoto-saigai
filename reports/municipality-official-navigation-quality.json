@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-08-24T21:54:54.868Z",
+  "generatedAt": "2026-08-25T01:56:06.450Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 737,
-  "displayCandidateCount": 490,
-  "classifiedPageCount": 593,
+  "inputCount": 730,
+  "displayCandidateCount": 487,
+  "classifiedPageCount": 587,
   "categoryReport": {
     "home": {
-      "total": 136,
-      "high": 54,
-      "medium": 43,
-      "low": 39
+      "total": 137,
+      "high": 52,
+      "medium": 45,
+      "low": 40
     },
     "money": {
-      "total": 171,
-      "high": 32,
-      "medium": 49,
-      "low": 90
+      "total": 167,
+      "high": 33,
+      "medium": 47,
+      "low": 87
     },
     "documents": {
-      "total": 133,
-      "high": 34,
+      "total": 135,
+      "high": 35,
       "medium": 31,
-      "low": 68
+      "low": 69
     },
     "health_care": {
       "total": 40,
@@ -31,15 +31,15 @@
       "low": 0
     },
     "family_education": {
-      "total": 87,
+      "total": 86,
       "high": 6,
       "medium": 28,
-      "low": 53
+      "low": 52
     },
     "work_business": {
       "total": 29,
-      "high": 9,
-      "medium": 20,
+      "high": 10,
+      "medium": 19,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,21 +49,21 @@
       "low": 0
     },
     "daily_life": {
-      "total": 201,
-      "high": 67,
-      "medium": 131,
+      "total": 197,
+      "high": 65,
+      "medium": 129,
       "low": 3
     }
   },
   "municipalityReport": {
     "municipality_kumamoto": {
-      "classified": 64,
-      "displayCandidates": 52,
+      "classified": 67,
+      "displayCandidates": 55,
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 130,
-      "displayCandidates": 96,
+      "classified": 131,
+      "displayCandidates": 98,
       "fallback": true
     },
     "municipality_minamata": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 73,
-      "displayCandidates": 64,
+      "classified": 75,
+      "displayCandidates": 66,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -132,8 +132,8 @@
       "fallback": true
     },
     "municipality_kashima": {
-      "classified": 17,
-      "displayCandidates": 15,
+      "classified": 0,
+      "displayCandidates": 0,
       "fallback": true
     },
     "municipality_mashiki": {
@@ -142,8 +142,8 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 29,
-      "displayCandidates": 25,
+      "classified": 32,
+      "displayCandidates": 28,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -157,17 +157,17 @@
       "fallback": true
     },
     "municipality_tsunagi": {
-      "classified": 2,
-      "displayCandidates": 2,
+      "classified": 4,
+      "displayCandidates": 4,
       "fallback": true
     }
   },
   "confidence": {
-    "high": 219,
-    "medium": 271,
-    "low": 103
+    "high": 218,
+    "medium": 269,
+    "low": 100
   },
-  "unclassifiedCount": 22,
+  "unclassifiedCount": 23,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -183,6 +183,11 @@
       "municipalityName": "熊本市",
       "title": "令和8年熊本地震に伴う食品関係の営業許可期限延長について",
       "url": "https://www.city.kumamoto.jp/kiji00372422/index.html"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "令和８年熊本地震からの復興に向けた取り組み",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326766/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -280,7 +285,7 @@
       "url": "https://www.town.mashiki.lg.jp/kiji0037475/index.html"
     }
   ],
-  "outOfScopeCount": 87,
+  "outOfScopeCount": 84,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "public_relations": 11,
@@ -288,8 +293,8 @@
     "facility_notice": 10,
     "disaster_preparedness": 7,
     "event_notice": 3,
-    "index_page": 17,
     "mayor_message": 2,
+    "index_page": 14,
     "mutual_aid": 2,
     "overall_guide": 3,
     "press": 2
@@ -570,13 +575,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
@@ -586,6 +584,13 @@
       "municipalityName": "八代市",
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -738,7 +743,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年08月24日 令和8年熊本地震（7月28日発生）に関する情報（8月24日18時00分更新）",
+      "title": "2026年08月25日 令和8年熊本地震（7月28日発生）に関する情報（8月25日9時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -835,27 +840,6 @@
       "ruleLabel": "平時の防災・今後への備え"
     },
     {
-      "municipalityName": "嘉島町",
-      "title": "令和8年熊本地震に関する情報",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6035.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "嘉島町",
-      "title": "(スマホ表示用)令和8年熊本地震に関する情報 2026.8.19更新(PDF 約980KB)",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/dl?q=44880_filelib_5d49e3018e61b801673a02b2bce95acd.pdf",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "嘉島町",
-      "title": "(PC・印刷用)令和8年熊本地震に関する情報 2026.8.19更新(PDF 約1,017KB)",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/dl?q=44881_filelib_2aa9f84af5e3d08470f7bf11b2ac4fc7.pdf",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
       "municipalityName": "益城町",
       "title": "潮井自然公園について",
       "url": "https://www.town.mashiki.lg.jp/kiji0035566/index.html",
@@ -905,13 +889,13 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 35,
+  "excludedCount": 36,
   "excludedByType": {
-    "duplicate_url": 29,
+    "duplicate_url": 30,
     "non_official_url": 5,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 12,
+  "warningCount": 13,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -921,7 +905,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -951,27 +935,32 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
+      "count": 4
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kashima",
+      "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_mashiki",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_mashiki",
+      "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_kosa",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kosa",
       "count": 3
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_mashiki",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_mashiki",
-      "count": 1
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_kosa",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kosa",
-      "count": 6
     }
   ],
   "errors": [],
