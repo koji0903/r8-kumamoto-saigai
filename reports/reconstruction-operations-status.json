@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-26T04:26:27.951Z",
+  "generatedAt": "2026-08-26T07:32:42.299Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-26T04:06:22.386Z",
-    "inputCount": 776,
-    "classifiedPageCount": 629,
+    "generatedAt": "2026-08-26T07:12:27.372Z",
+    "inputCount": 777,
+    "classifiedPageCount": 628,
     "displayCandidateCount": 524,
     "deltaFromPrevious": {
-      "inputCount": 12,
-      "classifiedPageCount": 13,
-      "unclassifiedCount": -1
+      "inputCount": 1,
+      "classifiedPageCount": -1,
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 12,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -36,7 +36,7 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 132,
+        "classified": 131,
         "displayCandidates": 99,
         "fallback": true
       },
@@ -56,8 +56,8 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 52,
-        "displayCandidates": 42,
+        "classified": 51,
+        "displayCandidates": 41,
         "fallback": true
       },
       "municipality_kamiamakusa": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 80,
-        "displayCandidates": 69,
+        "classified": 81,
+        "displayCandidates": 70,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -163,14 +163,14 @@
       },
       "family_education": {
         "total": 94,
-        "high": 7,
+        "high": 8,
         "medium": 31,
-        "low": 56
+        "low": 55
       },
       "work_business": {
-        "total": 31,
+        "total": 30,
         "high": 9,
-        "medium": 22,
+        "medium": 21,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,8 +180,8 @@
         "low": 0
       },
       "daily_life": {
-        "total": 204,
-        "high": 68,
+        "total": 203,
+        "high": 67,
         "medium": 134,
         "low": 2
       }
@@ -189,10 +189,10 @@
     "confidence": {
       "high": 233,
       "medium": 291,
-      "low": 105
+      "low": 104
     },
-    "unclassifiedCount": 23,
-    "excludedCount": 35,
+    "unclassifiedCount": 24,
+    "excludedCount": 36,
     "overrideCount": 2
   },
   "actions": [
@@ -214,7 +214,7 @@
         "title": "【令和8年熊本地震】被災した住宅の応急修理について",
         "url": "https://www.pref.kumamoto.jp/soshiki/27/275109.html",
         "previousHash": "sha256:b35977e35e937bbd53b09f435851c2bef9b8d6003567ca2ef70ba188f1da13e8",
-        "currentHash": "sha256:b0e8c7a810a8ce99d3d6dc165a62311b7e136cec0a9973e33e0b50d2b4427aa3",
+        "currentHash": "sha256:c57abc5123a989afc93f7219a43222e75ad1453c70fc2e542aa6039635bac1a1",
         "verificationStatus": "needs_review"
       }
     },
@@ -292,7 +292,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -312,11 +312,6 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_koshi",
-      "count": 1
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kashima",
       "count": 1
     },
     {
@@ -357,7 +352,7 @@
         "title": "【令和8年熊本地震】被災した住宅の応急修理について",
         "url": "https://www.pref.kumamoto.jp/soshiki/27/275109.html",
         "previousHash": "sha256:b35977e35e937bbd53b09f435851c2bef9b8d6003567ca2ef70ba188f1da13e8",
-        "currentHash": "sha256:b0e8c7a810a8ce99d3d6dc165a62311b7e136cec0a9973e33e0b50d2b4427aa3",
+        "currentHash": "sha256:c57abc5123a989afc93f7219a43222e75ad1453c70fc2e542aa6039635bac1a1",
         "verificationStatus": "needs_review"
       },
       {

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-26T04:06:22.386Z",
+  "generatedAt": "2026-08-26T07:12:27.372Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 776,
+  "inputCount": 777,
   "displayCandidateCount": 524,
-  "classifiedPageCount": 629,
+  "classifiedPageCount": 628,
   "categoryReport": {
     "home": {
       "total": 153,
@@ -32,14 +32,14 @@
     },
     "family_education": {
       "total": 94,
-      "high": 7,
+      "high": 8,
       "medium": 31,
-      "low": 56
+      "low": 55
     },
     "work_business": {
-      "total": 31,
+      "total": 30,
       "high": 9,
-      "medium": 22,
+      "medium": 21,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 204,
-      "high": 68,
+      "total": 203,
+      "high": 67,
       "medium": 134,
       "low": 2
     }
@@ -62,7 +62,7 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 132,
+      "classified": 131,
       "displayCandidates": 99,
       "fallback": true
     },
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 52,
-      "displayCandidates": 42,
+      "classified": 51,
+      "displayCandidates": 41,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 80,
-      "displayCandidates": 69,
+      "classified": 81,
+      "displayCandidates": 70,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -165,9 +165,9 @@
   "confidence": {
     "high": 233,
     "medium": 291,
-    "low": 105
+    "low": 104
   },
-  "unclassifiedCount": 23,
+  "unclassifiedCount": 24,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -243,6 +243,11 @@
       "municipalityName": "宇土市",
       "title": "水質検査の結果を公表します",
       "url": "https://www.city.uto.lg.jp/article/view/1308/16737.html"
+    },
+    {
+      "municipalityName": "上天草市",
+      "title": "【報道資料】雲仙天草国立公園天草地域指定70周年記念第55回天草パールラインマラソン大会の開催について",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/446/23451.html"
     },
     {
       "municipalityName": "宇城市",
@@ -582,7 +587,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -757,7 +762,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年08月26日 令和8年熊本地震（7月28日発生）に関する情報（8月26日10時00分更新）",
+      "title": "2026年08月26日 令和8年熊本地震（7月28日発生）に関する情報（8月26日16時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -924,13 +929,13 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 35,
+  "excludedCount": 36,
   "excludedByType": {
-    "duplicate_url": 31,
+    "duplicate_url": 32,
     "non_official_url": 3,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 15,
+  "warningCount": 14,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -960,7 +965,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -980,11 +985,6 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_koshi",
-      "count": 1
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kashima",
       "count": 1
     },
     {
@@ -1009,5 +1009,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 616
+  "previousClassifiedPageCount": 629
 }
