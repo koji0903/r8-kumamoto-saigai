@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-26T07:12:27.372Z",
+  "generatedAt": "2026-08-26T10:00:38.316Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 777,
-  "displayCandidateCount": 524,
-  "classifiedPageCount": 628,
+  "inputCount": 781,
+  "displayCandidateCount": 527,
+  "classifiedPageCount": 630,
   "categoryReport": {
     "home": {
       "total": 153,
@@ -13,10 +13,10 @@
       "low": 41
     },
     "money": {
-      "total": 181,
+      "total": 180,
       "high": 35,
       "medium": 52,
-      "low": 94
+      "low": 93
     },
     "documents": {
       "total": 144,
@@ -31,15 +31,15 @@
       "low": 0
     },
     "family_education": {
-      "total": 94,
-      "high": 8,
+      "total": 93,
+      "high": 7,
       "medium": 31,
       "low": 55
     },
     "work_business": {
-      "total": 30,
+      "total": 31,
       "high": 9,
-      "medium": 21,
+      "medium": 22,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 203,
-      "high": 67,
-      "medium": 134,
+      "total": 207,
+      "high": 68,
+      "medium": 137,
       "low": 2
     }
   },
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 51,
-      "displayCandidates": 41,
+      "classified": 52,
+      "displayCandidates": 43,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 81,
-      "displayCandidates": 70,
+      "classified": 82,
+      "displayCandidates": 71,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -164,8 +164,8 @@
   },
   "confidence": {
     "high": 233,
-    "medium": 291,
-    "low": 104
+    "medium": 294,
+    "low": 103
   },
   "unclassifiedCount": 24,
   "unclassifiedItems": [
@@ -211,11 +211,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "【図書館】返却ポスト利用再開のお知らせ",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326962/index.html"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "中国北海市長から東北地方太平洋沖地震への見舞い手紙",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji0031239/index.html"
     },
@@ -228,6 +223,11 @@
       "municipalityName": "八代市",
       "title": "令和８年８月23日以降の休日当番医の変更について",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326854/index.html"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "スポーツ推進委員派遣事業の一時中断について",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326976/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -290,7 +290,7 @@
       "url": "https://www.town.mashiki.lg.jp/kiji0037475/index.html"
     }
   ],
-  "outOfScopeCount": 89,
+  "outOfScopeCount": 90,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "public_relations": 11,
@@ -302,7 +302,7 @@
     "index_page": 17,
     "mutual_aid": 2,
     "overall_guide": 3,
-    "press": 2
+    "press": 3
   },
   "outOfScopeItems": [
     {
@@ -636,6 +636,13 @@
     },
     {
       "municipalityName": "宇土市",
+      "title": "令和8年熊本地震 災害対策本部会議",
+      "url": "https://www.city.uto.lg.jp/article/view/1310/16725.html",
+      "ruleId": "hq_meeting_material",
+      "ruleLabel": "災害対策本部会議の資料"
+    },
+    {
+      "municipalityName": "宇土市",
       "title": "キーワード「2026」の記事一覧",
       "url": "https://www.city.uto.lg.jp/article/keyword/29211.html",
       "ruleId": "index_page",
@@ -668,13 +675,6 @@
       "url": "https://www.city.uto.lg.jp/article/view/1310/16632.html",
       "ruleId": "public_relations",
       "ruleLabel": "広報紙・その配布"
-    },
-    {
-      "municipalityName": "宇土市",
-      "title": "令和8年熊本地震 災害対策本部会議",
-      "url": "https://www.city.uto.lg.jp/article/view/1310/16725.html",
-      "ruleId": "hq_meeting_material",
-      "ruleLabel": "災害対策本部会議の資料"
     },
     {
       "municipalityName": "上天草市",
@@ -734,13 +734,6 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
-      "ruleId": "press",
-      "ruleLabel": "報道機関向け"
-    },
-    {
-      "municipalityName": "宇城市",
       "title": "南海トラフ地震臨時情報（巨大地震注意）について",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2422985",
       "ruleId": "disaster_preparedness",
@@ -759,6 +752,20 @@
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2612010",
       "ruleId": "overall_guide",
       "ruleLabel": "被災者向けの総合案内"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "2026年08月26日 【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
+      "ruleId": "press",
+      "ruleLabel": "報道機関向け"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "12_報道資料（令和8年熊本地震の発災から1カ月を受けて：R8.8.26） (PDF 276KB)",
+      "url": "https://www.city.uki.kumamoto.jp/resource.php?e=266959a950042ffacd38f5ecde118d207d6f42a6049ef2d9c103391309914c0255e394cb049bcfbf2cf6fcdfc359a06d",
+      "ruleId": "press",
+      "ruleLabel": "報道機関向け"
     },
     {
       "municipalityName": "宇城市",
@@ -867,15 +874,15 @@
     },
     {
       "municipalityName": "嘉島町",
-      "title": "(スマホ表示用)令和8年熊本地震に関する情報 2026.8.19更新(PDF 約980KB)",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/dl?q=44880_filelib_5d49e3018e61b801673a02b2bce95acd.pdf",
+      "title": "(スマホ表示用)令和8年熊本地震に関する情報 2026.8.26更新(PDF 約985KB)",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/dl?q=45344_filelib_360b1fc99c0b3063492bb107dacc4f09.pdf",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "嘉島町",
-      "title": "(PC・印刷用)令和8年熊本地震に関する情報 2026.8.19更新(PDF 約1,017KB)",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/dl?q=44881_filelib_2aa9f84af5e3d08470f7bf11b2ac4fc7.pdf",
+      "title": "(PC・印刷用)令和8年熊本地震に関する情報 2026.8.26更新(PDF 約1,016KB)",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/dl?q=45345_filelib_be4993d4547a8fb736b42c2578058827.pdf",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -929,10 +936,10 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 36,
+  "excludedCount": 37,
   "excludedByType": {
     "duplicate_url": 32,
-    "non_official_url": 3,
+    "non_official_url": 4,
     "non_disaster_context_excluded": 1
   },
   "warningCount": 14,
@@ -945,7 +952,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 1
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1009,5 +1016,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 629
+  "previousClassifiedPageCount": 628
 }
