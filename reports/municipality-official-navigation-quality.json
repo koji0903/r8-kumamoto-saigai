@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-26T10:00:38.316Z",
+  "generatedAt": "2026-08-26T13:26:33.909Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 781,
-  "displayCandidateCount": 527,
-  "classifiedPageCount": 630,
+  "inputCount": 782,
+  "displayCandidateCount": 528,
+  "classifiedPageCount": 631,
   "categoryReport": {
     "home": {
-      "total": 153,
+      "total": 154,
       "high": 58,
-      "medium": 54,
+      "medium": 55,
       "low": 41
     },
     "money": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 82,
-      "displayCandidates": 71,
+      "classified": 83,
+      "displayCandidates": 72,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 233,
-    "medium": 294,
+    "medium": 295,
     "low": 103
   },
   "unclassifiedCount": 24,
@@ -298,8 +298,8 @@
     "facility_notice": 10,
     "disaster_preparedness": 7,
     "event_notice": 3,
-    "mayor_message": 2,
     "index_page": 17,
+    "mayor_message": 2,
     "mutual_aid": 2,
     "overall_guide": 3,
     "press": 3
@@ -587,17 +587,17 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "八代市",
@@ -942,7 +942,7 @@
     "non_official_url": 4,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 14,
+  "warningCount": 15,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -953,6 +953,11 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
       "count": 3
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kikuchi",
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1016,5 +1021,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 628
+  "previousClassifiedPageCount": 630
 }
