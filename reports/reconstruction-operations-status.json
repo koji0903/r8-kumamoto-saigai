@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-27T01:09:12.407Z",
+  "generatedAt": "2026-08-27T14:36:22.854Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-27T00:51:37.248Z",
-    "inputCount": 790,
-    "classifiedPageCount": 640,
-    "displayCandidateCount": 535,
+    "generatedAt": "2026-08-27T14:19:10.793Z",
+    "inputCount": 792,
+    "classifiedPageCount": 645,
+    "displayCandidateCount": 541,
     "deltaFromPrevious": {
-      "inputCount": 3,
-      "classifiedPageCount": 4,
+      "inputCount": 2,
+      "classifiedPageCount": 5,
       "unclassifiedCount": -1
     }
   },
@@ -37,7 +37,7 @@
       },
       "municipality_yatsushiro": {
         "classified": 133,
-        "displayCandidates": 100,
+        "displayCandidates": 102,
         "fallback": true
       },
       "municipality_minamata": {
@@ -56,7 +56,7 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 51,
+        "classified": 52,
         "displayCandidates": 42,
         "fallback": true
       },
@@ -66,18 +66,18 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 82,
-        "displayCandidates": 71,
+        "classified": 84,
+        "displayCandidates": 73,
         "fallback": true
       },
       "municipality_amakusa": {
         "classified": 22,
-        "displayCandidates": 20,
+        "displayCandidates": 21,
         "fallback": true
       },
       "municipality_koshi": {
-        "classified": 11,
-        "displayCandidates": 10,
+        "classified": 10,
+        "displayCandidates": 9,
         "fallback": true
       },
       "municipality_misato": {
@@ -86,8 +86,8 @@
         "fallback": true
       },
       "municipality_ozu": {
-        "classified": 14,
-        "displayCandidates": 14,
+        "classified": 15,
+        "displayCandidates": 15,
         "fallback": true
       },
       "municipality_kikuyo": {
@@ -96,18 +96,18 @@
         "fallback": true
       },
       "municipality_nishihara": {
-        "classified": 12,
-        "displayCandidates": 11,
+        "classified": 11,
+        "displayCandidates": 10,
         "fallback": true
       },
       "municipality_mifune": {
         "classified": 26,
-        "displayCandidates": 20,
+        "displayCandidates": 19,
         "fallback": true
       },
       "municipality_kashima": {
-        "classified": 17,
-        "displayCandidates": 15,
+        "classified": 18,
+        "displayCandidates": 16,
         "fallback": true
       },
       "municipality_mashiki": {
@@ -116,13 +116,13 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 33,
-        "displayCandidates": 29,
+        "classified": 34,
+        "displayCandidates": 30,
         "fallback": true
       },
       "municipality_hikawa": {
-        "classified": 37,
-        "displayCandidates": 33,
+        "classified": 38,
+        "displayCandidates": 34,
         "fallback": true
       },
       "municipality_ashikita": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 155,
-        "high": 59,
-        "medium": 55,
-        "low": 41
+        "total": 156,
+        "high": 57,
+        "medium": 57,
+        "low": 42
       },
       "money": {
-        "total": 186,
+        "total": 190,
         "high": 41,
-        "medium": 51,
-        "low": 94
+        "medium": 50,
+        "low": 99
       },
       "documents": {
-        "total": 150,
-        "high": 36,
+        "total": 149,
+        "high": 37,
         "medium": 34,
-        "low": 80
+        "low": 78
       },
       "health_care": {
         "total": 42,
@@ -163,36 +163,36 @@
       },
       "family_education": {
         "total": 93,
-        "high": 7,
-        "medium": 30,
-        "low": 56
+        "high": 8,
+        "medium": 31,
+        "low": 54
       },
       "work_business": {
-        "total": 34,
-        "high": 11,
-        "medium": 23,
+        "total": 37,
+        "high": 12,
+        "medium": 25,
         "low": 0
       },
       "agriculture_fishery": {
-        "total": 20,
+        "total": 21,
         "high": 9,
-        "medium": 11,
+        "medium": 12,
         "low": 0
       },
       "daily_life": {
-        "total": 209,
-        "high": 69,
-        "medium": 138,
+        "total": 208,
+        "high": 70,
+        "medium": 136,
         "low": 2
       }
     },
     "confidence": {
-      "high": 241,
-      "medium": 294,
-      "low": 105
+      "high": 243,
+      "medium": 298,
+      "low": 104
     },
-    "unclassifiedCount": 22,
-    "excludedCount": 36,
+    "unclassifiedCount": 21,
+    "excludedCount": 35,
     "overrideCount": 2
   },
   "actions": [
@@ -203,7 +203,7 @@
         "title": "内閣府防災担当からの各都道府県等への通知等",
         "url": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
         "previousHash": "sha256:f0a3a40563c1901508dd1173a2d42577ffcbbbf711ab728034f5079ce665d113",
-        "currentHash": "sha256:26c129ebf313ce5fe1612d24183c1cc7a433f6b026aa1710645f882fa4741f6e",
+        "currentHash": "sha256:38ee0c02681c412874370eebdc06efdcc08fa0b67e3ff1bb94438ca69bc659af",
         "verificationStatus": "needs_review"
       }
     },
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:0c4ab0c3cdcb0aef0789923556c1d3835c1e52903ca055aa09d729fc74eaffc7",
+        "currentHash": "sha256:810463c7d647cb9b290049b6890feb81d57453ca5bdc118937fa2ad48f0073dd",
         "verificationStatus": "needs_review"
       }
     },
@@ -265,28 +265,23 @@
   ],
   "warnings": [
     {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_minamata",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
       "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kumamoto",
+      "municipalityId": "municipality_minamata",
       "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_yatsushiro",
+      "municipalityId": "municipality_yamaga",
       "message": "継続回数を確認後に表示除外を判断してください"
     },
     {
       "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_yatsushiro",
-      "count": 4
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_uto",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_uto",
+      "municipalityId": "municipality_yamaga",
       "count": 1
     },
     {
@@ -297,7 +292,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -337,7 +332,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 4
+      "count": 3
     }
   ],
   "strictSources": {
@@ -349,7 +344,7 @@
         "title": "内閣府防災担当からの各都道府県等への通知等",
         "url": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
         "previousHash": "sha256:f0a3a40563c1901508dd1173a2d42577ffcbbbf711ab728034f5079ce665d113",
-        "currentHash": "sha256:26c129ebf313ce5fe1612d24183c1cc7a433f6b026aa1710645f882fa4741f6e",
+        "currentHash": "sha256:38ee0c02681c412874370eebdc06efdcc08fa0b67e3ff1bb94438ca69bc659af",
         "verificationStatus": "needs_review"
       },
       {
@@ -365,7 +360,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:0c4ab0c3cdcb0aef0789923556c1d3835c1e52903ca055aa09d729fc74eaffc7",
+        "currentHash": "sha256:810463c7d647cb9b290049b6890feb81d57453ca5bdc118937fa2ad48f0073dd",
         "verificationStatus": "needs_review"
       },
       {
