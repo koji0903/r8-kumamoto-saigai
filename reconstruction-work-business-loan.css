@@ -1,0 +1,28 @@
+.work-commerce-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.work-commerce-grid section {
+  padding: 19px;
+  border: 2px solid var(--health-line);
+  border-radius: 15px;
+  background: #f7fbfa;
+}
+
+.work-commerce-grid h4 {
+  margin: 0 0 9px;
+  font-size: 20px;
+}
+
+.work-commerce-grid p { margin: 9px 0; }
+.work-commerce-grid a { font-weight: 850; }
+
+@media (max-width: 900px) {
+  .work-commerce-grid { grid-template-columns: 1fr; }
+}
+
+@media print {
+  .work-commerce-grid section { border: 1px solid #555; box-shadow: none; }
+}
