@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-27T14:36:22.854Z",
+  "generatedAt": "2026-08-28T00:48:02.865Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-27T14:19:10.793Z",
-    "inputCount": 792,
-    "classifiedPageCount": 645,
+    "generatedAt": "2026-08-28T00:27:53.594Z",
+    "inputCount": 795,
+    "classifiedPageCount": 646,
     "displayCandidateCount": 541,
     "deltaFromPrevious": {
-      "inputCount": 2,
-      "classifiedPageCount": 5,
-      "unclassifiedCount": -1
+      "inputCount": 3,
+      "classifiedPageCount": 1,
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -32,12 +32,12 @@
     "municipalityReport": {
       "municipality_kumamoto": {
         "classified": 67,
-        "displayCandidates": 56,
+        "displayCandidates": 55,
         "fallback": true
       },
       "municipality_yatsushiro": {
         "classified": 133,
-        "displayCandidates": 102,
+        "displayCandidates": 101,
         "fallback": true
       },
       "municipality_minamata": {
@@ -51,8 +51,8 @@
         "fallback": true
       },
       "municipality_kikuchi": {
-        "classified": 9,
-        "displayCandidates": 7,
+        "classified": 8,
+        "displayCandidates": 6,
         "fallback": true
       },
       "municipality_uto": {
@@ -62,7 +62,7 @@
       },
       "municipality_kamiamakusa": {
         "classified": 36,
-        "displayCandidates": 31,
+        "displayCandidates": 32,
         "fallback": true
       },
       "municipality_uki": {
@@ -96,8 +96,8 @@
         "fallback": true
       },
       "municipality_nishihara": {
-        "classified": 11,
-        "displayCandidates": 10,
+        "classified": 12,
+        "displayCandidates": 11,
         "fallback": true
       },
       "municipality_mifune": {
@@ -116,13 +116,13 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 34,
-        "displayCandidates": 30,
+        "classified": 33,
+        "displayCandidates": 29,
         "fallback": true
       },
       "municipality_hikawa": {
-        "classified": 38,
-        "displayCandidates": 34,
+        "classified": 39,
+        "displayCandidates": 35,
         "fallback": true
       },
       "municipality_ashikita": {
@@ -131,16 +131,16 @@
         "fallback": true
       },
       "municipality_tsunagi": {
-        "classified": 5,
-        "displayCandidates": 4,
+        "classified": 6,
+        "displayCandidates": 5,
         "fallback": true
       }
     },
     "categoryReport": {
       "home": {
-        "total": 156,
-        "high": 57,
-        "medium": 57,
+        "total": 158,
+        "high": 56,
+        "medium": 60,
         "low": 42
       },
       "money": {
@@ -152,8 +152,8 @@
       "documents": {
         "total": 149,
         "high": 37,
-        "medium": 34,
-        "low": 78
+        "medium": 33,
+        "low": 79
       },
       "health_care": {
         "total": 42,
@@ -162,10 +162,10 @@
         "low": 0
       },
       "family_education": {
-        "total": 93,
-        "high": 8,
-        "medium": 31,
-        "low": 54
+        "total": 94,
+        "high": 7,
+        "medium": 32,
+        "low": 55
       },
       "work_business": {
         "total": 37,
@@ -181,17 +181,17 @@
       },
       "daily_life": {
         "total": 208,
-        "high": 70,
-        "medium": 136,
+        "high": 69,
+        "medium": 137,
         "low": 2
       }
     },
     "confidence": {
-      "high": 243,
-      "medium": 298,
-      "low": 104
+      "high": 240,
+      "medium": 301,
+      "low": 105
     },
-    "unclassifiedCount": 21,
+    "unclassifiedCount": 22,
     "excludedCount": 35,
     "overrideCount": 2
   },
@@ -236,7 +236,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:145da3357fc691c6a6d1a7538ccad3a0e73d4c21c27aa44a05478c22a4fe2263",
+        "currentHash": "sha256:67a399cf41ee33e6341b4c62d999002b6a66a0d8f35251f820a4ce764d303dee",
         "verificationStatus": "needs_review"
       }
     },
@@ -264,6 +264,21 @@
     }
   ],
   "warnings": [
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kumamoto",
+      "count": 5
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_yatsushiro",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_yatsushiro",
+      "count": 3
+    },
     {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_minamata",
@@ -368,7 +383,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:145da3357fc691c6a6d1a7538ccad3a0e73d4c21c27aa44a05478c22a4fe2263",
+        "currentHash": "sha256:67a399cf41ee33e6341b4c62d999002b6a66a0d8f35251f820a4ce764d303dee",
         "verificationStatus": "needs_review"
       },
       {
