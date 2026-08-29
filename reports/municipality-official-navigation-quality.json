@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-08-29T10:12:31.858Z",
+  "generatedAt": "2026-08-29T20:59:01.157Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 747,
-  "displayCandidateCount": 513,
-  "classifiedPageCount": 602,
+  "inputCount": 735,
+  "displayCandidateCount": 505,
+  "classifiedPageCount": 593,
   "categoryReport": {
     "home": {
       "total": 160,
       "high": 56,
-      "medium": 62,
-      "low": 42
+      "medium": 63,
+      "low": 41
     },
     "money": {
-      "total": 176,
+      "total": 174,
       "high": 41,
-      "medium": 49,
-      "low": 86
+      "medium": 48,
+      "low": 85
     },
     "documents": {
-      "total": 154,
-      "high": 37,
+      "total": 153,
+      "high": 36,
       "medium": 35,
       "low": 82
     },
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 190,
-      "high": 61,
-      "medium": 129,
+      "total": 183,
+      "high": 58,
+      "medium": 125,
       "low": 0
     }
   },
@@ -82,13 +82,13 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 5,
-      "displayCandidates": 5,
+      "classified": 0,
+      "displayCandidates": 0,
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 37,
-      "displayCandidates": 32,
+      "classified": 35,
+      "displayCandidates": 30,
       "fallback": true
     },
     "municipality_uki": {
@@ -107,8 +107,8 @@
       "fallback": true
     },
     "municipality_misato": {
-      "classified": 16,
-      "displayCandidates": 15,
+      "classified": 17,
+      "displayCandidates": 16,
       "fallback": true
     },
     "municipality_ozu": {
@@ -122,8 +122,8 @@
       "fallback": true
     },
     "municipality_nishihara": {
-      "classified": 12,
-      "displayCandidates": 11,
+      "classified": 9,
+      "displayCandidates": 9,
       "fallback": true
     },
     "municipality_mifune": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 228,
-    "medium": 285,
-    "low": 89
+    "high": 224,
+    "medium": 281,
+    "low": 88
   },
-  "unclassifiedCount": 24,
+  "unclassifiedCount": 23,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -250,11 +250,6 @@
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji0031248/index.html"
     },
     {
-      "municipalityName": "宇土市",
-      "title": "令和８年熊本地震に係るふるさと納税を受け付けます 2026年08月28日",
-      "url": "https://www.city.uto.lg.jp/article/view/1244/16630.html"
-    },
-    {
       "municipalityName": "上天草市",
       "title": "【報道資料】雲仙天草国立公園天草地域指定70周年記念第55回天草パールラインマラソン大会の開催について",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/446/23451.html"
@@ -290,16 +285,16 @@
       "url": "https://www.town.mashiki.lg.jp/kiji0037475/index.html"
     }
   ],
-  "outOfScopeCount": 87,
+  "outOfScopeCount": 85,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "public_relations": 11,
     "hq_meeting_material": 32,
     "disaster_preparedness": 7,
     "event_notice": 3,
-    "facility_notice": 10,
-    "mayor_message": 1,
+    "facility_notice": 8,
     "index_page": 14,
+    "mayor_message": 1,
     "mutual_aid": 1,
     "overall_guide": 3,
     "press": 3
@@ -608,6 +603,13 @@
     },
     {
       "municipalityName": "八代市",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
       "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
@@ -617,13 +619,6 @@
       "municipalityName": "八代市",
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -673,20 +668,6 @@
       "municipalityName": "上天草市",
       "title": "小島公園キャンプ場",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/133/159.html",
-      "ruleId": "facility_notice",
-      "ruleLabel": "公共施設の休止・再開・紹介"
-    },
-    {
-      "municipalityName": "上天草市",
-      "title": "姫戸白嶽森林公園",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/136/189.html",
-      "ruleId": "facility_notice",
-      "ruleLabel": "公共施設の休止・再開・紹介"
-    },
-    {
-      "municipalityName": "上天草市",
-      "title": "龍ヶ岳山頂自然公園キャンプ場",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/133/15601.html",
       "ruleId": "facility_notice",
       "ruleLabel": "公共施設の休止・再開・紹介"
     },
@@ -921,7 +902,7 @@
     "non_official_url": 1,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 15,
+  "warningCount": 16,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -946,7 +927,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 10
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -979,6 +960,11 @@
       "count": 1
     },
     {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kashima",
+      "count": 1
+    },
+    {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_mashiki",
       "message": "継続回数を確認後に表示除外を判断してください"
@@ -1000,5 +986,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 595
+  "previousClassifiedPageCount": 602
 }
