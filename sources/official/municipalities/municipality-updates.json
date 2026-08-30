@@ -2,7 +2,7 @@
   "metadata": {
     "event": "令和8年熊本地震",
     "disasterDate": "2026-07-28",
-    "retrievedAt": "2026-08-30T21:13:06.833Z",
+    "retrievedAt": "2026-08-30T23:35:07.444Z",
     "scope": "各市町村の公式トップページ、確認済みの地震情報集約ページ、そのページに掲載された個別記事、および集約ページのページ送りを確認。令和8年7月28日以降の日付を公式ページ上で確認できた記事リンク",
     "caveat": "公式サイトの構造・公開方式・検索可否により網羅性は保証できません。未検出は情報が存在しないことを意味しません。内容と最新状況はリンク先の一次情報で確認してください。",
     "categoryNote": "分類は記事タイトルに基づく閲覧用の便宜的な分類です。"
@@ -11,7 +11,7 @@
     {
       "name": "熊本市",
       "officialUrl": "https://www.city.kumamoto.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -621,7 +621,7 @@
     {
       "name": "八代市",
       "officialUrl": "https://www.city.yatsushiro.lg.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2007,7 +2007,7 @@
           "title": "本日の応急給水活動について",
           "url": "https://www.city.yatsushiro.lg.jp/kinkyu.html",
           "date": "2026-08-29",
-          "time": "07:30",
+          "time": "09:05",
           "category": "ライフライン"
         },
         {
@@ -2312,7 +2312,7 @@
     {
       "name": "水俣市",
       "officialUrl": "https://localcms.city.minamata.lg.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2389,7 +2389,7 @@
     {
       "name": "山鹿市",
       "officialUrl": "https://www.city.yamaga.kumamoto.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2562,7 +2562,7 @@
     {
       "name": "菊池市",
       "officialUrl": "https://www.city.kikuchi.lg.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2658,15 +2658,225 @@
     {
       "name": "宇土市",
       "officialUrl": "https://www.city.uto.lg.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
+        {
+          "title": "ごみ収集について",
+          "url": "https://www.city.uto.lg.jp/article/view/1303/16328.html",
+          "date": "2026-07-29",
+          "time": null,
+          "category": "ごみ・生活"
+        },
+        {
+          "title": "長部田海床路の通行止めについて",
+          "url": "https://www.city.uto.lg.jp/article/view/1306/16355.html",
+          "date": "2026-07-30",
+          "time": null,
+          "category": "避難・安全"
+        },
+        {
+          "title": "児童センター8月のイベント中止します",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16403.html",
+          "date": "2026-07-31",
+          "time": null,
+          "category": "施設・学校"
+        },
+        {
+          "title": "文化施設の臨時休館のお知らせ",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16385.html",
+          "date": "2026-07-31",
+          "time": null,
+          "category": "施設・学校"
+        },
+        {
+          "title": "病児・病後児保育施設「パンダ」の再開について（８月４日㈫～）",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16448.html",
+          "date": "2026-08-01",
+          "time": null,
+          "category": "施設・学校"
+        },
+        {
+          "title": "ミニバス「のんなっせ」の運行再開について",
+          "url": "https://www.city.uto.lg.jp/article/view/1304/16467.html",
+          "date": "2026-08-03",
+          "time": null,
+          "category": "交通"
+        },
+        {
+          "title": "予約型乗合タクシー「のりのり号」の運行再開について",
+          "url": "https://www.city.uto.lg.jp/article/view/1304/16449.html",
+          "date": "2026-08-03",
+          "time": null,
+          "category": "交通"
+        },
+        {
+          "title": "児童センターは8月12日（水）から再開します",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16560.html",
+          "date": "2026-08-03",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "「行長しゃん号」の運行再開について",
+          "url": "https://www.city.uto.lg.jp/article/view/1304/16466.html",
+          "date": "2026-08-04",
+          "time": null,
+          "category": "交通"
+        },
+        {
+          "title": "「令和8年熊本地震」セーフティネット保証4号について",
+          "url": "https://www.city.uto.lg.jp/article/view/1321/16441.html",
+          "date": "2026-08-05",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "【熊本県信用保証協会】令和8年熊本地震に係る緊急時短期資金保証制度等について",
+          "url": "https://www.city.uto.lg.jp/article/view/1321/16462.html",
+          "date": "2026-08-05",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "令和8年熊本地震に伴う水道料金について",
+          "url": "https://www.city.uto.lg.jp/article/view/1308/16554.html",
+          "date": "2026-08-09",
+          "time": null,
+          "category": "ライフライン"
+        },
+        {
+          "title": "市民の皆様へお願いです",
+          "url": "https://www.city.uto.lg.jp/article/view/1308/16473.html",
+          "date": "2026-08-09",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "図書館の休館について",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16346.html",
+          "date": "2026-08-10",
+          "time": null,
+          "category": "施設・学校"
+        },
+        {
+          "title": "老人福祉センター・西部老人福祉センターは通常営業を開始しました",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16338.html",
+          "date": "2026-08-10",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "令和８年熊本地震に伴う中小企業者向け新資金について",
+          "url": "https://www.city.uto.lg.jp/article/view/1321/16716.html",
+          "date": "2026-08-10",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "令和8年熊本地震に関する中小企業・小規模事業者向け特別相談窓口について",
+          "url": "https://www.city.uto.lg.jp/article/view/1321/16569.html",
+          "date": "2026-08-10",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
+          "title": "公民館開放",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16629.html",
+          "date": "2026-08-12",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "漏水時の対応",
+          "url": "https://www.city.uto.lg.jp/article/view/1308/16543.html",
+          "date": "2026-08-12",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "【農業再生協議会】熊本地震被害に伴う経営所得安定対策等の今後の対応について",
+          "url": "https://www.city.uto.lg.jp/article/view/1322/16553.html",
+          "date": "2026-08-12",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "水道の復旧について（お知らせ）",
+          "url": "https://www.city.uto.lg.jp/article/view/1308/16317.html",
+          "date": "2026-08-14",
+          "time": null,
+          "category": "ライフライン"
+        },
+        {
+          "title": "広報うと 災害臨時号vol.1(令和8年熊本地震)",
+          "url": "https://www.city.uto.lg.jp/article/view/1310/16632.html",
+          "date": "2026-08-14",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "熊本県行政書士会宇城支部「無料相談会」",
+          "url": "https://www.city.uto.lg.jp/article/view/1310/16635.html",
+          "date": "2026-08-14",
+          "time": null,
+          "category": "支援・制度"
+        },
         {
           "title": "5 令和８年熊本地震に係る義援金、寄附金、ふるさと納税、... 2026年08月14日",
           "url": "https://www.city.uto.lg.jp/article/view/1145/16359.html",
           "date": "2026-08-14",
           "time": null,
           "category": "支援・制度"
+        },
+        {
+          "title": "<注意喚起>傷んだ道路の通行について",
+          "url": "https://www.city.uto.lg.jp/article/view/1304/16680.html",
+          "date": "2026-08-16",
+          "time": null,
+          "category": "避難・安全"
+        },
+        {
+          "title": "【終了】避難所等における支援物資の飲料水（ペットボト...",
+          "url": "https://www.city.uto.lg.jp/article/view/1302/16545.html",
+          "date": "2026-08-17",
+          "time": null,
+          "category": "避難・安全"
+        },
+        {
+          "title": "熊本地震後の健康相談について",
+          "url": "https://www.city.uto.lg.jp/article/view/1310/16683.html",
+          "date": "2026-08-17",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
+          "title": "炊き出し支援をご検討いただいている皆様へ",
+          "url": "https://www.city.uto.lg.jp/article/view/1310/16401.html",
+          "date": "2026-08-17",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
+          "title": "令和８年熊本地震により臨時休園した期間の保育料の減額...",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16689.html",
+          "date": "2026-08-20",
+          "time": null,
+          "category": "施設・学校"
+        },
+        {
+          "title": "熊本県弁護士会「無料法律相談会」",
+          "url": "https://www.city.uto.lg.jp/article/view/1310/16742.html",
+          "date": "2026-08-20",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
+          "title": "水質検査の結果を公表します",
+          "url": "https://www.city.uto.lg.jp/article/view/1308/16737.html",
+          "date": "2026-08-21",
+          "time": null,
+          "category": "その他"
         },
         {
           "title": "3 給水車による給水のお知らせ 2026年08月21日",
@@ -2676,11 +2886,74 @@
           "category": "ライフライン"
         },
         {
+          "title": "令和8年熊本地震 災害対策本部会議",
+          "url": "https://www.city.uto.lg.jp/article/view/1310/16725.html",
+          "date": "2026-08-24",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "士業による被災者支援のための無料相談会を開催しています",
+          "url": "https://www.city.uto.lg.jp/article/view/1310/16743.html",
+          "date": "2026-08-24",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
+          "title": "令和8年熊本地震で被災した家屋等の公費解体の事前相談受付の開設について",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16577.html",
+          "date": "2026-08-25",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
           "title": "2 令和８年熊本地震における住家の『り災証明書』について 2026年08月25日",
           "url": "https://www.city.uto.lg.jp/article/view/1014/16416.html",
           "date": "2026-08-25",
           "time": null,
           "category": "住まい・証明"
+        },
+        {
+          "title": "令和８年熊本地震に係る被災者生活再建支援金について",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16580.html",
+          "date": "2026-08-26",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
+          "title": "【熊本地震】8月29・30日（土・日）の窓口業務について",
+          "url": "https://www.city.uto.lg.jp/article/view/1310/16528.html",
+          "date": "2026-08-26",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "令和８年熊本地震に係る被災した住宅の応急修理制度について",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16523.html",
+          "date": "2026-08-27",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
+          "title": "令和８年熊本地震に係る賃貸型応急住宅（みなし仮設）の供与について",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16524.html",
+          "date": "2026-08-27",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
+          "title": "ファミリーサポートセンター及びつどいの広場サンサンは8...",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16552.html",
+          "date": "2026-08-27",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "【R8.8.27更新】地震に伴う宇土市内体育施設の利用制限について",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16620.html",
+          "date": "2026-08-27",
+          "time": null,
+          "category": "施設・学校"
         },
         {
           "title": "令和８年熊本地震に係るふるさと納税を受け付けます 2026年08月28日",
@@ -2695,6 +2968,13 @@
           "date": "2026-08-30",
           "time": null,
           "category": "ごみ・生活"
+        },
+        {
+          "title": "気象災害（地震、台風、大雨等）により農作物や農業施設...",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16551.html",
+          "date": "2026-08-30",
+          "time": null,
+          "category": "施設・学校"
         },
         {
           "title": "避難所について（8/30 18:00更新）",
@@ -2714,25 +2994,150 @@
       "sourcesChecked": [
         "https://www.city.uto.lg.jp/category/list/1301.html",
         "https://www.city.uto.lg.jp/",
+        "https://www.city.uto.lg.jp/category/list/1001.html",
+        "https://www.city.uto.lg.jp/category/list/1012.html",
+        "https://www.city.uto.lg.jp/category/list/1054.html",
+        "https://www.city.uto.lg.jp/category/list/1070.html",
+        "https://www.city.uto.lg.jp/category/list/1090.html",
+        "https://www.city.uto.lg.jp/category/list/1105.html",
+        "https://www.city.uto.lg.jp/article/keyword/22145.html",
+        "https://www.city.uto.lg.jp/article/keyword/29211.html",
+        "https://www.city.uto.lg.jp/article/keyword/125.html",
+        "https://www.city.uto.lg.jp/article/keyword/240.html",
+        "https://www.city.uto.lg.jp/article/keyword/264.html",
+        "https://www.city.uto.lg.jp/article/view/1302/16798.html",
+        "https://www.city.uto.lg.jp/article/view/1302/16545.html",
+        "https://www.city.uto.lg.jp/article/view/1303/16352.html",
+        "https://www.city.uto.lg.jp/article/view/1303/16328.html",
+        "https://www.city.uto.lg.jp/article/view/1306/16680.html",
+        "https://www.city.uto.lg.jp/article/view/1306/16355.html",
+        "https://www.city.uto.lg.jp/article/view/1306/1870.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16551.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16522.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16630.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16523.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16524.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16580.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16577.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16416.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16689.html",
+        "https://www.city.uto.lg.jp/article/view/1304/16680.html",
+        "https://www.city.uto.lg.jp/article/view/1304/16466.html",
+        "https://www.city.uto.lg.jp/article/view/1304/16467.html",
+        "https://www.city.uto.lg.jp/article/view/1304/16449.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16629.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16346.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16552.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16620.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16338.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16560.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16448.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16403.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16385.html",
+        "https://www.city.uto.lg.jp/article/view/1308/16737.html",
+        "https://www.city.uto.lg.jp/article/view/1308/16322.html",
+        "https://www.city.uto.lg.jp/article/view/1308/16317.html",
+        "https://www.city.uto.lg.jp/article/view/1308/16543.html",
+        "https://www.city.uto.lg.jp/article/view/1308/16554.html",
+        "https://www.city.uto.lg.jp/article/view/1308/16473.html",
+        "https://www.city.uto.lg.jp/article/view/1321/16716.html",
+        "https://www.city.uto.lg.jp/article/view/1321/16569.html",
+        "https://www.city.uto.lg.jp/article/view/1321/16441.html",
+        "https://www.city.uto.lg.jp/article/view/1321/16462.html",
+        "https://www.city.uto.lg.jp/article/view/1322/16553.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16630.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16528.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16725.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16743.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16742.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16683.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16401.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16632.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16635.html",
+        "https://www.city.uto.lg.jp/article/list/1280.html",
+        "https://www.city.uto.lg.jp/inquiry_s/form.html",
+        "https://www.city.uto.lg.jp/article/view/1280/11.html",
+        "https://www.city.uto.lg.jp/article/list/1282.html",
         "https://www.city.uto.lg.jp/article/view/1229/1368.html",
         "https://www.city.uto.lg.jp/article/view/1310/16359.html",
         "https://www.city.uto.lg.jp/article/view/1014/16416.html",
         "https://www.city.uto.lg.jp/article/view/1232/16322.html",
-        "https://www.city.uto.lg.jp/article/view/1303/16352.html",
         "https://www.city.uto.lg.jp/article/view/1145/16359.html",
         "https://www.city.uto.lg.jp/article/view/1014/16798.html",
         "https://www.city.uto.lg.jp/article/view/1018/16522.html",
         "https://www.city.uto.lg.jp/article/view/1243/16630.html",
         "https://www.city.uto.lg.jp/article/view/1244/16630.html"
       ],
-      "pagesFetched": 1,
+      "pagesFetched": 2,
       "errors": [
-        "https://www.city.uto.lg.jp/category/list/1301.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/category/list/1001.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/category/list/1012.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/category/list/1054.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/category/list/1070.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/category/list/1090.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/category/list/1105.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/keyword/22145.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/keyword/29211.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/keyword/125.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/keyword/240.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/keyword/264.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1302/16798.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1302/16545.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1303/16352.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1303/16328.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1306/16680.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1306/16355.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1306/1870.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1307/16551.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1307/16522.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1307/16630.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1307/16523.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1307/16524.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1307/16580.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1307/16577.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1307/16416.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1307/16689.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1304/16680.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1304/16466.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1304/16467.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1304/16449.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1305/16629.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1305/16346.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1305/16552.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1305/16620.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1305/16338.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1305/16560.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1305/16448.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1305/16403.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1305/16385.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1308/16737.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1308/16322.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1308/16317.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1308/16543.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1308/16554.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1308/16473.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1321/16716.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1321/16569.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1321/16441.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1321/16462.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1322/16553.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1310/16630.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1310/16528.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1310/16725.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1310/16743.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1310/16742.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1310/16683.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1310/16401.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1310/16632.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1310/16635.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/list/1280.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/inquiry_s/form.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1280/11.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/list/1282.html: 403 Forbidden",
         "https://www.city.uto.lg.jp/article/view/1229/1368.html: 403 Forbidden",
         "https://www.city.uto.lg.jp/article/view/1310/16359.html: 403 Forbidden",
         "https://www.city.uto.lg.jp/article/view/1014/16416.html: 403 Forbidden",
         "https://www.city.uto.lg.jp/article/view/1232/16322.html: 403 Forbidden",
-        "https://www.city.uto.lg.jp/article/view/1303/16352.html: 403 Forbidden",
         "https://www.city.uto.lg.jp/article/view/1145/16359.html: 403 Forbidden",
         "https://www.city.uto.lg.jp/article/view/1014/16798.html: 403 Forbidden",
         "https://www.city.uto.lg.jp/article/view/1018/16522.html: 403 Forbidden",
@@ -2743,7 +3148,7 @@
     {
       "name": "上天草市",
       "officialUrl": "https://www.city.kamiamakusa.kumamoto.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3116,7 +3521,7 @@
     {
       "name": "宇城市",
       "officialUrl": "https://www.city.uki.kumamoto.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3146,13 +3551,6 @@
           "date": "2026-07-28",
           "time": null,
           "category": "ライフライン"
-        },
-        {
-          "title": "令和８年熊本地震の発生に伴う教育委員会所管施設の利用について",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2607146",
-          "date": "2026-07-28",
-          "time": null,
-          "category": "施設・学校"
         },
         {
           "title": "被災建築物応急危険度判定の実施について（令和8年熊本地震）",
@@ -3512,13 +3910,6 @@
           "category": "住まい・証明"
         },
         {
-          "title": "シャワー機の利用について（小川防災拠点センター）",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2613543",
-          "date": "2026-08-22",
-          "time": null,
-          "category": "ごみ・生活"
-        },
-        {
           "title": "2026年08月22日 【職員募集】令和8年熊本地震に伴う宇城市任期付職員（土木、建築、電気、機械）を募集します！",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2620169",
           "date": "2026-08-22",
@@ -3652,6 +4043,13 @@
           "category": "住まい・証明"
         },
         {
+          "title": "シャワー機の利用について（小川防災拠点センター）",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2613543",
+          "date": "2026-08-28",
+          "time": null,
+          "category": "ごみ・生活"
+        },
+        {
           "title": "2026年08月28日 地震に伴う断水解消及び給水制限のお知らせ",
           "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/jogesuido/2606682",
           "date": "2026-08-28",
@@ -3659,11 +4057,11 @@
           "category": "ライフライン"
         },
         {
-          "title": "宇城農業振興地域整備計画の農用地利用計画変更（除外等）の申出受付の再開について",
-          "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/nogyo/nogyozenpan/2510798",
+          "title": "令和8年熊本地震に伴う教育委員会所管施設(体育施設)の利用一部再開について",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2625652",
           "date": "2026-08-28",
           "time": null,
-          "category": "その他"
+          "category": "施設・学校"
         },
         {
           "title": "令和８年熊本地震の発生に伴う宇城市屋内多目的広場施設の利用について",
@@ -3680,32 +4078,11 @@
           "category": "避難・安全"
         },
         {
-          "title": "2026年08月30日 避難者数",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
-          "date": "2026-08-30",
-          "time": null,
-          "category": "避難・安全"
-        },
-        {
-          "title": "ブルーシート（支援物資）を配布します",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2611778",
-          "date": "2026-08-30",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
           "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
           "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
           "date": "2026-08-30",
           "time": null,
           "category": "ごみ・生活"
-        },
-        {
-          "title": "令和8年熊本地震に伴う教育委員会所管施設(体育施設)の利用一部再開について",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2625652",
-          "date": "2026-08-30",
-          "time": null,
-          "category": "施設・学校"
         },
         {
           "title": "（8月変更）災害ごみ仮置場の開設日カレンダー (PDF 287KB)",
@@ -3715,8 +4092,8 @@
           "category": "ごみ・生活"
         },
         {
-          "title": "旧宇城市戸馳花の学校及び不知火温泉ふるさと交流センターの利活用事業者を募集します",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2564357",
+          "title": "令和８年熊本地震の発生に伴う教育委員会所管施設の利用について",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2607146",
           "date": "2026-08-30",
           "time": null,
           "category": "施設・学校"
@@ -3727,6 +4104,20 @@
           "date": "2026-08-30",
           "time": "18:00",
           "category": "その他"
+        },
+        {
+          "title": "2026年08月31日 避難者数",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
+          "date": "2026-08-31",
+          "time": null,
+          "category": "避難・安全"
+        },
+        {
+          "title": "ブルーシート（支援物資）を配布します",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2611778",
+          "date": "2026-08-31",
+          "time": null,
+          "category": "住まい・証明"
         },
         {
           "title": "在宅避難者・車中泊の方向けの弁当や必要物資などの配布方法を変更します",
@@ -3743,6 +4134,13 @@
           "category": "支援・制度"
         },
         {
+          "title": "宇城農業振興地域整備計画の農用地利用計画変更（除外等）の申出受付の再開について",
+          "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/nogyo/nogyozenpan/2510798",
+          "date": "2026-08-31",
+          "time": null,
+          "category": "その他"
+        },
+        {
           "title": "【申請受付の延長】宇城市農林水産業物価高騰対策支援事業補助金",
           "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/nogyo/2615387",
           "date": "2026-08-31",
@@ -3755,6 +4153,13 @@
           "date": "2026-08-31",
           "time": null,
           "category": "住まい・証明"
+        },
+        {
+          "title": "旧宇城市戸馳花の学校及び不知火温泉ふるさと交流センターの利活用事業者を募集します",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2564357",
+          "date": "2026-08-31",
+          "time": null,
+          "category": "施設・学校"
         }
       ],
       "sourcesChecked": [
@@ -3865,7 +4270,7 @@
     {
       "name": "天草市",
       "officialUrl": "https://www.city.amakusa.kumamoto.jp/default.html?site=1",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4074,7 +4479,7 @@
     {
       "name": "合志市",
       "officialUrl": "https://www.city.koshi.lg.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4253,7 +4658,7 @@
     {
       "name": "美里町",
       "officialUrl": "https://www.town.kumamoto-misato.lg.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4432,7 +4837,7 @@
     {
       "name": "大津町",
       "officialUrl": "https://www.town.ozu.kumamoto.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4579,7 +4984,7 @@
     {
       "name": "菊陽町",
       "officialUrl": "https://www.town.kikuyo.lg.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4839,7 +5244,7 @@
     {
       "name": "西原村",
       "officialUrl": "https://www.vill.nishihara.kumamoto.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4993,7 +5398,7 @@
     {
       "name": "御船町",
       "officialUrl": "https://www.town.mifune.kumamoto.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5227,7 +5632,7 @@
     {
       "name": "嘉島町",
       "officialUrl": "https://www.town.kumamoto-kashima.lg.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5418,7 +5823,7 @@
     {
       "name": "益城町",
       "officialUrl": "https://www.town.mashiki.lg.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5793,7 +6198,7 @@
     {
       "name": "甲佐町",
       "officialUrl": "https://www.town.kosa.lg.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6121,10 +6526,9 @@
         "https://www.town.kosa.lg.jp/q/aview/1/13631.html",
         "https://www.town.kosa.lg.jp/q/aview/1/13555.html"
       ],
-      "pagesFetched": 66,
+      "pagesFetched": 67,
       "errors": [
         "https://www.town.kosa.lg.jp/q/aview/51/13521.html: 404 Not Found",
-        "https://www.town.kosa.lg.jp/q/aview/51/13648.html: fetch failed",
         "https://www.town.kosa.lg.jp/q/aview/130/13622.html: 404 Not Found",
         "https://www.town.kosa.lg.jp/q/aview/101/13546.html: 404 Not Found"
       ]
@@ -6132,7 +6536,7 @@
     {
       "name": "氷川町",
       "officialUrl": "https://www.town.hikawa.kumamoto.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6621,7 +7025,7 @@
     {
       "name": "芦北町",
       "officialUrl": "https://www.town.ashikita.lg.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6685,7 +7089,7 @@
     {
       "name": "津奈木町",
       "officialUrl": "https://www.town.tsunagi.lg.jp/",
-      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "checkedAt": "2026-08-30T23:35:07.444Z",
       "status": "confirmed",
       "updates": [
         {
