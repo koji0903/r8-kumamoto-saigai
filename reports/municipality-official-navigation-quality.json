@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-08-30T16:46:16.921Z",
+  "generatedAt": "2026-08-30T21:13:06.833Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 739,
-  "displayCandidateCount": 505,
-  "classifiedPageCount": 593,
+  "inputCount": 745,
+  "displayCandidateCount": 509,
+  "classifiedPageCount": 598,
   "categoryReport": {
     "home": {
-      "total": 158,
+      "total": 159,
       "high": 56,
       "medium": 61,
-      "low": 41
+      "low": 42
     },
     "money": {
-      "total": 172,
+      "total": 174,
       "high": 41,
-      "medium": 48,
-      "low": 83
+      "medium": 49,
+      "low": 84
     },
     "documents": {
-      "total": 153,
-      "high": 36,
+      "total": 154,
+      "high": 37,
       "medium": 36,
       "low": 81
     },
@@ -31,9 +31,9 @@
       "low": 0
     },
     "family_education": {
-      "total": 83,
+      "total": 82,
       "high": 6,
-      "medium": 29,
+      "medium": 28,
       "low": 48
     },
     "work_business": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 183,
-      "high": 61,
-      "medium": 122,
+      "total": 186,
+      "high": 62,
+      "medium": 124,
       "low": 0
     }
   },
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 0,
-      "displayCandidates": 0,
+      "classified": 6,
+      "displayCandidates": 5,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 83,
-      "displayCandidates": 72,
+      "classified": 82,
+      "displayCandidates": 71,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 227,
-    "medium": 278,
-    "low": 88
+    "high": 229,
+    "medium": 280,
+    "low": 89
   },
-  "unclassifiedCount": 25,
+  "unclassifiedCount": 26,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -248,6 +248,11 @@
       "municipalityName": "八代市",
       "title": "平成23年東北地方太平洋沖地震派遣緊急消防援助隊活動報告",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji0031248/index.html"
+    },
+    {
+      "municipalityName": "宇土市",
+      "title": "令和８年熊本地震に係るふるさと納税を受け付けます 2026年08月28日",
+      "url": "https://www.city.uto.lg.jp/article/view/1244/16630.html"
     },
     {
       "municipalityName": "上天草市",
@@ -961,7 +966,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 11
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1021,7 +1026,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1035,5 +1040,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 592
+  "previousClassifiedPageCount": 593
 }

@@ -2,7 +2,7 @@
   "metadata": {
     "event": "令和8年熊本地震",
     "disasterDate": "2026-07-28",
-    "retrievedAt": "2026-08-30T16:46:16.921Z",
+    "retrievedAt": "2026-08-30T21:13:06.833Z",
     "scope": "各市町村の公式トップページ、確認済みの地震情報集約ページ、そのページに掲載された個別記事、および集約ページのページ送りを確認。令和8年7月28日以降の日付を公式ページ上で確認できた記事リンク",
     "caveat": "公式サイトの構造・公開方式・検索可否により網羅性は保証できません。未検出は情報が存在しないことを意味しません。内容と最新状況はリンク先の一次情報で確認してください。",
     "categoryNote": "分類は記事タイトルに基づく閲覧用の便宜的な分類です。"
@@ -11,7 +11,7 @@
     {
       "name": "熊本市",
       "officialUrl": "https://www.city.kumamoto.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -621,7 +621,7 @@
     {
       "name": "八代市",
       "officialUrl": "https://www.city.yatsushiro.lg.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2312,7 +2312,7 @@
     {
       "name": "水俣市",
       "officialUrl": "https://localcms.city.minamata.lg.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2389,7 +2389,7 @@
     {
       "name": "山鹿市",
       "officialUrl": "https://www.city.yamaga.kumamoto.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2562,7 +2562,7 @@
     {
       "name": "菊池市",
       "officialUrl": "https://www.city.kikuchi.lg.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2658,23 +2658,92 @@
     {
       "name": "宇土市",
       "officialUrl": "https://www.city.uto.lg.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
-      "status": "fetch-error",
-      "updates": [],
+      "checkedAt": "2026-08-30T21:13:06.833Z",
+      "status": "confirmed",
+      "updates": [
+        {
+          "title": "5 令和８年熊本地震に係る義援金、寄附金、ふるさと納税、... 2026年08月14日",
+          "url": "https://www.city.uto.lg.jp/article/view/1145/16359.html",
+          "date": "2026-08-14",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
+          "title": "3 給水車による給水のお知らせ 2026年08月21日",
+          "url": "https://www.city.uto.lg.jp/article/view/1232/16322.html",
+          "date": "2026-08-21",
+          "time": null,
+          "category": "ライフライン"
+        },
+        {
+          "title": "2 令和８年熊本地震における住家の『り災証明書』について 2026年08月25日",
+          "url": "https://www.city.uto.lg.jp/article/view/1014/16416.html",
+          "date": "2026-08-25",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
+          "title": "令和８年熊本地震に係るふるさと納税を受け付けます 2026年08月28日",
+          "url": "https://www.city.uto.lg.jp/article/view/1244/16630.html",
+          "date": "2026-08-28",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "【重要】災害ごみ仮置き場の開設のお知らせ（8月30日時点）",
+          "url": "https://www.city.uto.lg.jp/article/view/1303/16352.html",
+          "date": "2026-08-30",
+          "time": null,
+          "category": "ごみ・生活"
+        },
+        {
+          "title": "避難所について（8/30 18:00更新）",
+          "url": "https://www.city.uto.lg.jp/article/view/1014/16798.html",
+          "date": "2026-08-30",
+          "time": "18:00",
+          "category": "避難・安全"
+        },
+        {
+          "title": "令和８年熊本地震被害に関する「すまいの相談窓口」の開設について",
+          "url": "https://www.city.uto.lg.jp/article/view/1018/16522.html",
+          "date": "2026-08-31",
+          "time": null,
+          "category": "支援・制度"
+        }
+      ],
       "sourcesChecked": [
         "https://www.city.uto.lg.jp/category/list/1301.html",
-        "https://www.city.uto.lg.jp/"
+        "https://www.city.uto.lg.jp/",
+        "https://www.city.uto.lg.jp/article/view/1229/1368.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16359.html",
+        "https://www.city.uto.lg.jp/article/view/1014/16416.html",
+        "https://www.city.uto.lg.jp/article/view/1232/16322.html",
+        "https://www.city.uto.lg.jp/article/view/1303/16352.html",
+        "https://www.city.uto.lg.jp/article/view/1145/16359.html",
+        "https://www.city.uto.lg.jp/article/view/1014/16798.html",
+        "https://www.city.uto.lg.jp/article/view/1018/16522.html",
+        "https://www.city.uto.lg.jp/article/view/1243/16630.html",
+        "https://www.city.uto.lg.jp/article/view/1244/16630.html"
       ],
-      "pagesFetched": 0,
+      "pagesFetched": 1,
       "errors": [
         "https://www.city.uto.lg.jp/category/list/1301.html: 403 Forbidden",
-        "https://www.city.uto.lg.jp/: 403 Forbidden"
+        "https://www.city.uto.lg.jp/article/view/1229/1368.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1310/16359.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1014/16416.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1232/16322.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1303/16352.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1145/16359.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1014/16798.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1018/16522.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1243/16630.html: 403 Forbidden",
+        "https://www.city.uto.lg.jp/article/view/1244/16630.html: 403 Forbidden"
       ]
     },
     {
       "name": "上天草市",
       "officialUrl": "https://www.city.kamiamakusa.kumamoto.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3047,7 +3116,7 @@
     {
       "name": "宇城市",
       "officialUrl": "https://www.city.uki.kumamoto.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3604,13 +3673,6 @@
           "category": "施設・学校"
         },
         {
-          "title": "旧宇城市戸馳花の学校利活用事業",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2578019",
-          "date": "2026-08-28",
-          "time": null,
-          "category": "施設・学校"
-        },
-        {
           "title": "2026年08月30日 避難所を開設しています",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2609102",
           "date": "2026-08-30",
@@ -3803,7 +3865,7 @@
     {
       "name": "天草市",
       "officialUrl": "https://www.city.amakusa.kumamoto.jp/default.html?site=1",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4012,7 +4074,7 @@
     {
       "name": "合志市",
       "officialUrl": "https://www.city.koshi.lg.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4191,7 +4253,7 @@
     {
       "name": "美里町",
       "officialUrl": "https://www.town.kumamoto-misato.lg.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4370,7 +4432,7 @@
     {
       "name": "大津町",
       "officialUrl": "https://www.town.ozu.kumamoto.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4517,7 +4579,7 @@
     {
       "name": "菊陽町",
       "officialUrl": "https://www.town.kikuyo.lg.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4777,7 +4839,7 @@
     {
       "name": "西原村",
       "officialUrl": "https://www.vill.nishihara.kumamoto.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4931,7 +4993,7 @@
     {
       "name": "御船町",
       "officialUrl": "https://www.town.mifune.kumamoto.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5165,7 +5227,7 @@
     {
       "name": "嘉島町",
       "officialUrl": "https://www.town.kumamoto-kashima.lg.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5356,7 +5418,7 @@
     {
       "name": "益城町",
       "officialUrl": "https://www.town.mashiki.lg.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5731,7 +5793,7 @@
     {
       "name": "甲佐町",
       "officialUrl": "https://www.town.kosa.lg.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6059,9 +6121,10 @@
         "https://www.town.kosa.lg.jp/q/aview/1/13631.html",
         "https://www.town.kosa.lg.jp/q/aview/1/13555.html"
       ],
-      "pagesFetched": 67,
+      "pagesFetched": 66,
       "errors": [
         "https://www.town.kosa.lg.jp/q/aview/51/13521.html: 404 Not Found",
+        "https://www.town.kosa.lg.jp/q/aview/51/13648.html: fetch failed",
         "https://www.town.kosa.lg.jp/q/aview/130/13622.html: 404 Not Found",
         "https://www.town.kosa.lg.jp/q/aview/101/13546.html: 404 Not Found"
       ]
@@ -6069,7 +6132,7 @@
     {
       "name": "氷川町",
       "officialUrl": "https://www.town.hikawa.kumamoto.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6558,7 +6621,7 @@
     {
       "name": "芦北町",
       "officialUrl": "https://www.town.ashikita.lg.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6622,7 +6685,7 @@
     {
       "name": "津奈木町",
       "officialUrl": "https://www.town.tsunagi.lg.jp/",
-      "checkedAt": "2026-08-30T16:46:16.921Z",
+      "checkedAt": "2026-08-30T21:13:06.833Z",
       "status": "confirmed",
       "updates": [
         {

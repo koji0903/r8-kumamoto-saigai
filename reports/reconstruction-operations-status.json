@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-30T17:03:19.672Z",
+  "generatedAt": "2026-08-30T21:28:56.269Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-08-30T16:46:16.921Z",
-    "inputCount": 739,
-    "classifiedPageCount": 593,
-    "displayCandidateCount": 505,
+    "generatedAt": "2026-08-30T21:13:06.833Z",
+    "inputCount": 745,
+    "classifiedPageCount": 598,
+    "displayCandidateCount": 509,
     "deltaFromPrevious": {
-      "inputCount": 4,
-      "classifiedPageCount": 1,
-      "unclassifiedCount": 2
+      "inputCount": 6,
+      "classifiedPageCount": 5,
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 64,
+      "ageHours": 69,
       "limitHours": 336
     }
   },
@@ -56,8 +56,8 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 0,
-        "displayCandidates": 0,
+        "classified": 6,
+        "displayCandidates": 5,
         "fallback": true
       },
       "municipality_kamiamakusa": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 83,
-        "displayCandidates": 72,
+        "classified": 82,
+        "displayCandidates": 71,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,20 +138,20 @@
     },
     "categoryReport": {
       "home": {
-        "total": 158,
+        "total": 159,
         "high": 56,
         "medium": 61,
-        "low": 41
+        "low": 42
       },
       "money": {
-        "total": 172,
+        "total": 174,
         "high": 41,
-        "medium": 48,
-        "low": 83
+        "medium": 49,
+        "low": 84
       },
       "documents": {
-        "total": 153,
-        "high": 36,
+        "total": 154,
+        "high": 37,
         "medium": 36,
         "low": 81
       },
@@ -162,9 +162,9 @@
         "low": 0
       },
       "family_education": {
-        "total": 83,
+        "total": 82,
         "high": 6,
-        "medium": 29,
+        "medium": 28,
         "low": 48
       },
       "work_business": {
@@ -180,18 +180,18 @@
         "low": 0
       },
       "daily_life": {
-        "total": 183,
-        "high": 61,
-        "medium": 122,
+        "total": 186,
+        "high": 62,
+        "medium": 124,
         "low": 0
       }
     },
     "confidence": {
-      "high": 227,
-      "medium": 278,
-      "low": 88
+      "high": 229,
+      "medium": 280,
+      "low": 89
     },
-    "unclassifiedCount": 25,
+    "unclassifiedCount": 26,
     "excludedCount": 34,
     "overrideCount": 2
   },
@@ -297,7 +297,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 11
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -357,7 +357,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
