@@ -4,6 +4,7 @@
 import { readFile, readdir, access } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { isValidTopicDate } from "./official-topic-date.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const errors = [];
@@ -66,7 +67,7 @@ if (!officialTopics.national.length) errors.push("国の最新トピックスが
 if (!officialTopics.prefecture.length) errors.push("県の最新トピックスがありません");
 for (const topic of [...officialTopics.national, ...officialTopics.prefecture, ...officialTopics.municipalities]) {
   if (!/^https:\/\//.test(topic.url)) errors.push(`トピックスURLが不正: ${topic.url}`);
-  if (!/^2026-(07|08)-\d{2}$/.test(topic.date)) errors.push(`トピックス日付が不正: ${topic.title}`);
+  if (!isValidTopicDate(topic.date)) errors.push(`トピックス日付が不正: ${topic.title}`);
 }
 
 for (const day of report.days) {
