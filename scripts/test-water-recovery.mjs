@@ -23,9 +23,12 @@ for (const item of data.measured) {
   if (item.latest === 0) assert.ok(item.resolvedDate, `${item.name}: 解消日が必要です`);
   else assert.equal(item.resolvedDate, null, `${item.name}: 継続中なのに解消日があります`);
 }
-// 復旧に差があることがこのページの主題。全部同じなら成り立たない。
-assert.ok(data.measured.some(item => item.latest > 0) && data.measured.some(item => item.latest === 0),
-  "継続中と解消済みの両方がなければ復旧の差を示せません");
+// 復旧時期に差があることがこのページの主題。全地域の断水が解消した後も、
+// 解消日の違いを時系列として保持できていることを確認する。
+const remaining = data.measured.filter(item => item.latest > 0).length;
+const resolvedDates = new Set(data.measured.map(item => item.resolvedDate).filter(Boolean));
+assert.ok(resolvedDates.size >= 2,
+  "地域ごとの復旧時期の差を示せる解消日が不足しています");
 
 // 市町村の対応として分類できていること
 assert.ok(data.responseTypes?.length >= 6, "対応の種類の定義が不足しています");
@@ -72,5 +75,4 @@ const build = spawnSync(process.execPath, ["scripts/build-water-recovery.mjs"], 
 assert.equal(build.status, 0, build.stderr);
 assert.match(build.stdout, /上水道の復旧/);
 
-const remaining = data.measured.filter(item => item.latest > 0).length;
 console.log(`水の復旧: 実測${data.measured.length}市町村（継続中${remaining}）/ 統計に出ない状態${invisible.length}件 / 会議記録${data.notes.length}件 / 逆算しない・出典・fallback OK`);

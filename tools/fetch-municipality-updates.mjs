@@ -4,6 +4,8 @@
 import { mkdir, writeFile, readFile } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = join(ROOT, "sources/official/municipalities");
@@ -19,6 +21,7 @@ const PRIORITY_MUNICIPALITIES = new Set(["宇土市", "宇城市", "氷川町", 
 const PRIORITY_MAX_PAGES = 220;
 const pageBudget = name => PRIORITY_MUNICIPALITIES.has(name) ? PRIORITY_MAX_PAGES : MAX_PAGES_PER_SITE;
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+const execFileAsync = promisify(execFile);
 const domainAllowlist = JSON.parse(await readFile(join(ROOT, "config/municipality-official-domain-allowlist.json"), "utf8")).domains || [];
 
 const municipalities = [
@@ -157,19 +160,41 @@ function canonicalArticleKey(url) {
   const articleId = parsed.pathname.match(/\/article\/view\/\d+\/(\d+)\.html$/i)?.[1];
   return viewId ? `${parsed.hostname}/q/aview/${viewId}` : articleId ? `${parsed.hostname}/article/view/${articleId}` : url;
 }
-async function get(url) {
-  const response = await fetch(url, { headers: { "user-agent": UA, accept: "text/html,application/xhtml+xml" }, redirect: "follow", signal: AbortSignal.timeout(20000) });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-  const type = response.headers.get("content-type") || "";
-  if (!type.includes("html")) throw new Error(`HTMLではありません: ${type}`);
-  const bytes = await response.arrayBuffer();
+function decodeHtml(bytes, type = "") {
   const declared = type.match(/charset=([^;\s]+)/i)?.[1];
-  const head = new TextDecoder("latin1").decode(bytes.slice(0, 4000));
+  const source = bytes instanceof Uint8Array ? bytes : new Uint8Array(bytes);
+  const head = new TextDecoder("latin1").decode(source.slice(0, 4000));
   const meta = head.match(/charset=["']?([^"'\s/>;]+)/i)?.[1];
   const charset = (declared || meta || "utf-8").replace(/shift[-_]?jis|x-sjis|windows-31j/i, "shift_jis");
-  let html;
-  try { html = new TextDecoder(charset).decode(bytes); } catch { html = new TextDecoder("utf-8").decode(bytes); }
-  return { html, finalUrl: response.url };
+  try { return new TextDecoder(charset).decode(source); } catch { return new TextDecoder("utf-8").decode(source); }
+}
+async function getWithCurl(url) {
+  const { stdout } = await execFileAsync("curl", [
+    "--fail", "--silent", "--show-error", "--location",
+    "--connect-timeout", "15", "--max-time", "30",
+    "--user-agent", UA, "--header", "Accept: text/html,application/xhtml+xml", url
+  ], { encoding: "buffer", maxBuffer: 12 * 1024 * 1024, timeout: 35000 });
+  const html = decodeHtml(stdout);
+  if (!/<(?:!doctype\s+html|html|head|body)\b/i.test(html.slice(0, 4000))) throw new Error("curlの応答がHTMLではありません");
+  return { html, finalUrl: url };
+}
+async function get(url) {
+  try {
+    const response = await fetch(url, { headers: { "user-agent": UA, accept: "text/html,application/xhtml+xml" }, redirect: "follow", signal: AbortSignal.timeout(20000) });
+    if (!response.ok) {
+      // 宇土市CMSはNode.jsのTLS接続を403にする一方、同じ公式URLをcurlでは
+      // 正常に返す。アクセス制限時だけ別クライアントで再試行し、収集の欠落を防ぐ。
+      if ([403, 429, 503].includes(response.status)) return getWithCurl(url);
+      throw new Error(`${response.status} ${response.statusText}`);
+    }
+    const type = response.headers.get("content-type") || "";
+    if (!type.includes("html")) throw new Error(`HTMLではありません: ${type}`);
+    const bytes = await response.arrayBuffer();
+    return { html: decodeHtml(bytes, type), finalUrl: response.url };
+  } catch (error) {
+    if (error?.name === "AbortError" || error?.name === "TimeoutError" || error instanceof TypeError) return getWithCurl(url);
+    throw error;
+  }
 }
 function anchors(html, base, config) {
   const result = [];

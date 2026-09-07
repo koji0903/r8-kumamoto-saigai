@@ -8,7 +8,7 @@
 // 無かったのが原因なので、代表例を名指しで固定する。
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { classify, categories, validateOutOfScopeRules } from "./build-municipality-reconstruction-nav.mjs";
+import { classify, categories, outOfScope, validateOutOfScopeRules } from "./build-municipality-reconstruction-nav.mjs";
 
 const read = file => fs.readFileSync(new URL(`../${file}`, import.meta.url), "utf8");
 const nav = JSON.parse(read("public-data/reconstruction/municipality-official-navigation.json"));
@@ -94,11 +94,12 @@ assert.ok(!validateOutOfScopeRules(outOfScopeConfig.rules).length,
 for (const rule of outOfScopeConfig.rules) {
   assert.ok(rule.reason.length >= 20, `対象外ルール ${rule.id} の理由が短すぎます`);
 }
-// ② 使われていないルールを置かない。表題の書き方が変わって空振りしている
-//    ルールに気づけなくなる（実際、全角括弧のまま書いて空振りしていた）
+// ② 各ルールの代表例が実際に一致すること。日々の収集結果に該当記事がなくても、
+//    ルールそのものが空振りしていないことを固定例で検証する。
 for (const rule of outOfScopeConfig.rules) {
-  assert.ok(report.outOfScopeByRule?.[rule.id] > 0,
-    `対象外ルール ${rule.id} に当たる記事が1件もありません。表題の書き方が変わったか、もう要らないルールです`);
+  assert.ok(rule.example?.trim(), `対象外ルール ${rule.id} に検証用の代表例がありません`);
+  assert.equal(outOfScope({ title: rule.example })?.id, rule.id,
+    `対象外ルール ${rule.id} が代表例「${rule.example}」に一致しません`);
 }
 // ③ 分野を当てられる記事を対象外にしないこと。対象外は分類できなかった記事に
 //    しか使わない約束なので、これが破れると支援情報が消える

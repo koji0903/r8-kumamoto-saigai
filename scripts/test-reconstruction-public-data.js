@@ -46,7 +46,7 @@ try {
     rows.find(row => row.id === "application_r8_kumamoto_emergency_repair").publicationStatus = "published";
   });
   editJson(tempRoot, "application-periods.json", rows => {
-    Object.assign(rows[0], { startsAt: "2026-08-10", deadlineAt: "2026-08-31", deadlineType: "fixed", status: "open", verificationStatus: "unverified" });
+    Object.assign(rows[0], { startsAt: "2099-08-10", deadlineAt: "2099-08-31", deadlineType: "fixed", status: "open", verificationStatus: "unverified" });
   });
   const built = build(tempRoot);
   const programs = JSON.parse(fs.readFileSync(path.join(built.output, "programs.json"), "utf8"));
