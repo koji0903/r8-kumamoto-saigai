@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-07T13:03:03.269Z",
+  "generatedAt": "2026-09-07T19:34:34.281Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-07T12:44:36.640Z",
-    "inputCount": 830,
-    "classifiedPageCount": 665,
-    "displayCandidateCount": 569,
+    "generatedAt": "2026-09-07T19:13:47.682Z",
+    "inputCount": 826,
+    "classifiedPageCount": 661,
+    "displayCandidateCount": 565,
     "deltaFromPrevious": {
-      "inputCount": 9,
-      "classifiedPageCount": 9,
+      "inputCount": -4,
+      "classifiedPageCount": -4,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 8,
+      "ageHours": 14,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 131,
-        "displayCandidates": 106,
+        "classified": 130,
+        "displayCandidates": 105,
         "fallback": true
       },
       "municipality_minamata": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 96,
-        "displayCandidates": 82,
+        "classified": 95,
+        "displayCandidates": 81,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -101,8 +101,8 @@
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 25,
-        "displayCandidates": 16,
+        "classified": 23,
+        "displayCandidates": 14,
         "fallback": true
       },
       "municipality_kashima": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 177,
+        "total": 176,
         "high": 61,
-        "medium": 69,
+        "medium": 68,
         "low": 47
       },
       "money": {
-        "total": 200,
+        "total": 199,
         "high": 45,
         "medium": 55,
-        "low": 100
+        "low": 99
       },
       "documents": {
-        "total": 170,
+        "total": 169,
         "high": 39,
         "medium": 36,
-        "low": 95
+        "low": 94
       },
       "health_care": {
         "total": 42,
@@ -168,9 +168,9 @@
         "low": 45
       },
       "work_business": {
-        "total": 54,
+        "total": 53,
         "high": 16,
-        "medium": 38,
+        "medium": 37,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,15 +180,15 @@
         "low": 0
       },
       "daily_life": {
-        "total": 202,
-        "high": 66,
-        "medium": 136,
+        "total": 200,
+        "high": 65,
+        "medium": 135,
         "low": 0
       }
     },
     "confidence": {
-      "high": 253,
-      "medium": 316,
+      "high": 252,
+      "medium": 313,
       "low": 96
     },
     "unclassifiedCount": 36,
