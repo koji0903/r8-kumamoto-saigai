@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
   <link rel="stylesheet" href="styles.css?v=20260817-4">
   <link rel="stylesheet" href="design-system.css?v=20260810-1">
-  <link rel="stylesheet" href="org-site.css?v=20260907-4">
+  <link rel="stylesheet" href="org-site.css?v=20260907-5">
   <link rel="canonical" href="https://www.yokatainet.jp/temporary-housing.html">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
@@ -41,7 +41,7 @@
       <h1>建設型応急住宅の整備状況</h1>
       <p>熊本県の発表と最新PDFを、入居を待つ方が「どこに・何戸・いつごろ」を確認できる形に整理しました。</p>
       <nav class="th-jump" aria-label="ページ内メニュー">
-        <a href="#overview">全体像</a><a href="#map">地図</a><a href="#districts">団地別</a><a href="#timeline">整備の経過</a><a href="#how-to">入居の確認</a>
+        <a href="#overview">全体像</a><a href="#map">地図</a><a href="#schedule">工程表</a><a href="#districts">団地別</a><a href="#timeline">整備の経過</a><a href="#how-to">入居の確認</a>
       </nav>
     </div>
   </section>
@@ -85,6 +85,15 @@
     </div>
     <p class="th-map-note">地図：国土地理院標準地図。所在地：熊本県の建設型応急住宅報道資料。町域代表点の団地は、ポップアップに「おおよその位置」と表示しています。近接するピンは重なりを避けるため少し離して表示しています。</p>
     <noscript><p class="th-map-fallback">JavaScriptが無効なため地図は表示できません。下の団地別一覧で所在地と県資料を確認してください。</p></noscript>
+  </section>
+
+  <section class="th-section th-schedule-section" id="schedule">
+    <header class="th-heading"><p class="kicker">CONSTRUCTION SCHEDULE</p><h2>建設スケジュールを横軸で見る</h2><p>横軸は月日、縦軸は市町・団地です。帯の左端が着工日、右端が県資料に記載された入居予定時期を示します。</p></header>
+    <div class="th-schedule-key" aria-label="工程表の凡例"><span><i class="plan"></i>着工から入居予定まで</span><span><i class="done"></i>完成した工期</span><span><i class="handover"></i>鍵引渡し</span></div>
+    <div class="th-schedule-scroll" tabindex="0" aria-label="建設型応急住宅の工程表。横にスクロールできます">
+      <div id="temporaryHousingSchedule" class="th-schedule" role="img" aria-label="2026年8月から11月までの19団地の建設スケジュール"></div>
+    </div>
+    <p class="th-schedule-note">「上旬・中旬・下旬」は見やすくするため、それぞれ5日・15日・25日の位置に置いています。右端は完成日ではなく、2026年9月7日時点の入居予定時期です。工事や入居の日程は変更される場合があります。</p>
   </section>
 
   <section class="th-section th-districts" id="districts">
@@ -196,6 +205,6 @@
 <script src="data/generated/hq-latest.js"></script>
 <script src="org-site.js?v=20260907-3"></script>
 <script src="app.js?v=20260817-1"></script>
-<script src="temporary-housing.js?v=20260907-1"></script>
+<script src="temporary-housing.js?v=20260907-2"></script>
 </body>
 </html>

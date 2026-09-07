@@ -492,3 +492,21 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
 .th-city tbody th small{display:block;margin-top:4px;color:#657873;font-size:11px;font-weight:500}
 @media(max-width:800px){.th-map-layout{grid-template-columns:1fr}.th-map-controls{padding:16px}#housingMapFilters{display:flex;flex-wrap:wrap}#housingMapFilters button,#housingMapFilters button:first-child{grid-column:auto;min-height:44px;padding-inline:13px}.th-map{height:480px}}
 @media(max-width:480px){.th-map{height:430px}}
+
+/* 建設型応急住宅：横軸日付・縦軸団地の工程表 */
+.th-schedule-section{padding-top:36px;scroll-margin-top:100px}
+.th-schedule-key{display:flex;flex-wrap:wrap;gap:18px;margin:-12px 0 16px;color:#526b64;font-size:13px}.th-schedule-key span{display:flex;align-items:center;gap:7px}.th-schedule-key i{width:24px;height:10px;border-radius:999px}.th-schedule-key .plan{background:#23877a}.th-schedule-key .done{background:#d48318}.th-schedule-key .handover{width:3px;height:18px;border-radius:0;background:#963e73}
+.th-schedule-scroll{border:2px solid #c3d8d2;border-radius:14px;background:#fff;overflow-x:auto;box-shadow:5px 6px 0 #e3ece9}
+.th-schedule{min-width:940px}
+.th-schedule-axis,.th-schedule-row{display:grid;grid-template-columns:220px minmax(700px,1fr)}
+.th-schedule-axis{position:sticky;top:0;z-index:4;min-height:58px;border-bottom:2px solid #9fbdb5;background:#eaf4f1}
+.th-schedule-axis>div:first-child{display:flex;align-items:end;padding:0 16px 11px;color:#536b65;font-size:12px;font-weight:900}
+.th-schedule-axis>div:last-child,.th-schedule-track{position:relative}
+.th-schedule-axis span{position:absolute;bottom:10px;transform:translateX(-50%);color:#355b53;font-size:12px;font-weight:900}.th-schedule-axis span:first-child{transform:none}
+.th-schedule-row{min-height:62px;border-bottom:1px solid #dce7e4}.th-schedule-row:last-child{border-bottom:0}.th-schedule-row.city-start{border-top:3px solid #9fbdb5}.th-schedule-row.city-start:first-of-type{border-top:0}
+.th-schedule-name{display:grid;grid-template-columns:55px minmax(0,1fr) auto;gap:8px;align-items:center;padding:10px 14px;border-right:1px solid #cbdcd7;background:#fafcfb}.th-schedule-name small{color:#176d62;font-size:11px;font-weight:900}.th-schedule-name b{font-size:13px}.th-schedule-name>span{color:#667a74;font-size:11px}
+.th-schedule-track{min-height:62px;background:#fff}.th-gridline{position:absolute;top:0;bottom:0;width:1px;background:#e0e9e6}.th-gridline:nth-child(odd){background:#cadbd6}
+.th-schedule-bar{position:absolute;display:flex;align-items:center;height:20px;padding:0 7px;border-radius:5px;color:#fff;font-size:10px;line-height:1;white-space:nowrap;overflow:hidden;box-shadow:0 2px 4px rgba(20,65,56,.15)}.th-schedule-bar.plan{background:#23877a}.th-schedule-bar.done{background:#d48318}.th-schedule-bar:nth-of-type(1){top:10px}.th-schedule-bar:nth-of-type(2){top:34px}
+.th-schedule-bar b{overflow:hidden;text-overflow:ellipsis}.th-handover{position:absolute;top:3px;bottom:3px;width:3px;background:#963e73;z-index:3}.th-handover::before{content:"";position:absolute;top:-1px;left:-4px;width:11px;height:11px;border-radius:50%;background:#963e73}.th-handover span{position:absolute;left:7px;top:0;padding:2px 4px;border-radius:3px;background:#fff;color:#77305b;font-size:9px;font-style:normal;font-weight:900;white-space:nowrap}
+.th-schedule-note{margin:13px 0 0;padding-left:15px;border-left:4px solid #d48318;color:#596e68;font-size:12px;line-height:1.75}
+@media(max-width:800px){.th-schedule-scroll{margin-right:-12px;border-right:0;border-radius:12px 0 0 12px}.th-schedule{min-width:850px}.th-schedule-axis,.th-schedule-row{grid-template-columns:190px minmax(640px,1fr)}.th-schedule-name{grid-template-columns:48px minmax(0,1fr) auto;padding-inline:10px}}
