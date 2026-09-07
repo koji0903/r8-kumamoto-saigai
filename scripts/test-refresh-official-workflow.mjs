@@ -25,4 +25,8 @@ assert.equal(/push[^\n]*--force|push[^\n]*-f\b/.test(yaml),false,"force push禁�
 assert.ok(yaml.includes("inputs.dry_run != true"),"dry-runではcommitしない");
 assert.ok(yaml.includes("git push origin HEAD:main")&&!yaml.includes("git push --force"),"通常pushのみ");
 assert.ok(yaml.includes("git rebase --abort")&&yaml.includes("force pushは行いません"),"競合時は安全に停止する");
+const coverage=fs.readFileSync("scripts/test-reconstruction-coverage.mjs","utf8");
+assert.match(coverage,/minInputCount\s*=\s*\d+/,"公式ページの収集量を検査する");
+assert.match(coverage,/minClassifiedRate\s*=\s*0\.\d+/,"公式ページの分類率を検査する");
+assert.doesNotMatch(coverage,/classified\s*>=\s*\d+/,"分類済み件数を固定値で検査しない");
 console.log("refresh Workflowの順序・dry-run・fail-safe・commit対象・権限を確認しました");

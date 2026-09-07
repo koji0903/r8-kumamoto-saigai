@@ -52,7 +52,17 @@ assert.ok(!consultation.includes("documents"), "相談窓口の記事を証明�
 
 // ---- 拾えている量 -----------------------------------------------------------
 const classified = nav.validation.classifiedPageCount;
-assert.ok(classified >= 530, `分類できた公式ページが${classified}件しかありません`);
+const inputCount = nav.validation.inputCount;
+// 取得できたページ数は、自治体サイトの掲載終了や一時的な応答によって動く。
+// 分類済み件数だけを固定すると、分類品質が同じでも入力が減った日に止まるため、
+// 収集量と分類率を分けて監視する。
+const minInputCount = 600;
+const minClassifiedRate = 0.75;
+const classifiedRate = inputCount ? classified / inputCount : 0;
+assert.ok(inputCount >= minInputCount,
+  `収集できた公式ページが${inputCount}件しかありません（${minInputCount}件以上を期待）。自治体サイトの取得状況を確認してください`);
+assert.ok(classifiedRate >= minClassifiedRate,
+  `公式ページの分類率が${(classifiedRate * 100).toFixed(1)}%です（下限${minClassifiedRate * 100}%、${classified}/${inputCount}件）`);
 // nav 側の unclassifiedCount は重複・非公式URL等で除いた分も含む。分野を1つも
 // 当てられなかった純粋な取りこぼしは品質レポートの unclassifiedItems の方。
 const report = JSON.parse(read("reports/municipality-official-navigation-quality.json"));
