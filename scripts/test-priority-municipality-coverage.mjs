@@ -38,6 +38,8 @@ assert.match(collector, /municipalities\.find\(municipality => municipality\.nam
   "八代市の災害ハブの掲載判断を尊重する設定が必要です");
 assert.match(collector, /const inspectableUrl = articleLike\(link\.url\) \|\| item\.kind === "hub";/,
   "ハブ由来のリンクはURLの形を問わず本文を確認する必要があります");
+assert.match(collector, /fetchedHubs === 0 && previousRecord\?\.updates\?\.length/,
+  "災害情報ハブが一時取得不能でも前回確認済みの記事を保持する必要があります");
 
 // 表題抽出のフォールバック。h1 が画像だけのサイトで記事が落ちないこと。
 assert.match(collector, /\[h1\?\.\[1\], ogTitle, titleTag\]\.map\(value => clean\(text\(value \|\| ""\)\)\)\.find\(Boolean\)/,

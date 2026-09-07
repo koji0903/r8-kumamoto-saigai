@@ -270,9 +270,11 @@ const checkedAt = new Date().toISOString();
 const records = [];
 // 緊急情報一覧から削除された後も、取得済みの公式アンカー記録は時系列アーカイブに残す。
 const preservedEmergency = new Map();
+const previousMunicipalities = new Map();
 try {
   const previous = JSON.parse(await readFile(join(OUT, "municipality-updates.json"), "utf8"));
   for (const municipality of previous.municipalities || []) {
+    previousMunicipalities.set(municipality.name, municipality);
     preservedEmergency.set(municipality.name, municipality.updates
       ?.filter(update => /\/kinkyu\.html#kid/u.test(update.url)) || []);
   }
@@ -287,7 +289,7 @@ for (const config of municipalities) {
   const seen = new Set(), queued = new Set(queue.map(item => item.url)), updates = new Map(), errors = [];
   for (const update of config.preserved || []) updates.set(update.url, update);
   for (const update of preservedEmergency.get(config.name) || []) updates.set(update.url, update);
-  let fetched = 0;
+  let fetched = 0, fetchedHubs = 0;
   const budget = pageBudget(config.name);
   while (queue.length && fetched < budget) {
     const item = queue.shift();
@@ -296,6 +298,7 @@ for (const config of municipalities) {
     try {
       const { html, finalUrl } = await get(item.url);
       fetched++;
+      if (item.kind === "hub") fetchedHubs++;
       for (const update of inlineEmergencyRecords(html, finalUrl)) updates.set(update.url, update);
       const self = selfRecord(html, finalUrl, item.trustedByHub && item.kind === "detail", item.verifiedDetail, Boolean(config.trustAllHub && item.trustedByHub && item.kind === "detail"), config.name);
       if (self) updates.set(self.url, self);
@@ -326,6 +329,13 @@ for (const config of municipalities) {
       }
     } catch (error) { errors.push(`${item.url}: ${error.message}`); }
     await wait(180);
+  }
+  // 災害情報ハブを1ページも取得できなかった場合は、前回確認済みの記事を保持する。
+  // GitHub RunnerのIPが自治体CMSに拒否されても、既存の公式情報を空にしない。
+  const previousRecord = previousMunicipalities.get(config.name);
+  if (config.hubs.length && fetchedHubs === 0 && previousRecord?.updates?.length) {
+    for (const update of previousRecord.updates) updates.set(update.url, update);
+    console.warn(`  ${config.name}: 災害情報ハブを取得できないため前回確認済み${previousRecord.updates.length}件を保持`);
   }
   const canonicalUpdates = new Map();
   for (const update of updates.values()) {
