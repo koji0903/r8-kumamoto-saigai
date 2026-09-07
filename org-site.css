@@ -515,3 +515,8 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
 .th-map-popup-actions{display:grid;gap:6px;margin-top:8px}
 .th-map-popup .th-map-popup-actions a{display:flex;align-items:center;justify-content:center;min-height:36px;margin:0;padding:7px 10px;border:1px solid #9dbbb4;border-radius:7px;text-decoration:none}
 .th-map-popup .th-map-popup-actions .route{border-color:#176d62;background:#176d62;color:#fff}
+
+/* 建設型応急住宅：団地別表の住所からGoogle Maps経路案内へ */
+.th-city tbody th small a{display:inline-flex;align-items:center;gap:2px;color:#0d7165;font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.th-city tbody th small a:hover{color:#074f47;text-decoration-thickness:2px}
+.th-city tbody th small a:focus-visible{border-radius:3px;outline:3px solid #e45e35;outline-offset:3px}
