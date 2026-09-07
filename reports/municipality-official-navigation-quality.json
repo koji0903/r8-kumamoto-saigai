@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-07T19:13:47.682Z",
+  "generatedAt": "2026-09-07T23:34:05.831Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 826,
-  "displayCandidateCount": 565,
-  "classifiedPageCount": 661,
+  "inputCount": 828,
+  "displayCandidateCount": 566,
+  "classifiedPageCount": 663,
   "categoryReport": {
     "home": {
       "total": 176,
@@ -13,10 +13,10 @@
       "low": 47
     },
     "money": {
-      "total": 199,
+      "total": 200,
       "high": 45,
       "medium": 55,
-      "low": 99
+      "low": 100
     },
     "documents": {
       "total": 169,
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 200,
+      "total": 201,
       "high": 65,
-      "medium": 135,
+      "medium": 136,
       "low": 0
     }
   },
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 95,
-      "displayCandidates": 81,
+      "classified": 96,
+      "displayCandidates": 82,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -107,7 +107,7 @@
       "fallback": true
     },
     "municipality_misato": {
-      "classified": 18,
+      "classified": 19,
       "displayCandidates": 17,
       "fallback": true
     },
@@ -164,8 +164,8 @@
   },
   "confidence": {
     "high": 252,
-    "medium": 313,
-    "low": 96
+    "medium": 314,
+    "low": 97
   },
   "unclassifiedCount": 36,
   "unclassifiedItems": [
@@ -878,7 +878,7 @@
     },
     {
       "municipalityName": "美里町",
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（9月4日9時更新）",
+      "title": "令和8年熊本地震（7月28日発生）に関する情報（9月7日8時更新）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -1071,5 +1071,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 665
+  "previousClassifiedPageCount": 661
 }
