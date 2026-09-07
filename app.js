@@ -123,7 +123,7 @@ if(homeHero&&!homeHero.querySelector(".home-search")){
   const categories=[
     ["避難・安全","避難所・道路・安全情報","shelters.html","sky",icon('<path d="M12 3 4.5 6v5.4c0 4.7 3.2 8 7.5 9.6 4.3-1.6 7.5-4.9 7.5-9.6V6L12 3Z"/><path d="m9 12 2 2 4-4"/>')],
     ["ライフライン","断水・給水・電気・ガス","#situationTitle","cyan",icon('<path d="M12 2.8S6.5 9.1 6.5 14a5.5 5.5 0 0 0 11 0C17.5 9.1 12 2.8 12 2.8Z"/><path d="M9.5 15.2a2.8 2.8 0 0 0 2.5 1.5"/>')],
-    ["住まい・証明","住宅支援・罹災証明","guide.html","amber",icon('<path d="M4 10.5 12 4l8 6.5V20H4v-9.5Z"/><path d="M9 20v-6h6v6M8 8.5h8"/>')],
+    ["住まい・証明","仮設住宅・住宅支援・罹災証明","temporary-housing.html","amber",icon('<path d="M4 10.5 12 4l8 6.5V20H4v-9.5Z"/><path d="M9 20v-6h6v6M8 8.5h8"/>')],
     ["ごみ・生活","災害ごみ・入浴・暮らし","support.html","emerald",icon('<path d="M4 7h16M9 3h6l1 4H8l1-4ZM6.5 7l1 14h9l1-14M10 11v6M14 11v6"/>')],
     ["施設・学校","公共施設・学校・保育","municipality-updates.html","violet",icon('<path d="M3 10 12 5l9 5-9 5-9-5Z"/><path d="M6 12.2V17c3.5 2.4 8.5 2.4 12 0v-4.8M21 10v6"/>')],
     ["支援・制度","相談・給付・支援活動","affected.html","rose",icon('<path d="M12 20s-7-4.2-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.8-7 10-7 10Z"/><path d="M8.5 12h7M12 8.5v7"/>')]
