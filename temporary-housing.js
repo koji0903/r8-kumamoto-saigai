@@ -76,6 +76,7 @@
 
   const label=site=>site.name.endsWith("団地")?site.name:site.name+"仮設団地";
   const officialMapLink=site=>`https://maps.gsi.go.jp/#16/${site.lat}/${site.lng}/&base=std&ls=std&disp=1`;
+  const googleDirectionsLink=site=>"https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent("熊本県"+site.address.replace(/（.*$/,""));
   const markerIcon=site=>L.divIcon({
     className:"th-marker-wrap",
     html:`<span class="th-marker ${site.complete?"complete":"building"}" aria-hidden="true"><b>${site.units}</b></span>`,
@@ -90,7 +91,7 @@
     visible.forEach(site=>{
       const accuracy=site.precision==="address"?"番地まで一致した案内位置":site.precision==="landmark"?"県資料の目印から示した案内位置":"町域内のおおよその位置";
       L.marker([site.lat,site.lng],{icon:markerIcon(site),title:`${site.city} ${label(site)} ${site.units}戸`})
-        .bindPopup(`<div class="th-map-popup"><small>${site.city}</small><b>${label(site)}</b><strong>${site.units}戸</strong><span>${site.address}</span><em>${accuracy}</em><a href="${officialMapLink(site)}" target="_blank" rel="noopener">地理院地図で開く ↗</a></div>`)
+        .bindPopup(`<div class="th-map-popup"><small>${site.city}</small><b>${label(site)}</b><strong>${site.units}戸</strong><span>${site.address}</span><em>${accuracy}</em><div class="th-map-popup-actions"><a class="route" href="${googleDirectionsLink(site)}" target="_blank" rel="noopener">現在地から経路を開く ↗</a><a href="${officialMapLink(site)}" target="_blank" rel="noopener">地理院地図で確認 ↗</a></div></div>`)
         .addTo(layer);
     });
     if(visible.length)map.fitBounds(L.latLngBounds(visible.map(site=>[site.lat,site.lng])).pad(.12),{maxZoom:14});

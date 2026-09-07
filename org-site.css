@@ -510,3 +510,8 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
 .th-schedule-bar b{overflow:hidden;text-overflow:ellipsis}.th-handover{position:absolute;top:3px;bottom:3px;width:3px;background:#963e73;z-index:3}.th-handover::before{content:"";position:absolute;top:-1px;left:-4px;width:11px;height:11px;border-radius:50%;background:#963e73}.th-handover span{position:absolute;left:7px;top:0;padding:2px 4px;border-radius:3px;background:#fff;color:#77305b;font-size:9px;font-style:normal;font-weight:900;white-space:nowrap}
 .th-schedule-note{margin:13px 0 0;padding-left:15px;border-left:4px solid #d48318;color:#596e68;font-size:12px;line-height:1.75}
 @media(max-width:800px){.th-schedule-scroll{margin-right:-12px;border-right:0;border-radius:12px 0 0 12px}.th-schedule{min-width:850px}.th-schedule-axis,.th-schedule-row{grid-template-columns:190px minmax(640px,1fr)}.th-schedule-name{grid-template-columns:48px minmax(0,1fr) auto;padding-inline:10px}}
+
+/* 建設型応急住宅マップ：現在地からGoogle Mapsで経路を開く */
+.th-map-popup-actions{display:grid;gap:6px;margin-top:8px}
+.th-map-popup .th-map-popup-actions a{display:flex;align-items:center;justify-content:center;min-height:36px;margin:0;padding:7px 10px;border:1px solid #9dbbb4;border-radius:7px;text-decoration:none}
+.th-map-popup .th-map-popup-actions .route{border-color:#176d62;background:#176d62;color:#fff}
