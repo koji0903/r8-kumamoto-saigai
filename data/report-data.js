@@ -687,5 +687,55 @@ window.REPORT_DATA = {
       actions: ["宇城市豊野の仮診療所への移動支援を検討", "氷川町災害VCは8月29日からボランティア募集人員を増員", "8月29日に八代市鏡ヶ池公園で子どもの遊び場イベントを開催"],
       note: "被害統計は前日と同じ8月25日の第27回熊本県災害対策本部会議資料を再掲しています。"
     }
+    ,
+    {
+      date: "2026-08-27", meeting: 519, disasterDay: 31, attendees: 81,
+      pdf: "sources/hinokuni-meetings/20260827火の国会議519回.pdf",
+      areas: ["熊本市", "八代市", "宇城市", "氷川町", "宇土市"],
+      stats: { injured: 402, deaths: 38, evacuees: 2635, shelters: 65, outages: null, outageStatus: "水道本管の応急復旧中", homes: 39247, waterOutages: 2320, waterOutageAreas: ["宇城市", "八代市", "氷川町"] },
+      topics: ["被害", "避難", "断水", "住まい", "ボランティア"], headline: "断水の応急復旧と生活再建支援の進展を共有",
+      summary: "住家被害は39,247棟、避難者は2,635人。断水は2,320戸まで減り、水道本管の応急復旧と井戸水世帯への支援が課題として共有されました。",
+      actions: ["断水地域への給水・生活支援を継続", "住家被害認定と罹災証明の申請支援を継続"], note: "数値は資料掲載の県集計。住家被害は推定値です。"
+    },
+    {
+      date: "2026-08-28", meeting: 520, disasterDay: 32, attendees: 75,
+      pdf: "sources/hinokuni-meetings/20260828火の国会議520回.pdf", areas: ["熊本市", "八代市", "宇城市", "氷川町", "宇土市"],
+      stats: { injured: 402, deaths: 38, evacuees: 2416, shelters: 61, outages: null, outageStatus: "水道本管は応急復旧", homes: 53802, waterOutages: 0, waterOutageAreas: [] },
+      topics: ["被害", "避難", "住まい", "ボランティア"], headline: "水道本管の応急復旧が完了、見えにくい被災世帯を支援",
+      summary: "水道本管の応急復旧が完了した一方、引き込み配管や井戸水世帯など統計に表れにくい課題への対応が続いています。",
+      actions: ["井戸水世帯の状況確認と支援を継続", "避難所の集約と生活再建相談を進める"], note: "断水0戸は水道本管の応急復旧に関する資料記載です。"
+    },
+    {
+      date: "2026-08-29", meeting: 521, disasterDay: 33, attendees: 49,
+      pdf: "sources/hinokuni-meetings/20260829火の国会議521回.pdf", areas: ["熊本市", "八代市", "宇城市", "氷川町", "宇土市"],
+      stats: { injured: 402, deaths: 38, evacuees: 2416, shelters: 61, outages: null, outageStatus: "水道本管は応急復旧", homes: 53802, waterOutages: 0, waterOutageAreas: [] },
+      topics: ["避難", "住まい", "ボランティア", "要配慮者"], headline: "復旧後の生活課題と地域支え合いへの移行を確認",
+      summary: "避難所や住まいの支援を続けながら、復旧後に残る個別の生活課題と地域支え合いの体制づくりが共有されました。",
+      actions: ["避難所から地域生活へ移る世帯を支援", "災害VCの残ニーズと活動の引き継ぎを確認"], note: "被害統計は直近の県資料を再掲しています。"
+    },
+    {
+      date: "2026-08-31", meeting: 522, disasterDay: 35, attendees: 69,
+      pdf: "sources/hinokuni-meetings/20260831火の国会議522回.pdf", areas: ["熊本市", "八代市", "宇城市", "氷川町", "宇土市"],
+      stats: { injured: 402, deaths: 38, evacuees: 2135, shelters: 59, outages: null, outageStatus: "水道本管は応急復旧", homes: 55717, waterOutages: 0, waterOutageAreas: [] },
+      topics: ["被害", "避難", "住まい", "ボランティア", "要配慮者"], headline: "復旧・復興本部会議への移行と、地域支援の引き継ぎ",
+      summary: "県の体制が復旧・復興本部会議へ移行し、避難所の縮小、井戸水使用世帯への支援、災害VCの残るニーズへの対応が確認されました。",
+      actions: ["井戸水対応チームによる被災世帯支援を進める", "地域支え合いセンターへの引き継ぎを準備"], note: "住家被害は推定値です。"
+    },
+    {
+      date: "2026-09-01", meeting: 523, disasterDay: 36, attendees: 74,
+      pdf: "sources/hinokuni-meetings/20260901火の国会議523回.pdf", areas: ["熊本市", "八代市", "宇城市", "氷川町", "宇土市"],
+      stats: { injured: 402, deaths: 38, evacuees: 2135, shelters: 59, outages: null, outageStatus: "水道本管は応急復旧", homes: 55717, waterOutages: 0, waterOutageAreas: [] },
+      topics: ["避難", "住まい", "証明", "ボランティア", "要配慮者"], headline: "生活再建の相談と、支援を地域へつなぐ体制を共有",
+      summary: "被害統計は前回資料を基に、住まい・罹災証明・要配慮者支援など、復旧後の生活再建を地域へつなぐ動きが共有されました。",
+      actions: ["住まいと罹災証明の相談窓口を案内", "支援団体と自治体の情報共有を継続"], note: "復旧・復興本部会議への移行後の情報です。"
+    },
+    {
+      date: "2026-09-04", meeting: 524, disasterDay: 39, attendees: 78,
+      pdf: "sources/hinokuni-meetings/20260904火の国会議524回.pdf", areas: ["熊本市", "八代市", "宇城市", "氷川町", "宇土市"],
+      stats: { injured: 404, deaths: 38, evacuees: 1970, shelters: 38, outages: null, outageStatus: "水道本管は応急復旧", homes: 64903, waterOutages: 0, waterOutageAreas: [] },
+      topics: ["被害", "避難", "住まい", "証明", "ボランティア"], headline: "避難所縮小後の生活再建と支援の引き継ぎ",
+      summary: "避難所は38か所、避難者は1,970人まで減少。復旧・復興本部会議の情報を基に、住まい、罹災証明、地域支え合いへの移行が共有されました。",
+      actions: ["避難所縮小後の個別世帯を把握", "地域支え合いセンターと生活再建相談をつなぐ"], note: "住家被害は推定値です。現在の状況は各自治体の公式発表を確認してください。"
+    }
   ]
 };

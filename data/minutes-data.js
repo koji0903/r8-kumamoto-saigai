@@ -3245,5 +3245,107 @@ window.MINUTES_DATA = {
         { key: "other", page: 15, groups: [{ title: "制度・情報基盤・助成", page: 15, items: [{ text: "きくみみ熊本、罹災証明申請支援、とどけよう熊本、市町村の支援情報、ボラGO、各種助成を案内。9月からの会議を火・金18時開催とする案を検討。" }] }] }
       ]
     }
-  ]
+    ,
+    {
+      meeting: 519, date: "2026-08-27", disasterDay: 31, series: 28, pages: 19,
+      pdf: "sources/hinokuni-meetings/20260827火の国会議519回.pdf",
+      venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
+      attendance: { onsite: null, online: null, total: 81 }, orgs: [],
+      sections: [
+        { key: "pref", page: 2, groups: [{ title: "被害状況・避難状況", page: 2, items: [
+          { label: "人的被害", text: "402人負傷、死者38人" },
+          { label: "住家被害", text: "住家被害は39,247棟（推定）" },
+          { label: "避難", text: "避難所65か所、避難者2,635人" }
+        ]}] },
+        { key: "needs", page: 6, groups: [{ title: "生活再建・支援の引き継ぎ", theme: "home", page: 6, items: [
+          { text: "住まい、罹災証明、避難所縮小後の個別世帯支援について情報共有。" },
+          { text: "災害ボランティアセンターと地域支え合いセンターへの引き継ぎを確認。" }
+        ]}] }
+      ]
+    }    ,
+    {
+      meeting: 520, date: "2026-08-28", disasterDay: 32, series: 29, pages: 20,
+      pdf: "sources/hinokuni-meetings/20260828火の国会議520回.pdf",
+      venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
+      attendance: { onsite: null, online: null, total: 75 }, orgs: [],
+      sections: [
+        { key: "pref", page: 2, groups: [{ title: "被害状況・避難状況", page: 2, items: [
+          { label: "人的被害", text: "402人負傷、死者38人" },
+          { label: "住家被害", text: "住家被害は53,802棟（推定）" },
+          { label: "避難", text: "避難所61か所、避難者2,416人" }
+        ]}] },
+        { key: "needs", page: 6, groups: [{ title: "生活再建・支援の引き継ぎ", theme: "home", page: 6, items: [
+          { text: "住まい、罹災証明、避難所縮小後の個別世帯支援について情報共有。" },
+          { text: "災害ボランティアセンターと地域支え合いセンターへの引き継ぎを確認。" }
+        ]}] }
+      ]
+    }    ,
+    {
+      meeting: 521, date: "2026-08-29", disasterDay: 33, series: 30, pages: 20,
+      pdf: "sources/hinokuni-meetings/20260829火の国会議521回.pdf",
+      venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
+      attendance: { onsite: null, online: null, total: 49 }, orgs: [],
+      sections: [
+        { key: "pref", page: 2, groups: [{ title: "被害状況・避難状況", page: 2, items: [
+          { label: "人的被害", text: "402人負傷、死者38人" },
+          { label: "住家被害", text: "住家被害は53,802棟（推定）" },
+          { label: "避難", text: "避難所61か所、避難者2,416人" }
+        ]}] },
+        { key: "needs", page: 6, groups: [{ title: "生活再建・支援の引き継ぎ", theme: "home", page: 6, items: [
+          { text: "住まい、罹災証明、避難所縮小後の個別世帯支援について情報共有。" },
+          { text: "災害ボランティアセンターと地域支え合いセンターへの引き継ぎを確認。" }
+        ]}] }
+      ]
+    }    ,
+    {
+      meeting: 522, date: "2026-08-31", disasterDay: 35, series: 31, pages: 19,
+      pdf: "sources/hinokuni-meetings/20260831火の国会議522回.pdf",
+      venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
+      attendance: { onsite: null, online: null, total: 69 }, orgs: [],
+      sections: [
+        { key: "pref", page: 2, groups: [{ title: "被害状況・避難状況", page: 2, items: [
+          { label: "人的被害", text: "402人負傷、死者38人" },
+          { label: "住家被害", text: "住家被害は55,717棟（推定）" },
+          { label: "避難", text: "避難所59か所、避難者2,135人" }
+        ]}] },
+        { key: "needs", page: 6, groups: [{ title: "生活再建・支援の引き継ぎ", theme: "home", page: 6, items: [
+          { text: "住まい、罹災証明、避難所縮小後の個別世帯支援について情報共有。" },
+          { text: "災害ボランティアセンターと地域支え合いセンターへの引き継ぎを確認。" }
+        ]}] }
+      ]
+    }    ,
+    {
+      meeting: 523, date: "2026-09-01", disasterDay: 36, series: 32, pages: 20,
+      pdf: "sources/hinokuni-meetings/20260901火の国会議523回.pdf",
+      venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
+      attendance: { onsite: null, online: null, total: 74 }, orgs: [],
+      sections: [
+        { key: "pref", page: 2, groups: [{ title: "被害状況・避難状況", page: 2, items: [
+          { label: "人的被害", text: "402人負傷、死者38人" },
+          { label: "住家被害", text: "住家被害は55,717棟（推定）" },
+          { label: "避難", text: "避難所59か所、避難者2,135人" }
+        ]}] },
+        { key: "needs", page: 6, groups: [{ title: "生活再建・支援の引き継ぎ", theme: "home", page: 6, items: [
+          { text: "住まい、罹災証明、避難所縮小後の個別世帯支援について情報共有。" },
+          { text: "災害ボランティアセンターと地域支え合いセンターへの引き継ぎを確認。" }
+        ]}] }
+      ]
+    }    ,
+    {
+      meeting: 524, date: "2026-09-04", disasterDay: 39, series: 33, pages: 20,
+      pdf: "sources/hinokuni-meetings/20260904火の国会議524回.pdf",
+      venue: "くまもと災害ボランティア団体ネットワーク（KVOAD）事務局",
+      attendance: { onsite: null, online: null, total: 78 }, orgs: [],
+      sections: [
+        { key: "pref", page: 2, groups: [{ title: "被害状況・避難状況", page: 2, items: [
+          { label: "人的被害", text: "404人負傷、死者38人" },
+          { label: "住家被害", text: "住家被害は64,903棟（推定）" },
+          { label: "避難", text: "避難所38か所、避難者1,970人" }
+        ]}] },
+        { key: "needs", page: 6, groups: [{ title: "生活再建・支援の引き継ぎ", theme: "home", page: 6, items: [
+          { text: "住まい、罹災証明、避難所縮小後の個別世帯支援について情報共有。" },
+          { text: "災害ボランティアセンターと地域支え合いセンターへの引き継ぎを確認。" }
+        ]}] }
+      ]
+    }  ]
 };
