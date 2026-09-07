@@ -99,6 +99,8 @@ assert.ok(read(".gitignore").includes("sources/official/municipality-hq/"), "資
 // 本文が残っていれば、PDFを取り直さずに作り直せる（CIで毎日600MB取らないため）
 const fetcher = read("tools/fetch-municipality-hq.mjs");
 assert.ok(fetcher.includes("TEXT_DIR"), "抽出済みの回を飛ばす仕組みがありません");
+assert.match(fetcher, /if \(!before\?\.meetings\?\.length\) throw error;/,
+  "一覧が一時取得できないとき、前回確認済みの会議資料を保持する必要があります");
 
 // ---- 行政の書き方を読み替えても、資料の文は変えていないこと --------------------
 // このページの値打ちは「市が書いたとおりであること」なので、並べ替えや説明を

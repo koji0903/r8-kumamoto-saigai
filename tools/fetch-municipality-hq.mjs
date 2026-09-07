@@ -126,7 +126,18 @@ await mkdir(PDF_DIR, { recursive: true });
 const result = [];
 let downloaded = 0;
 for (const municipality of config.municipalities) {
-  const html = await get(municipality.indexUrl);
+  const before = previous.municipalities.find(entry => entry.key === municipality.key);
+  let html;
+  try {
+    html = await get(municipality.indexUrl);
+  } catch (error) {
+    // 自治体側がGitHub Runnerを一時的に拒否しても、確認済みの会議資料を消さない。
+    // 前回値がない初回取得だけは失敗させ、空データを正常扱いしない。
+    if (!before?.meetings?.length) throw error;
+    result.push(before);
+    console.warn(`${municipality.name}: 一覧を取得できないため前回確認済み${before.meetings.length}件を保持（${error.message}）`);
+    continue;
+  }
   const meetings = [];
   // 資料ページのPDFリンクを出現順に拾う。回数はリンク文言から読む
   for (const match of html.matchAll(/<a[^>]+href="([^"]+\.pdf)"[^>]*>([\s\S]*?)<\/a>/g)) {
@@ -202,7 +213,6 @@ for (const municipality of config.municipalities) {
     await sleep(1500); // 市のサーバに連続で当てない
   }
 
-  const before = previous.municipalities.find(entry => entry.key === municipality.key);
   const added = before ? meetings.filter(item => !before.meetings.some(old => old.url === item.url)) : meetings;
   result.push({
     key: municipality.key, name: municipality.name, page: municipality.page,
