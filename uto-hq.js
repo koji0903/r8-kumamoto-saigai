@@ -22,7 +22,13 @@
     ['08/13〜08/21','被害把握と支援体制の整備','名簿や住まいの状況を確認。復旧宣言と避難指示解除の段階へ。',20,26],
     ['08/22〜09/04','生活再建と支援の引き継ぎ','仮設住宅の着工・入居募集、学校再開、見守り支援への移行を進める。',28,33]
   ];
-  $('#hqPhases').innerHTML=phases.map(([date,title,body,a,b],i)=>`<article><span class="uto-phase-num">0${i+1}</span><p class="uto-eyebrow">${date}</p><h3>${title}</h3><p>${body}</p><p>${[a,b].map(n=>link(meetings.find(m=>m.meeting===n),1,`第${n}回`)).join(' · ')}</p></article>`).join('');
+  const phaseStarts = ['2026-07-28','2026-08-04','2026-08-13','2026-08-22'];
+  const elapsed = date => Math.round((Date.parse(date)-Date.parse('2026-07-28'))/86400000);
+  $('#hqPhases').innerHTML = `<div class="uto-origin"><b>7月28日 発災</b><span>ここから市の対応をたどる</span></div><ol class="uto-phase-list">${phases.map(([date,title,body,a,b],i)=>{
+    const entries = meetings.filter(m=>m.date >= phaseStarts[i] && (!phaseStarts[i+1] || m.date < phaseStarts[i+1]) && summaries.has(m.meeting)).sort((a,b)=>a.date.localeCompare(b.date)||a.meeting-b.meeting);
+    return `<li class="uto-phase-step"><div class="uto-phase-time"><span class="uto-phase-num">0${i+1}</span><b>${date}</b><span>${i===0?'発災当日':`発災から${elapsed(phaseStarts[i])}日後〜`}</span></div><div class="uto-phase-body"><h3>${title}</h3><p>${body}</p><details${i===0?' open':''}><summary>この期間の動きを日付順に見る（${entries.length}回）</summary><ol class="uto-phase-events">${entries.map(m=>{const item=summaries.get(m.meeting);return `<li><div><time datetime="${m.date}">${fmt(m.date)}</time><span>${m.writtenReport?'書面報告':esc(m.time||'')} · 第${m.meeting}回</span></div><h4>${esc(item.title)}</h4><p>${esc(item.summary)}</p>${link(m,item.page||1,'会議資料を確認')}</li>`;}).join('')}</ol></details><p class="uto-note">期間の参考資料：${[a,b].map(n=>link(meetings.find(m=>m.meeting===n),1,`第${n}回`)).join(' · ')}</p></div></li>`;
+  }).join('')}</ol><p class="uto-timeline-end">編集要約は第${reviewed}回まで。以降の公開資料は「全会議の記録」で確認できます。</p>`;
+
   const points=meetings.filter(m=>Number.isFinite(m.figures.evacuees));
   const start=Date.parse(meetings[0].date), end=Date.parse(latest.date), ymax=Math.ceil(Math.max(...points.map(m=>m.figures.evacuees))/100)*100;
   const x=m=>62+(Date.parse(m.date)-start)/(end-start||1)*840;
