@@ -31,6 +31,29 @@
   const segments=points.slice(1).map((m,i)=>`<line x1="${x(points[i])}" y1="${y(points[i].figures.evacuees)}" x2="${x(m)}" y2="${y(m.figures.evacuees)}" ${Date.parse(m.date)-Date.parse(points[i].date)>86400000?'stroke-dasharray="5 5"':''}/>`).join('');
   $('#utoChart').innerHTML=`<svg viewBox="0 0 950 300" role="img" aria-label="各会議の避難者数。集計時刻と値は下の表でも確認できます。">${ticks.map(n=>`<line x1="62" y1="${y(n)}" x2="902" y2="${y(n)}" stroke="#ddd"/><text x="48" y="${y(n)+5}" text-anchor="end">${n}人</text>`).join('')}<g stroke="#286c61" stroke-width="2.5">${segments}</g>${points.map(m=>`<circle cx="${x(m)}" cy="${y(m.figures.evacuees)}" r="4" fill="#286c61"><title>第${m.meeting}回 ${m.figureAsOf} ${m.figures.evacuees}人</title></circle>`).join('')}${points.filter((m,i)=>i%5===0||i===points.length-1).map(m=>`<text x="${x(m)}" y="274" text-anchor="middle">${fmt(m.date)}</text>`).join('')}</svg>`;
   $('#utoNumbers').innerHTML=`<table><caption>総務部の避難者一覧・最終列（人数を補完していません）</caption><thead><tr><th>会議</th><th>集計日時</th><th>世帯</th><th>人数</th><th>出典</th></tr></thead><tbody>${meetings.map(m=>`<tr><th>第${m.meeting}回</th><td>${esc(m.figureAsOf||'一覧なし')}</td><td>${m.figures.households??'—'}</td><td>${m.figures.evacuees??'—'}</td><td>${link(m,m.figureSourcePage||1,'PDF')}</td></tr>`).join('')}</tbody></table>`;
+  const damagePoints = meetings.filter(m => m.damageSourcePage).sort((a,b) => a.date.localeCompare(b.date));
+  const damageSeries = [
+    ['utoHomesTotal','把握した住家被害の計','#286c61'],
+    ['utoHomesUnclassified','分類未確定','#7b687e'],
+    ['utoHomesPartial','一部損壊（準半壊含む）','#337d95'],
+    ['utoHomesHalf','半壊（中規模含む）','#a56b27'],
+    ['utoHomesLargeHalf','大規模半壊','#aa554b'],
+    ['utoHomesFull','全壊','#754a40']
+  ];
+  $('#utoDamageCharts').innerHTML = damageSeries.map(([key,label,color]) => {
+    const rows = damagePoints.filter(m => Number.isFinite(m.figures[key]));
+    if (!rows.length) return `<article><h4>${label}</h4><p>数値の記録はありません。</p></article>`;
+    const first = rows[0], last = rows.at(-1), delta = last.figures[key] - first.figures[key];
+    const maximum = Math.max(...rows.map(m => m.figures[key]), 1);
+    const step = 10 ** Math.floor(Math.log10(maximum));
+    const ceiling = Math.ceil(maximum / step) * step;
+    const beginning = Date.parse(damagePoints[0].date), ending = Date.parse(damagePoints.at(-1).date);
+    const dx = m => 55 + (Date.parse(m.date)-beginning)/(ending-beginning || 1)*335;
+    const dy = n => 170 - n/ceiling*130;
+    const num = n => n.toLocaleString('ja-JP');
+    const description = rows.map(m => `${fmt(m.date)} ${num(m.figures[key])}件`).join('、');
+    return `<article class="uto-damage-card"><h4>${label}</h4><div class="uto-damage-value"><b>${num(last.figures[key])}<small>件</small></b><span>${fmt(last.date)}時点<br>${fmt(first.date)}比 ${delta>0?'+':''}${num(delta)}件</span></div><svg viewBox="0 0 440 215" role="img" aria-label="${esc(label+'。'+description)}"><title>${esc(label)}</title>${[0,ceiling/2,ceiling].map(n=>`<line x1="55" y1="${dy(n)}" x2="390" y2="${dy(n)}" stroke="#dce6e1"/><text x="47" y="${dy(n)+4}" text-anchor="end">${num(n)}</text>`).join('')}${rows.slice(1).map((m,i)=>`<line x1="${dx(rows[i])}" y1="${dy(rows[i].figures[key])}" x2="${dx(m)}" y2="${dy(m.figures[key])}" stroke="${color}" stroke-width="2.5"/>`).join('')}${rows.map(m=>`<circle cx="${dx(m)}" cy="${dy(m.figures[key])}" r="4" fill="${color}"><title>${fmt(m.date)}：${num(m.figures[key])}件</title></circle>`).join('')}${[damagePoints[0],damagePoints.at(-1)].filter((m,i,a)=>i===0||m!==a[0]).map(m=>`<text x="${dx(m)}" y="198" text-anchor="middle">${fmt(m.date)}</text>`).join('')}</svg></article>`;
+  }).join('');
   $('#utoDamage').innerHTML=`<table><caption>会議日の13時時点・物的被害（住家）の表</caption><thead><tr><th>会議日</th><th>全壊</th><th>大規模半壊</th><th>半壊（中規模含む）</th><th>一部損壊（準半壊含む）</th><th>分類未確定</th><th>計</th><th>出典</th></tr></thead><tbody>${meetings.filter(m=>m.damageSourcePage).map(m=>`<tr><th>${fmt(m.date)}</th>${['utoHomesFull','utoHomesLargeHalf','utoHomesHalf','utoHomesPartial','utoHomesUnclassified','utoHomesTotal'].map(k=>`<td>${m.figures[k].toLocaleString('ja-JP')}</td>`).join('')}<td>${link(m,m.damageSourcePage,'PDF')}</td></tr>`).join('')}</tbody></table>`;
   $('#hqCadence').textContent='開催の変化：発災当日は3回、翌日は2回。8月13〜16日は書面報告。8月19日の資料で以後は原則週3回（月・水・金）と記載されています。9月2日も書面報告です。';
   document.querySelectorAll('[data-source-meeting]').forEach(el=>{const n=Number(el.dataset.sourceMeeting);el.innerHTML=link(meetings.find(m=>m.meeting===n),1,el.textContent);});
