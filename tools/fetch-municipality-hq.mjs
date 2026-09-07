@@ -26,6 +26,8 @@
 import { mkdir, writeFile, readFile, stat } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONFIG = join(ROOT, "config/municipality-hq-meetings.json");
@@ -36,11 +38,29 @@ const UA = "Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.0; +https://github.com
 
 const mode = process.argv.includes("--all") ? "all" : process.argv.includes("--list") ? "list" : "new";
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const execFileAsync = promisify(execFile);
 
+const getWithCurl = async (url, as) => {
+  const { stdout } = await execFileAsync("curl", [
+    "--fail", "--silent", "--show-error", "--location",
+    "--connect-timeout", "15", "--max-time", "90", "--user-agent", UA, url
+  ], { encoding: "buffer", maxBuffer: 64 * 1024 * 1024, timeout: 95000 });
+  return as === "text" ? new TextDecoder("utf-8").decode(stdout) : Buffer.from(stdout);
+};
 const get = async (url, as = "text") => {
-  const response = await fetch(url, { headers: { "user-agent": UA } });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText} — ${url}`);
-  return as === "text" ? response.text() : Buffer.from(await response.arrayBuffer());
+  try {
+    const response = await fetch(url, { headers: { "user-agent": UA }, signal: AbortSignal.timeout(90000) });
+    if (!response.ok) {
+      // 宇土市CMSはGitHub ActionsのNode.js通信を403にするため、アクセス制限時だけ
+      // curlで同じ公式URLを再取得する。PDFも同じ経路でバイナリのまま保持する。
+      if ([403, 429, 503].includes(response.status)) return getWithCurl(url, as);
+      throw new Error(`${response.status} ${response.statusText} — ${url}`);
+    }
+    return as === "text" ? response.text() : Buffer.from(await response.arrayBuffer());
+  } catch (error) {
+    if (error?.name === "AbortError" || error?.name === "TimeoutError" || error instanceof TypeError) return getWithCurl(url, as);
+    throw error;
+  }
 };
 
 const strip = value => value.replace(/<[^>]+>/g, "")
