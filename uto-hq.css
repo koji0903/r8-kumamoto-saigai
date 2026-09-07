@@ -1,0 +1,47 @@
+.page-uto-hq { --uto-ink:#203b34; --uto-green:#286c61; --uto-paper:#f5f5ef; color:var(--uto-ink); background:#fff; }
+.page-uto-hq main { max-width:1120px; margin:auto; padding:0 32px 80px; }
+.uto-hero { padding:64px 0 40px; border-bottom:2px solid var(--uto-ink); }
+.uto-eyebrow { color:var(--uto-green); font-weight:700; font-size:13px; letter-spacing:.12em; }
+.uto-hero h1 { font-size:clamp(36px,5vw,62px); line-height:1.3; letter-spacing:.02em; margin:22px 0; }
+.uto-intro { font-size:23px; font-weight:700; }
+.uto-coverage { display:flex; flex-wrap:wrap; gap:32px; margin:32px 0; align-items:center; }
+.uto-coverage b { font-size:32px; margin-right:6px; }
+.uto-hero nav { display:flex; flex-wrap:wrap; gap:12px 24px; }
+.page-uto-hq main a { color:var(--uto-green); text-underline-offset:4px; }
+.uto-section { padding:44px 0; border-bottom:1px solid #dce4df; scroll-margin-top:100px; }
+.uto-section h2 { font-size:clamp(24px,3vw,32px); line-height:1.5; margin:8px 0 20px; }
+.uto-section p,.uto-section li { line-height:1.9; }
+.uto-stats { display:grid; grid-template-columns:1fr 1fr 2fr; gap:16px; }
+.uto-stats article { padding:24px; background:var(--uto-paper); border-top:3px solid #286c61; }
+.uto-stats article>b { display:block; font-size:52px; line-height:1.5; }
+.uto-stats small { font-size:18px; margin-left:8px; }
+.uto-stats h3 { margin:16px 0 8px; font-size:20px; }
+.uto-note { font-size:14px; color:#526159; }
+.uto-phases { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:28px; }
+.uto-phases article { border-left:3px solid #96b7aa; padding:0 24px; position:relative; }
+.uto-phase-num { font-size:32px; color:#6d9384; font-weight:700; }
+.uto-phases h3 { font-size:21px; margin:8px 0; }
+.uto-chart { overflow-x:auto; background:var(--uto-paper); padding:20px 12px; margin:24px 0; }
+.uto-chart svg { display:block; width:100%; min-width:720px; }
+.uto-chart text { font:13px sans-serif; fill:#42544a; }
+.uto-perspectives { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+.uto-perspectives h3 { font-size:19px; }
+.uto-plans { padding-left:22px; }
+.uto-plans li { margin-bottom:16px; }
+.uto-plans b { display:block; }
+.uto-controls { display:flex; flex-wrap:wrap; gap:24px; padding:20px; background:var(--uto-paper); }
+.uto-controls label { display:grid; gap:8px; font-weight:700; }
+.uto-controls input,.uto-controls select { font:inherit; padding:12px; border:1px solid #82988d; border-radius:4px; background:white; min-width:180px; max-width:100%; }
+.uto-controls label:last-child { flex:1; }
+.uto-meeting { display:grid; grid-template-columns:110px minmax(0,1fr); gap:24px; padding:28px 0; border-top:1px solid #dce4df; scroll-margin-top:100px; }
+.uto-meeting-date { display:flex; flex-direction:column; gap:8px; color:var(--uto-green); }
+.uto-meeting-date b { font-size:21px; }
+.uto-meeting h3 { margin:0 0 8px; font-size:21px; }
+.page-uto-hq summary { cursor:pointer; padding:14px 0; font-weight:700; }
+.uto-full details { padding:0 16px; border-top:1px solid #dce4df; }
+.uto-full pre { white-space:pre; overflow-x:auto; max-height:600px; padding:16px; background:#f5f5ef; font:13px/1.7 ui-monospace,monospace; }
+.uto-table-scroll { overflow:auto; }
+.uto-table-scroll table { width:100%; border-collapse:collapse; min-width:620px; }
+.uto-table-scroll th,.uto-table-scroll td { padding:12px; border-bottom:1px solid #dce4df; text-align:left; }
+.page-uto-hq :focus-visible { outline:3px solid #b88022; outline-offset:4px; }
+@media(max-width:700px) { .page-uto-hq main{padding:0 20px 40px}.uto-hero{padding-top:36px}.uto-intro{font-size:19px}.uto-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.uto-stats article:last-child{grid-column:1/-1}.uto-stats article{padding:18px}.uto-stats article>b{font-size:40px}.uto-phases,.uto-perspectives{grid-template-columns:1fr}.uto-meeting{grid-template-columns:1fr;gap:12px}.uto-meeting-date{flex-direction:row;align-items:center;gap:14px}.uto-section{padding:32px 0}.uto-controls{padding:16px}.uto-controls label{width:100%}.uto-coverage{gap:18px} }

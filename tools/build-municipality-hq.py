@@ -21,6 +21,7 @@
 #   ・差分（＋12、▲7 など）は資料の書き方であって値ではないので取り込まない。
 
 import json, re, sys
+from uto_hq import read_uto
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -235,6 +236,8 @@ def main():
                 record["figures"] = kumamoto_figures(sections) if sections else {}
                 if not sections:
                     missing.append(number_of)
+            elif municipality["key"] == "uto":
+                record.update(read_uto(number_of, items, PDF_DIR, TEXT_DIR))
             else:
                 cache = TEXT_DIR / f"{municipality['key']}-{number_of:03d}.json"
                 pdf = PDF_DIR / head["file"]
@@ -278,6 +281,7 @@ def main():
             "note": municipality["note"],
             "meetings": meetings,
             "withoutText": missing,
+            **({"editorial": json.loads((ROOT / "config/uto-hq-summary.json").read_text(encoding="utf-8"))} if municipality["key"] == "uto" else {}),
         })
         filled = sum(1 for m in meetings if m["figures"])
         print(f"{municipality['name']}: {len(meetings)}回（数値を取れた回 {filled} / 本文なし {len(missing)}）")

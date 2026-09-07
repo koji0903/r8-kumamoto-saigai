@@ -113,7 +113,7 @@ for (const municipality of config.municipalities) {
     const label = strip(match[2]);
     // 「災害」の誤記（熊本市 第15回は「第害対策本部会議」）でも落とさないよう、
     // 両方に共通する「対策本部会議」で見る
-    if (!/対策本部会議/.test(label)) continue;
+    if (!/(?:対策|災対)本部会議/.test(label)) continue;
     const meeting = Number(toHalf(label).match(/第\s?(\d+)\s?回/)?.[1]);
     if (!Number.isInteger(meeting)) continue;
     // 熊本市の第7回のように1回が2ファイルに分かれることがある
