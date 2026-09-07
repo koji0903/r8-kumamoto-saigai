@@ -8,9 +8,10 @@
   <title>建設型応急住宅の整備状況｜令和8年熊本地震｜よか隊ネット熊本</title>
   <link rel="icon" href="favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
   <link rel="stylesheet" href="styles.css?v=20260817-4">
   <link rel="stylesheet" href="design-system.css?v=20260810-1">
-  <link rel="stylesheet" href="org-site.css?v=20260907-3">
+  <link rel="stylesheet" href="org-site.css?v=20260907-4">
   <link rel="canonical" href="https://www.yokatainet.jp/temporary-housing.html">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
@@ -40,7 +41,7 @@
       <h1>建設型応急住宅の整備状況</h1>
       <p>熊本県の発表と最新PDFを、入居を待つ方が「どこに・何戸・いつごろ」を確認できる形に整理しました。</p>
       <nav class="th-jump" aria-label="ページ内メニュー">
-        <a href="#overview">全体像</a><a href="#districts">団地別</a><a href="#timeline">整備の経過</a><a href="#how-to">入居の確認</a>
+        <a href="#overview">全体像</a><a href="#map">地図</a><a href="#districts">団地別</a><a href="#timeline">整備の経過</a><a href="#how-to">入居の確認</a>
       </nav>
     </div>
   </section>
@@ -69,26 +70,43 @@
     </div>
   </section>
 
+  <section class="th-section th-map-section" id="map">
+    <header class="th-heading"><p class="kicker">LOCATION MAP</p><h2>団地の場所を地図で見る</h2><p>県の報道資料に記載された所在地を、国土地理院の住所検索で地図上に示しています。自治体を選ぶと表示を絞り込めます。</p></header>
+    <div class="th-map-layout">
+      <div class="th-map-controls">
+        <fieldset><legend>自治体で絞り込む</legend><div id="housingMapFilters"></div></fieldset>
+        <div class="th-map-legend"><span><i class="building"></i>整備中</span><span><i class="complete"></i>一部完成</span></div>
+        <p><b>位置の見方</b><br>番地まで検索できた場所と、町域の代表点を含みます。ピンは入口や住宅棟の正確な位置を保証するものではありません。</p>
+      </div>
+      <div>
+        <div id="temporaryHousingMap" class="th-map" role="region" aria-label="建設型応急住宅19団地の地図"></div>
+        <div id="temporaryHousingMapFallback" class="th-map-fallback" hidden>地図を読み込めませんでした。下の団地一覧で所在地を確認できます。</div>
+      </div>
+    </div>
+    <p class="th-map-note">地図：国土地理院標準地図。所在地：熊本県の建設型応急住宅報道資料。町域代表点の団地は、ポップアップに「おおよその位置」と表示しています。近接するピンは重なりを避けるため少し離して表示しています。</p>
+    <noscript><p class="th-map-fallback">JavaScriptが無効なため地図は表示できません。下の団地別一覧で所在地と県資料を確認してください。</p></noscript>
+  </section>
+
   <section class="th-section th-districts" id="districts">
     <header class="th-heading"><p class="kicker">BY MUNICIPALITY</p><h2>自治体・団地別に見る</h2><p>「入居予定」は工事の完了や入居を保証する日ではなく、県資料に掲載された見込みです。</p></header>
 
     <article class="th-city" id="yatsushiro">
       <header><div><p>八代市</p><h3>6団地・169戸</h3></div><span>すべて木造</span></header>
       <div class="th-table-wrap"><table><thead><tr><th>団地</th><th>戸数</th><th>着工</th><th>入居予定</th><th>9月7日時点</th></tr></thead><tbody>
-        <tr><th>毘舎丸町</th><td>18戸</td><td>8月11日</td><td>10月上旬</td><td><span class="th-status progress">本体工事</span></td></tr>
-        <tr><th>鏡町</th><td>17戸</td><td>8月18日</td><td>10月中旬</td><td><span class="th-status progress">本体工事</span></td></tr>
-        <tr><th>植柳上町</th><td>34戸</td><td>8月18日</td><td>10月中旬</td><td><span class="th-status progress">本体工事</span></td></tr>
-        <tr><th>海士江町</th><td>35戸</td><td>8月22日</td><td>10月下旬</td><td><span class="th-status early">基礎工事</span></td></tr>
-        <tr><th>鏡ヶ池公園</th><td>34戸</td><td>8月26日</td><td>10月下旬</td><td><span class="th-status early">基礎工事</span></td></tr>
-        <tr><th>沖町</th><td>31戸</td><td>9月7日</td><td>11月中旬</td><td><span class="th-status start">着工</span></td></tr>
+        <tr><th>毘舎丸町<small>八代市毘舎丸町337-1</small></th><td>18戸</td><td>8月11日</td><td>10月上旬</td><td><span class="th-status progress">本体工事</span></td></tr>
+        <tr><th>鏡町<small>八代市鏡町内田446-1</small></th><td>17戸</td><td>8月18日</td><td>10月中旬</td><td><span class="th-status progress">本体工事</span></td></tr>
+        <tr><th>植柳上町<small>八代市植柳上町1-1</small></th><td>34戸</td><td>8月18日</td><td>10月中旬</td><td><span class="th-status progress">本体工事</span></td></tr>
+        <tr><th>海士江町<small>八代市海士江町2596</small></th><td>35戸</td><td>8月22日</td><td>10月下旬</td><td><span class="th-status early">基礎工事</span></td></tr>
+        <tr><th>鏡ヶ池公園<small>八代市鏡町上鏡526</small></th><td>34戸</td><td>8月26日</td><td>10月下旬</td><td><span class="th-status early">基礎工事</span></td></tr>
+        <tr><th>沖町<small>八代市沖町4002-1</small></th><td>31戸</td><td>9月7日</td><td>11月中旬</td><td><span class="th-status start">着工</span></td></tr>
       </tbody></table></div>
     </article>
 
     <article class="th-city" id="uto">
       <header><div><p>宇土市</p><h3>2団地・62戸</h3></div><span>すべて木造</span></header>
       <div class="th-table-wrap"><table><thead><tr><th>団地</th><th>戸数</th><th>着工</th><th>入居予定</th><th>9月7日時点</th></tr></thead><tbody>
-        <tr><th>浦田町</th><td>17戸</td><td>8月22日</td><td>10月下旬</td><td><span class="th-status early">基礎工事</span></td></tr>
-        <tr><th>高柳町</th><td>45戸</td><td>8月29日</td><td>11月上旬</td><td><span class="th-status early">基礎工事</span></td></tr>
+        <tr><th>浦田町<small>宇土市浦田町1</small></th><td>17戸</td><td>8月22日</td><td>10月下旬</td><td><span class="th-status early">基礎工事</span></td></tr>
+        <tr><th>高柳町<small>宇土市高柳町138</small></th><td>45戸</td><td>8月29日</td><td>11月上旬</td><td><span class="th-status early">基礎工事</span></td></tr>
       </tbody></table></div>
       <p class="th-related"><a href="uto-housing.html">宇土市の住まいの相談・再建支援を見る →</a></p>
     </article>
@@ -96,10 +114,10 @@
     <article class="th-city" id="uki">
       <header><div><p>宇城市</p><h3>4団地・149戸</h3></div><span>すべて木造</span></header>
       <div class="th-table-wrap"><table><thead><tr><th>団地</th><th>戸数</th><th>着工</th><th>入居予定</th><th>9月7日時点</th></tr></thead><tbody>
-        <tr><th>当尾</th><td>58戸<small>第1期10＋第2期48</small></td><td>8月3日／29日</td><td>9月下旬／11月上旬</td><td><span class="th-status progress">内装・基礎</span></td></tr>
-        <tr><th>小川</th><td>36戸<small>第1期30＋第2期6</small></td><td>8月3日／29日</td><td>9月下旬／11月上旬</td><td><span class="th-status progress">内装・基礎</span></td></tr>
-        <tr><th>豊野</th><td>35戸<small>第1期10＋第2期25</small></td><td>8月3日／29日</td><td>9月下旬／11月上旬</td><td><span class="th-status progress">内装・基礎</span></td></tr>
-        <tr><th>小川駅西</th><td>20戸</td><td>8月29日</td><td>11月中旬</td><td><span class="th-status early">基礎工事</span></td></tr>
+        <tr><th>当尾<small>宇城市松橋町曲野1624-22</small></th><td>58戸<small>第1期10＋第2期48</small></td><td>8月3日／29日</td><td>9月下旬／11月上旬</td><td><span class="th-status progress">内装・基礎</span></td></tr>
+        <tr><th>小川<small>宇城市小川町南新田564-8</small></th><td>36戸<small>第1期30＋第2期6</small></td><td>8月3日／29日</td><td>9月下旬／11月上旬</td><td><span class="th-status progress">内装・基礎</span></td></tr>
+        <tr><th>豊野<small>宇城市豊野町糸石2966</small></th><td>35戸<small>第1期10＋第2期25</small></td><td>8月3日／29日</td><td>9月下旬／11月上旬</td><td><span class="th-status progress">内装・基礎</span></td></tr>
+        <tr><th>小川駅西<small>宇城市小川町314-2</small></th><td>20戸</td><td>8月29日</td><td>11月中旬</td><td><span class="th-status early">基礎工事</span></td></tr>
       </tbody></table></div>
       <p class="th-related"><a href="uki-support.html#housing">宇城市の被災者支援制度を見る →</a></p>
     </article>
@@ -107,25 +125,25 @@
     <article class="th-city" id="misato">
       <header><div><p>美里町</p><h3>2団地・52戸</h3></div><span>木造12戸・軽量鉄骨40戸</span></header>
       <div class="th-table-wrap"><table><thead><tr><th>団地</th><th>戸数</th><th>着工</th><th>入居予定</th><th>9月7日時点</th></tr></thead><tbody>
-        <tr><th>中央庁舎復興団地</th><td>12戸</td><td>8月9日</td><td>10月上旬</td><td><span class="th-status progress">内装工事</span></td></tr>
-        <tr><th>町営球技場</th><td>40戸</td><td>8月22日</td><td>10月中旬</td><td><span class="th-status early">基礎工事</span></td></tr>
+        <tr><th>中央庁舎復興団地<small>美里町馬場1110</small></th><td>12戸</td><td>8月9日</td><td>10月上旬</td><td><span class="th-status progress">内装工事</span></td></tr>
+        <tr><th>町営球技場<small>美里町馬場537-2</small></th><td>40戸</td><td>8月22日</td><td>10月中旬</td><td><span class="th-status early">基礎工事</span></td></tr>
       </tbody></table></div>
     </article>
 
     <article class="th-city" id="kosa">
       <header><div><p>甲佐町</p><h3>1団地・20戸</h3></div><span>軽量鉄骨造</span></header>
       <div class="th-table-wrap"><table><thead><tr><th>団地</th><th>戸数</th><th>着工</th><th>入居予定</th><th>9月7日時点</th></tr></thead><tbody>
-        <tr><th>乙女</th><td>20戸</td><td>8月18日</td><td>10月上旬</td><td><span class="th-status progress">内装工事</span></td></tr>
+        <tr><th>乙女<small>甲佐町田口383-2</small></th><td>20戸</td><td>8月18日</td><td>10月上旬</td><td><span class="th-status progress">内装工事</span></td></tr>
       </tbody></table></div>
     </article>
 
     <article class="th-city" id="hikawa">
       <header><div><p>氷川町</p><h3>4団地・82戸</h3></div><span>すべて軽量鉄骨造</span></header>
       <div class="th-table-wrap"><table><thead><tr><th>団地</th><th>戸数</th><th>着工</th><th>入居予定</th><th>9月7日時点</th></tr></thead><tbody>
-        <tr><th>吉本</th><td>27戸<small>第1期20＋第2期7</small></td><td>8月3日／26日</td><td>9月5日／10月中旬</td><td><span class="th-status mixed">20戸完成・7戸整備中</span></td></tr>
-        <tr><th>宮原防災公園</th><td>24戸</td><td>8月10日</td><td>9月中旬</td><td><span class="th-status progress">内装工事</span></td></tr>
-        <tr><th>鹿島</th><td>18戸</td><td>8月10日</td><td>9月中旬</td><td><span class="th-status near">検査</span></td></tr>
-        <tr><th>新村</th><td>13戸</td><td>8月13日</td><td>10月上旬</td><td><span class="th-status progress">内装工事</span></td></tr>
+        <tr><th>吉本<small>氷川町高塚895</small></th><td>27戸<small>第1期20＋第2期7</small></td><td>8月3日／26日</td><td>9月5日／10月中旬</td><td><span class="th-status mixed">20戸完成・7戸整備中</span></td></tr>
+        <tr><th>宮原防災公園<small>氷川町宮原82</small></th><td>24戸</td><td>8月10日</td><td>9月中旬</td><td><span class="th-status progress">内装工事</span></td></tr>
+        <tr><th>鹿島<small>氷川町鹿島1654-1</small></th><td>18戸</td><td>8月10日</td><td>9月中旬</td><td><span class="th-status near">検査</span></td></tr>
+        <tr><th>新村<small>氷川町宮原334</small></th><td>13戸</td><td>8月13日</td><td>10月上旬</td><td><span class="th-status progress">内装工事</span></td></tr>
       </tbody></table></div>
       <p class="th-related"><a href="hikawa-support.html">氷川町の被災者支援制度を見る →</a></p>
     </article>
@@ -173,9 +191,11 @@
   </section>
 </main>
 <footer></footer>
+<script src="vendor/leaflet/leaflet.js"></script>
 <script src="data/report-data.js"></script>
 <script src="data/generated/hq-latest.js"></script>
 <script src="org-site.js?v=20260907-3"></script>
 <script src="app.js?v=20260817-1"></script>
+<script src="temporary-housing.js?v=20260907-1"></script>
 </body>
 </html>

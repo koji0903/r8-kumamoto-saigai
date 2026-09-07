@@ -472,3 +472,23 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
 .th-sources{padding-top:40px}.th-sources>div{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.th-sources a{display:grid;gap:6px;padding:20px;border:1px solid #c9d9d5;border-radius:9px;background:#fff;color:#174f46;text-decoration:none}.th-sources a span{color:#58706a;font-size:14px}.th-sources>p{color:#5d706b;font-size:13px}
 @media(max-width:950px){.th-metrics{grid-template-columns:repeat(2,1fr)}.th-municipality-summary{grid-template-columns:repeat(3,1fr)}.th-steps{grid-template-columns:1fr}.th-kumamoto-note{grid-template-columns:1fr}}
 @media(max-width:600px){.th-hero{padding-inline:12px}.th-hero>div,.th-section{width:100%}.th-scope{width:calc(100% - 24px);padding:20px}.th-section{padding-left:12px;padding-right:12px}.th-metrics{grid-template-columns:1fr 1fr}.th-metrics article{min-height:130px;padding:17px}.th-municipality-summary{grid-template-columns:1fr 1fr}.th-city>header{align-items:flex-start;flex-direction:column;padding:18px}.th-city th,.th-city td{padding:14px}.th-kumamoto-note{width:calc(100% - 24px);padding:26px}.th-timeline li{grid-template-columns:85px 1fr;gap:20px}.th-timeline li::before{left:76px}.th-timeline li::after{left:68px}.th-contact,.th-sources>div{grid-template-columns:1fr}}
+
+/* 建設型応急住宅：団地位置マップ */
+.th-map-section{padding-top:30px;scroll-margin-top:100px}
+.th-map-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:18px;align-items:start}
+.th-map-controls{padding:20px;border:2px solid #c5d9d4;border-radius:12px;background:#fff}
+.th-map-controls fieldset{margin:0;padding:0;border:0}.th-map-controls legend{margin-bottom:12px;font-weight:900}
+#housingMapFilters{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+#housingMapFilters button{min-height:42px;padding:8px;border:1px solid #b9d0ca;border-radius:8px;background:#fff;color:#174f46;font:inherit;font-size:13px;font-weight:800;cursor:pointer}
+#housingMapFilters button:first-child{grid-column:1/-1}
+#housingMapFilters button.active,#housingMapFilters button[aria-pressed="true"]{border-color:#176d62;background:#176d62;color:#fff}
+.th-map-legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;padding-top:16px;border-top:1px solid #d7e4e0}
+.th-map-legend span{display:flex;align-items:center;gap:6px;color:#526b64;font-size:12px}.th-map-legend i{width:13px;height:13px;border-radius:50%}.th-map-legend .building{background:#167267}.th-map-legend .complete{background:#d48318}
+.th-map-controls>p{margin:18px 0 0;color:#5d706b;font-size:12px;line-height:1.7}.th-map-controls>p b{color:#173f39}
+.th-map{height:560px;border:2px solid #b9d0ca;border-radius:14px;background:#dfe9e5;overflow:hidden;z-index:1}
+.th-marker-wrap{border:0!important;background:transparent!important}.th-marker{display:grid;width:38px;height:38px;place-items:center;border:3px solid #fff;border-radius:50% 50% 50% 8px;transform:rotate(-45deg);box-shadow:0 3px 10px rgba(14,44,38,.35);color:#fff;font-size:11px;font-weight:950}.th-marker.building{background:#167267}.th-marker.complete{background:#d48318}.th-marker-wrap .th-marker{line-height:1}.th-marker b{transform:rotate(45deg)}
+.th-map-popup{display:grid;min-width:190px;gap:4px}.th-map-popup small{color:#176d62;font-weight:900}.th-map-popup b{font-size:16px}.th-map-popup strong{color:#116f63;font-size:22px}.th-map-popup span{margin-top:5px}.th-map-popup em{color:#6a756f;font-size:11px;font-style:normal}.th-map-popup a{margin-top:7px;color:#0d7165;font-weight:900}
+.th-map-note,.th-map-fallback{margin:12px 0 0;color:#586e68;font-size:12px;line-height:1.7}.th-map-fallback{padding:22px;border-left:4px solid #d48318;background:#fff8e9}
+.th-city tbody th small{display:block;margin-top:4px;color:#657873;font-size:11px;font-weight:500}
+@media(max-width:800px){.th-map-layout{grid-template-columns:1fr}.th-map-controls{padding:16px}#housingMapFilters{display:flex;flex-wrap:wrap}#housingMapFilters button,#housingMapFilters button:first-child{grid-column:auto;min-height:44px;padding-inline:13px}.th-map{height:480px}}
+@media(max-width:480px){.th-map{height:430px}}
