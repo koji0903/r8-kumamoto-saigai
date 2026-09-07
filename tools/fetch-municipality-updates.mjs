@@ -117,10 +117,10 @@ function parseDate(value) {
   for (const match of value.matchAll(/[RＲ]\s*8\s*[./-]\s*(\d{1,2})\s*[./-]\s*(\d{1,2})/gu)) {
     candidates.push({ index: match.index, end: match.index + match[0].length, month: match[1], day: match[2] });
   }
-  for (const match of value.matchAll(/(?:^|[^\d])(7|8)\s*月\s*(\d{1,2})\s*日/gu)) {
+  for (const match of value.matchAll(/(?:^|[^\d])(1[0-2]|[1-9])\s*月\s*(\d{1,2})\s*日/gu)) {
     candidates.push({ index: match.index, end: match.index + match[0].length, month: match[1], day: match[2] });
   }
-  for (const match of value.matchAll(/(?:^|[^\dRrＲ])(7|8)\s*[./-]\s*(\d{1,2})(?:日)?/gu)) {
+  for (const match of value.matchAll(/(?:^|[^\dRrＲ])(1[0-2]|[1-9])\s*[./-]\s*(\d{1,2})(?:日)?/gu)) {
     candidates.push({ index: match.index, end: match.index + match[0].length, month: match[1], day: match[2] });
   }
   candidates.sort((a, b) => a.index - b.index);
@@ -131,7 +131,7 @@ function parseDate(value) {
   const japaneseClock = clockText.match(/^\s*(?:[T（(、,・／/]?\s*)([0-2]?\d)\s*時(?:\s*([0-5]?\d)\s*分)?/u);
   const clockMatch = colonClock || japaneseClock;
   const clock = clockMatch ? `${String(clockMatch[1]).padStart(2, "0")}:${String(clockMatch[2] || "0").padStart(2, "0")}` : null;
-  const valid = iso && /^2026-(07|08)-(0[1-9]|[12]\d|3[01])$/.test(iso);
+  const valid = iso && !Number.isNaN(Date.parse(iso)) && new Date(iso).toISOString().slice(0, 10) === iso;
   return valid && iso >= DISASTER_DATE && iso <= END_DATE ? { date: iso, time: clock } : null;
 }
 function parseLeadingDate(value) {

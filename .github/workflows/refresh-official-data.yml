@@ -168,6 +168,9 @@ jobs:
           node scripts/build-reconstruction-amount-benefit-status.mjs
           node scripts/test-reconstruction-information-quality.mjs
 
+      - name: サイト全体の共通検査
+        run: npm run preflight
+
       - name: dry-run結果を記録
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == true }}
         run: |

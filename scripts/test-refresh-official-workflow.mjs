@@ -30,3 +30,7 @@ assert.match(coverage,/minInputCount\s*=\s*\d+/,"公式ページの収集量を�
 assert.match(coverage,/minClassifiedRate\s*=\s*0\.\d+/,"公式ページの分類率を検査する");
 assert.doesNotMatch(coverage,/classified\s*>=\s*\d+/,"分類済み件数を固定値で検査しない");
 console.log("refresh Workflowの順序・dry-run・fail-safe・commit対象・権限を確認しました");
+
+assert.ok(index("暮らしの再建・運用ステータスを生成") < index("サイト全体の共通検査"));
+assert.ok(index("サイト全体の共通検査") < index("確認済みデータを反映"));
+assert.match(yaml, /run: npm run preflight/, "定期更新も共通の全検査を実行する");
