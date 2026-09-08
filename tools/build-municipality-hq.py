@@ -281,7 +281,7 @@ def main():
             "note": municipality["note"],
             "meetings": meetings,
             "withoutText": missing,
-            **({"editorial": json.loads((ROOT / "config/uto-hq-summary.json").read_text(encoding="utf-8"))} if municipality["key"] == "uto" else {}),
+            **({"editorial": json.loads((ROOT / f"config/{municipality['key']}-hq-summary.json").read_text(encoding="utf-8"))} if (ROOT / f"config/{municipality['key']}-hq-summary.json").exists() else {}),
         })
         filled = sum(1 for m in meetings if m["figures"])
         print(f"{municipality['name']}: {len(meetings)}回（数値を取れた回 {filled} / 本文なし {len(missing)}）")

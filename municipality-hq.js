@@ -297,12 +297,30 @@
   $("#hqNowWhen").textContent = `第${last.meeting}回（${day(last.date)}${last.time ? ` ${last.time}` : ""}）の資料より`;
 
   // 局面名は市の公式区分ではなく、日付・話題・数値を追いやすくするための案内。
-  const phaseDefinitions = [
+  const kumamotoPhases = [
+    { start: 1, end: 3, label: "初動・緊急救助・情報把握", description: "本部設置。南区等の断水・濁水、生活インフラへの被害第一報を収集し緊急体制を確立。" },
+    { start: 4, end: 9, label: "避難生活支援・ライフライン復旧", description: "指定都市・東京都等からの対口支援職員を受入。避難所での食事提供・暑さ対策と給水車配置を推進。" },
+    { start: 10, end: 20, label: "被害認定調査・罹災証明発行窓口", description: "職員増員により住家被害認定調査を本格化。罹災証明書の発行交付および避難所の段階的集約・統合を進行。" },
+    { start: 21, end: lastDay, label: "住まい再建・公費解体・生活移行", description: "みなし仮設住宅等の案内、公費解体・住宅修理の相談を実施。避難所を7か所〜3か所へ縮小し個別ケース管理へ。" }
+  ];
+
+  const yatsushiroPhases = [
+    { start: 1, end: 5, label: "初動対応・避難所開設・状況把握", description: "非常配備体制、市内62か所に避難所開設（避難者ピーク3,997人）、道路被害の状況把握。" },
+    { start: 6, end: 14, label: "上水道断水支援・避難環境改善", description: "避難所を41か所へ集約、給水拠点手配、災害ごみ仮置き場開設、ダンボールベッド等整備。" },
+    { start: 15, end: 24, label: "住家被害認定調査・り災証明受付", description: "全半壊住家等の現地判定調査本格化、り災証明申請受付・交付、学校再開準備。" },
+    { start: 25, end: lastDay, label: "応急仮設住宅整備・中長期支援移行", description: "建設型応急仮設住宅の着工・公募、応急通水完了、見守り・生活再建個別ケース管理へ。" }
+  ];
+
+  const defaultPhases = [
     { start: 1, end: 3, label: "緊急対応", description: "本部設置、避難、救助、被害の第一報を集める段階" },
     { start: 4, end: 7, label: "避難生活と応急対応", description: "避難所・食事・ライフラインなど、生活を維持する対応を広げる段階" },
     { start: 8, end: 14, label: "被害把握と制度の立ち上げ", description: "住家被害の把握、り災証明、支援制度へ対応の軸が移る段階" },
     { start: 15, end: lastDay, label: "生活再建への移行", description: "避難生活を続けながら、被害認定・証明交付・住まい再建を進める段階" }
   ];
+
+  const phaseDefinitions = municipality.key === "kumamoto" ? kumamotoPhases
+    : municipality.key === "yatsushiro" ? yatsushiroPhases
+    : defaultPhases;
   const phaseMetricKeys = ["evacuees", "shelters", "homesReported", "homesSurveyed", "certificateApplications", "certificateIssued"];
   const phaseMetric = (subset, key) => {
     const metric = metricOf(key), points = subset.filter(meeting => meeting.figures?.[key] != null);
@@ -628,8 +646,15 @@
     : "";
 
   // ---- 会議ごとの記録 -------------------------------------------------------
+  const editorialMap = new Map((municipality.editorial?.meetings || []).map(item => [item.meeting, item]));
   const themeLabel = id => (data.themes || []).find(theme => theme.id === id)?.label || "その他";
   const records = [...municipality.meetings].reverse().map(meeting => {
+    const summaryItem = editorialMap.get(meeting.meeting);
+    const summaryHtml = summaryItem ? `
+      <div class="hq-record-editorial">
+        <h4>${esc(summaryItem.title)}</h4>
+        <p>${esc(summaryItem.summary)}</p>
+      </div>` : "";
     const figures = METRICS
       .filter(metric => meeting.figures?.[metric.key] != null)
       .map(metric => `<div><dt>${esc(metric.label)}</dt><dd>${num(meeting.figures[metric.key])}<small>${esc(metric.unit)}</small></dd></div>`)
@@ -662,6 +687,7 @@
         </summary>
         <div class="hq-record-body">
           ${meeting.venue ? `<p class="hq-record-venue">${esc(meeting.venue)}</p>` : ""}
+          ${summaryHtml}
           ${figures ? `<dl class="hq-record-figures">${figures}</dl>` : ""}
           ${body || `<p class="hq-record-empty">この回は本文が公開されていません。資料PDFをご確認ください。</p>`}
           ${meeting.sourcePage ? `<p class="hq-record-page">数字と本文は資料PDFの${meeting.sourcePage}ページ目（全${meeting.pages}ページ）から写しました。</p>` : ""}

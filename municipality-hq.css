@@ -218,6 +218,26 @@
 .hq-record-body { padding: 22px 24px 24px; }
 .hq-record-venue { margin: 0 0 16px; font-size: 14px; color: var(--hq-muted); }
 
+.hq-record-editorial {
+  margin: 0 0 20px;
+  padding: 16px 20px;
+  border-left: 4px solid #0f766e;
+  border-radius: 8px;
+  background: #edf7f4;
+}
+.hq-record-editorial h4 {
+  margin: 0 0 6px;
+  color: #103f39;
+  font-size: 16px;
+  font-weight: 850;
+}
+.hq-record-editorial p {
+  margin: 0;
+  color: #3b544e;
+  font-size: 14.5px;
+  line-height: 1.85;
+}
+
 .hq-record-figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 0 0 24px; }
 .hq-record-figures > div { background: var(--hq-wash); border-radius: 10px; padding: 12px 14px; }
 .hq-record-figures dt { font-size: 13.5px; color: var(--hq-muted); margin-bottom: 3px; }
