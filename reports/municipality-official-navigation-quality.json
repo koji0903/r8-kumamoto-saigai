@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-08T07:54:22.331Z",
+  "generatedAt": "2026-09-08T11:27:20.310Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 838,
-  "displayCandidateCount": 571,
-  "classifiedPageCount": 672,
+  "inputCount": 839,
+  "displayCandidateCount": 572,
+  "classifiedPageCount": 673,
   "categoryReport": {
     "home": {
-      "total": 177,
+      "total": 178,
       "high": 59,
-      "medium": 70,
+      "medium": 71,
       "low": 48
     },
     "money": {
@@ -37,8 +37,8 @@
       "low": 46
     },
     "work_business": {
-      "total": 56,
-      "high": 18,
+      "total": 55,
+      "high": 17,
       "medium": 38,
       "low": 0
     },
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 199,
-      "high": 65,
+      "total": 200,
+      "high": 66,
       "medium": 134,
       "low": 0
     }
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 97,
-      "displayCandidates": 81,
+      "classified": 99,
+      "displayCandidates": 83,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -142,8 +142,8 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 34,
-      "displayCandidates": 30,
+      "classified": 33,
+      "displayCandidates": 29,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 252,
-    "medium": 319,
+    "medium": 320,
     "low": 101
   },
   "unclassifiedCount": 36,
@@ -358,8 +358,8 @@
     "disaster_preparedness": 6,
     "event_notice": 2,
     "facility_notice": 8,
-    "mayor_message": 2,
     "index_page": 17,
+    "mayor_message": 2,
     "mutual_aid": 1,
     "overall_guide": 3,
     "press": 3
@@ -689,13 +689,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
@@ -707,6 +700,13 @@
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "山鹿市",
@@ -1019,11 +1019,6 @@
   "warningCount": 13,
   "warnings": [
     {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kumamoto",
-      "count": 1
-    },
-    {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_minamata",
       "message": "継続回数を確認後に表示除外を判断してください"
@@ -1032,6 +1027,11 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_minamata",
       "count": 1
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_uto",
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1085,5 +1085,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 669
+  "previousClassifiedPageCount": 672
 }

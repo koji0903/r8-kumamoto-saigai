@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-08T08:11:25.940Z",
+  "generatedAt": "2026-09-08T11:44:17.990Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-08T07:54:22.331Z",
-    "inputCount": 838,
-    "classifiedPageCount": 672,
-    "displayCandidateCount": 571,
+    "generatedAt": "2026-09-08T11:27:20.310Z",
+    "inputCount": 839,
+    "classifiedPageCount": 673,
+    "displayCandidateCount": 572,
     "deltaFromPrevious": {
-      "inputCount": 3,
-      "classifiedPageCount": 3,
+      "inputCount": 1,
+      "classifiedPageCount": 1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 4,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 97,
-        "displayCandidates": 81,
+        "classified": 99,
+        "displayCandidates": 83,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -116,8 +116,8 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 34,
-        "displayCandidates": 30,
+        "classified": 33,
+        "displayCandidates": 29,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -138,9 +138,9 @@
     },
     "categoryReport": {
       "home": {
-        "total": 177,
+        "total": 178,
         "high": 59,
-        "medium": 70,
+        "medium": 71,
         "low": 48
       },
       "money": {
@@ -168,8 +168,8 @@
         "low": 46
       },
       "work_business": {
-        "total": 56,
-        "high": 18,
+        "total": 55,
+        "high": 17,
         "medium": 38,
         "low": 0
       },
@@ -180,15 +180,15 @@
         "low": 0
       },
       "daily_life": {
-        "total": 199,
-        "high": 65,
+        "total": 200,
+        "high": 66,
         "medium": 134,
         "low": 0
       }
     },
     "confidence": {
       "high": 252,
-      "medium": 319,
+      "medium": 320,
       "low": 101
     },
     "unclassifiedCount": 36,
@@ -265,11 +265,6 @@
   ],
   "warnings": [
     {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kumamoto",
-      "count": 1
-    },
-    {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_minamata",
       "message": "継続回数を確認後に表示除外を判断してください"
@@ -278,6 +273,11 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_minamata",
       "count": 1
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_uto",
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
