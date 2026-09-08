@@ -1,0 +1,365 @@
+/* 自治体総合ダッシュボード：タブUI・公式発表フィード用スタイル */
+
+.municipality-tabs-container {
+  margin-top: 28px;
+}
+
+.municipality-tab-nav {
+  display: flex;
+  gap: 8px;
+  border-bottom: 3px solid #0d7b6e;
+  overflow-x: auto;
+  padding-bottom: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.municipality-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 54px;
+  padding: 12px 20px;
+  border: 2px solid #bed4ce;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  background: #eef5f2;
+  color: #123f38;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.municipality-tab-btn:hover {
+  background: #e0ece7;
+  color: #0d675c;
+}
+
+.municipality-tab-btn[aria-selected="true"] {
+  background: #0d7b6e;
+  border-color: #0d7b6e;
+  color: #fff;
+  box-shadow: 0 -2px 10px rgba(13, 123, 110, 0.2);
+}
+
+.municipality-tab-btn .tab-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.municipality-tab-btn .tab-count {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.08);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.municipality-tab-btn[aria-selected="true"] .tab-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.municipality-tab-btn .tab-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #b63227;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.municipality-tab-panel {
+  background: #fff;
+  border: 2px solid #bed4ce;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  padding: 28px 32px;
+  box-shadow: 7px 7px 0 #dfeae7;
+}
+
+.municipality-tab-panel[hidden] {
+  display: none !important;
+}
+
+/* パネル内部：公式発表フィード */
+.dashboard-feed-controls {
+  margin-bottom: 24px;
+}
+
+.dashboard-feed-search {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.dashboard-feed-search label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dashboard-feed-search label span {
+  font-size: 13px;
+  font-weight: 800;
+  color: #174840;
+}
+
+.dashboard-feed-search input {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 16px;
+  border: 2px solid #bed4ce;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #fafcfb;
+}
+
+.dashboard-feed-search input:focus {
+  border-color: #0d7b6e;
+  outline: none;
+  background: #fff;
+}
+
+.dashboard-feed-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.dashboard-feed-categories button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 42px;
+  padding: 6px 14px;
+  border: 2px solid #dce5e2;
+  border-radius: 8px;
+  background: #fff;
+  color: #172622;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.dashboard-feed-categories button:hover {
+  border-color: #0d7b6e;
+  background: #f0f7f5;
+}
+
+.dashboard-feed-categories button.active {
+  border-color: #0d7b6e;
+  background: #0d7b6e;
+  color: #fff;
+}
+
+.dashboard-feed-categories button.active b {
+  color: #fff;
+}
+
+.dashboard-feed-categories button b {
+  font-size: 12px;
+  color: #536660;
+  margin-left: 2px;
+}
+
+.dashboard-feed-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 18px;
+  background: #f4f8f6;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-size: 13px;
+  color: #465e57;
+}
+
+.dashboard-day-group {
+  margin-bottom: 28px;
+}
+
+.dashboard-day-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #d8e5e1;
+}
+
+.dashboard-day-header time {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0d675c;
+}
+
+.dashboard-day-header span {
+  font-size: 13px;
+  color: #627570;
+}
+
+.dashboard-article-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.dashboard-article-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 22px;
+  border: 2px solid #dce5e2;
+  border-left: 6px solid #0d7b6e;
+  border-radius: 10px;
+  background: #fff;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.dashboard-article-card:hover {
+  border-color: #0d7b6e;
+  box-shadow: 0 4px 16px rgba(13, 123, 110, 0.12);
+  transform: translateY(-2px);
+}
+
+.dashboard-article-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.dashboard-category-badge {
+  display: inline-block;
+  padding: 4px 9px;
+  border-radius: 5px;
+  background: #eef5f2;
+  color: #0d675c;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.dashboard-article-title {
+  font-size: 17px;
+  font-weight: 750;
+  line-height: 1.5;
+  color: #123f38;
+  margin: 0;
+}
+
+.dashboard-article-link {
+  align-self: flex-start;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #0d7b6e;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dashboard-feed-footer-note {
+  margin-top: 32px;
+  padding: 18px 22px;
+  border-radius: 10px;
+  background: #fdfbf5;
+  border: 1px solid #eddca4;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #645839;
+}
+
+.dashboard-feed-footer-note a {
+  color: #0d7b6e;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.dashboard-empty {
+  padding: 32px 20px;
+  text-align: center;
+  background: #f8faf9;
+  border-radius: 8px;
+  color: #536660;
+  font-size: 15px;
+}
+
+/* 統合案内バナー（municipality-updates.htmlなど用） */
+.integration-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 26px;
+  margin-bottom: 28px;
+  border: 2px solid #0d7b6e;
+  border-radius: 12px;
+  background: #eef7f4;
+  box-shadow: 6px 6px 0 #d7eae3;
+}
+
+.integration-callout-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #465e57;
+}
+
+.integration-callout-text b {
+  display: block;
+  font-size: 18px;
+  color: #0d675c;
+  margin-bottom: 4px;
+}
+
+.integration-callout a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #0d7b6e;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.integration-callout a:hover {
+  background: #125f55;
+}
+
+@media(max-width: 800px) {
+  .municipality-tab-panel {
+    padding: 20px 16px;
+  }
+  .municipality-tab-btn {
+    min-height: 48px;
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+  .dashboard-feed-search {
+    flex-direction: column;
+  }
+  .integration-callout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .integration-callout a {
+    width: 100%;
+  }
+}

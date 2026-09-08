@@ -230,18 +230,261 @@ if($("#municipalityDetail")){
     "宇城市":{support:[["uki-support.html","被災者支援制度ガイド","証明・住まい・お金・健康・片づけ・減免"]]},
     "氷川町":{support:[["hikawa-support.html","被災者支援制度一覧","証明書・住まい・支援金・毎日の生活"]]}
   };
-  const municipalityHub=(name,id,url)=>{const pages=municipalityPages[name]||{},group=(title,type,items)=>`<section class="municipality-hub-group municipality-hub-${type}"><h4>${title}</h4><div>${items.map(([href,label,description,external])=>`<a href="${href}"${external?' target="_blank" rel="noopener"':''}><b>${label}</b><span>${description}</span><i>開く ${external?'↗':'→'}</i></a>`).join('')}</div></section>`;return `<nav class="municipality-hub" aria-label="${name}の情報メニュー"><p><b>${name}の情報を目的から選ぶ</b><span>現在使う支援情報と、当時の対応記録を分けています。</span></p>${group("今使う支援情報","support",[[`reconstruction.html?municipality=${id}`,"暮らしの再建・支援制度","住まい、お金、申請、健康、家族、仕事から探す"],...(pages.support||[])])}${group("市町村からの公式発表","official",[[`municipality-updates.html?municipality=${encodeURIComponent(name)}`,"公式発表を時系列で確認","市町村が公開した記事と一次情報"],[url,`${name}公式サイト`,"最新の受付状況と行政窓口",true]])}${group("災害対応の記録","records",[[`timeline.html?area=${encodeURIComponent(name)}`,"日ごとの動き","会議資料から整理した被災状況と支援経過"],...(pages.records||[])])}</nav>`};
+  const municipalityHub=(name,id,url)=>{const pages=municipalityPages[name]||{},group=(title,type,items)=>`<section class="municipality-hub-group municipality-hub-${type}"><h4>${title}</h4><div>${items.map(([href,label,description,external,isTab])=>`<a href="${href}"${external?' target="_blank" rel="noopener"':''}${isTab?` data-tab-target="${isTab}"`:''}><b>${label}</b><span>${description}</span><i>開く ${external?'↗':'→'}</i></a>`).join('')}</div></section>`;return `<nav class="municipality-hub" aria-label="${name}の情報メニュー"><p><b>${name}の情報を目的から選ぶ</b><span>現在使う支援情報と、当時の対応記録を分けています。</span></p>${group("今使う支援情報","support",[[`reconstruction.html?municipality=${id}`,"暮らしの再建・支援制度","住まい、お金、申請、健康、家族、仕事から探す"],...(pages.support||[])])}${group("市町村からの公式発表","official",[[`#panelUpdates`,"公式発表（下のタブで表示中）","市町村が公開した最新記事と一次情報",false,"updates"],[url,`${name}公式サイト`,"最新の受付状況と行政窓口",true]])}${group("災害対応の記録","records",[[`#panelRecords`,"支援・会議の記録","会議資料から整理した被災状況と支援経過",false,"records"],...(pages.records||[])])}</nav>`};
   const municipalitySection=document.querySelector(".municipality-section");
-  if(municipalitySection&&!document.querySelector(".municipality-reading-guide"))municipalitySection.insertAdjacentHTML("beforebegin",`<section class="municipality-reading-guide" aria-label="自治体別情報の見方"><div><span>1</span><p><b>自治体を選ぶ</b><small>検索または一覧からお住まいの地域を選択</small></p></div><div><span>2</span><p><b>被害状況を確認</b><small>熊本県の災害対策本部資料による数値</small></p></div><div><span>3</span><p><b>地域の動きを見る</b><small>会議記録と自治体公式サイトへ移動</small></p></div></section>`);
-  let selectedMunicipality=new URLSearchParams(location.search).get("name")||orderedMunicipalities[0].name;if(!municipalities.some(m=>m.name===selectedMunicipality))selectedMunicipality=orderedMunicipalities[0].name;
-  const renderDetail=()=>{const municipality=municipalities.find(m=>m.name===selectedMunicipality),municipalityId=municipalityReconstructionIds[selectedMunicipality],events=municipalEvents.filter(e=>e.areas.includes(selectedMunicipality)).sort((a,b)=>b.date.localeCompare(a.date)),specific=events.filter(e=>e.category!=="制度"),latestDate=events[0]?.date,featured=selectedMunicipality==="宇土市"?`<div class="municipality-feature-list"><a class="municipality-feature" href="hq-uto.html"><span><small>宇土市｜災害対応の記録</small><b>災害対策本部会議のまとめ</b><em>全公開資料から、被害・避難の推移と市の対応をたどる</em></span><i>記録を見る →</i></a><a class="municipality-feature" href="uto-housing.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 12 9-8 9 8v9H3Z"/><path d="M8 21v-6h8v6M15 8l4-4 2 2-4 4"/></svg></span><span><small>宇土市｜住まいの重要情報</small><b>住まいの相談・再建支援ガイド</b><em>応急修理・みなし仮設・相談窓口を、現在の状況から確認</em></span><i>案内を見る →</i></a><a class="municipality-feature" href="uto-bulletin.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h11l3 3v15H5Z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span><span><small>宇土市｜市の広報紙</small><b>広報うと 災害臨時号vol.1</b><em>り災証明書・災害ごみ・住まい・支援金・減免を、期限が近いものから確認</em></span><i>案内を見る →</i></a><a class="municipality-feature" href="uto-waste.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16v13H4zM8 7V4h8v3M9 11v5m6-5v5"/></svg></span><span><small>宇土市｜暮らしの重要情報</small><b>災害ごみの持ち込み案内</b><em>ごみの種類から持込先を探す・仮置場と入場券配布場所の地図を見る</em></span><i>案内を見る →</i></a></div>`:"";$("#municipalityDetail").innerHTML=`<header><div><p>自治体別 災害・支援情報</p><h3>${selectedMunicipality}</h3><span>火の国会議の記録 ${events.length}件${latestDate?` ｜ 議事録の最新言及 ${dateLabel(latestDate)}`:''}</span></div><a href="${municipality.url}" target="_blank" rel="noopener">${selectedMunicipality}公式サイト ↗</a></header><aside class="municipality-reconstruction-entry"><div><b>暮らしの再建</b><p>住まい、お金、手続き、健康、家族、仕事など、被災後の困りごとから必要な情報を整理できます。</p></div><a href="reconstruction.html?municipality=${municipalityId}">${selectedMunicipality}の情報を引き継いで確認する →</a></aside>${featured}<div class="hq-panel" id="hqPanel"></div><div class="municipality-scope"><b>掲載範囲</b><p>下の一覧は支援関係者会議（火の国会議）の議事録で自治体名が明記された活動記録です（最新の公式発表や支援窓口は上のメニューからご確認ください）。上の被害状況は県災害対策本部会議の資料によるもので、出所が異なります。</p></div>${specific.length?`<div class="municipal-category-summary">${[...new Set(specific.map(e=>e.category))].map(c=>`<span>${c}<b>${specific.filter(e=>e.category===c).length}</b></span>`).join('')}</div>`:`<div class="municipality-empty"><b>個別情報は確認できていません</b><p>災害救助法の適用は確認されています。公式サイトで最新情報をご確認ください。</p></div>`}<div class="municipal-events">${events.map(e=>`<article><div class="event-meta"><time>${dateLabel(e.date)}</time><span>${e.category}</span></div><h4>${e.title}</h4><p>${e.detail}</p><a href="${encodeURI(`${e.pdf}#page=${e.page}`)}" target="_blank" rel="noopener">第${e.meeting}回議事録 p.${e.page} ↗</a></article>`).join('')}</div>`;
+  if(municipalitySection&&!document.querySelector(".municipality-reading-guide"))municipalitySection.insertAdjacentHTML("beforebegin",`<section class="municipality-reading-guide" aria-label="自治体別情報の見方"><div><span>1</span><p><b>自治体を選ぶ</b><small>検索または一覧からお住まいの地域を選択</small></p></div><div><span>2</span><p><b>公式発表・被害状況を確認</b><small>タブで最新発表と統計を切り替え</small></p></div><div><span>3</span><p><b>支援制度・会議記録を見る</b><small>暮らしの再建ナビや活動経緯へ</small></p></div></section>`);
+
+  const searchParams=new URLSearchParams(location.search);
+  let selectedMunicipality=searchParams.get("name")||orderedMunicipalities[0].name;
+  if(!municipalities.some(m=>m.name===selectedMunicipality))selectedMunicipality=orderedMunicipalities[0].name;
+
+  let currentTab=searchParams.get("tab")||"updates";
+  if(!["updates","hq","records"].includes(currentTab))currentTab="updates";
+
+  let feedKeyword="";
+  let feedCategory="すべて";
+
+  const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+  const renderDetail=()=>{
+    const municipality=municipalities.find(m=>m.name===selectedMunicipality),
+          municipalityId=municipalityReconstructionIds[selectedMunicipality],
+          events=municipalEvents.filter(e=>e.areas.includes(selectedMunicipality)).sort((a,b)=>b.date.localeCompare(a.date)),
+          specific=events.filter(e=>e.category!=="制度"),
+          latestMeetingDate=events[0]?.date;
+
+    const updatesData=window.MUNICIPALITY_UPDATES;
+    const mData=updatesData?.municipalities?.find(m=>m.name===selectedMunicipality);
+    const allUpdates=mData?.updates||[];
+    const latestUpdate=allUpdates[0];
+    const hasRecentUpdate=latestUpdate&&(latestUpdate.date>="2026-09-06");
+
+    const featured=selectedMunicipality==="宇土市"?`<div class="municipality-feature-list"><a class="municipality-feature" href="hq-uto.html"><span><small>宇土市｜災害対応の記録</small><b>災害対策本部会議のまとめ</b><em>全公開資料から、被害・避難の推移と市の対応をたどる</em></span><i>記録を見る →</i></a><a class="municipality-feature" href="uto-housing.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 12 9-8 9 8v9H3Z"/><path d="M8 21v-6h8v6M15 8l4-4 2 2-4 4"/></svg></span><span><small>宇土市｜住まいの重要情報</small><b>住まいの相談・再建支援ガイド</b><em>応急修理・みなし仮設・相談窓口を、現在の状況から確認</em></span><i>案内を見る →</i></a><a class="municipality-feature" href="uto-bulletin.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h11l3 3v15H5Z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span><span><small>宇土市｜市の広報紙</small><b>広報うと 災害臨時号vol.1</b><em>り災証明書・災害ごみ・住まい・支援金・減免を、期限が近いものから確認</em></span><i>案内を見る →</i></a><a class="municipality-feature" href="uto-waste.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16v13H4zM8 7V4h8v3M9 11v5m6-5v5"/></svg></span><span><small>宇土市｜暮らしの重要情報</small><b>災害ごみの持ち込み案内</b><em>ごみの種類から持込先を探す・仮置場と入場券配布場所の地図を見る</em></span><i>案内を見る →</i></a></div>`:"";
+
+    $("#municipalityDetail").innerHTML=`
+      <header>
+        <div>
+          <p>自治体別 総合ダッシュボード</p>
+          <h3>${esc(selectedMunicipality)}</h3>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:6px;font-size:13px;color:#d6e9e4;">
+            <span>📢 公式発表 ${allUpdates.length}件${latestUpdate?`（最新: ${dateLabel(latestUpdate.date)}）`:''}</span>
+            <span>📝 火の国会議の記録 ${events.length}件${latestMeetingDate?`（最新言及: ${dateLabel(latestMeetingDate)}）`:''}</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+          <a href="${municipality.url}" target="_blank" rel="noopener">${esc(selectedMunicipality)}公式サイト ↗</a>
+          <a href="reconstruction.html?municipality=${municipalityId}" style="display:inline-flex;align-items:center;min-height:52px;padding:11px 16px;border:2px solid #7fb0a6;border-radius:8px;background:#fff;color:#0d665b;font-size:15px;font-weight:900;text-decoration:none;">暮らしの再建ナビ →</a>
+        </div>
+      </header>
+
+      <aside class="municipality-reconstruction-entry">
+        <div>
+          <b>暮らしの再建</b>
+          <p>住まい、お金、手続き、健康、家族、仕事など、被災後の困りごとから必要な情報を整理できます。</p>
+        </div>
+        <a href="reconstruction.html?municipality=${municipalityId}">${esc(selectedMunicipality)}の情報を引き継いで確認する →</a>
+      </aside>
+
+      ${featured}
+
+      <div class="municipality-tabs-container">
+        <nav class="municipality-tab-nav" role="tablist" aria-label="${esc(selectedMunicipality)}の情報切り替え">
+          <button type="button" role="tab" class="municipality-tab-btn" id="tabUpdates" data-tab="updates" aria-controls="panelUpdates" aria-selected="${currentTab==='updates'}">
+            <span class="tab-icon" aria-hidden="true">📢</span>
+            <span>自治体公式発表</span>
+            <span class="tab-count">${allUpdates.length}件</span>
+            ${hasRecentUpdate?'<span class="tab-badge">本日更新あり</span>':''}
+          </button>
+          <button type="button" role="tab" class="municipality-tab-btn" id="tabHq" data-tab="hq" aria-controls="panelHq" aria-selected="${currentTab==='hq'}">
+            <span class="tab-icon" aria-hidden="true">📊</span>
+            <span>被害・避難の状況</span>
+            <span class="tab-count">県本部公表</span>
+          </button>
+          <button type="button" role="tab" class="municipality-tab-btn" id="tabRecords" data-tab="records" aria-controls="panelRecords" aria-selected="${currentTab==='records'}">
+            <span class="tab-icon" aria-hidden="true">📝</span>
+            <span>支援・会議の記録</span>
+            <span class="tab-count">${events.length}件</span>
+          </button>
+        </nav>
+
+        <!-- タブ1: 自治体公式発表 -->
+        <section class="municipality-tab-panel" id="panelUpdates" role="tabpanel" aria-labelledby="tabUpdates" ${currentTab!=='updates'?'hidden':''}>
+          <div class="dashboard-feed-controls">
+            <div class="dashboard-feed-search">
+              <label>
+                <span>キーワード検索</span>
+                <input id="dashboardFeedKeyword" type="search" placeholder="例：給水、避難所、罹災証明、災害ごみ、相談窓口" value="${esc(feedKeyword)}">
+              </label>
+            </div>
+            <div class="dashboard-feed-categories" id="dashboardFeedCategories"></div>
+            <div class="dashboard-feed-meta">
+              <span><b>${esc(selectedMunicipality)}</b>の公式サイト発信（最新〜発災日）</span>
+              <span id="dashboardFeedCount"></span>
+            </div>
+          </div>
+          <div id="dashboardFeedTimeline" class="dashboard-feed-timeline"></div>
+          <div class="dashboard-feed-footer-note">
+            <b>公式発信の確認について</b>
+            <p>各市町村公式サイト上で公開が確認できた記事への直通リンクです。緊急情報や受付日時の詳細は各記事の一次情報をご確認ください。また、公式LINEや防災行政無線のみで発信される緊急情報もあります。<a href="alert-channels.html">お住まいの市町村のお知らせの受け取り方を確認する →</a></p>
+          </div>
+        </section>
+
+        <!-- タブ2: 被害・避難の状況（県本部会議） -->
+        <section class="municipality-tab-panel" id="panelHq" role="tabpanel" aria-labelledby="tabHq" ${currentTab!=='hq'?'hidden':''}>
+          <div class="hq-panel" id="hqPanel"></div>
+        </section>
+
+        <!-- タブ3: 支援・会議の記録（火の国会議） -->
+        <section class="municipality-tab-panel" id="panelRecords" role="tabpanel" aria-labelledby="tabRecords" ${currentTab!=='records'?'hidden':''}>
+          <div class="municipality-scope">
+            <b>掲載範囲</b>
+            <p>下の一覧は支援関係者会議（火の国会議）の議事録で自治体名が明記された活動記録です（最新の公式発表や支援窓口は「自治体公式発表」タブや暮らしの再建ナビからご確認ください）。上の被害状況は県災害対策本部会議の資料によるもので、出所が異なります。</p>
+          </div>
+          ${specific.length?`<div class="municipal-category-summary">${[...new Set(specific.map(e=>e.category))].map(c=>`<span>${c}<b>${specific.filter(e=>e.category===c).length}</b></span>`).join('')}</div>`:`<div class="municipality-empty"><b>個別情報は確認できていません</b><p>災害救助法の適用は確認されています。公式サイトで最新情報をご確認ください。</p></div>`}
+          <div class="municipal-events">
+            ${events.map(e=>`<article><div class="event-meta"><time>${dateLabel(e.date)}</time><span>${e.category}</span></div><h4>${esc(e.title)}</h4><p>${esc(e.detail)}</p><a href="${encodeURI(`${e.pdf}#page=${e.page}`)}" target="_blank" rel="noopener">第${e.meeting}回議事録 p.${e.page} ↗</a></article>`).join('')}
+          </div>
+        </section>
+      </div>
+    `;
+
     document.querySelector("#municipalityDetail>header")?.insertAdjacentHTML("afterend",municipalityHub(selectedMunicipality,municipalityId,municipality.url));
     if(selectedMunicipality==="氷川町")document.querySelector(".municipality-reconstruction-entry")?.insertAdjacentHTML("afterend",`<div class="municipality-feature-list"><a class="municipality-feature" href="hikawa-support.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M9 10h6M9 14h6M9 18h4"/></svg></span><span><small>氷川町｜被災された方へ</small><b>支援制度一覧</b><em>証明書・住まい・支援金・毎日の生活を目的から確認</em></span><i>案内を見る →</i></a></div>`);
     if(selectedMunicipality==="宇城市")document.querySelector(".municipality-reconstruction-entry")?.insertAdjacentHTML("afterend",`<div class="municipality-feature-list"><a class="municipality-feature" href="uki-support.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M9 10h6M9 14h6M9 18h4"/></svg></span><span><small>宇城市｜被災された方へ</small><b>被災者支援制度ガイド</b><em>36の制度を、証明・住まい・お金・健康・片づけ・減免から確認</em></span><i>案内を見る →</i></a></div>`);
-    // 県公式データは hq.js が描く。読み込めていなくても会議由来の情報は出る。
-    window.renderHqPanel?.(selectedMunicipality)};
-  const renderPicker=()=>{const q=$("#municipalityDashboardSearch").value.trim(),matches=orderedMunicipalities.filter(m=>m.name.includes(q));$("#municipalityPickerList").innerHTML=matches.map(m=>`<button type="button" aria-pressed="${m.name===selectedMunicipality}" class="${m.name===selectedMunicipality?'active':''}" data-name="${m.name}"><span>${m.name}</span><b>${municipalEvents.filter(e=>e.areas.includes(m.name)).length}件</b></button>`).join('');$$('#municipalityPickerList button').forEach(b=>b.onclick=()=>{selectedMunicipality=b.dataset.name;history.replaceState(null,'',`?name=${encodeURIComponent(selectedMunicipality)}`);renderPicker();renderDetail()})};
-  $("#municipalityDashboardSearch").addEventListener("input",renderPicker);renderPicker();renderDetail();
+
+    // 県公式データ描画
+    window.renderHqPanel?.(selectedMunicipality);
+
+    // 公式発表フィード描画ロジック
+    const renderFeedTimeline=()=>{
+      const kw=feedKeyword.trim().toLowerCase();
+      const filtered=allUpdates.filter(u=>{
+        const matchCat=(feedCategory==="すべて"||u.category===feedCategory);
+        const matchKw=(!kw||u.title.toLowerCase().includes(kw)||(u.category&&u.category.toLowerCase().includes(kw)));
+        return matchCat&&matchKw;
+      });
+
+      const countEl=$("#dashboardFeedCount");
+      if(countEl)countEl.textContent=`${filtered.length}件 / 全${allUpdates.length}件`;
+
+      const timelineEl=$("#dashboardFeedTimeline");
+      if(!timelineEl)return;
+
+      if(!filtered.length){
+        timelineEl.innerHTML=`<div class="dashboard-empty"><p>条件に該当する記事が見つかりませんでした。「すべて」を選ぶか別のキーワードをお試しください。</p></div>`;
+        return;
+      }
+
+      // 日付ごとにグループ化
+      const groups={};
+      filtered.forEach(u=>{
+        if(!groups[u.date])groups[u.date]=[];
+        groups[u.date].push(u);
+      });
+
+      const catClasses={"避難・安全":"category-safety","ライフライン":"category-lifeline","住まい・証明":"category-housing","ごみ・生活":"category-living","交通":"category-transport","施設・学校":"category-facility","支援・制度":"category-support","その他":"category-other"};
+
+      timelineEl.innerHTML=Object.keys(groups).sort((a,b)=>b.localeCompare(a)).map(date=>`
+        <div class="dashboard-day-group">
+          <header class="dashboard-day-header">
+            <time>${dateLabel(date)}</time>
+            <span>${groups[date].length}件の発信</span>
+          </header>
+          <div class="dashboard-article-list">
+            ${groups[date].map(item=>`
+              <a class="dashboard-article-card" href="${esc(item.url)}" target="_blank" rel="noopener">
+                <div class="dashboard-article-header">
+                  <span class="dashboard-category-badge ${catClasses[item.category]||'category-other'}">${esc(item.category)}</span>
+                  ${item.time?`<time>${esc(item.time)}</time>`:''}
+                </div>
+                <h4 class="dashboard-article-title">${esc(item.title)}</h4>
+                <span class="dashboard-article-link">公式発表の原文を開く ↗</span>
+              </a>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+    };
+
+    const renderFeedCategories=()=>{
+      const catCounts={"すべて":allUpdates.length};
+      allUpdates.forEach(u=>{catCounts[u.category]=(catCounts[u.category]||0)+1});
+      const catList=["すべて","住まい・証明","支援・制度","ごみ・生活","ライフライン","避難・安全","施設・学校","その他"];
+
+      const container=$("#dashboardFeedCategories");
+      if(!container)return;
+      container.innerHTML=catList.filter(c=>c==="すべて"||catCounts[c]).map(c=>`
+        <button type="button" class="${feedCategory===c?'active':''}" data-category="${esc(c)}">
+          <span>${esc(c)}</span>
+          <b>${catCounts[c]||0}</b>
+        </button>
+      `).join('');
+
+      container.querySelectorAll("button").forEach(btn=>{
+        btn.onclick=()=>{
+          feedCategory=btn.dataset.category;
+          renderFeedCategories();
+          renderFeedTimeline();
+        };
+      });
+    };
+
+    renderFeedCategories();
+    renderFeedTimeline();
+
+    const kwInput=$("#dashboardFeedKeyword");
+    if(kwInput){
+      kwInput.oninput=()=>{
+        feedKeyword=kwInput.value;
+        renderFeedTimeline();
+      };
+    }
+
+    // タブ切り替え処理
+    const switchTab=(tabKey)=>{
+      currentTab=tabKey;
+      history.replaceState(null,'',`?name=${encodeURIComponent(selectedMunicipality)}&tab=${currentTab}`);
+      $$(".municipality-tab-btn").forEach(btn=>{
+        const isSel=btn.dataset.tab===tabKey;
+        btn.setAttribute("aria-selected",isSel);
+      });
+      $$(".municipality-tab-panel").forEach(p=>{
+        const isTarget=p.id===`panel${tabKey.charAt(0).toUpperCase()+tabKey.slice(1)}`;
+        if(isTarget) p.removeAttribute("hidden");
+        else p.setAttribute("hidden","");
+      });
+      if(tabKey==="hq") window.renderHqPanel?.(selectedMunicipality);
+    };
+
+    $$(".municipality-tab-btn").forEach(btn=>{
+      btn.onclick=()=>switchTab(btn.dataset.tab);
+    });
+
+    // ハブ内のタブ切り替えアンカー
+    $$("[data-tab-target]").forEach(a=>{
+      a.onclick=(e)=>{
+        e.preventDefault();
+        const t=a.dataset.tabTarget;
+        switchTab(t);
+        document.querySelector(`#tab${t.charAt(0).toUpperCase()+t.slice(1)}`)?.scrollIntoView({behavior:"smooth",block:"start"});
+      };
+    });
+  };
+
+  const renderPicker=()=>{
+    const q=$("#municipalityDashboardSearch").value.trim(),matches=orderedMunicipalities.filter(m=>m.name.includes(q));
+    $("#municipalityPickerList").innerHTML=matches.map(m=>`<button type="button" aria-pressed="${m.name===selectedMunicipality}" class="${m.name===selectedMunicipality?'active':''}" data-name="${m.name}"><span>${m.name}</span><b>${municipalEvents.filter(e=>e.areas.includes(m.name)).length}件</b></button>`).join('');
+    $$('#municipalityPickerList button').forEach(b=>b.onclick=()=>{
+      selectedMunicipality=b.dataset.name;
+      history.replaceState(null,'',`?name=${encodeURIComponent(selectedMunicipality)}&tab=${currentTab}`);
+      renderPicker();
+      renderDetail();
+    });
+  };
+
+  $("#municipalityDashboardSearch").addEventListener("input",renderPicker);
+  renderPicker();
+  renderDetail();
 }
 
 if($("#supportDetail")){
