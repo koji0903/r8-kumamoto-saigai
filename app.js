@@ -18,7 +18,7 @@ const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
 const orderedMunicipalities=[...municipalities].sort((a,b)=>a.name.localeCompare(b.name,"ja"));
 const municipalityReconstructionIds={"熊本市":"municipality_kumamoto","八代市":"municipality_yatsushiro","水俣市":"municipality_minamata","山鹿市":"municipality_yamaga","菊池市":"municipality_kikuchi","宇土市":"municipality_uto","上天草市":"municipality_kamiamakusa","宇城市":"municipality_uki","天草市":"municipality_amakusa","合志市":"municipality_koshi","美里町":"municipality_misato","大津町":"municipality_ozu","菊陽町":"municipality_kikuyo","西原村":"municipality_nishihara","御船町":"municipality_mifune","嘉島町":"municipality_kashima","益城町":"municipality_mashiki","甲佐町":"municipality_kosa","氷川町":"municipality_hikawa","芦北町":"municipality_ashikita","津奈木町":"municipality_tsunagi"};
 const municipalityNote=document.querySelector(".municipality-equality-note");
-if(municipalityNote){const officialFeedLink=document.createElement("a");officialFeedLink.className="button";officialFeedLink.href="municipality-updates.html";officialFeedLink.textContent="市町村の公式発信を時系列で見る →";municipalityNote.append(officialFeedLink)}
+if(municipalityNote){const officialFeedLink=document.createElement("a");officialFeedLink.className="button";officialFeedLink.href="municipalities.html?tab=updates";officialFeedLink.textContent="市町村の公式発信を時系列で見る →";municipalityNote.append(officialFeedLink)}
 const fmt=n=>n==null?"調査中":n.toLocaleString("ja-JP");
 const statDisplay=(day,key)=>key==="outages"&&day.stats.outageStatus?day.stats.outageStatus:key==="waterOutages"&&day.stats[key]==null?"資料記載なし":fmt(day.stats[key]);
 const dateLabel=(iso,full=true)=>new Intl.DateTimeFormat("ja-JP",full?{year:"numeric",month:"long",day:"numeric",weekday:"short"}:{month:"numeric",day:"numeric"}).format(new Date(`${iso}T00:00:00+09:00`));
@@ -50,9 +50,9 @@ document.querySelectorAll(".kicker,.eyebrow").forEach(label=>{const translated=l
 const siteHeader=document.querySelector(".site-header");
 const headerNav=siteHeader?.querySelector("nav");
 const hasOrganizationHeader=Boolean(siteHeader?.querySelector(".org-header-inner"));
-if(!hasOrganizationHeader&&headerNav&&!headerNav.querySelector('a[href="municipality-updates.html"]')){
-  const link=document.createElement("a");link.href="municipality-updates.html";link.textContent="市町村公式発信";
-  if(location.pathname.endsWith("municipality-updates.html"))link.setAttribute("aria-current","page");
+if(!hasOrganizationHeader&&headerNav&&!headerNav.querySelector('a[href^="municipalities.html?tab=updates"]')){
+  const link=document.createElement("a");link.href="municipalities.html?tab=updates";link.textContent="市町村公式発信";
+  if(location.pathname.endsWith("municipality-updates.html")||(location.pathname.endsWith("municipalities.html")&&new URLSearchParams(location.search).get("tab")==="updates"))link.setAttribute("aria-current","page");
   headerNav.querySelector("a")?.after(link);
 }
 if(!hasOrganizationHeader&&siteHeader&&headerNav&&!siteHeader.querySelector(".mobile-menu-toggle")){
@@ -66,7 +66,7 @@ if(siteHeader&&!document.querySelector(".archive-source-policy")){
   const policy=document.createElement("aside");
   policy.className="archive-source-policy";
   policy.setAttribute("aria-label","本サイトの位置づけと一次情報の確認");
-  policy.innerHTML=`<div><b>本サイトは災害・支援情報のアーカイブです</b><p>「火の国会議」議事録を中核に、熊本県災害対策本部と各市町村の公式情報を、出典・確認時点とともに整理しています。本サイト自体は行政機関等が発信する一次情報ではありません。</p></div><nav aria-label="一次情報へのリンク"><a href="meetings.html">火の国会議議事録</a><a href="municipality-updates.html">市町村公式発信</a><a href="official.html">国・県・市町村の一次情報</a><a href="https://portal.bousai.pref.kumamoto.jp/" target="_blank" rel="noopener">防災情報くまもと ↗</a></nav><p class="archive-source-warning"><b>参照時の注意</b> 避難、安否、支援活動、制度申請などの判断前には、リンク先の一次情報で発表時刻・対象地域・受付条件を必ず再確認してください。</p>`;
+  policy.innerHTML=`<div><b>本サイトは災害・支援情報のアーカイブです</b><p>「火の国会議」議事録を中核に、熊本県災害対策本部と各市町村の公式情報を、出典・確認時点とともに整理しています。本サイト自体は行政機関等が発信する一次情報ではありません。</p></div><nav aria-label="一次情報へのリンク"><a href="meetings.html">火の国会議議事録</a><a href="municipalities.html?tab=updates">市町村公式発信</a><a href="official.html">国・県・市町村の一次情報</a><a href="https://portal.bousai.pref.kumamoto.jp/" target="_blank" rel="noopener">防災情報くまもと ↗</a></nav><p class="archive-source-warning"><b>参照時の注意</b> 避難、安否、支援活動、制度申請などの判断前には、リンク先の一次情報で発表時刻・対象地域・受付条件を必ず再確認してください。</p>`;
   const disasterPortal=document.querySelector(".disaster-portal");
   if(location.pathname.endsWith("disaster.html")&&disasterPortal){
     disasterPortal.after(policy);
@@ -86,7 +86,7 @@ if($("#officialTopicsGrid")){
   const icons={national:'<path d="M4 20h16M6 20V9l6-5 6 5v11M9 12h6M9 16h6"/>',prefecture:'<path d="M4 20h16M6 20V6h12v14M9 10h2m2 0h2m-6 4h2m2 0h2"/>',municipal:'<path d="M3 20h18M5 20V10l7-5 7 5v10M9 20v-6h6v6"/>'};
   const group=(key,title,items,moreUrl,moreLabel)=>`<section class="topics-group ${key}"><header><div class="topics-group-title"><span class="topics-group-icon"><svg viewBox="0 0 24 24" aria-hidden="true">${icons[key]}</svg></span><h3>${title}</h3></div><a href="${moreUrl}">${moreLabel} →</a></header><div class="topic-list">${items.map(item=>topicItem(item,key==="municipal"?`${item.municipality}・${item.category}`:item.kind)).join("")}</div></section>`;
   if(topics?.national?.length&&topics?.prefecture?.length){
-    $("#officialTopicsGrid").innerHTML=group("national","国からの最新情報",topics.national,"official.html","国の情報一覧")+group("prefecture","熊本県からの最新情報",topics.prefecture,"https://www.pref.kumamoto.jp/soshiki/1/274517.html","熊本県")+group("municipal","市町村からの最新発表",topics.municipalities.slice(0,8),"municipality-updates.html","全自治体");
+    $("#officialTopicsGrid").innerHTML=group("national","国からの最新情報",topics.national,"official.html","国の情報一覧")+group("prefecture","熊本県からの最新情報",topics.prefecture,"https://www.pref.kumamoto.jp/soshiki/1/274517.html","熊本県")+group("municipal","市町村からの最新発表",topics.municipalities.slice(0,8),"municipalities.html?tab=updates","全自治体");
     const retrieved=new Date(topics.metadata.retrievedAt);
     $("#officialTopicsUpdated").textContent=`公式サイト確認：${new Intl.DateTimeFormat("ja-JP",{timeZone:"Asia/Tokyo",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"}).format(retrieved)}`;
   }else{
@@ -111,7 +111,7 @@ if($("#latest-title")){
   $("#latest-stats").innerHTML=[["避難者",latest.stats.evacuees,"人"],["避難所",latest.stats.shelters,"か所"],["住家被害",latest.stats.homes,"棟"],["断水",latest.stats.waterOutages,"戸"]].map(([l,v,u])=>`<div><dt>${l}</dt><dd>${fmt(v)}<small>${u}</small></dd></div>`).join("");
 }
 const heroActions=document.querySelector(".summary-hero .hero-actions");
-if(heroActions&&!heroActions.querySelector('a[href="municipality-updates.html"]'))heroActions.insertAdjacentHTML("afterbegin",'<a class="button official-feed-button" href="municipality-updates.html">市町村の公式発信を見る</a>');
+if(heroActions&&!heroActions.querySelector('a[href^="municipalities.html?tab=updates"]'))heroActions.insertAdjacentHTML("afterbegin",'<a class="button official-feed-button" href="municipalities.html?tab=updates">市町村の公式発信を見る</a>');
 const homeHero=document.querySelector(".summary-hero");
 if(homeHero&&!homeHero.querySelector(".home-search")){
   document.body.classList.add("home-redesign");
@@ -125,7 +125,7 @@ if(homeHero&&!homeHero.querySelector(".home-search")){
     ["ライフライン","断水・給水・電気・ガス","#situationTitle","cyan",icon('<path d="M12 2.8S6.5 9.1 6.5 14a5.5 5.5 0 0 0 11 0C17.5 9.1 12 2.8 12 2.8Z"/><path d="M9.5 15.2a2.8 2.8 0 0 0 2.5 1.5"/>')],
     ["住まい・証明","仮設住宅・住宅支援・罹災証明","temporary-housing.html","amber",icon('<path d="M4 10.5 12 4l8 6.5V20H4v-9.5Z"/><path d="M9 20v-6h6v6M8 8.5h8"/>')],
     ["ごみ・生活","災害ごみ・入浴・暮らし","support.html","emerald",icon('<path d="M4 7h16M9 3h6l1 4H8l1-4ZM6.5 7l1 14h9l1-14M10 11v6M14 11v6"/>')],
-    ["施設・学校","公共施設・学校・保育","municipality-updates.html","violet",icon('<path d="M3 10 12 5l9 5-9 5-9-5Z"/><path d="M6 12.2V17c3.5 2.4 8.5 2.4 12 0v-4.8M21 10v6"/>')],
+    ["施設・学校","公共施設・学校・保育","municipalities.html?tab=updates","violet",icon('<path d="M3 10 12 5l9 5-9 5-9-5Z"/><path d="M6 12.2V17c3.5 2.4 8.5 2.4 12 0v-4.8M21 10v6"/>')],
     ["支援・制度","相談・給付・支援活動","affected.html","rose",icon('<path d="M12 20s-7-4.2-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.8-7 10-7 10Z"/><path d="M8.5 12h7M12 8.5v7"/>')]
   ];
   const discovery=document.createElement("div");discovery.className="home-discovery";
@@ -154,7 +154,7 @@ if($("#situationSnapshot")){
 if($("#sectionLinks")){
   const links=[
     ["日ごとのまとめ","火の国会議から現場の変化を追う","timeline.html","日"],
-    ["市町村の公式発信","7月28日以降の自治体発表を時系列で確認","municipality-updates.html","公"],
+    ["市町村の公式発信","7月28日以降の自治体発表を時系列で確認","municipalities.html?tab=updates","公"],
     ["自治体別に見る","被災市町村の情報を同じ基準で確認","municipalities.html","市"],
     ["議事録を読む","県の報告・災害VC・現地の声を回ごとに","meetings.html","録"],
     ["災害ボランティアセンター","各地の設置場所と、社協からの募集・活動の発信","volunteer-centers.html","ボ"],
@@ -165,11 +165,11 @@ if($("#sectionLinks")){
   $$("#sectionLinks>a>span").forEach(span=>{span.innerHTML=icons[span.textContent]||span.textContent});
 }
 const municipalitySummary=document.querySelector(".municipality-summary");
-if(municipalitySummary&&!municipalitySummary.querySelector('a[href="municipality-updates.html"]'))municipalitySummary.querySelector(".municipality-caveat")?.insertAdjacentHTML("beforebegin",'<a class="button official-feed-button" href="municipality-updates.html">市町村公式発信の時系列を見る</a>');
+if(municipalitySummary&&!municipalitySummary.querySelector('a[href^="municipalities.html?tab=updates"]'))municipalitySummary.querySelector(".municipality-caveat")?.insertAdjacentHTML("beforebegin",'<a class="button official-feed-button" href="municipalities.html?tab=updates">市町村公式発信の時系列を見る</a>');
 const supporterNeeds=document.querySelector(".supporter-needs");
 if(supporterNeeds&&!supporterNeeds.querySelector('a[href="volunteer-centers.html"]'))supporterNeeds.insertAdjacentHTML("afterbegin",'<a href="volunteer-centers.html"><span>VC</span><h3>災害ボランティアセンター</h3><p>自治体別に設置場所・活動状況・公式募集を確認</p><b>VC情報を見る →</b></a>');
 const officialShortcut=document.querySelector(".official-shortcut");
-if(officialShortcut&&!officialShortcut.querySelector('a[href="municipality-updates.html"]'))officialShortcut.insertAdjacentHTML("beforeend",'<a class="button ghost" href="municipality-updates.html">市町村の発信記録へ</a>');
+if(officialShortcut&&!officialShortcut.querySelector('a[href^="municipalities.html?tab=updates"]'))officialShortcut.insertAdjacentHTML("beforeend",'<a class="button ghost" href="municipalities.html?tab=updates">市町村の発信記録へ</a>');
 if($("#audienceUpdates")){
   const recent=[...supportEvents].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,6);
   $("#audienceUpdates").innerHTML=recent.map(e=>`<article><time>${dateLabel(e.date)}</time><span>${supportCategories.find(c=>c.key===e.category)?.label||e.category}</span><h3>${e.title}</h3><p>${e.detail}</p><a href="${encodeURI(`${e.pdf}#page=${e.page}`)}" target="_blank" rel="noopener">会議資料 p.${e.page} ↗</a></article>`).join("");
@@ -178,7 +178,7 @@ if($("#audienceUpdates")){
 const footer=document.querySelector("footer");
 if(footer&&!document.querySelector(".site-directory")){
   const directory=document.createElement("section");directory.className="site-directory";directory.setAttribute("aria-label","サイト内リンク");
-  directory.innerHTML=`<div><b>火の国会議</b><a href="timeline.html">日ごとのまとめ</a><a href="meetings.html">議事録（全文）</a></div><div><b>被災された方</b><a href="shelters.html">稼働避難所</a><a href="guide.html">制度・生活再建</a><a href="terms.html">災害用語集</a></div><div><b>支援する方</b><a href="volunteer-centers.html">災害ボランティアセンター</a><a href="support.html">支援分野別</a><a href="municipalities.html">自治体別</a><a href="supporters.html">支援者向け入口</a></div><div><b>一次情報・出典</b><a href="municipality-updates.html">市町村の公式発信</a><a href="official.html">国・熊本県・市町村</a><a href="meetings.html">火の国会議 原本PDF</a><a href="https://portal.bousai.pref.kumamoto.jp/" target="_blank" rel="noopener">防災情報くまもと ↗</a></div>`;
+  directory.innerHTML=`<div><b>火の国会議</b><a href="timeline.html">日ごとのまとめ</a><a href="meetings.html">議事録（全文）</a></div><div><b>被災された方</b><a href="shelters.html">稼働避難所</a><a href="guide.html">制度・生活再建</a><a href="terms.html">災害用語集</a></div><div><b>支援する方</b><a href="volunteer-centers.html">災害ボランティアセンター</a><a href="support.html">支援分野別</a><a href="municipalities.html">自治体別</a><a href="supporters.html">支援者向け入口</a></div><div><b>一次情報・出典</b><a href="municipalities.html?tab=updates">市町村の公式発信</a><a href="official.html">国・熊本県・市町村</a><a href="meetings.html">火の国会議 原本PDF</a><a href="https://portal.bousai.pref.kumamoto.jp/" target="_blank" rel="noopener">防災情報くまもと ↗</a></div>`;
   footer.before(directory);
 }
 if($("#recentUpdates")) $("#recentUpdates").innerHTML=[...days].reverse().slice(0,3).map(d=>`<article><time datetime="${d.date}">${dateLabel(d.date)}</time><span>第${d.meeting}回</span><h3>${d.headline}</h3><p>${d.summary}</p><a href="timeline.html">詳細を見る →</a></article>`).join("");
