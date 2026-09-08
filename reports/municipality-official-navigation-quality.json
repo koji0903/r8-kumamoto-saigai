@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-09-08T21:14:47.442Z",
+  "generatedAt": "2026-09-08T23:27:25.558Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 837,
-  "displayCandidateCount": 570,
-  "classifiedPageCount": 671,
+  "inputCount": 839,
+  "displayCandidateCount": 572,
+  "classifiedPageCount": 672,
   "categoryReport": {
     "home": {
-      "total": 177,
+      "total": 178,
       "high": 59,
-      "medium": 70,
+      "medium": 71,
       "low": 48
     },
     "money": {
-      "total": 205,
+      "total": 204,
       "high": 44,
       "medium": 55,
-      "low": 106
+      "low": 105
     },
     "documents": {
       "total": 171,
@@ -31,15 +31,15 @@
       "low": 0
     },
     "family_education": {
-      "total": 86,
+      "total": 87,
       "high": 10,
-      "medium": 30,
+      "medium": 31,
       "low": 46
     },
     "work_business": {
-      "total": 55,
+      "total": 54,
       "high": 17,
-      "medium": 38,
+      "medium": 37,
       "low": 0
     },
     "agriculture_fishery": {
@@ -83,7 +83,7 @@
     },
     "municipality_uto": {
       "classified": 57,
-      "displayCandidates": 50,
+      "displayCandidates": 51,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 97,
-      "displayCandidates": 81,
+      "classified": 98,
+      "displayCandidates": 82,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -164,10 +164,10 @@
   },
   "confidence": {
     "high": 251,
-    "medium": 319,
-    "low": 101
+    "medium": 321,
+    "low": 100
   },
-  "unclassifiedCount": 36,
+  "unclassifiedCount": 37,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -278,6 +278,11 @@
       "municipalityName": "宇土市",
       "title": "お知らせ：【レベル5 大雨特別警報】発表時の適切な行動及び車運転時の注意点について",
       "url": "https://www.city.uto.lg.jp/article/view/1310/16777.html"
+    },
+    {
+      "municipalityName": "宇土市",
+      "title": "5 令和８年熊本地震に係るふるさと納税を受け付けます 2026年09月01日",
+      "url": "https://www.city.uto.lg.jp/article/view/1033/16630.html"
     },
     {
       "municipalityName": "宇土市",
@@ -1016,7 +1021,7 @@
     "non_official_url": 1,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 13,
+  "warningCount": 14,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1030,8 +1035,13 @@
     },
     {
       "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kikuchi",
+      "count": 1
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 20
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1085,5 +1095,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 673
+  "previousClassifiedPageCount": 671
 }
