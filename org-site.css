@@ -570,3 +570,238 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
 .th-city tbody th small a{display:inline-flex;align-items:center;gap:2px;color:#0d7165;font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .th-city tbody th small a:hover{color:#074f47;text-decoration-thickness:2px}
 .th-city tbody th small a:focus-visible{border-radius:3px;outline:3px solid #e45e35;outline-offset:3px}
+
+/* 火の国会議 時系列話題・状況推移セクション (meetings.html) */
+.page-meetings .phase-overview-section {
+  max-width: var(--org-content, 1180px);
+  margin: 36px auto 0;
+  padding: 0 24px;
+}
+.phase-overview-head {
+  margin-bottom: 28px;
+}
+.phase-kicker {
+  color: #177468;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+}
+.phase-overview-head h2 {
+  margin: 6px 0 12px;
+  color: var(--org-deep, #153c37);
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 800;
+  line-height: 1.35;
+}
+.phase-overview-head p {
+  margin: 0;
+  color: var(--org-muted, #536660);
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 860px;
+}
+
+/* 時期区分タブ */
+.phase-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.phase-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 18px;
+  border: 2px solid #bfd4cf;
+  border-radius: 12px;
+  background: #fff;
+  color: #173f39;
+  font: inherit;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #e0ebe8;
+  transition: all 0.18s ease;
+  text-align: left;
+}
+.phase-tab:hover {
+  border-color: #185f55;
+  background: #f4faf8;
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0 #d2e4df;
+}
+.phase-tab.active {
+  border-color: #185f55;
+  background: #185f55;
+  color: #fff;
+  box-shadow: 4px 4px 0 #0f3d37;
+}
+.phase-tab-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #e6f3ef;
+  color: #185f55;
+  font-size: 11px;
+  font-weight: 850;
+  margin-bottom: 6px;
+}
+.phase-tab.active .phase-tab-badge {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+.phase-tab b {
+  font-size: 15px;
+  line-height: 1.35;
+}
+.phase-tab small {
+  margin-top: 4px;
+  color: #536660;
+  font-size: 12px;
+}
+.phase-tab.active small {
+  color: #d1ece5;
+}
+
+/* フェーズ詳細カード */
+.phase-card {
+  padding: 30px;
+  border: 2px solid #b8d2cb;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 6px 6px 0 #dfebe7;
+}
+.phase-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 22px;
+  margin-bottom: 24px;
+  border-bottom: 2px dashed #cfdfda;
+}
+.phase-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  background: #185f55;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 850;
+  margin-bottom: 8px;
+}
+.phase-card-header h3 {
+  margin: 0 0 6px;
+  color: #103f39;
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 800;
+}
+.phase-period {
+  margin: 0;
+  color: #526861;
+  font-size: 14px;
+  font-weight: 700;
+}
+.phase-jump-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 48px;
+  padding: 10px 20px;
+  border: 2px solid #185f55;
+  border-radius: 9px;
+  background: #edf7f4;
+  color: #103f39;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  flex: 0 0 auto;
+}
+.phase-jump-btn:hover {
+  background: #185f55;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(24,95,85,0.2);
+}
+
+/* 3カラムグリッド */
+.phase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.phase-col {
+  padding: 22px;
+  border: 1px solid #d4e3de;
+  border-radius: 12px;
+  background: #f9fcfb;
+}
+.phase-col.situation-col {
+  border-top: 4px solid #d97706;
+  background: #fffdfa;
+}
+.phase-col.focus-col {
+  border-top: 4px solid #185f55;
+  background: #f5faf8;
+}
+.phase-col.topics-col {
+  border-top: 4px solid #2563eb;
+  background: #f6f9fe;
+}
+.phase-col h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  color: #153c37;
+  font-size: 16px;
+  font-weight: 850;
+}
+.phase-icon {
+  font-size: 18px;
+}
+.phase-col ul {
+  margin: 0;
+  padding-left: 1.2em;
+  color: #2c423c;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.phase-col li {
+  margin-bottom: 8px;
+}
+.phase-col li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .page-meetings .phase-overview-section {
+    padding: 0 16px;
+  }
+  .phase-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .phase-grid {
+    grid-template-columns: 1fr;
+  }
+  .phase-card-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .phase-jump-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 540px) {
+  .phase-tabs {
+    grid-template-columns: 1fr;
+  }
+  .phase-card {
+    padding: 20px 16px;
+  }
+  .phase-col {
+    padding: 16px;
+  }
+}
