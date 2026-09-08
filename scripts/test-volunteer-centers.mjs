@@ -6,6 +6,7 @@
 // 「募集していない」と読ませないための退避先も欠かせない。
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import { mergeVolunteerCenterHistory } from "../tools/volunteer-center-history.mjs";
 
 const data = JSON.parse(fs.readFileSync(new URL("../sources/official/volunteer-centers/volunteer-center-updates.json", import.meta.url), "utf8"));
 const generated = fs.readFileSync(new URL("../data/generated/volunteer-center-updates.js", import.meta.url), "utf8");
@@ -14,6 +15,19 @@ const code = fs.readFileSync(new URL("../volunteer-centers.js", import.meta.url)
 const css = fs.readFileSync(new URL("../volunteer-centers.css", import.meta.url), "utf8");
 const collector = fs.readFileSync(new URL("../tools/fetch-volunteer-centers.mjs", import.meta.url), "utf8");
 
+// 外部サイトが一時的に0件を返しても、前回の検証済み履歴を失わない。
+const previousFixture = [
+  { date: "2026-08-20", title: "既存の発信", url: "https://example.jp/old" },
+  { date: "2026-08-21", title: "更新前の表題", url: "https://example.jp/same" }
+];
+assert.deepEqual(mergeVolunteerCenterHistory(previousFixture, []), [previousFixture[1], previousFixture[0]],
+  "巡回失敗時に既存の発信履歴を保持する必要があります");
+const mergedFixture = mergeVolunteerCenterHistory(previousFixture, [
+  { date: "2026-08-22", title: "新規の発信", url: "https://example.jp/new" },
+  { date: "2026-08-21", title: "更新後の表題", url: "https://example.jp/same" }
+]);
+assert.deepEqual(mergedFixture.map(update => update.url), ["https://example.jp/new", "https://example.jp/same", "https://example.jp/old"]);
+assert.equal(mergedFixture[1].title, "更新後の表題", "同じURLは今回の取得内容を優先します");
 // ---- 収集データ -------------------------------------------------------------
 assert.ok(data.councils?.length >= 11, `社協が${data.councils?.length}件しかありません`);
 assert.match(data.note, /表題・日付・URL/, "何を収集しているかの但し書きが必要です");

@@ -12,8 +12,9 @@
   .modern-site .subpage-hero h1{line-height:1.35;word-break:normal!important;line-break:strict}
 
   /* タップ対象は指で押しやすい高さを確保 */
-  .modern-site :where(.button,.source-actions a,.term-links a,.term-links button,.load-more,#feedOrder){min-height:44px}
-  .modern-site :where(.source-actions a,.term-links a,.term-links button){display:inline-flex;align-items:center}
+  .modern-site :where(.button,.source-actions a,.term-links a,.term-links button,.load-more,#feedOrder,.filter,.related-official a){min-height:44px}
+  .modern-site :where(.source-actions a,.term-links a,.term-links button,.related-official a){display:inline-flex;align-items:center}
+  .modern-site :where(small,time,.tag,.water-tag,.water-state-tag,.water-pub-response){font-size:max(11px,1em)}
 
   /* 1px区切りで接続していたカードを、スマホでは独立した塊にする */
   .modern-site :where(.compact-steps,.first-actions ol,.support-checks,.feed-method>div){gap:12px;background:transparent}
@@ -40,7 +41,7 @@
   .modern-site .feed-day article:last-child{margin-bottom:0;padding-bottom:4px}
 
   /* 横長データはページ全体をはみ出さず、内側だけスクロール */
-  .modern-site :where(.trend-values,.minutes-table-scroll){max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .modern-site :where(table,.trend-values,.minutes-table-scroll){max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
   .modern-site :where(img,svg,canvas,iframe){max-width:100%}
 }
 
@@ -54,11 +55,12 @@
   .modern-site .feed-controls fieldset div{grid-template-columns:1fr}
   .modern-site .shelter-alert a{width:100%;margin:8px 0 0;text-align:center}
   .modern-site .shelter-detail{padding:20px 18px}
+  .modern-site .daily-snapshot dl{grid-template-columns:1fr 1fr}
 }
 
 @media (max-width:360px){
-  .modern-site .brand{font-size:10px}.modern-site .brand b{font-size:12px}
+  .modern-site .brand{font-size:11px}.modern-site .brand b{font-size:12px}
   .modern-site .brand-mark{width:34px;height:36px}
   .modern-site .mobile-menu-toggle{padding-inline:10px}
-  .modern-site :where(.hq-summary,.hq-metrics,.situation-snapshot){grid-template-columns:1fr}
+  .modern-site :where(.hq-summary,.hq-metrics,.situation-snapshot,.daily-snapshot dl){grid-template-columns:1fr}
 }

@@ -126,6 +126,7 @@ jobs:
           node --check tools/fetch-municipality-updates.mjs
           node --check tools/fetch-official-topics.mjs
           node --check tools/fetch-volunteer-centers.mjs
+          node --check tools/volunteer-center-history.mjs
           node --check tools/build-shelters.mjs
           git diff --check
 

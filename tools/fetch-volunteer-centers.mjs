@@ -12,6 +12,7 @@
 import { mkdir, writeFile, readFile } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { mergeVolunteerCenterHistory } from "./volunteer-center-history.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = join(ROOT, "sources/official/volunteer-centers");
@@ -20,6 +21,19 @@ const UA = "Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com
 const DISASTER_DATE = "2026-07-28";
 const END_DATE = new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Tokyo" }).format(new Date());
 const MAX_PAGES = 40;
+
+// 定期巡回は「今見える一覧」ではなく「発災後の発信履歴」を更新する。
+// 外部サイトの一時障害で検証済み記事を消さないため、現在の生成物を
+// 差分取得の基準として読み込む。
+let previousPayload = null;
+try {
+  previousPayload = JSON.parse(await readFile(join(OUT, "volunteer-center-updates.json"), "utf8"));
+} catch (error) {
+  if (error?.code !== "ENOENT") console.warn(`既存の災害VC発信履歴を読み込めません: ${error.message}`);
+}
+const previousByMunicipality = new Map(
+  (previousPayload?.councils || []).map(council => [council.municipality, council.updates || []])
+);
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 // 市町村社協の公式サイト。確認日を添える（サイト移転に気づけるようにするため）。
@@ -137,9 +151,12 @@ for (const council of councils) {
     }
     await wait(300);
   }
-  const list = [...updates.values()].sort((a, b) => b.date.localeCompare(a.date));
-  results.push({ ...council, checkedAt: new Date().toISOString(), pagesFetched: fetched, retrievalIssue: issue, updates: list });
-  console.log(`${council.name}: ${list.length}件 (${fetched}ページ取得)${issue ? ` ⚠ ${issue}` : ""}`);
+  const current = [...updates.values()];
+  const previous = previousByMunicipality.get(council.municipality) || [];
+  const list = mergeVolunteerCenterHistory(previous, current);
+  const retainedCount = list.filter(update => !updates.has(update.url)).length;
+  results.push({ ...council, checkedAt: new Date().toISOString(), pagesFetched: fetched, retrievalIssue: issue, retainedCount, updates: list });
+  console.log(`${council.name}: ${list.length}件 (今回${current.length}件・履歴保持${retainedCount}件 / ${fetched}ページ取得)${issue ? ` ⚠ ${issue}` : ""}`);
 }
 
 const total = results.reduce((sum, item) => sum + item.updates.length, 0);
