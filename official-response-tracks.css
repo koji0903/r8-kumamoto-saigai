@@ -76,3 +76,43 @@
 /* 節目の行は「発災◯日目 / ◆内容 / 出典」の3つ。2カラムのままだと3つ目が
    次の行の日付列（80px）に落ちて数文字ごとに折り返される */
 @media(min-width:701px){.tracks-detail-block li>*:not(.tracks-detail-day){grid-column:2}}
+
+/* Response Phase Navigation */
+.response-phase-nav {
+  margin-bottom: 20px;
+  background: #f4f6f4;
+  border: 1px solid #d4ded9;
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.phase-nav-lead {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1b6357;
+}
+.phase-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.phase-chip {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4a5c56;
+  background: #ffffff;
+  border: 1px solid #c4d1cb;
+  border-radius: 20px;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.phase-chip.is-active,
+.phase-chip:hover {
+  background: #1b6357;
+  color: #ffffff;
+  border-color: #1b6357;
+}

@@ -72,3 +72,56 @@
 .water-response-legend b{font-size:10px;font-weight:700;color:#ba4324;background:#fbeee9;border-radius:3px;padding:1px 6px}
 .water-pub-group li{grid-template-columns:72px minmax(0,1fr)}
 .water-pub-response{display:inline-block;font-size:10px;color:#5a6560;background:#f2f4f1;border-radius:3px;padding:1px 6px;margin-right:6px}
+
+/* Key Aspects Summary */
+.water-key-aspects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 1180px;
+  margin: 20px auto 32px;
+}
+.aspect-card {
+  background: #ffffff;
+  border: 1px solid #d4ded9;
+  border-left: 4px solid #1b6357;
+  border-radius: 8px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+.aspect-card.alert-aspect {
+  border-left-color: #ba4324;
+  background: #fdfaf8;
+}
+.aspect-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #e8f0ec;
+  color: #1b6357;
+  margin-bottom: 8px;
+}
+.aspect-badge.alert {
+  background: #fbeee9;
+  color: #ba4324;
+}
+.aspect-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #172521;
+  margin: 0 0 6px;
+}
+.aspect-card p {
+  font-size: 0.9rem;
+  color: #4a5c56;
+  margin: 0;
+  line-height: 1.5;
+}
+@media (max-width: 700px) {
+  .water-key-aspects {
+    grid-template-columns: 1fr;
+    margin: 16px 16px 24px;
+  }
+}

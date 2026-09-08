@@ -805,3 +805,116 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
     padding: 16px;
   }
 }
+
+/* Disaster Overview Highlights */
+.disaster-highlights-section {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 0 24px;
+}
+.highlights-heading {
+  margin-bottom: 20px;
+}
+.highlights-heading .kicker {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1b6357;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+.highlights-heading h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #172521;
+  margin: 0 0 6px;
+}
+.highlights-heading p {
+  font-size: 0.95rem;
+  color: #4a5c56;
+  margin: 0;
+}
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.highlight-card {
+  background: #ffffff;
+  border: 1px solid #d4ded9;
+  border-top: 4px solid #1b6357;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.highlight-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.highlight-icon {
+  font-size: 1.4rem;
+}
+.highlight-card-header h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #172521;
+  margin: 0;
+}
+.highlight-main {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f3d35;
+  margin: 0;
+  line-height: 1.35;
+}
+.highlight-sub {
+  font-size: 0.85rem;
+  color: #536660;
+  margin: 0;
+  line-height: 1.45;
+}
+@media (max-width: 900px) {
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .disaster-highlights-section {
+    padding: 0 16px;
+    margin: 24px auto;
+  }
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Timeline Period Filters */
+.timeline-period-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0 16px;
+  font-size: 0.85rem;
+  color: #a3b8b0;
+}
+.period-filter-btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #c5d6cf;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.period-filter-btn.is-active,
+.period-filter-btn:hover {
+  background: #1b6357;
+  color: #ffffff;
+  border-color: #278576;
+}
