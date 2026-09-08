@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-09-08T04:47:43.275Z",
+  "generatedAt": "2026-09-08T07:54:22.331Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 835,
-  "displayCandidateCount": 570,
-  "classifiedPageCount": 669,
+  "inputCount": 838,
+  "displayCandidateCount": 571,
+  "classifiedPageCount": 672,
   "categoryReport": {
     "home": {
-      "total": 178,
-      "high": 61,
+      "total": 177,
+      "high": 59,
       "medium": 70,
-      "low": 47
+      "low": 48
     },
     "money": {
-      "total": 203,
-      "high": 45,
+      "total": 205,
+      "high": 44,
       "medium": 55,
-      "low": 103
+      "low": 106
     },
     "documents": {
-      "total": 170,
+      "total": 171,
       "high": 39,
-      "medium": 36,
+      "medium": 37,
       "low": 95
     },
     "health_care": {
@@ -37,28 +37,28 @@
       "low": 46
     },
     "work_business": {
-      "total": 53,
-      "high": 16,
-      "medium": 37,
+      "total": 56,
+      "high": 18,
+      "medium": 38,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 24,
+      "total": 25,
       "high": 7,
-      "medium": 17,
+      "medium": 18,
       "low": 0
     },
     "daily_life": {
-      "total": 200,
+      "total": 199,
       "high": 65,
-      "medium": 135,
+      "medium": 134,
       "low": 0
     }
   },
   "municipalityReport": {
     "municipality_kumamoto": {
-      "classified": 70,
-      "displayCandidates": 60,
+      "classified": 69,
+      "displayCandidates": 59,
       "fallback": true
     },
     "municipality_yatsushiro": {
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 54,
-      "displayCandidates": 48,
+      "classified": 57,
+      "displayCandidates": 50,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -132,13 +132,13 @@
       "fallback": true
     },
     "municipality_kashima": {
-      "classified": 20,
-      "displayCandidates": 18,
+      "classified": 19,
+      "displayCandidates": 17,
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 38,
-      "displayCandidates": 35,
+      "classified": 40,
+      "displayCandidates": 36,
       "fallback": true
     },
     "municipality_kosa": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 253,
-    "medium": 317,
-    "low": 99
+    "high": 252,
+    "medium": 319,
+    "low": 101
   },
   "unclassifiedCount": 36,
   "unclassifiedItems": [
@@ -286,8 +286,8 @@
     },
     {
       "municipalityName": "宇土市",
-      "title": "5 令和８年熊本地震に係るふるさと納税を受け付けます 2026年09月01日",
-      "url": "https://www.city.uto.lg.jp/article/view/1033/16630.html"
+      "title": "公民館の開放について",
+      "url": "https://www.city.uto.lg.jp/article/view/1305/16837.html"
     },
     {
       "municipalityName": "上天草市",
@@ -311,12 +311,12 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年9月6日 令和8年熊本地震 関連情報 （9月8日12時00分更新）",
+      "title": "2026年9月6日 令和8年熊本地震 関連情報 （9月8日16時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年09月08日 令和8年熊本地震 関連情報 （9月8日12時00分更新）",
+      "title": "2026年09月08日 令和8年熊本地震 関連情報 （9月8日16時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699"
     },
     {
@@ -350,7 +350,7 @@
       "url": "https://www.town.ashikita.lg.jp/bosai_site/hinan/2025278"
     }
   ],
-  "outOfScopeCount": 91,
+  "outOfScopeCount": 92,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "public_relations": 10,
@@ -358,7 +358,7 @@
     "disaster_preparedness": 6,
     "event_notice": 2,
     "facility_notice": 8,
-    "mayor_message": 1,
+    "mayor_message": 2,
     "index_page": 17,
     "mutual_aid": 1,
     "overall_guide": 3,
@@ -752,13 +752,6 @@
     },
     {
       "municipalityName": "宇土市",
-      "title": "キーワード「補助金」の記事一覧",
-      "url": "https://www.city.uto.lg.jp/article/keyword/240.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "宇土市",
       "title": "キーワード「2026」の記事一覧",
       "url": "https://www.city.uto.lg.jp/article/keyword/22145.html",
       "ruleId": "index_page",
@@ -770,6 +763,20 @@
       "url": "https://www.city.uto.lg.jp/article/keyword/41.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "宇土市",
+      "title": "キーワード「補助金」の記事一覧",
+      "url": "https://www.city.uto.lg.jp/article/keyword/240.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "宇土市",
+      "title": "市民の皆様へお願いです",
+      "url": "https://www.city.uto.lg.jp/article/view/1308/16473.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "上天草市",
@@ -1003,14 +1010,19 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 39,
+  "excludedCount": 38,
   "excludedByType": {
     "duplicate_url": 36,
-    "non_official_url": 2,
+    "non_official_url": 1,
     "non_disaster_context_excluded": 1
   },
   "warningCount": 13,
   "warnings": [
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_kumamoto",
+      "count": 1
+    },
     {
       "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_minamata",
@@ -1020,11 +1032,6 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_minamata",
       "count": 1
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_uto",
-      "count": 15
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1074,9 +1081,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 5
+      "count": 6
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 663
+  "previousClassifiedPageCount": 669
 }
