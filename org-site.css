@@ -918,3 +918,271 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
   color: #ffffff;
   border-color: #278576;
 }
+
+/* Top Portal 3 Pillars */
+.portal-three-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 28px 0 32px;
+}
+.pillar-card {
+  background: #ffffff;
+  border: 1px solid #d4ded9;
+  border-top: 4px solid #1b6357;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+.pillar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.pillar-icon {
+  font-size: 1.5rem;
+}
+.pillar-header h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #172521;
+  margin: 0;
+}
+.pillar-card > p {
+  font-size: 0.85rem;
+  color: #536660;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  flex: 1;
+}
+.pillar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px dashed #dce5e1;
+  padding-top: 12px;
+}
+.pillar-links a {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1b6357;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.pillar-links a:hover {
+  color: #d1582e;
+  text-decoration: underline;
+}
+
+/* Emergency Shortcuts Section (disaster.html) */
+.emergency-shortcuts-section {
+  max-width: 1200px;
+  margin: 32px auto 40px;
+  padding: 0 24px;
+}
+.shortcuts-heading {
+  margin-bottom: 16px;
+}
+.shortcuts-heading .kicker {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ba4324;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+.shortcuts-heading h2 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #172521;
+  margin: 0 0 4px;
+}
+.shortcuts-heading p {
+  font-size: 0.95rem;
+  color: #4a5c56;
+  margin: 0;
+}
+.shortcuts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.shortcut-card {
+  display: flex;
+  flex-direction: column;
+  background: #fffdfa;
+  border: 1.5px solid #ebdacf;
+  border-radius: 10px;
+  padding: 16px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.15s, border-color 0.15s;
+}
+.shortcut-card:hover {
+  transform: translateY(-2px);
+  border-color: #ba4324;
+}
+.shortcut-icon {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+.shortcut-card h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #172521;
+  margin: 0 0 6px;
+}
+.shortcut-card p {
+  font-size: 0.82rem;
+  color: #5a6662;
+  line-height: 1.45;
+  margin: 0 0 12px;
+  flex: 1;
+}
+.shortcut-card b {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ba4324;
+}
+
+/* Official Guide Panel (official.html) */
+.official-guide-panel {
+  max-width: 1180px;
+  margin: 28px auto 20px;
+  padding: 0 20px;
+}
+.guide-panel-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #172521;
+  margin: 0 0 16px;
+}
+.guide-points-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.guide-point-card {
+  background: #ffffff;
+  border: 1px solid #d4ded9;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+.point-num {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: #1b6357;
+  background: #eaf3ef;
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-bottom: 8px;
+}
+.guide-point-card h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #172521;
+  margin: 0 0 8px;
+}
+.guide-point-card p {
+  font-size: 0.85rem;
+  color: #4a5c56;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Direct Support Section (affected.html) */
+.direct-support-section {
+  max-width: 1180px;
+  margin: 24px auto 36px;
+  padding: 0 20px;
+}
+.direct-support-heading {
+  margin-bottom: 16px;
+}
+.direct-support-heading .kicker {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1b6357;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+.direct-support-heading h2 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #172521;
+  margin: 0 0 4px;
+}
+.direct-support-heading p {
+  font-size: 0.95rem;
+  color: #4a5c56;
+  margin: 0;
+}
+.direct-support-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.direct-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1.5px solid #bad2ca;
+  border-radius: 10px;
+  padding: 16px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.15s, border-color 0.15s;
+}
+.direct-card:hover {
+  transform: translateY(-2px);
+  border-color: #1b6357;
+}
+.direct-icon {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+.direct-card h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #172521;
+  margin: 0 0 6px;
+}
+.direct-card p {
+  font-size: 0.82rem;
+  color: #5a6662;
+  line-height: 1.45;
+  margin: 0 0 12px;
+  flex: 1;
+}
+.direct-card b {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1b6357;
+}
+
+@media (max-width: 960px) {
+  .portal-three-pillars,
+  .shortcuts-grid,
+  .guide-points-grid,
+  .direct-support-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .portal-three-pillars,
+  .shortcuts-grid,
+  .guide-points-grid,
+  .direct-support-grid {
+    grid-template-columns: 1fr;
+  }
+  .emergency-shortcuts-section,
+  .official-guide-panel,
+  .direct-support-section {
+    padding: 0 16px;
+  }
+}
