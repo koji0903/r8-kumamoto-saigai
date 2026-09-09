@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-09T21:18:49.183Z",
+  "generatedAt": "2026-09-09T23:37:17.826Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-09T21:00:19.322Z",
-    "inputCount": 829,
-    "classifiedPageCount": 664,
-    "displayCandidateCount": 566,
+    "generatedAt": "2026-09-09T23:19:38.488Z",
+    "inputCount": 830,
+    "classifiedPageCount": 665,
+    "displayCandidateCount": 567,
     "deltaFromPrevious": {
-      "inputCount": -1,
-      "classifiedPageCount": -1,
+      "inputCount": 1,
+      "classifiedPageCount": 1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 22,
+      "ageHours": 24,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 98,
-        "displayCandidates": 82,
+        "classified": 99,
+        "displayCandidates": 83,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,9 +138,9 @@
     },
     "categoryReport": {
       "home": {
-        "total": 179,
+        "total": 180,
         "high": 60,
-        "medium": 71,
+        "medium": 72,
         "low": 48
       },
       "money": {
@@ -188,7 +188,7 @@
     },
     "confidence": {
       "high": 249,
-      "medium": 317,
+      "medium": 318,
       "low": 98
     },
     "unclassifiedCount": 37,
@@ -287,7 +287,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 3
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
