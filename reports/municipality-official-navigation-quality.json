@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-09T11:33:04.572Z",
+  "generatedAt": "2026-09-09T16:44:45.272Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 831,
-  "displayCandidateCount": 568,
-  "classifiedPageCount": 666,
+  "inputCount": 830,
+  "displayCandidateCount": 567,
+  "classifiedPageCount": 665,
   "categoryReport": {
     "home": {
-      "total": 179,
+      "total": 180,
       "high": 60,
-      "medium": 71,
+      "medium": 72,
       "low": 48
     },
     "money": {
@@ -37,9 +37,9 @@
       "low": 45
     },
     "work_business": {
-      "total": 54,
+      "total": 53,
       "high": 17,
-      "medium": 37,
+      "medium": 36,
       "low": 0
     },
     "agriculture_fishery": {
@@ -50,8 +50,8 @@
     },
     "daily_life": {
       "total": 198,
-      "high": 65,
-      "medium": 133,
+      "high": 64,
+      "medium": 134,
       "low": 0
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 131,
-      "displayCandidates": 108,
+      "classified": 132,
+      "displayCandidates": 109,
       "fallback": true
     },
     "municipality_minamata": {
@@ -87,13 +87,13 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 35,
-      "displayCandidates": 29,
+      "classified": 34,
+      "displayCandidates": 28,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 100,
-      "displayCandidates": 84,
+      "classified": 99,
+      "displayCandidates": 83,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,7 +163,7 @@
     }
   },
   "confidence": {
-    "high": 250,
+    "high": 249,
     "medium": 318,
     "low": 98
   },
@@ -701,13 +701,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
@@ -719,6 +712,13 @@
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "山鹿市",
@@ -1076,5 +1076,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 663
+  "previousClassifiedPageCount": 666
 }

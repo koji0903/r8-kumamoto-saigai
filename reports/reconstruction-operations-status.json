@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-09T11:50:49.109Z",
+  "generatedAt": "2026-09-09T17:00:23.605Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-09T11:33:04.572Z",
-    "inputCount": 831,
-    "classifiedPageCount": 666,
-    "displayCandidateCount": 568,
+    "generatedAt": "2026-09-09T16:44:45.272Z",
+    "inputCount": 830,
+    "classifiedPageCount": 665,
+    "displayCandidateCount": 567,
     "deltaFromPrevious": {
-      "inputCount": 1,
-      "classifiedPageCount": 3,
+      "inputCount": -1,
+      "classifiedPageCount": -1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 12,
+      "ageHours": 17,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 131,
-        "displayCandidates": 108,
+        "classified": 132,
+        "displayCandidates": 109,
         "fallback": true
       },
       "municipality_minamata": {
@@ -61,13 +61,13 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 35,
-        "displayCandidates": 29,
+        "classified": 34,
+        "displayCandidates": 28,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 100,
-        "displayCandidates": 84,
+        "classified": 99,
+        "displayCandidates": 83,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,9 +138,9 @@
     },
     "categoryReport": {
       "home": {
-        "total": 179,
+        "total": 180,
         "high": 60,
-        "medium": 71,
+        "medium": 72,
         "low": 48
       },
       "money": {
@@ -168,9 +168,9 @@
         "low": 45
       },
       "work_business": {
-        "total": 54,
+        "total": 53,
         "high": 17,
-        "medium": 37,
+        "medium": 36,
         "low": 0
       },
       "agriculture_fishery": {
@@ -181,13 +181,13 @@
       },
       "daily_life": {
         "total": 198,
-        "high": 65,
-        "medium": 133,
+        "high": 64,
+        "medium": 134,
         "low": 0
       }
     },
     "confidence": {
-      "high": 250,
+      "high": 249,
       "medium": 318,
       "low": 98
     },
