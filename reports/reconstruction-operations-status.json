@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-09T05:06:22.790Z",
+  "generatedAt": "2026-09-09T11:50:49.109Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-09T04:51:04.069Z",
-    "inputCount": 830,
-    "classifiedPageCount": 663,
-    "displayCandidateCount": 563,
+    "generatedAt": "2026-09-09T11:33:04.572Z",
+    "inputCount": 831,
+    "classifiedPageCount": 666,
+    "displayCandidateCount": 568,
     "deltaFromPrevious": {
-      "inputCount": -9,
-      "classifiedPageCount": -9,
+      "inputCount": 1,
+      "classifiedPageCount": 3,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 5,
+      "ageHours": 12,
       "limitHours": 336
     }
   },
@@ -31,13 +31,13 @@
     "municipalityFallbackRate": "21/21",
     "municipalityReport": {
       "municipality_kumamoto": {
-        "classified": 69,
-        "displayCandidates": 59,
+        "classified": 70,
+        "displayCandidates": 60,
         "fallback": true
       },
       "municipality_yatsushiro": {
         "classified": 131,
-        "displayCandidates": 106,
+        "displayCandidates": 108,
         "fallback": true
       },
       "municipality_minamata": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 97,
-        "displayCandidates": 81,
+        "classified": 100,
+        "displayCandidates": 84,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -86,8 +86,8 @@
         "fallback": true
       },
       "municipality_ozu": {
-        "classified": 12,
-        "displayCandidates": 12,
+        "classified": 11,
+        "displayCandidates": 11,
         "fallback": true
       },
       "municipality_kikuyo": {
@@ -116,8 +116,8 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 33,
-        "displayCandidates": 29,
+        "classified": 32,
+        "displayCandidates": 28,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -131,46 +131,46 @@
         "fallback": true
       },
       "municipality_tsunagi": {
-        "classified": 7,
-        "displayCandidates": 5,
+        "classified": 8,
+        "displayCandidates": 6,
         "fallback": true
       }
     },
     "categoryReport": {
       "home": {
-        "total": 175,
-        "high": 59,
-        "medium": 68,
+        "total": 179,
+        "high": 60,
+        "medium": 71,
         "low": 48
       },
       "money": {
-        "total": 202,
+        "total": 201,
         "high": 42,
-        "medium": 55,
+        "medium": 54,
         "low": 105
       },
       "documents": {
-        "total": 169,
+        "total": 170,
         "high": 39,
         "medium": 36,
-        "low": 94
+        "low": 95
       },
       "health_care": {
-        "total": 44,
+        "total": 45,
         "high": 19,
-        "medium": 25,
+        "medium": 26,
         "low": 0
       },
       "family_education": {
         "total": 87,
         "high": 10,
-        "medium": 31,
-        "low": 46
+        "medium": 32,
+        "low": 45
       },
       "work_business": {
-        "total": 55,
+        "total": 54,
         "high": 17,
-        "medium": 38,
+        "medium": 37,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,16 +180,16 @@
         "low": 0
       },
       "daily_life": {
-        "total": 197,
-        "high": 64,
+        "total": 198,
+        "high": 65,
         "medium": 133,
         "low": 0
       }
     },
     "confidence": {
-      "high": 248,
-      "medium": 315,
-      "low": 100
+      "high": 250,
+      "medium": 318,
+      "low": 98
     },
     "unclassifiedCount": 37,
     "excludedCount": 38,
@@ -301,6 +301,16 @@
     },
     {
       "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_ozu",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_ozu",
+      "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_mashiki",
       "message": "継続回数を確認後に表示除外を判断してください"
     },
@@ -317,7 +327,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 6
+      "count": 7
     }
   ],
   "strictSources": {
