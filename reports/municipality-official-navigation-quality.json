@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-09T16:44:45.272Z",
+  "generatedAt": "2026-09-09T21:00:19.322Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 830,
-  "displayCandidateCount": 567,
-  "classifiedPageCount": 665,
+  "inputCount": 829,
+  "displayCandidateCount": 566,
+  "classifiedPageCount": 664,
   "categoryReport": {
     "home": {
-      "total": 180,
+      "total": 179,
       "high": 60,
-      "medium": 72,
+      "medium": 71,
       "low": 48
     },
     "money": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 99,
-      "displayCandidates": 83,
+      "classified": 98,
+      "displayCandidates": 82,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 249,
-    "medium": 318,
+    "medium": 317,
     "low": 98
   },
   "unclassifiedCount": 37,
@@ -1032,7 +1032,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 2
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1076,5 +1076,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 666
+  "previousClassifiedPageCount": 665
 }
