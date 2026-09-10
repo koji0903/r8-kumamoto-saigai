@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-10T05:07:19.223Z",
+  "generatedAt": "2026-09-10T11:45:50.565Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-10T04:52:05.038Z",
-    "inputCount": 830,
-    "classifiedPageCount": 665,
+    "generatedAt": "2026-09-10T11:29:23.365Z",
+    "inputCount": 829,
+    "classifiedPageCount": 664,
     "displayCandidateCount": 566,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
-      "unclassifiedCount": 0
+      "inputCount": -1,
+      "classifiedPageCount": -1,
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 29,
+      "ageHours": 36,
       "limitHours": 336
     }
   },
@@ -31,13 +31,13 @@
     "municipalityFallbackRate": "21/21",
     "municipalityReport": {
       "municipality_kumamoto": {
-        "classified": 70,
-        "displayCandidates": 60,
+        "classified": 69,
+        "displayCandidates": 59,
         "fallback": true
       },
       "municipality_yatsushiro": {
         "classified": 132,
-        "displayCandidates": 108,
+        "displayCandidates": 109,
         "fallback": true
       },
       "municipality_minamata": {
@@ -66,7 +66,7 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 98,
+        "classified": 97,
         "displayCandidates": 82,
         "fallback": true
       },
@@ -106,17 +106,17 @@
         "fallback": true
       },
       "municipality_kashima": {
-        "classified": 19,
-        "displayCandidates": 17,
+        "classified": 20,
+        "displayCandidates": 18,
         "fallback": true
       },
       "municipality_mashiki": {
-        "classified": 40,
-        "displayCandidates": 36,
+        "classified": 39,
+        "displayCandidates": 35,
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 33,
+        "classified": 34,
         "displayCandidates": 29,
         "fallback": true
       },
@@ -138,39 +138,39 @@
     },
     "categoryReport": {
       "home": {
-        "total": 179,
-        "high": 60,
-        "medium": 72,
+        "total": 180,
+        "high": 62,
+        "medium": 71,
         "low": 47
       },
       "money": {
         "total": 202,
         "high": 43,
-        "medium": 54,
-        "low": 105
+        "medium": 53,
+        "low": 106
       },
       "documents": {
-        "total": 169,
+        "total": 170,
         "high": 39,
-        "medium": 35,
-        "low": 95
+        "medium": 34,
+        "low": 97
       },
       "health_care": {
-        "total": 45,
+        "total": 46,
         "high": 19,
-        "medium": 26,
+        "medium": 27,
         "low": 0
       },
       "family_education": {
-        "total": 88,
-        "high": 10,
+        "total": 86,
+        "high": 9,
         "medium": 32,
-        "low": 46
+        "low": 45
       },
       "work_business": {
-        "total": 54,
+        "total": 53,
         "high": 18,
-        "medium": 36,
+        "medium": 35,
         "low": 0
       },
       "agriculture_fishery": {
@@ -181,17 +181,17 @@
       },
       "daily_life": {
         "total": 196,
-        "high": 63,
-        "medium": 133,
+        "high": 64,
+        "medium": 132,
         "low": 0
       }
     },
     "confidence": {
-      "high": 249,
-      "medium": 317,
-      "low": 99
+      "high": 251,
+      "medium": 315,
+      "low": 98
     },
-    "unclassifiedCount": 37,
+    "unclassifiedCount": 38,
     "excludedCount": 38,
     "overrideCount": 2
   },
@@ -272,7 +272,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 1
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -337,7 +337,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 6
+      "count": 5
     }
   ],
   "strictSources": {
