@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-09-10T11:29:23.365Z",
+  "generatedAt": "2026-09-10T16:30:40.226Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 829,
+  "inputCount": 831,
   "displayCandidateCount": 566,
-  "classifiedPageCount": 664,
+  "classifiedPageCount": 666,
   "categoryReport": {
     "home": {
       "total": 180,
-      "high": 62,
-      "medium": 71,
+      "high": 60,
+      "medium": 73,
       "low": 47
     },
     "money": {
-      "total": 202,
+      "total": 203,
       "high": 43,
       "medium": 53,
-      "low": 106
+      "low": 107
     },
     "documents": {
-      "total": 170,
+      "total": 168,
       "high": 39,
       "medium": 34,
-      "low": 97
+      "low": 95
     },
     "health_care": {
       "total": 46,
@@ -33,25 +33,25 @@
     "family_education": {
       "total": 86,
       "high": 9,
-      "medium": 32,
-      "low": 45
+      "medium": 31,
+      "low": 46
     },
     "work_business": {
-      "total": 53,
+      "total": 55,
       "high": 18,
-      "medium": 35,
+      "medium": 37,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 22,
+      "total": 23,
       "high": 7,
-      "medium": 15,
+      "medium": 16,
       "low": 0
     },
     "daily_life": {
-      "total": 196,
-      "high": 64,
-      "medium": 132,
+      "total": 195,
+      "high": 62,
+      "medium": 133,
       "low": 0
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 132,
-      "displayCandidates": 109,
+      "classified": 136,
+      "displayCandidates": 112,
       "fallback": true
     },
     "municipality_minamata": {
@@ -92,7 +92,7 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 97,
+      "classified": 98,
       "displayCandidates": 82,
       "fallback": true
     },
@@ -132,13 +132,13 @@
       "fallback": true
     },
     "municipality_kashima": {
-      "classified": 20,
-      "displayCandidates": 18,
+      "classified": 19,
+      "displayCandidates": 17,
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 39,
-      "displayCandidates": 35,
+      "classified": 37,
+      "displayCandidates": 33,
       "fallback": true
     },
     "municipality_kosa": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 251,
-    "medium": 315,
-    "low": 98
+    "high": 247,
+    "medium": 319,
+    "low": 100
   },
   "unclassifiedCount": 38,
   "unclassifiedItems": [
@@ -368,8 +368,8 @@
     "disaster_preparedness": 6,
     "event_notice": 1,
     "facility_notice": 8,
-    "mayor_message": 2,
     "index_page": 15,
+    "mayor_message": 2,
     "mutual_aid": 1,
     "overall_guide": 3,
     "press": 3
@@ -699,13 +699,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "ruleId": "index_page",
@@ -717,6 +710,13 @@
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "山鹿市",
@@ -1015,7 +1015,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 2
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1080,9 +1080,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 5
+      "count": 6
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 665
+  "previousClassifiedPageCount": 664
 }
