@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-10T16:46:31.618Z",
-  "officialCheckedAt": "9/11 01:46",
+  "retrievedAt": "2026-09-10T21:13:07.924Z",
+  "officialCheckedAt": "9/11 06:13",
   "siteTopics": [
     {
       "date": "2026-09-11",
@@ -84,6 +84,14 @@ window.HOME_TOPICS = {
       "municipality": "氷川町"
     },
     {
+      "title": "避難所について（9/10 17:00更新）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
+      "date": "2026-09-10",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市"
+    },
+    {
       "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
       "url": "https://www.city.kumamoto.jp/kiji00372210/index.html",
       "date": "2026-09-10",
@@ -114,14 +122,6 @@ window.HOME_TOPICS = {
       "time": "08:36",
       "category": "その他",
       "municipality": "西原村"
-    },
-    {
-      "title": "女性のための就活イベント「お悩み相談Cafe]の参加者募集",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/357/23482.html",
-      "date": "2026-09-09",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "上天草市"
     }
   ],
   "prefectureUpdates": [
