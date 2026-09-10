@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="styles.css?v=20260817-4">
   <link rel="stylesheet" href="design-system.css?v=20260810-1">
   <link rel="stylesheet" href="org-site.css?v=20260907-2">
-  <link rel="stylesheet" href="kumamoto-support.css?v=20260911-1">
+  <link rel="stylesheet" href="kumamoto-support.css?v=20260911-2">
   <link rel="canonical" href="https://www.yokatainet.jp/kumamoto-support.html">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
@@ -35,7 +35,7 @@
   <a class="skip" href="#main">本文へ移動</a><header class="site-header"></header>
   <main id="main">
     <section class="kms-hero"><div class="kms-shell kms-hero-grid">
-      <div><p class="kms-kicker">熊本市｜令和8年熊本地震</p><h1>必要な支援を、<span>困りごとから見つける</span></h1><p class="kms-lead">熊本市の被災者支援制度冊子（第6版・145ページ）を、いま困っていることと次の行動から探せるように整理しました。</p><div class="kms-actions"><a href="#find">困りごとを選ぶ</a><a href="#first">まず行うこと</a><a href="#all-support">全95項目を見る</a><a href="https://www.city.kumamoto.jp/kiji00372110/index.html" target="_blank" rel="noopener">熊本市の最新情報 ↗</a></div></div>
+      <div><p class="kms-kicker">熊本市｜令和8年熊本地震</p><h1>必要な支援を、<span>困りごとから見つける</span></h1><p class="kms-lead">熊本市の被災者支援制度冊子（第6版・145ページ）を、いま困っていることと次の行動から探せるように整理しました。</p><div class="kms-actions"><a href="#find">困りごとを選ぶ</a><a href="#first">まず行うこと</a><a href="#eligibility">対象候補を確認</a><a href="#all-support">全95項目を見る</a><a href="https://www.city.kumamoto.jp/kiji00372110/index.html" target="_blank" rel="noopener">熊本市の最新情報 ↗</a></div></div>
       <div class="kms-hero-art" aria-hidden="true"><svg viewBox="0 0 420 300"><path class="sun" d="M320 24v38M282 40l18 30m58-30-18 30M272 82h36m44 0h36"/><path class="house" d="m64 155 92-75 92 75v108H64Z"/><path class="roof" d="m42 164 114-94 114 94"/><path class="door" d="M132 263v-67h49v67"/><path class="person" d="M295 143c0 18-14 32-32 32s-32-14-32-32 14-32 32-32 32 14 32 32Zm-79 120c4-49 21-76 47-76s43 27 47 76"/><path class="paper" d="M292 124h78v104h-58l-20-20Z"/><path class="check" d="m310 162 12 12 27-31m-39 55h40"/></svg><b>証明</b><b>住まい</b><b>お金</b><b>暮らし</b></div>
     </div></section>
 
@@ -65,6 +65,15 @@
     </nav></section>
 
     <section class="kms-first" id="first"><div class="kms-shell"><header><p class="kms-kicker">START HERE</p><h2>申請の前に、3つ確認</h2></header><ol><li><span>1</span><div><b>片づけや修理の前に写真を残す</b><p>建物の全景と被害箇所を複数方向から撮影し、見積書・契約書・領収書も保管します。</p></div></li><li><span>2</span><div><b>り災証明書を申請する</b><p>多くの住まい・給付・減免制度で被害判定の確認に使います。住家以外は証明書の種類が異なります。</p></div></li><li><span>3</span><div><b>契約・工事・解体の前に相談する</b><p>市が業者へ直接支払う制度があります。先に契約や支払いをすると対象外になる場合があります。</p></div></li></ol><aside><b>期限に注意</b><p>住家のり災証明書は電子申請が<strong>10月31日</strong>、窓口は<strong>10月30日</strong>まで。災害援護資金の申込は<strong>10月30日</strong>までです。</p></aside></div></section>
+
+<section class="kms-eligibility" id="eligibility"><div class="kms-shell"><header><p class="kms-kicker">FIRST CHECK</p><h2>あなたの状況から、対象候補を確認</h2><p>り災証明書の判定と追加条件を選ぶと、冊子の条件に照らした「最初の確認結果」を表示します。入力内容は保存・送信されません。</p></header>
+<div class="kms-judge"><form id="kmsEligibilityForm"><fieldset><legend><span>STEP 1</span>住家の被害判定</legend><div class="kms-damage-options"><label><input type="radio" name="damage" value="full"><span><b>全壊</b><small>全壊・流失</small></span></label><label><input type="radio" name="damage" value="large"><span><b>大規模半壊</b></span></label><label><input type="radio" name="damage" value="middle"><span><b>中規模半壊</b></span></label><label><input type="radio" name="damage" value="half"><span><b>半壊</b></span></label><label><input type="radio" name="damage" value="semi"><span><b>準半壊</b></span></label><label><input type="radio" name="damage" value="minor"><span><b>一部損壊</b></span></label><label><input type="radio" name="damage" value="unknown"><span><b>まだ不明</b><small>証明書待ち</small></span></label></div></fieldset>
+<fieldset><legend><span>STEP 2</span>当てはまる状況</legend><div class="kms-condition-options"><label><input type="checkbox" name="condition" value="unlivable"><span>そのままでは住めない</span></label><label><input type="checkbox" name="condition" value="demolish"><span>やむを得ず解体した・する予定</span></label><label><input type="checkbox" name="condition" value="longrepair"><span>修理に1か月以上かかる見込み</span></label><label><input type="checkbox" name="condition" value="nohome"><span>自力で次の住まいを確保できない</span></label><label><input type="checkbox" name="condition" value="income"><span>収入が3割以上減る見込み・失業・廃業</span></label><label><input type="checkbox" name="condition" value="nhi"><span>国民健康保険に加入</span></label><label><input type="checkbox" name="condition" value="elderly"><span>後期高齢者医療に加入</span></label><label><input type="checkbox" name="condition" value="parent"><span>ひとり親・子どもがいる</span></label><label><input type="checkbox" name="condition" value="care"><span>高齢・障がい・妊産婦など配慮が必要</span></label><label><input type="checkbox" name="condition" value="business"><span>事業・農漁業に被害がある</span></label></div></fieldset><button type="submit">対象になりそうな制度を確認する</button></form>
+<section class="kms-results" id="kmsEligibilityResult" aria-live="polite"><div class="kms-result-empty"><span>?</span><div><b>判定を選ぶと、ここに結果が出ます</b><p>制度の申請可否を確定するものではありません。対象候補を見つけ、窓口へ確認するための機能です。</p></div></div></section></div>
+<div class="kms-judge-meaning"><article class="likely"><b>対象候補</b><p>冊子の住家被害条件を満たす可能性が高い制度。追加要件は個別に確認します。</p></article><article class="check"><b>条件を確認</b><p>解体・資力・所得・世帯状況など、住家判定以外の要件があります。</p></article><article class="unlikely"><b>判定上は対象外</b><p>冊子の対応表では住家被害条件を満たしません。判定に関係しない相談制度は利用できます。</p></article></div>
+<details class="kms-matrix"><summary>住家の被害判定別・主要制度対応表を見る</summary><div tabindex="0"><table><thead><tr><th>主要制度</th><th>全壊</th><th>大規模半壊</th><th>中規模半壊</th><th>半壊</th><th>準半壊</th><th>一部損壊</th></tr></thead><tbody><tr><th>災害見舞金</th><td>対象</td><td>対象</td><td>対象</td><td>対象</td><td>対象</td><td>対象外</td></tr><tr><th>災害援護資金</th><td>対象</td><td>対象</td><td>対象</td><td>対象</td><td>対象外</td><td>対象外</td></tr><tr><th>生活再建支援金</th><td>対象</td><td>対象</td><td>加算のみ</td><td>解体等</td><td>対象外</td><td>対象外</td></tr><tr><th>緊急修理</th><td>対象</td><td>対象</td><td>対象</td><td>対象</td><td>対象</td><td>対象外</td></tr><tr><th>応急修理</th><td>修理可能時</td><td>対象</td><td>資力要件</td><td>資力要件</td><td>資力要件</td><td>対象外</td></tr><tr><th>市営住宅の一時提供</th><td>対象</td><td>対象</td><td>対象</td><td>対象</td><td>対象外</td><td>対象外</td></tr><tr><th>みなし・建設型仮設</th><td>対象</td><td>解体等</td><td>解体等</td><td>解体等</td><td>対象外</td><td>対象外</td></tr><tr><th>公費解体</th><td>対象</td><td>対象</td><td>対象</td><td>対象</td><td>対象外</td><td>対象外</td></tr><tr><th>国保・後期高齢者医療</th><td>対象</td><td>対象</td><td>対象</td><td>対象</td><td>別要件</td><td>別要件</td></tr></tbody></table></div><p>「対象」でも所得・資力・居住継続の可否など追加条件があります。国保・後期高齢者医療は、住家被害以外に生計維持者の死亡・重篤な傷病・失業・廃業等で対象になる場合があります。</p></details>
+<aside class="kms-source-conflict"><b>冊子内で記載が一致しない項目</b><p>水道・下水道使用料の減免は、制度本文（p.82）では「準半壊以上」と記載されていますが、末尾対応表（p.137）の記号表示とは読み取りが一致しません。本ページでは対象を断定せず、上下水道局料金課（096-381-1118）への確認を案内します。</p></aside>
+</div></section>
 
     <section class="kms-guide kms-shell" aria-labelledby="guide-title"><header><p class="kms-kicker">SUPPORT GUIDE</p><h2 id="guide-title">制度の要点と、次にすること</h2><p>まず使う可能性が高い制度は、対象・金額・窓口まで詳しく確認できます。続く「支援メニュー地図」では冊子の全95項目を見渡せます。</p></header>
       <article class="kms-section" id="certificate"><div class="kms-section-title"><span>01</span><div><p>証明・申請</p><h3>被害を証明したい</h3></div></div><div class="kms-cards">
@@ -117,4 +126,5 @@
   </main>
   <footer><div class="brand footer-brand"><span class="brand-mark" aria-hidden="true">よ</span><span>よか隊ネット熊本<br><b>災害・支援状況レポート</b></span></div><p>熊本市の公式資料を読みやすく再構成しています。<br>申請前に必ず公式情報をご確認ください。</p><a href="#main">ページ上部へ ↑</a></footer>
   <script src="data/report-data.js"></script><script src="org-site.js?v=20260910-1"></script><script src="app.js?v=20260910-1"></script>
+<script src="kumamoto-support.js?v=20260911-1"></script>
 </body></html>
