@@ -5,6 +5,15 @@ window.HOME_TOPICS = {
   "siteTopics": [
     {
       "date": "2026-09-10",
+      "category": "熊本市",
+      "badge": "支援ガイド公開",
+      "title": "熊本市：被災者支援制度145ページを困りごと別に図解",
+      "url": "kumamoto-support.html",
+      "description": "熊本市の第6版被災者支援制度冊子を、証明・お金・住まい・生活・減免・事業・市外避難の7分野に整理。期限、支給と貸付の違い、電話窓口をイラスト付きで確認できます。",
+      "targetPage": "kumamoto-support.html"
+    },
+    {
+      "date": "2026-09-10",
       "category": "宇城市",
       "badge": "公式サービス連携",
       "title": "宇城市：公式「うき支援ナビ」連携と被災者支援制度ガイドの公開",
@@ -47,15 +56,6 @@ window.HOME_TOPICS = {
       "url": "reconstruction.html",
       "description": "「安全確保と被害記録」「当面の住まい」「公的支援の申請」「生活と住まいの再建」の進め方目安と、証明・お金・住まい・健康・仕事の困りごと別ガイドを新設しました。",
       "targetPage": "reconstruction.html"
-    },
-    {
-      "date": "2026-09-07",
-      "category": "住まい・仮設",
-      "badge": "進捗更新",
-      "title": "建設型応急住宅：宇土・宇城・美里・甲佐・氷川の着工・入居予定最新状況",
-      "url": "temporary-housing.html",
-      "description": "5市町・12団地・全313戸の木造・プレハブ仮設住宅について、現地着工日、入居予定時期、9月7日時点の工事進捗（基礎・内装工事）を一覧表と地図で更新しました。",
-      "targetPage": "temporary-housing.html"
     }
   ],
   "municipalityUpdates": [
