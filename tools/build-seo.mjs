@@ -21,7 +21,32 @@ const specialImages = new Map([
   ["official-response-tracks.html", "/ogp-official-tracks.png"],
   ["hq-kumamoto.html", "/ogp-hq-kumamoto.png"],
   ["hq-yatsushiro.html", "/ogp-hq-yatsushiro.png"],
-  ["risai-certificate.html", "/ogp-risai-certificate.png"]
+  ["risai-certificate.html", "/ogp-risai-certificate.png"],
+  ["hikawa-support.html", "/ogp-hikawa-support.png"],
+  ["uki-support.html", "/ogp-uki-support.png"],
+  ["reconstruction.html", "/ogp-reconstruction.png"],
+  ["temporary-housing.html", "/ogp-temporary-housing.png"],
+  ["guide.html", "/ogp-guide.png"],
+  ["municipalities.html", "/ogp-municipalities.png"],
+  ["municipality-support-compare.html", "/ogp-support-compare.png"],
+  ["hq-uto.html", "/ogp-hq-uto.png"],
+  ["shelters.html", "/ogp-shelters.png"],
+  ["timeline.html", "/ogp-timeline.png"],
+  ["meetings.html", "/ogp-meetings.png"],
+  ["terms.html", "/ogp-terms.png"],
+  ["reconstruction-documents.html", "/ogp-reconstruction-documents.png"],
+  ["reconstruction-money.html", "/ogp-reconstruction-money.png"],
+  ["reconstruction-health-care.html", "/ogp-reconstruction-health.png"],
+  ["reconstruction-family.html", "/ogp-reconstruction-family.png"],
+  ["reconstruction-work-business.html", "/ogp-reconstruction-work.png"],
+  ["reconstruction-agriculture-fishery.html", "/ogp-reconstruction-agri.png"],
+  ["reconstruction-search.html", "/ogp-reconstruction-search.png"],
+  ["reconstruction-official.html", "/ogp-reconstruction-official.png"],
+  ["disaster.html", "/ogp-disaster-portal.png"],
+  ["affected.html", "/ogp-affected.png"],
+  ["supporters.html", "/ogp-supporters.png"],
+  ["official.html", "/ogp-official.png"],
+  ["support.html", "/ogp-support-fields.png"]
 ]);
 const checkOnly = process.argv.includes("--check");
 const stale = [];

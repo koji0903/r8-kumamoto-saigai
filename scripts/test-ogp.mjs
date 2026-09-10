@@ -63,9 +63,18 @@ for (const page of pages) {
 // 力を入れたページが共通画像に戻ると、貼られたときに中身が伝わらない。
 const builder = read("tools/build-seo.mjs");
 const generator = read("tools/build-ogp-images.py");
-const DEDICATED = ["uto-waste.html", "uto-bulletin.html", "uto-housing.html", "alert-channels.html",
+const DEDICATED = [
+  "uto-waste.html", "uto-bulletin.html", "uto-housing.html", "alert-channels.html",
   "volunteer-centers.html", "official-timeline.html", "official-water-recovery.html", "official-response-tracks.html",
-  "hq-kumamoto.html", "hq-yatsushiro.html"];
+  "hq-kumamoto.html", "hq-yatsushiro.html", "risai-certificate.html",
+  "hikawa-support.html", "uki-support.html", "reconstruction.html", "temporary-housing.html",
+  "guide.html", "municipalities.html", "municipality-support-compare.html", "hq-uto.html",
+  "shelters.html", "timeline.html", "meetings.html", "terms.html",
+  "reconstruction-documents.html", "reconstruction-money.html", "reconstruction-health-care.html",
+  "reconstruction-family.html", "reconstruction-work-business.html", "reconstruction-agriculture-fishery.html",
+  "reconstruction-search.html", "reconstruction-official.html", "disaster.html",
+  "affected.html", "supporters.html", "official.html", "support.html"
+];
 for (const page of DEDICATED) {
   const file = used.get(page);
   assert.ok(file, `${page} が見つかりません`);

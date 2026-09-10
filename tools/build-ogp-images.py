@@ -42,6 +42,8 @@ TONES = {
     "orange": ("#d8552f", "#fdeee9"),
     "pink": ("#c2557f", "#fbedf3"),
     "purple": ("#6a5aa8", "#f0eefa"),
+    "uki": ("#176b87", "#eaf6fa"),
+    "hikawa": ("#185f55", "#edf7f4"),
 }
 
 # 絵は宇土市のページと同じ描き方に揃える（線は外側のgで引き、fillで色を付ける）
@@ -87,6 +89,111 @@ ART = {
              '<path fill="#fb923c" stroke="#c2410c" d="M37 17 31 39l11 8-7 27"/>'
              '<path fill="#fde047" stroke="#a16207" d="M76 12h34v56H76z"/><path d="M84 25h18M84 36h18M84 47h10"/>'
              '<path fill="#2dd4bf" stroke="#0f766e" d="m84 57 5 5 12-13"/>',
+    "hikawa": '<path fill="#cbd5e1" stroke="#475569" d="M12 28h40v44H12z"/><path d="M20 40h24M20 52h16"/>'
+              '<path fill="#2dd4bf" stroke="#0f766e" d="m42 16 34-10 34 10v40H42z"/>'
+              '<path d="M54 32v24h46V32"/><circle fill="#fb923c" stroke="#c2410c" cx="77" cy="44" r="9"/>'
+              '<path d="m73 44 3 3 5-6"/>',
+    "uki": '<path fill="#cbd5e1" stroke="#475569" d="M14 16h42v52H14z"/>'
+           '<path fill="#93c5fd" stroke="#1d4ed8" d="M22 26h26M22 36h26M22 46h16"/>'
+           '<path fill="#2dd4bf" stroke="#0f766e" d="M64 24h44v44H64z"/>'
+           '<path fill="#fde047" stroke="#a16207" d="M72 34h28M72 44h20M72 54h28"/>'
+           '<circle fill="#fb923c" stroke="#c2410c" cx="96" cy="18" r="10"/><path d="M92 18l3 3 6-7"/>',
+    "rebuild": '<path fill="#cbd5e1" stroke="#475569" d="m16 44 36-26 36 26v28H16Z"/>'
+               '<path fill="#93c5fd" stroke="#1d4ed8" d="M42 72V50h20v22"/>'
+               '<path fill="#2dd4bf" stroke="#0f766e" d="M94 62c-8 0-14-6-14-14 8 0 14 6 14 14Z"/>'
+               '<path fill="#2dd4bf" stroke="#0f766e" d="M94 48c0-8 6-14 14-14 0 8-6 14-14 14Z"/>'
+               '<path stroke="#0f766e" d="M94 62V34"/><path fill="#fb923c" stroke="#c2410c" d="m94 20 8 10h-16Z"/>',
+    "housing_build": '<path fill="#cbd5e1" stroke="#475569" d="m12 48 24-18 24 18v24H12Z"/>'
+                     '<path fill="#fb923c" stroke="#c2410c" d="M28 72V56h12v16"/>'
+                     '<path fill="#93c5fd" stroke="#1d4ed8" d="m56 42 26-20 26 20v30H56Z"/>'
+                     '<path fill="#2dd4bf" stroke="#0f766e" d="M76 72V52h14v20"/>'
+                     '<path stroke="#a16207" d="M98 14h14v16M105 14v12"/>',
+    "guide_book": '<path fill="#93c5fd" stroke="#1d4ed8" d="M16 20c16-6 32-4 44 4v44c-12-8-28-10-44-4Z"/>'
+                  '<path fill="#cbd5e1" stroke="#475569" d="M104 20c-16-6-32-4-44 4v44c12-8 28-10 44-4Z"/>'
+                  '<path d="M26 34h22M26 44h22M26 54h14M72 34h22M72 44h22M72 54h14"/>'
+                  '<path fill="#fde047" stroke="#a16207" d="m88 12 16 16-6 6-16-16Z"/>',
+    "dashboard": '<rect fill="#cbd5e1" stroke="#475569" x="14" y="14" width="92" height="58" rx="8"/>'
+                 '<path fill="#2dd4bf" stroke="#0f766e" d="M14 26h92"/>'
+                 '<circle fill="#fb923c" stroke="#c2410c" cx="24" cy="20" r="3"/>'
+                 '<circle fill="#fde047" stroke="#a16207" cx="32" cy="20" r="3"/>'
+                 '<path fill="#93c5fd" stroke="#1d4ed8" d="M24 60V42h16v18zM46 60V34h16v26z"/>'
+                 '<path stroke="#c2410c" d="m68 54 10-14 12 6 10-16"/>',
+    "compare": '<rect fill="#93c5fd" stroke="#1d4ed8" x="14" y="16" width="40" height="52" rx="6"/>'
+               '<rect fill="#2dd4bf" stroke="#0f766e" x="66" y="16" width="40" height="52" rx="6"/>'
+               '<path d="M24 28h20M24 38h20M24 48h12M76 28h20M76 38h20M76 48h12"/>'
+               '<path stroke="#a16207" d="m50 42 20 0M64 36l6 6-6 6"/>',
+    "shelter": '<path fill="#2dd4bf" stroke="#0f766e" d="m14 68 34-44 34 44z"/>'
+               '<path fill="#fb923c" stroke="#c2410c" d="m48 24 14 44H34z"/>'
+               '<path fill="#93c5fd" stroke="#1d4ed8" d="M92 20c-8 0-14 6-14 14 0 10 14 24 14 24s14-14 14-24c0-8-6-14-14-14Z"/>'
+               '<circle fill="#ffffff" cx="92" cy="34" r="5"/>',
+    "calendar_clock": '<rect fill="#cbd5e1" stroke="#475569" x="14" y="20" width="52" height="50" rx="6"/>'
+                      '<path fill="#fb923c" stroke="#c2410c" d="M14 32h52"/>'
+                      '<path d="M26 14v10M54 14v10M26 44h10M44 44h10M26 56h10"/>'
+                      '<circle fill="#93c5fd" stroke="#1d4ed8" cx="86" cy="46" r="22"/>'
+                      '<path stroke="#1d4ed8" d="M86 34v12l8 6"/>',
+    "meeting": '<ellipse fill="#cbd5e1" stroke="#475569" cx="60" cy="46" rx="44" ry="20"/>'
+               '<circle fill="#2dd4bf" stroke="#0f766e" cx="30" cy="24" r="8"/>'
+               '<circle fill="#fb923c" stroke="#c2410c" cx="60" cy="18" r="8"/>'
+               '<circle fill="#93c5fd" stroke="#1d4ed8" cx="90" cy="24" r="8"/>'
+               '<rect fill="#ffffff" stroke="#475569" x="48" y="38" width="24" height="16" rx="2"/>'
+               '<path d="M54 44h12M54 48h8"/>',
+    "dictionary": '<rect fill="#93c5fd" stroke="#1d4ed8" x="20" y="16" width="56" height="54" rx="4"/>'
+                  '<path d="M28 16v54M40 32h24M40 44h20M40 56h14"/>'
+                  '<path fill="#fde047" stroke="#a16207" d="M72 32h34v26H88l-8 8v-8h-8z"/>'
+                  '<path d="M84 42h14M84 48h8"/>',
+    "docs": '<rect fill="#cbd5e1" stroke="#475569" x="14" y="14" width="46" height="56" rx="4"/>'
+            '<path d="M24 28h26M24 40h26M24 52h16"/>'
+            '<rect fill="#2dd4bf" stroke="#0f766e" x="66" y="24" width="40" height="28" rx="6"/>'
+            '<circle fill="#ffffff" cx="86" cy="38" r="7"/>'
+            '<circle fill="#fb923c" stroke="#c2410c" cx="92" cy="62" r="10"/>',
+    "money": '<rect fill="#2dd4bf" stroke="#0f766e" x="14" y="22" width="60" height="34" rx="4"/>'
+             '<circle fill="#ffffff" stroke="#0f766e" cx="44" cy="39" r="8"/>'
+             '<circle fill="#fde047" stroke="#a16207" cx="86" cy="32" r="14"/>'
+             '<circle fill="#fb923c" stroke="#c2410c" cx="80" cy="54" r="14"/>'
+             '<path d="M44 35v8M86 28v8M80 50v8"/>',
+    "health": '<path fill="#fb923c" stroke="#c2410c" d="M60 28c-10-14-30-4-30 12 0 16 30 30 30 30s30-14 30-30c0-16-20-26-30-12Z"/>'
+              '<path fill="#ffffff" d="M56 38h8v18h-8zM51 43h18v8h-18z"/>',
+    "family": '<circle fill="#2dd4bf" stroke="#0f766e" cx="36" cy="26" r="12"/>'
+              '<path fill="#2dd4bf" stroke="#0f766e" d="M18 72V52c0-8 8-14 18-14s18 6 18 14v20z"/>'
+              '<circle fill="#fb923c" stroke="#c2410c" cx="78" cy="34" r="10"/>'
+              '<path fill="#fb923c" stroke="#c2410c" d="M64 72V56c0-7 6-12 14-12s14 5 14 12v16z"/>'
+              '<rect fill="#fde047" stroke="#a16207" x="90" y="52" width="14" height="16" rx="3"/>',
+    "work": '<rect fill="#93c5fd" stroke="#1d4ed8" x="18" y="24" width="34" height="48" rx="2"/>'
+            '<path d="M26 34h6M38 34h6M26 44h6M38 44h6M26 54h6M38 54h6M30 72v-8h10v8"/>'
+            '<path fill="#cbd5e1" stroke="#475569" d="M60 38h46v34H60z"/>'
+            '<path fill="#fb923c" stroke="#c2410c" d="m82 14 12 12-6 6-12-12 3-5-2-2 5-3Z"/>',
+    "agri": '<path fill="#fde047" stroke="#a16207" d="M24 64C24 40 44 24 60 20c-4 16-2 36-18 44"/>'
+            '<path stroke="#a16207" d="M24 64c12-12 24-22 36-44"/>'
+            '<path fill="#93c5fd" stroke="#1d4ed8" d="M60 52c16-8 32-4 44 0-6 8-6 12 0 16-12 4-28 8-44 0 4-6 4-10 0-16Z"/>'
+            '<path stroke="#475569" d="M14 72c16-4 32 4 48 0s32 4 48 0"/>',
+    "search": '<rect fill="#cbd5e1" stroke="#475569" x="18" y="16" width="50" height="54" rx="4"/>'
+              '<path d="M28 28h24M28 38h30M28 48h20"/>'
+              '<circle fill="#2dd4bf" stroke="#0f766e" cx="76" cy="46" r="18"/>'
+              '<path stroke="#0f766e" stroke-width="4" d="m89 59 18 16"/>',
+    "nav": '<circle fill="#93c5fd" stroke="#1d4ed8" cx="60" cy="42" r="28"/>'
+           '<path fill="#fb923c" stroke="#c2410c" d="m60 22 8 20-8-4-8 4Z"/>'
+           '<path fill="#cbd5e1" stroke="#475569" d="m60 62 8-20-8 4-8-4Z"/>',
+    "portal": '<circle fill="#fde047" stroke="#a16207" cx="60" cy="42" r="30"/>'
+              '<path fill="#2dd4bf" stroke="#0f766e" d="m32 50 28-22 28 22v22H32Z"/>'
+              '<path fill="#ffffff" stroke="#0f766e" d="M52 72V56h16v16"/>',
+    "affected": '<path fill="#93c5fd" stroke="#1d4ed8" d="m20 46 26-20 26 20v24H20Z"/>'
+                '<path fill="#fb923c" stroke="#c2410c" d="M38 70V54h14v16"/>'
+                '<path fill="#2dd4bf" stroke="#0f766e" d="M70 48c0-8 8-14 18-14s18 6 18 14v22H70Z"/>'
+                '<circle fill="#2dd4bf" stroke="#0f766e" cx="88" cy="24" r="10"/>',
+    "supporters": '<circle fill="#2dd4bf" stroke="#0f766e" cx="38" cy="24" r="10"/>'
+                  '<path fill="#2dd4bf" stroke="#0f766e" d="M22 68V52c0-8 8-14 16-14s16 6 16 14v16z"/>'
+                  '<circle fill="#93c5fd" stroke="#1d4ed8" cx="82" cy="24" r="10"/>'
+                  '<path fill="#93c5fd" stroke="#1d4ed8" d="M66 68V52c0-8 8-14 16-14s16 6 16 14v16z"/>'
+                  '<path fill="#fb923c" stroke="#c2410c" d="M60 48c-4-6-12-2-12 4 0 6 12 12 12 12s12-6 12-12c0-6-8-10-12-4Z"/>',
+    "official": '<path fill="#cbd5e1" stroke="#475569" d="M16 38h88v34H16z"/>'
+                '<path fill="#93c5fd" stroke="#1d4ed8" d="m10 38 50-24 50 24z"/>'
+                '<circle fill="#fb923c" stroke="#c2410c" cx="60" cy="26" r="6"/>'
+                '<path d="M32 48v24M48 48v24M72 48v24M88 48v24"/>',
+    "support_fields": '<rect fill="#2dd4bf" stroke="#0f766e" x="18" y="16" width="38" height="24" rx="6"/>'
+                      '<rect fill="#fb923c" stroke="#c2410c" x="64" y="16" width="38" height="24" rx="6"/>'
+                      '<rect fill="#93c5fd" stroke="#1d4ed8" x="18" y="46" width="38" height="24" rx="6"/>'
+                      '<rect fill="#fde047" stroke="#a16207" x="64" y="46" width="38" height="24" rx="6"/>'
+                      '<path d="M28 28h18M74 28h18M28 58h18M74 58h18"/>',
 }
 
 PAGES = [
@@ -130,6 +237,106 @@ PAGES = [
          label="八代市",
          title="災害対策本部会議/のまとめ",
          lead="第2回から公開されている会議資料を並べ、避難者数と住家被害の内訳の動きを追えるようにしました。"),
+    dict(file="hikawa-support.html", out="ogp-hikawa-support.png", tone="hikawa", art="hikawa",
+         label="氷川町｜被災された方へ",
+         title="被災者支援制度一覧",
+         lead="証明書・住まい・支援金・生活の困りごと。氷川町公式の支援制度と窓口を目的から探せます。"),
+    dict(file="uki-support.html", out="ogp-uki-support.png", tone="uki", art="uki",
+         label="宇城市｜被災された方へ",
+         title="被災者支援制度ガイド",
+         lead="36の公的支援を全壊〜一部損壊の判定別・困りごと別に整理。支援額・必要書類・窓口を網羅。"),
+    dict(file="reconstruction.html", out="ogp-reconstruction.png", tone="teal", art="rebuild",
+         label="被災後の暮らしを、一つずつ",
+         title="暮らしの再建ナビ",
+         lead="住まい・生活資金・各種手続き・健康・仕事。直面している困りごとから自治体や公的機関の支援へ。"),
+    dict(file="temporary-housing.html", out="ogp-temporary-housing.png", tone="sky", art="housing_build",
+         label="熊本県全域 / 建設型応急住宅",
+         title="仮設住宅の整備状況",
+         lead="宇土市・宇城市・美里町・甲佐町・氷川町。各団地の戸数、着工日、入居予定、進捗の最新まとめ。"),
+    dict(file="guide.html", out="ogp-guide.png", tone="blue", art="guide_book",
+         label="令和8年熊本地震",
+         title="制度・生活再建ガイド",
+         lead="罹災証明・生活再建支援金・住宅応急修理・減免制度。知っておくべき支援の仕組みと申請の要点。"),
+    dict(file="municipalities.html", out="ogp-municipalities.png", tone="green", art="dashboard",
+         label="21市町村 総合ダッシュボード",
+         title="自治体別 被害・支援情報",
+         lead="自治体ごとの公式発表タイムライン、被害・避難状況、支援制度、活動記録をワンストップで確認。"),
+    dict(file="municipality-support-compare.html", out="ogp-support-compare.png", tone="purple", art="compare",
+         label="被災者支援制度の横断整理",
+         title="被災者支援制度/自治体間比較",
+         lead="住まい修理・支援金・仮設住宅・災害ごみ。21市町村の対応状況と受付窓口を横並びで比較。"),
+    dict(file="hq-uto.html", out="ogp-hq-uto.png", tone="amber", art="hq",
+         label="宇土市",
+         title="災害対策本部会議/のまとめ",
+         lead="公開された全本部会議資料から、避難者数・住家被害・給水・罹災証明受付の推移を整理。"),
+    dict(file="shelters.html", out="ogp-shelters.png", tone="orange", art="shelter",
+         label="令和8年熊本地震",
+         title="開設中の避難所マップ",
+         lead="市町村別の指定避難所の開設・閉鎖状況、避難者数、所在地・設備情報を地図と一覧で確認。"),
+    dict(file="timeline.html", out="ogp-timeline.png", tone="blue", art="calendar_clock",
+         label="令和8年熊本地震",
+         title="日々の記録",
+         lead="発災初日から現在までの地震発生、避難、インフラ復旧、公的支援の動きを日系列でたどる記録。"),
+    dict(file="meetings.html", out="ogp-meetings.png", tone="teal", art="meeting",
+         label="支援団体合同会議",
+         title="火の国会議 議事録",
+         lead="行政・社協・民間支援団体が共有した現地課題、支援ニーズ、連携の協議経過と公式資料。"),
+    dict(file="terms.html", out="ogp-terms.png", tone="sky", art="dictionary",
+         label="災害用語を分かりやすく",
+         title="災害用語集",
+         lead="罹災証明・みなし仮設・公費解体・緊急修理など、災害時に使われる公的用語をやさしく解説。"),
+    dict(file="reconstruction-documents.html", out="ogp-reconstruction-documents.png", tone="blue", art="docs",
+         label="暮らしの再建 / テーマ別",
+         title="証明・申請の手続き",
+         lead="罹災証明書・被災届出証明の申請、被害箇所の撮影、必要書類と各自治体の受付窓口。"),
+    dict(file="reconstruction-money.html", out="ogp-reconstruction-money.png", tone="amber", art="money",
+         label="暮らしの再建 / テーマ別",
+         title="お金・支払いの支援",
+         lead="被災者生活再建支援金・義援金・各種見舞金・融資貸付・税や保険料の減免猶予。"),
+    dict(file="reconstruction-health-care.html", out="ogp-reconstruction-health.png", tone="pink", art="health",
+         label="暮らしの再建 / テーマ別",
+         title="健康・医療・介護の支援",
+         lead="保険証なし受診・医療費窓口負担の減免・介護保険サービス・こころの健康相談。"),
+    dict(file="reconstruction-family.html", out="ogp-reconstruction-family.png", tone="orange", art="family",
+         label="暮らしの再建 / テーマ別",
+         title="子ども・家族の支援",
+         lead="保育園・学校の再開、教科書・学用品の給与、給食費減免、育児相談と子育て支援。"),
+    dict(file="reconstruction-work-business.html", out="ogp-reconstruction-work.png", tone="purple", art="work",
+         label="暮らしの再建 / テーマ別",
+         title="仕事・事業の再開支援",
+         lead="雇用調整助成金・休業手当・事業者向け補助金・特別融資・労働相談窓口。"),
+    dict(file="reconstruction-agriculture-fishery.html", out="ogp-reconstruction-agri.png", tone="green", art="agri",
+         label="暮らしの再建 / テーマ別",
+         title="農業・漁業の復旧支援",
+         lead="農地・農業用施設・農機具・漁船の被害復旧支援、共済金・特別融資の公的相談。"),
+    dict(file="reconstruction-search.html", out="ogp-reconstruction-search.png", tone="teal", art="search",
+         label="暮らしの再建 / 横断検索",
+         title="自治体公式情報を探す",
+         lead="21市町村が公表する生活再建情報を、困りごとやキーワードから横断的に検索。"),
+    dict(file="reconstruction-official.html", out="ogp-reconstruction-official.png", tone="blue", art="nav",
+         label="暮らしの再建 / 自治体リンク",
+         title="自治体公式情報ナビ",
+         lead="各市町村の災害対策特設ページ、生活支援情報、窓口案内への公式リンク集。"),
+    dict(file="disaster.html", out="ogp-disaster-portal.png", tone="teal", art="portal",
+         label="令和8年熊本地震",
+         title="支援情報総合ポータル",
+         lead="被災された方の生活再建から自治体公式発表、避難所、ボランティアまで全情報を網羅。"),
+    dict(file="affected.html", out="ogp-affected.png", tone="amber", art="affected",
+         label="令和8年熊本地震",
+         title="被災された方へ",
+         lead="今すぐ必要な生活支援、住まいの確保、罹災証明、健康管理、相談窓口の総合案内。"),
+    dict(file="supporters.html", out="ogp-supporters.png", tone="green", art="supporters",
+         label="支援者・支援団体の方へ",
+         title="支援活動・連携ガイド",
+         lead="ボランティア参加、物資支援、現地連携会議、活動情報の発信ルールと注意点。"),
+    dict(file="official.html", out="ogp-official.png", tone="blue", art="official",
+         label="令和8年熊本地震",
+         title="国・県・市町村の公的情報",
+         lead="内閣府・熊本県・各市町村が発表する一次情報、災害救助法の適用、公的支援の最新通達。"),
+    dict(file="support.html", out="ogp-support-fields.png", tone="sky", art="support_fields",
+         label="令和8年熊本地震",
+         title="支援分野別インデックス",
+         lead="住まい、生活物資、医療介護、子育て、雇用、法律相談など分野別に支援窓口を整理。"),
 ]
 
 
