@@ -2,7 +2,7 @@
   "metadata": {
     "event": "令和8年熊本地震",
     "disasterDate": "2026-07-28",
-    "retrievedAt": "2026-09-10T20:56:57.973Z",
+    "retrievedAt": "2026-09-10T23:13:41.420Z",
     "scope": "各市町村の公式トップページ、確認済みの地震情報集約ページ、そのページに掲載された個別記事、および集約ページのページ送りを確認。令和8年7月28日以降の日付を公式ページ上で確認できた記事リンク",
     "caveat": "公式サイトの構造・公開方式・検索可否により網羅性は保証できません。未検出は情報が存在しないことを意味しません。内容と最新状況はリンク先の一次情報で確認してください。",
     "categoryNote": "分類は記事タイトルに基づく閲覧用の便宜的な分類です。"
@@ -11,7 +11,7 @@
     {
       "name": "熊本市",
       "officialUrl": "https://www.city.kumamoto.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -621,7 +621,7 @@
     {
       "name": "八代市",
       "officialUrl": "https://www.city.yatsushiro.lg.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2011,13 +2011,6 @@
           "category": "その他"
         },
         {
-          "title": "本日の応急給水活動について",
-          "url": "https://www.city.yatsushiro.lg.jp/kinkyu.html",
-          "date": "2026-09-09",
-          "time": "07:30",
-          "category": "ライフライン"
-        },
-        {
           "title": "建築士による被災住宅相談会を開催します",
           "url": "https://www.city.yatsushiro.lg.jp/kiji00327053/index.html",
           "date": "2026-09-09",
@@ -2051,6 +2044,13 @@
           "date": "2026-09-09",
           "time": "15:00",
           "category": "住まい・証明"
+        },
+        {
+          "title": "明日の応急給水活動について",
+          "url": "https://www.city.yatsushiro.lg.jp/kinkyu.html",
+          "date": "2026-09-09",
+          "time": "16:52",
+          "category": "ライフライン"
         },
         {
           "title": "被災した井戸等の修理を支援する制度について",
@@ -2379,7 +2379,7 @@
     {
       "name": "水俣市",
       "officialUrl": "https://localcms.city.minamata.lg.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2456,7 +2456,7 @@
     {
       "name": "山鹿市",
       "officialUrl": "https://www.city.yamaga.kumamoto.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2649,7 +2649,7 @@
     {
       "name": "菊池市",
       "officialUrl": "https://www.city.kikuchi.lg.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2760,7 +2760,7 @@
     {
       "name": "宇土市",
       "officialUrl": "https://www.city.uto.lg.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3245,6 +3245,13 @@
           "date": "2026-09-10",
           "time": "17:00",
           "category": "避難・安全"
+        },
+        {
+          "title": "避難所情報一覧（R8.9.10 17時時点）(PDF 約88KB)",
+          "url": "https://www.city.uto.lg.jp/d?q=4c1f685bc04434c8334b3c6ad761c4a5.pdf",
+          "date": "2026-09-10",
+          "time": "17:00",
+          "category": "避難・安全"
         }
       ],
       "sourcesChecked": [
@@ -3265,10 +3272,9 @@
         "https://www.city.uto.lg.jp/article/view/1244/16820.html",
         "https://www.city.uto.lg.jp/article/view/1244/16630.html"
       ],
-      "pagesFetched": 2,
+      "pagesFetched": 5,
       "errors": [
         "https://www.city.uto.lg.jp/category/list/1301.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/category/list/1301.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1302/16888.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/16888.html\ncurl: (22) The requested URL returned error: 403\n",
         "https://www.city.uto.lg.jp/article/view/1303/16352.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1303/16352.html\ncurl: (22) The requested URL returned error: 403\n",
         "https://www.city.uto.lg.jp/article/view/1307/16892.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16892.html\ncurl: (22) The requested URL returned error: 403\n",
         "https://www.city.uto.lg.jp/article/view/1310/16359.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16359.html\ncurl: (22) The requested URL returned error: 403\n",
@@ -3276,17 +3282,15 @@
         "https://www.city.uto.lg.jp/article/view/1007/16820.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1007/16820.html\ncurl: (22) The requested URL returned error: 403\n",
         "https://www.city.uto.lg.jp/article/view/1014/16416.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1014/16416.html\ncurl: (22) The requested URL returned error: 403\n",
         "https://www.city.uto.lg.jp/article/view/1145/16359.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1145/16359.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1014/16888.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1014/16888.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1243/16865.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1243/16865.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1033/16630.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1033/16630.html\ncurl: (22) The requested URL returned error: 403\n",
         "https://www.city.uto.lg.jp/article/view/1243/16892.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1243/16892.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1244/16820.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1244/16820.html\ncurl: (22) The requested URL returned error: 403\n",
         "https://www.city.uto.lg.jp/article/view/1244/16630.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1244/16630.html\ncurl: (22) The requested URL returned error: 403\n"
       ]
     },
     {
       "name": "上天草市",
       "officialUrl": "https://www.city.kamiamakusa.kumamoto.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3542,6 +3546,13 @@
           "category": "ごみ・生活"
         },
         {
+          "title": "【令和8年熊本地震】地震により被災した住宅の応急修理について",
+          "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23163.html",
+          "date": "2026-09-02",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
           "title": "上天草市立小中学校外国語指導助手(ALT)あっせん・任用支援等業...",
           "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/95/23109.html",
           "date": "2026-09-03",
@@ -3561,13 +3572,6 @@
           "date": "2026-09-09",
           "time": null,
           "category": "支援・制度"
-        },
-        {
-          "title": "【令和8年熊本地震】地震により被災した住宅の応急修理について",
-          "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23163.html",
-          "date": "2026-09-09",
-          "time": null,
-          "category": "住まい・証明"
         }
       ],
       "sourcesChecked": [
@@ -3651,7 +3655,7 @@
     {
       "name": "宇城市",
       "officialUrl": "https://www.city.uki.kumamoto.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4383,6 +4387,13 @@
           "category": "避難・安全"
         },
         {
+          "title": "2026年09月10日 令和8年熊本地震で被災した家屋等の解体・撤去について",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2622644",
+          "date": "2026-09-10",
+          "time": null,
+          "category": "その他"
+        },
+        {
           "title": "被災した家屋等の解体・撤去について（公費解体・自費解体） (PDF 757KB)",
           "url": "https://www.city.uki.kumamoto.jp/resource.php?e=96ef25c932743d9457a96603adbe3d80c9d7b92dab0c014318d5dcfa4577e39c1bc747cde0e0e87005d1d61f9b953ec9",
           "date": "2026-09-10",
@@ -4539,7 +4550,7 @@
     {
       "name": "天草市",
       "officialUrl": "https://www.city.amakusa.kumamoto.jp/default.html?site=1",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4763,7 +4774,7 @@
     {
       "name": "合志市",
       "officialUrl": "https://www.city.koshi.lg.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4791,7 +4802,7 @@
     {
       "name": "美里町",
       "officialUrl": "https://www.town.kumamoto-misato.lg.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4995,7 +5006,7 @@
     {
       "name": "大津町",
       "officialUrl": "https://www.town.ozu.kumamoto.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5095,7 +5106,7 @@
     {
       "name": "菊陽町",
       "officialUrl": "https://www.town.kikuyo.lg.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5326,7 +5337,7 @@
     {
       "name": "西原村",
       "officialUrl": "https://www.vill.nishihara.kumamoto.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5478,7 +5489,7 @@
     {
       "name": "御船町",
       "officialUrl": "https://www.town.mifune.kumamoto.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5713,7 +5724,7 @@
     {
       "name": "嘉島町",
       "officialUrl": "https://www.town.kumamoto-kashima.lg.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5916,7 +5927,7 @@
     {
       "name": "益城町",
       "officialUrl": "https://www.town.mashiki.lg.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6284,7 +6295,7 @@
     {
       "name": "甲佐町",
       "officialUrl": "https://www.town.kosa.lg.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6631,7 +6642,7 @@
     {
       "name": "氷川町",
       "officialUrl": "https://www.town.hikawa.kumamoto.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6999,13 +7010,6 @@
           "category": "支援・制度"
         },
         {
-          "title": "令和8年熊本地震で被災した家屋等の解体・撤去について",
-          "url": "https://www.town.hikawa.kumamoto.jp/kiji0036794/index.html",
-          "date": "2026-09-07",
-          "time": "10:13",
-          "category": "その他"
-        },
-        {
           "title": "令和8年熊本地震に係る「義援金」「寄附金」「ふるさと納税」の受付について",
           "url": "https://www.town.hikawa.kumamoto.jp/kiji0036758/index.html",
           "date": "2026-09-07",
@@ -7067,6 +7071,13 @@
           "date": "2026-09-10",
           "time": "18:49",
           "category": "ライフライン"
+        },
+        {
+          "title": "令和8年熊本地震で被災した家屋等の解体・撤去について",
+          "url": "https://www.town.hikawa.kumamoto.jp/kiji0036794/index.html",
+          "date": "2026-09-11",
+          "time": "08:09",
+          "category": "その他"
         }
       ],
       "sourcesChecked": [
@@ -7099,8 +7110,8 @@
         "https://www.town.hikawa.kumamoto.jp/list00196.html",
         "https://www.town.hikawa.kumamoto.jp/kiji0034889/index.html",
         "https://www.town.hikawa.kumamoto.jp/list00119.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036796/index.html",
         "https://www.town.hikawa.kumamoto.jp/kiji0036794/index.html",
+        "https://www.town.hikawa.kumamoto.jp/kiji0036796/index.html",
         "https://www.town.hikawa.kumamoto.jp/kiji0036787/index.html",
         "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
         "https://www.town.hikawa.kumamoto.jp/kiji0036817/index.html",
@@ -7170,7 +7181,7 @@
     {
       "name": "芦北町",
       "officialUrl": "https://www.town.ashikita.lg.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {
@@ -7234,7 +7245,7 @@
     {
       "name": "津奈木町",
       "officialUrl": "https://www.town.tsunagi.lg.jp/",
-      "checkedAt": "2026-09-10T20:56:57.973Z",
+      "checkedAt": "2026-09-10T23:13:41.420Z",
       "status": "confirmed",
       "updates": [
         {

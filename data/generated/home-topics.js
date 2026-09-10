@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-10T21:13:07.924Z",
-  "officialCheckedAt": "9/11 06:13",
+  "retrievedAt": "2026-09-10T23:29:23.046Z",
+  "officialCheckedAt": "9/11 08:29",
   "siteTopics": [
     {
       "date": "2026-09-11",
@@ -60,6 +60,14 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震で被災した家屋等の解体・撤去について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036794/index.html",
+      "date": "2026-09-11",
+      "time": "08:09",
+      "category": "その他",
+      "municipality": "氷川町"
+    },
+    {
       "title": "令和８年熊本地震により被災した学用品を配布します",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326935/index.html",
       "date": "2026-09-11",
@@ -74,14 +82,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "ごみ・生活",
       "municipality": "宇城市"
-    },
-    {
-      "title": "給水車による応急給水について",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036775/index.html",
-      "date": "2026-09-10",
-      "time": "18:49",
-      "category": "ライフライン",
-      "municipality": "氷川町"
     },
     {
       "title": "避難所について（9/10 17:00更新）",
