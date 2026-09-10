@@ -7,10 +7,18 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const origin = "https://www.yokatainet.jp";
 const siteName = "よか隊ネット熊本　災害・支援状況レポート";
 const excluded = new Set(["404.html"]);
-const organizationPages = new Set(["404.html", "index.html", "about.html", "join.html", "contact.html", "privacy.html", "accessibility.html"]);
 // ページ専用のOGP画像。python3 tools/build-ogp-images.py で作る。
 // ここに足したら画像も作ること（scripts/test-ogp.mjs が実体を確認する）。
 const specialImages = new Map([
+  ["404.html", "/ogp-404.png"],
+  ["index.html", "/ogp-home.png"],
+  ["about.html", "/ogp-about.png"],
+  ["join.html", "/ogp-join.png"],
+  ["contact.html", "/ogp-contact.png"],
+  ["privacy.html", "/ogp-privacy.png"],
+  ["accessibility.html", "/ogp-accessibility.png"],
+  ["kumamoto-support.html", "/ogp-kumamoto-support.png"],
+  ["municipality-updates.html", "/ogp-municipality-updates.png"],
   ["uto-waste.html", "/ogp-uto-waste.png"],
   ["uto-bulletin.html", "/ogp-uto-bulletin.png"],
   ["uto-housing.html", "/ogp-uto-housing.png"],
@@ -85,8 +93,8 @@ for (const file of files) {
   if (!title || !description) throw new Error(`${file}: title または description がありません`);
   html = stripSeo(html);
   const canonical = canonicalFor(file);
-  const isOrganizationPage = organizationPages.has(file) || /<body\b[^>]*class="[^"]*\borg-page\b/i.test(html);
-  const imagePath = specialImages.get(file) || (isOrganizationPage ? "/ogp-organization.png" : "/ogp-disaster.png");
+  const imagePath = specialImages.get(file);
+  if (!imagePath) throw new Error(`${file}: ページ専用OGP画像の割り当てがありません`);
   const image = `${origin}${imagePath}`;
   const pageTitle = title.split("｜")[0];
   const robots = excluded.has(file) ? "noindex,follow" : "index,follow,max-image-preview:large";

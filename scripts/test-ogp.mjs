@@ -8,6 +8,7 @@
 // を見る。画像は python3 tools/build-ogp-images.py で作る。
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import crypto from "node:crypto";
 import path from "node:path";
 
 const root = new URL("..", import.meta.url);
@@ -63,18 +64,7 @@ for (const page of pages) {
 // 力を入れたページが共通画像に戻ると、貼られたときに中身が伝わらない。
 const builder = read("tools/build-seo.mjs");
 const generator = read("tools/build-ogp-images.py");
-const DEDICATED = [
-  "uto-waste.html", "uto-bulletin.html", "uto-housing.html", "alert-channels.html",
-  "volunteer-centers.html", "official-timeline.html", "official-water-recovery.html", "official-response-tracks.html",
-  "hq-kumamoto.html", "hq-yatsushiro.html", "risai-certificate.html",
-  "hikawa-support.html", "uki-support.html", "reconstruction.html", "temporary-housing.html",
-  "guide.html", "municipalities.html", "municipality-support-compare.html", "hq-uto.html",
-  "shelters.html", "timeline.html", "meetings.html", "terms.html",
-  "reconstruction-documents.html", "reconstruction-money.html", "reconstruction-health-care.html",
-  "reconstruction-family.html", "reconstruction-work-business.html", "reconstruction-agriculture-fishery.html",
-  "reconstruction-search.html", "reconstruction-official.html", "disaster.html",
-  "affected.html", "supporters.html", "official.html", "support.html"
-];
+const DEDICATED = [...pages];
 for (const page of DEDICATED) {
   const file = used.get(page);
   assert.ok(file, `${page} が見つかりません`);
@@ -85,6 +75,8 @@ for (const page of DEDICATED) {
 // 専用画像は使い回さない（別のページが同じ絵だと区別が付かない）
 const dedicatedFiles = DEDICATED.map(page => used.get(page));
 assert.equal(new Set(dedicatedFiles).size, dedicatedFiles.length, "専用画像が複数のページで使われています");
+const dedicatedHashes = dedicatedFiles.map(file => crypto.createHash("sha256").update(fs.readFileSync(new URL(file, root))).digest("hex"));
+assert.equal(new Set(dedicatedHashes).size, dedicatedHashes.length, "ファイル名が異なっても画像内容が同一の専用OGPがあります");
 
 // 生成器の一覧と、実際の割り当てが揃っていること（作り忘れ・消し忘れを防ぐ）
 for (const page of DEDICATED) {
@@ -93,5 +85,6 @@ for (const page of DEDICATED) {
   assert.ok(generator.includes(`out="${used.get(page)}"`), `tools/build-ogp-images.py の出力名が ${used.get(page)} と一致しません`);
 }
 
-const shared = [...used.values()].filter(file => file === "ogp-disaster.png").length;
-console.log(`OGP: ${pages.length}ページ / 専用画像${new Set(dedicatedFiles).size}枚・共通${shared}ページ / 実寸1200x630・宣言一致・canonical一致 OK`);
+const shared = [...used.values()].filter(file => ["ogp-disaster.png", "ogp-organization.png"].includes(file)).length;
+assert.equal(shared, 0, "共通OGP画像を使っているページがあります");
+console.log(`OGP: ${pages.length}ページ / 全ページ専用${new Set(dedicatedFiles).size}枚 / 画像内容も一意・実寸1200x630・宣言一致・canonical一致 OK`);

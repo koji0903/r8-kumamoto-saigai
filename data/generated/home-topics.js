@@ -22,12 +22,12 @@ window.HOME_TOPICS = {
       "targetPage": "uki-support.html"
     },
     {
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "category": "機能改善",
-      "badge": "シェア最適化",
-      "title": "全災害ページ（25種）にページ内容に沿った専用OGP画像を生成・配備",
+      "badge": "全45ページ専用",
+      "title": "全45ページに、内容が伝わる専用OGP画像を設定",
       "url": "disaster.html",
-      "description": "SNSやLINEで共有された際に一目で内容が伝わるよう、各ページのテーマ・配色・独自ピクトグラムを盛り込んだ1200×630pxの専用OGP画像を生成し設定しました。",
+      "description": "SNSやLINEで共有した際にページを見分けられるよう、公開HTML全45ページへ固有の1200×630px画像を割り当てました。画像ファイル名と画像内容の重複、寸法、HTML・生成器の対応を自動検査します。",
       "targetPage": "disaster.html"
     },
     {
