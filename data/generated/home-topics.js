@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-09T23:36:57.916Z",
-  "officialCheckedAt": "9/10 08:36",
+  "retrievedAt": "2026-09-10T05:07:04.260Z",
+  "officialCheckedAt": "9/10 14:07",
   "siteTopics": [
     {
       "date": "2026-09-10",
@@ -60,28 +60,36 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "住家の「り災証明書」の発行について",
-      "url": "https://www.city.kumamoto.jp/kiji0032451/index.html",
+      "title": "令和８年度に企業版ふるさと納税の支援をいただいた企業のご紹介",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326702/index.html",
       "date": "2026-09-10",
-      "time": null,
-      "category": "住まい・証明",
+      "time": "13:13",
+      "category": "支援・制度",
+      "municipality": "八代市"
+    },
+    {
+      "title": "【令和8年熊本地震】被災者支援制度 （冊子）をご利用ください",
+      "url": "https://www.city.kumamoto.jp/kiji00372110/index.html",
+      "date": "2026-09-10",
+      "time": "10:30",
+      "category": "支援・制度",
       "municipality": "熊本市"
     },
     {
-      "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
+      "title": "2026年9月10日 令和8年熊本地震 関連情報 （9月10日10時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-09-10",
-      "time": null,
-      "category": "ごみ・生活",
+      "time": "10:00",
+      "category": "その他",
       "municipality": "宇城市"
     },
     {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-09-09",
-      "time": "20:42",
-      "category": "その他",
-      "municipality": "八代市"
+      "title": "令和8年熊本地震に伴う義援金、寄附金、ふるさと納税を受け付けます",
+      "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/sumai/3958.html",
+      "date": "2026-09-10",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "美里町"
     },
     {
       "title": "令和8年熊本地震に伴う災害ごみ仮置場への受入れについて",
@@ -114,14 +122,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "支援・制度",
       "municipality": "上天草市"
-    },
-    {
-      "title": "住宅・水道",
-      "url": "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=502",
-      "date": "2026-09-09",
-      "time": null,
-      "category": "ライフライン",
-      "municipality": "津奈木町"
     }
   ],
   "prefectureUpdates": [
