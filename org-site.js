@@ -182,7 +182,8 @@
     }
     sections.forEach(section=>{
       section.classList.add('motion-section');
-      if(section.matches('.home-current-v2'))mark(section,[section.querySelector('.kicker'),section.querySelector('.home-current-label'),section.querySelector('h2'),section.querySelector('.home-current-heading>p:last-of-type'),...section.querySelectorAll('.home-current-visual li')]);
+      if(section.matches('.home-topics-v2'))mark(section,[section.querySelector('.kicker'),section.querySelector('h2'),section.querySelector('.home-topics-lead'),section.querySelector('.home-topics-status'),...section.querySelectorAll('.home-topics-col')]);
+      else if(section.matches('.home-current-v2'))mark(section,[section.querySelector('.kicker'),section.querySelector('.home-current-label'),section.querySelector('h2'),section.querySelector('.home-current-heading>p:last-of-type'),...section.querySelectorAll('.home-current-visual li')]);
       else if(section.matches('.home-about-v2'))mark(section,[...section.querySelectorAll(':scope>div>*')]);
       else if(section.matches('.home-principle-v2'))mark(section,[section.querySelector('.kicker'),section.querySelector('h2'),section.querySelector('blockquote'),...section.querySelectorAll('.principle-flow li')]);
       else if(section.matches('.home-information-v2'))mark(section,[...section.querySelectorAll(':scope>div:first-child>*'),...section.querySelectorAll('.information-path>*')]);

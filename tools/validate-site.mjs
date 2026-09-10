@@ -20,7 +20,11 @@ const run = (command, args, label) => {
   if (result.status !== 0) process.exit(result.status ?? 1);
 };
 
-if (fix) run("node", ["tools/build-seo.mjs"], "SEO・サイト内検索の生成");
+if (fix) {
+  run("node", ["tools/build-home-topics.mjs"], "トップページトピックスの生成");
+  run("node", ["tools/build-seo.mjs"], "SEO・サイト内検索の生成");
+}
+run("node", ["tools/build-home-topics.mjs", "--check"], "トップページトピックス生成物");
 run("node", ["tools/build-seo.mjs", "--check"], "SEO生成物");
 run("node", ["tools/check-data.mjs"], "HTML・災害データ");
 run("node", ["scripts/build-site-phase.mjs", "--check"], "サイト局面");
@@ -57,7 +61,8 @@ const syntaxTargets = [
   "tools/fetch-municipality-updates.mjs",
   "tools/fetch-official-topics.mjs",
   "tools/fetch-volunteer-centers.mjs",
-  "tools/build-shelters.mjs"
+  "tools/build-shelters.mjs",
+  "tools/build-home-topics.mjs"
 ];
 for (const target of syntaxTargets) run("node", ["--check", target], `構文: ${target}`);
 

@@ -2,6 +2,7 @@
 // トップページ用に、国・熊本県・市町村の最新一次情報を整理する。
 // 本文の要約は作らず、公式ページ上の表題・日時・URLのみを保存する。
 import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { execFileSync } from "node:child_process";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -60,3 +61,4 @@ await mkdir(dirname(OUT),{recursive:true});
 await writeFile(OUT,JSON.stringify(dataset,null,2)+"\n");
 await writeFile(GENERATED,"// 生成物・直接編集しない。生成: node tools/fetch-official-topics.mjs\nwindow.OFFICIAL_TOPICS = "+JSON.stringify(dataset)+";\n");
 console.log(`国 ${national.length}件 / 県 ${prefecture.length}件 / 市町村 ${municipalities.length}件`);
+execFileSync(process.execPath, [join(ROOT, "tools/build-home-topics.mjs")], { cwd: ROOT, stdio: "inherit" });
