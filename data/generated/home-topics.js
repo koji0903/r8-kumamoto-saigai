@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-11T21:23:53.770Z",
-  "officialCheckedAt": "9/12 06:23",
+  "retrievedAt": "2026-09-11T23:37:00.607Z",
+  "officialCheckedAt": "9/12 08:37",
   "siteTopics": [
     {
       "date": "2026-09-11",
@@ -60,11 +60,11 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
+      "title": "2026年9月12日 令和8年熊本地震 関連情報 （9月12日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-09-12",
-      "time": null,
-      "category": "ごみ・生活",
+      "time": "08:00",
+      "category": "その他",
       "municipality": "宇城市"
     },
     {
@@ -126,23 +126,23 @@ window.HOME_TOPICS = {
   ],
   "prefectureUpdates": [
     {
-      "title": "令和8年熊本地震による人的被害等の状況（8月31日14時00分時点）",
-      "url": "https://www.pref.kumamoto.jp/uploaded/attachment/318138.pdf",
-      "date": "2026-08-31",
+      "title": "（参考）令和8年熊本地震による人的被害等の状況（9月11日14時00分時点）",
+      "url": "https://www.pref.kumamoto.jp/uploaded/life/280084_889065_misc.pdf",
+      "date": "2026-09-11",
       "time": "14:00",
       "kind": "県公式集計"
     },
     {
-      "title": "第22回政府非常災害現地対策本部会議、第29回災害対策本部会議",
+      "title": "【第3回】令和8年熊本地震復旧・復興本部会議",
       "url": "https://www.pref.kumamoto.jp/soshiki/222/274487.html",
-      "date": "2026-08-31",
+      "date": "2026-09-11",
       "time": "14:00",
       "kind": "災害対策本部"
     },
     {
       "title": "令和8年熊本地震に関する情報",
       "url": "https://www.pref.kumamoto.jp/soshiki/1/274517.html",
-      "date": "2026-08-31",
+      "date": "2026-09-11",
       "time": null,
       "kind": "県の情報集約"
     }

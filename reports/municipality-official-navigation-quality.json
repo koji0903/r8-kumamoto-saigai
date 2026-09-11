@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-11T21:04:05.830Z",
+  "generatedAt": "2026-09-11T23:20:03.549Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 846,
+  "inputCount": 848,
   "displayCandidateCount": 577,
-  "classifiedPageCount": 679,
+  "classifiedPageCount": 681,
   "categoryReport": {
     "home": {
       "total": 183,
@@ -31,15 +31,15 @@
       "low": 0
     },
     "family_education": {
-      "total": 85,
-      "high": 8,
-      "medium": 30,
-      "low": 47
+      "total": 86,
+      "high": 9,
+      "medium": 29,
+      "low": 48
     },
     "work_business": {
-      "total": 58,
+      "total": 57,
       "high": 18,
-      "medium": 40,
+      "medium": 39,
       "low": 0
     },
     "agriculture_fishery": {
@@ -92,7 +92,7 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 96,
+      "classified": 98,
       "displayCandidates": 81,
       "fallback": true
     },
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 251,
-    "medium": 326,
-    "low": 102
+    "high": 252,
+    "medium": 325,
+    "low": 104
   },
   "unclassifiedCount": 40,
   "unclassifiedItems": [
@@ -321,18 +321,18 @@
     },
     {
       "municipalityName": "宇城市",
+      "title": "2026年09月11日 令和8年熊本地震 関連情報 （9月12日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699"
+    },
+    {
+      "municipalityName": "宇城市",
       "title": "宇城市おくやみコーナーを開設しています（令和8年熊本地震に伴う災害対応のため休止中）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2601731"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年9月11日 令和8年熊本地震 関連情報 （9月11日18時00分更新）",
+      "title": "2026年9月12日 令和8年熊本地震 関連情報 （9月12日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
-    },
-    {
-      "municipalityName": "宇城市",
-      "title": "2026年09月11日 令和8年熊本地震 関連情報 （9月11日18時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699"
     },
     {
       "municipalityName": "美里町",
@@ -1049,7 +1049,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 3
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1103,5 +1103,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 680
+  "previousClassifiedPageCount": 679
 }
