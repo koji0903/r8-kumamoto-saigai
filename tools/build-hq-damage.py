@@ -217,7 +217,8 @@ def main():
             if not path.exists():
                 sys.exit(f"PDFがありません: {path}\n先に  node tools/fetch-hq.mjs  を実行してください。")
             snap = parse_damage(path)
-            snap.update(meeting=meeting["meeting"], govMeeting=meeting["govMeeting"],
+            snap.update(meeting=meeting["meeting"], meetingType=meeting.get("meetingType", "response"),
+                        govMeeting=meeting["govMeeting"],
                         sourceUrl=doc["url"], file=doc["file"])
             problems, skipped = verify(snap)
             if problems:
@@ -244,10 +245,10 @@ def main():
     body = {
         "metadata": {
             "source": index["source"],
-            "sourceName": "熊本県 災害対策本部会議",
+            "sourceName": "熊本県 災害対策・復旧復興本部会議",
             "generatedFrom": "sources/official/hq/*.pdf",
             "latest": {"date": latest["date"], "time": latest["time"],
-                       "meeting": latest["meeting"], "govMeeting": latest["govMeeting"],
+                       "meeting": latest["meeting"], "meetingType": latest["meetingType"], "govMeeting": latest["govMeeting"],
                        "url": latest["sourceUrl"]},
             "certificationAsOf": {"date": cert_source["date"], "time": cert_source["time"],
                                   "url": cert_source["sourceUrl"]} if cert_source else None,
@@ -256,7 +257,7 @@ def main():
         "municipalityOrder": MUNICIPALITIES,
         "certification": cert_source["certification"] if cert_source else {},
         "snapshots": [
-            {k: s[k] for k in ("date", "time", "meeting", "govMeeting", "sourceUrl",
+            {k: s[k] for k in ("date", "time", "meeting", "meetingType", "govMeeting", "sourceUrl",
                                "columns", "municipalities", "totals", "affectedCounts",
                                "extraRows", "notes")}
             for s in snapshots

@@ -270,6 +270,8 @@ window.REPORT_DATA = {
       title: "ホテル避難は401件・906人", detail: "受入可能181施設、申込1,307件、マッチング401件・906人と報告されました。",
       pdf: "sources/hinokuni-meetings/20260821火の国会議514回.pdf"
     }
+    ,{ date:"2026-09-08", meeting:525, page:4, category:"住まい", areas:["熊本市","八代市","宇土市","宇城市","美里町","甲佐町","氷川町"], title:"建設型応急住宅は22団地584戸へ", detail:"八代市169戸、宇城市149戸など7市町で整備。氷川町吉本仮設20戸は9月5日に入居開始。", pdf:"sources/hinokuni-meetings/20260908火の国会議525回.pdf" },
+    { date:"2026-09-11", meeting:526, page:4, category:"住まい", areas:["熊本市","八代市","宇土市","宇城市","美里町","甲佐町","氷川町"], title:"建設型応急住宅は22団地594戸、入居開始へ", detail:"9月8日時点（熊本市除く）で建設型20戸43人、賃貸型111戸269人が入居。", pdf:"sources/hinokuni-meetings/20260911火の国会議526回.pdf" }
   ],
   supportCategories: [
     { key: "materials", label: "物資・食料", description: "飲料水、衛生用品、寝具、炊き出しなど" },
@@ -331,6 +333,10 @@ window.REPORT_DATA = {
     { date:"2026-08-08", meeting:502, page:9, category:"welfare", title:"被災ペットの一時預かりを受付", detail:"熊本県獣医師会を窓口に、被災ペットの一時預かり受付が開始されたと案内されました。", areas:[], pdf:"sources/hinokuni-meetings/20260808火の国会議502回.pdf" },
     { date:"2026-08-08", meeting:502, page:9, category:"housing", title:"家屋保全・緊急修理の支援を前進", detail:"県要請のブルーシート展張は八代市24棟、宇城市18棟。氷川町では緊急修理制度の簡易化した仕組みを実施し、県域の瓦業者による支援準備も報告されました。", areas:["八代市","宇城市","氷川町"], pdf:"sources/hinokuni-meetings/20260808火の国会議502回.pdf" },
     { date:"2026-08-08", meeting:502, page:10, category:"volunteer", title:"写真洗浄と支援団体向け助成を案内", detail:"八代・氷川の避難所と災害VCへ写真洗浄のチラシを配布。ボラGO、日本財団、中央共同募金会、KEIRIN等の助成・交通費支援情報も共有されました。", areas:["八代市","氷川町"], pdf:"sources/hinokuni-meetings/20260808火の国会議502回.pdf" }
+    ,{ date:"2026-09-08", meeting:525, page:6, category:"volunteer", title:"災害VCの残ニーズは八代市約2,400件", detail:"宇城市約1,300件、氷川町約300件、宇土市約160件、熊本市約110件。現地調査人員、平日の参加者、技術系支援が課題。", areas:["八代市","宇城市","氷川町","宇土市","熊本市"], pdf:"sources/hinokuni-meetings/20260908火の国会議525回.pdf" },
+    { date:"2026-09-08", meeting:525, page:9, category:"children", title:"被災した子どもの居場所づくりを助成", detail:"民間団体も申請可能。国10分の10、上限500万円。第一次公募は9月15日までで、市町との事前調整が必要。", areas:[], pdf:"sources/hinokuni-meetings/20260908火の国会議525回.pdf" },
+    { date:"2026-09-11", meeting:526, page:9, category:"housing", title:"仮設団地で移動店舗販売を開始", detail:"9月15日から氷川町の吉本・鹿島仮設団地で開始予定。仮設の整備・入居状況を見ながら展開。", areas:["氷川町"], pdf:"sources/hinokuni-meetings/20260911火の国会議526回.pdf" },
+    { date:"2026-09-11", meeting:526, page:14, category:"housing", title:"解体・修理・賃貸住宅の判断支援が課題", detail:"半壊で解体を選ぶ前の比較、公費解体の部分解体・残置物、賃貸での大家との調整など、専門家につなぐ必要性を共有。", areas:[], pdf:"sources/hinokuni-meetings/20260911火の国会議526回.pdf" }
   ],
   metrics: [
     { key: "evacuees", label: "避難者", unit: "人", color: "#e45e35" },
@@ -737,5 +743,23 @@ window.REPORT_DATA = {
       summary: "避難所は38か所、避難者は1,970人まで減少。復旧・復興本部会議の情報を基に、住まい、罹災証明、地域支え合いへの移行が共有されました。",
       actions: ["避難所縮小後の個別世帯を把握", "地域支え合いセンターと生活再建相談をつなぐ"], note: "住家被害は推定値です。現在の状況は各自治体の公式発表を確認してください。"
     }
-  ]
+,
+    {
+      date: "2026-09-08", meeting: 525, disasterDay: 43, attendees: 48,
+      pdf: "sources/hinokuni-meetings/20260908火の国会議525回.pdf", areas: ["熊本市", "八代市", "宇土市", "宇城市", "美里町", "甲佐町", "氷川町"],
+      stats: { injured: 404, deaths: 38, evacuees: 1970, shelters: 38, outages: null, outageStatus: "水道本管は応急復旧", homes: 64903, waterOutages: 0, waterOutageAreas: [] },
+      topics: ["被害", "避難", "住まい", "証明", "ボランティア", "子ども", "物資", "要配慮者", "外国人", "ペット", "家屋保全"],
+      headline: "仮設住宅584戸へ、災害VCは長期支援への移行を準備",
+      summary: "建設型応急住宅は7市町22団地584戸へ拡大しました。災害VCでは八代市約2,400件など多数の残ニーズがあり、現地調査と技術系支援、平日の担い手確保が課題です。",
+      actions: ["地域支え合いセンターを順次設置", "9月中の土日に災害VC現地調査員を増員", "子どもの居場所づくり支援を公募"], note: "被害統計は9月4日の第2回復旧・復興本部会議資料。住家被害は推定値です。"
+    },
+    {
+      date: "2026-09-11", meeting: 526, disasterDay: 46, attendees: 61,
+      pdf: "sources/hinokuni-meetings/20260911火の国会議526回.pdf", areas: ["熊本市", "八代市", "宇土市", "宇城市", "美里町", "甲佐町", "氷川町", "益城町", "嘉島町", "御船町", "芦北町"],
+      stats: { injured: 407, deaths: 38, evacuees: 1771, shelters: 37, outages: null, outageStatus: "水道本管は応急復旧", homes: 68851, waterOutages: 0, waterOutageAreas: [] },
+      topics: ["被害", "避難", "住まい", "証明", "ボランティア", "車中泊", "子ども", "物資", "要配慮者", "外国人", "ペット", "家屋保全"],
+      headline: "罹災証明交付4万7千件、仮設住宅で生活支援が始まる",
+      summary: "罹災証明書の交付は47,079件、避難者は1,771人となりました。応急仮設住宅は594戸へ増え、入居開始後の移動販売や地域支え合いへの接続が具体化しています。",
+      actions: ["9月15日から仮設団地で移動店舗販売", "八代市の被災井戸約3,400件を順次調査", "解体・修理・賃貸の判断を専門相談へつなぐ"], note: "被害統計は9月11日の第3回復旧・復興本部会議資料。住家被害は県公式資料の合計68,851棟を採用（火の国会議資料は68,858棟と記載）。住家被害は推定値。断水0戸は水道本管の応急復旧に関する扱いで、井戸等の個別課題は継続しています。"
+    }  ]
 };

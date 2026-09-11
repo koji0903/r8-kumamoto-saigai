@@ -19,7 +19,7 @@ if(indexHost && window.HQ_INDEX){
   indexHost.innerHTML = [...window.HQ_INDEX.meetings].filter(m => m.documents.length).reverse().map(m => `
     <article>
       <header>
-        <b>第${m.meeting}回</b>
+        <b>${m.meetingType === "recovery" ? "復旧・復興本部会議" : "災害対策本部会議"} 第${m.meeting}回</b>
         ${m.govMeeting ? `<span>政府非常災害現地対策本部会議 第${m.govMeeting}回 と合同</span>` : ""}
       </header>
       <div>${[...m.documents]
@@ -100,9 +100,9 @@ if(HQ){
     host.innerHTML = `
       <div class="hq-head">
         <div>
-          <p class="hq-eyebrow">熊本県 災害対策本部会議（公式）</p>
+          <p class="hq-eyebrow">熊本県 災害対策・復旧復興本部会議（公式）</p>
           <h4>${esc(name)}の被害状況</h4>
-          <span>${asOf(latest)}時点 ／ 第${latest.meeting}回${latest.govMeeting ? `・政府第${latest.govMeeting}回` : ""}</span>
+          <span>${asOf(latest)}時点 ／ ${latest.meetingType === "recovery" ? "復旧・復興本部会議" : "災害対策本部会議"} 第${latest.meeting}回${latest.govMeeting ? `・政府第${latest.govMeeting}回` : ""}</span>
         </div>
         <a href="${esc(latest.sourceUrl)}" target="_blank" rel="noopener">この資料（PDF） ↗</a>
       </div>

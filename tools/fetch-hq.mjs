@@ -16,6 +16,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const INDEX_URL = "https://www.pref.kumamoto.jp/soshiki/222/274487.html";
+const RECOVERY_INDEX_URL = "https://www.pref.kumamoto.jp/soshiki/5/278881.html";
 const ORIGIN = "https://www.pref.kumamoto.jp";
 const OUT_DIR = join(ROOT, "sources/official");
 const PDF_DIR = join(OUT_DIR, "hq");
@@ -31,52 +32,54 @@ const strip = s => s.replace(/<[^>]+>/g, "")
   .replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"')
   .trim();
 
-// 「〇第7回政府非常災害現地対策本部会議、第14回災害対策本部会議」から回数を取り出す
-const parseHeading = text => ({
-  heading: text.replace(/^[〇○]/, "").trim(),
-  meeting: Number(text.match(/第(\d+)回災害対策本部会議/)?.[1]) || null,
-  govMeeting: Number(text.match(/第(\d+)回政府非常災害現地対策本部会議/)?.[1]) || null
-});
-
-const html = await get(INDEX_URL);
-
-// 見出しとPDFリンクを出現順に拾い、直前の見出しをその資料の所属会議とする
-const token = /<h[2-4][^>]*>([\s\S]*?)<\/h[2-4]>|<a[^>]+href="(\/uploaded\/attachment\/\d+\.pdf)"[^>]*>([\s\S]*?)<\/a>/g;
 const meetings = [];
-let current = null, match;
-while ((match = token.exec(html))) {
-  if (match[1] !== undefined) {
-    const text = strip(match[1]);
-    if (!/災害対策本部会議/.test(text)) continue;
-    current = { ...parseHeading(text), documents: [] };
-    meetings.push(current);
-  } else if (current) {
-    const label = strip(match[3]);
-    current.documents.push({
-      // 「議事録（PDFファイル：147KB）」→ 「議事録」
-      title: label.replace(/（PDFファイル：[^）]*）/g, "").trim(),
-      label,
-      file: match[2].split("/").pop(),
-      url: ORIGIN + match[2]
-    });
+
+const parsePage = (html, sourceUrl, meetingType) => {
+  const token = /<h([2-4])[^>]*>([\s\S]*?)<\/h[2-4]>|<a[^>]+href="(\/uploaded\/[^"?#]+\.pdf)"[^>]*>([\s\S]*?)<\/a>/g;
+  let current = null, match;
+  while ((match = token.exec(html))) {
+    if (match[2] !== undefined) {
+      const text = strip(match[2]);
+      const number = meetingType === "recovery"
+        ? Number(text.match(/第(\d+)回.*復旧・復興本部会議/)?.[1]) || null
+        : Number(text.match(/第(\d+)回災害対策本部会議/)?.[1]) || null;
+      if (number) {
+        current = {
+          heading: text.replace(/^[〇○]/, "").trim(), meetingType, meeting: number,
+          govMeeting: Number(text.match(/第(\d+)回政府非常災害現地対策本部会議/)?.[1]) || null,
+          sourceUrl, documents: []
+        };
+        meetings.push(current);
+      } else if (match[1] === "2") current = null;
+    } else if (current) {
+      const label = strip(match[4]);
+      current.documents.push({
+        title: label.replace(/（PDFファイル：[^）]*）/g, "").trim(), label,
+        file: match[3].split("/").pop(), url: ORIGIN + match[3]
+      });
+    }
   }
-}
+};
+
+parsePage(await get(INDEX_URL), INDEX_URL, "response");
+parsePage(await get(RECOVERY_INDEX_URL), RECOVERY_INDEX_URL, "recovery");
 
 if (!meetings.length) throw new Error("会議の見出しを1件も拾えませんでした。ページ構成が変わった可能性があります。");
 const total = meetings.reduce((n, m) => n + m.documents.length, 0);
 if (!total) throw new Error("PDFリンクを1件も拾えませんでした。ページ構成が変わった可能性があります。");
 
 await mkdir(PDF_DIR, { recursive: true });
-const catalog = { source: INDEX_URL, retrievedAt: new Date().toISOString(), meetings };
+const catalog = { source: INDEX_URL, sources: [INDEX_URL, RECOVERY_INDEX_URL], retrievedAt: new Date().toISOString(), meetings };
 await writeFile(join(OUT_DIR, "hq-index.json"), JSON.stringify(catalog, null, 2) + "\n");
 
 // official.html が資料一覧を出すために読む（生成物・直接編集しない）
 await writeFile(join(ROOT, "data/generated/hq-index.js"),
   "// 生成物・直接編集しない。生成: node tools/fetch-hq.mjs\n"
   + "window.HQ_INDEX = " + JSON.stringify({
-      source: catalog.source, retrievedAt: catalog.retrievedAt,
+      source: catalog.source, sources: catalog.sources, retrievedAt: catalog.retrievedAt,
       meetings: meetings.map(m => ({
-        meeting: m.meeting, govMeeting: m.govMeeting,
+        heading: m.heading, meetingType: m.meetingType, meeting: m.meeting,
+        govMeeting: m.govMeeting, sourceUrl: m.sourceUrl,
         documents: m.documents.map(d => ({ title: d.title, url: d.url }))
       }))
     }) + ";\n");
