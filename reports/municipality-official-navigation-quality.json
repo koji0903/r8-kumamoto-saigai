@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T16:35:23.078Z",
+  "generatedAt": "2026-09-11T20:45:30.641Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 847,
@@ -1014,7 +1014,7 @@
     "non_official_url": 1,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 18,
+  "warningCount": 17,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1035,11 +1035,6 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_minamata",
       "count": 1
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kikuchi",
-      "count": 2
     },
     {
       "code": "RETRIEVAL_ISSUE",
@@ -1108,5 +1103,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 682
+  "previousClassifiedPageCount": 680
 }

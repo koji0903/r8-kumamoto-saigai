@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-11T16:55:10.192Z",
+  "generatedAt": "2026-09-11T21:03:14.321Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-11T16:35:23.078Z",
+    "generatedAt": "2026-09-11T20:45:30.641Z",
     "inputCount": 847,
     "classifiedPageCount": 680,
     "displayCandidateCount": 577,
     "deltaFromPrevious": {
-      "inputCount": -2,
-      "classifiedPageCount": -2,
+      "inputCount": 0,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 4,
       "limitHours": 336
     }
   },
@@ -283,11 +283,6 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_minamata",
       "count": 1
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kikuchi",
-      "count": 2
     },
     {
       "code": "RETRIEVAL_ISSUE",
