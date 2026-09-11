@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-11T20:45:30.641Z",
+  "generatedAt": "2026-09-11T21:04:05.830Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 847,
+  "inputCount": 846,
   "displayCandidateCount": 577,
-  "classifiedPageCount": 680,
+  "classifiedPageCount": 679,
   "categoryReport": {
     "home": {
       "total": 183,
@@ -32,8 +32,8 @@
     },
     "family_education": {
       "total": 85,
-      "high": 9,
-      "medium": 29,
+      "high": 8,
+      "medium": 30,
       "low": 47
     },
     "work_business": {
@@ -92,7 +92,7 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 97,
+      "classified": 96,
       "displayCandidates": 81,
       "fallback": true
     },
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 252,
-    "medium": 325,
-    "low": 103
+    "high": 251,
+    "medium": 326,
+    "low": 102
   },
   "unclassifiedCount": 40,
   "unclassifiedItems": [
@@ -1049,7 +1049,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 2
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
