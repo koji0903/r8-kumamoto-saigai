@@ -197,6 +197,10 @@ ART = {
 }
 
 PAGES = [
+    dict(file="yatsushiro-support.html", out="ogp-yatsushiro-support.png", tone="blue", art="support_fields",
+         label="八代市｜被災された方へ",
+         title="被災者応援ガイドブック/第6版を分かりやすく",
+         lead="全50制度を対象、金額、期限、必要書類から整理。住家被害判定から主な支援候補も確認できます。"),
     dict(file="index.html", out="ogp-home.png", tone="teal", art="portal",
          label="よか隊ネット熊本",
          title="災害・支援状況レポート",

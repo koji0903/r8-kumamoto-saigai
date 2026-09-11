@@ -5,6 +5,15 @@ window.HOME_TOPICS = {
   "siteTopics": [
     {
       "date": "2026-09-11",
+      "category": "八代市",
+      "badge": "第6版・全50制度",
+      "title": "八代市：被災者応援ガイドブック第6版を分かりやすく整理",
+      "url": "yatsushiro-support.html",
+      "description": "八代市公式の58ページを読み解き、全50制度を対象者、金額、期限、必要書類、窓口から整理。住家被害判定による支援候補、応急仮設住宅、修理、井戸、減免、事業・農業支援を確認できます。",
+      "targetPage": "yatsushiro-support.html"
+    },
+    {
+      "date": "2026-09-11",
       "category": "熊本市",
       "badge": "条件判定＋全95項目",
       "title": "熊本市：被災者支援制度95項目を、状況と目的から選べるチラシ型ガイドへ",
@@ -47,15 +56,6 @@ window.HOME_TOPICS = {
       "url": "municipalities.html",
       "description": "各市町村の公式発表タイムライン、県本部会議に基づく被害・避難状況、火の国会議の活動記録をタブ切り替えで一体的に閲覧できるよう全面統合リニューアルしました。",
       "targetPage": "municipalities.html"
-    },
-    {
-      "date": "2026-09-08",
-      "category": "暮らしの再建",
-      "badge": "ナビゲーション拡充",
-      "title": "暮らしの再建ナビ：生活再建4ステップと困りごと別公的支援ナビを全面拡充",
-      "url": "reconstruction.html",
-      "description": "「安全確保と被害記録」「当面の住まい」「公的支援の申請」「生活と住まいの再建」の進め方目安と、証明・お金・住まい・健康・仕事の困りごと別ガイドを新設しました。",
-      "targetPage": "reconstruction.html"
     }
   ],
   "municipalityUpdates": [
