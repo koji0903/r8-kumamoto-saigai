@@ -251,9 +251,33 @@ jobs:
           for attempt in 1 2 3; do
             git fetch origin main
             if ! git rebase origin/main; then
-              git rebase --abort || true
-              echo "最新mainとの統合に失敗しました。生成済みデータは公開せず終了します。"
-              exit 1
+              conflicts="$(git diff --name-only --diff-filter=U)"
+              generated_only=true
+              while IFS= read -r conflict; do
+                case "${conflict}" in
+                  index.html|sitemap.xml|public-data/site-search-index.json|data/generated/home-topics.js)
+                    ;;
+                  *)
+                    generated_only=false
+                    ;;
+                esac
+              done <<< "${conflicts}"
+              if [[ -z "${conflicts}" || "${generated_only}" != true ]]; then
+                git rebase --abort || true
+                echo "::error::一次情報または手書きページが競合したため、自動解決せず終了します。"
+                printf '%s\n' "${conflicts}"
+                exit 1
+              fi
+              echo "再生成可能なファイルのみ競合しました。最新mainを基準に生成し直します。"
+              while IFS= read -r conflict; do
+                git checkout --ours -- "${conflict}"
+                git add "${conflict}"
+              done <<< "${conflicts}"
+              GIT_EDITOR=true git rebase --continue
+              npm run preflight
+              git add '*.html' sitemap.xml public-data/site-search-index.json data/generated/home-topics.js
+              git add -u
+              git commit --amend --no-edit
             fi
             if git push origin HEAD:main; then
               exit 0
