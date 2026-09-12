@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-11T23:37:21.864Z",
+  "generatedAt": "2026-09-12T04:59:13.406Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-11T23:20:03.549Z",
-    "inputCount": 848,
-    "classifiedPageCount": 681,
+    "generatedAt": "2026-09-12T04:42:49.791Z",
+    "inputCount": 847,
+    "classifiedPageCount": 680,
     "displayCandidateCount": 577,
     "deltaFromPrevious": {
-      "inputCount": 2,
-      "classifiedPageCount": 2,
+      "inputCount": -1,
+      "classifiedPageCount": -1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 7,
+      "ageHours": 12,
       "limitHours": 336
     }
   },
@@ -36,7 +36,7 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 138,
+        "classified": 137,
         "displayCandidates": 113,
         "fallback": true
       },
@@ -162,15 +162,15 @@
         "low": 0
       },
       "family_education": {
-        "total": 86,
+        "total": 85,
         "high": 9,
         "medium": 29,
-        "low": 48
+        "low": 47
       },
       "work_business": {
-        "total": 57,
+        "total": 58,
         "high": 18,
-        "medium": 39,
+        "medium": 40,
         "low": 0
       },
       "agriculture_fishery": {
@@ -189,7 +189,7 @@
     "confidence": {
       "high": 252,
       "medium": 325,
-      "low": 104
+      "low": 103
     },
     "unclassifiedCount": 40,
     "excludedCount": 38,
@@ -287,7 +287,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 17
     },
     {
       "code": "HTTP_404_CANDIDATE",

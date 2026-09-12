@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-11T23:37:00.607Z",
-  "officialCheckedAt": "9/12 08:37",
+  "retrievedAt": "2026-09-12T04:58:59.958Z",
+  "officialCheckedAt": "9/12 13:58",
   "siteTopics": [
     {
       "date": "2026-09-11",
@@ -60,20 +60,20 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-09-12",
+      "time": "09:13",
+      "category": "その他",
+      "municipality": "八代市"
+    },
+    {
       "title": "2026年9月12日 令和8年熊本地震 関連情報 （9月12日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-09-12",
       "time": "08:00",
       "category": "その他",
       "municipality": "宇城市"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-09-11",
-      "time": "21:19",
-      "category": "その他",
-      "municipality": "八代市"
     },
     {
       "title": "令和８年熊本地震における支援の状況について",
@@ -100,6 +100,14 @@ window.HOME_TOPICS = {
       "municipality": "熊本市"
     },
     {
+      "title": "【熊本地震】9月12日（土）、13日（日）の窓口業務について",
+      "url": "https://www.city.uto.lg.jp/article/view/1014/16528.html",
+      "date": "2026-09-11",
+      "time": null,
+      "category": "その他",
+      "municipality": "宇土市"
+    },
+    {
       "title": "【実施期間延長】熊本地震に伴う被災者を対象として市内温泉施設で無料入浴支援を実施します",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23205.html",
       "date": "2026-09-11",
@@ -114,14 +122,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "その他",
       "municipality": "合志市"
-    },
-    {
-      "title": "令和8年熊本地震に伴う「ワンストップ窓口」終了のお知らせ",
-      "url": "https://www.town.ozu.kumamoto.jp/page/26732.html",
-      "date": "2026-09-11",
-      "time": null,
-      "category": "その他",
-      "municipality": "大津町"
     }
   ],
   "prefectureUpdates": [

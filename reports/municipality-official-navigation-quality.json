@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-11T23:20:03.549Z",
+  "generatedAt": "2026-09-12T04:42:49.791Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 848,
+  "inputCount": 847,
   "displayCandidateCount": 577,
-  "classifiedPageCount": 681,
+  "classifiedPageCount": 680,
   "categoryReport": {
     "home": {
       "total": 183,
@@ -31,15 +31,15 @@
       "low": 0
     },
     "family_education": {
-      "total": 86,
+      "total": 85,
       "high": 9,
       "medium": 29,
-      "low": 48
+      "low": 47
     },
     "work_business": {
-      "total": 57,
+      "total": 58,
       "high": 18,
-      "medium": 39,
+      "medium": 40,
       "low": 0
     },
     "agriculture_fishery": {
@@ -62,7 +62,7 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 138,
+      "classified": 137,
       "displayCandidates": 113,
       "fallback": true
     },
@@ -165,7 +165,7 @@
   "confidence": {
     "high": 252,
     "medium": 325,
-    "low": 104
+    "low": 103
   },
   "unclassifiedCount": 40,
   "unclassifiedItems": [
@@ -377,8 +377,8 @@
     "public_relations": 9,
     "disaster_preparedness": 6,
     "facility_notice": 8,
-    "index_page": 15,
     "mayor_message": 2,
+    "index_page": 15,
     "mutual_aid": 1,
     "overall_guide": 3,
     "press": 3
@@ -708,17 +708,17 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "八代市",
@@ -1039,7 +1039,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 17
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1103,5 +1103,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 679
+  "previousClassifiedPageCount": 681
 }
