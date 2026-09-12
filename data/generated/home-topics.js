@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-12T20:57:24.303Z",
-  "officialCheckedAt": "9/13 05:57",
+  "retrievedAt": "2026-09-12T23:22:20.370Z",
+  "officialCheckedAt": "9/13 08:22",
   "siteTopics": [
     {
       "date": "2026-09-11",
@@ -60,20 +60,20 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震関連情報",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
+      "date": "2026-09-13",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "氷川町"
+    },
+    {
       "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
       "date": "2026-09-13",
       "time": null,
       "category": "ごみ・生活",
       "municipality": "宇城市"
-    },
-    {
-      "title": "令和8年熊本地震で被災した井戸の応急修理について",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036836/index.html",
-      "date": "2026-09-12",
-      "time": "20:29",
-      "category": "住まい・証明",
-      "municipality": "氷川町"
     },
     {
       "title": "熊本県八代市",
