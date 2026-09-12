@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-12T11:12:54.997Z",
+  "generatedAt": "2026-09-12T15:55:27.490Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-12T10:55:25.382Z",
-    "inputCount": 848,
-    "classifiedPageCount": 681,
-    "displayCandidateCount": 578,
+    "generatedAt": "2026-09-12T15:36:53.520Z",
+    "inputCount": 850,
+    "classifiedPageCount": 683,
+    "displayCandidateCount": 580,
     "deltaFromPrevious": {
-      "inputCount": 1,
-      "classifiedPageCount": 1,
+      "inputCount": 2,
+      "classifiedPageCount": 2,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 18,
+      "ageHours": 23,
       "limitHours": 336
     }
   },
@@ -56,8 +56,8 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 58,
-        "displayCandidates": 52,
+        "classified": 59,
+        "displayCandidates": 53,
         "fallback": true
       },
       "municipality_kamiamakusa": {
@@ -121,8 +121,8 @@
         "fallback": true
       },
       "municipality_hikawa": {
-        "classified": 43,
-        "displayCandidates": 40,
+        "classified": 44,
+        "displayCandidates": 41,
         "fallback": true
       },
       "municipality_ashikita": {
@@ -138,9 +138,9 @@
     },
     "categoryReport": {
       "home": {
-        "total": 183,
-        "high": 60,
-        "medium": 75,
+        "total": 186,
+        "high": 62,
+        "medium": 76,
         "low": 48
       },
       "money": {
@@ -150,10 +150,10 @@
         "low": 112
       },
       "documents": {
-        "total": 173,
+        "total": 175,
         "high": 40,
         "medium": 35,
-        "low": 98
+        "low": 100
       },
       "health_care": {
         "total": 47,
@@ -181,14 +181,14 @@
       },
       "daily_life": {
         "total": 196,
-        "high": 61,
-        "medium": 135,
+        "high": 60,
+        "medium": 136,
         "low": 0
       }
     },
     "confidence": {
-      "high": 253,
-      "medium": 325,
+      "high": 254,
+      "medium": 326,
       "low": 103
     },
     "unclassifiedCount": 40,
@@ -287,7 +287,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 14
     },
     {
       "code": "HTTP_404_CANDIDATE",

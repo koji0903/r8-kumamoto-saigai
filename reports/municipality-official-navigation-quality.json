@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-12T10:55:25.382Z",
+  "generatedAt": "2026-09-12T15:36:53.520Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 848,
-  "displayCandidateCount": 578,
-  "classifiedPageCount": 681,
+  "inputCount": 850,
+  "displayCandidateCount": 580,
+  "classifiedPageCount": 683,
   "categoryReport": {
     "home": {
-      "total": 183,
-      "high": 60,
-      "medium": 75,
+      "total": 186,
+      "high": 62,
+      "medium": 76,
       "low": 48
     },
     "money": {
@@ -19,10 +19,10 @@
       "low": 112
     },
     "documents": {
-      "total": 173,
+      "total": 175,
       "high": 40,
       "medium": 35,
-      "low": 98
+      "low": 100
     },
     "health_care": {
       "total": 47,
@@ -50,8 +50,8 @@
     },
     "daily_life": {
       "total": 196,
-      "high": 61,
-      "medium": 135,
+      "high": 60,
+      "medium": 136,
       "low": 0
     }
   },
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 58,
-      "displayCandidates": 52,
+      "classified": 59,
+      "displayCandidates": 53,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -147,8 +147,8 @@
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 43,
-      "displayCandidates": 40,
+      "classified": 44,
+      "displayCandidates": 41,
       "fallback": true
     },
     "municipality_ashikita": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 253,
-    "medium": 325,
+    "high": 254,
+    "medium": 326,
     "low": 103
   },
   "unclassifiedCount": 40,
@@ -1039,7 +1039,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 14
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1103,5 +1103,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 680
+  "previousClassifiedPageCount": 681
 }

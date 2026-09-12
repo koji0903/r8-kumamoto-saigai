@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-12T11:12:35.791Z",
-  "officialCheckedAt": "9/12 20:12",
+  "retrievedAt": "2026-09-12T15:55:05.858Z",
+  "officialCheckedAt": "9/13 00:55",
   "siteTopics": [
     {
       "date": "2026-09-11",
@@ -60,6 +60,22 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
+      "date": "2026-09-13",
+      "time": null,
+      "category": "ごみ・生活",
+      "municipality": "宇城市"
+    },
+    {
+      "title": "令和8年熊本地震で被災した井戸の応急修理について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036836/index.html",
+      "date": "2026-09-12",
+      "time": "20:29",
+      "category": "住まい・証明",
+      "municipality": "氷川町"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-09-12",
@@ -68,12 +84,12 @@ window.HOME_TOPICS = {
       "municipality": "八代市"
     },
     {
-      "title": "2026年9月12日 令和8年熊本地震 関連情報 （9月12日17時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "title": "令和８年熊本地震に係る被災した住宅の応急修理制度について（サイト内リンク）",
+      "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
       "date": "2026-09-12",
-      "time": "17:00",
-      "category": "その他",
-      "municipality": "宇城市"
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "宇土市"
     },
     {
       "title": "令和８年熊本地震における支援の状況について",
@@ -84,28 +100,12 @@ window.HOME_TOPICS = {
       "municipality": "山鹿市"
     },
     {
-      "title": "令和8年熊本地震関連情報",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
-      "date": "2026-09-11",
-      "time": "17:00",
-      "category": "その他",
-      "municipality": "氷川町"
-    },
-    {
       "title": "令和8年熊本地震で被災した家屋等の解体・撤去について",
       "url": "https://www.city.kumamoto.jp/kiji00372403/index.html",
       "date": "2026-09-11",
       "time": "16:50",
       "category": "その他",
       "municipality": "熊本市"
-    },
-    {
-      "title": "【熊本地震】9月12日（土）、13日（日）の窓口業務について",
-      "url": "https://www.city.uto.lg.jp/article/view/1014/16528.html",
-      "date": "2026-09-11",
-      "time": null,
-      "category": "その他",
-      "municipality": "宇土市"
     },
     {
       "title": "【実施期間延長】熊本地震に伴う被災者を対象として市内温泉施設で無料入浴支援を実施します",
