@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-12T04:42:49.791Z",
+  "generatedAt": "2026-09-12T10:55:25.382Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 847,
-  "displayCandidateCount": 577,
-  "classifiedPageCount": 680,
+  "inputCount": 848,
+  "displayCandidateCount": 578,
+  "classifiedPageCount": 681,
   "categoryReport": {
     "home": {
       "total": 183,
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 195,
-      "high": 60,
+      "total": 196,
+      "high": 61,
       "medium": 135,
       "low": 0
     }
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 98,
-      "displayCandidates": 81,
+      "classified": 99,
+      "displayCandidates": 82,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,7 +163,7 @@
     }
   },
   "confidence": {
-    "high": 252,
+    "high": 253,
     "medium": 325,
     "low": 103
   },
@@ -321,18 +321,18 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年09月11日 令和8年熊本地震 関連情報 （9月12日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699"
-    },
-    {
-      "municipalityName": "宇城市",
       "title": "宇城市おくやみコーナーを開設しています（令和8年熊本地震に伴う災害対応のため休止中）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2601731"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年9月12日 令和8年熊本地震 関連情報 （9月12日8時00分更新）",
+      "title": "2026年9月12日 令和8年熊本地震 関連情報 （9月12日17時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "2026年09月12日 令和8年熊本地震 関連情報 （9月12日17時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699"
     },
     {
       "municipalityName": "美里町",
@@ -1039,7 +1039,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 17
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1103,5 +1103,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 681
+  "previousClassifiedPageCount": 680
 }

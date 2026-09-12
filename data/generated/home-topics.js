@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-12T04:58:59.958Z",
-  "officialCheckedAt": "9/12 13:58",
+  "retrievedAt": "2026-09-12T11:12:35.791Z",
+  "officialCheckedAt": "9/12 20:12",
   "siteTopics": [
     {
       "date": "2026-09-11",
@@ -63,15 +63,15 @@ window.HOME_TOPICS = {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-09-12",
-      "time": "09:13",
+      "time": "17:14",
       "category": "その他",
       "municipality": "八代市"
     },
     {
-      "title": "2026年9月12日 令和8年熊本地震 関連情報 （9月12日8時00分更新）",
+      "title": "2026年9月12日 令和8年熊本地震 関連情報 （9月12日17時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-09-12",
-      "time": "08:00",
+      "time": "17:00",
       "category": "その他",
       "municipality": "宇城市"
     },
