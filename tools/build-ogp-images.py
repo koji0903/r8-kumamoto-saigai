@@ -85,6 +85,13 @@ ART = {
                '<path fill="#93c5fd" stroke="#1d4ed8" d="M52 14 92 44l-9 7-31-24-31 24-9-7Z"/>'
                '<path fill="#fb923c" stroke="#c2410c" d="M44 74V56h16v18"/>'
                '<path fill="#2dd4bf" stroke="#0f766e" d="M100 30c-5 7-8 11-8 15a8 8 0 0 0 16 0c0-4-3-8-8-15Z"/>',
+    # 応急修理＝屋根の当て板とスマホの記録写真
+    "repair": '<path fill="#fed7aa" stroke="#c2410c" d="m10 44 34-26 34 26v28H10Z"/>'
+              '<path fill="#fde047" stroke="#a16207" d="M34 30h18v10H34z"/>'
+              '<path fill="#93c5fd" stroke="#1d4ed8" d="M20 50h14v12H20zM54 50h14v12H54z"/>'
+              '<path d="m46 44-4 6 4 4-4 6"/>'
+              '<rect fill="#2dd4bf" stroke="#0f766e" x="84" y="20" width="26" height="46" rx="5"/>'
+              '<path fill="#fff" stroke="#0f766e" d="m90 48 7-6 7 6v8H90Z"/>',
     "risai": '<path fill="#cbd5e1" stroke="#475569" d="m8 40 30-23 30 23"/><path d="M15 38v36h46V38"/>'
              '<path fill="#fb923c" stroke="#c2410c" d="M37 17 31 39l11 8-7 27"/>'
              '<path fill="#fde047" stroke="#a16207" d="M76 12h34v56H76z"/><path d="M84 25h18M84 36h18M84 47h10"/>'
@@ -269,6 +276,10 @@ PAGES = [
          label="宇土市",
          title="住まいの相談・再建支援",
          lead="応急修理・みなし仮設・公費解体など、住まいの再建に関する宇土市の公式情報への入口です。"),
+    dict(file="uto-repair.html", out="ogp-uto-repair.png", tone="teal", art="repair",
+         label="宇土市｜被災された方へ",
+         title="住宅の応急修理/利用ガイド",
+         lead="上限は75万7千円（準半壊は36万7千円）。対象になる修理・写真の撮り方・必要書類・手続きの流れを整理。"),
     dict(file="hq-kumamoto.html", out="ogp-hq-kumamoto.png", tone="pink", art="hq",
          label="熊本市",
          title="災害対策本部会議/のまとめ",
