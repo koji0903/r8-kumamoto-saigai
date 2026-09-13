@@ -434,14 +434,7 @@ node tools/build-shelters.mjs --check
 
 ## SNS シェア用画像（OGP）
 
-`ogp.png`（1200×630）を全ページの `og:image` に指定しています。差し替えるときは同じ寸法で `ogp.png` を置き換えてください。
-
-`og:image` と `og:url` は**相対指定**にしてあります。公開ドメインが確定していないためで、主要なクローラは取得したページのURLを基準に解決します。カスタムドメインを設定した場合は、絶対URLに書き換えるとサムネイルの取得がより確実になります。
-
-```html
-<meta property="og:url" content="https://example.jp/index.html">
-<meta property="og:image" content="https://example.jp/ogp.png">
-```
+OGP・Xカード・canonical は `node tools/build-seo.mjs` が各HTMLに生成します（手作業で書かない）。ページ専用画像（1200×630 PNG）は `tools/build-ogp-images.py` で作り、`tools/build-seo.mjs` の `specialImages` に登録します。検証は `node tools/build-seo.mjs --check` と `node scripts/test-ogp.mjs` です。
 
 favicon は `favicon.png`（32px）と `apple-touch-icon.png`（180px）です。
 

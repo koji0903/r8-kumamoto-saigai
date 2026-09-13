@@ -124,7 +124,6 @@
   const CHART = { width: 720, height: 190, left: 52, right: 14, top: 16, bottom: 34 };
   const plotX = (index, left = CHART.left) =>
     left + ((index - 1) / Math.max(1, lastDay - 1)) * (CHART.width - left - CHART.right);
-  const plotY = (value, peak) => CHART.top + (1 - value / (peak || 1)) * (CHART.height - CHART.top - CHART.bottom);
 
   // 横軸の目盛り。発災1日目を起点に7日ごと＋最終日
   const axisTicks = () => {
