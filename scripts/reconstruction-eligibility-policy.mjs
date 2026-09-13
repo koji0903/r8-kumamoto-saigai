@@ -20,10 +20,6 @@ export function isPublicCondition(condition, links, sources, municipalityId = nu
   return condition.municipalityIds.length === 0;
 }
 
-export function publicCondition(condition) {
-  return { id: condition.id, field: condition.field, label: FIELD_LABELS[condition.field], description: condition.plainLanguageDescription, logicalGroup: condition.logicalGroup, groupOperator: condition.groupOperator, scope: condition.scope, checkedAt: condition.checkedAt };
-}
-
 export function findConditionConflicts(conditions) {
   const conflicts = [];
   const groups = new Map();

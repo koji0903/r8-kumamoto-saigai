@@ -23,6 +23,7 @@ const specialImages = new Map([
   ["uto-waste.html", "/ogp-uto-waste.png"],
   ["uto-bulletin.html", "/ogp-uto-bulletin.png"],
   ["uto-housing.html", "/ogp-uto-housing.png"],
+  ["uto-repair.html", "/ogp-uto-repair.png"],
   ["alert-channels.html", "/ogp-alert-channels.png"],
   ["volunteer-centers.html", "/ogp-volunteer-centers.png"],
   ["official-timeline.html", "/ogp-official-timeline.png"],

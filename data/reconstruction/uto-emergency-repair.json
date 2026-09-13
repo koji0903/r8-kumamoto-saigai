@@ -1,0 +1,47 @@
+{
+  "title": "宇土市 被災した住宅の応急修理制度",
+  "source": {
+    "pageUrl": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
+    "pageTitle": "令和８年熊本地震に係る被災した住宅の応急修理制度について",
+    "pageDate": "2026-08-27",
+    "checkedAt": "2026-09-13",
+    "savedDir": "sources/uto/emergency-repair"
+  },
+  "reliefActAppliedOn": "2026-07-28",
+  "limits": [
+    { "key": "half", "label": "全壊・大規模半壊・中規模半壊・半壊", "yen": 757000, "display": "757,000円" },
+    { "key": "semi", "label": "準半壊", "yen": 367000, "display": "367,000円" }
+  ],
+  "deadline": { "date": "2027-01-27", "display": "令和9年1月27日（水）", "scope": "完了報告書、修理写真等の提出まで" },
+  "tels": [
+    { "tel": "0964-27-6647", "label": "すまい再建支援室（すまい再建支援班）直通" },
+    { "tel": "0964-22-1111", "label": "宇土市役所 代表" }
+  ],
+  "applicantDocuments": [
+    "応急修理申込書（様式第1号）",
+    "住宅の被害状況に関する申出書（様式第1号の2）",
+    "罹災証明書（写し）",
+    "修理前の被害状況が分かる写真",
+    "修理見積書（様式第3号）",
+    "資力に関する申出書（様式第2号）",
+    "申込チェックシート"
+  ],
+  "files": [
+    { "group": "applicant", "name": "01_1「令和８年熊本地震」被災者の皆様へ", "type": "PDF", "url": "https://www.city.uto.lg.jp/d?q=2669748826cb603968ce5f54693538d9.pdf", "saved": "01_1_被災者の皆様へ.pdf" },
+    { "group": "applicant", "name": "02（別紙１）住宅の応急修理に係る工事例", "type": "PDF", "url": "https://www.city.uto.lg.jp/d?q=15167674653d616e426236d2c58c8d4f.pdf", "saved": "02_別紙1_工事例.pdf" },
+    { "group": "applicant", "name": "03（別紙２）住宅の応急修理の手続き及び流れ", "type": "PDF", "url": "https://www.city.uto.lg.jp/d?q=748e8b9284c37384fe03808f1e1facc9.pdf", "saved": "03_別紙2_手続き及び流れ.pdf" },
+    { "group": "applicant", "name": "（参考）周知用チラシ（写真撮影）", "type": "PDF", "url": "https://www.city.uto.lg.jp/d?q=eea8b4f61c62385a53e2f708062b82d6.pdf", "saved": "参考_周知用チラシ_写真撮影.pdf" },
+    { "group": "applicant", "name": "（参考）周知用チラシ（悪徳業者）", "type": "PDF", "url": "https://www.city.uto.lg.jp/d?q=dab9d00e5c8ae717de94698d716c0eee.pdf", "saved": "参考_周知用チラシ_悪徳業者.pdf" },
+    { "group": "contractor", "name": "01_2「令和８年熊本地震」修理業者の皆様へ", "type": "PDF", "url": "https://www.city.uto.lg.jp/d?q=b6515db87ad3fcb8eace232a3ff14a68.pdf", "saved": "01_2_修理業者の皆様へ.pdf" },
+    { "group": "applicantForm", "name": "申込チェックシート", "type": "Word", "url": "https://www.city.uto.lg.jp/d?q=4635a3a66e9ae5f46bc0a5d3cdb33242.docx", "saved": "申込チェックシート.docx" },
+    { "group": "applicantForm", "name": "（様式第1号）応急修理申込書", "type": "Word", "url": "https://www.city.uto.lg.jp/d?q=d4cc100423e5a00f8c924589aa08608f.docx", "saved": "様式第1号_応急修理申込書.docx" },
+    { "group": "applicantForm", "name": "（様式第1号の2）住宅の被害状況に関する申出書", "type": "Word", "url": "https://www.city.uto.lg.jp/d?q=f3b323e0a730e9cfbc998970ee699b8c.docx", "saved": "様式第1号の2_住宅の被害状況に関する申出書.docx" },
+    { "group": "applicantForm", "name": "（様式第2号）資力に関する申出書", "type": "Word", "url": "https://www.city.uto.lg.jp/d?q=b234f526d4d629b952e586522048d45a.docx", "saved": "様式第2号_資力に関する申出書.docx" },
+    { "group": "contractorForm", "name": "（様式第3号）修理見積書", "type": "Excel", "url": "https://www.city.uto.lg.jp/d?q=b79964e1863855934467e80f96bca195.xlsx", "saved": "様式第3号_修理見積書.xlsx" },
+    { "group": "contractorForm", "name": "誓約書及び照会承諾書（修理業者）", "type": "Word", "url": "https://www.city.uto.lg.jp/d?q=1e002191ba7104cb8d0cf7caf4efc3ae.docx", "saved": "誓約書及び照会承諾書_修理業者.docx" },
+    { "group": "contractorForm", "name": "（様式第6号）請書", "type": "Word", "url": "https://www.city.uto.lg.jp/d?q=05d7387bdb53502df64cba1612763eab.docx", "saved": "様式第6号_請書.docx" },
+    { "group": "contractorForm", "name": "（様式第7号）工事完了報告書", "type": "Word", "url": "https://www.city.uto.lg.jp/d?q=a2b79a43f794f82001ffcd8e6a6d7486.docx", "saved": "様式第7号_工事完了報告書.docx" },
+    { "group": "contractorForm", "name": "（様式第8号）工事写真台帳", "type": "Word", "url": "https://www.city.uto.lg.jp/d?q=58e391b59422ddcd083c62df202ff0b9.docx", "saved": "様式第8号_工事写真台帳.docx" },
+    { "group": "contractorForm", "name": "（様式第9号）証拠写真代替資料", "type": "Word", "url": "https://www.city.uto.lg.jp/d?q=d0c15fe6e618c09ba41c3ef14ef49304.docx", "saved": "様式第9号_証拠写真代替資料.docx" }
+  ]
+}
