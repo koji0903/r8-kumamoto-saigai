@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-09-13T04:56:40.582Z",
+  "generatedAt": "2026-09-13T12:00:31.048Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 849,
-  "displayCandidateCount": 579,
+  "displayCandidateCount": 580,
   "classifiedPageCount": 682,
   "categoryReport": {
     "home": {
-      "total": 185,
+      "total": 184,
       "high": 62,
       "medium": 75,
-      "low": 48
+      "low": 47
     },
     "money": {
       "total": 211,
       "high": 46,
-      "medium": 53,
-      "low": 112
+      "medium": 54,
+      "low": 111
     },
     "documents": {
-      "total": 175,
-      "high": 40,
+      "total": 174,
+      "high": 39,
       "medium": 35,
       "low": 100
     },
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 196,
-      "high": 60,
+      "total": 197,
+      "high": 61,
       "medium": 136,
       "low": 0
     }
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 98,
-      "displayCandidates": 81,
+      "classified": 100,
+      "displayCandidates": 83,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -137,18 +137,18 @@
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 37,
-      "displayCandidates": 33,
+      "classified": 36,
+      "displayCandidates": 32,
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 35,
-      "displayCandidates": 29,
+      "classified": 33,
+      "displayCandidates": 28,
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 44,
-      "displayCandidates": 41,
+      "classified": 45,
+      "displayCandidates": 42,
       "fallback": true
     },
     "municipality_ashikita": {
@@ -164,8 +164,8 @@
   },
   "confidence": {
     "high": 254,
-    "medium": 325,
-    "low": 103
+    "medium": 326,
+    "low": 102
   },
   "unclassifiedCount": 40,
   "unclassifiedItems": [
@@ -326,12 +326,12 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年9月13日 令和8年熊本地震 関連情報 （9月13日8時00分更新）",
+      "title": "2026年9月13日 令和8年熊本地震 関連情報 （9月13日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年09月13日 令和8年熊本地震 関連情報 （9月13日8時00分更新）",
+      "title": "2026年09月13日 令和8年熊本地震 関連情報 （9月13日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699"
     },
     {
@@ -1103,5 +1103,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 683
+  "previousClassifiedPageCount": 682
 }

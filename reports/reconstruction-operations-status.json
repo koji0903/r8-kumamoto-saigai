@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-13T05:14:05.081Z",
+  "generatedAt": "2026-09-13T12:16:48.275Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-13T04:56:40.582Z",
+    "generatedAt": "2026-09-13T12:00:31.048Z",
     "inputCount": 849,
     "classifiedPageCount": 682,
-    "displayCandidateCount": 579,
+    "displayCandidateCount": 580,
     "deltaFromPrevious": {
-      "inputCount": -1,
-      "classifiedPageCount": -1,
+      "inputCount": 0,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 36,
+      "ageHours": 43,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 98,
-        "displayCandidates": 81,
+        "classified": 100,
+        "displayCandidates": 83,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -111,18 +111,18 @@
         "fallback": true
       },
       "municipality_mashiki": {
-        "classified": 37,
-        "displayCandidates": 33,
+        "classified": 36,
+        "displayCandidates": 32,
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 35,
-        "displayCandidates": 29,
+        "classified": 33,
+        "displayCandidates": 28,
         "fallback": true
       },
       "municipality_hikawa": {
-        "classified": 44,
-        "displayCandidates": 41,
+        "classified": 45,
+        "displayCandidates": 42,
         "fallback": true
       },
       "municipality_ashikita": {
@@ -138,20 +138,20 @@
     },
     "categoryReport": {
       "home": {
-        "total": 185,
+        "total": 184,
         "high": 62,
         "medium": 75,
-        "low": 48
+        "low": 47
       },
       "money": {
         "total": 211,
         "high": 46,
-        "medium": 53,
-        "low": 112
+        "medium": 54,
+        "low": 111
       },
       "documents": {
-        "total": 175,
-        "high": 40,
+        "total": 174,
+        "high": 39,
         "medium": 35,
         "low": 100
       },
@@ -180,16 +180,16 @@
         "low": 0
       },
       "daily_life": {
-        "total": 196,
-        "high": 60,
+        "total": 197,
+        "high": 61,
         "medium": 136,
         "low": 0
       }
     },
     "confidence": {
       "high": 254,
-      "medium": 325,
-      "low": 103
+      "medium": 326,
+      "low": 102
     },
     "unclassifiedCount": 40,
     "excludedCount": 38,

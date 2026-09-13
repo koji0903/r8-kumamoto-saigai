@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-13T05:13:48.933Z",
-  "officialCheckedAt": "9/13 14:13",
+  "retrievedAt": "2026-09-13T12:16:30.496Z",
+  "officialCheckedAt": "9/13 21:16",
   "siteTopics": [
     {
       "date": "2026-09-13",
@@ -60,26 +60,26 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "避難所開設状況",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
-      "date": "2026-09-13",
-      "time": "08:23",
-      "category": "避難・安全",
-      "municipality": "八代市"
-    },
-    {
-      "title": "2026年9月13日 令和8年熊本地震 関連情報 （9月13日8時00分更新）",
+      "title": "2026年9月13日 令和8年熊本地震 関連情報 （9月13日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-09-13",
-      "time": "08:00",
+      "time": "18:00",
       "category": "その他",
       "municipality": "宇城市"
     },
     {
-      "title": "令和8年熊本地震関連情報",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-09-13",
-      "time": "08:00",
+      "time": "17:16",
+      "category": "その他",
+      "municipality": "八代市"
+    },
+    {
+      "title": "【令和8年熊本地震】災害援護資金の貸付",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036833/index.html",
+      "date": "2026-09-13",
+      "time": "14:19",
       "category": "その他",
       "municipality": "氷川町"
     },
