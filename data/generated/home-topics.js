@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-13T12:16:30.496Z",
-  "officialCheckedAt": "9/13 21:16",
+  "retrievedAt": "2026-09-13T16:42:00.541Z",
+  "officialCheckedAt": "9/14 01:42",
   "siteTopics": [
     {
       "date": "2026-09-13",
@@ -60,11 +60,11 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "2026年9月13日 令和8年熊本地震 関連情報 （9月13日18時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-09-13",
-      "time": "18:00",
-      "category": "その他",
+      "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
+      "date": "2026-09-14",
+      "time": null,
+      "category": "ごみ・生活",
       "municipality": "宇城市"
     },
     {
