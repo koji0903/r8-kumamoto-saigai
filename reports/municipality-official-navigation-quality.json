@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-12T23:05:06.923Z",
+  "generatedAt": "2026-09-13T04:56:40.582Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 850,
-  "displayCandidateCount": 580,
-  "classifiedPageCount": 683,
+  "inputCount": 849,
+  "displayCandidateCount": 579,
+  "classifiedPageCount": 682,
   "categoryReport": {
     "home": {
-      "total": 186,
+      "total": 185,
       "high": 62,
-      "medium": 76,
+      "medium": 75,
       "low": 48
     },
     "money": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 99,
-      "displayCandidates": 82,
+      "classified": 98,
+      "displayCandidates": 81,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 254,
-    "medium": 326,
+    "medium": 325,
     "low": 103
   },
   "unclassifiedCount": 40,
@@ -326,12 +326,12 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年9月12日 令和8年熊本地震 関連情報 （9月12日17時00分更新）",
+      "title": "2026年9月13日 令和8年熊本地震 関連情報 （9月13日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年09月12日 令和8年熊本地震 関連情報 （9月12日17時00分更新）",
+      "title": "2026年09月13日 令和8年熊本地震 関連情報 （9月13日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699"
     },
     {
@@ -708,7 +708,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -1103,5 +1103,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 682
+  "previousClassifiedPageCount": 683
 }

@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-12T23:22:20.370Z",
-  "officialCheckedAt": "9/13 08:22",
+  "retrievedAt": "2026-09-13T05:13:48.933Z",
+  "officialCheckedAt": "9/13 14:13",
   "siteTopics": [
     {
       "date": "2026-09-13",
@@ -60,28 +60,28 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "避難所開設状況",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
+      "date": "2026-09-13",
+      "time": "08:23",
+      "category": "避難・安全",
+      "municipality": "八代市"
+    },
+    {
+      "title": "2026年9月13日 令和8年熊本地震 関連情報 （9月13日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-09-13",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "宇城市"
+    },
+    {
       "title": "令和8年熊本地震関連情報",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
       "date": "2026-09-13",
       "time": "08:00",
       "category": "その他",
       "municipality": "氷川町"
-    },
-    {
-      "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
-      "date": "2026-09-13",
-      "time": null,
-      "category": "ごみ・生活",
-      "municipality": "宇城市"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-09-12",
-      "time": "17:14",
-      "category": "その他",
-      "municipality": "八代市"
     },
     {
       "title": "令和８年熊本地震に係る被災した住宅の応急修理制度について（サイト内リンク）",

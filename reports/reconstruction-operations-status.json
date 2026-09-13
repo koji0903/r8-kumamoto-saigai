@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-12T23:22:40.716Z",
+  "generatedAt": "2026-09-13T05:14:05.081Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-12T23:05:06.923Z",
-    "inputCount": 850,
-    "classifiedPageCount": 683,
-    "displayCandidateCount": 580,
+    "generatedAt": "2026-09-13T04:56:40.582Z",
+    "inputCount": 849,
+    "classifiedPageCount": 682,
+    "displayCandidateCount": 579,
     "deltaFromPrevious": {
-      "inputCount": 1,
-      "classifiedPageCount": 1,
+      "inputCount": -1,
+      "classifiedPageCount": -1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 30,
+      "ageHours": 36,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 99,
-        "displayCandidates": 82,
+        "classified": 98,
+        "displayCandidates": 81,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,9 +138,9 @@
     },
     "categoryReport": {
       "home": {
-        "total": 186,
+        "total": 185,
         "high": 62,
-        "medium": 76,
+        "medium": 75,
         "low": 48
       },
       "money": {
@@ -188,7 +188,7 @@
     },
     "confidence": {
       "high": 254,
-      "medium": 326,
+      "medium": 325,
       "low": 103
     },
     "unclassifiedCount": 40,
