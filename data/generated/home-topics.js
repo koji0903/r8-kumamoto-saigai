@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-13T21:13:18.309Z",
-  "officialCheckedAt": "9/14 06:13",
+  "retrievedAt": "2026-09-13T23:28:57.641Z",
+  "officialCheckedAt": "9/14 08:28",
   "siteTopics": [
     {
       "date": "2026-09-13",
@@ -68,6 +68,14 @@ window.HOME_TOPICS = {
       "municipality": "宇城市"
     },
     {
+      "title": "マイボトルが使える給水スポットがあります",
+      "url": "https://www.town.kikuyo.lg.jp/kiji0034715/index.html",
+      "date": "2026-09-14",
+      "time": null,
+      "category": "ライフライン",
+      "municipality": "菊陽町"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-09-13",
@@ -114,14 +122,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "ごみ・生活",
       "municipality": "上天草市"
-    },
-    {
-      "title": "令和8年熊本地震で被災した家屋等の解体・撤去（公費解体）について",
-      "url": "https://www.city.koshi.lg.jp/kiji00325787/index.html",
-      "date": "2026-09-11",
-      "time": null,
-      "category": "その他",
-      "municipality": "合志市"
     }
   ],
   "prefectureUpdates": [
