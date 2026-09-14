@@ -2,7 +2,7 @@
   "metadata": {
     "event": "令和8年熊本地震",
     "disasterDate": "2026-07-28",
-    "retrievedAt": "2026-09-13T23:13:02.017Z",
+    "retrievedAt": "2026-09-14T05:04:49.073Z",
     "scope": "各市町村の公式トップページ、確認済みの地震情報集約ページ、そのページに掲載された個別記事、および集約ページのページ送りを確認。令和8年7月28日以降の日付を公式ページ上で確認できた記事リンク",
     "caveat": "公式サイトの構造・公開方式・検索可否により網羅性は保証できません。未検出は情報が存在しないことを意味しません。内容と最新状況はリンク先の一次情報で確認してください。",
     "categoryNote": "分類は記事タイトルに基づく閲覧用の便宜的な分類です。"
@@ -11,7 +11,7 @@
     {
       "name": "熊本市",
       "officialUrl": "https://www.city.kumamoto.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -36,13 +36,6 @@
           "category": "その他"
         },
         {
-          "title": "主要地方道 熊本嘉島線 一部区間全面通行止めのお知らせ",
-          "url": "https://www.city.kumamoto.jp/kiji00372103/index.html",
-          "date": "2026-07-29",
-          "time": null,
-          "category": "避難・安全"
-        },
-        {
           "title": "令和8年熊本地震に伴う特別相談窓口を開設します",
           "url": "https://www.city.kumamoto.jp/kiji00372112/index.html",
           "date": "2026-07-29",
@@ -62,6 +55,13 @@
           "date": "2026-07-29",
           "time": null,
           "category": "その他"
+        },
+        {
+          "title": "主要地方道 熊本嘉島線 一部区間全面通行止めのお知らせ",
+          "url": "https://www.city.kumamoto.jp/kiji00372103/index.html",
+          "date": "2026-07-29",
+          "time": "01:07",
+          "category": "避難・安全"
         },
         {
           "title": "市内保育施設等の開園状況について",
@@ -302,13 +302,6 @@
           "category": "支援・制度"
         },
         {
-          "title": "令和8年熊本地震で被害に遭われた方へ（固定資産税の減免）",
-          "url": "https://www.city.kumamoto.jp/kiji00328060/index.html",
-          "date": "2026-08-19",
-          "time": "15:30",
-          "category": "その他"
-        },
-        {
           "title": "令和8年熊本地震に伴う食品関係の営業許可期限延長について",
           "url": "https://www.city.kumamoto.jp/kiji00372422/index.html",
           "date": "2026-08-20",
@@ -512,20 +505,6 @@
           "category": "住まい・証明"
         },
         {
-          "title": "熊本市災害ボランティアセンターによる支援開始のお知らせ",
-          "url": "https://www.city.kumamoto.jp/kiji00372117/index.html",
-          "date": "2026-09-11",
-          "time": "13:33",
-          "category": "支援・制度"
-        },
-        {
-          "title": "【令和8年熊本地震】「くまもとアプリ」に熊本県内の災害ボランティア募集情報を掲載しています",
-          "url": "https://www.city.kumamoto.jp/kiji00372213/index.html",
-          "date": "2026-09-11",
-          "time": "14:43",
-          "category": "支援・制度"
-        },
-        {
           "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
           "url": "https://www.city.kumamoto.jp/kiji00372210/index.html",
           "date": "2026-09-11",
@@ -538,6 +517,20 @@
           "date": "2026-09-11",
           "time": "16:50",
           "category": "その他"
+        },
+        {
+          "title": "【令和8年熊本地震】「くまもとアプリ」に熊本県内の災害ボランティア募集情報を掲載しています",
+          "url": "https://www.city.kumamoto.jp/kiji00372213/index.html",
+          "date": "2026-09-14",
+          "time": "10:07",
+          "category": "支援・制度"
+        },
+        {
+          "title": "熊本市災害ボランティアセンターによる支援開始のお知らせ",
+          "url": "https://www.city.kumamoto.jp/kiji00372117/index.html",
+          "date": "2026-09-14",
+          "time": "10:07",
+          "category": "支援・制度"
         }
       ],
       "sourcesChecked": [
@@ -570,9 +563,9 @@
         "https://www.city.kumamoto.jp/list04832.html",
         "https://www.city.kumamoto.jp/kiji00372403/index.html",
         "https://www.city.kumamoto.jp/kiji00372691/index.html",
-        "https://www.city.kumamoto.jp/kiji00372210/index.html",
         "https://www.city.kumamoto.jp/kiji00372213/index.html",
         "https://www.city.kumamoto.jp/kiji00372117/index.html",
+        "https://www.city.kumamoto.jp/kiji00372210/index.html",
         "https://www.city.kumamoto.jp/kiji00310012/index.html",
         "https://www.city.kumamoto.jp/kiji00372104/index.html",
         "https://www.city.kumamoto.jp/kiji00372073/index.html",
@@ -581,7 +574,6 @@
         "https://www.city.kumamoto.jp/list04460.html",
         "https://www.city.kumamoto.jp/kiji00366571/index.html",
         "https://www.city.kumamoto.jp/kiji00372715/index.html",
-        "https://www.city.kumamoto.jp/kiji00328060/index.html",
         "https://www.city.kumamoto.jp/kiji00372154/index.html",
         "https://www.city.kumamoto.jp/kiji00372246/index.html",
         "https://www.city.kumamoto.jp/kiji00372079/index.html",
@@ -620,7 +612,8 @@
         "https://www.city.kumamoto.jp/kiji00372254/index.html",
         "https://www.city.kumamoto.jp/kiji00372114/index.html",
         "https://www.city.kumamoto.jp/kiji00372176/index.html",
-        "https://www.city.kumamoto.jp/kiji00372099/index.html"
+        "https://www.city.kumamoto.jp/kiji00372099/index.html",
+        "https://www.city.kumamoto.jp/kiji00372103/index.html"
       ],
       "pagesFetched": 80,
       "errors": []
@@ -628,7 +621,7 @@
     {
       "name": "八代市",
       "officialUrl": "https://www.city.yatsushiro.lg.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -671,13 +664,6 @@
           "url": "https://www.city.yatsushiro.lg.jp/kiji00326760/index.html",
           "date": "2026-07-29",
           "time": "15:35",
-          "category": "施設・学校"
-        },
-        {
-          "title": "鏡文化センターの休館及び旧八代市厚生会館に係る市民対話の延期について",
-          "url": "https://www.city.yatsushiro.lg.jp/kiji00326771/index.html",
-          "date": "2026-07-29",
-          "time": "16:54",
           "category": "施設・学校"
         },
         {
@@ -1934,13 +1920,6 @@
           "category": "住まい・証明"
         },
         {
-          "title": "【令和8年熊本地震】ふるさと納税による支援寄附金の受付について",
-          "url": "https://www.city.yatsushiro.lg.jp/kiji00324662/index.html",
-          "date": "2026-09-08",
-          "time": "13:46",
-          "category": "支援・制度"
-        },
-        {
           "title": "令和８年熊本地震による学校体育施設の貸出停止の継続及び今後の予定について",
           "url": "https://www.city.yatsushiro.lg.jp/kiji00326967/index.html",
           "date": "2026-09-08",
@@ -2039,13 +2018,6 @@
           "category": "その他"
         },
         {
-          "title": "小規模事業者持続化補助金＜一般型 災害支援枠（令和8年熊本地震）＞",
-          "url": "https://www.city.yatsushiro.lg.jp/kiji00327068/index.html",
-          "date": "2026-09-11",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
           "title": "応急給食（9月14日～9月18日）の献立について",
           "url": "https://www.city.yatsushiro.lg.jp/kiji00327076/index.html",
           "date": "2026-09-11",
@@ -2058,13 +2030,6 @@
           "date": "2026-09-11",
           "time": "11:46",
           "category": "その他"
-        },
-        {
-          "title": "令和８年熊本地震に係る賃貸型応急住宅（みなし仮設）のお知らせ",
-          "url": "https://www.city.yatsushiro.lg.jp/kiji00326812/index.html",
-          "date": "2026-09-11",
-          "time": "11:55",
-          "category": "住まい・証明"
         },
         {
           "title": "令和8年熊本地震に伴う住宅の応急修理について(申請受付中)",
@@ -2088,7 +2053,7 @@
           "category": "その他"
         },
         {
-          "title": "小野市長から市民の皆さまへ",
+          "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
           "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
           "date": "2026-09-11",
           "time": "20:32",
@@ -2102,25 +2067,11 @@
           "category": "ごみ・生活"
         },
         {
-          "title": "令和8年熊本地震 関連情報",
-          "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
-          "date": "2026-09-12",
-          "time": "08:53",
-          "category": "その他"
-        },
-        {
           "title": "被災した井戸等の修理を支援する制度について",
           "url": "https://www.city.yatsushiro.lg.jp/kiji00327065/index.html",
           "date": "2026-09-12",
           "time": "08:59",
           "category": "支援・制度"
-        },
-        {
-          "title": "令和８年熊本地震で被災した井戸の応急修理について",
-          "url": "https://www.city.yatsushiro.lg.jp/kiji00327047/index.html",
-          "date": "2026-09-12",
-          "time": "09:13",
-          "category": "住まい・証明"
         },
         {
           "title": "明日の応急給水活動について",
@@ -2130,24 +2081,10 @@
           "category": "ライフライン"
         },
         {
-          "title": "避難所開設状況一覧（R8.9.13 12時時点）（PDF：331キロバイト）",
-          "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/3_26798_159791_up_nlhh3m0s.pdf",
+          "title": "濁水情報について",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00327084/index.html",
           "date": "2026-09-13",
-          "time": "12:00",
-          "category": "避難・安全"
-        },
-        {
-          "title": "避難所開設状況",
-          "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
-          "date": "2026-09-13",
-          "time": "14:22",
-          "category": "避難・安全"
-        },
-        {
-          "title": "熊本県八代市",
-          "url": "https://www.city.yatsushiro.lg.jp/default.html",
-          "date": "2026-09-13",
-          "time": "17:16",
+          "time": "16:03",
           "category": "その他"
         },
         {
@@ -2156,6 +2093,55 @@
           "date": "2026-09-13",
           "time": "17:16",
           "category": "ライフライン"
+        },
+        {
+          "title": "避難所開設状況一覧（R8.9.14 6時時点）（PDF：57.3キロバイト）",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/3_26798_159815_up_748dwacu.pdf",
+          "date": "2026-09-14",
+          "time": "06:00",
+          "category": "避難・安全"
+        },
+        {
+          "title": "令和８年熊本地震で被災した井戸の応急修理について",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00327047/index.html",
+          "date": "2026-09-14",
+          "time": "08:18",
+          "category": "住まい・証明"
+        },
+        {
+          "title": "避難所開設状況",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
+          "date": "2026-09-14",
+          "time": "08:29",
+          "category": "避難・安全"
+        },
+        {
+          "title": "令和8年熊本地震 関連情報",
+          "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+          "date": "2026-09-14",
+          "time": "12:02",
+          "category": "その他"
+        },
+        {
+          "title": "【令和8年熊本地震】ふるさと納税による支援寄附金の受付について",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00324662/index.html",
+          "date": "2026-09-14",
+          "time": "12:06",
+          "category": "支援・制度"
+        },
+        {
+          "title": "令和８年熊本地震に係る賃貸型応急住宅（みなし仮設）のお知らせ",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00326812/index.html",
+          "date": "2026-09-14",
+          "time": "12:38",
+          "category": "住まい・証明"
+        },
+        {
+          "title": "熊本県八代市",
+          "url": "https://www.city.yatsushiro.lg.jp/default.html",
+          "date": "2026-09-14",
+          "time": "13:29",
+          "category": "その他"
         }
       ],
       "sourcesChecked": [
@@ -2278,7 +2264,6 @@
         "https://www.city.yatsushiro.lg.jp/kiji00326850/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326868/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326898/index.html",
-        "https://www.city.yatsushiro.lg.jp/kiji00326958/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326897/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326916/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326973/index.html",
@@ -2292,7 +2277,6 @@
         "https://www.city.yatsushiro.lg.jp/kiji00326863/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326814/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326856/index.html",
-        "https://www.city.yatsushiro.lg.jp/kiji00326485/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326867/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326948/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326851/index.html",
@@ -2319,6 +2303,7 @@
         "https://www.city.yatsushiro.lg.jp/kiji00326971/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326917/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326979/index.html",
+        "https://www.city.yatsushiro.lg.jp/kiji00327084/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326949/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326960/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326923/index.html",
@@ -2338,7 +2323,6 @@
         "https://www.city.yatsushiro.lg.jp/kiji00324773/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326859/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326747/index.html",
-        "https://www.city.yatsushiro.lg.jp/kiji00326919/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326998/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326940/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326900/index.html",
@@ -2357,7 +2341,6 @@
         "https://www.city.yatsushiro.lg.jp/kiji00327030/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00327038/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326751/index.html",
-        "https://www.city.yatsushiro.lg.jp/kiji00326771/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326757/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326755/index.html",
         "https://www.city.yatsushiro.lg.jp/kiji00326760/index.html",
@@ -2386,16 +2369,13 @@
       ],
       "pagesFetched": 220,
       "errors": [
-        "https://www.city.yatsushiro.lg.jp/kiji00326958/index.html: 404 Not Found",
-        "https://www.city.yatsushiro.lg.jp/kiji00326485/index.html: 404 Not Found",
-        "https://www.city.yatsushiro.lg.jp/kiji00326919/index.html: 404 Not Found",
         "https://www.city.yatsushiro.lg.jp/kiji00326935/index.html: 404 Not Found"
       ]
     },
     {
       "name": "水俣市",
       "officialUrl": "https://localcms.city.minamata.lg.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2472,7 +2452,7 @@
     {
       "name": "山鹿市",
       "officialUrl": "https://www.city.yamaga.kumamoto.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2665,7 +2645,7 @@
     {
       "name": "菊池市",
       "officialUrl": "https://www.city.kikuchi.lg.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2674,13 +2654,6 @@
           "date": "2026-07-31",
           "time": null,
           "category": "ライフライン"
-        },
-        {
-          "title": "2026年07月31日 罹災証明書等の発行について",
-          "url": "https://www.city.kikuchi.lg.jp/article/view/1341/18747.html",
-          "date": "2026-07-31",
-          "time": null,
-          "category": "住まい・証明"
         },
         {
           "title": "令和8年熊本地震に伴う災害ごみの処理手数料の減免について",
@@ -2700,13 +2673,6 @@
           "title": "災害見舞金（地震災害）のご案内",
           "url": "https://www.city.kikuchi.lg.jp/article/view/1350/18831.html",
           "date": "2026-08-06",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "地震関連情報",
-          "url": "https://www.city.kikuchi.lg.jp/article/list/1350.html",
-          "date": "2026-08-12",
           "time": null,
           "category": "その他"
         },
@@ -2732,6 +2698,13 @@
           "category": "その他"
         },
         {
+          "title": "地震関連情報",
+          "url": "https://www.city.kikuchi.lg.jp/article/list/1350.html",
+          "date": "2026-09-04",
+          "time": null,
+          "category": "その他"
+        },
+        {
           "title": "令和８年熊本地震に伴う支援制度について",
           "url": "https://www.city.kikuchi.lg.jp/article/view/1350/18889.html",
           "date": "2026-09-04",
@@ -2744,6 +2717,20 @@
           "date": "2026-09-04",
           "time": null,
           "category": "支援・制度"
+        },
+        {
+          "title": "令和８年熊本地震に関する「罹災証明書(住家・非住家)」「罹災届出証明書」の発行について（サイト内リンク）",
+          "url": "https://www.city.kikuchi.lg.jp/article/view/1350/19286.html",
+          "date": "2026-09-14",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
+          "title": "令和８年熊本地震で被災した家屋等の解体・撤去について",
+          "url": "https://www.city.kikuchi.lg.jp/article/view/1350/19246.html",
+          "date": "2026-09-14",
+          "time": null,
+          "category": "その他"
         }
       ],
       "sourcesChecked": [
@@ -2753,136 +2740,99 @@
         "https://www.city.kikuchi.lg.jp/category/list/1096.html",
         "https://www.city.kikuchi.lg.jp/category/list/1320.html",
         "https://www.city.kikuchi.lg.jp/category/list/1337.html",
+        "https://www.city.kikuchi.lg.jp/article/view/1350/19286.html",
+        "https://www.city.kikuchi.lg.jp/article/view/1350/19246.html",
         "https://www.city.kikuchi.lg.jp/article/view/1350/18889.html",
         "https://www.city.kikuchi.lg.jp/article/view/1350/19138.html",
         "https://www.city.kikuchi.lg.jp/article/view/1350/18758.html",
         "https://www.city.kikuchi.lg.jp/article/view/1350/18831.html",
         "https://www.city.kikuchi.lg.jp/article/view/1350/18808.html",
         "https://www.city.kikuchi.lg.jp/article/view/1350/18800.html",
-        "https://www.city.kikuchi.lg.jp/article/view/1350/18747.html",
+        "https://www.city.kikuchi.lg.jp/article/view/1341/19286.html",
         "https://www.city.kikuchi.lg.jp/article/view/1039/19138.html",
         "https://www.city.kikuchi.lg.jp/article/view/1036/19143.html",
         "https://www.city.kikuchi.lg.jp/article/view/1194/18786.html",
         "https://www.city.kikuchi.lg.jp/article/view/1200/18786.html",
+        "https://www.city.kikuchi.lg.jp/article/view/1222/19143.html",
         "https://www.city.kikuchi.lg.jp/article/view/1341/18889.html",
         "https://www.city.kikuchi.lg.jp/article/view/1341/19138.html",
         "https://www.city.kikuchi.lg.jp/article/view/1344/18786.html",
-        "https://www.city.kikuchi.lg.jp/article/view/1341/18747.html",
-        "https://www.city.kikuchi.lg.jp/article/view/1349/18266.html"
+        "https://www.city.kikuchi.lg.jp/article/view/1349/18266.html",
+        "https://www.city.kikuchi.lg.jp/article/view/1341/18747.html"
       ],
-      "pagesFetched": 22,
-      "errors": []
+      "pagesFetched": 24,
+      "errors": [
+        "https://www.city.kikuchi.lg.jp/article/view/1341/18747.html: 404 Not Found"
+      ]
     },
     {
       "name": "宇土市",
       "officialUrl": "https://www.city.uto.lg.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
-          "title": "洪水・大雨・高潮・土砂災害の危険性が高まっています！",
-          "url": "https://www.city.uto.lg.jp/article/view/1302/16857.html",
-          "date": "2026-07-28",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "文化施設の臨時休館のお知らせ",
-          "url": "https://www.city.uto.lg.jp/article/view/1305/16385.html",
-          "date": "2026-07-28",
-          "time": null,
-          "category": "施設・学校"
-        },
-        {
-          "title": "水道の復旧について（お知らせ）",
-          "url": "https://www.city.uto.lg.jp/article/view/1308/16317.html",
-          "date": "2026-07-28",
-          "time": null,
-          "category": "ライフライン"
-        },
-        {
-          "title": "令和8年熊本地震に伴う水道料金について",
-          "url": "https://www.city.uto.lg.jp/article/view/1308/16554.html",
-          "date": "2026-07-28",
-          "time": null,
-          "category": "ライフライン"
-        },
-        {
-          "title": "令和８年熊本地震に係る賃貸型応急住宅（みなし仮設）の供与について",
-          "url": "https://www.city.uto.lg.jp/article/view/1018/16524.html",
-          "date": "2026-07-28",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
-          "title": "令和8年熊本地震で被災した家屋等の公費解体の事前相談受付の開設について",
-          "url": "https://www.city.uto.lg.jp/article/view/1018/16577.html",
-          "date": "2026-07-28",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
-          "title": "【熊本県信用保証協会】令和8年熊本地震に係る緊急時短期資金保証制度等について",
-          "url": "https://www.city.uto.lg.jp/article/view/1321/16462.html",
+          "title": "災害ごみは地区のごみ置き場に出さないでください",
+          "url": "https://www.city.uto.lg.jp/article/view/1303/16881.html",
           "date": "2026-07-29",
           "time": null,
-          "category": "その他"
+          "category": "ごみ・生活"
         },
         {
           "title": "ごみ収集について",
           "url": "https://www.city.uto.lg.jp/article/view/1303/16328.html",
-          "date": "2026-07-30",
+          "date": "2026-07-29",
           "time": null,
           "category": "ごみ・生活"
         },
         {
-          "title": "令和8年熊本地震 災害対策本部会議",
-          "url": "https://www.city.uto.lg.jp/article/view/1310/16725.html",
-          "date": "2026-08-02",
+          "title": "病児・病後児保育施設「パンダ」の再開について（８月４日㈫～）",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16448.html",
+          "date": "2026-07-31",
           "time": null,
-          "category": "その他"
+          "category": "施設・学校"
         },
         {
-          "title": "災害による被災者のための無料入浴サービスのお知らせ",
-          "url": "https://www.city.uto.lg.jp/article/view/1307/16397.html",
-          "date": "2026-08-02",
+          "title": "文化施設の臨時休館のお知らせ",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16385.html",
+          "date": "2026-07-31",
           "time": null,
-          "category": "ごみ・生活"
+          "category": "施設・学校"
         },
         {
-          "title": "市内保育所・学童クラブ・子育て支援センターの今後の再開について",
-          "url": "https://www.city.uto.lg.jp/article/view/1305/16384.html",
+          "title": "ミニバス「のんなっせ」の運行再開について",
+          "url": "https://www.city.uto.lg.jp/article/view/1304/16467.html",
+          "date": "2026-08-03",
+          "time": null,
+          "category": "交通"
+        },
+        {
+          "title": "図書館の休館について",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16346.html",
           "date": "2026-08-03",
           "time": null,
           "category": "施設・学校"
         },
         {
-          "title": "病児・病後児保育施設「パンダ」の再開について（８月４日㈫～）",
-          "url": "https://www.city.uto.lg.jp/article/view/1305/16448.html",
-          "date": "2026-08-04",
-          "time": null,
-          "category": "施設・学校"
-        },
-        {
-          "title": "予約型乗合タクシー「のりのり号」の運行再開について",
-          "url": "https://www.city.uto.lg.jp/article/view/1304/16449.html",
+          "title": "「行長しゃん号」の運行再開について",
+          "url": "https://www.city.uto.lg.jp/article/view/1304/16466.html",
           "date": "2026-08-04",
           "time": null,
           "category": "交通"
         },
         {
-          "title": "ミニバス「のんなっせ」の運行再開について",
-          "url": "https://www.city.uto.lg.jp/article/view/1304/16467.html",
+          "title": "「令和8年熊本地震」セーフティネット保証4号について",
+          "url": "https://www.city.uto.lg.jp/article/view/1321/16441.html",
           "date": "2026-08-05",
           "time": null,
-          "category": "交通"
+          "category": "その他"
         },
         {
-          "title": "気象災害（地震、台風、大雨等）により農作物や農業施設・機械等が被害にあわれたら写真撮影を",
-          "url": "https://www.city.uto.lg.jp/article/view/1307/16551.html",
-          "date": "2026-08-09",
+          "title": "【熊本県信用保証協会】令和8年熊本地震に係る緊急時短期資金保証制度等について",
+          "url": "https://www.city.uto.lg.jp/article/view/1321/16462.html",
+          "date": "2026-08-05",
           "time": null,
-          "category": "施設・学校"
+          "category": "その他"
         },
         {
           "title": "令和８年熊本地震に伴う中小企業者向け新資金について",
@@ -2899,25 +2849,32 @@
           "category": "支援・制度"
         },
         {
-          "title": "キーワードマッチ 2026年08月10日 「令和8年熊本地震」セーフティネット保証4号について",
-          "url": "https://www.city.uto.lg.jp/article/view/1114/16441.html",
-          "date": "2026-08-10",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "ファミリーサポートセンター及びつどいの広場サンサンは8月12日（水曜）から再開します",
-          "url": "https://www.city.uto.lg.jp/article/view/1305/16552.html",
+          "title": "老人福祉センター・西部老人福祉センターは通常業務を開始しました",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16338.html",
           "date": "2026-08-12",
           "time": null,
           "category": "その他"
         },
         {
-          "title": "図書館の休館について",
-          "url": "https://www.city.uto.lg.jp/article/view/1305/16346.html",
+          "title": "漏水時の対応",
+          "url": "https://www.city.uto.lg.jp/article/view/1308/16543.html",
           "date": "2026-08-12",
           "time": null,
-          "category": "施設・学校"
+          "category": "その他"
+        },
+        {
+          "title": "令和8年熊本地震に伴う水道料金について",
+          "url": "https://www.city.uto.lg.jp/article/view/1308/16554.html",
+          "date": "2026-08-12",
+          "time": null,
+          "category": "ライフライン"
+        },
+        {
+          "title": "令和８年熊本地震による被災農業者のための利子補給について",
+          "url": "https://www.city.uto.lg.jp/article/view/1322/16668.html",
+          "date": "2026-08-12",
+          "time": null,
+          "category": "その他"
         },
         {
           "title": "【農業再生協議会】熊本地震被害に伴う経営所得安定対策等の今後の対応について",
@@ -2927,137 +2884,67 @@
           "category": "その他"
         },
         {
-          "title": "4 令和８年熊本地震に係る義援金、寄附金、ふるさと納税、... 2026年08月14日",
-          "url": "https://www.city.uto.lg.jp/article/view/1145/16359.html",
+          "title": "水道の復旧について（お知らせ）",
+          "url": "https://www.city.uto.lg.jp/article/view/1308/16317.html",
           "date": "2026-08-14",
           "time": null,
-          "category": "支援・制度"
+          "category": "ライフライン"
         },
         {
-          "title": "漏水時の対応",
-          "url": "https://www.city.uto.lg.jp/article/view/1308/16543.html",
-          "date": "2026-08-14",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "「行長しゃん号」の運行再開について",
-          "url": "https://www.city.uto.lg.jp/article/view/1304/16466.html",
-          "date": "2026-08-17",
-          "time": null,
-          "category": "交通"
-        },
-        {
-          "title": "【終了】避難所等における支援物資の飲料水（ペットボトル）の一般配布終了について・時間の変更について",
-          "url": "https://www.city.uto.lg.jp/article/view/1302/16545.html",
-          "date": "2026-08-17",
+          "title": "<注意喚起>傷んだ道路の通行について",
+          "url": "https://www.city.uto.lg.jp/article/view/1304/16680.html",
+          "date": "2026-08-16",
           "time": null,
           "category": "避難・安全"
         },
         {
-          "title": "地震により傷んだ道路での通行にご注意ください",
-          "url": "https://www.city.uto.lg.jp/article/view/1306/16680.html",
+          "title": "長部田海床路の通行止め解除について",
+          "url": "https://www.city.uto.lg.jp/article/view/1306/16882.html",
           "date": "2026-08-19",
           "time": null,
           "category": "避難・安全"
         },
         {
-          "title": "キーワード「2026」の記事一覧",
-          "url": "https://www.city.uto.lg.jp/article/keyword/29211.html",
+          "title": "水質検査の結果を公表します",
+          "url": "https://www.city.uto.lg.jp/article/view/1308/16737.html",
           "date": "2026-08-19",
           "time": null,
           "category": "その他"
         },
         {
-          "title": "熊本地震後の健康相談について",
-          "url": "https://www.city.uto.lg.jp/article/view/1073/16683.html",
-          "date": "2026-08-20",
+          "title": "令和8年熊本地震に伴う雇用・労働行政の支援策について",
+          "url": "https://www.city.uto.lg.jp/article/view/1321/16864.html",
+          "date": "2026-08-21",
           "time": null,
           "category": "支援・制度"
         },
         {
-          "title": "キーワード「2026」の記事一覧",
-          "url": "https://www.city.uto.lg.jp/article/keyword/22145.html",
-          "date": "2026-08-20",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "令和８年熊本地震の発生による２次避難先での保育利用について",
-          "url": "https://www.city.uto.lg.jp/article/view/1189/16691.html",
-          "date": "2026-08-20",
-          "time": null,
-          "category": "避難・安全"
-        },
-        {
-          "title": "災害時用防災井戸設置場所一覧",
-          "url": "https://www.city.uto.lg.jp/article/view/1302/8162.html",
+          "title": "宇土市立図書館開館について",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16828.html",
           "date": "2026-08-22",
           "time": null,
           "category": "その他"
         },
         {
-          "title": "水質検査の結果を公表します",
-          "url": "https://www.city.uto.lg.jp/article/view/1308/16737.html",
+          "title": "給水車による給水終了のお知らせ",
+          "url": "https://www.city.uto.lg.jp/article/view/1308/16322.html",
           "date": "2026-08-24",
           "time": null,
-          "category": "その他"
+          "category": "ライフライン"
         },
         {
-          "title": "令和８年熊本地震資金繰り支援チラシ(PDF 約543KB)",
-          "url": "https://www.city.uto.lg.jp/d?q=e7ca153ac4ba8a608b14f1b6761dc8fe.pdf",
-          "date": "2026-08-24",
+          "title": "【車中泊で避難されている皆様へ】お困りごとはありませんか？",
+          "url": "https://www.city.uto.lg.jp/article/view/1310/16807.html",
+          "date": "2026-08-27",
           "time": null,
-          "category": "支援・制度"
+          "category": "避難・安全"
         },
         {
-          "title": "キーワード「空き家」の記事一覧",
-          "url": "https://www.city.uto.lg.jp/article/keyword/41.html",
-          "date": "2026-08-25",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "お知らせ：【レベル5 大雨特別警報】発表時の適切な行動及び車運転時の注意点について",
+          "title": "お知らせ：【レベル5 大雨特別警報】発表時の適切な行動及...",
           "url": "https://www.city.uto.lg.jp/article/view/1310/16777.html",
           "date": "2026-08-27",
           "time": null,
           "category": "その他"
-        },
-        {
-          "title": "宇土市指定給水装置工事事業者名簿一覧",
-          "url": "https://www.city.uto.lg.jp/article/view/1008/1295.html",
-          "date": "2026-08-27",
-          "time": null,
-          "category": "ライフライン"
-        },
-        {
-          "title": "指定給水装置工事事業者名簿(令和８年８月27日現在)(PDF 約180KB)",
-          "url": "https://www.city.uto.lg.jp/d?q=427e3246f212c1270265b2174c795f85.pdf",
-          "date": "2026-08-27",
-          "time": null,
-          "category": "ライフライン"
-        },
-        {
-          "title": "令和８年熊本地震によって お住まいに被害を受けられた皆さまへ（ご案内）(PDF 約221KB)",
-          "url": "https://www.city.uto.lg.jp/d?q=a15baf9c6ebaff9fa4456a443f714f2e.pdf",
-          "date": "2026-08-27",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
-          "title": "令和８年熊本地震に係る被災者生活再建支援金について",
-          "url": "https://www.city.uto.lg.jp/article/view/1018/16580.html",
-          "date": "2026-08-27",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
-          "title": "【車中泊で避難されている皆様へ】お困りごとはありませんか？",
-          "url": "https://www.city.uto.lg.jp/article/view/1302/16807.html",
-          "date": "2026-08-28",
-          "time": null,
-          "category": "避難・安全"
         },
         {
           "title": "令和8年熊本地震で被災した住宅の井戸の不具合の原因調査等について",
@@ -3067,114 +2954,86 @@
           "category": "住まい・証明"
         },
         {
-          "title": "令和8年熊本地震による宇土市道の通行規制について",
-          "url": "https://www.city.uto.lg.jp/article/view/1306/16413.html",
-          "date": "2026-08-28",
+          "title": "洪水・大雨・高潮・土砂災害の危険性が高まっています！",
+          "url": "https://www.city.uto.lg.jp/article/view/1310/16857.html",
+          "date": "2026-09-01",
           "time": null,
           "category": "その他"
         },
         {
-          "title": "災害援護資金の貸付制度について",
-          "url": "https://www.city.uto.lg.jp/article/view/1307/16751.html",
-          "date": "2026-08-31",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "老人福祉センター・西部老人福祉センターは通常業務を開始しました",
-          "url": "https://www.city.uto.lg.jp/article/view/1305/16338.html",
-          "date": "2026-08-31",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "給水車による給水終了のお知らせ",
-          "url": "https://www.city.uto.lg.jp/article/view/1308/16322.html",
-          "date": "2026-08-31",
-          "time": null,
-          "category": "ライフライン"
-        },
-        {
-          "title": "キーワード「補助金」の記事一覧",
-          "url": "https://www.city.uto.lg.jp/article/keyword/240.html",
-          "date": "2026-08-31",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "3 令和８年熊本地震における住家及び非住家の『り災証明書』について 2026年09月01日",
-          "url": "https://www.city.uto.lg.jp/article/view/1014/16416.html",
+          "title": "令和８年熊本地震に係る建設型応急住宅の入居者募集について",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16820.html",
           "date": "2026-09-01",
           "time": null,
           "category": "住まい・証明"
         },
         {
-          "title": "5 令和８年熊本地震に係るふるさと納税を受け付けます 2026年09月01日",
-          "url": "https://www.city.uto.lg.jp/article/view/1033/16630.html",
+          "title": "令和８年熊本地震に係るふるさと納税を受け付けます",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16630.html",
           "date": "2026-09-01",
           "time": null,
           "category": "その他"
         },
         {
-          "title": "あじさいの湯の営業再開について",
-          "url": "https://www.city.uto.lg.jp/article/view/1307/16785.html",
+          "title": "令和８年熊本地震における住家及び非住家の『り災証明書』について",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16416.html",
           "date": "2026-09-01",
           "time": null,
-          "category": "その他"
+          "category": "住まい・証明"
         },
         {
-          "title": "自衛隊による入浴支援終了のお知らせ",
-          "url": "https://www.city.uto.lg.jp/article/view/1307/16465.html",
-          "date": "2026-09-01",
-          "time": null,
-          "category": "ごみ・生活"
-        },
-        {
-          "title": "公民館の開放について",
+          "title": "公民館開放",
           "url": "https://www.city.uto.lg.jp/article/view/1305/16837.html",
           "date": "2026-09-01",
           "time": null,
           "category": "その他"
         },
         {
-          "title": "士業による被災者支援のための無料相談会を開催しています",
-          "url": "https://www.city.uto.lg.jp/article/view/1310/16743.html",
-          "date": "2026-09-01",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
           "title": "市民の皆様へお願いです",
           "url": "https://www.city.uto.lg.jp/article/view/1308/16473.html",
+          "date": "2026-09-01",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "令和8年熊本地震 災害対策本部会議",
+          "url": "https://www.city.uto.lg.jp/article/view/1310/16725.html",
           "date": "2026-09-02",
           "time": null,
           "category": "その他"
         },
         {
-          "title": "1 令和８年熊本地震に係る建設型応急住宅の入居者募集について 2026年09月04日",
-          "url": "https://www.city.uto.lg.jp/article/view/1007/16820.html",
-          "date": "2026-09-04",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
-          "title": "令和8年熊本地震で被災された農業者の皆様へ",
-          "url": "https://www.city.uto.lg.jp/article/view/1243/16865.html",
+          "title": "令和8年熊本地震で被災した家屋等の解体・撤去（公費解体）の申請受付について",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16892.html",
           "date": "2026-09-04",
           "time": null,
           "category": "その他"
         },
         {
-          "title": "災害ごみは地区のごみ置き場に出さないでください",
-          "url": "https://www.city.uto.lg.jp/article/view/1303/16881.html",
+          "title": "自衛隊による入浴支援終了のお知らせ",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16465.html",
           "date": "2026-09-04",
           "time": null,
           "category": "ごみ・生活"
         },
         {
-          "title": "令和８年熊本地震による被災農業者のための利子補給について 2026年09月04日",
-          "url": "https://www.city.uto.lg.jp/article/view/1121/16668.html",
+          "title": "令和8年熊本地震で被災された農業者の皆様へ",
+          "url": "https://www.city.uto.lg.jp/article/view/1322/16865.html",
           "date": "2026-09-04",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "災害に便乗した悪質商法にご注意ください！",
+          "url": "https://www.city.uto.lg.jp/article/view/1310/16344.html",
+          "date": "2026-09-06",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "ファミリーサポートセンター及びつどいの広場サンサンは8...",
+          "url": "https://www.city.uto.lg.jp/article/view/1305/16552.html",
+          "date": "2026-09-07",
           "time": null,
           "category": "その他"
         },
@@ -3186,13 +3045,6 @@
           "category": "施設・学校"
         },
         {
-          "title": "長部田海床路の通行止め解除について",
-          "url": "https://www.city.uto.lg.jp/article/view/1306/16882.html",
-          "date": "2026-09-07",
-          "time": null,
-          "category": "避難・安全"
-        },
-        {
           "title": "令和８年熊本地震で被災した事業者等への支援パッケージについて",
           "url": "https://www.city.uto.lg.jp/article/view/1321/16873.html",
           "date": "2026-09-07",
@@ -3200,97 +3052,246 @@
           "category": "支援・制度"
         },
         {
-          "title": "令和8年熊本地震に伴う雇用・労働行政の支援策について",
-          "url": "https://www.city.uto.lg.jp/article/view/1321/16864.html",
-          "date": "2026-09-07",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
-          "title": "被災事業者支援チラシ（中小企業庁）(PDF 約471KB)",
-          "url": "https://www.city.uto.lg.jp/d?q=711369a4ca91071eb195360760cb7414.pdf",
-          "date": "2026-09-07",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
-          "title": "避難所情報一覧（R8.9.7 17時時点）(PDF 約90KB)",
-          "url": "https://www.city.uto.lg.jp/d?q=bc45d4a5ae13762a610ec6f892f6534d.pdf",
-          "date": "2026-09-07",
-          "time": "17:00",
-          "category": "避難・安全"
-        },
-        {
-          "title": "【重要】災害ごみ仮置き場の開設のお知らせ（9月8日時点）",
-          "url": "https://www.city.uto.lg.jp/article/view/1303/16352.html",
-          "date": "2026-09-08",
-          "time": null,
-          "category": "ごみ・生活"
-        },
-        {
-          "title": "令和８年度熊本地震による児童扶養手当等の特例措置について",
-          "url": "https://www.city.uto.lg.jp/article/view/1056/16877.html",
-          "date": "2026-09-08",
-          "time": "17:00",
-          "category": "その他"
-        },
-        {
-          "title": "令和８年熊本地震被害に関するすまいの相談窓口",
-          "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
-          "date": "2026-09-10",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
-          "title": "令和8年熊本地震で被災した家屋等の解体・撤去（公費解体）の申請受付について",
-          "url": "https://www.city.uto.lg.jp/article/view/1307/16892.html",
-          "date": "2026-09-10",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "避難所について（9/10 17:00更新）",
-          "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
-          "date": "2026-09-10",
-          "time": "17:00",
-          "category": "避難・安全"
-        },
-        {
-          "title": "避難所情報一覧（R8.9.10 17時時点）(PDF 約88KB)",
-          "url": "https://www.city.uto.lg.jp/d?q=4c1f685bc04434c8334b3c6ad761c4a5.pdf",
-          "date": "2026-09-10",
-          "time": "17:00",
-          "category": "避難・安全"
-        },
-        {
           "title": "【熊本地震】9月12日（土）、13日（日）の窓口業務について",
-          "url": "https://www.city.uto.lg.jp/article/view/1014/16528.html",
+          "url": "https://www.city.uto.lg.jp/article/view/1310/16528.html",
+          "date": "2026-09-08",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "令和８年度熊本地震による児童扶養手当等の特例措置について 2026年09月09日",
+          "url": "https://www.city.uto.lg.jp/article/view/1056/16877.html",
+          "date": "2026-09-09",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "市営住宅の一時提供を行います",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16537.html",
+          "date": "2026-09-10",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
+          "title": "住家の緊急修理について",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16406.html",
+          "date": "2026-09-10",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
+          "title": "災害時用防災井戸設置場所一覧",
+          "url": "https://www.city.uto.lg.jp/article/view/1310/8162.html",
           "date": "2026-09-11",
           "time": null,
           "category": "その他"
         },
         {
-          "title": "令和８年熊本地震に係る被災した住宅の応急修理制度について（サイト内リンク）",
-          "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
-          "date": "2026-09-12",
+          "title": "避難所について（9/13 17:00更新）",
+          "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
+          "date": "2026-09-13",
+          "time": "17:00",
+          "category": "避難・安全"
+        },
+        {
+          "title": "【重要】災害ごみ仮置場の開設のお知らせ（9月14日時点）",
+          "url": "https://www.city.uto.lg.jp/article/view/1303/16352.html",
+          "date": "2026-09-14",
           "time": null,
-          "category": "住まい・証明"
+          "category": "ごみ・生活"
+        },
+        {
+          "title": "気象災害（地震、台風、大雨等）により農作物や農業施設...",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16551.html",
+          "date": "2026-09-14",
+          "time": null,
+          "category": "施設・学校"
+        },
+        {
+          "title": "令和８年熊本地震被害に関するすまいの相談窓口",
+          "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
+          "date": "2026-09-14",
+          "time": null,
+          "category": "支援・制度"
         }
       ],
       "sourcesChecked": [
         "https://www.city.uto.lg.jp/category/list/1301.html",
-        "https://www.city.uto.lg.jp/"
+        "https://www.city.uto.lg.jp/",
+        "https://www.city.uto.lg.jp/category/list/1001.html",
+        "https://www.city.uto.lg.jp/category/list/1012.html",
+        "https://www.city.uto.lg.jp/category/list/1054.html",
+        "https://www.city.uto.lg.jp/category/list/1070.html",
+        "https://www.city.uto.lg.jp/category/list/1090.html",
+        "https://www.city.uto.lg.jp/category/list/1105.html",
+        "https://www.city.uto.lg.jp/article/keyword/22145.html",
+        "https://www.city.uto.lg.jp/article/keyword/29211.html",
+        "https://www.city.uto.lg.jp/article/keyword/240.html",
+        "https://www.city.uto.lg.jp/article/keyword/264.html",
+        "https://www.city.uto.lg.jp/article/keyword/41.html",
+        "https://www.city.uto.lg.jp/article/view/1017/5569.html",
+        "https://www.city.uto.lg.jp/d?q=ae1a43fd2883a1bcfef56bf1699a5004.pdf",
+        "https://www.city.uto.lg.jp/article/view/1302/16888.html",
+        "https://www.city.uto.lg.jp/article/view/1302/8162.html",
+        "https://www.city.uto.lg.jp/article/view/1302/16857.html",
+        "https://www.city.uto.lg.jp/article/view/1302/16807.html",
+        "https://www.city.uto.lg.jp/article/view/1302/16545.html",
+        "https://www.city.uto.lg.jp/article/view/1302/15768.html",
+        "https://www.city.uto.lg.jp/article/view/1302/5569.html",
+        "https://www.city.uto.lg.jp/article/view/1303/16352.html",
+        "https://www.city.uto.lg.jp/article/view/1303/16881.html",
+        "https://www.city.uto.lg.jp/article/view/1303/16328.html",
+        "https://www.city.uto.lg.jp/article/view/1306/16882.html",
+        "https://www.city.uto.lg.jp/article/view/1306/16680.html",
+        "https://www.city.uto.lg.jp/article/view/1306/16413.html",
+        "https://www.city.uto.lg.jp/article/view/1306/15768.html",
+        "https://www.city.uto.lg.jp/article/view/1306/1870.html",
+        "https://www.city.uto.lg.jp/article/view/1306/5569.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16551.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16522.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16537.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16406.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16892.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16465.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16820.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16630.html",
+        "https://www.city.uto.lg.jp/article/view/1307/16416.html",
+        "https://www.city.uto.lg.jp/article/view/1304/16680.html",
+        "https://www.city.uto.lg.jp/article/view/1304/16466.html",
+        "https://www.city.uto.lg.jp/article/view/1304/16467.html",
+        "https://www.city.uto.lg.jp/article/view/1304/16449.html",
+        "https://www.city.uto.lg.jp/article/view/1304/5569.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16837.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16828.html",
+        "https://www.city.uto.lg.jp/article/view/1305/8162.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16552.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16620.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16338.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16346.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16448.html",
+        "https://www.city.uto.lg.jp/article/view/1305/16385.html",
+        "https://www.city.uto.lg.jp/article/view/1308/8162.html",
+        "https://www.city.uto.lg.jp/article/view/1308/16473.html",
+        "https://www.city.uto.lg.jp/article/view/1308/16322.html",
+        "https://www.city.uto.lg.jp/article/view/1308/16737.html",
+        "https://www.city.uto.lg.jp/article/view/1308/16317.html",
+        "https://www.city.uto.lg.jp/article/view/1308/16543.html",
+        "https://www.city.uto.lg.jp/article/view/1308/16554.html",
+        "https://www.city.uto.lg.jp/article/view/1321/16873.html",
+        "https://www.city.uto.lg.jp/article/view/1321/16864.html",
+        "https://www.city.uto.lg.jp/article/view/1321/16716.html",
+        "https://www.city.uto.lg.jp/article/view/1321/16569.html",
+        "https://www.city.uto.lg.jp/article/view/1321/16441.html",
+        "https://www.city.uto.lg.jp/article/view/1321/16462.html",
+        "https://www.city.uto.lg.jp/article/view/1322/16865.html",
+        "https://www.city.uto.lg.jp/article/view/1322/16668.html",
+        "https://www.city.uto.lg.jp/article/view/1322/16553.html",
+        "https://www.city.uto.lg.jp/article/view/1310/8162.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16528.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16344.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16725.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16857.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16630.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16783.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16807.html",
+        "https://www.city.uto.lg.jp/article/view/1310/16777.html",
+        "https://www.city.uto.lg.jp/article/list/1280.html",
+        "https://www.city.uto.lg.jp/inquiry_s/form.html",
+        "https://www.city.uto.lg.jp/article/view/1280/11.html",
+        "https://www.city.uto.lg.jp/article/list/1282.html",
+        "https://www.city.uto.lg.jp/article/view/1056/16877.html",
+        "https://www.city.uto.lg.jp/article/view/1058/16877.html"
       ],
-      "pagesFetched": 0,
+      "pagesFetched": 3,
       "errors": [
-        "https://www.city.uto.lg.jp/category/list/1301.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/category/list/1301.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/\ncurl: (22) The requested URL returned error: 403\n"
+        "https://www.city.uto.lg.jp/: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/category/list/1001.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/category/list/1001.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/category/list/1012.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/category/list/1012.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/category/list/1070.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/category/list/1070.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/category/list/1090.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/category/list/1090.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/category/list/1105.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/category/list/1105.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/keyword/22145.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/keyword/22145.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/keyword/29211.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/keyword/29211.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/keyword/240.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/keyword/240.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/keyword/264.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/keyword/264.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/keyword/41.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/keyword/41.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1017/5569.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1017/5569.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/d?q=ae1a43fd2883a1bcfef56bf1699a5004.pdf: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/d?q=ae1a43fd2883a1bcfef56bf1699a5004.pdf\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1302/16888.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/16888.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1302/8162.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/8162.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1302/16857.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/16857.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1302/16807.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/16807.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1302/16545.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/16545.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1302/15768.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/15768.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1302/5569.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/5569.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1303/16881.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1303/16881.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1303/16328.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1303/16328.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1306/16882.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1306/16882.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1306/16680.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1306/16680.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1306/16413.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1306/16413.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1306/15768.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1306/15768.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1306/1870.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1306/1870.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1306/5569.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1306/5569.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1307/16551.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16551.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1307/16522.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16522.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1307/16537.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16537.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1307/16406.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16406.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1307/16892.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16892.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1307/16465.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16465.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1307/16820.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16820.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1307/16630.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16630.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1307/16416.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16416.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1304/16680.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1304/16680.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1304/16466.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1304/16466.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1304/16467.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1304/16467.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1304/16449.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1304/16449.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1304/5569.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1304/5569.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1305/16837.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16837.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1305/16828.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16828.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1305/8162.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/8162.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1305/16552.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16552.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1305/16620.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16620.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1305/16338.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16338.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1305/16346.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16346.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1305/16448.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16448.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1305/16385.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16385.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1308/8162.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1308/8162.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1308/16473.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1308/16473.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1308/16322.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1308/16322.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1308/16737.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1308/16737.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1308/16317.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1308/16317.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1308/16543.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1308/16543.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1308/16554.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1308/16554.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1321/16873.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/16873.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1321/16864.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/16864.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1321/16716.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/16716.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1321/16569.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/16569.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1321/16441.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/16441.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1321/16462.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/16462.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1322/16865.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1322/16865.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1322/16668.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1322/16668.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1322/16553.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1322/16553.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1310/8162.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/8162.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1310/16528.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16528.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1310/16344.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16344.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1310/16725.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16725.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1310/16857.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16857.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1310/16630.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16630.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1310/16783.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16783.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1310/16807.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16807.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1310/16777.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16777.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/list/1280.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/list/1280.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/inquiry_s/form.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/inquiry_s/form.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1280/11.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1280/11.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/list/1282.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/list/1282.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1056/16877.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1056/16877.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/article/view/1058/16877.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1058/16877.html\ncurl: (22) The requested URL returned error: 403\n"
       ]
     },
     {
       "name": "上天草市",
       "officialUrl": "https://www.city.kamiamakusa.kumamoto.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3469,18 +3470,18 @@
           "category": "支援・制度"
         },
         {
-          "title": "【報道資料】雲仙天草国立公園天草地域指定70周年記念第55回天草パールラインマラソン大会の開催について",
-          "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/446/23451.html",
-          "date": "2026-08-28",
-          "time": null,
-          "category": "その他"
-        },
-        {
           "title": "上島地区乗合タクシーの臨時運行について",
           "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23220.html",
           "date": "2026-08-28",
           "time": null,
           "category": "交通"
+        },
+        {
+          "title": "【報道資料】雲仙天草国立公園天草地域指定70周年記念第55回天草パールラインマラソン大会の開催について",
+          "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/446/23451.html",
+          "date": "2026-08-28",
+          "time": null,
+          "category": "その他"
         },
         {
           "title": "令和8年熊本地震にかかる災害見舞金等の支給について",
@@ -3583,13 +3584,12 @@
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/357/23482.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/547/23326.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/95/23109.html",
-        "https://www.city.kamiamakusa.kumamoto.jp/q/list/351.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/list/545.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23516.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23500.html",
-        "https://www.city.kamiamakusa.kumamoto.jp/q/aview/446/23451.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/list/83.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/list/91.html",
+        "https://www.city.kamiamakusa.kumamoto.jp/q/list/351.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/64/23391.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23393.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23220.html",
@@ -3605,6 +3605,7 @@
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23475.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/141/23433.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/546/23441.html",
+        "https://www.city.kamiamakusa.kumamoto.jp/q/aview/446/23451.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/73/21563.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23205.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23284.html",
@@ -3627,10 +3628,10 @@
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23297.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23290.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/21618.html",
-        "https://www.city.kamiamakusa.kumamoto.jp/q/aview/446/23326.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/546/23284.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/546/23389.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/141/23162.html",
+        "https://www.city.kamiamakusa.kumamoto.jp/q/aview/446/23326.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23180.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23374.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/59/23163.html",
@@ -3655,7 +3656,7 @@
     {
       "name": "宇城市",
       "officialUrl": "https://www.city.uki.kumamoto.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4058,13 +4059,6 @@
           "category": "その他"
         },
         {
-          "title": "給水・充電・入浴などの支援",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2609744",
-          "date": "2026-09-04",
-          "time": null,
-          "category": "ライフライン"
-        },
-        {
           "title": "地震による重度心身障がい者医療費支払い手続きの一時停止",
           "url": "https://www.city.uki.kumamoto.jp/iryo_fukushi/fukushi/shogaishafukushi/2621500",
           "date": "2026-09-04",
@@ -4077,13 +4071,6 @@
           "date": "2026-09-04",
           "time": null,
           "category": "その他"
-        },
-        {
-          "title": "利用できる支援制度などを簡単検索 「うき支援ナビ」",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2631974",
-          "date": "2026-09-07",
-          "time": null,
-          "category": "支援・制度"
         },
         {
           "title": "被災者支援のための無料相談会の開催（司法書士・弁護士・行政書士）",
@@ -4116,20 +4103,6 @@
         {
           "title": "令和８年熊本地震で被災した事業者等への支援パッケージについて",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2630205",
-          "date": "2026-09-07",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
-          "title": "令和8年熊本地震被災者支援に関する各種制度の概要（R8.9.7時点） (PDF 2,111KB)",
-          "url": "https://www.city.uki.kumamoto.jp/resource.php?e=bc91bc582cd8d027737fea1f5abac28a7e48c3aa73dae45d9ccf9ebf41e4cbf68257ff6cb0b56afa3a56bb98fa214e45",
-          "date": "2026-09-07",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
-          "title": "令和8年熊本地震_被災者支援制度等一覧（R8.9.7時点） (PDF 545KB)",
-          "url": "https://www.city.uki.kumamoto.jp/resource.php?e=396a1511baac47305b325b6fa47a127f9a2e47d87b7df5d3cd19bc692f1c6222008db943ee9f53eefe2701a21593a542",
           "date": "2026-09-07",
           "time": null,
           "category": "支援・制度"
@@ -4205,6 +4178,13 @@
           "category": "施設・学校"
         },
         {
+          "title": "利用できる支援制度などを簡単検索 「うき支援ナビ」",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2631974",
+          "date": "2026-09-10",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
           "title": "2026年09月10日 令和8年熊本地震の罹災証明・罹災届出証明の申請を受け付けます",
           "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/sonota_bousai/2515854",
           "date": "2026-09-10",
@@ -4261,6 +4241,13 @@
           "category": "その他"
         },
         {
+          "title": "地震に伴う断水解消及び給水制限解除のお知らせ",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2606682",
+          "date": "2026-09-10",
+          "time": null,
+          "category": "ライフライン"
+        },
+        {
           "title": "松橋西防災拠点センター避難所の避難者新規受け入れを停止します",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2620459",
           "date": "2026-09-10",
@@ -4282,13 +4269,6 @@
           "category": "避難・安全"
         },
         {
-          "title": "2026年09月10日 令和8年熊本地震で被災した家屋等の解体・撤去について",
-          "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2622644",
-          "date": "2026-09-10",
-          "time": null,
-          "category": "その他"
-        },
-        {
           "title": "被災した家屋等の解体・撤去について（公費解体・自費解体） (PDF 757KB)",
           "url": "https://www.city.uki.kumamoto.jp/resource.php?e=96ef25c932743d9457a96603adbe3d80c9d7b92dab0c014318d5dcfa4577e39c1bc747cde0e0e87005d1d61f9b953ec9",
           "date": "2026-09-10",
@@ -4301,6 +4281,13 @@
           "date": "2026-09-11",
           "time": null,
           "category": "その他"
+        },
+        {
+          "title": "2026年09月11日 被災者支援制度の概要を作成しました",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2624365",
+          "date": "2026-09-11",
+          "time": null,
+          "category": "支援・制度"
         },
         {
           "title": "【令和8年熊本地震】住宅の応急修理制度について",
@@ -4373,60 +4360,25 @@
           "category": "その他"
         },
         {
-          "title": "宇城市おくやみコーナーを開設しています（令和8年熊本地震に伴う災害対応のため休止中）",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2601731",
-          "date": "2026-09-11",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "2026年09月13日 避難者数",
+          "title": "2026年09月14日 避難者数",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
-          "date": "2026-09-13",
+          "date": "2026-09-14",
           "time": null,
           "category": "避難・安全"
         },
         {
-          "title": "2026年09月13日 被災者支援制度の概要を作成しました",
-          "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2624365",
-          "date": "2026-09-13",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
           "title": "ブルーシート（支援物資）を配布します",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2611778",
-          "date": "2026-09-13",
+          "date": "2026-09-14",
           "time": null,
           "category": "住まい・証明"
         },
         {
-          "title": "令和８年熊本地震の発生に伴う宇城市屋内多目的広場施設の利用について",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2624914",
-          "date": "2026-09-13",
+          "title": "2026年09月14日 給水・充電・入浴などの支援",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2609744",
+          "date": "2026-09-14",
           "time": null,
-          "category": "施設・学校"
-        },
-        {
-          "title": "旧宇城市戸馳花の学校及び不知火温泉ふるさと交流センターの利活用事業者を募集します",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2564357",
-          "date": "2026-09-13",
-          "time": null,
-          "category": "施設・学校"
-        },
-        {
-          "title": "2026年9月13日 令和8年熊本地震 関連情報 （9月13日18時00分更新）",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-          "date": "2026-09-13",
-          "time": "18:00",
-          "category": "その他"
-        },
-        {
-          "title": "2026年09月13日 令和8年熊本地震 関連情報 （9月13日18時00分更新）",
-          "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
-          "date": "2026-09-13",
-          "time": "18:00",
-          "category": "その他"
+          "category": "ライフライン"
         },
         {
           "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
@@ -4434,6 +4386,62 @@
           "date": "2026-09-14",
           "time": null,
           "category": "ごみ・生活"
+        },
+        {
+          "title": "2026年09月14日 令和8年熊本地震に係る自宅敷地内への建設型応急住宅の設置について",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2634210",
+          "date": "2026-09-14",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
+          "title": "令和８年熊本地震の発生に伴う宇城市屋内多目的広場施設の利用について",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2624914",
+          "date": "2026-09-14",
+          "time": null,
+          "category": "施設・学校"
+        },
+        {
+          "title": "令和8年熊本地震被災者支援に関する各種制度の概要（R8.9.14時点） (PDF 2,112KB)",
+          "url": "https://www.city.uki.kumamoto.jp/resource.php?e=2648f04770f8d72d45c8ff30fd1f2967251d4527f30a0570682d428bce64102490059d81bd4f8f6a47e84dc3e4c51342",
+          "date": "2026-09-14",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
+          "title": "令和８年熊本地震被災者支援制度等一覧（R8.9.14時点） (PDF 493KB)",
+          "url": "https://www.city.uki.kumamoto.jp/resource.php?e=b88182c787fdca805bc7a9ceb61cc953103a1e3e100cf791aa659c45223beb052c1ef9a78467d9a5d6cccf3315d0e82a",
+          "date": "2026-09-14",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
+          "title": "2026年09月14日 雷の影響による一部地域の給水制限について（不知火町の一部）",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/jogesuido/2634562",
+          "date": "2026-09-14",
+          "time": null,
+          "category": "ライフライン"
+        },
+        {
+          "title": "旧宇城市戸馳花の学校及び不知火温泉ふるさと交流センターの利活用事業者を募集します",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2564357",
+          "date": "2026-09-14",
+          "time": null,
+          "category": "施設・学校"
+        },
+        {
+          "title": "2026年9月14日 令和8年熊本地震 関連情報 （9月14日13時00分更新）",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+          "date": "2026-09-14",
+          "time": "13:00",
+          "category": "その他"
+        },
+        {
+          "title": "2026年09月14日 令和8年熊本地震 関連情報 （9月14日13時00分更新）",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
+          "date": "2026-09-14",
+          "time": "13:00",
+          "category": "その他"
         }
       ],
       "sourcesChecked": [
@@ -4470,6 +4478,7 @@
         "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/sonota_bousai/2515854",
         "https://www.city.uki.kumamoto.jp/kurashi/sonota_kurashi/2616414",
         "https://www.city.uki.kumamoto.jp/resource.php?e=2af5cabbe58e24884bd3d59eb7de4d48b25485513efc7b7d60d7acf5922a4eaec9a3415a81f8f20817eaf357cea09c9e",
+        "https://www.city.uki.kumamoto.jp/toppage/important/2634210",
         "https://www.city.uki.kumamoto.jp/toppage/important/2628356",
         "https://www.city.uki.kumamoto.jp/toppage/important/2607269",
         "https://www.city.uki.kumamoto.jp/kurashi/sumai/2613949",
@@ -4524,16 +4533,16 @@
         "https://www.city.uki.kumamoto.jp/toppage/important/2620169",
         "https://www.city.uki.kumamoto.jp/toppage/important/2606682",
         "https://www.city.uki.kumamoto.jp/toppage/furusato",
+        "https://www.city.uki.kumamoto.jp/toppage/important/2624914",
         "https://www.city.uki.kumamoto.jp/toppage/important/2606668",
         "https://www.city.uki.kumamoto.jp/toppage/important/2620848",
         "https://www.city.uki.kumamoto.jp/toppage/important/2620459",
-        "https://www.city.uki.kumamoto.jp/toppage/important/2609591",
         "https://www.city.uki.kumamoto.jp/toppage/important/2611938",
         "https://www.city.uki.kumamoto.jp/toppage/important/2610825",
         "https://www.city.uki.kumamoto.jp/toppage/important/2607146",
-        "https://www.city.uki.kumamoto.jp/toppage/important/2601731",
         "https://www.city.uki.kumamoto.jp/toppage/important/2578019",
         "https://www.city.uki.kumamoto.jp/toppage/important/2564357",
+        "https://www.city.uki.kumamoto.jp/toppage/important/2609591",
         "https://www.city.uki.kumamoto.jp/toppage/important/2515854",
         "https://www.city.uki.kumamoto.jp/toppage/important/2609706",
         "https://www.city.uki.kumamoto.jp/toppage/important/2616414",
@@ -4542,8 +4551,7 @@
         "https://www.city.uki.kumamoto.jp/toppage/important/2136905",
         "https://www.city.uki.kumamoto.jp/toppage/important/2630892",
         "https://www.city.uki.kumamoto.jp/toppage/important/2630205",
-        "https://www.city.uki.kumamoto.jp/toppage/important/2607719",
-        "https://www.city.uki.kumamoto.jp/toppage/important/2624914"
+        "https://www.city.uki.kumamoto.jp/toppage/important/2607719"
       ],
       "pagesFetched": 101,
       "errors": [
@@ -4558,7 +4566,7 @@
     {
       "name": "天草市",
       "officialUrl": "https://www.city.amakusa.kumamoto.jp/default.html?site=1",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4782,7 +4790,7 @@
     {
       "name": "合志市",
       "officialUrl": "https://www.city.koshi.lg.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4875,6 +4883,13 @@
           "date": "2026-09-11",
           "time": null,
           "category": "その他"
+        },
+        {
+          "title": "【令和8年熊本地震】被災した住宅の応急修理について",
+          "url": "https://www.city.koshi.lg.jp/kiji00325685/index.html",
+          "date": "2026-09-11",
+          "time": null,
+          "category": "住まい・証明"
         }
       ],
       "sourcesChecked": [
@@ -4968,7 +4983,7 @@
     {
       "name": "美里町",
       "officialUrl": "https://www.town.kumamoto-misato.lg.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5171,7 +5186,7 @@
     {
       "name": "大津町",
       "officialUrl": "https://www.town.ozu.kumamoto.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5217,13 +5232,6 @@
           "category": "住まい・証明"
         },
         {
-          "title": "災害による被害の証明書（罹災証明書と被災証明書）",
-          "url": "https://www.town.ozu.kumamoto.jp/site/bousai/2564.html",
-          "date": "2026-08-18",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
           "title": "「令和８年熊本地震」セーフティーネット保証４号について",
           "url": "https://www.town.ozu.kumamoto.jp/page/27128.html",
           "date": "2026-08-18",
@@ -5245,16 +5253,23 @@
           "category": "住まい・証明"
         },
         {
+          "title": "災害による被害の証明書（罹災証明書と被災証明書）",
+          "url": "https://www.town.ozu.kumamoto.jp/site/bousai/2564.html",
+          "date": "2026-08-26",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
           "title": "（令和8年熊本地震）マイナ保険証、資格確認書がなくても医療機関等を受診できます",
           "url": "https://www.town.ozu.kumamoto.jp/page/26664.html",
-          "date": "2026-08-26",
+          "date": "2026-09-11",
           "time": null,
           "category": "その他"
         },
         {
           "title": "令和8年熊本地震に伴う「ワンストップ窓口」終了のお知らせ",
           "url": "https://www.town.ozu.kumamoto.jp/page/26732.html",
-          "date": "2026-09-11",
+          "date": "2026-09-14",
           "time": null,
           "category": "その他"
         }
@@ -5271,7 +5286,7 @@
     {
       "name": "菊陽町",
       "officialUrl": "https://www.town.kikuyo.lg.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5502,7 +5517,7 @@
     {
       "name": "西原村",
       "officialUrl": "https://www.vill.nishihara.kumamoto.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5525,13 +5540,6 @@
           "date": "2026-08-13",
           "time": "09:49",
           "category": "住まい・証明"
-        },
-        {
-          "title": "【令和8年熊本地震】住民票など各種証明書の交付手数料の免除について",
-          "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032008/index.html",
-          "date": "2026-08-19",
-          "time": "14:24",
-          "category": "その他"
         },
         {
           "title": "【 期限延長 】住宅被害拡大防止のための緊急修理の申込について（ 9月27日まで ）",
@@ -5611,7 +5619,6 @@
         "https://www.vill.nishihara.kumamoto.jp/kiji0032025/index.html",
         "https://www.vill.nishihara.kumamoto.jp/kiji0032014/index.html",
         "https://www.vill.nishihara.kumamoto.jp/bousai/kiji0031997/index.html",
-        "https://www.vill.nishihara.kumamoto.jp/kiji0032008/index.html",
         "https://www.vill.nishihara.kumamoto.jp/kiji0032012/index.html",
         "https://www.vill.nishihara.kumamoto.jp/kiji0032005/index.html",
         "https://www.vill.nishihara.kumamoto.jp/bousai/list00302.html",
@@ -5648,13 +5655,13 @@
         "https://www.vill.nishihara.kumamoto.jp/jisin/list00582.html",
         "https://www.vill.nishihara.kumamoto.jp/jisin/kiji003892/index.html"
       ],
-      "pagesFetched": 77,
+      "pagesFetched": 76,
       "errors": []
     },
     {
       "name": "御船町",
       "officialUrl": "https://www.town.mifune.kumamoto.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5887,7 +5894,7 @@
     {
       "name": "嘉島町",
       "officialUrl": "https://www.town.kumamoto-kashima.lg.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5933,25 +5940,25 @@
           "category": "その他"
         },
         {
-          "title": "災害救助法「住家の応急修理」制度のご案内",
-          "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6050.html",
-          "date": "2026-08-10",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
-          "title": "災害救助法「住家の緊急修理」制度のご案内",
-          "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6040.html",
-          "date": "2026-08-10",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
           "title": "令和8年熊本地震に関する情報",
           "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6035.html",
           "date": "2026-08-12",
           "time": null,
           "category": "その他"
+        },
+        {
+          "title": "「令和8年熊本地震」における災害救助法に基づく住宅の緊急修理・応急修理の支援について - 企画情報課",
+          "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6047.html",
+          "date": "2026-08-12",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
+          "title": "災害救助法「住家の応急修理」制度のご案内",
+          "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6050.html",
+          "date": "2026-08-12",
+          "time": null,
+          "category": "住まい・証明"
         },
         {
           "title": "令和8年熊本地震によってお住まいに被害を受けられた皆さまへ(ご案内)【8.12修正】(PDF 約250KB)",
@@ -6047,9 +6054,16 @@
         {
           "title": "【事業者向け】セーフティネット保証4号の認定について(令和8年熊本地震) - 企画情報課",
           "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6187.html",
-          "date": "2026-09-04",
+          "date": "2026-09-03",
           "time": null,
           "category": "その他"
+        },
+        {
+          "title": "災害救助法「住家の緊急修理」制度のご案内 - 企画情報課",
+          "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6040.html",
+          "date": "2026-09-10",
+          "time": null,
+          "category": "住まい・証明"
         }
       ],
       "sourcesChecked": [
@@ -6090,7 +6104,7 @@
     {
       "name": "益城町",
       "officialUrl": "https://www.town.mashiki.lg.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6241,16 +6255,9 @@
           "category": "その他"
         },
         {
-          "title": "被災した住宅の「緊急修理」の支援について【令和８年熊本地震】",
-          "url": "https://www.town.mashiki.lg.jp/kiji0038081/index.html",
-          "date": "2026-08-20",
-          "time": "09:02",
-          "category": "住まい・証明"
-        },
-        {
           "title": "小中学校体育施設の貸出を再開しました",
           "url": "https://www.town.mashiki.lg.jp/kiji0038131/index.html",
-          "date": "2026-08-21",
+          "date": "2026-08-24",
           "time": null,
           "category": "施設・学校"
         },
@@ -6290,8 +6297,8 @@
           "category": "住まい・証明"
         },
         {
-          "title": "令和８年熊本地震に伴う罹災証明書の発行について",
-          "url": "https://www.town.mashiki.lg.jp/kiji0038063/index.html",
+          "title": "罹災証明書の2次調査の受け付けについて",
+          "url": "https://www.town.mashiki.lg.jp/kiji0038181/index.html",
           "date": "2026-09-01",
           "time": null,
           "category": "住まい・証明"
@@ -6353,11 +6360,25 @@
           "category": "支援・制度"
         },
         {
+          "title": "被災した住宅の「緊急修理」の支援について【令和８年熊本地震】",
+          "url": "https://www.town.mashiki.lg.jp/kiji0038081/index.html",
+          "date": "2026-09-11",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
           "title": "益城町災害援護資金の貸し付け【令和８年熊本地震】",
           "url": "https://www.town.mashiki.lg.jp/kiji0038180/index.html",
           "date": "2026-09-11",
           "time": null,
           "category": "その他"
+        },
+        {
+          "title": "罹災証明書の申請について（１次調査）【令和８年熊本地震】",
+          "url": "https://www.town.mashiki.lg.jp/kiji0038063/index.html",
+          "date": "2026-09-14",
+          "time": null,
+          "category": "住まい・証明"
         }
       ],
       "sourcesChecked": [
@@ -6414,6 +6435,7 @@
         "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/HpKijiListPagerHandler.ashx?c_id=3&class_set_id=1&class_id=1385&kbn=kijilist&top_id=0&pg=3",
         "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/HpKijiListPagerHandler.ashx?c_id=3&class_set_id=1&class_id=1385&kbn=kijilist&top_id=0&pg=4",
         "https://www.town.mashiki.lg.jp/list01357.html",
+        "https://www.town.mashiki.lg.jp/kiji0038081/index.html",
         "https://www.town.mashiki.lg.jp/kiji0038180/index.html",
         "https://www.town.mashiki.lg.jp/kiji0038162/index.html",
         "https://www.town.mashiki.lg.jp/kiji0038084/index.html",
@@ -6436,7 +6458,6 @@
         "https://www.town.mashiki.lg.jp/kiji0038138/index.html",
         "https://www.town.mashiki.lg.jp/kiji0038126/index.html",
         "https://www.town.mashiki.lg.jp/kiji0038128/index.html",
-        "https://www.town.mashiki.lg.jp/kiji0038081/index.html",
         "https://www.town.mashiki.lg.jp/kiji0038122/index.html",
         "https://www.town.mashiki.lg.jp/kiji0038091/index.html",
         "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=3&class_id=304",
@@ -6451,7 +6472,7 @@
     {
       "name": "甲佐町",
       "officialUrl": "https://www.town.kosa.lg.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6479,6 +6500,13 @@
           "title": "町営住宅(甲佐団地・乙女団地・白旗団地)の入居者募集のお知らせについて",
           "url": "https://www.town.kosa.lg.jp/q/aview/179/13679.html",
           "date": "2026-07-30",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
+          "title": "令和8年熊本地震におけるり災証明書のオンライン申請について",
+          "url": "https://www.town.kosa.lg.jp/q/aview/55/13547.html",
+          "date": "2026-08-01",
           "time": null,
           "category": "住まい・証明"
         },
@@ -6518,6 +6546,13 @@
           "category": "その他"
         },
         {
+          "title": "【熊本県信用保証協会】セーフティネット保証4号(令和8年熊本地震分)について",
+          "url": "https://www.town.kosa.lg.jp/q/aview/55/13599.html",
+          "date": "2026-08-07",
+          "time": null,
+          "category": "その他"
+        },
+        {
           "title": "「甲佐・乙女河原」(津志田河川自然公園)のご利用案内",
           "url": "https://www.town.kosa.lg.jp/q/aview/102/425.html",
           "date": "2026-08-07",
@@ -6546,6 +6581,13 @@
           "category": "その他"
         },
         {
+          "title": "り災証明書(2次調査)の発行申請受付について",
+          "url": "https://www.town.kosa.lg.jp/q/aview/101/13690.html",
+          "date": "2026-08-15",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
           "title": "令和8年熊本地震による道路の通行止めに関する情報",
           "url": "https://www.town.kosa.lg.jp/q/aview/51/13533.html",
           "date": "2026-08-15",
@@ -6554,21 +6596,7 @@
         },
         {
           "title": "被災家屋等の公費解体について",
-          "url": "https://www.town.kosa.lg.jp/q/aview/55/13632.html",
-          "date": "2026-08-15",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "り災証明書(非住家)の発行申請受付について",
-          "url": "https://www.town.kosa.lg.jp/q/aview/55/13641.html",
-          "date": "2026-08-15",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
-          "title": "【熊本県信用保証協会】セーフティネット保証4号(令和8年熊本地震分)について",
-          "url": "https://www.town.kosa.lg.jp/q/aview/55/13599.html",
+          "url": "https://www.town.kosa.lg.jp/q/aview/101/13632.html",
           "date": "2026-08-15",
           "time": null,
           "category": "その他"
@@ -6576,23 +6604,44 @@
         {
           "title": "災害ボランティアの派遣について(甲佐町社会福祉協議会)",
           "url": "https://www.town.kosa.lg.jp/q/aview/51/13538.html",
+          "date": "2026-08-22",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
+          "title": "令和8年熊本地震発生により開設する避難所について",
+          "url": "https://www.town.kosa.lg.jp/q/aview/51/13520.html",
+          "date": "2026-08-22",
+          "time": null,
+          "category": "避難・安全"
+        },
+        {
+          "title": "令和8年熊本地震にかかる各種相談について",
+          "url": "https://www.town.kosa.lg.jp/q/aview/51/13585.html",
           "date": "2026-08-24",
           "time": null,
           "category": "支援・制度"
         },
         {
-          "title": "り災証明書(2次調査)の発行申請受付について",
-          "url": "https://www.town.kosa.lg.jp/q/aview/101/13690.html",
-          "date": "2026-08-25",
+          "title": "令和8年熊本地震に係る賃貸型応急住宅(みなし仮設住宅)のお知らせ",
+          "url": "https://www.town.kosa.lg.jp/q/aview/51/13559.html",
+          "date": "2026-08-24",
           "time": null,
           "category": "住まい・証明"
         },
         {
-          "title": "令和8年熊本地震における被害認定調査(1次調査)のお知らせ",
-          "url": "https://www.town.kosa.lg.jp/q/aview/101/13607.html",
-          "date": "2026-08-25",
+          "title": "県営住宅の一時的な入居のご案内【令和8年熊本地震被災者向け】",
+          "url": "https://www.town.kosa.lg.jp/q/aview/51/13651.html",
+          "date": "2026-08-24",
           "time": null,
-          "category": "その他"
+          "category": "住まい・証明"
+        },
+        {
+          "title": "被災者生活再建支援制度のご案内(令和8年熊本地震)",
+          "url": "https://www.town.kosa.lg.jp/q/aview/51/13627.html",
+          "date": "2026-08-24",
+          "time": null,
+          "category": "支援・制度"
         },
         {
           "title": "「り災証明書」の発行申請受付について",
@@ -6602,39 +6651,11 @@
           "category": "住まい・証明"
         },
         {
-          "title": "「り災証明書」オンライン申請について",
-          "url": "https://www.town.kosa.lg.jp/q/aview/55/13547.html",
-          "date": "2026-08-25",
+          "title": "令和8年熊本地震における被害認定調査(1次調査)のお知らせ",
+          "url": "https://www.town.kosa.lg.jp/q/aview/101/13607.html",
+          "date": "2026-08-26",
           "time": null,
-          "category": "住まい・証明"
-        },
-        {
-          "title": "令和8年熊本地震にかかる各種相談について",
-          "url": "https://www.town.kosa.lg.jp/q/aview/51/13585.html",
-          "date": "2026-08-25",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
-          "title": "令和8年熊本地震に係る賃貸型応急住宅(みなし仮設住宅)のお知らせ",
-          "url": "https://www.town.kosa.lg.jp/q/aview/51/13559.html",
-          "date": "2026-08-25",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
-          "title": "県営住宅の一時的な入居のご案内【令和8年熊本地震被災者向け】",
-          "url": "https://www.town.kosa.lg.jp/q/aview/51/13651.html",
-          "date": "2026-08-25",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
-          "title": "被災者生活再建支援制度のご案内(令和8年熊本地震)",
-          "url": "https://www.town.kosa.lg.jp/q/aview/51/13627.html",
-          "date": "2026-08-25",
-          "time": null,
-          "category": "支援・制度"
+          "category": "その他"
         },
         {
           "title": "【甲佐町独自支援】緊急支援資金利子補給補助金について",
@@ -6693,7 +6714,7 @@
           "category": "住まい・証明"
         },
         {
-          "title": "災害ごみ仮置き場の開設日の追加について(令和8年9月7日更新)",
+          "title": "災害ごみ仮置き場の開設日の追加について(令和8年9月7日更新)...",
           "url": "https://www.town.kosa.lg.jp/q/aview/101/13515.html",
           "date": "2026-09-07",
           "time": null,
@@ -6757,19 +6778,18 @@
         "https://www.town.kosa.lg.jp/q/aview/255/13631.html",
         "https://www.town.kosa.lg.jp/q/aview/55/13515.html",
         "https://www.town.kosa.lg.jp/q/aview/55/13607.html",
-        "https://www.town.kosa.lg.jp/q/aview/55/13690.html",
         "https://www.town.kosa.lg.jp/q/aview/55/13632.html",
         "https://www.town.kosa.lg.jp/q/aview/55/13523.html",
+        "https://www.town.kosa.lg.jp/q/aview/55/13547.html",
         "https://www.town.kosa.lg.jp/q/aview/101/6607.html",
         "https://www.town.kosa.lg.jp/q/aview/101/13134.html",
         "https://www.town.kosa.lg.jp/q/aview/102/425.html",
         "https://www.town.kosa.lg.jp/q/aview/102/10800.html",
         "https://www.town.kosa.lg.jp/q/aview/1/13531.html",
         "https://www.town.kosa.lg.jp/q/aview/51/13515.html",
-        "https://www.town.kosa.lg.jp/q/aview/51/13690.html",
-        "https://www.town.kosa.lg.jp/q/aview/101/13515.html",
         "https://www.town.kosa.lg.jp/q/aview/55/12433.html",
-        "https://www.town.kosa.lg.jp/q/aview/55/13547.html",
+        "https://www.town.kosa.lg.jp/q/aview/101/13515.html",
+        "https://www.town.kosa.lg.jp/q/aview/101/13632.html",
         "https://www.town.kosa.lg.jp/q/aview/182/13523.html",
         "https://www.town.kosa.lg.jp/q/aview/179/13564.html",
         "https://www.town.kosa.lg.jp/q/aview/179/13683.html",
@@ -6778,20 +6798,24 @@
         "https://www.town.kosa.lg.jp/q/aview/168/13564.html",
         "https://www.town.kosa.lg.jp/q/aview/1/13631.html"
       ],
-      "pagesFetched": 70,
+      "pagesFetched": 65,
       "errors": [
         "https://www.town.kosa.lg.jp/q/aview/51/13521.html: 404 Not Found",
         "https://www.town.kosa.lg.jp/q/aview/51/13524.html: 404 Not Found",
+        "https://www.town.kosa.lg.jp/q/aview/101/12433.html: 404 Not Found",
+        "https://www.town.kosa.lg.jp/q/aview/55/13641.html: 404 Not Found",
+        "https://www.town.kosa.lg.jp/q/aview/101/13690.html: 404 Not Found",
         "https://www.town.kosa.lg.jp/q/aview/55/13658.html: 404 Not Found",
         "https://www.town.kosa.lg.jp/q/aview/130/13622.html: 404 Not Found",
         "https://www.town.kosa.lg.jp/q/aview/101/13546.html: 404 Not Found",
-        "https://www.town.kosa.lg.jp/q/aview/51/13574.html: 404 Not Found"
+        "https://www.town.kosa.lg.jp/q/aview/51/13574.html: 404 Not Found",
+        "https://www.town.kosa.lg.jp/q/aview/55/12433.html: 404 Not Found"
       ]
     },
     {
       "name": "氷川町",
       "officialUrl": "https://www.town.hikawa.kumamoto.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -7166,25 +7190,11 @@
           "category": "ごみ・生活"
         },
         {
-          "title": "【重要】支援物資の受け入れについて",
-          "url": "https://www.town.hikawa.kumamoto.jp/kinkyu.html#kid31",
-          "date": "2026-09-08",
-          "time": "09:25",
-          "category": "支援・制度"
-        },
-        {
           "title": "マイナ保険証や現金がなくても医療機関等の受診や介護サービスを利用できます",
           "url": "https://www.town.hikawa.kumamoto.jp/kiji0036796/index.html",
           "date": "2026-09-08",
           "time": "14:55",
           "category": "その他"
-        },
-        {
-          "title": "り災証明書のための被害認定調査について",
-          "url": "https://www.town.hikawa.kumamoto.jp/kinkyu.html#kid39",
-          "date": "2026-09-08",
-          "time": "18:06",
-          "category": "住まい・証明"
         },
         {
           "title": "令和8年熊本地震に伴う災害ごみ仮置場への受入れについて",
@@ -7240,6 +7250,20 @@
           "url": "https://www.town.hikawa.kumamoto.jp/kiji0036783/index.html",
           "date": "2026-09-13",
           "time": "14:19",
+          "category": "支援・制度"
+        },
+        {
+          "title": "り災証明書のための被害認定調査について",
+          "url": "https://www.town.hikawa.kumamoto.jp/kinkyu.html#kid39",
+          "date": "2026-09-14",
+          "time": "11:56",
+          "category": "住まい・証明"
+        },
+        {
+          "title": "【重要】支援物資の受け入れについて",
+          "url": "https://www.town.hikawa.kumamoto.jp/kinkyu.html#kid31",
+          "date": "2026-09-14",
+          "time": "11:57",
           "category": "支援・制度"
         }
       ],
@@ -7345,7 +7369,7 @@
     {
       "name": "芦北町",
       "officialUrl": "https://www.town.ashikita.lg.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
@@ -7409,7 +7433,7 @@
     {
       "name": "津奈木町",
       "officialUrl": "https://www.town.tsunagi.lg.jp/",
-      "checkedAt": "2026-09-13T23:13:02.017Z",
+      "checkedAt": "2026-09-14T05:04:49.073Z",
       "status": "confirmed",
       "updates": [
         {
