@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-14T05:22:43.135Z",
-  "officialCheckedAt": "9/14 14:22",
+  "retrievedAt": "2026-09-14T13:17:43.628Z",
+  "officialCheckedAt": "9/14 22:17",
   "siteTopics": [
     {
       "date": "2026-09-13",
@@ -60,36 +60,44 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "title": "令和8年熊本地震で被災した家屋等の解体・撤去について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036794/index.html",
       "date": "2026-09-14",
-      "time": "13:29",
+      "time": "19:30",
+      "category": "その他",
+      "municipality": "氷川町"
+    },
+    {
+      "title": "令和8年熊本地震被災地支援ボランティア活動補助金",
+      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032032/index.html",
+      "date": "2026-09-14",
+      "time": "19:16",
+      "category": "支援・制度",
+      "municipality": "西原村"
+    },
+    {
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "date": "2026-09-14",
+      "time": "19:06",
       "category": "その他",
       "municipality": "八代市"
     },
     {
-      "title": "2026年9月14日 令和8年熊本地震 関連情報 （9月14日13時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "title": "熊本市災害ボランティアセンターによる支援開始のお知らせ",
+      "url": "https://www.city.kumamoto.jp/kiji00372117/index.html",
       "date": "2026-09-14",
-      "time": "13:00",
-      "category": "その他",
-      "municipality": "宇城市"
-    },
-    {
-      "title": "【重要】支援物資の受け入れについて",
-      "url": "https://www.town.hikawa.kumamoto.jp/kinkyu.html#kid31",
-      "date": "2026-09-14",
-      "time": "11:57",
-      "category": "支援・制度",
-      "municipality": "氷川町"
-    },
-    {
-      "title": "【令和8年熊本地震】「くまもとアプリ」に熊本県内の災害ボランティア募集情報を掲載しています",
-      "url": "https://www.city.kumamoto.jp/kiji00372213/index.html",
-      "date": "2026-09-14",
-      "time": "10:07",
+      "time": "18:43",
       "category": "支援・制度",
       "municipality": "熊本市"
+    },
+    {
+      "title": "2026年9月14日 令和8年熊本地震 関連情報 （9月14日18時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-09-14",
+      "time": "18:00",
+      "category": "その他",
+      "municipality": "宇城市"
     },
     {
       "title": "令和８年熊本地震に関する「罹災証明書(住家・非住家)」「罹災届出証明書」の発行について（サイト内リンク）",
@@ -114,14 +122,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "その他",
       "municipality": "大津町"
-    },
-    {
-      "title": "マイボトルが使える給水スポットがあります",
-      "url": "https://www.town.kikuyo.lg.jp/kiji0034715/index.html",
-      "date": "2026-09-14",
-      "time": null,
-      "category": "ライフライン",
-      "municipality": "菊陽町"
     }
   ],
   "prefectureUpdates": [
