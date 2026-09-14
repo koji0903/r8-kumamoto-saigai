@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-09-14T12:59:54.457Z",
+  "generatedAt": "2026-09-14T19:52:21.810Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 830,
-  "displayCandidateCount": 565,
-  "classifiedPageCount": 667,
+  "inputCount": 826,
+  "displayCandidateCount": 563,
+  "classifiedPageCount": 663,
   "categoryReport": {
     "home": {
-      "total": 183,
+      "total": 182,
       "high": 63,
       "medium": 74,
-      "low": 46
+      "low": 45
     },
     "money": {
-      "total": 204,
+      "total": 203,
       "high": 44,
       "medium": 52,
-      "low": 108
+      "low": 107
     },
     "documents": {
-      "total": 174,
+      "total": 173,
       "high": 39,
       "medium": 34,
-      "low": 101
+      "low": 100
     },
     "health_care": {
       "total": 47,
@@ -37,8 +37,8 @@
       "low": 46
     },
     "work_business": {
-      "total": 53,
-      "high": 17,
+      "total": 52,
+      "high": 16,
       "medium": 36,
       "low": 0
     },
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 194,
-      "high": 60,
-      "medium": 134,
+      "total": 192,
+      "high": 59,
+      "medium": 133,
       "low": 0
     }
   },
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 42,
-      "displayCandidates": 38,
+      "classified": 43,
+      "displayCandidates": 39,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 102,
-      "displayCandidates": 83,
+      "classified": 100,
+      "displayCandidates": 81,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -122,8 +122,8 @@
       "fallback": true
     },
     "municipality_nishihara": {
-      "classified": 9,
-      "displayCandidates": 8,
+      "classified": 8,
+      "displayCandidates": 7,
       "fallback": true
     },
     "municipality_mifune": {
@@ -137,12 +137,12 @@
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 36,
+      "classified": 35,
       "displayCandidates": 33,
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 33,
+      "classified": 32,
       "displayCandidates": 28,
       "fallback": true
     },
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 250,
+    "high": 248,
     "medium": 315,
-    "low": 102
+    "low": 100
   },
   "unclassifiedCount": 39,
   "unclassifiedItems": [
@@ -296,13 +296,13 @@
     },
     {
       "municipalityName": "宇土市",
-      "title": "洪水・大雨・高潮・土砂災害の危険性が高まっています！",
-      "url": "https://www.city.uto.lg.jp/article/view/1310/16857.html"
+      "title": "5 令和８年熊本地震に係るふるさと納税を受け付けます 2026年09月01日",
+      "url": "https://www.city.uto.lg.jp/article/view/1033/16630.html"
     },
     {
       "municipalityName": "宇土市",
-      "title": "令和８年熊本地震に係るふるさと納税を受け付けます",
-      "url": "https://www.city.uto.lg.jp/article/view/1307/16630.html"
+      "title": "洪水・大雨・高潮・土砂災害の危険性が高まっています！",
+      "url": "https://www.city.uto.lg.jp/article/view/1310/16857.html"
     },
     {
       "municipalityName": "上天草市",
@@ -1023,7 +1023,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 16
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1087,5 +1087,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 665
+  "previousClassifiedPageCount": 667
 }

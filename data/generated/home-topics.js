@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-14T13:17:43.628Z",
-  "officialCheckedAt": "9/14 22:17",
+  "retrievedAt": "2026-09-14T20:08:27.558Z",
+  "officialCheckedAt": "9/15 05:08",
   "siteTopics": [
     {
       "date": "2026-09-13",
@@ -60,6 +60,14 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
+      "date": "2026-09-15",
+      "time": null,
+      "category": "ごみ・生活",
+      "municipality": "宇城市"
+    },
+    {
       "title": "令和8年熊本地震で被災した家屋等の解体・撤去について",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036794/index.html",
       "date": "2026-09-14",
@@ -92,12 +100,12 @@ window.HOME_TOPICS = {
       "municipality": "熊本市"
     },
     {
-      "title": "2026年9月14日 令和8年熊本地震 関連情報 （9月14日18時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "title": "避難所について（9/14 17:00更新）",
+      "url": "https://www.city.uto.lg.jp/article/view/1014/16888.html",
       "date": "2026-09-14",
-      "time": "18:00",
-      "category": "その他",
-      "municipality": "宇城市"
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市"
     },
     {
       "title": "令和８年熊本地震に関する「罹災証明書(住家・非住家)」「罹災届出証明書」の発行について（サイト内リンク）",
@@ -106,14 +114,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "住まい・証明",
       "municipality": "菊池市"
-    },
-    {
-      "title": "【重要】災害ごみ仮置場の開設のお知らせ（9月14日時点）",
-      "url": "https://www.city.uto.lg.jp/article/view/1303/16352.html",
-      "date": "2026-09-14",
-      "time": null,
-      "category": "ごみ・生活",
-      "municipality": "宇土市"
     },
     {
       "title": "令和8年熊本地震に伴う「ワンストップ窓口」終了のお知らせ",

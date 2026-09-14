@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-14T13:18:02.664Z",
+  "generatedAt": "2026-09-14T20:08:41.478Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-14T12:59:54.457Z",
-    "inputCount": 830,
-    "classifiedPageCount": 667,
-    "displayCandidateCount": 565,
+    "generatedAt": "2026-09-14T19:52:21.810Z",
+    "inputCount": 826,
+    "classifiedPageCount": 663,
+    "displayCandidateCount": 563,
     "deltaFromPrevious": {
-      "inputCount": 3,
-      "classifiedPageCount": 2,
+      "inputCount": -4,
+      "classifiedPageCount": -4,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 68,
+      "ageHours": 75,
       "limitHours": 336
     }
   },
@@ -56,8 +56,8 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 42,
-        "displayCandidates": 38,
+        "classified": 43,
+        "displayCandidates": 39,
         "fallback": true
       },
       "municipality_kamiamakusa": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 102,
-        "displayCandidates": 83,
+        "classified": 100,
+        "displayCandidates": 81,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -96,8 +96,8 @@
         "fallback": true
       },
       "municipality_nishihara": {
-        "classified": 9,
-        "displayCandidates": 8,
+        "classified": 8,
+        "displayCandidates": 7,
         "fallback": true
       },
       "municipality_mifune": {
@@ -111,12 +111,12 @@
         "fallback": true
       },
       "municipality_mashiki": {
-        "classified": 36,
+        "classified": 35,
         "displayCandidates": 33,
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 33,
+        "classified": 32,
         "displayCandidates": 28,
         "fallback": true
       },
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 183,
+        "total": 182,
         "high": 63,
         "medium": 74,
-        "low": 46
+        "low": 45
       },
       "money": {
-        "total": 204,
+        "total": 203,
         "high": 44,
         "medium": 52,
-        "low": 108
+        "low": 107
       },
       "documents": {
-        "total": 174,
+        "total": 173,
         "high": 39,
         "medium": 34,
-        "low": 101
+        "low": 100
       },
       "health_care": {
         "total": 47,
@@ -168,8 +168,8 @@
         "low": 46
       },
       "work_business": {
-        "total": 53,
-        "high": 17,
+        "total": 52,
+        "high": 16,
         "medium": 36,
         "low": 0
       },
@@ -180,16 +180,16 @@
         "low": 0
       },
       "daily_life": {
-        "total": 194,
-        "high": 60,
-        "medium": 134,
+        "total": 192,
+        "high": 59,
+        "medium": 133,
         "low": 0
       }
     },
     "confidence": {
-      "high": 250,
+      "high": 248,
       "medium": 315,
-      "low": 102
+      "low": 100
     },
     "unclassifiedCount": 39,
     "excludedCount": 38,
@@ -297,7 +297,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 16
     },
     {
       "code": "HTTP_404_CANDIDATE",
