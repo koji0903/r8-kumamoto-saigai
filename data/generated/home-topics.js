@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-14T20:08:27.558Z",
-  "officialCheckedAt": "9/15 05:08",
+  "retrievedAt": "2026-09-15T00:11:09.965Z",
+  "officialCheckedAt": "9/15 09:11",
   "siteTopics": [
     {
       "date": "2026-09-13",
@@ -60,12 +60,36 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "避難所開設状況",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
+      "date": "2026-09-15",
+      "time": "08:48",
+      "category": "避難・安全",
+      "municipality": "八代市"
+    },
+    {
+      "title": "「令和８年熊本地震」により住宅被害を受けた方へ（住宅の応急修理制度）",
+      "url": "https://www.city.yamaga.kumamoto.jp/kiji0033163/index.html",
+      "date": "2026-09-15",
+      "time": "08:09",
+      "category": "住まい・証明",
+      "municipality": "山鹿市"
+    },
+    {
       "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
       "date": "2026-09-15",
       "time": null,
       "category": "ごみ・生活",
       "municipality": "宇城市"
+    },
+    {
+      "title": "令和8年熊本地震災害支援情報まとめ(9/15更新)",
+      "url": "https://www.town.kosa.lg.jp/q/aview/55/13531.html",
+      "date": "2026-09-15",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "甲佐町"
     },
     {
       "title": "令和8年熊本地震で被災した家屋等の解体・撤去について",
@@ -84,14 +108,6 @@ window.HOME_TOPICS = {
       "municipality": "西原村"
     },
     {
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "date": "2026-09-14",
-      "time": "19:06",
-      "category": "その他",
-      "municipality": "八代市"
-    },
-    {
       "title": "熊本市災害ボランティアセンターによる支援開始のお知らせ",
       "url": "https://www.city.kumamoto.jp/kiji00372117/index.html",
       "date": "2026-09-14",
@@ -101,27 +117,11 @@ window.HOME_TOPICS = {
     },
     {
       "title": "避難所について（9/14 17:00更新）",
-      "url": "https://www.city.uto.lg.jp/article/view/1014/16888.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
       "date": "2026-09-14",
       "time": "17:00",
       "category": "避難・安全",
       "municipality": "宇土市"
-    },
-    {
-      "title": "令和８年熊本地震に関する「罹災証明書(住家・非住家)」「罹災届出証明書」の発行について（サイト内リンク）",
-      "url": "https://www.city.kikuchi.lg.jp/article/view/1350/19286.html",
-      "date": "2026-09-14",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "菊池市"
-    },
-    {
-      "title": "令和8年熊本地震に伴う「ワンストップ窓口」終了のお知らせ",
-      "url": "https://www.town.ozu.kumamoto.jp/page/26732.html",
-      "date": "2026-09-14",
-      "time": null,
-      "category": "その他",
-      "municipality": "大津町"
     }
   ],
   "prefectureUpdates": [

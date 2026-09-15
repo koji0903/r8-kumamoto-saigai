@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-14T20:08:41.478Z",
+  "generatedAt": "2026-09-15T00:11:26.226Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-14T19:52:21.810Z",
-    "inputCount": 826,
-    "classifiedPageCount": 663,
-    "displayCandidateCount": 563,
+    "generatedAt": "2026-09-14T23:53:47.615Z",
+    "inputCount": 811,
+    "classifiedPageCount": 648,
+    "displayCandidateCount": 549,
     "deltaFromPrevious": {
-      "inputCount": -4,
-      "classifiedPageCount": -4,
+      "inputCount": -15,
+      "classifiedPageCount": -15,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 75,
+      "ageHours": 79,
       "limitHours": 336
     }
   },
@@ -56,8 +56,8 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 43,
-        "displayCandidates": 39,
+        "classified": 41,
+        "displayCandidates": 37,
         "fallback": true
       },
       "municipality_kamiamakusa": {
@@ -76,8 +76,8 @@
         "fallback": true
       },
       "municipality_koshi": {
-        "classified": 13,
-        "displayCandidates": 12,
+        "classified": 1,
+        "displayCandidates": 1,
         "fallback": true
       },
       "municipality_misato": {
@@ -101,8 +101,8 @@
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 23,
-        "displayCandidates": 14,
+        "classified": 21,
+        "displayCandidates": 12,
         "fallback": true
       },
       "municipality_kashima": {
@@ -116,8 +116,8 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 32,
-        "displayCandidates": 28,
+        "classified": 33,
+        "displayCandidates": 29,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 182,
+        "total": 177,
         "high": 63,
-        "medium": 74,
-        "low": 45
+        "medium": 70,
+        "low": 44
       },
       "money": {
-        "total": 203,
-        "high": 44,
-        "medium": 52,
-        "low": 107
+        "total": 198,
+        "high": 41,
+        "medium": 51,
+        "low": 106
       },
       "documents": {
-        "total": 173,
-        "high": 39,
-        "medium": 34,
-        "low": 100
+        "total": 168,
+        "high": 38,
+        "medium": 32,
+        "low": 98
       },
       "health_care": {
         "total": 47,
@@ -162,34 +162,34 @@
         "low": 0
       },
       "family_education": {
-        "total": 82,
+        "total": 81,
         "high": 8,
-        "medium": 28,
+        "medium": 27,
         "low": 46
       },
       "work_business": {
-        "total": 52,
-        "high": 16,
+        "total": 51,
+        "high": 15,
         "medium": 36,
         "low": 0
       },
       "agriculture_fishery": {
-        "total": 26,
-        "high": 9,
-        "medium": 17,
+        "total": 22,
+        "high": 8,
+        "medium": 14,
         "low": 0
       },
       "daily_life": {
         "total": 192,
-        "high": 59,
-        "medium": 133,
+        "high": 58,
+        "medium": 134,
         "low": 0
       }
     },
     "confidence": {
-      "high": 248,
-      "medium": 315,
-      "low": 100
+      "high": 241,
+      "medium": 308,
+      "low": 99
     },
     "unclassifiedCount": 39,
     "excludedCount": 38,
@@ -297,7 +297,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 16
+      "count": 82
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -318,16 +318,6 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
       "count": 7
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_koshi",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_koshi",
-      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
