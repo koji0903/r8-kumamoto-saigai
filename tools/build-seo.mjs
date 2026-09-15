@@ -33,6 +33,7 @@ const specialImages = new Map([
   ["hq-yatsushiro.html", "/ogp-hq-yatsushiro.png"],
   ["risai-certificate.html", "/ogp-risai-certificate.png"],
   ["hikawa-support.html", "/ogp-hikawa-support.png"],
+  ["hikawa-demolition.html", "/ogp-hikawa-demolition.png"],
   ["uki-support.html", "/ogp-uki-support.png"],
   ["reconstruction.html", "/ogp-reconstruction.png"],
   ["temporary-housing.html", "/ogp-temporary-housing.png"],

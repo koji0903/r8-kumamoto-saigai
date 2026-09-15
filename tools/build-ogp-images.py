@@ -100,6 +100,11 @@ ART = {
               '<path fill="#2dd4bf" stroke="#0f766e" d="m42 16 34-10 34 10v40H42z"/>'
               '<path d="M54 32v24h46V32"/><circle fill="#fb923c" stroke="#c2410c" cx="77" cy="44" r="9"/>'
               '<path d="m73 44 3 3 5-6"/>',
+    "demolition": '<path fill="#cbd5e1" stroke="#475569" d="m14 44 32-22 32 22v26H14Z"/>'
+                  '<path stroke="#c2410c" stroke-width="2" d="m36 32-8 16 12 8-8 14"/>'
+                  '<path fill="#fb923c" stroke="#c2410c" d="M72 38h24v32H72z"/>'
+                  '<path fill="#fde047" stroke="#a16207" d="m84 20 16 18H68Z"/>'
+                  '<circle fill="#2dd4bf" stroke="#0f766e" cx="96" cy="62" r="10"/>',
     "uki": '<path fill="#cbd5e1" stroke="#475569" d="M14 16h42v52H14z"/>'
            '<path fill="#93c5fd" stroke="#1d4ed8" d="M22 26h26M22 36h26M22 46h16"/>'
            '<path fill="#2dd4bf" stroke="#0f766e" d="M64 24h44v44H64z"/>'
@@ -292,6 +297,10 @@ PAGES = [
          label="氷川町｜被災された方へ",
          title="被災者支援制度一覧",
          lead="証明書・住まい・支援金・生活の困りごと。氷川町公式の支援制度と窓口を目的から探せます。"),
+    dict(file="hikawa-demolition.html", out="ogp-hikawa-demolition.png", tone="hikawa", art="demolition",
+         label="氷川町｜被災家屋等の解体・撤去",
+         title="公費解体・自費解体/利用ガイド",
+         lead="全壊〜半壊が対象。完全電話予約制・竜北体育センター受付・全10様式と記載例・自費解体の保管書類を整理。"),
     dict(file="uki-support.html", out="ogp-uki-support.png", tone="uki", art="uki",
          label="宇城市｜被災された方へ",
          title="被災者支援制度ガイド",

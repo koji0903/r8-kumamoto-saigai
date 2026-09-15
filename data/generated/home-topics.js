@@ -4,6 +4,15 @@ window.HOME_TOPICS = {
   "officialCheckedAt": "9/15 09:11",
   "siteTopics": [
     {
+      "date": "2026-09-15",
+      "category": "氷川町",
+      "badge": "様式・記載例10点解説",
+      "title": "氷川町：被災家屋等の公費解体（9/15予約受付開始）および自費解体ガイドを公開",
+      "url": "hikawa-demolition.html",
+      "description": "氷川町が公表した公費解体・自費解体の手続きを整理。全壊〜半壊の対象判定、完全予約制（専用3回線）による書類受付、竜北体育センター窓口、全10点の様式・記載例、事前立会い時のライフライン切断手配、自費解体で保管必須の書類3点を分かりやすくまとめました。",
+      "targetPage": "hikawa-demolition.html"
+    },
+    {
       "date": "2026-09-13",
       "category": "宇土市",
       "badge": "資料・様式16点を解説",
@@ -47,15 +56,6 @@ window.HOME_TOPICS = {
       "url": "disaster.html",
       "description": "SNSやLINEで共有した際にページを見分けられるよう、公開HTML全45ページへ固有の1200×630px画像を割り当てました。画像ファイル名と画像内容の重複、寸法、HTML・生成器の対応を自動検査します。",
       "targetPage": "disaster.html"
-    },
-    {
-      "date": "2026-09-09",
-      "category": "氷川町",
-      "badge": "公式サービス連携",
-      "title": "氷川町：町公式「被災者支援のトリセツ」連携と支援制度一覧の公開",
-      "url": "hikawa-support.html",
-      "description": "氷川町の公式ウェブサービス「被災者支援のトリセツ」および災害専用フリーダイヤル（0120-091-110）への直通導線を開設。目的別に必要な支援と申請窓口をまとめました。",
-      "targetPage": "hikawa-support.html"
     }
   ],
   "municipalityUpdates": [

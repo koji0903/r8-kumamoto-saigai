@@ -1,0 +1,675 @@
+/* 氷川町 被災家屋等の公費解体・自費解体ガイド
+   uto-repair.css / uto-waste.css の明快なチラシ風スタイルを踏襲し、
+   氷川町のトーン＆マナー（深緑 #185f55）を基調に解体手続きに特化したUIを構築 */
+
+.demolition-page {
+  --r-teal: #185f55;
+  --r-teal-light: #edf7f4;
+  --r-teal-border: #98cdc3;
+  --r-orange: #d8552f;
+  --r-orange-light: #fff7ed;
+  --r-blue: #1a5b93;
+  --r-blue-light: #eff6ff;
+  --r-yellow: #ca8a04;
+  --r-yellow-light: #fefce8;
+  --r-ink: #123f38;
+  --r-muted: #537069;
+  --r-line: #d8e6e2;
+}
+
+.demolition-page .waste-lead b {
+  color: var(--r-teal);
+}
+
+/* ---- ヒーローの要点カード ---- */
+.demolition-keyfacts {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.3fr;
+  gap: 12px;
+  max-width: 820px;
+  margin: 28px 0 0;
+}
+
+.demolition-keyfacts div {
+  padding: 14px 18px;
+  border: 3px solid var(--r-teal);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 4px 4px 0 var(--r-teal-border);
+}
+
+.demolition-keyfacts dt {
+  color: var(--r-muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.demolition-keyfacts dd {
+  margin: 4px 0 0;
+  font-size: 22px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.demolition-keyfacts .keyfact-highlight {
+  border-color: var(--r-orange);
+  background: var(--r-orange-light);
+  box-shadow: 4px 4px 0 #fed7aa;
+}
+
+.demolition-keyfacts .keyfact-highlight dd {
+  color: #9a3412;
+}
+
+/* ---- 電話番号クイックコール帯 ---- */
+.quick-phone-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  max-width: 1180px;
+  margin: 18px auto 0;
+  padding: 16px 22px;
+  border: 3px solid #f59e0b;
+  border-radius: 12px;
+  background: #fefce8;
+  box-shadow: 5px 5px 0 #fde68a;
+}
+
+.quick-phone-bar .bar-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 900;
+  color: #854d0e;
+}
+
+.quick-phone-bar .bar-label svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.quick-phone-bar .bar-numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.quick-phone-bar .bar-numbers a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 2px solid var(--r-teal);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--r-teal);
+  font-size: 16px;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 2px 0 var(--r-teal-border);
+}
+
+.quick-phone-bar .bar-numbers a:hover {
+  background: var(--r-teal);
+  color: #fff;
+}
+
+.quick-phone-bar .bar-note {
+  font-size: 13px;
+  font-weight: 800;
+  color: #713f12;
+}
+
+/* ---- 3つの約束 ---- */
+.demolition-promises {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.demolition-promises li {
+  position: relative;
+  padding: 24px 22px;
+  border: 3px solid var(--r-teal);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 6px 6px 0 var(--r-teal-border);
+}
+
+.demolition-promises .promise-num {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--r-orange);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.demolition-promises h3 {
+  margin: 0 0 8px;
+  font-size: 21px;
+  line-height: 1.4;
+  color: var(--r-ink);
+}
+
+.demolition-promises p {
+  margin: 0;
+  color: #334e47;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.demolition-promises .promise-warn {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: var(--r-orange-light);
+  color: #9a3412;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+/* ---- わたしは使える？（セルフチェック） ---- */
+.check-questions {
+  display: grid;
+  gap: 16px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.check-question {
+  margin: 0;
+  padding: 20px 22px;
+  border: 3px solid #cbd5e1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 5px 5px 0 #e2e8f0;
+}
+
+.check-question legend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 6px;
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--r-ink);
+}
+
+.check-question legend span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--r-orange);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.check-question>div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.check-question button {
+  min-height: 52px;
+  padding: 10px 18px;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--r-ink);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #dbe4ea;
+  transition: all .15s ease;
+}
+
+.check-question button:hover {
+  border-color: var(--r-teal);
+}
+
+.check-question button[aria-pressed="true"] {
+  border-color: var(--r-teal);
+  background: var(--r-teal);
+  color: #fff;
+  box-shadow: 0 3px 0 #0d3d36;
+}
+
+.check-result {
+  max-width: 1180px;
+  margin: 24px auto 0;
+}
+
+.check-waiting {
+  padding: 20px;
+  border: 3px dashed #f59e0b;
+  border-radius: 12px;
+  background: #fffbeb;
+  color: #78350f;
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.check-card {
+  overflow: hidden;
+  border: 4px solid;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.check-card>header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  color: #fff;
+}
+
+.check-card>header>span {
+  display: grid;
+  place-items: center;
+  flex: 0 0 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.check-card>header p {
+  margin: 0;
+  font-size: 13px;
+  opacity: .95;
+  font-weight: 800;
+}
+
+.check-card>header h3 {
+  margin: 2px 0 0;
+  font-size: 26px;
+  line-height: 1.35;
+}
+
+.check-card.tone-ok {
+  border-color: var(--r-teal);
+  box-shadow: 8px 8px 0 var(--r-teal-border);
+}
+
+.check-card.tone-ok>header {
+  background: var(--r-teal);
+}
+
+.check-card.tone-ok>header>span {
+  color: var(--r-teal);
+}
+
+.check-card.tone-wait {
+  border-color: #d97706;
+  box-shadow: 8px 8px 0 #fde68a;
+}
+
+.check-card.tone-wait>header {
+  background: #b45309;
+}
+
+.check-card.tone-wait>header>span {
+  color: #b45309;
+}
+
+.check-card.tone-ng {
+  border-color: #b91c1c;
+  box-shadow: 8px 8px 0 #fecaca;
+}
+
+.check-card.tone-ng>header {
+  background: #b91c1c;
+}
+
+.check-card.tone-ng>header>span {
+  color: #b91c1c;
+}
+
+.check-card>:not(header) {
+  margin-inline: 24px;
+}
+
+.check-body {
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 1.85;
+  color: #24433c;
+}
+
+.check-docs {
+  margin-top: 18px;
+  padding: 16px 20px;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.check-docs b {
+  font-size: 16px;
+  color: var(--r-ink);
+}
+
+.check-docs ol {
+  margin: 10px 0 0;
+  padding-left: 22px;
+}
+
+.check-docs li {
+  margin: 5px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.check-notes {
+  margin-top: 16px;
+  padding-left: 20px;
+}
+
+.check-notes li {
+  margin: 6px 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #475569;
+}
+
+.check-contact {
+  margin-top: 20px;
+  margin-bottom: 24px;
+  padding-top: 14px;
+  border-top: 2px dashed #cbd5e1;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.check-contact a {
+  color: var(--r-teal);
+  font-weight: 900;
+}
+
+/* ---- 状況別の必要書類ナビ ---- */
+.situation-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1180px;
+  margin: 0 auto 20px;
+}
+
+.situation-btn {
+  padding: 10px 18px;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--r-ink);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #dbe4ea;
+}
+
+.situation-btn:hover {
+  border-color: var(--r-teal);
+}
+
+.situation-btn[aria-selected="true"] {
+  border-color: var(--r-teal);
+  background: var(--r-teal);
+  color: #fff;
+  box-shadow: 0 3px 0 #0d3d36;
+}
+
+.situation-panel {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* 書類カードグリッド */
+.demolition-doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.demolition-doc-card {
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  border: 3px solid #cbd5e1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 6px 6px 0 #e2e8f0;
+}
+
+.demolition-doc-card.card-primary {
+  border-color: var(--r-teal);
+  box-shadow: 6px 6px 0 var(--r-teal-border);
+}
+
+.demolition-doc-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.doc-badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 4px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.doc-badge.required {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.doc-badge.original {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.demolition-doc-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.45;
+  color: var(--r-ink);
+}
+
+.demolition-doc-card p {
+  margin: 0 0 12px;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.doc-dl-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.doc-dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border: 1.5px solid var(--r-teal);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--r-teal);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.doc-dl-btn:hover {
+  background: var(--r-teal);
+  color: #fff;
+}
+
+.doc-dl-btn.btn-sample {
+  border-color: #d97706;
+  color: #b45309;
+}
+
+.doc-dl-btn.btn-sample:hover {
+  background: #d97706;
+  color: #fff;
+}
+
+/* ライフライン切断警告カード */
+.lifeline-warning-card {
+  max-width: 1180px;
+  margin: 26px auto 0;
+  padding: 22px 24px;
+  border: 3px solid #ea580c;
+  border-radius: 12px;
+  background: #fff7ed;
+  box-shadow: 6px 6px 0 #fed7aa;
+}
+
+.lifeline-warning-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #9a3412;
+}
+
+.lifeline-warning-card ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lifeline-warning-card li {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1.5px solid #fed7aa;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #7c2d12;
+}
+
+.lifeline-warning-card li b {
+  display: block;
+  font-size: 15px;
+  color: #9a3412;
+  margin-bottom: 2px;
+}
+
+/* ---- 自費解体の重要書類3選 ---- */
+.self-demolition-box {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.self-docs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.self-doc-card {
+  padding: 22px;
+  border: 3px solid #ca8a04;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 6px 6px 0 #fde68a;
+}
+
+.self-doc-card span {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #fef08a;
+  color: #854d0e;
+  font-size: 12px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.self-doc-card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  color: #713f12;
+}
+
+.self-doc-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* ---- レスポンシブ ---- */
+@media(max-width:900px) {
+  .demolition-promises,
+  .self-docs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:700px) {
+  .demolition-keyfacts {
+    grid-template-columns: 1fr;
+  }
+  .quick-phone-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .quick-phone-bar .bar-numbers {
+    width: 100%;
+  }
+  .quick-phone-bar .bar-numbers a {
+    flex: 1 1 calc(50% - 10px);
+    justify-content: center;
+    font-size: 15px;
+  }
+  .check-question button {
+    flex: 1 1 100%;
+  }
+  .demolition-doc-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "municipality": "氷川町",
+  "disaster": "令和8年熊本地震",
+  "title": "被災家屋等の解体・撤去（公費解体・自費解体）",
+  "updatedAt": "2026-09-15",
+  "officialUrl": "https://www.town.hikawa.kumamoto.jp/kiji0036794/index.html",
+  "applicationPeriods": [
+    {
+      "phase": "第1期",
+      "applicationPeriod": "令和8年9月15日（火曜日）～10月31日（土曜日）",
+      "reservationPeriod": "令和8年9月7日（月曜日）～10月31日（土曜日）"
+    },
+    {
+      "phase": "第2期",
+      "applicationPeriod": "令和8年11月1日（日曜日）～12月25日（金曜日）",
+      "reservationPeriod": "令和8年10月1日（木曜日）～11月30日（月曜日）"
+    }
+  ],
+  "reception": {
+    "hours": "9:00～12:00、13:00～16:00",
+    "days": "当面の間、土日祝日も受付",
+    "method": "完全電話予約制（事前に電話で書類提出日時を予約）",
+    "location": "竜北体育センター（竜翔センター2階）",
+    "address": "熊本県八代郡氷川町島地651番地",
+    "mapQuery": "竜北体育センター+熊本県八代郡氷川町島地651"
+  },
+  "phones": {
+    "reservation": [
+      "050-6887-2407",
+      "050-6887-2848",
+      "050-6887-3391"
+    ],
+    "inquiry": "050-6877-4469",
+    "townOffice": "0965-52-7111"
+  },
+  "eligibility": {
+    "targets": [
+      "個人が所有する家屋等",
+      "中小企業者が所有する事業所等"
+    ],
+    "damageCriteria": [
+      "全壊",
+      "大規模半壊",
+      "中規模半壊",
+      "半壊"
+    ],
+    "ineligibleCriteria": [
+      "準半壊",
+      "一部損壊"
+    ],
+    "principles": [
+      "所有者の申請に基づき、町が所有者に代わって解体・撤去を実施",
+      "申請受付の事前予約は「書類提出・受付の日程」であり「解体工事の実施日」ではない",
+      "解体は必ずしも受付順で実施されるわけではない"
+    ]
+  },
+  "steps": [
+    {
+      "step": 1,
+      "title": "事前申請受付予約（電話）",
+      "desc": "予約専用電話番号（3回線）にお電話いただき、申請書類を持参する日時を予約します。お手元に「り災証明書」または「被災証明書」をご準備ください。"
+    },
+    {
+      "step": 2,
+      "title": "解体・撤去の申請に必要な書類の準備",
+      "desc": "申請書、本人確認書類、り災証明書、被災写真、手書きの建物配置図など、必要な書類を揃えます。状況（代理人、共有、相続、借家、抵当権）に応じた同意書等も準備します。"
+    },
+    {
+      "step": 3,
+      "title": "窓口へ申請書類の提出",
+      "desc": "予約日時に竜北体育センター（竜翔センター2階）へ行き、書類を提出します。申請書の記入欄は当日窓口で記入することも可能です。"
+    },
+    {
+      "step": 4,
+      "title": "事前立会い・ライフライン切断手配",
+      "desc": "解体業者の決定後、町・解体業者・申請者の3者で現地確認し、解体範囲や工事日程を打合せます。※この時までに水道休止、電気引込線撤去、エアコンガス抜き、浄化槽汲取清掃等のライフライン切断を申請者側で手配します。"
+    },
+    {
+      "step": 5,
+      "title": "解体・撤去工事",
+      "desc": "町が発注した事業者が解体・撤去工事を実施します。工事開始時にご希望があれば立会いを行うことができます。"
+    },
+    {
+      "step": 6,
+      "title": "完了立会い（工事完了）",
+      "desc": "工事完了後、申請者と現地で敷地や解体完了の状況を一緒に確認します。"
+    }
+  ],
+  "forms": [
+    {
+      "number": "様式第1号",
+      "title": "被災家屋等の解体・撤去に係る申請書",
+      "target": "個人・中小企業者・公益法人等（全員共通）",
+      "docType": "docx",
+      "docUrl": "https://www.town.hikawa.kumamoto.jp/kiji0036794/3_6794_8368_up_6gkzt7vw.docx",
+      "localDocPath": "sources/hikawa/demolition/3_6794_8368_up_6gkzt7vw.docx",
+      "sampleUrl": "https://www.town.hikawa.kumamoto.jp/kiji0036794/3_6794_8398_up_ciynovji.pdf",
+      "localSamplePath": "sources/hikawa/demolition/3_6794_8398_up_ciynovji.pdf",
+      "notes": "申請者情報、避難先住所、解体希望家屋の所在地・棟数・種類、り災証明取得状況を記入。窓口での記入も可能です。"
+    },
+    {
+      "number": "様式第2号",
+      "title": "委任状",
+      "target": "代理人の方が手続きを行う場合",
+      "docType": "docx",
+      "docUrl": "https://www.town.hikawa.kumamoto.jp/kiji0036794/3_6794_8369_up_6lzr8zoe.docx",
+      "localDocPath": "sources/hikawa/demolition/3_6794_8369_up_6lzr8zoe.docx",
+      "sampleUrl": "https://www.town.hikawa.kumamoto.jp/kiji0036794/3_6794_8381_up_bqxs5azw.pdf",
+      "localSamplePath": "sources/hikawa/demolition/3_6794_8381_up_bqxs5azw.pdf",
+      "notes": "原本が必要。申請者本人の実印の押印と、その印鑑登録証明書（原本）が必要です。"
+    },
+    {
+      "number": "様式第3号",
+      "title": "公費解体・撤去に関する同意書（共有名義人・相続権者）",
+      "target": "共有者がいる場合・相続人が決まっていない場合",
+      "docType": "docx",
+      "docUrl": "https://www.town.hikawa.kumamoto.jp/kiji0036794/3_6794_8370_up_0thpyck8.docx",
+      "localDocPath": "sources/hikawa/demolition/3_6794_8370_up_0thpyck8.docx",
+      "sampleUrl": "https://www.town.hikawa.kumamoto.jp/kiji0036794/3_6794_8382_up_dpknaop5.pdf",
+      "localSamplePath": "sources/hikawa/demolition/3_6794_8382_up_dpknaop5.pdf",
+      "notes": "原本が必要。共有者全員（または相続人全員）の実印押印と、それぞれの印鑑登録証明書（原本）が必要です。"
+    },
+    {
+      "number": "様式第4号",
+      "title": "公費解体・撤去に関する同意書（借家等の居住者）",
+      "target": "賃貸物件の所有者が申請する場合",
+      "docType": "docx",
+      "docUrl": "https://www.town.hikawa.kumamoto.jp/kiji0036794/3_6794_8371_up_egmtmony.docx",
+      "localDocPath": "sources/hikawa/demolition/3_6794_8371_up_egmtmony.docx",
+      "sampleUrl": "https://www.town.hikawa.kumamoto.jp/kiji0036794/3_6794_8383_up_jbtcwnp1.pdf",
+      "localSamplePath": "sources/hikawa/demolition/3_6794_8383_up_jbtcwnp1.pdf",
+      "notes": "原本が必要。居住している借家人全員の同意が必要です。複数世帯の居住がある場合は世帯主全員分の同意書が必要です。"
+    },
+    {
+      "number": "様式第5号",
+      "title": "公費解体・撤去に関する同意書（抵当権者等）",
+      "target": "被災家屋等に抵当権等が設定されている場合",
+      "docType": "docx",
+      "docUrl": "https://www.town.hikawa.kumamoto.jp/kiji0036794/3_6794_8372_up_85nc3gju.docx",
+      "localDocPath": "sources/hikawa/demolition/3_6794_8372_up_85nc3gju.docx",
+      "sampleUrl": "https://www.town.hikawa.kumamoto.jp/kiji0036794/3_6794_8384_up_zrjyq105.pdf",
+      "localSamplePath": "sources/hikawa/demolition/3_6794_8384_up_zrjyq105.pdf",
+      "notes": "原本が必要。金融機関等から交付される抵当権解除証書等の抹消書類を提出する場合は本同意書の提出は不要です。"
+    }
+  ],
+  "selfDemolition": {
+    "title": "自ら解体を行った被災家屋等の解体・撤去費用（自費解体・費用償還）",
+    "eligible": "半壊以上の被災家屋等を自ら解体・撤去した場合",
+    "warning": "解体・撤去に要した費用のうち、町の基準を超える部分は自己負担となります（町の基準は決定次第速やかに案内）。",
+    "requiredRecords": [
+      "解体工事前、工事中、工事後の状況を記録した写真",
+      "解体工事にかかる契約書、見積書、領収書",
+      "解体工事の廃棄物処理にかかる帳票類（計量伝票、マニフェスト伝票等）"
+    ]
+  }
+}

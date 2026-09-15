@@ -37,6 +37,7 @@ for (const test of tests) run("node", [`scripts/${test}`], test);
 
 const syntaxTargets = [
   "app.js",
+  "hikawa-demolition.js",
   "reconstruction-health-care.js",
   "reconstruction-family.js",
   "reconstruction-work-business.js",
