@@ -20,7 +20,8 @@
     ['07/28〜08/03','初動と生活の応急対応','給水・物資・証明窓口の体制を整え、被害認定調査が始まる。',6,10],
     ['08/04〜08/12','避難生活と住まいの支援','すまいの総合窓口を開き、避難所を市民体育館へ集約。',14,19],
     ['08/13〜08/21','被害把握と支援体制の整備','名簿や住まいの状況を確認。復旧宣言と避難指示解除の段階へ。',20,26],
-    ['08/22〜09/04','生活再建と支援の引き継ぎ','仮設住宅の着工・入居募集、学校再開、見守り支援への移行を進める。',28,33]
+    // 最後の期間は終わりを決めていないので、最新の公開回までを含める
+    [`08/22〜${latest.date.slice(5).replace('-','/')}`,'生活再建と支援の引き継ぎ','仮設住宅の着工・入居募集、学校再開を経て、避難所運営の委託や公費解体・市営住宅の受付へ進む。',28,latest.meeting]
   ];
   const phaseStarts = ['2026-07-28','2026-08-04','2026-08-13','2026-08-22'];
   const elapsed = date => Math.round((Date.parse(date)-Date.parse('2026-07-28'))/86400000);
@@ -61,7 +62,7 @@
     return `<article class="uto-damage-card"><h4>${label}</h4><div class="uto-damage-value"><b>${num(last.figures[key])}<small>件</small></b><span>${fmt(last.date)}時点<br>${fmt(first.date)}比 ${delta>0?'+':''}${num(delta)}件</span></div><svg viewBox="0 0 440 215" role="img" aria-label="${esc(label+'。'+description)}"><title>${esc(label)}</title>${[0,ceiling/2,ceiling].map(n=>`<line x1="55" y1="${dy(n)}" x2="390" y2="${dy(n)}" stroke="#dce6e1"/><text x="47" y="${dy(n)+4}" text-anchor="end">${num(n)}</text>`).join('')}${rows.slice(1).map((m,i)=>`<line x1="${dx(rows[i])}" y1="${dy(rows[i].figures[key])}" x2="${dx(m)}" y2="${dy(m.figures[key])}" stroke="${color}" stroke-width="2.5"/>`).join('')}${rows.map(m=>`<circle cx="${dx(m)}" cy="${dy(m.figures[key])}" r="4" fill="${color}"><title>${fmt(m.date)}：${num(m.figures[key])}件</title></circle>`).join('')}${[damagePoints[0],damagePoints.at(-1)].filter((m,i,a)=>i===0||m!==a[0]).map(m=>`<text x="${dx(m)}" y="198" text-anchor="middle">${fmt(m.date)}</text>`).join('')}</svg></article>`;
   }).join('');
   $('#utoDamage').innerHTML=`<table><caption>会議日の13時時点・物的被害（住家）の表</caption><thead><tr><th>会議日</th><th>全壊</th><th>大規模半壊</th><th>半壊（中規模含む）</th><th>一部損壊（準半壊含む）</th><th>分類未確定</th><th>計</th><th>出典</th></tr></thead><tbody>${meetings.filter(m=>m.damageSourcePage).map(m=>`<tr><th>${fmt(m.date)}</th>${['utoHomesFull','utoHomesLargeHalf','utoHomesHalf','utoHomesPartial','utoHomesUnclassified','utoHomesTotal'].map(k=>`<td>${m.figures[k].toLocaleString('ja-JP')}</td>`).join('')}<td>${link(m,m.damageSourcePage,'PDF')}</td></tr>`).join('')}</tbody></table>`;
-  $('#hqCadence').textContent='開催の変化：発災当日は3回、翌日は2回。8月13〜16日は書面報告。8月19日の資料で以後は原則週3回（月・水・金）と記載されています。9月2日も書面報告です。';
+  $('#hqCadence').textContent='開催の変化：発災当日は3回、翌日は2回。8月13〜16日は書面報告。8月19日の資料で以後は原則週3回（月・水・金）と記載。9月2日・9月8日は書面報告です。9月11日の資料では、以後は毎週1回（木または金）の会議と毎週火曜の書面報告にすると記載されています（同じ欄に従来の月・水・金の記載も残っています）。';
   document.querySelectorAll('[data-source-meeting]').forEach(el=>{const n=Number(el.dataset.sourceMeeting);el.innerHTML=link(meetings.find(m=>m.meeting===n),1,el.textContent);});
   const render = () => {
     const query=$('#utoSearch').value.trim().normalize('NFKC').toLowerCase();
