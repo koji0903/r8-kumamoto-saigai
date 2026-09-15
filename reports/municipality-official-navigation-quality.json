@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-15T17:06:25.736Z",
+  "generatedAt": "2026-09-15T21:27:57.118Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 822,
+  "inputCount": 823,
   "displayCandidateCount": 556,
   "classifiedPageCount": 656,
   "categoryReport": {
@@ -375,7 +375,7 @@
       "url": "https://www.town.ashikita.lg.jp/bosai_site/hinan/2025278"
     }
   ],
-  "outOfScopeCount": 87,
+  "outOfScopeCount": 88,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "hq_meeting_material": 41,
@@ -383,7 +383,7 @@
     "disaster_preparedness": 6,
     "facility_notice": 8,
     "event_notice": 1,
-    "index_page": 11,
+    "index_page": 12,
     "mayor_message": 2,
     "mutual_aid": 1,
     "overall_guide": 3,
@@ -881,6 +881,13 @@
       "ruleLabel": "被災者向けの総合案内"
     },
     {
+      "municipalityName": "天草市",
+      "title": "震度速報",
+      "url": "https://www.city.amakusa.kumamoto.jp/kinkyu.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
       "municipalityName": "合志市",
       "title": "令和8年熊本地震に伴うポスティングの遅延について",
       "url": "https://www.city.koshi.lg.jp/bousai/kiji00325658/index.html",
@@ -1041,7 +1048,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 9
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1061,7 +1068,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 6
+      "count": 7
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1095,5 +1102,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 648
+  "previousClassifiedPageCount": 656
 }

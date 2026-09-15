@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-15T17:25:53.242Z",
+  "generatedAt": "2026-09-15T21:46:50.650Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-15T17:06:25.736Z",
-    "inputCount": 822,
+    "generatedAt": "2026-09-15T21:27:57.118Z",
+    "inputCount": 823,
     "classifiedPageCount": 656,
     "displayCandidateCount": 556,
     "deltaFromPrevious": {
-      "inputCount": 11,
-      "classifiedPageCount": 8,
-      "unclassifiedCount": 2
+      "inputCount": 1,
+      "classifiedPageCount": 0,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 97,
+      "ageHours": 101,
       "limitHours": 336
     }
   },
@@ -297,7 +297,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 9
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -317,7 +317,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 6
+      "count": 7
     },
     {
       "code": "HTTP_404_CANDIDATE",

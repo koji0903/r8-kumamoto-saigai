@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-15T17:25:32.266Z",
-  "officialCheckedAt": "9/16 02:25",
+  "retrievedAt": "2026-09-15T21:46:28.757Z",
+  "officialCheckedAt": "9/16 06:46",
   "siteTopics": [
     {
       "date": "2026-09-15",
@@ -60,6 +60,14 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "震度速報",
+      "url": "https://www.city.amakusa.kumamoto.jp/kinkyu.html",
+      "date": "2026-09-16",
+      "time": "06:05",
+      "category": "避難・安全",
+      "municipality": "天草市"
+    },
+    {
       "title": "令和8年熊本地震に係る建設型応急住宅の入居募集のお知らせ",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2628356",
       "date": "2026-09-16",
@@ -114,14 +122,6 @@ window.HOME_TOPICS = {
       "time": "12:00",
       "category": "その他",
       "municipality": "美里町"
-    },
-    {
-      "title": "「令和８年熊本地震」により住宅被害を受けた方へ（住宅の応急修理制度）",
-      "url": "https://www.city.yamaga.kumamoto.jp/kiji0033163/index.html",
-      "date": "2026-09-15",
-      "time": "08:09",
-      "category": "住まい・証明",
-      "municipality": "山鹿市"
     }
   ],
   "prefectureUpdates": [
