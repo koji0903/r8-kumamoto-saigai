@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-16T12:03:00.538Z",
-  "officialCheckedAt": "9/16 21:03",
+  "retrievedAt": "2026-09-16T17:23:23.463Z",
+  "officialCheckedAt": "9/17 02:23",
   "siteTopics": [
     {
       "date": "2026-09-15",
@@ -60,20 +60,28 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "date": "2026-09-16",
-      "time": "19:34",
+      "title": "令和８年熊本地震による八代市災害援護資金の貸付について",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00324914/index.html",
+      "date": "2026-09-17",
+      "time": null,
       "category": "その他",
       "municipality": "八代市"
     },
     {
-      "title": "2026年9月16日 令和8年熊本地震 関連情報 （9月16日18時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-09-16",
-      "time": "18:00",
-      "category": "その他",
+      "title": "災害ごみ仮置場の開設日カレンダー（10月） (PDF 674KB)",
+      "url": "https://www.city.uki.kumamoto.jp/resource.php?e=579870071f3da329daebd9583cb9e284d3bdf0a1b68be1ae0932fbbf8b0043921cc78a2a4e806f81b00fa013d0a8473c",
+      "date": "2026-09-17",
+      "time": null,
+      "category": "ごみ・生活",
       "municipality": "宇城市"
+    },
+    {
+      "title": "避難所について（9/16 17:00更新）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
+      "date": "2026-09-16",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市"
     },
     {
       "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
@@ -114,14 +122,6 @@ window.HOME_TOPICS = {
       "time": "06:05",
       "category": "避難・安全",
       "municipality": "天草市"
-    },
-    {
-      "title": "【重要】災害ごみ仮置場の開設のお知らせ（9月16日時点）",
-      "url": "https://www.city.uto.lg.jp/article/view/1303/16352.html",
-      "date": "2026-09-16",
-      "time": null,
-      "category": "ごみ・生活",
-      "municipality": "宇土市"
     }
   ],
   "prefectureUpdates": [
