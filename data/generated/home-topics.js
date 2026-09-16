@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-16T17:23:23.463Z",
-  "officialCheckedAt": "9/17 02:23",
+  "retrievedAt": "2026-09-16T21:41:10.334Z",
+  "officialCheckedAt": "9/17 06:41",
   "siteTopics": [
     {
       "date": "2026-09-15",
@@ -108,20 +108,20 @@ window.HOME_TOPICS = {
       "municipality": "氷川町"
     },
     {
-      "title": "震度速報 9月16日 6時11分",
-      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-      "date": "2026-09-16",
-      "time": "06:11",
-      "category": "避難・安全",
-      "municipality": "山鹿市"
-    },
-    {
       "title": "震度速報",
       "url": "https://www.city.amakusa.kumamoto.jp/kinkyu.html",
       "date": "2026-09-16",
       "time": "06:05",
       "category": "避難・安全",
       "municipality": "天草市"
+    },
+    {
+      "title": "令和8年熊本地震に伴う「ワンストップ窓口」終了のお知らせ",
+      "url": "https://www.town.ozu.kumamoto.jp/page/26732.html",
+      "date": "2026-09-16",
+      "time": null,
+      "category": "その他",
+      "municipality": "大津町"
     }
   ],
   "prefectureUpdates": [

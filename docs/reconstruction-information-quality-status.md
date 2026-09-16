@@ -1,18 +1,18 @@
 # 暮らしの再建 情報品質ステータス
 
-最終監査日時: 2026-08-12（データ生成: 2026-09-16T17:06:39.952Z）
+最終監査日時: 2026-08-12（データ生成: 2026-09-16T21:23:55.381Z）
 
 > 件数の少なさは支援の少なさを意味しません。自治体の発信方法・ページ構造・更新頻度の差として扱います。A/B/Cは品質状態であり自治体評価ではありません。
 
 ## ACTION_REQUIRED
 - 厳密情報source変更 6件
-- 未解決source変更 ACTION_REQUIRED 29件
+- 未解決source変更 ACTION_REQUIRED 30件
 
 ## WARNING（上位）
 - 八代市: confirmed / 取得エラー 1件
 - 水俣市: confirmed / 取得エラー 1件
 - 菊池市: confirmed / 取得エラー 1件
-- 宇土市: confirmed / 取得エラー 15件
+- 宇土市: confirmed / 取得エラー 2件
 - 上天草市: confirmed / 取得エラー 2件
 - 宇城市: confirmed / 取得エラー 6件
 - 合志市: confirmed / 取得エラー 1件
@@ -24,7 +24,7 @@
 - 表示候補のうち機械的freshness判定でstale 406件。自動削除せず公式原文を確認
 
 ## 現在の公式情報件数
-- collector入力: 835件
+- collector入力: 834件
 - classified: 672件
 - 通常表示候補: 571件
 - 検索index: 576件
@@ -41,7 +41,7 @@
 | 熊本市 | 75 | 69 | 59 | あり | confirmed |
 | 八代市 | 217 | 133 | 111 | あり | confirmed |
 | 水俣市 | 3 | 2 | 2 | あり | confirmed |
-| 山鹿市 | 15 | 11 | 10 | あり | confirmed |
+| 山鹿市 | 14 | 11 | 10 | あり | confirmed |
 | 菊池市 | 13 | 12 | 10 | あり | confirmed |
 | 宇土市 | 50 | 43 | 40 | あり | confirmed |
 | 上天草市 | 37 | 33 | 27 | あり | confirmed |
@@ -139,7 +139,7 @@ A=自治体個別公式情報あり、B=国・県等の広域情報のみ、C=�
 - LEVEL 2公式リンクの変更は正常。LEVEL 1 verified sourceのhash変更は`needs_review`へ送る。
 - verified source変更: 6件
 - needs_review entity: 0件
-- 未解決source変更: 53件（ACTION_REQUIRED 29件）
+- 未解決source変更: 54件（ACTION_REQUIRED 30件）
 - review queue: `docs/reconstruction-source-review-queue.md`（高リスク順）
 - refreshは自治体別errorsを保持し、空データ・fallback欠落・非公式URLをfailureにする。
 - 1自治体失敗時も既存データを空上書きしない設計を維持。生成は一時ファイルからrenameし、検証不合格時は公開しない。

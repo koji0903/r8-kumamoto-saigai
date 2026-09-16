@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-16T17:06:39.952Z",
+  "generatedAt": "2026-09-16T21:23:55.381Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 835,
+  "inputCount": 834,
   "displayCandidateCount": 571,
   "classifiedPageCount": 672,
   "categoryReport": {
@@ -365,7 +365,7 @@
       "url": "https://www.town.ashikita.lg.jp/bosai_site/hinan/2025278"
     }
   ],
-  "outOfScopeCount": 86,
+  "outOfScopeCount": 85,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "hq_meeting_material": 41,
@@ -373,7 +373,7 @@
     "disaster_preparedness": 6,
     "facility_notice": 5,
     "event_notice": 1,
-    "index_page": 13,
+    "index_page": 12,
     "mayor_message": 2,
     "mutual_aid": 1,
     "overall_guide": 3,
@@ -759,13 +759,6 @@
       "ruleLabel": "平時の防災・今後への備え"
     },
     {
-      "municipalityName": "山鹿市",
-      "title": "震度速報 9月16日 6時11分",
-      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
       "municipalityName": "菊池市",
       "title": "地震関連情報",
       "url": "https://www.city.kikuchi.lg.jp/article/list/1350.html",
@@ -1024,7 +1017,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 15
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
