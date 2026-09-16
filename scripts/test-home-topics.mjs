@@ -31,7 +31,7 @@ const siteCards = indexHtml.match(/class="home-topic-card"/g) || [];
 assert.ok(siteCards.length >= 4, `サイト更新カードが不足しています（${siteCards.length}件）`);
 
 const officialCards = indexHtml.match(/class="home-official-card"/g) || [];
-assert.ok(officialCards.length >= 4, `自治体発表カードが不足しています（${officialCards.length}件）`);
+assert.equal(officialCards.length, 15, `自治体発表カードは最新15件である必要があります（現在${officialCards.length}件）`);
 
 // 3. 各カードの要素検証
 assert.ok(indexHtml.includes('class="home-topic-meta"'), "home-topic-meta がありません");
@@ -45,5 +45,6 @@ new Function("window", homeTopicsJs)(sandboxWindow);
 assert.ok(sandboxWindow.HOME_TOPICS, "window.HOME_TOPICS が定義されていません");
 assert.ok(Array.isArray(sandboxWindow.HOME_TOPICS.siteTopics), "HOME_TOPICS.siteTopics が配列ではありません");
 assert.ok(Array.isArray(sandboxWindow.HOME_TOPICS.municipalityUpdates), "HOME_TOPICS.municipalityUpdates が配列ではありません");
+assert.equal(sandboxWindow.HOME_TOPICS.municipalityUpdates.length, 15, `municipalityUpdates は15件である必要があります（現在${sandboxWindow.HOME_TOPICS.municipalityUpdates.length}件）`);
 
 console.log(`トップページ トピックス検査: サイト更新${siteCards.length}件 / 自治体収集${officialCards.length}件 / 生成物・リンク整合性 OK`);

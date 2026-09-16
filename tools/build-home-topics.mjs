@@ -63,7 +63,7 @@ async function main() {
     retrievedAt,
     officialCheckedAt: checkedAt,
     siteTopics: siteTopics.slice(0, 6),
-    municipalityUpdates: municipalities.slice(0, 8),
+    municipalityUpdates: municipalities.slice(0, 15),
     prefectureUpdates: prefecture.slice(0, 3),
     nationalUpdates: national.slice(0, 3)
   };
@@ -88,7 +88,7 @@ async function main() {
               <p class="home-topic-desc">${esc(item.description)}</p>
             </article>`).join("\n");
 
-  const officialItems = municipalities.slice(0, 6);
+  const officialItems = municipalities.slice(0, 15);
   const officialTopicsHtml = officialItems.map(item => `            <article class="home-official-card">
               <div class="home-official-meta">
                 <time datetime="${esc(item.date)}">${formatDate(item.date)}</time>
@@ -137,7 +137,7 @@ ${siteTopicsHtml}
               <span class="col-icon" aria-hidden="true">📢</span>
               <div>
                 <h3>自治体からの最新収集情報</h3>
-                <small>市町村公式サイトの公表発表タイムライン</small>
+                <small>市町村公式サイトの公表発表タイムライン（最新15件）</small>
               </div>
             </div>
             <div class="home-official-list">
