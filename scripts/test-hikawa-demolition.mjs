@@ -58,6 +58,11 @@ assert.match(text, /マニフェスト/, "マニフェスト保管の案内が�
 // ---- サイト内導線 -----------------------------------------------------------
 const hikawaSupport = read("hikawa-support.html");
 assert.ok(hikawaSupport.includes("hikawa-demolition.html"), "hikawa-support.html から公費解体ガイドへの導線が必要です");
+const appJs = read("app.js");
+assert.match(appJs, /"氷川町":\{support:\[[\s\S]*?"hikawa-demolition\.html"/, "app.js の氷川町サポートメニューに登録してください");
+const thHtml = read("temporary-housing.html");
+assert.ok(thHtml.includes("hikawa-demolition.html"), "temporary-housing.html から公費解体ガイドへの導線が必要です");
+assert.ok(html.includes("municipalities.html?name=氷川町"), "氷川町総合ダッシュボードへの導線が必要です");
 
 const siteTopics = JSON.parse(read("sources/site-topics.json"));
 assert.ok(siteTopics.some(t => t.url === "hikawa-demolition.html"), "sources/site-topics.json に公費解体ガイドのトピックスが必要です");

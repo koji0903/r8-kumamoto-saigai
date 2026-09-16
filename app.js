@@ -225,10 +225,10 @@ if($("#officialPrimary")){
 if($("#municipalityDetail")){
   const municipalityPages={
     "熊本市":{support:[["kumamoto-support.html","被災者支援制度ガイド","証明・お金・住まい・生活・減免・事業を困りごとから確認"]],records:[["hq-kumamoto.html","災害対策本部会議","市の対応と被害・避難の推移"]]},
-    "八代市":{records:[["hq-yatsushiro.html","災害対策本部会議","市の対応と被害・避難の推移"]]},
+    "八代市":{support:[["yatsushiro-support.html","被災者応援ガイドブック（第6版）","全50制度を対象・金額・期限・条件・必要書類から確認"]],records:[["hq-yatsushiro.html","災害対策本部会議","市の対応と被害・避難の推移"]]},
     "宇土市":{support:[["uto-housing.html","住まいの相談・再建支援","応急修理・みなし仮設・相談窓口"],["uto-repair.html","住宅の応急修理ガイド","対象・上限額・対象になる修理・写真・書類・流れ"],["uto-waste.html","災害ごみの持ち込み","ごみの種類、持込先、入場券配布場所"],["uto-bulletin.html","広報うと 災害臨時号","期限のある手続きと支援制度"]],records:[["hq-uto.html","災害対策本部会議","全公開資料から市の対応をたどる"]]},
     "宇城市":{support:[["https://labs-dr.bosai.go.jp/uki/shien-navi","うき支援ナビ（市公式）","困りごと・判定・キーワードから支援検索（サポートダイヤル 0964-27-8002）",true],["uki-support.html","被災者支援制度ガイド","証明・住まい・お金・健康・片づけ・減免"]]},
-    "氷川町":{support:[["https://hikawa-shien-torisetsu.jp/","被災者支援のトリセツ（町公式）","申請期限つきで制度・窓口を検索・案内（フリーダイヤル 0120-091-110）",true],["hikawa-support.html","被災者支援制度一覧","証明書・住まい・支援金・毎日の生活"]]}
+    "氷川町":{support:[["https://hikawa-shien-torisetsu.jp/","被災者支援のトリセツ（町公式）","申請期限つきで制度・窓口を検索・案内（フリーダイヤル 0120-091-110）",true],["hikawa-support.html","被災者支援制度一覧","証明書・住まい・支援金・毎日の生活"],["hikawa-demolition.html","被災家屋等の公費解体・自費解体ガイド","全壊〜半壊の申請手続き・予約電話・必要書類10点・自費解体"]]}
   };
   const municipalityHub=(name,id,url)=>{const pages=municipalityPages[name]||{},group=(title,type,items)=>`<section class="municipality-hub-group municipality-hub-${type}"><h4>${title}</h4><div>${items.map(([href,label,description,external,isTab])=>`<a href="${href}"${external?' target="_blank" rel="noopener"':''}${isTab?` data-tab-target="${isTab}"`:''}><b>${label}</b><span>${description}</span><i>開く ${external?'↗':'→'}</i></a>`).join('')}</div></section>`;return `<nav class="municipality-hub" aria-label="${name}の情報メニュー"><p><b>${name}の情報を目的から選ぶ</b><span>現在使う支援情報と、当時の対応記録を分けています。</span></p>${group("今使う支援情報","support",[[`reconstruction.html?municipality=${id}`,"暮らしの再建・支援制度","住まい、お金、申請、健康、家族、仕事から探す"],...(pages.support||[])])}${group("市町村からの公式発表","official",[[`#panelUpdates`,"公式発表（下のタブで表示中）","市町村が公開した最新記事と一次情報",false,"updates"],[url,`${name}公式サイト`,"最新の受付状況と行政窓口",true]])}${group("災害対応の記録","records",[[`#panelRecords`,"支援・会議の記録","会議資料から整理した被災状況と支援経過",false,"records"],...(pages.records||[])])}</nav>`};
   const municipalitySection=document.querySelector(".municipality-section");
