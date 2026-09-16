@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-09-16T04:56:36.929Z",
+  "generatedAt": "2026-09-16T11:46:20.967Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 827,
-  "displayCandidateCount": 560,
-  "classifiedPageCount": 661,
+  "inputCount": 838,
+  "displayCandidateCount": 570,
+  "classifiedPageCount": 672,
   "categoryReport": {
     "home": {
-      "total": 181,
-      "high": 64,
-      "medium": 73,
+      "total": 183,
+      "high": 65,
+      "medium": 74,
       "low": 44
     },
     "money": {
-      "total": 205,
-      "high": 42,
+      "total": 209,
+      "high": 44,
       "medium": 53,
-      "low": 110
+      "low": 112
     },
     "documents": {
-      "total": 172,
+      "total": 175,
       "high": 38,
-      "medium": 34,
-      "low": 100
+      "medium": 35,
+      "low": 102
     },
     "health_care": {
       "total": 47,
@@ -37,28 +37,28 @@
       "low": 44
     },
     "work_business": {
-      "total": 53,
+      "total": 54,
       "high": 16,
-      "medium": 37,
+      "medium": 38,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 22,
-      "high": 8,
-      "medium": 14,
+      "total": 26,
+      "high": 9,
+      "medium": 17,
       "low": 0
     },
     "daily_life": {
-      "total": 194,
-      "high": 61,
-      "medium": 133,
+      "total": 198,
+      "high": 62,
+      "medium": 136,
       "low": 0
     }
   },
   "municipalityReport": {
     "municipality_kumamoto": {
-      "classified": 68,
-      "displayCandidates": 58,
+      "classified": 69,
+      "displayCandidates": 59,
       "fallback": true
     },
     "municipality_yatsushiro": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 105,
-      "displayCandidates": 86,
+      "classified": 104,
+      "displayCandidates": 85,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -102,8 +102,8 @@
       "fallback": true
     },
     "municipality_koshi": {
-      "classified": 1,
-      "displayCandidates": 1,
+      "classified": 14,
+      "displayCandidates": 13,
       "fallback": true
     },
     "municipality_misato": {
@@ -137,17 +137,17 @@
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 37,
+      "classified": 36,
       "displayCandidates": 34,
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 38,
-      "displayCandidates": 33,
+      "classified": 36,
+      "displayCandidates": 31,
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 47,
+      "classified": 48,
       "displayCandidates": 43,
       "fallback": true
     },
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 247,
-    "medium": 313,
-    "low": 101
+    "high": 252,
+    "medium": 318,
+    "low": 102
   },
   "unclassifiedCount": 39,
   "unclassifiedItems": [
@@ -321,12 +321,12 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年9月16日 令和8年熊本地震 関連情報 （9月16日11時00分更新）",
+      "title": "2026年9月16日 令和8年熊本地震 関連情報 （9月16日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年09月16日 令和8年熊本地震 関連情報 （9月16日11時00分更新）",
+      "title": "2026年09月16日 令和8年熊本地震 関連情報 （9月16日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699"
     },
     {
@@ -373,8 +373,8 @@
     "disaster_preparedness": 6,
     "facility_notice": 8,
     "event_notice": 1,
-    "mayor_message": 2,
     "index_page": 13,
+    "mayor_message": 2,
     "mutual_aid": 1,
     "overall_guide": 3,
     "press": 3
@@ -718,13 +718,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
@@ -736,6 +729,13 @@
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "山鹿市",
@@ -1010,7 +1010,7 @@
     "non_official_url": 1,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 17,
+  "warningCount": 19,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1045,7 +1045,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 89
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1069,6 +1069,16 @@
     },
     {
       "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_koshi",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_koshi",
+      "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_ozu",
       "message": "継続回数を確認後に表示除外を判断してください"
     },
@@ -1095,9 +1105,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 10
+      "count": 11
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 656
+  "previousClassifiedPageCount": 661
 }

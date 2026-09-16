@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-16T05:14:40.006Z",
-  "officialCheckedAt": "9/16 14:14",
+  "retrievedAt": "2026-09-16T12:03:00.538Z",
+  "officialCheckedAt": "9/16 21:03",
   "siteTopics": [
     {
       "date": "2026-09-15",
@@ -60,28 +60,44 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "支援をご検討いただいている方へ",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036787/index.html",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "date": "2026-09-16",
-      "time": "13:38",
-      "category": "支援・制度",
-      "municipality": "氷川町"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-09-16",
-      "time": "13:31",
+      "time": "19:34",
       "category": "その他",
       "municipality": "八代市"
     },
     {
-      "title": "2026年9月16日 令和8年熊本地震 関連情報 （9月16日11時00分更新）",
+      "title": "2026年9月16日 令和8年熊本地震 関連情報 （9月16日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-09-16",
-      "time": "11:00",
+      "time": "18:00",
       "category": "その他",
       "municipality": "宇城市"
+    },
+    {
+      "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
+      "url": "https://www.city.kumamoto.jp/kiji00372210/index.html",
+      "date": "2026-09-16",
+      "time": "16:48",
+      "category": "住まい・証明",
+      "municipality": "熊本市"
+    },
+    {
+      "title": "賃貸型応急住宅(みなし仮設住宅)について【令和8年熊本地震】",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038089/index.html",
+      "date": "2026-09-16",
+      "time": "16:16",
+      "category": "住まい・証明",
+      "municipality": "益城町"
+    },
+    {
+      "title": "令和8年熊本地震で被災された方に対する支援制度について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kinkyu.html#kid53",
+      "date": "2026-09-16",
+      "time": "15:45",
+      "category": "支援・制度",
+      "municipality": "氷川町"
     },
     {
       "title": "震度速報 9月16日 6時11分",
@@ -106,22 +122,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "ごみ・生活",
       "municipality": "宇土市"
-    },
-    {
-      "title": "令和8年熊本地震に伴う「ワンストップ窓口」終了のお知らせ",
-      "url": "https://www.town.ozu.kumamoto.jp/page/26732.html",
-      "date": "2026-09-16",
-      "time": null,
-      "category": "その他",
-      "municipality": "大津町"
-    },
-    {
-      "title": "益城町地域の国際交流に基づいて招致する外国語指導助手（ALT）配置支援等業務委託公募型プロポーザルの実施について",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038185/index.html",
-      "date": "2026-09-16",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "益城町"
     }
   ],
   "prefectureUpdates": [
