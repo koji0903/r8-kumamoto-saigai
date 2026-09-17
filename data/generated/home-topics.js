@@ -4,6 +4,15 @@ window.HOME_TOPICS = {
   "officialCheckedAt": "9/17 06:41",
   "siteTopics": [
     {
+      "date": "2026-09-17",
+      "category": "八代市",
+      "badge": "制度詳細・FAQ27問解説",
+      "title": "八代市：被災者生活再建支援金（最大300万円）の利用ガイドを公開",
+      "url": "yatsushiro-rebuild.html",
+      "description": "八代市が令和7年9月11日より受付開始した「被災者生活再建支援金」の公式案内・FAQ全27問・様式記入例を徹底分析。全壊・解体・大規模半壊・中規模半壊の支給額シミュレーター、半壊でも全部解体で全壊同額対象になる事前相談ルール、借家入居者の対象要件、加算支援金の2段階申請ルールを整理しました。",
+      "targetPage": "yatsushiro-rebuild.html"
+    },
+    {
       "date": "2026-09-15",
       "category": "火の国会議",
       "badge": "第527回議事録公開",
@@ -47,15 +56,6 @@ window.HOME_TOPICS = {
       "url": "kumamoto-support.html",
       "description": "熊本市の第6版冊子145ページ・95支援項目を7分野に再整理。り災証明書の判定と世帯状況から対象候補・要確認・対象外を初期判定でき、支給額、所得・資力・解体等の条件、期限、窓口も確認できます。",
       "targetPage": "kumamoto-support.html"
-    },
-    {
-      "date": "2026-09-10",
-      "category": "宇城市",
-      "badge": "公式サービス連携",
-      "title": "宇城市：公式「うき支援ナビ」連携と被災者支援制度ガイドの公開",
-      "url": "uki-support.html",
-      "description": "宇城市と防災科研が連携する「うき支援ナビ」への直接導線と被災者サポートダイヤル（0964-27-8002）を新設。全壊〜一部損壊の判定別に対象制度36件・支援額・必要書類・窓口を整理しました。",
-      "targetPage": "uki-support.html"
     }
   ],
   "municipalityUpdates": [

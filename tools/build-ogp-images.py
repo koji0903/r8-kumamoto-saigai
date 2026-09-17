@@ -209,6 +209,10 @@ ART = {
 }
 
 PAGES = [
+    dict(file="yatsushiro-rebuild.html", out="ogp-yatsushiro-rebuild.png", tone="blue", art="rebuild",
+         label="八代市｜被災された方へ",
+         title="被災者生活再建支援金/利用ガイド",
+         lead="全壊・解体・大規模半壊・中規模半壊。最大300万円の支援金・半壊解体の事前相談・申請書類・FAQを整理。"),
     dict(file="yatsushiro-support.html", out="ogp-yatsushiro-support.png", tone="blue", art="support_fields",
          label="八代市｜被災された方へ",
          title="被災者応援ガイドブック/第6版を分かりやすく",
