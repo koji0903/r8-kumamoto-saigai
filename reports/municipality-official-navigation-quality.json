@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-09-16T21:23:55.381Z",
+  "generatedAt": "2026-09-17T04:59:48.675Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 834,
-  "displayCandidateCount": 571,
-  "classifiedPageCount": 672,
+  "inputCount": 835,
+  "displayCandidateCount": 570,
+  "classifiedPageCount": 673,
   "categoryReport": {
     "home": {
-      "total": 183,
+      "total": 182,
       "high": 66,
-      "medium": 73,
+      "medium": 72,
       "low": 44
     },
     "money": {
-      "total": 210,
+      "total": 213,
       "high": 44,
       "medium": 54,
-      "low": 112
+      "low": 115
     },
     "documents": {
       "total": 173,
@@ -37,9 +37,9 @@
       "low": 44
     },
     "work_business": {
-      "total": 54,
+      "total": 55,
       "high": 15,
-      "medium": 39,
+      "medium": 40,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 199,
+      "total": 198,
       "high": 63,
-      "medium": 136,
+      "medium": 135,
       "low": 0
     }
   },
@@ -72,7 +72,7 @@
       "fallback": true
     },
     "municipality_yamaga": {
-      "classified": 11,
+      "classified": 12,
       "displayCandidates": 10,
       "fallback": true
     },
@@ -127,8 +127,8 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 21,
-      "displayCandidates": 12,
+      "classified": 20,
+      "displayCandidates": 11,
       "fallback": true
     },
     "municipality_kashima": {
@@ -137,7 +137,7 @@
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 36,
+      "classified": 37,
       "displayCandidates": 34,
       "fallback": true
     },
@@ -164,8 +164,8 @@
   },
   "confidence": {
     "high": 254,
-    "medium": 317,
-    "low": 101
+    "medium": 316,
+    "low": 103
   },
   "unclassifiedCount": 39,
   "unclassifiedItems": [
@@ -321,12 +321,12 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年9月16日 令和8年熊本地震 関連情報 （9月16日18時00分更新）",
+      "title": "2026年9月17日 令和8年熊本地震 関連情報 （9月17日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年09月16日 令和8年熊本地震 関連情報 （9月16日18時00分更新）",
+      "title": "2026年09月17日 令和8年熊本地震 関連情報 （9月17日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699"
     },
     {
@@ -368,13 +368,12 @@
   "outOfScopeCount": 85,
   "outOfScopeByRule": {
     "donation_appeal": 2,
-    "hq_meeting_material": 41,
+    "hq_meeting_material": 42,
     "public_relations": 9,
     "disaster_preparedness": 6,
     "facility_notice": 5,
-    "event_notice": 1,
-    "index_page": 12,
     "mayor_message": 2,
+    "index_page": 12,
     "mutual_aid": 1,
     "overall_guide": 3,
     "press": 3
@@ -711,17 +710,10 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "【令和8年熊本地震復興祈願】熊響ファミリーコンサート開催決定！",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326728/index.html",
-      "ruleId": "event_notice",
-      "ruleLabel": "行事の開催・延期"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
+      "title": "第43回災害対策本部会議資料（令和８年９月１６日（水曜日）午後４時００分）（PDF：14.55メガバイト）",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_159998_up_znit1bw0.pdf",
+      "ruleId": "hq_meeting_material",
+      "ruleLabel": "災害対策本部会議の資料"
     },
     {
       "municipalityName": "八代市",
@@ -734,6 +726,13 @@
       "municipalityName": "八代市",
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
