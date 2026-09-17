@@ -209,6 +209,10 @@ ART = {
 }
 
 PAGES = [
+    dict(file="yatsushiro-loan.html", out="ogp-yatsushiro-loan.png", tone="blue", art="money",
+         label="八代市｜生活資金・貸付",
+         title="災害援護資金の貸付/利用ガイド",
+         lead="世帯主の負傷・住居や家財損害に最大350万円貸付。年1%（保証人で無利子）・据置最長5年・申請期限11/2・診断ツール。"),
     dict(file="uto-jizokuka.html", out="ogp-uto-jizokuka.png", tone="teal", art="work",
          label="宇土市｜事業者支援",
          title="小規模事業者持続化補助金/＜一般型 災害支援枠＞",
