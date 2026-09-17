@@ -209,6 +209,10 @@ ART = {
 }
 
 PAGES = [
+    dict(file="priority-support-summary.html", out="ogp-priority-support.png", tone="teal", art="support_fields",
+         label="5市町｜災害支援制度まとめ・比較",
+         title="熊本市・宇土市・宇城市/氷川町・八代市の制度比較",
+         lead="住まい・お金・減免・生活・事業の20制度を横断整理。制度の有無、金額、特設ガイド、自治体公式の受付状況を比較できます。"),
     dict(file="yatsushiro-loan.html", out="ogp-yatsushiro-loan.png", tone="blue", art="money",
          label="八代市｜生活資金・貸付",
          title="災害援護資金の貸付/利用ガイド",

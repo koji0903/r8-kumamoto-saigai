@@ -36,6 +36,7 @@ const tests = readdirSync("scripts")
 for (const test of tests) run("node", [`scripts/${test}`], test);
 
 const syntaxTargets = [
+  "priority-support-summary.js",
   "app.js",
   "hikawa-demolition.js",
   "yatsushiro-rebuild.js",
