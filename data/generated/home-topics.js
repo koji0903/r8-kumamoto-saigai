@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-17T17:24:56.121Z",
-  "officialCheckedAt": "9/18 02:24",
+  "retrievedAt": "2026-09-17T21:44:47.003Z",
+  "officialCheckedAt": "9/18 06:44",
   "siteTopics": [
     {
       "date": "2026-09-17",
@@ -132,6 +132,14 @@ window.HOME_TOPICS = {
       "municipality": "上天草市"
     },
     {
+      "title": "【9月17日更新】地震災害で発生したごみの受入（仮置場）ついて",
+      "url": "https://www.town.mifune.kumamoto.jp/page9423.html",
+      "date": "2026-09-17",
+      "time": null,
+      "category": "ごみ・生活",
+      "municipality": "御船町"
+    },
+    {
       "title": "令和８年度飼い主のいない猫避妊去勢手術支援事業",
       "url": "https://www.town.mashiki.lg.jp/kiji0037331/index.html",
       "date": "2026-09-17",
@@ -170,14 +178,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "その他",
       "municipality": "大津町"
-    },
-    {
-      "title": "令和8年熊本地震に伴う災害援護資金貸付制度について",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/279/6251.html",
-      "date": "2026-09-15",
-      "time": null,
-      "category": "その他",
-      "municipality": "嘉島町"
     }
   ],
   "prefectureUpdates": [

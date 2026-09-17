@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-17T17:25:19.146Z",
+  "generatedAt": "2026-09-17T21:45:02.119Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-17T17:07:19.788Z",
-    "inputCount": 821,
-    "classifiedPageCount": 661,
-    "displayCandidateCount": 558,
+    "generatedAt": "2026-09-17T21:28:23.412Z",
+    "inputCount": 837,
+    "classifiedPageCount": 676,
+    "displayCandidateCount": 571,
     "deltaFromPrevious": {
-      "inputCount": -13,
-      "classifiedPageCount": -12,
+      "inputCount": 16,
+      "classifiedPageCount": 15,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 20,
+      "ageHours": 24,
       "limitHours": 336
     }
   },
@@ -56,7 +56,7 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 43,
+        "classified": 44,
         "displayCandidates": 40,
         "fallback": true
       },
@@ -76,8 +76,8 @@
         "fallback": true
       },
       "municipality_koshi": {
-        "classified": 0,
-        "displayCandidates": 0,
+        "classified": 14,
+        "displayCandidates": 13,
         "fallback": true
       },
       "municipality_misato": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 179,
-        "high": 65,
-        "medium": 71,
-        "low": 43
+        "total": 185,
+        "high": 67,
+        "medium": 74,
+        "low": 44
       },
       "money": {
-        "total": 209,
-        "high": 41,
+        "total": 213,
+        "high": 43,
         "medium": 54,
-        "low": 114
+        "low": 116
       },
       "documents": {
-        "total": 167,
-        "high": 39,
-        "medium": 28,
-        "low": 100
+        "total": 173,
+        "high": 40,
+        "medium": 29,
+        "low": 104
       },
       "health_care": {
         "total": 46,
@@ -168,28 +168,28 @@
         "low": 43
       },
       "work_business": {
-        "total": 55,
+        "total": 56,
         "high": 16,
-        "medium": 39,
+        "medium": 40,
         "low": 0
       },
       "agriculture_fishery": {
-        "total": 21,
-        "high": 7,
-        "medium": 14,
+        "total": 25,
+        "high": 8,
+        "medium": 17,
         "low": 0
       },
       "daily_life": {
-        "total": 195,
-        "high": 61,
-        "medium": 134,
+        "total": 198,
+        "high": 62,
+        "medium": 136,
         "low": 0
       }
     },
     "confidence": {
-      "high": 247,
-      "medium": 311,
-      "low": 103
+      "high": 254,
+      "medium": 317,
+      "low": 105
     },
     "unclassifiedCount": 38,
     "excludedCount": 38,
@@ -307,7 +307,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 12
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -330,9 +330,14 @@
       "count": 9
     },
     {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_koshi",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_koshi",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -343,21 +348,6 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_ozu",
       "count": 1
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_nishihara",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_nishihara",
-      "count": 6
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_mifune",
-      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -378,16 +368,6 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
       "count": 12
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_hikawa",
-      "count": 3
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_tsunagi",
-      "count": 2
     }
   ],
   "strictSources": {
