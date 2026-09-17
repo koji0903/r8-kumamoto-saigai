@@ -209,7 +209,7 @@ ART = {
 }
 
 PAGES = [
-    dict(file="uto-jizokuka.html", out="ogp-uto-jizokuka.png", tone="teal", art="support_fields",
+    dict(file="uto-jizokuka.html", out="ogp-uto-jizokuka.png", tone="teal", art="work",
          label="宇土市｜事業者支援",
          title="小規模事業者持続化補助金/＜一般型 災害支援枠＞",
          lead="直接被害最大200万円（定額10/10あり）、間接被害最大100万円。商工会確認締切10/9・申請締切10/16・受給額診断を整理。"),
