@@ -2,7 +2,7 @@
   "metadata": {
     "event": "令和8年熊本地震",
     "disasterDate": "2026-07-28",
-    "retrievedAt": "2026-09-17T11:50:22.949Z",
+    "retrievedAt": "2026-09-17T17:07:19.788Z",
     "scope": "各市町村の公式トップページ、確認済みの地震情報集約ページ、そのページに掲載された個別記事、および集約ページのページ送りを確認。令和8年7月28日以降の日付を公式ページ上で確認できた記事リンク",
     "caveat": "公式サイトの構造・公開方式・検索可否により網羅性は保証できません。未検出は情報が存在しないことを意味しません。内容と最新状況はリンク先の一次情報で確認してください。",
     "categoryNote": "分類は記事タイトルに基づく閲覧用の便宜的な分類です。"
@@ -11,7 +11,7 @@
     {
       "name": "熊本市",
       "officialUrl": "https://www.city.kumamoto.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -274,13 +274,6 @@
           "category": "支援・制度"
         },
         {
-          "title": "「令和8年熊本地震」による栄養士及び調理師免許証の再交付申請の手数料免除について",
-          "url": "https://www.city.kumamoto.jp/kiji00372551/index.html",
-          "date": "2026-08-20",
-          "time": null,
-          "category": "その他"
-        },
-        {
           "title": "令和8年熊本地震に伴う特別相談窓口を開設します",
           "url": "https://www.city.kumamoto.jp/kiji00372112/index.html",
           "date": "2026-08-20",
@@ -290,6 +283,13 @@
         {
           "title": "令和8年熊本地震に伴う食品関係の営業許可期限延長について",
           "url": "https://www.city.kumamoto.jp/kiji00372422/index.html",
+          "date": "2026-08-20",
+          "time": "00:00",
+          "category": "その他"
+        },
+        {
+          "title": "「令和8年熊本地震」による栄養士及び調理師免許証の再交付申請の手数料免除について",
+          "url": "https://www.city.kumamoto.jp/kiji00372551/index.html",
           "date": "2026-08-20",
           "time": "00:00",
           "category": "その他"
@@ -549,7 +549,6 @@
         "https://www.city.kumamoto.jp/list04006.html",
         "https://www.city.kumamoto.jp/list04670.html",
         "https://www.city.kumamoto.jp/dynamic/hpkiji/pub/hpkijilistpagerhandler.ashx?c_id=3&class_id=4670&class_set_id=1&pg=2&kbn=newlist&top_id=0",
-        "https://www.city.kumamoto.jp/dynamic/hpkiji/pub/HpKijiListPagerHandler.ashx?c_id=3&class_set_id=1&class_id=4670&kbn=newlist&top_id=0&pg=3",
         "https://www.city.kumamoto.jp/list04836.html",
         "https://www.city.kumamoto.jp/dynamic/hpkiji/pub/hpkijilistpagerhandler.ashx?c_id=3&class_id=4836&class_set_id=1&pg=2&kbn=newlist&top_id=0",
         "https://www.city.kumamoto.jp/kiji00372691/index.html",
@@ -596,7 +595,6 @@
         "https://www.city.kumamoto.jp/list04212.html",
         "https://www.city.kumamoto.jp/list04213.html",
         "https://www.city.kumamoto.jp/list04215.html",
-        "https://www.city.kumamoto.jp/kiji00372533/index.html",
         "https://www.city.kumamoto.jp/kiji00372422/index.html",
         "https://www.city.kumamoto.jp/kiji00372154/index.html",
         "https://www.city.kumamoto.jp/kiji00372180/index.html",
@@ -604,14 +602,15 @@
         "https://www.city.kumamoto.jp/kiji00310012/index.html",
         "https://www.city.kumamoto.jp/kiji0032451/index.html",
         "https://www.city.kumamoto.jp/kiji00316526/index.html",
+        "https://www.city.kumamoto.jp/kiji00372533/index.html",
         "https://www.city.kumamoto.jp/kiji00372399/index.html",
-        "https://www.city.kumamoto.jp/list04832.html",
         "https://www.city.kumamoto.jp/kiji00372073/index.html",
         "https://www.city.kumamoto.jp/kiji00372079/index.html",
         "https://www.city.kumamoto.jp/kiji00372246/index.html",
         "https://www.city.kumamoto.jp/kiji00372078/index.html",
         "https://www.city.kumamoto.jp/kiji00372343/index.html",
         "https://www.city.kumamoto.jp/kiji00372114/index.html",
+        "https://www.city.kumamoto.jp/list04832.html",
         "https://www.city.kumamoto.jp/kiji00372210/index.html",
         "https://www.city.kumamoto.jp/kiji00372264/index.html",
         "https://www.city.kumamoto.jp/kiji00372104/index.html",
@@ -621,7 +620,8 @@
         "https://www.city.kumamoto.jp/kiji00372491/index.html",
         "https://www.city.kumamoto.jp/kiji00372604/index.html",
         "https://www.city.kumamoto.jp/kiji00372347/index.html",
-        "https://www.city.kumamoto.jp/kiji00372493/index.html"
+        "https://www.city.kumamoto.jp/kiji00372493/index.html",
+        "https://www.city.kumamoto.jp/kiji00372551/index.html"
       ],
       "pagesFetched": 80,
       "errors": [
@@ -631,7 +631,7 @@
     {
       "name": "八代市",
       "officialUrl": "https://www.city.yatsushiro.lg.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2133,13 +2133,6 @@
           "category": "住まい・証明"
         },
         {
-          "title": "熊本県八代市",
-          "url": "https://www.city.yatsushiro.lg.jp/default.html",
-          "date": "2026-09-17",
-          "time": "17:38",
-          "category": "その他"
-        },
-        {
           "title": "【給水所情報】9月18日（金曜日）",
           "url": "https://www.city.yatsushiro.lg.jp/kiji00326773/index.html",
           "date": "2026-09-17",
@@ -2147,10 +2140,24 @@
           "category": "ライフライン"
         },
         {
+          "title": "熊本県八代市",
+          "url": "https://www.city.yatsushiro.lg.jp/default.html",
+          "date": "2026-09-17",
+          "time": "17:38",
+          "category": "その他"
+        },
+        {
           "title": "小野市長から市民の皆さまへ",
           "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
           "date": "2026-09-17",
           "time": "19:20",
+          "category": "その他"
+        },
+        {
+          "title": "令和８年熊本地震により被災した学用品を配布します",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00326935/index.html",
+          "date": "2026-09-18",
+          "time": null,
           "category": "その他"
         }
       ],
@@ -2385,7 +2392,7 @@
     {
       "name": "水俣市",
       "officialUrl": "https://localcms.city.minamata.lg.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2462,7 +2469,7 @@
     {
       "name": "山鹿市",
       "officialUrl": "https://www.city.yamaga.kumamoto.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2656,7 +2663,7 @@
     {
       "name": "菊池市",
       "officialUrl": "https://www.city.kikuchi.lg.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2790,7 +2797,7 @@
     {
       "name": "宇土市",
       "officialUrl": "https://www.city.uto.lg.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3157,7 +3164,7 @@
     {
       "name": "上天草市",
       "officialUrl": "https://www.city.kamiamakusa.kumamoto.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3399,13 +3406,6 @@
           "category": "その他"
         },
         {
-          "title": "上島地区乗合タクシーの臨時運行について",
-          "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23220.html",
-          "date": "2026-09-15",
-          "time": null,
-          "category": "交通"
-        },
-        {
           "title": "【更新】令和8年熊本地震に係る被災者支援各種制度について(第2版)",
           "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23366.html",
           "date": "2026-09-15",
@@ -3440,8 +3440,6 @@
         "https://www.city.kamiamakusa.kumamoto.jp/q/list/83.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/list/91.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/64/23391.html",
-        "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23393.html",
-        "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23220.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/357/23482.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/547/23326.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/95/23109.html",
@@ -3460,6 +3458,7 @@
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23205.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23366.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23374.html",
+        "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23393.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23334.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23297.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23290.html",
@@ -3490,7 +3489,7 @@
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/73/23368.html",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/73/23158.html"
       ],
-      "pagesFetched": 66,
+      "pagesFetched": 65,
       "errors": [
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/73/21563.html: 404 Not Found",
         "https://www.city.kamiamakusa.kumamoto.jp/q/aview/73/23457.html: 404 Not Found"
@@ -3499,7 +3498,7 @@
     {
       "name": "宇城市",
       "officialUrl": "https://www.city.uki.kumamoto.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3529,13 +3528,6 @@
           "date": "2026-07-28",
           "time": null,
           "category": "その他"
-        },
-        {
-          "title": "【中止】宇城市上下水道事業官民連携包括業務委託（ウォータ―PPP）に係る公募型プロポーザルを中止します",
-          "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/2584768",
-          "date": "2026-07-28",
-          "time": null,
-          "category": "ライフライン"
         },
         {
           "title": "令和８年熊本地震の発生に伴う教育委員会所管施設の利用について",
@@ -3648,6 +3640,20 @@
           "date": "2026-08-11",
           "time": null,
           "category": "支援・制度"
+        },
+        {
+          "title": "2026年8月11日 令和8年熊本地震の罹災証明・被災証明・罹災届出証明について",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2515854",
+          "date": "2026-08-11",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
+          "title": "宇城市上下水道事業官民連携包括業務委託（ウォータ―PPP）に係る公募型プロポーザルを中止します（令和8年8月12日更新）",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/2584768",
+          "date": "2026-08-12",
+          "time": null,
+          "category": "ライフライン"
         },
         {
           "title": "【申請受付の延長】宇城市農林水産業物価高騰対策支援事業補助金（令和8年8月12日更新）",
@@ -3881,13 +3887,6 @@
           "category": "支援・制度"
         },
         {
-          "title": "令和8年熊本地震の罹災証明・罹災届出証明の申請を受け付けます",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2515854",
-          "date": "2026-08-31",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
           "title": "13_報道資料（令和８年熊本地震の発災から初めての学校再開：令和8年8月27日） (PDF 272KB)",
           "url": "https://www.city.uki.kumamoto.jp/resource.php?e=f975423eaa86a38f1256e77dd53ae1038342095e468c076d820c6ef82f323059f7bd12e68e1edbb0a530124366278d73",
           "date": "2026-08-31",
@@ -3979,13 +3978,6 @@
           "category": "ライフライン"
         },
         {
-          "title": "松橋西防災拠点センター避難所の避難者新規受け入れを停止します",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2620459",
-          "date": "2026-09-10",
-          "time": null,
-          "category": "避難・安全"
-        },
-        {
           "title": "14_報道資料（令和8年熊本地震に関する避難所等の建物内での「取材・撮影可能場所」等の変更について：令和8年8月31日） (PDF 300KB)",
           "url": "https://www.city.uki.kumamoto.jp/resource.php?e=8118fc6ea2776b027422192df327abf232bdc8e5a09d7316d845856d413f21ce81c2ea4de24c45c4cd5e73d12f04164d",
           "date": "2026-09-10",
@@ -4014,18 +4006,25 @@
           "category": "住まい・証明"
         },
         {
+          "title": "2026年09月11日 【令和8年熊本地震】熊本県中小企業融資制度",
+          "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/shokogyo/2623245",
+          "date": "2026-09-11",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "仮設施設整備支援事業説明会のお知らせ（申請検討者向け）（令和8年9月12日更新）",
+          "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/shokogyo/2634180",
+          "date": "2026-09-12",
+          "time": null,
+          "category": "施設・学校"
+        },
+        {
           "title": "2026年09月14日 （令和８年熊本地震関連）営農再開支援事業（ハード事業）の説明会を開催します",
           "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/nogyo/nogyozenpan/2634814",
           "date": "2026-09-14",
           "time": null,
           "category": "支援・制度"
-        },
-        {
-          "title": "仮設施設整備支援事業説明会のお知らせ（申請検討者向け）",
-          "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/shokogyo/2634180",
-          "date": "2026-09-14",
-          "time": null,
-          "category": "施設・学校"
         },
         {
           "title": "2026年09月14日 令和8年熊本地震に係る自宅敷地内への建設型応急住宅の設置について",
@@ -4098,7 +4097,7 @@
           "category": "住まい・証明"
         },
         {
-          "title": "宇城市避難所（不知火体育館）で ペット（犬・猫）を連れた人の受け入れができます",
+          "title": "宇城市避難所（不知火体育館）で ペット（犬・猫）を連れた人の受け入れができます（令和8年9月16日更新）",
           "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/petto/2636184",
           "date": "2026-09-16",
           "time": null,
@@ -4133,22 +4132,8 @@
           "category": "支援・制度"
         },
         {
-          "title": "2026年09月16日 令和8年熊本地震の罹災証明・罹災届出証明の申請を受け付けます",
-          "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/sonota_bousai/2515854",
-          "date": "2026-09-16",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
           "title": "2026年09月16日 罹災証明書・被災証明書の交付に必要な被害認定調査を本格的に開始しました",
           "url": "https://www.city.uki.kumamoto.jp/kurashi/sonota_kurashi/2616414",
-          "date": "2026-09-16",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
-          "title": "ブルーシート（支援物資）を配布します",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2611778",
           "date": "2026-09-16",
           "time": null,
           "category": "住まい・証明"
@@ -4203,6 +4188,13 @@
           "category": "その他"
         },
         {
+          "title": "松橋西防災拠点センター避難所の避難者新規受け入れを停止します",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2620459",
+          "date": "2026-09-16",
+          "time": null,
+          "category": "避難・安全"
+        },
+        {
           "title": "令和８年熊本地震に伴う雇用調整助成金の特例措置等について",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2630892",
           "date": "2026-09-16",
@@ -4224,6 +4216,13 @@
           "category": "避難・安全"
         },
         {
+          "title": "01令和8年熊本地震にかかる被災事業者への支援について (PDF 1,054KB)",
+          "url": "https://www.city.uki.kumamoto.jp/resource.php?e=e9926a121195a397275a14ee5ab93567eeb0bfdc4702214f00cffcbe0e8c090c4b31cc32c145b5cd8e17c17761e3f94f",
+          "date": "2026-09-16",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
           "title": "2026年09月16日 【事業者向け】「令和8年熊本地震」会社・事業所の被害状況に関する調査へのご協力のお願い",
           "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/shokogyo/2630519",
           "date": "2026-09-16",
@@ -4236,13 +4235,6 @@
           "date": "2026-09-16",
           "time": null,
           "category": "その他"
-        },
-        {
-          "title": "01令和8年熊本地震にかかる被災事業者への支援について (PDF 1,054KB)",
-          "url": "https://www.city.uki.kumamoto.jp/resource.php?e=e9926a121195a397275a14ee5ab93567eeb0bfdc4702214f00cffcbe0e8c090c4b31cc32c145b5cd8e17c17761e3f94f",
-          "date": "2026-09-16",
-          "time": null,
-          "category": "支援・制度"
         },
         {
           "title": "01 令和８年熊本地震の災害に伴う雇用調整助成金特例措置 (PDF 346KB)",
@@ -4259,8 +4251,22 @@
           "category": "避難・安全"
         },
         {
+          "title": "2026年09月17日 令和8年熊本地震の罹災証明・被災証明・罹災届出証明について",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/sonota_bousai/2515854",
+          "date": "2026-09-17",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
           "title": "【令和8年熊本地震】住宅の応急修理制度について",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2607269",
+          "date": "2026-09-17",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
+          "title": "ブルーシート（支援物資）を配布します",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2611778",
           "date": "2026-09-17",
           "time": null,
           "category": "住まい・証明"
@@ -4320,6 +4326,13 @@
           "date": "2026-09-17",
           "time": "18:00",
           "category": "その他"
+        },
+        {
+          "title": "災害ごみ仮置場の開設日カレンダー（10月） (PDF 674KB)",
+          "url": "https://www.city.uki.kumamoto.jp/resource.php?e=579870071f3da329daebd9583cb9e284d3bdf0a1b68be1ae0932fbbf8b0043921cc78a2a4e806f81b00fa013d0a8473c",
+          "date": "2026-09-18",
+          "time": null,
+          "category": "ごみ・生活"
         }
       ],
       "sourcesChecked": [
@@ -4437,10 +4450,11 @@
         "https://www.city.uki.kumamoto.jp/toppage/important/2607719",
         "https://www.city.uki.kumamoto.jp/toppage/important/2624914"
       ],
-      "pagesFetched": 105,
+      "pagesFetched": 104,
       "errors": [
         "https://www.city.uki.kumamoto.jp/resource.php?e=2af5cabbe58e24884bd3d59eb7de4d48b25485513efc7b7d60d7acf5922a4eaec9a3415a81f8f20817eaf357cea09c9e: HTMLではありません: application/pdf",
         "https://www.city.uki.kumamoto.jp/toppage/important/2628356: 404 Not Found",
+        "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/shokogyo/2634180: 404 Not Found",
         "https://www.city.uki.kumamoto.jp/iryo_fukushi/fukushi/shogaishafukushi/2621500: 404 Not Found",
         "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/nogyo/2615387: 404 Not Found",
         "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/nogyo/nogyoiinkai/2612867: 404 Not Found",
@@ -4452,7 +4466,7 @@
     {
       "name": "天草市",
       "officialUrl": "https://www.city.amakusa.kumamoto.jp/default.html?site=1",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4683,207 +4697,23 @@
     {
       "name": "合志市",
       "officialUrl": "https://www.city.koshi.lg.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
-      "status": "confirmed",
-      "updates": [
-        {
-          "title": "令和8年熊本地震に伴うポスティングの遅延について",
-          "url": "https://www.city.koshi.lg.jp/bousai/kiji00325658/index.html",
-          "date": "2026-07-29",
-          "time": "17:00",
-          "category": "その他"
-        },
-        {
-          "title": "地震後の水稲栽培における水管理の技術対策について",
-          "url": "https://www.city.koshi.lg.jp/kiji00325682/index.html",
-          "date": "2026-07-31",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "「罹災証明書」「被災証明書」の申請を受け付けています",
-          "url": "https://www.city.koshi.lg.jp/kinkyu.html",
-          "date": "2026-08-01",
-          "time": "09:30",
-          "category": "住まい・証明"
-        },
-        {
-          "title": "令和8年熊本地震で被災した住宅の飲用井戸の調査申込",
-          "url": "https://www.city.koshi.lg.jp/kiji00325755/index.html",
-          "date": "2026-08-03",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
-          "title": "地震と台風接近に伴う農作物被害防止技術対策について",
-          "url": "https://www.city.koshi.lg.jp/kiji00325684/index.html",
-          "date": "2026-08-04",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "地震後のトマト苗の管理や定植時における水の確保と利用について",
-          "url": "https://www.city.koshi.lg.jp/kiji00325692/index.html",
-          "date": "2026-08-05",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "地震に伴う農業用水利用時の留意点について",
-          "url": "https://www.city.koshi.lg.jp/kiji00325717/index.html",
-          "date": "2026-08-07",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "【令和8年熊本地震】被災者生活再建支援金について",
-          "url": "https://www.city.koshi.lg.jp/kiji00325718/index.html",
-          "date": "2026-08-19",
-          "time": "15:09",
-          "category": "支援・制度"
-        },
-        {
-          "title": "給水装置指定工事店制度（水道）について",
-          "url": "https://www.city.koshi.lg.jp/kiji0034038/index.html",
-          "date": "2026-08-25",
-          "time": null,
-          "category": "ライフライン"
-        },
-        {
-          "title": "【様式PDF】 被災者生活再建支援金支給申請書（PDF：149.9キロバイト）",
-          "url": "https://www.city.koshi.lg.jp/kiji00325718/3_25718_46179_up_1dxp54aw.pdf",
-          "date": "2026-08-27",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
-          "title": "【令和8年熊本地震】経済的な支援のご案内",
-          "url": "https://www.city.koshi.lg.jp/kiji00325760/index.html",
-          "date": "2026-09-02",
-          "time": "15:19",
-          "category": "支援・制度"
-        },
-        {
-          "title": "【住宅金融支援機構】災害復興住宅融資のご案内",
-          "url": "https://www.city.koshi.lg.jp/kiji00325800/index.html",
-          "date": "2026-09-09",
-          "time": "11:31",
-          "category": "住まい・証明"
-        },
-        {
-          "title": "【令和8年熊本地震】被災した住宅の応急修理について",
-          "url": "https://www.city.koshi.lg.jp/kiji00325685/index.html",
-          "date": "2026-09-11",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
-          "title": "令和8年熊本地震で被災した家屋等の解体・撤去（公費解体）について",
-          "url": "https://www.city.koshi.lg.jp/kiji00325787/index.html",
-          "date": "2026-09-11",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "【令和8年熊本地震】被災した井戸の応急修理について",
-          "url": "https://www.city.koshi.lg.jp/kiji00325808/index.html",
-          "date": "2026-09-15",
-          "time": null,
-          "category": "住まい・証明"
-        }
-      ],
+      "checkedAt": "2026-09-17T17:07:19.788Z",
+      "status": "fetch-error",
+      "updates": [],
       "sourcesChecked": [
         "https://www.city.koshi.lg.jp/",
-        "https://www.city.koshi.lg.jp/bousai/kiji00325658/index.html",
-        "https://www.city.koshi.lg.jp/kiji00325808/index.html",
-        "https://www.city.koshi.lg.jp/list00246.html",
-        "https://www.city.koshi.lg.jp/dynamic/entry/pub/ansform.aspx?c_id=52&entry_ins=3&pg=1&mst=2",
-        "https://www.city.koshi.lg.jp/kiji00325685/index.html",
-        "https://www.city.koshi.lg.jp/list00200.html",
-        "https://www.city.koshi.lg.jp/list00206.html",
-        "https://www.city.koshi.lg.jp/list00251.html",
-        "https://www.city.koshi.lg.jp/list00263.html",
-        "https://www.city.koshi.lg.jp/list00264.html",
-        "https://www.city.koshi.lg.jp/list00208.html",
-        "https://www.city.koshi.lg.jp/list00267.html",
-        "https://www.city.koshi.lg.jp/list00209.html",
-        "https://www.city.koshi.lg.jp/dynamic/cal_recycle/pub/default.aspx?c_id=47",
-        "https://www.city.koshi.lg.jp/list00269.html",
-        "https://www.city.koshi.lg.jp/list00210.html",
-        "https://www.city.koshi.lg.jp/list00274.html",
-        "https://www.city.koshi.lg.jp/list00211.html",
-        "https://www.city.koshi.lg.jp/list01018.html",
-        "https://www.city.koshi.lg.jp/list00279.html",
-        "https://www.city.koshi.lg.jp/list00212.html",
-        "https://www.city.koshi.lg.jp/list00214.html",
-        "https://www.city.koshi.lg.jp/list00287.html",
-        "https://www.city.koshi.lg.jp/list00288.html",
-        "https://www.city.koshi.lg.jp/list00872.html",
-        "https://www.city.koshi.lg.jp/list00868.html",
-        "https://www.city.koshi.lg.jp/list00215.html",
-        "https://www.city.koshi.lg.jp/list00299.html",
-        "https://www.city.koshi.lg.jp/list00302.html",
-        "https://www.city.koshi.lg.jp/list00219.html",
-        "https://www.city.koshi.lg.jp/list00306.html",
-        "https://www.city.koshi.lg.jp/list00221.html",
-        "https://www.city.koshi.lg.jp/list00315.html",
-        "https://www.city.koshi.lg.jp/list00322.html",
-        "https://www.city.koshi.lg.jp/list00225.html",
-        "https://www.city.koshi.lg.jp/list00333.html",
-        "https://www.city.koshi.lg.jp/list00335.html",
-        "https://www.city.koshi.lg.jp/list00337.html",
-        "https://www.city.koshi.lg.jp/list00227.html",
-        "https://www.city.koshi.lg.jp/list00343.html",
-        "https://www.city.koshi.lg.jp/list00345.html",
-        "https://www.city.koshi.lg.jp/list01033.html",
-        "https://www.city.koshi.lg.jp/list00375.html",
-        "https://www.city.koshi.lg.jp/list00381.html",
-        "https://www.city.koshi.lg.jp/list00388.html",
-        "https://www.city.koshi.lg.jp/list00401.html",
-        "https://www.city.koshi.lg.jp/list00406.html",
-        "https://www.city.koshi.lg.jp/list00409.html",
-        "https://www.city.koshi.lg.jp/list01023.html",
-        "https://www.city.koshi.lg.jp/list00410.html",
-        "https://www.city.koshi.lg.jp/list00411.html",
-        "https://www.city.koshi.lg.jp/list00971.html",
-        "https://www.city.koshi.lg.jp/list00966.html",
-        "https://www.city.koshi.lg.jp/list00425.html",
-        "https://www.city.koshi.lg.jp/list00433.html",
-        "https://www.city.koshi.lg.jp/list00438.html",
-        "https://www.city.koshi.lg.jp/kiji00325800/index.html",
-        "https://www.city.koshi.lg.jp/kiji00325760/index.html",
-        "https://www.city.koshi.lg.jp/kiji00325718/index.html",
-        "https://www.city.koshi.lg.jp/kiji00313268/index.html",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=200",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=206",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=251",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=263",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=264",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=208",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=267",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=209",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=269",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=210",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=274",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=211",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1018",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=279",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=212",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=214",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=287",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=288",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=872",
-        "https://www.city.koshi.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=868"
+        "https://www.city.koshi.lg.jp/bousai/kiji00325658/index.html"
       ],
-      "pagesFetched": 80,
+      "pagesFetched": 0,
       "errors": [
-        "https://www.city.koshi.lg.jp/kiji00313268/index.html: 404 Not Found"
+        "https://www.city.koshi.lg.jp/: 502 Broken pipe",
+        "https://www.city.koshi.lg.jp/bousai/kiji00325658/index.html: 502 Broken pipe"
       ]
     },
     {
       "name": "美里町",
       "officialUrl": "https://www.town.kumamoto-misato.lg.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5094,7 +4924,7 @@
     {
       "name": "大津町",
       "officialUrl": "https://www.town.ozu.kumamoto.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5184,7 +5014,7 @@
         {
           "title": "令和8年熊本地震に伴う「ワンストップ窓口」終了のお知らせ",
           "url": "https://www.town.ozu.kumamoto.jp/page/26732.html",
-          "date": "2026-09-17",
+          "date": "2026-09-16",
           "time": null,
           "category": "その他"
         }
@@ -5201,7 +5031,7 @@
     {
       "name": "菊陽町",
       "officialUrl": "https://www.town.kikuyo.lg.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5432,7 +5262,7 @@
     {
       "name": "西原村",
       "officialUrl": "https://www.vill.nishihara.kumamoto.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5491,84 +5321,22 @@
         "https://www.vill.nishihara.kumamoto.jp/bousai/list00307.html",
         "https://www.vill.nishihara.kumamoto.jp/bousai/list00325.html",
         "https://www.vill.nishihara.kumamoto.jp/bousai/list00344.html",
-        "https://www.vill.nishihara.kumamoto.jp/",
-        "https://www.vill.nishihara.kumamoto.jp/list00603.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00604.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00605.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00106.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00130.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00138.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00108.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00144.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00145.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00146.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00149.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00151.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00110.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00154.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00157.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00159.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00160.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00161.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00112.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00165.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00166.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00167.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00171.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00174.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00178.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00179.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00180.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00181.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00196.html",
-        "https://www.vill.nishihara.kumamoto.jp/list00197.html",
-        "https://www.vill.nishihara.kumamoto.jp/jisin/default.html",
-        "https://www.vill.nishihara.kumamoto.jp/dynamic/search/pub/default.aspx?c_id=2&q=%e3%81%94%e3%81%bf%e3%81%ae%e5%87%ba%e3%81%97%e6%96%b9",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/kiji0031997/index.html",
-        "https://www.vill.nishihara.kumamoto.jp/kiji0032025/index.html",
-        "https://www.vill.nishihara.kumamoto.jp/kiji0032014/index.html",
-        "https://www.vill.nishihara.kumamoto.jp/kiji0032032/index.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00302.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00308.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00327.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00329.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00330.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00311.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00313.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00335.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00336.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00337.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00339.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00316.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00340.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00341.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00343.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00345.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00346.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00347.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00348.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00585.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00350.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00352.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00322.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/list00324.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/kiji0031985/index.html",
-        "https://www.vill.nishihara.kumamoto.jp/bousai/kiji00372/index.html",
-        "https://www.vill.nishihara.kumamoto.jp/kiji0032000/index.html",
-        "https://www.vill.nishihara.kumamoto.jp/kiji0031990/index.html",
-        "https://www.vill.nishihara.kumamoto.jp/kiji003964/index.html",
-        "https://www.vill.nishihara.kumamoto.jp/jisin/list00501.html",
-        "https://www.vill.nishihara.kumamoto.jp/jisin/list00583.html",
-        "https://www.vill.nishihara.kumamoto.jp/jisin/list00582.html",
-        "https://www.vill.nishihara.kumamoto.jp/jisin/kiji003892/index.html"
+        "https://www.vill.nishihara.kumamoto.jp/"
       ],
-      "pagesFetched": 75,
-      "errors": []
+      "pagesFetched": 0,
+      "errors": [
+        "https://www.vill.nishihara.kumamoto.jp/default.html: 404 Not Found",
+        "https://www.vill.nishihara.kumamoto.jp/bousai/list00306.html: 404 Not Found",
+        "https://www.vill.nishihara.kumamoto.jp/bousai/list00307.html: 404 Not Found",
+        "https://www.vill.nishihara.kumamoto.jp/bousai/list00325.html: 404 Not Found",
+        "https://www.vill.nishihara.kumamoto.jp/bousai/list00344.html: 404 Not Found",
+        "https://www.vill.nishihara.kumamoto.jp/: 404 Not Found"
+      ]
     },
     {
       "name": "御船町",
       "officialUrl": "https://www.town.mifune.kumamoto.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5732,7 +5500,7 @@
     {
       "name": "嘉島町",
       "officialUrl": "https://www.town.kumamoto-kashima.lg.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5952,7 +5720,7 @@
     {
       "name": "益城町",
       "officialUrl": "https://www.town.mashiki.lg.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6327,7 +6095,7 @@
     {
       "name": "甲佐町",
       "officialUrl": "https://www.town.kosa.lg.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6653,7 +6421,7 @@
     {
       "name": "氷川町",
       "officialUrl": "https://www.town.hikawa.kumamoto.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -7128,109 +6896,20 @@
       ],
       "sourcesChecked": [
         "https://www.town.hikawa.kumamoto.jp/list00849.html",
-        "https://www.town.hikawa.kumamoto.jp/dynamic/hpkiji/pub/hpkijilistpagerhandler.ashx?c_id=3&class_id=849&class_set_id=1&pg=2&kbn=newlist&top_id=0",
-        "https://www.town.hikawa.kumamoto.jp/dynamic/hpkiji/pub/HpKijiListPagerHandler.ashx?c_id=3&class_set_id=1&class_id=849&kbn=newlist&top_id=0&pg=3",
         "https://www.town.hikawa.kumamoto.jp/kinkyu.html",
-        "https://www.town.hikawa.kumamoto.jp/",
-        "https://www.town.hikawa.kumamoto.jp/list00107.html",
-        "https://www.town.hikawa.kumamoto.jp/list00140.html",
-        "https://www.town.hikawa.kumamoto.jp/list00148.html",
-        "https://www.town.hikawa.kumamoto.jp/list00109.html",
-        "https://www.town.hikawa.kumamoto.jp/list00728.html",
-        "https://www.town.hikawa.kumamoto.jp/list00150.html",
-        "https://www.town.hikawa.kumamoto.jp/list00151.html",
-        "https://www.town.hikawa.kumamoto.jp/list00154.html",
-        "https://www.town.hikawa.kumamoto.jp/list00110.html",
-        "https://www.town.hikawa.kumamoto.jp/list00155.html",
-        "https://www.town.hikawa.kumamoto.jp/list00113.html",
-        "https://www.town.hikawa.kumamoto.jp/list00173.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036571/index.html",
-        "https://www.town.hikawa.kumamoto.jp/list00118.html",
-        "https://www.town.hikawa.kumamoto.jp/list00184.html",
-        "https://www.town.hikawa.kumamoto.jp/list00182.html",
-        "https://www.town.hikawa.kumamoto.jp/list00820.html",
-        "https://www.town.hikawa.kumamoto.jp/list00785.html",
-        "https://www.town.hikawa.kumamoto.jp/list00187.html",
-        "https://www.town.hikawa.kumamoto.jp/list00700.html",
-        "https://www.town.hikawa.kumamoto.jp/list00196.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0034889/index.html",
-        "https://www.town.hikawa.kumamoto.jp/list00119.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036816/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036794/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036838/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036837/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036787/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036774/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036833/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036836/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036831/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036775/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036796/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036793/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036817/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036826/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036818/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036812/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036782/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036825/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036815/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036789/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036778/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036780/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036769/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036798/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036786/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036779/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036771/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036772/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036760/index.html",
-        "https://www.town.hikawa.kumamoto.jp/list00826.html",
-        "https://www.town.hikawa.kumamoto.jp/list00829.html",
-        "https://www.town.hikawa.kumamoto.jp/list00832.html",
-        "https://www.town.hikawa.kumamoto.jp/list00198.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00302.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036755/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036783/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036811/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036026/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036763/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036411/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036757/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036804/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036805/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036806/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036808/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036820/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036802/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036790/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0036758/index.html",
-        "https://www.town.hikawa.kumamoto.jp/kiji0034692/index.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00309.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00312.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00314.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00317.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00323.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00325.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00328.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00330.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00331.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00336.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00337.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00338.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00340.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00344.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00345.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00346.html",
-        "https://www.town.hikawa.kumamoto.jp/bousai/list00347.html"
+        "https://www.town.hikawa.kumamoto.jp/"
       ],
-      "pagesFetched": 96,
-      "errors": []
+      "pagesFetched": 0,
+      "errors": [
+        "https://www.town.hikawa.kumamoto.jp/list00849.html: 502 Broken pipe",
+        "https://www.town.hikawa.kumamoto.jp/kinkyu.html: 502 Broken pipe",
+        "https://www.town.hikawa.kumamoto.jp/: 502 Broken pipe"
+      ]
     },
     {
       "name": "芦北町",
       "officialUrl": "https://www.town.ashikita.lg.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -7294,7 +6973,7 @@
     {
       "name": "津奈木町",
       "officialUrl": "https://www.town.tsunagi.lg.jp/",
-      "checkedAt": "2026-09-17T11:50:22.949Z",
+      "checkedAt": "2026-09-17T17:07:19.788Z",
       "status": "confirmed",
       "updates": [
         {
@@ -7370,76 +7049,13 @@
       ],
       "sourcesChecked": [
         "https://www.town.tsunagi.lg.jp/kinkyu/pub/default.aspx?c_id=9",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=31&pg=1",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=31&pg=3",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=25&pg=3",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=25&pg=1",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=25&pg=2",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=29&pg=2",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=29&pg=1",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=29&pg=3",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=28&pg=2",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=28&pg=1",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=28&pg=3",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=27&pg=2",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=27&pg=1",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=27&pg=3",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=31&pg=2",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/default.aspx?c_id=9&pg=3",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/default.aspx?c_id=9&pg=1",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/default.aspx?c_id=9&pg=2",
-        "https://www.town.tsunagi.lg.jp/",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=502",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=503",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=508",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=509",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=514",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=520",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=521",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=529",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=533",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=534",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=537",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=541",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=548",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=551",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=884",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=882",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=917",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=918",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=919",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=920",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=557",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=558",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=923",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=924",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=560",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=562",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=566",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=580",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=788",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=789",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=530",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=531",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=532",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=625",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=615",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=732",
-        "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=618",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=35&pg=1",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=34&pg=1",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=33&pg=1",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=32&pg=1",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=22&pg=2",
-        "https://www.town.tsunagi.lg.jp/kinkyu/pub/detail.aspx?c_id=9&id=26&pg=2",
-        "https://www.town.tsunagi.lg.jp/page1004.html",
-        "https://www.town.tsunagi.lg.jp/page871.html",
-        "https://www.town.tsunagi.lg.jp/page1001.html",
-        "https://www.town.tsunagi.lg.jp/page872.html",
-        "https://www.town.tsunagi.lg.jp/page4406.html"
+        "https://www.town.tsunagi.lg.jp/"
       ],
-      "pagesFetched": 68,
-      "errors": []
+      "pagesFetched": 0,
+      "errors": [
+        "https://www.town.tsunagi.lg.jp/kinkyu/pub/default.aspx?c_id=9: 502 Broken pipe",
+        "https://www.town.tsunagi.lg.jp/: 502 Broken pipe"
+      ]
     }
   ]
 }

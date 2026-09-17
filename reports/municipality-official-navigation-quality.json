@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-09-17T11:50:22.949Z",
+  "generatedAt": "2026-09-17T17:07:19.788Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 834,
-  "displayCandidateCount": 569,
-  "classifiedPageCount": 673,
+  "inputCount": 821,
+  "displayCandidateCount": 558,
+  "classifiedPageCount": 661,
   "categoryReport": {
     "home": {
-      "total": 185,
-      "high": 67,
-      "medium": 74,
-      "low": 44
+      "total": 179,
+      "high": 65,
+      "medium": 71,
+      "low": 43
     },
     "money": {
-      "total": 212,
-      "high": 43,
+      "total": 209,
+      "high": 41,
       "medium": 54,
-      "low": 115
+      "low": 114
     },
     "documents": {
-      "total": 173,
-      "high": 38,
-      "medium": 31,
-      "low": 104
+      "total": 167,
+      "high": 39,
+      "medium": 28,
+      "low": 100
     },
     "health_care": {
       "total": 46,
@@ -31,27 +31,27 @@
       "low": 0
     },
     "family_education": {
-      "total": 79,
+      "total": 80,
       "high": 9,
-      "medium": 27,
+      "medium": 28,
       "low": 43
     },
     "work_business": {
       "total": 55,
-      "high": 15,
-      "medium": 40,
+      "high": 16,
+      "medium": 39,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 25,
-      "high": 8,
-      "medium": 17,
+      "total": 21,
+      "high": 7,
+      "medium": 14,
       "low": 0
     },
     "daily_life": {
-      "total": 198,
-      "high": 62,
-      "medium": 136,
+      "total": 195,
+      "high": 61,
+      "medium": 134,
       "low": 0
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 133,
-      "displayCandidates": 111,
+      "classified": 134,
+      "displayCandidates": 112,
       "fallback": true
     },
     "municipality_minamata": {
@@ -87,13 +87,13 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 33,
-      "displayCandidates": 27,
+      "classified": 32,
+      "displayCandidates": 26,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 106,
-      "displayCandidates": 87,
+      "classified": 108,
+      "displayCandidates": 89,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -102,8 +102,8 @@
       "fallback": true
     },
     "municipality_koshi": {
-      "classified": 14,
-      "displayCandidates": 13,
+      "classified": 0,
+      "displayCandidates": 0,
       "fallback": true
     },
     "municipality_misato": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 251,
-    "medium": 318,
-    "low": 104
+    "high": 247,
+    "medium": 311,
+    "low": 103
   },
   "unclassifiedCount": 38,
   "unclassifiedItems": [
@@ -360,11 +360,11 @@
       "url": "https://www.town.ashikita.lg.jp/bosai_site/hinan/2025278"
     }
   ],
-  "outOfScopeCount": 85,
+  "outOfScopeCount": 84,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "hq_meeting_material": 42,
-    "public_relations": 9,
+    "public_relations": 8,
     "disaster_preparedness": 6,
     "facility_notice": 5,
     "index_page": 12,
@@ -851,13 +851,6 @@
       "ruleLabel": "入口・一覧のページ"
     },
     {
-      "municipalityName": "合志市",
-      "title": "令和8年熊本地震に伴うポスティングの遅延について",
-      "url": "https://www.city.koshi.lg.jp/bousai/kiji00325658/index.html",
-      "ruleId": "public_relations",
-      "ruleLabel": "広報紙・その配布"
-    },
-    {
       "municipalityName": "美里町",
       "title": "美里町総合体育館の一部利用再開について",
       "url": "https://www.town.kumamoto-misato.lg.jp/soshiki/shakaikyoiku/1/7/3966.html",
@@ -976,7 +969,7 @@
     "non_official_url": 1,
     "non_disaster_context_excluded": 1
   },
-  "warningCount": 22,
+  "warningCount": 25,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1041,17 +1034,12 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 8
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_koshi",
-      "message": "継続回数を確認後に表示除外を判断してください"
+      "count": 9
     },
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_koshi",
-      "count": 1
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1062,6 +1050,16 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_ozu",
       "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_nishihara",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_nishihara",
+      "count": 6
     },
     {
       "code": "RETRIEVAL_ISSUE",
@@ -1087,6 +1085,16 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
       "count": 12
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_hikawa",
+      "count": 3
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_tsunagi",
+      "count": 2
     }
   ],
   "errors": [],
