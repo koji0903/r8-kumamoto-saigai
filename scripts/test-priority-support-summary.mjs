@@ -94,4 +94,32 @@ assert.match(html, /<h3>宇城市<\/h3>/, "宇城市の窓口カードがあり�
 assert.match(html, /<h3>氷川町<\/h3>/, "氷川町の窓口カードがありません");
 assert.match(html, /<h3>八代市<\/h3>/, "八代市の窓口カードがありません");
 
-console.log("5市町 災害支援制度まとめ・比較ページ検査（5市町・全20制度・4ステータス・特設リンク・SEO・窓口）: すべて合格");
+// 8. データマスター sources/priority-support-matrix.json との整合性検査
+const matrixPath = path.join(root, "sources", "priority-support-matrix.json");
+assert.ok(fs.existsSync(matrixPath), "sources/priority-support-matrix.json が存在しません");
+const matrixData = JSON.parse(fs.readFileSync(matrixPath, "utf8"));
+assert.ok(Array.isArray(matrixData.programs), "matrixData.programs が配列ではありません");
+assert.equal(matrixData.programs.length, 20, "20制度が定義されていること");
+
+const MUNI_KEYS = {
+  "熊本市": "kumamoto",
+  "宇土市": "uto",
+  "宇城市": "uki",
+  "氷川町": "hikawa",
+  "八代市": "yatsushiro"
+};
+
+// 井戸支援は全5市町で公式受付中であること
+const wellProg = matrixData.programs.find(p => p.id === "well-septic");
+assert.ok(wellProg, "well-septic が存在しません");
+for (const [name, key] of Object.entries(MUNI_KEYS)) {
+  assert.equal(wellProg.data[key]?.status, "active", `well-septic の ${name} は受付中 (active) である必要があります`);
+}
+
+// 八代市の税減免は準備中（事前相談）であること
+const taxProg = matrixData.programs.find(p => p.id === "tax-reduction");
+assert.ok(taxProg, "tax-reduction が存在しません");
+assert.equal(taxProg.data["yatsushiro"]?.status, "pending", "八代市の税減免は準備中 (pending) である必要があります");
+assert.equal(taxProg.data["uto"]?.status, "active", "宇土市の税減免は受付中 (active) である必要があります");
+
+console.log("5市町 災害支援制度まとめ・比較ページ検査（5市町・全20制度・4ステータス・特設リンク・SEO・窓口・精査データ整合性）: すべて合格");

@@ -1,0 +1,954 @@
+{
+  "updatedAt": "2026-09-17",
+  "municipalities": [
+    {
+      "key": "kumamoto",
+      "name": "熊本市",
+      "phone": "096-328-2111",
+      "hours": "平日 8:30〜17:15",
+      "desk": "熊本市 総合被災者支援窓口（各区役所特設窓口）",
+      "guideUrl": "kumamoto-support.html",
+      "officialUrl": "https://www.city.kumamoto.jp/kiji00372110/index.html"
+    },
+    {
+      "key": "uto",
+      "name": "宇土市",
+      "phone": "0964-22-1111",
+      "hours": "9:00〜16:30（土日祝も対応）",
+      "desk": "宇土市 すまい再建支援室（市役所1階 市民交流スペース）",
+      "guideUrl": "uto-housing.html",
+      "officialUrl": "https://www.city.uto.lg.jp/article/view/1018/16522.html"
+    },
+    {
+      "key": "uki",
+      "name": "宇城市",
+      "phone": "0964-27-8002",
+      "hours": "平日 9:00〜16:00",
+      "desk": "宇城市 被災者支援総合窓口（市役所新館1階）",
+      "guideUrl": "uki-support.html",
+      "officialUrl": "https://labs-dr.bosai.go.jp/uki/shien-navi"
+    },
+    {
+      "key": "hikawa",
+      "name": "氷川町",
+      "phone": "0120-091-110",
+      "hours": "平日 8:30〜17:15",
+      "desk": "氷川町 災害専用フリーダイヤル（被災者支援窓口）",
+      "guideUrl": "hikawa-support.html",
+      "officialUrl": "https://hikawa-shien-torisetsu.jp/"
+    },
+    {
+      "key": "yatsushiro",
+      "name": "八代市",
+      "phone": "0965-33-4452",
+      "hours": "平日 9:00〜17:00",
+      "desk": "八代市 災害相談窓口（本庁舎1階 会議室D）",
+      "guideUrl": "yatsushiro-support.html",
+      "officialUrl": "https://www.city.yatsushiro.lg.jp/bousai/"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-housing",
+      "num": 1,
+      "name": "住まいの再建・修理",
+      "shortName": "住まい"
+    },
+    {
+      "id": "cat-money",
+      "num": 2,
+      "name": "生活資金・貸付・弔慰金",
+      "shortName": "資金・貸付"
+    },
+    {
+      "id": "cat-reductions",
+      "num": 3,
+      "name": "税・社会保険・公共料金の減免",
+      "shortName": "減免・猶予"
+    },
+    {
+      "id": "cat-life",
+      "num": 4,
+      "name": "片づけ・生活環境・手続き",
+      "shortName": "生活・環境"
+    },
+    {
+      "id": "cat-business",
+      "num": 5,
+      "name": "事業者・農業者支援",
+      "shortName": "生業再建"
+    }
+  ],
+  "programs": [
+    {
+      "id": "rebuild",
+      "categoryId": "cat-housing",
+      "name": "被災者生活再建支援金",
+      "subName": "基礎＋加算 最大300万円",
+      "lead": "住宅が全壊・解体・大規模半壊・中規模半壊となった世帯へ、基礎支援金（最大100万円）と再建方法に応じた加算支援金（最大200万円）を支給する制度です。",
+      "points": [
+        "支給上限：複数人世帯 最大300万円（単身世帯は3/4の最大225万円）",
+        "主な対象：全壊、解体、長期避難、大規模半壊、中規模半壊",
+        "注意点：半壊での申請は「やむを得ない解体」が要件。居住実態のない大家・空き家所有者は対象外。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "全壊〜中規模半壊。最大300万円。",
+          "link": "kumamoto-support.html#money",
+          "linkText": "熊本市支援ガイド →"
+        },
+        "uto": {
+          "status": "active",
+          "desc": "法・県支援適用。すまい再建支援室受付。",
+          "link": "uto-housing.html",
+          "linkText": "宇土市住まいガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "最大300万円。被災者生活再建支援室受付。",
+          "link": "uki-support.html",
+          "linkText": "宇城市支援ガイド →"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "中規模半壊以上。町福祉課受付。",
+          "link": "hikawa-support.html",
+          "linkText": "氷川町支援一覧 →"
+        },
+        "yatsushiro": {
+          "status": "guide",
+          "desc": "最大300万円。生活援護課受付。",
+          "link": "yatsushiro-rebuild.html",
+          "linkText": "八代市支援金ガイド・診断 →"
+        }
+      }
+    },
+    {
+      "id": "repair",
+      "categoryId": "cat-housing",
+      "name": "住宅の応急修理",
+      "subName": "市直接支払い 最大75.7万円",
+      "lead": "日常生活に必要な居室・屋根・台所・トイレ等の最小限部分を、自治体が修理業者へ直接費用を支払って修理する制度です。申込者への現金給付ではありません。",
+      "points": [
+        "支給上限：半壊以上 最大75万7,000円 / 準半壊 最大36万7,000円（1世帯・税込）",
+        "主な対象：全壊〜準半壊で、修理を行えば居住可能になる住宅（一部損壊は対象外）",
+        "注意点：契約・支払い後の申請は原則不可。建設型仮設とは原則併用不可（みなし仮設は1か月超修理等の要件あり）。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "最大75.7万円（準半壊36.7万円）。営繕課。",
+          "link": "kumamoto-support.html#housing",
+          "linkText": "熊本市ガイド →"
+        },
+        "uto": {
+          "status": "guide",
+          "desc": "最大75.7万円。すまい再建支援室受付。",
+          "link": "uto-repair.html",
+          "linkText": "宇土市応急修理ガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "最大75.7万円。建築課受付。",
+          "link": "uki-support.html",
+          "linkText": "宇城市ガイド →"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "最大75.7万円。建設課受付。",
+          "link": "hikawa-support.html",
+          "linkText": "氷川町ガイド →"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "最大75.7万円。営繕課受付。",
+          "link": "yatsushiro-support.html#repair",
+          "linkText": "八代市ガイド →"
+        }
+      }
+    },
+    {
+      "id": "rental-housing",
+      "categoryId": "cat-housing",
+      "name": "みなし仮設（賃貸型）",
+      "subName": "民間アパート等の家賃支援",
+      "lead": "民間アパート等を自治体が借り上げ、被災世帯へ無償提供（最長2年）。個人で先行契約した場合も一定条件下で遡及適用が認められる場合があります。",
+      "points": [
+        "家賃上限：単身5.5万円、2人6.5万円、3〜4人9.5万円、5人以上13万円（月額）",
+        "主な対象：全壊・大規模半壊・中規模半壊、または半壊でやむを得ず解体する世帯など",
+        "注意点：仲介手数料・保険料等は遡及不可の場合あり。光熱水費・駐車場代は自己負担。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "単身5.5万〜5人以上13万円。最長2年。住環境課。",
+          "link": "kumamoto-support.html#housing",
+          "linkText": "熊本市ガイド →"
+        },
+        "uto": {
+          "status": "guide",
+          "desc": "家賃補助・遡及契約。すまい再建支援室。",
+          "link": "uto-housing.html#rental",
+          "linkText": "宇土市住まいガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "世帯人数別上限。建築課受付。",
+          "link": "uki-support.html",
+          "linkText": "宇城市ガイド →"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "賃貸契約支援。建設課受付。",
+          "link": "hikawa-support.html",
+          "linkText": "氷川町ガイド →"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "最長2年・遡及可能。住宅課受付。",
+          "link": "yatsushiro-support.html#temporary",
+          "linkText": "八代市ガイド →"
+        }
+      }
+    },
+    {
+      "id": "const-housing",
+      "categoryId": "cat-housing",
+      "name": "建設型仮設住宅",
+      "subName": "プレハブ・木造仮設団地",
+      "lead": "自治体が用地を確保して建設するプレハブ仮設団地、または自宅敷地内に設置する仮設住宅です（最長2年）。",
+      "points": [
+        "費用負担：家賃無料（光熱水費等は自己負担）",
+        "対象：全壊等で居住できる住宅がない世帯"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "市営住宅提供・仮設団地順次整備。",
+          "link": "temporary-housing.html",
+          "linkText": "整備状況 →"
+        },
+        "uto": {
+          "status": "active",
+          "desc": "市内仮設団地順次整備・入居相談。",
+          "link": "temporary-housing.html",
+          "linkText": "整備状況 →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "市内仮設団地整備・入居受付中。",
+          "link": "temporary-housing.html",
+          "linkText": "整備状況 →"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "建設型仮設4団地（宮原等）整備。",
+          "link": "temporary-housing.html",
+          "linkText": "整備状況 →"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "第1次受付終了・敷地内仮設9/25締切。",
+          "link": "temporary-housing.html",
+          "linkText": "整備状況 →"
+        }
+      }
+    },
+    {
+      "id": "demolition",
+      "categoryId": "cat-housing",
+      "name": "公費解体・自費解体",
+      "subName": "倒壊家屋等の解体・費用償還",
+      "lead": "倒壊した住宅や危険な家屋を自治体が費用負担して解体撤去（公費解体）、または被災者が自費で解体した費用を一定基準で償還する制度です。",
+      "points": [
+        "対象：り災証明で全壊・大規模半壊等の危険住家",
+        "注意点：自費解体は着工前・解体中・完了後の写真、マニフェスト、領収書等の保管が必須。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "全壊等対象・環境局窓口相談。",
+          "link": "kumamoto-support.html#housing",
+          "linkText": "熊本市ガイド →"
+        },
+        "uto": {
+          "status": "active",
+          "desc": "環境課相談。領収書・写真保存案内。",
+          "link": "uto-housing.html",
+          "linkText": "宇土市住まいガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "環境課受付。解体事前相談。",
+          "link": "uki-support.html",
+          "linkText": "宇城市ガイド →"
+        },
+        "hikawa": {
+          "status": "guide",
+          "desc": "解体手順・償還要件を完全整理。住民生活課。",
+          "link": "hikawa-demolition.html",
+          "linkText": "氷川町公費解体ガイド →"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "環境課事前相談。自費解体写真保存必須。",
+          "link": "yatsushiro-support.html#housing",
+          "linkText": "八代市ガイド →"
+        }
+      }
+    },
+    {
+      "id": "emergency-repair",
+      "categoryId": "cat-housing",
+      "name": "住家の緊急修理",
+      "subName": "ブルーシート展張等 上限5.6万円",
+      "lead": "雨水侵入など被害拡大を防ぐための応急処置費用を自治体が負担（上限約5万6,400円）。",
+      "points": [
+        "上限額：56,400円（自治体直接払いまたは施工支援）",
+        "内容：屋根のブルーシート展張、開口部ふさぎ等の緊急応急処置"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "上限5万6,400円。雨漏り防止処置。",
+          "link": "kumamoto-support.html#housing",
+          "linkText": "熊本市ガイド →"
+        },
+        "uto": {
+          "status": "active",
+          "desc": "ブルーシート配布・応急処置相談。",
+          "link": "uto-housing.html",
+          "linkText": "宇土市住まいガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "雨水侵入防止緊急処置対応。建築課。",
+          "link": "uki-support.html",
+          "linkText": "宇城市ガイド →"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "建設課応急処置・シート対応。",
+          "link": "hikawa-support.html",
+          "linkText": "氷川町ガイド →"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "上限5万6,400円。9月27日完了報告期限。",
+          "link": "yatsushiro-support.html#deadlines",
+          "linkText": "八代市ガイド →"
+        }
+      }
+    },
+    {
+      "id": "disaster-loan",
+      "categoryId": "cat-money",
+      "name": "災害援護資金貸付",
+      "subName": "最大150万〜350万円・低利/無利子",
+      "lead": "世帯主の負傷や住居・家財の一定以上の損害を受けた世帯に対する公的融資制度（所得制限あり）。年利1%（保証人を立てる場合は無利子）、据置最長5年。",
+      "points": [
+        "限度額：家財被害のみ150万円 / 住家被害250万〜350万円（世帯主負傷加算あり）",
+        "所得制限：世帯人数により基準額あり（住居滅失時は特別控除あり）",
+        "注意点：返済義務のある貸付制度。八代市は2026年11月2日申請期限。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "所得制限あり・最大350万円。健康福祉局。",
+          "link": "kumamoto-support.html#money",
+          "linkText": "熊本市ガイド →"
+        },
+        "uto": {
+          "status": "active",
+          "desc": "福祉課にて相談・申請受付中。",
+          "link": "uto-housing.html",
+          "linkText": "宇土市住まいガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "社会福祉課にて相談・申請受付中。",
+          "link": "uki-support.html",
+          "linkText": "宇城市ガイド →"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "町福祉課にて相談・申請受付中。",
+          "link": "hikawa-support.html",
+          "linkText": "氷川町ガイド →"
+        },
+        "yatsushiro": {
+          "status": "guide",
+          "desc": "期限11/2。健康福祉政策課。",
+          "link": "yatsushiro-loan.html",
+          "linkText": "八代市援護資金ガイド・診断 →"
+        }
+      }
+    },
+    {
+      "id": "emergency-small-loan",
+      "categoryId": "cat-money",
+      "name": "緊急小口資金特例貸付",
+      "subName": "社協窓口・10万〜20万円無利子",
+      "lead": "被災により当面の生活費を必要とする世帯に、迅速に無利子で生活費を貸し付ける制度です（据置期間1年、返済期間2年以内）。",
+      "points": [
+        "貸付限度額：原則10万円（全壊や負傷等の特例条件を満たす場合は最大20万円）",
+        "条件：無利子・保証人不要。各市町社会福祉協議会が窓口。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "熊本市社協受付。原則10万（特例20万）。",
+          "link": "kumamoto-support.html#money",
+          "linkText": "熊本市ガイド →"
+        },
+        "uto": {
+          "status": "active",
+          "desc": "宇土市社協受付（0964-23-3776）。",
+          "link": "uto-housing.html",
+          "linkText": "宇土市住まいガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "宇城市社協受付（0964-32-1335）。",
+          "link": "uki-support.html",
+          "linkText": "宇城市ガイド →"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "氷川町社協受付（0965-62-4111）。",
+          "link": "hikawa-support.html",
+          "linkText": "氷川町ガイド →"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "八代市社協受付（0965-37-6001）。",
+          "link": "yatsushiro-support.html#money",
+          "linkText": "八代市ガイド →"
+        }
+      }
+    },
+    {
+      "id": "condolence",
+      "categoryId": "cat-money",
+      "name": "災害弔慰金・障害見舞金",
+      "subName": "死亡最大500万/障害最大250万",
+      "lead": "地震が原因で死亡された方のご遺族への弔慰金、重度の障害を負われた方への見舞金（法律に基づく給付金）です。",
+      "points": [
+        "災害弔慰金：生計維持者死亡 500万円 / その他遺族 250万円",
+        "障害見舞金：生計維持者重度障害 250万円 / その他 125万円"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "国基準同額。各区役所保護課。",
+          "link": "kumamoto-support.html#money",
+          "linkText": "熊本市ガイド →"
+        },
+        "uto": {
+          "status": "active",
+          "desc": "国基準同額。福祉課窓口。",
+          "link": "uto-housing.html",
+          "linkText": "宇土市住まいガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "国基準同額。社会福祉課窓口。",
+          "link": "uki-support.html",
+          "linkText": "宇城市ガイド →"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "国基準同額。町福祉課窓口。",
+          "link": "hikawa-support.html",
+          "linkText": "氷川町ガイド →"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "国基準同額＋重傷見舞金（3〜5万円）。",
+          "link": "yatsushiro-support.html#money",
+          "linkText": "八代市ガイド →"
+        }
+      }
+    },
+    {
+      "id": "local-condolence",
+      "categoryId": "cat-money",
+      "name": "市町独自の見舞金",
+      "subName": "自治体単独条例の給付",
+      "lead": "国の法制度とは別に、市町が独自条例等に基づいて被災世帯へ給付する見舞金です。",
+      "points": [
+        "熊本市：全壊・大規模半壊等に対する市独自見舞金を支給受付中。",
+        "八代市：全治1か月以上の重傷者に市独自見舞金（3万〜5万円）を支給。",
+        "宇城市：市独自の災害見舞金制度（被災判定別）を実施。",
+        "宇土市・氷川町：単独の見舞金給付条例の公表はなく、国の災害弔慰金や義援金配分等で対応。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "熊本市被災者見舞金（全壊等独自給付）。",
+          "link": "https://www.city.kumamoto.jp/kiji00372220/index.html",
+          "linkText": "熊本市公式 ↗"
+        },
+        "uto": {
+          "status": "na",
+          "desc": "単独給付制度なし（弔慰金・義援金で対応）。",
+          "link": "uto-housing.html",
+          "linkText": "宇土市住まいガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "市独自災害見舞金制度を実施。",
+          "link": "uki-support.html",
+          "linkText": "宇城市ガイド →"
+        },
+        "hikawa": {
+          "status": "na",
+          "desc": "単独給付制度なし（弔慰金・義援金で対応）。",
+          "link": "hikawa-support.html",
+          "linkText": "氷川町ガイド →"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "重傷見舞金（全治1か月以上に3万〜5万）。",
+          "link": "https://www.city.yatsushiro.lg.jp/kiji00326948/index.html",
+          "linkText": "八代市公式 ↗"
+        }
+      }
+    },
+    {
+      "id": "insurance-reduction",
+      "categoryId": "cat-reductions",
+      "name": "国保税・後期高齢・介護保険料",
+      "subName": "全壊全額・半壊1/2減免など",
+      "lead": "住家が全壊・半壊した場合や、生計維持者の死亡・失職・大幅な収入減少があった世帯の保険料を免除・減額します。",
+      "points": [
+        "減免基準：全壊 全額免除 / 大規模半壊・半壊 1/2減免など",
+        "申請の要否：八代市など住家被害分は罹災証明情報から自動適用（申請不要）の自治体もあります。収入減による減免は申請が必要です。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "全壊全額、半壊1/2。税務・保険課。",
+          "link": "kumamoto-support.html#reductions",
+          "linkText": "熊本市ガイド →"
+        },
+        "uto": {
+          "status": "active",
+          "desc": "住家判定・所得基準減免。税務課等。",
+          "link": "uto-housing.html",
+          "linkText": "宇土市住まいガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "判定に応じた減免実施。税務課。",
+          "link": "uki-support.html",
+          "linkText": "宇城市ガイド →"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "住民生活課・福祉課にて減免。",
+          "link": "hikawa-support.html",
+          "linkText": "氷川町ガイド →"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "住家被害分は申請不要で自動適用。",
+          "link": "yatsushiro-support.html#reduction",
+          "linkText": "八代市ガイド →"
+        }
+      }
+    },
+    {
+      "id": "medical-exemption",
+      "categoryId": "cat-reductions",
+      "name": "医療機関・介護窓口負担免除",
+      "subName": "全半壊等・窓口申立てで免除",
+      "lead": "住家が全半壊した方や生計維持者の失職等の被保険者は、医療機関や介護事業所の窓口で申立てを行うことで、自己負担分が免除されます（2026年11月末利用分までなど）。",
+      "points": [
+        "免除内容：保険診療の窓口負担金、介護保険サービス利用料（入院時の食費・差額ベッド代は対象外）",
+        "受診方法：保険証が手元になくても、氏名・生年月日・住所・連絡先を窓口で申し立てることで受診可能。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "医療・介護・障害福祉利用料免除実施中。",
+          "link": "kumamoto-support.html#reductions",
+          "linkText": "熊本市ガイド →"
+        },
+        "uto": {
+          "status": "active",
+          "desc": "窓口申立てにより負担金猶予・免除。",
+          "link": "uto-housing.html",
+          "linkText": "宇土市住まいガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "国保・後期高齢窓口負担免除案内公開。",
+          "link": "https://www.city.uki.kumamoto.jp/iryo_fukushi/hoken/kokuho/2616186",
+          "linkText": "宇城市公式 ↗"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "障害福祉・介護等サービス利用料免除。",
+          "link": "https://www.town.hikawa.kumamoto.jp/kiji0036802/index.html",
+          "linkText": "氷川町公式 ↗"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "11月利用分まで窓口申立てで免除。",
+          "link": "yatsushiro-support.html#medical",
+          "linkText": "八代市ガイド →"
+        }
+      }
+    },
+    {
+      "id": "tax-reduction",
+      "categoryId": "cat-reductions",
+      "name": "市町民税・固定資産税の減免",
+      "subName": "家屋被害や所得減少による措置",
+      "lead": "家屋被害の程度や納税者の所得減少に応じて、住民税や固定資産税の減免、納税の猶予が受けられます。",
+      "points": [
+        "熊本市・宇土市・宇城市・氷川町：家屋被害判定に応じた減免申請・徴収猶予を受付中。",
+        "八代市：公式ガイド第6版時点で市県民税・固定資産税は受付準備中（各課にて事前相談対応）。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "固定資産税減免・徴収猶予受付中。",
+          "link": "https://www.city.kumamoto.jp/kiji00328060/index.html",
+          "linkText": "熊本市公式 ↗"
+        },
+        "uto": {
+          "status": "active",
+          "desc": "個人住民税・固定資産税減免受付中。税務課。",
+          "link": "uto-housing.html",
+          "linkText": "宇土市住まいガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "固定資産税等の減免・猶予受付中。税務課。",
+          "link": "uki-support.html",
+          "linkText": "宇城市ガイド →"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "町税減免・徴収猶予受付中。税務係。",
+          "link": "hikawa-support.html",
+          "linkText": "氷川町ガイド →"
+        },
+        "yatsushiro": {
+          "status": "pending",
+          "desc": "受付準備中（市民税課・資産税課で事前相談）。",
+          "link": "yatsushiro-support.html#reduction",
+          "linkText": "八代市ガイド →"
+        }
+      }
+    },
+    {
+      "id": "water-reduction",
+      "categoryId": "cat-reductions",
+      "name": "水道・下水道料金の減免",
+      "subName": "被災月基本料や超過分減免",
+      "lead": "断水被害や漏水、被災世帯の経済負担を軽減するため、上下水道料金の基本料金や特定月使用分を免除・減額します。",
+      "points": [
+        "八代市：水道7・8月分全額免除、下水道減免（申請不要自動適用）",
+        "宇土市：8月請求延期・9月請求分を徴収免除",
+        "熊本市・宇城市・氷川町：被災世帯等の減免受付中"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "被災・断水地域等の基本料金減免。",
+          "link": "kumamoto-support.html#reductions",
+          "linkText": "熊本市ガイド →"
+        },
+        "uto": {
+          "status": "active",
+          "desc": "9月請求分徴収免除。上下水道課。",
+          "link": "uto-housing.html",
+          "linkText": "宇土市住まいガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "水道・下水道料金の減免措置案内。",
+          "link": "https://www.city.uki.kumamoto.jp/kurashi/sumai/jogesuido/2622095",
+          "linkText": "宇城市公式 ↗"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "下水道使用料の減免受付。",
+          "link": "https://www.town.hikawa.kumamoto.jp/kiji0036798/index.html",
+          "linkText": "氷川町公式 ↗"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "水道7・8月分全額免除（自動適用）。",
+          "link": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326905/index.html",
+          "linkText": "八代市公式 ↗"
+        }
+      }
+    },
+    {
+      "id": "waste",
+      "categoryId": "cat-life",
+      "name": "災害ごみの無料受入",
+      "subName": "仮置場持込・分別徹底",
+      "lead": "地震で壊れた家財や瓦礫を、自治体の指定仮置場へ無料で持ち込める制度です。適切な分別と身分証明書が必要です。",
+      "points": [
+        "受入期間：八代市は12月末まで、宇土市・宇城市は9月末まで等、自治体ごとに設定。",
+        "注意点：分別ルールの遵守。代理搬入時は委任状が必要な自治体あり。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "環境工場・仮置場受入。戸別収集相談あり。",
+          "link": "kumamoto-support.html#life",
+          "linkText": "熊本市ガイド →"
+        },
+        "uto": {
+          "status": "guide",
+          "desc": "入場券制・分別徹底。CSネットワーク等。",
+          "link": "uto-waste.html",
+          "linkText": "宇土市災害ごみガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "臨時仮置場にて分別受入れ中。衛生環境課。",
+          "link": "uki-support.html",
+          "linkText": "宇城市ガイド →"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "竜北グラウンド駐車場にて受入れ中。",
+          "link": "hikawa-support.html",
+          "linkText": "氷川町ガイド →"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "市内3仮置場で12月末まで受入。環境課。",
+          "link": "yatsushiro-support.html#life",
+          "linkText": "八代市ガイド →"
+        }
+      }
+    },
+    {
+      "id": "well-septic",
+      "categoryId": "cat-life",
+      "name": "被災井戸・浄化槽補助",
+      "subName": "井戸調査修理・浄化槽復旧",
+      "lead": "飲用水を得る唯一の井戸が被災した世帯への原因調査（洗浄無料）や応急修理補助、被災浄化槽の復旧補助です。熊本県と連携し、重点5市町すべてで実施されています。",
+      "points": [
+        "井戸原因調査：飲用水の井戸が濁水・出水不能となった世帯（自己負担なし）",
+        "井戸修理補助：洗浄で回復しない場合等の修理・掘り直し支援（八代市等最大75.7万円）",
+        "合併浄化槽：被災した浄化槽の設置・更新補助（八代市最大54.8万円等）"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "住宅用井戸被災者への飲用水確保支援受付中。",
+          "link": "https://www.city.kumamoto.jp/kiji00372691/index.html",
+          "linkText": "熊本市公式 ↗"
+        },
+        "uto": {
+          "status": "active",
+          "desc": "被災井戸の原因調査等を受付中。環境課。",
+          "link": "https://www.city.uto.lg.jp/article/view/1310/16783.html",
+          "linkText": "宇土市公式 ↗"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "井戸原因調査・応急修理を受付中。浄化槽補助あり。",
+          "link": "https://www.city.uki.kumamoto.jp/kurashi/sonota_kurashi/2634890",
+          "linkText": "宇城市公式 ↗"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "井戸原因調査・応急修理を受付中。町民課。",
+          "link": "https://www.town.hikawa.kumamoto.jp/kiji0036836/index.html",
+          "linkText": "氷川町公式 ↗"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "井戸調査無料・修理最大75.7万／浄化槽補助あり。",
+          "link": "https://www.city.yatsushiro.lg.jp/kiji00327047/index.html",
+          "linkText": "八代市公式 ↗"
+        }
+      }
+    },
+    {
+      "id": "hotel-bath",
+      "categoryId": "cat-life",
+      "name": "ホテル避難・入浴支援",
+      "subName": "宿泊費公費負担・公衆浴場無料",
+      "lead": "避難所での生活が困難な高齢者・妊産婦等のホテル避難（宿泊費公費負担）や、自宅浴室被災者向けの公衆浴場無料開放です。",
+      "points": [
+        "ホテル避難：宿泊料公費負担（食費等は自己負担）。熊本県ホテル避難コールセンター（0120-325-327）等",
+        "入浴支援：指定の協力公衆浴場・温浴施設を無料で利用可能。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "二次避難宿泊施設受付・公衆浴場支援。",
+          "link": "kumamoto-support.html#life",
+          "linkText": "熊本市ガイド →"
+        },
+        "uto": {
+          "status": "active",
+          "desc": "ホテル等宿泊支援・無料入浴支援案内。",
+          "link": "uto-housing.html",
+          "linkText": "宇土市住まいガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "ホテル避難・市内温泉入浴支援。",
+          "link": "uki-support.html",
+          "linkText": "宇城市ガイド →"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "ホテル等避難・竜北福祉センター等入浴支援。",
+          "link": "https://www.town.hikawa.kumamoto.jp/kiji0036760/index.html",
+          "linkText": "氷川町公式 ↗"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "宿泊費公費ホテル避難・市内公衆浴場無料化。",
+          "link": "yatsushiro-support.html#life",
+          "linkText": "八代市ガイド →"
+        }
+      }
+    },
+    {
+      "id": "certificate",
+      "categoryId": "cat-life",
+      "name": "り災証明書・被災証明書",
+      "subName": "住家被害認定・各種減免の入口",
+      "lead": "支援金・応急修理・仮設住宅・減免など、あらゆる支援制度の入口となる最重要証明書です。住家には「り災証明書」、非住家・家財・車には「被災証明書」が発行されます。",
+      "points": [
+        "最重要注意点：片づけ・解体・修理を行う前に、必ず建物全景と損壊箇所の写真を複数角度から撮影してください。",
+        "申請方法：各自治体窓口のほか、マイナポータル「ぴったりサービス」でのオンライン申請が全5市町で利用可能です。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "guide",
+          "desc": "各区窓口・オンライン。発行手数料免除。",
+          "link": "risai-certificate.html",
+          "linkText": "り災証明完全ガイド →"
+        },
+        "uto": {
+          "status": "guide",
+          "desc": "市民交流スペース特設窓口・オンライン対応。",
+          "link": "risai-certificate.html",
+          "linkText": "完全ガイド →"
+        },
+        "uki": {
+          "status": "guide",
+          "desc": "新館1階総合窓口・オンライン。「うき支援ナビ」連携。",
+          "link": "risai-certificate.html",
+          "linkText": "完全ガイド →"
+        },
+        "hikawa": {
+          "status": "guide",
+          "desc": "役場本庁窓口・オンライン申請対応。",
+          "link": "risai-certificate.html",
+          "linkText": "完全ガイド →"
+        },
+        "yatsushiro": {
+          "status": "guide",
+          "desc": "本庁・各支所窓口・オンライン。行政書士支援あり。",
+          "link": "risai-certificate.html",
+          "linkText": "完全ガイド →"
+        }
+      }
+    },
+    {
+      "id": "jizokuka",
+      "categoryId": "cat-business",
+      "name": "小規模持続化補助金（災害枠）",
+      "subName": "国事業・最大100万/200万円",
+      "lead": "被災した小規模事業者の事業再建・販路開拓を国が手厚く支援する補助金です（商工会・商工会議所が申請支援）。",
+      "points": [
+        "補助上限：直接被害 最大200万円（定額10/10措置あり） / 間接被害（売上減等） 最大100万円（補助率2/3）",
+        "対象：商業・サービス業（宿泊・娯楽除く）常時従業員5人以下、製造業その他20人以下の小規模事業者",
+        "申請先：管轄の商工会または商工会議所で事業支援計画書（様式4）の発行を受けて電子申請。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "熊本商工会議所・市内各商工会で相談受付。",
+          "link": "kumamoto-support.html#business",
+          "linkText": "熊本市ガイド →"
+        },
+        "uto": {
+          "status": "guide",
+          "desc": "宇土市商工会。受給額診断・締切完全解説。",
+          "link": "uto-jizokuka.html",
+          "linkText": "持続化補助金特設ガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "宇城広域商工会にて申請・相談受付中。",
+          "link": "uki-support.html",
+          "linkText": "宇城市ガイド →"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "氷川町商工会にて申請・相談受付中。",
+          "link": "https://www.town.hikawa.kumamoto.jp/kiji0036804/index.html",
+          "linkText": "氷川町公式 ↗"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "八代商工会議所・八代市商工会にて受付中。",
+          "link": "yatsushiro-support.html#business",
+          "linkText": "八代市ガイド →"
+        }
+      }
+    },
+    {
+      "id": "agriculture",
+      "categoryId": "cat-business",
+      "name": "農地・農業機械施設の復旧",
+      "subName": "農地50%補助・機械施設等",
+      "lead": "被災した営農用農地の復旧事業（原則国50%等）、農業用ハウスやトラクター等の機械・施設の再取得・修繕支援です。",
+      "points": [
+        "農地災害復旧事業：1か所40万円以上目安。国50%・申請者50%",
+        "農業機械・施設：再取得・修繕費用支援（国1/2以内、県市上乗せ等）",
+        "注意点：工事着手・片づけ前に必ず被害写真を撮影・保存すること。"
+      ],
+      "data": {
+        "kumamoto": {
+          "status": "active",
+          "desc": "農地復旧・農業機械等の被害相談窓口開設。",
+          "link": "kumamoto-support.html#business",
+          "linkText": "熊本市ガイド →"
+        },
+        "uto": {
+          "status": "active",
+          "desc": "農林水産課。被害写真の記録と復旧事業相談。",
+          "link": "uto-housing.html",
+          "linkText": "宇土市住まいガイド →"
+        },
+        "uki": {
+          "status": "active",
+          "desc": "農政課にて被災状況の把握と復旧相談。",
+          "link": "uki-support.html",
+          "linkText": "宇城市ガイド →"
+        },
+        "hikawa": {
+          "status": "active",
+          "desc": "農林振興課にて農業施設・農地被害の記録受付。",
+          "link": "https://www.town.hikawa.kumamoto.jp/kiji0036411/index.html",
+          "linkText": "氷川町公式 ↗"
+        },
+        "yatsushiro": {
+          "status": "active",
+          "desc": "農地復旧（国50%）、機械施設再取得。",
+          "link": "yatsushiro-support.html#agri",
+          "linkText": "八代市ガイド →"
+        }
+      }
+    }
+  ]
+}

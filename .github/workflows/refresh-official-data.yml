@@ -196,6 +196,7 @@ jobs:
             data/generated/official-topics.js \
             data/generated/volunteer-center-updates.js \
             data/generated/shelters-data.js \
+            sources/priority-support-matrix.json \
             sources/official/hq-damage \
             sources/official/hq-index.json \
             sources/official/municipality-hq-index.json \
@@ -255,7 +256,7 @@ jobs:
               generated_only=true
               while IFS= read -r conflict; do
                 case "${conflict}" in
-                  index.html|sitemap.xml|public-data/site-search-index.json|data/generated/home-topics.js)
+                  index.html|sitemap.xml|public-data/site-search-index.json|data/generated/home-topics.js|priority-support-summary.html|sources/priority-support-matrix.json)
                     ;;
                   *)
                     generated_only=false
@@ -275,7 +276,7 @@ jobs:
               done <<< "${conflicts}"
               GIT_EDITOR=true git rebase --continue
               npm run preflight
-              git add '*.html' sitemap.xml public-data/site-search-index.json data/generated/home-topics.js
+              git add '*.html' sitemap.xml public-data/site-search-index.json data/generated/home-topics.js sources/priority-support-matrix.json
               git add -u
               git commit --amend --no-edit
             fi
