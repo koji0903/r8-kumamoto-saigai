@@ -24,64 +24,203 @@
   color: var(--j-teal);
 }
 
+/* ---- ヒーローセクション専用スタイル（高コントラスト・可読性重視） ---- */
+.jizokuka-page .jizokuka-hero {
+  position: relative;
+  display: block;
+  background: radial-gradient(circle at 85% 15%, #ccfbf1 0%, transparent 45%),
+              linear-gradient(135deg, #ffffff 0%, #f0fdfa 45%, #fffbeb 100%);
+  border-bottom: 2px solid var(--j-teal-border);
+  padding: 64px max(8vw, 32px);
+}
+
+.jizokuka-page .jizokuka-hero:after {
+  display: none; /* uto-waste の突起バッジを非表示にしてすっきり */
+}
+
+.jizokuka-page .jizokuka-hero .waste-hero-inner {
+  max-width: 960px;
+}
+
+.jizokuka-page .jizokuka-hero .waste-eyebrow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--j-teal-dark);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.jizokuka-page .jizokuka-hero .waste-eyebrow span {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  background: var(--j-teal);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 4px rgba(15, 118, 110, 0.2);
+}
+
+.jizokuka-page .jizokuka-hero h1 {
+  margin: 10px 0 20px;
+  font-size: clamp(36px, 5.5vw, 64px);
+  font-weight: 900;
+  line-height: 1.18;
+  color: #0f172a; /* 濃いインク色で抜群の視認性 */
+  letter-spacing: -0.03em;
+  text-shadow: none; /* 暗い文字に対する白い影のぼやけを解消 */
+}
+
+.jizokuka-page .jizokuka-hero h1 small {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--j-teal-dark);
+  font-size: 0.38em;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.jizokuka-page .jizokuka-hero h1 span {
+  display: inline-block;
+  color: var(--j-teal);
+  background: linear-gradient(transparent 65%, #fef08a 65%);
+  padding: 0 6px;
+  border-radius: 2px;
+}
+
+.jizokuka-page .jizokuka-hero .waste-lead {
+  max-width: 860px;
+  margin: 0;
+  color: #1e293b; /* 濃いスレート色で最高水準のコントラスト比 */
+  font-size: 17px;
+  line-height: 1.85;
+  font-weight: 500;
+}
+
+.jizokuka-page .jizokuka-hero .waste-lead b {
+  color: var(--j-teal-dark);
+  font-weight: 800;
+  background: rgba(15, 118, 110, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.jizokuka-page .jizokuka-hero .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.jizokuka-page .jizokuka-hero .waste-button {
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.jizokuka-page .jizokuka-hero .waste-button.primary {
+  background: #ea580c;
+  border: 2px solid #ea580c;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(234, 88, 12, 0.25);
+}
+
+.jizokuka-page .jizokuka-hero .waste-button.primary:hover {
+  background: #c2410c;
+  border-color: #c2410c;
+  transform: translateY(-1px);
+}
+
+.jizokuka-page .jizokuka-hero .waste-button.secondary {
+  background: #fff;
+  border: 2px solid var(--j-teal);
+  color: var(--j-teal-dark);
+  box-shadow: 0 2px 4px rgba(15, 118, 110, 0.1);
+}
+
+.jizokuka-page .jizokuka-hero .waste-button.secondary:hover {
+  background: #f0fdfa;
+  border-color: var(--j-teal-dark);
+}
+
 /* ---- ヒーローの要点カード ---- */
 .jizokuka-keyfacts {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.3fr;
-  gap: 14px;
-  max-width: 900px;
-  margin: 28px 0 0;
+  grid-template-columns: 1fr 1fr 1.35fr;
+  gap: 16px;
+  max-width: 960px;
+  margin: 32px 0 0;
 }
 
 .jizokuka-keyfacts div {
-  padding: 16px 20px;
+  padding: 18px 22px;
   border: 3px solid var(--j-teal);
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 4px 4px 0 var(--j-teal-border);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 6px 6px 0 var(--j-teal-border);
+  transition: transform 0.15s ease;
 }
 
 .jizokuka-keyfacts dt {
-  color: var(--j-muted);
+  color: #475569;
   font-size: 13px;
   font-weight: 800;
+  line-height: 1.4;
 }
 
 .jizokuka-keyfacts dd {
-  margin: 6px 0 0;
-  font-size: 24px;
-  font-weight: 900;
+  margin: 8px 0 0;
+  font-size: 26px;
+  font-weight: 950;
   white-space: nowrap;
+  color: var(--j-teal-dark);
 }
 
 .jizokuka-keyfacts .keyfact-highlight {
   border-color: var(--j-orange);
-  background: var(--j-orange-light);
-  box-shadow: 4px 4px 0 var(--j-orange-border);
+  background: #fffaf5;
+  box-shadow: 6px 6px 0 var(--j-orange-border);
+}
+
+.jizokuka-keyfacts .keyfact-highlight dt {
+  color: #9a3412;
 }
 
 .jizokuka-keyfacts .keyfact-highlight dd {
-  color: var(--j-orange);
+  color: #ea580c;
 }
 
 .jizokuka-keyfacts .keyfact-deadline {
-  border-color: var(--j-blue);
-  background: var(--j-blue-light);
-  box-shadow: 4px 4px 0 var(--j-blue-border);
+  border-color: #2563eb;
+  background: #f8faff;
+  box-shadow: 6px 6px 0 #bfdbfe;
+}
+
+.jizokuka-keyfacts .keyfact-deadline dt {
+  color: #1e40af;
 }
 
 .jizokuka-keyfacts .keyfact-deadline dd {
-  font-size: 18px;
-  line-height: 1.35;
-  color: var(--j-blue);
+  font-size: 20px;
+  line-height: 1.3;
+  color: #1d4ed8;
 }
 
 .jizokuka-keyfacts .keyfact-deadline small {
   display: block;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
   color: #dc2626;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 /* ---- 申請前の3つの約束リスト ---- */
