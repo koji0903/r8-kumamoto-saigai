@@ -78,20 +78,65 @@ function canonicalFor(file) {
   return file === "index.html" ? `${origin}/` : `${origin}/${file}`;
 }
 
-function lastModified(file) {
+const globalAssets = new Set([
+  "styles.css",
+  "design-system.css",
+  "org-site.css",
+  "org-site.js",
+  "site-phase.js",
+  "favicon.png",
+  "apple-touch-icon.png",
+  "manifest.webmanifest",
+  "vendor/leaflet/leaflet.js",
+  "vendor/leaflet/leaflet.css"
+]);
+
+const gitDateCache = new Map();
+
+function getFileDate(relPath) {
+  if (gitDateCache.has(relPath)) return gitDateCache.get(relPath);
   try {
-    const dirty = execFileSync("git", ["status", "--porcelain", "--", file], { cwd: root, encoding: "utf8" }).trim();
-    if (dirty) return todayInJapan;
-    return execFileSync("git", ["log", "-1", "--format=%cs", "--", file], { cwd: root, encoding: "utf8" }).trim();
+    const dirty = execFileSync("git", ["status", "--porcelain", "--", relPath], { cwd: root, encoding: "utf8" }).trim();
+    if (dirty) {
+      gitDateCache.set(relPath, todayInJapan);
+      return todayInJapan;
+    }
+    const d = execFileSync("git", ["log", "-1", "--format=%cs", "--", relPath], { cwd: root, encoding: "utf8" }).trim();
+    gitDateCache.set(relPath, d);
+    return d;
   } catch {
+    gitDateCache.set(relPath, "");
     return "";
   }
 }
 
+function lastModified(file, html = "") {
+  const deps = [file];
+  const scripts = [...html.matchAll(/<script[^>]+src=["\x27]([^"\x27?#]+)/gi)].map(m => m[1]);
+  const links = [...html.matchAll(/<link[^>]+(?:rel=["\x27]stylesheet["\x27][^>]+href=["\x27]|href=["\x27][^"\x27]+["\x27][^>]+rel=["\x27]stylesheet["\x27])([^"\x27?#]+)/gi)].map(m => m[1]);
+
+  for (const item of [...scripts, ...links]) {
+    if (globalAssets.has(item)) continue;
+    if (item.startsWith("http://") || item.startsWith("https://") || item.startsWith("//")) continue;
+    const rel = item.startsWith("/") ? item.slice(1) : item;
+    if (globalAssets.has(rel)) continue;
+    deps.push(rel);
+  }
+
+  let latestDate = "";
+  for (const dep of deps) {
+    const d = getFileDate(dep);
+    if (d > latestDate) latestDate = d;
+  }
+  return latestDate || todayInJapan;
+}
+
+const htmlContents = new Map();
 const files = (await readdir(root)).filter(file => file.endsWith(".html") && !/^google[\w-]+\.html$/i.test(file));
 for (const file of files) {
   const target = path.join(root, file);
   const original = await readFile(target, "utf8");
+  htmlContents.set(file, original);
   let html = original;
   const title = html.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim();
   const description = html.match(/<meta\s+name="description"\s+content="([^"]+)"/i)?.[1]?.trim();
@@ -124,7 +169,7 @@ const sitemapFiles = files.filter(file => !excluded.has(file)).sort((a, b) => {
   return a.localeCompare(b, "en");
 });
 const urls = sitemapFiles.map(file => {
-  const date = lastModified(file);
+  const date = lastModified(file, htmlContents.get(file));
   return `  <url>\n    <loc>${canonicalFor(file)}</loc>${date ? `\n    <lastmod>${date}</lastmod>` : ""}\n  </url>`;
 }).join("\n");
 const sitemapPath = path.join(root, "sitemap.xml");
