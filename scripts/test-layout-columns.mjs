@@ -175,4 +175,12 @@ for (const name of ["home-redesign.css", "timeline-redesign.css", "navigation-en
     `styles.css: ${name} の @import に版が必要です`);
 }
 
-console.log(`レイアウト: 可変列${FLEXIBLE.length}箇所 / 2カラム前提とHTMLの一致 / 列指定の適用幅 / 地色と同色の文字の防止 / 印と文字の重なり / 二重枠の防止 / パネルを閉じられること / @importの版 OK`);
+// ---- 9. モバイル情報パスの矢印位置 -------------------------------------------
+// .information-path のスマホ幅で、矢印（i）が rotate(90deg) される際、
+// transform-origin が center でないと、左端に張り付いてボタンや枠外に重なる。
+assert.match(orgCss, /\.information-path i\{[^}]*transform-origin:center/,
+  "org-site.css: モバイル情報パスの矢印は transform-origin:center にして中央で回転させてください");
+assert.match(orgCss, /\.home-motion-ready \.information-path i\{[^}]*transform-origin:center/,
+  "org-site.css: モバイル情報パスのアニメーション時も transform-origin:center が必要です");
+
+console.log(`レイアウト: 可変列${FLEXIBLE.length}箇所 / 2カラム前提とHTMLの一致 / 列指定の適用幅 / 地色と同色の文字の防止 / 印と文字の重なり / 二重枠の防止 / パネルを閉じられること / @importの版 / 情報パス矢印位置 OK`);
