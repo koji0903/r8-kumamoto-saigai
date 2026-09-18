@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-18T21:15:42.657Z",
-  "officialCheckedAt": "9/19 06:15",
+  "retrievedAt": "2026-09-18T23:40:57.717Z",
+  "officialCheckedAt": "9/19 08:40",
   "siteTopics": [
     {
       "date": "2026-09-19",
@@ -68,11 +68,11 @@ window.HOME_TOPICS = {
       "municipality": "八代市"
     },
     {
-      "title": "令和8年熊本地震の罹災証明・被災証明・罹災届出証明について",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2515854",
+      "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
       "date": "2026-09-19",
       "time": null,
-      "category": "住まい・証明",
+      "category": "ごみ・生活",
       "municipality": "宇城市"
     },
     {
