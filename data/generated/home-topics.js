@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-18T11:42:51.786Z",
-  "officialCheckedAt": "9/18 20:42",
+  "retrievedAt": "2026-09-18T16:49:16.674Z",
+  "officialCheckedAt": "9/19 01:49",
   "siteTopics": [
     {
       "date": "2026-09-17",
@@ -60,10 +60,18 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震の罹災証明・被災証明・罹災届出証明について",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2515854",
+      "date": "2026-09-19",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "宇城市"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-09-18",
-      "time": "20:11",
+      "time": "22:01",
       "category": "その他",
       "municipality": "八代市"
     },
@@ -98,14 +106,6 @@ window.HOME_TOPICS = {
       "time": "16:25",
       "category": "その他",
       "municipality": "天草市"
-    },
-    {
-      "title": "2026年9月18日 令和8年熊本地震 関連情報 （9月18日16時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-09-18",
-      "time": "16:00",
-      "category": "その他",
-      "municipality": "宇城市"
     },
     {
       "title": "令和８年熊本地震に関する支援等",

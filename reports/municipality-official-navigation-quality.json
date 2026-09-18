@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-18T11:25:55.324Z",
+  "generatedAt": "2026-09-18T16:31:36.370Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 835,
-  "displayCandidateCount": 571,
+  "inputCount": 836,
+  "displayCandidateCount": 572,
   "classifiedPageCount": 674,
   "categoryReport": {
     "home": {
@@ -13,9 +13,9 @@
       "low": 45
     },
     "money": {
-      "total": 213,
+      "total": 214,
       "high": 43,
-      "medium": 53,
+      "medium": 54,
       "low": 117
     },
     "documents": {
@@ -31,26 +31,26 @@
       "low": 0
     },
     "family_education": {
-      "total": 81,
+      "total": 80,
       "high": 9,
       "medium": 29,
-      "low": 43
+      "low": 42
     },
     "work_business": {
-      "total": 60,
+      "total": 59,
       "high": 16,
-      "medium": 44,
+      "medium": 43,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 26,
-      "high": 9,
+      "total": 25,
+      "high": 8,
       "medium": 17,
       "low": 0
     },
     "daily_life": {
-      "total": 198,
-      "high": 61,
+      "total": 200,
+      "high": 63,
       "medium": 137,
       "low": 0
     }
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 110,
-      "displayCandidates": 91,
+      "classified": 111,
+      "displayCandidates": 92,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -147,7 +147,7 @@
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 47,
+      "classified": 46,
       "displayCandidates": 42,
       "fallback": true
     },
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 255,
+    "high": 256,
     "medium": 316,
-    "low": 103
+    "low": 102
   },
-  "unclassifiedCount": 39,
+  "unclassifiedCount": 40,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -188,6 +188,11 @@
       "municipalityName": "熊本市",
       "title": "令和8年熊本地震に関する市民アンケート調査",
       "url": "https://www.city.kumamoto.jp/kiji00372846/index.html"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "令和８年熊本地震からの復興に向けた取り組み",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326766/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -987,7 +992,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 1
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1092,9 +1097,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_hikawa",
-      "count": 1
+      "count": 2
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 663
+  "previousClassifiedPageCount": 674
 }
