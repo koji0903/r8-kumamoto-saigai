@@ -209,6 +209,10 @@ ART = {
 }
 
 PAGES = [
+    dict(file="yatsushiro-safetynet4.html", out="ogp-yatsushiro-safetynet4.png", tone="blue", art="work",
+         label="八代市｜事業者支援・資金繰り",
+         title="セーフティネット保証4号/利用ガイド（令和八年熊本地震）",
+         lead="別枠無担保8,000万円・100%信用保証。売上20%減要件の3パターン判定・指定期間12/17・必要書類・手続き手順を整理。"),
     dict(file="priority-support-summary.html", out="ogp-priority-support.png", tone="teal", art="support_fields",
          label="5市町｜災害支援制度まとめ・比較",
          title="熊本市・宇土市・宇城市/氷川町・八代市の制度比較",

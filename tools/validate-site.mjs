@@ -44,6 +44,7 @@ const syntaxTargets = [
   "yatsushiro-rebuild.js",
   "yatsushiro-loan.js",
   "uto-jizokuka.js",
+  "yatsushiro-safetynet4.js",
   "reconstruction-health-care.js",
   "reconstruction-family.js",
   "reconstruction-work-business.js",
