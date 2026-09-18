@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-17T21:44:47.003Z",
-  "officialCheckedAt": "9/18 06:44",
+  "retrievedAt": "2026-09-18T05:08:57.252Z",
+  "officialCheckedAt": "9/18 14:08",
   "siteTopics": [
     {
       "date": "2026-09-17",
@@ -60,20 +60,60 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "令和８年熊本地震により被災した学用品を配布します",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326935/index.html",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-09-18",
-      "time": null,
+      "time": "13:03",
       "category": "その他",
       "municipality": "八代市"
     },
     {
-      "title": "災害ごみ仮置場の開設日カレンダー（10月） (PDF 674KB)",
-      "url": "https://www.city.uki.kumamoto.jp/resource.php?e=579870071f3da329daebd9583cb9e284d3bdf0a1b68be1ae0932fbbf8b0043921cc78a2a4e806f81b00fa013d0a8473c",
+      "title": "令和８年熊本地震に関する支援等",
+      "url": "https://localcms.city.minamata.lg.jp/page4805.html?type=top",
+      "date": "2026-09-18",
+      "time": "12:10",
+      "category": "支援・制度",
+      "municipality": "水俣市"
+    },
+    {
+      "title": "2026年9月18日 令和8年熊本地震 関連情報 （9月18日11時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-09-18",
+      "time": "11:00",
+      "category": "その他",
+      "municipality": "宇城市"
+    },
+    {
+      "title": "西原村学校公開日「学校へ行こう西原デー」について",
+      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0031669/index.html",
+      "date": "2026-09-18",
+      "time": "08:46",
+      "category": "施設・学校",
+      "municipality": "西原村"
+    },
+    {
+      "title": "【熊本地震】9月19日（土）～23日（水）の窓口業務について",
+      "url": "https://www.city.uto.lg.jp/article/view/1014/16528.html",
       "date": "2026-09-18",
       "time": null,
-      "category": "ごみ・生活",
-      "municipality": "宇城市"
+      "category": "その他",
+      "municipality": "宇土市"
+    },
+    {
+      "title": "令和8年熊本地震に伴う「ワンストップ窓口」終了のお知らせ",
+      "url": "https://www.town.ozu.kumamoto.jp/page/26732.html",
+      "date": "2026-09-18",
+      "time": null,
+      "category": "その他",
+      "municipality": "大津町"
+    },
+    {
+      "title": "【9月18日更新】令和8年熊本地震被災者支援制度Vol.1（臨時広報みふね）",
+      "url": "https://www.town.mifune.kumamoto.jp/page9449.html",
+      "date": "2026-09-18",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "御船町"
     },
     {
       "title": "り災証明書（被災証明書）の発行について",
@@ -100,14 +140,6 @@ window.HOME_TOPICS = {
       "municipality": "山鹿市"
     },
     {
-      "title": "【 期限延長 】住宅被害拡大防止のための緊急修理の申込について（ 10月27日まで ）",
-      "url": "https://www.vill.nishihara.kumamoto.jp/bousai/kiji0031997/index.html",
-      "date": "2026-09-17",
-      "time": "08:47",
-      "category": "住まい・証明",
-      "municipality": "西原村"
-    },
-    {
       "title": "【令和8年熊本地震】被災された皆さまを対象に「総合相談窓口」を開設します",
       "url": "https://www.city.kumamoto.jp/kiji00372590/index.html",
       "date": "2026-09-17",
@@ -132,14 +164,6 @@ window.HOME_TOPICS = {
       "municipality": "上天草市"
     },
     {
-      "title": "【9月17日更新】地震災害で発生したごみの受入（仮置場）ついて",
-      "url": "https://www.town.mifune.kumamoto.jp/page9423.html",
-      "date": "2026-09-17",
-      "time": null,
-      "category": "ごみ・生活",
-      "municipality": "御船町"
-    },
-    {
       "title": "令和８年度飼い主のいない猫避妊去勢手術支援事業",
       "url": "https://www.town.mashiki.lg.jp/kiji0037331/index.html",
       "date": "2026-09-17",
@@ -154,30 +178,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "支援・制度",
       "municipality": "甲佐町"
-    },
-    {
-      "title": "避難所について（9/16 17:00更新）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
-      "date": "2026-09-16",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市"
-    },
-    {
-      "title": "震度速報",
-      "url": "https://www.city.amakusa.kumamoto.jp/kinkyu.html",
-      "date": "2026-09-16",
-      "time": "06:05",
-      "category": "避難・安全",
-      "municipality": "天草市"
-    },
-    {
-      "title": "令和8年熊本地震に伴う「ワンストップ窓口」終了のお知らせ",
-      "url": "https://www.town.ozu.kumamoto.jp/page/26732.html",
-      "date": "2026-09-16",
-      "time": null,
-      "category": "その他",
-      "municipality": "大津町"
     }
   ],
   "prefectureUpdates": [
