@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-18T16:49:16.674Z",
-  "officialCheckedAt": "9/19 01:49",
+  "retrievedAt": "2026-09-18T21:15:42.657Z",
+  "officialCheckedAt": "9/19 06:15",
   "siteTopics": [
     {
       "date": "2026-09-17",
@@ -60,20 +60,20 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "セーフティネット保証4号（令和八年熊本地震）について",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326866/index.html",
+      "date": "2026-09-19",
+      "time": null,
+      "category": "その他",
+      "municipality": "八代市"
+    },
+    {
       "title": "令和8年熊本地震の罹災証明・被災証明・罹災届出証明について",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2515854",
       "date": "2026-09-19",
       "time": null,
       "category": "住まい・証明",
       "municipality": "宇城市"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-09-18",
-      "time": "22:01",
-      "category": "その他",
-      "municipality": "八代市"
     },
     {
       "title": "＜令和8年熊本地震＞ 災害救助法 「住家の応急修理」制度の御案内",
