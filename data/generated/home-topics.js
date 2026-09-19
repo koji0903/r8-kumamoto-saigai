@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-19T05:03:19.379Z",
-  "officialCheckedAt": "9/19 14:03",
+  "retrievedAt": "2026-09-19T11:24:58.676Z",
+  "officialCheckedAt": "9/19 20:24",
   "siteTopics": [
     {
       "date": "2026-09-19",
@@ -63,7 +63,7 @@ window.HOME_TOPICS = {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-09-19",
-      "time": "13:07",
+      "time": "19:35",
       "category": "その他",
       "municipality": "八代市"
     },

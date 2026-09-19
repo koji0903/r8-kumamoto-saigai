@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-19T04:44:19.514Z",
+  "generatedAt": "2026-09-19T11:09:20.612Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 831,
-  "displayCandidateCount": 571,
-  "classifiedPageCount": 671,
+  "inputCount": 829,
+  "displayCandidateCount": 569,
+  "classifiedPageCount": 669,
   "categoryReport": {
     "home": {
-      "total": 187,
+      "total": 186,
       "high": 67,
-      "medium": 74,
+      "medium": 73,
       "low": 46
     },
     "money": {
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 200,
-      "high": 63,
+      "total": 199,
+      "high": 62,
       "medium": 137,
       "low": 0
     }
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 107,
-      "displayCandidates": 91,
+      "classified": 105,
+      "displayCandidates": 89,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 256,
-    "medium": 315,
+    "high": 255,
+    "medium": 314,
     "low": 100
   },
   "unclassifiedCount": 39,
@@ -717,7 +717,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -822,7 +822,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年09月18日 【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
+      "title": "【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
       "ruleId": "press",
       "ruleLabel": "報道機関向け"
@@ -966,7 +966,7 @@
     "duplicate_url": 36,
     "non_official_url": 2
   },
-  "warningCount": 24,
+  "warningCount": 26,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1000,6 +1000,16 @@
     },
     {
       "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_yamaga",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_yamaga",
+      "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_kikuchi",
       "message": "継続回数を確認後に表示除外を判断してください"
     },
@@ -1011,7 +1021,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 13
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1090,5 +1100,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 673
+  "previousClassifiedPageCount": 671
 }

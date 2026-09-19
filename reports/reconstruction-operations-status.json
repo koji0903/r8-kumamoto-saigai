@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-19T05:03:37.786Z",
+  "generatedAt": "2026-09-19T11:25:14.197Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-19T04:44:19.514Z",
-    "inputCount": 831,
-    "classifiedPageCount": 671,
-    "displayCandidateCount": 571,
+    "generatedAt": "2026-09-19T11:09:20.612Z",
+    "inputCount": 829,
+    "classifiedPageCount": 669,
+    "displayCandidateCount": 569,
     "deltaFromPrevious": {
-      "inputCount": -4,
+      "inputCount": -2,
       "classifiedPageCount": -2,
-      "unclassifiedCount": -1
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 55,
+      "ageHours": 62,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 107,
-        "displayCandidates": 91,
+        "classified": 105,
+        "displayCandidates": 89,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,9 +138,9 @@
     },
     "categoryReport": {
       "home": {
-        "total": 187,
+        "total": 186,
         "high": 67,
-        "medium": 74,
+        "medium": 73,
         "low": 46
       },
       "money": {
@@ -180,15 +180,15 @@
         "low": 0
       },
       "daily_life": {
-        "total": 200,
-        "high": 63,
+        "total": 199,
+        "high": 62,
         "medium": 137,
         "low": 0
       }
     },
     "confidence": {
-      "high": 256,
-      "medium": 315,
+      "high": 255,
+      "medium": 314,
       "low": 100
     },
     "unclassifiedCount": 39,
@@ -296,6 +296,16 @@
     },
     {
       "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_yamaga",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_yamaga",
+      "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_kikuchi",
       "message": "継続回数を確認後に表示除外を判断してください"
     },
@@ -307,7 +317,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 13
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
