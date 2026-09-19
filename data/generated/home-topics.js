@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-19T16:14:33.496Z",
-  "officialCheckedAt": "9/20 01:14",
+  "retrievedAt": "2026-09-19T21:06:12.832Z",
+  "officialCheckedAt": "9/20 06:06",
   "siteTopics": [
     {
       "date": "2026-09-19",
@@ -84,6 +84,14 @@ window.HOME_TOPICS = {
       "municipality": "八代市"
     },
     {
+      "title": "避難所について（9/19 17:00更新）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
+      "date": "2026-09-19",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市"
+    },
+    {
       "title": "令和8年熊本地震関連情報",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
       "date": "2026-09-19",
@@ -106,14 +114,6 @@ window.HOME_TOPICS = {
       "time": "17:11",
       "category": "その他",
       "municipality": "熊本市"
-    },
-    {
-      "title": "避難所について（9/18 17:00更新）",
-      "url": "https://www.city.uto.lg.jp/article/view/1014/16888.html",
-      "date": "2026-09-18",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市"
     },
     {
       "title": "【令和8年熊本地震】（国補助事業）小規模事業者持続化補助金＜一般型 災害支援枠＞",
