@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-19T20:48:31.862Z",
+  "generatedAt": "2026-09-19T23:12:50.239Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 830,
-  "displayCandidateCount": 570,
-  "classifiedPageCount": 670,
+  "inputCount": 829,
+  "displayCandidateCount": 569,
+  "classifiedPageCount": 669,
   "categoryReport": {
     "home": {
-      "total": 187,
+      "total": 186,
       "high": 67,
       "medium": 74,
-      "low": 46
+      "low": 45
     },
     "money": {
       "total": 212,
@@ -19,8 +19,8 @@
       "low": 117
     },
     "documents": {
-      "total": 173,
-      "high": 42,
+      "total": 172,
+      "high": 41,
       "medium": 28,
       "low": 103
     },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 139,
-      "displayCandidates": 116,
+      "classified": 138,
+      "displayCandidates": 115,
       "fallback": true
     },
     "municipality_minamata": {
@@ -163,7 +163,7 @@
     }
   },
   "confidence": {
-    "high": 256,
+    "high": 255,
     "medium": 314,
     "low": 100
   },
@@ -794,13 +794,6 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
-      "ruleId": "press",
-      "ruleLabel": "報道機関向け"
-    },
-    {
-      "municipalityName": "宇城市",
       "title": "南海トラフ地震臨時情報（巨大地震注意）について",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2422985",
       "ruleId": "disaster_preparedness",
@@ -824,6 +817,13 @@
       "municipalityName": "宇城市",
       "title": "12_報道資料（令和8年熊本地震の発災から1カ月を受けて：令和8年8月26日） (PDF 276KB)",
       "url": "https://www.city.uki.kumamoto.jp/resource.php?e=3e84ab57cc6d8da40948386a24d341b60f7e3f5950354a11da80aae86c23dd9eff18c29e36a1b58316a4b429813167ed",
+      "ruleId": "press",
+      "ruleLabel": "報道機関向け"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
       "ruleId": "press",
       "ruleLabel": "報道機関向け"
     },
@@ -1011,7 +1011,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 16
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
