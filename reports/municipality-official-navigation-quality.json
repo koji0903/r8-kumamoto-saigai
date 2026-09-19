@@ -1,40 +1,40 @@
 {
-  "generatedAt": "2026-09-18T23:21:33.133Z",
+  "generatedAt": "2026-09-19T04:44:19.514Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 835,
+  "inputCount": 831,
   "displayCandidateCount": 571,
-  "classifiedPageCount": 673,
+  "classifiedPageCount": 671,
   "categoryReport": {
     "home": {
-      "total": 185,
+      "total": 187,
       "high": 67,
-      "medium": 73,
-      "low": 45
+      "medium": 74,
+      "low": 46
     },
     "money": {
-      "total": 214,
+      "total": 213,
       "high": 43,
-      "medium": 54,
+      "medium": 53,
       "low": 117
     },
     "documents": {
-      "total": 172,
-      "high": 41,
+      "total": 173,
+      "high": 42,
       "medium": 28,
       "low": 103
     },
     "health_care": {
-      "total": 47,
-      "high": 18,
+      "total": 46,
+      "high": 17,
       "medium": 29,
       "low": 0
     },
     "family_education": {
-      "total": 80,
+      "total": 78,
       "high": 9,
       "medium": 29,
-      "low": 42
+      "low": 40
     },
     "work_business": {
       "total": 59,
@@ -43,9 +43,9 @@
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 25,
+      "total": 24,
       "high": 8,
-      "medium": 17,
+      "medium": 16,
       "low": 0
     },
     "daily_life": {
@@ -92,7 +92,7 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 110,
+      "classified": 107,
       "displayCandidates": 91,
       "fallback": true
     },
@@ -147,7 +147,7 @@
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 46,
+      "classified": 47,
       "displayCandidates": 42,
       "fallback": true
     },
@@ -165,9 +165,9 @@
   "confidence": {
     "high": 256,
     "medium": 315,
-    "low": 102
+    "low": 100
   },
-  "unclassifiedCount": 40,
+  "unclassifiedCount": 39,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -188,11 +188,6 @@
       "municipalityName": "熊本市",
       "title": "令和8年熊本地震に関する市民アンケート調査",
       "url": "https://www.city.kumamoto.jp/kiji00372846/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "令和８年熊本地震からの復興に向けた取り組み",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326766/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -321,12 +316,12 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年9月18日 令和8年熊本地震 関連情報 （9月18日16時00分更新）",
+      "title": "2026年9月18日 令和8年熊本地震 関連情報 （9月19日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年09月18日 令和8年熊本地震 関連情報 （9月18日16時00分更新）",
+      "title": "2026年09月19日 令和8年熊本地震 関連情報 （9月19日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699"
     },
     {
@@ -377,8 +372,8 @@
     "public_relations": 9,
     "disaster_preparedness": 6,
     "facility_notice": 5,
-    "index_page": 11,
     "mayor_message": 2,
+    "index_page": 11,
     "mutual_aid": 1,
     "overall_guide": 3,
     "press": 3
@@ -722,17 +717,17 @@
     },
     {
       "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
+    },
+    {
+      "municipalityName": "八代市",
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "八代市",
@@ -966,13 +961,12 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 39,
+  "excludedCount": 38,
   "excludedByType": {
     "duplicate_url": 36,
-    "non_official_url": 2,
-    "non_disaster_context_excluded": 1
+    "non_official_url": 2
   },
-  "warningCount": 26,
+  "warningCount": 24,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1017,7 +1011,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 13
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1030,14 +1024,9 @@
       "count": 2
     },
     {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_uki",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 8
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1097,14 +1086,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_hikawa",
-      "count": 2
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_ashikita",
       "count": 1
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 674
+  "previousClassifiedPageCount": 673
 }

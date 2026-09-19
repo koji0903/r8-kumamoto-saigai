@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-18T23:40:57.717Z",
-  "officialCheckedAt": "9/19 08:40",
+  "retrievedAt": "2026-09-19T05:03:19.379Z",
+  "officialCheckedAt": "9/19 14:03",
   "siteTopics": [
     {
       "date": "2026-09-19",
@@ -60,19 +60,27 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "セーフティネット保証4号（令和八年熊本地震）について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326866/index.html",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-09-19",
-      "time": null,
+      "time": "13:07",
       "category": "その他",
       "municipality": "八代市"
     },
     {
-      "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
+      "title": "令和8年熊本地震関連情報",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
       "date": "2026-09-19",
-      "time": null,
-      "category": "ごみ・生活",
+      "time": "11:39",
+      "category": "その他",
+      "municipality": "氷川町"
+    },
+    {
+      "title": "2026年09月19日 令和8年熊本地震 関連情報 （9月19日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
+      "date": "2026-09-19",
+      "time": "08:00",
+      "category": "その他",
       "municipality": "宇城市"
     },
     {
@@ -90,6 +98,14 @@ window.HOME_TOPICS = {
       "time": "17:11",
       "category": "その他",
       "municipality": "熊本市"
+    },
+    {
+      "title": "避難所について（9/18 17:00更新）",
+      "url": "https://www.city.uto.lg.jp/article/view/1014/16888.html",
+      "date": "2026-09-18",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市"
     },
     {
       "title": "【令和8年熊本地震】（国補助事業）小規模事業者持続化補助金＜一般型 災害支援枠＞",
@@ -132,28 +148,12 @@ window.HOME_TOPICS = {
       "municipality": "菊池市"
     },
     {
-      "title": "【熊本地震】9月19日（土）～23日（水）の窓口業務について",
-      "url": "https://www.city.uto.lg.jp/article/view/1014/16528.html",
-      "date": "2026-09-18",
-      "time": null,
-      "category": "その他",
-      "municipality": "宇土市"
-    },
-    {
       "title": "災害救助法「住家の緊急修理」制度のご案内 - 企画情報課",
       "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6040.html",
       "date": "2026-09-18",
       "time": null,
       "category": "住まい・証明",
       "municipality": "嘉島町"
-    },
-    {
-      "title": "り災証明書（被災証明書）の発行について",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036763/index.html",
-      "date": "2026-09-17",
-      "time": "16:38",
-      "category": "住まい・証明",
-      "municipality": "氷川町"
     },
     {
       "title": "令和8年熊本地震（7月28日発生）に関する情報（9月17日14時更新）",
