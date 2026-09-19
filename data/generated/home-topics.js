@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-19T11:24:58.676Z",
-  "officialCheckedAt": "9/19 20:24",
+  "retrievedAt": "2026-09-19T16:14:33.496Z",
+  "officialCheckedAt": "9/20 01:14",
   "siteTopics": [
     {
       "date": "2026-09-19",
@@ -60,6 +60,22 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "10月災害ごみ仮置場の開設日カレンダー (PDF 666KB)",
+      "url": "https://www.city.uki.kumamoto.jp/resource.php?e=cb322d7b2d0b036a9489c158656d9b08af14966fc24870625c0fd22551dcaf936d4a14bb3f9bd4d17f32c35aaae9441e",
+      "date": "2026-09-20",
+      "time": null,
+      "category": "ごみ・生活",
+      "municipality": "宇城市"
+    },
+    {
+      "title": "震度速報 9月19日 21時9分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "date": "2026-09-19",
+      "time": "21:09",
+      "category": "避難・安全",
+      "municipality": "山鹿市"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-09-19",
@@ -74,14 +90,6 @@ window.HOME_TOPICS = {
       "time": "11:39",
       "category": "その他",
       "municipality": "氷川町"
-    },
-    {
-      "title": "2026年09月19日 令和8年熊本地震 関連情報 （9月19日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
-      "date": "2026-09-19",
-      "time": "08:00",
-      "category": "その他",
-      "municipality": "宇城市"
     },
     {
       "title": "＜令和8年熊本地震＞ 災害救助法 「住家の応急修理」制度の御案内",
@@ -162,14 +170,6 @@ window.HOME_TOPICS = {
       "time": "14:00",
       "category": "その他",
       "municipality": "美里町"
-    },
-    {
-      "title": "（令和８年熊本地震関連）営農再開支援事業（ソフト事業）の要望調査について",
-      "url": "https://www.city.yamaga.kumamoto.jp/kiji0033241/index.html",
-      "date": "2026-09-17",
-      "time": "08:48",
-      "category": "支援・制度",
-      "municipality": "山鹿市"
     },
     {
       "title": "【令和8年熊本地震】お住まいの家の被害拡大を防止する緊急修理について",

@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-09-19T11:09:20.612Z",
+  "generatedAt": "2026-09-19T15:56:47.870Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 829,
-  "displayCandidateCount": 569,
-  "classifiedPageCount": 669,
+  "inputCount": 830,
+  "displayCandidateCount": 570,
+  "classifiedPageCount": 670,
   "categoryReport": {
     "home": {
-      "total": 186,
+      "total": 187,
       "high": 67,
-      "medium": 73,
+      "medium": 74,
       "low": 46
     },
     "money": {
-      "total": 213,
+      "total": 212,
       "high": 43,
-      "medium": 53,
+      "medium": 52,
       "low": 117
     },
     "documents": {
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 199,
-      "high": 62,
+      "total": 200,
+      "high": 63,
       "medium": 137,
       "low": 0
     }
@@ -87,13 +87,13 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 28,
-      "displayCandidates": 24,
+      "classified": 27,
+      "displayCandidates": 23,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 105,
-      "displayCandidates": 89,
+      "classified": 107,
+      "displayCandidates": 91,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,7 +163,7 @@
     }
   },
   "confidence": {
-    "high": 255,
+    "high": 256,
     "medium": 314,
     "low": 100
   },
@@ -370,10 +370,10 @@
     "donation_appeal": 1,
     "hq_meeting_material": 42,
     "public_relations": 9,
-    "disaster_preparedness": 6,
+    "disaster_preparedness": 5,
     "facility_notice": 5,
     "mayor_message": 2,
-    "index_page": 11,
+    "index_page": 12,
     "mutual_aid": 1,
     "overall_guide": 3,
     "press": 3
@@ -752,10 +752,10 @@
     },
     {
       "municipalityName": "山鹿市",
-      "title": "避難行動支援システム更新業務の委託に係るプロポーザルの参加者を募集します",
-      "url": "https://www.city.yamaga.kumamoto.jp/kiji0033173/index.html",
-      "ruleId": "disaster_preparedness",
-      "ruleLabel": "平時の防災・今後への備え"
+      "title": "震度速報 9月19日 21時9分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "菊池市",
@@ -794,6 +794,13 @@
     },
     {
       "municipalityName": "宇城市",
+      "title": "【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
+      "ruleId": "press",
+      "ruleLabel": "報道機関向け"
+    },
+    {
+      "municipalityName": "宇城市",
       "title": "南海トラフ地震臨時情報（巨大地震注意）について",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2422985",
       "ruleId": "disaster_preparedness",
@@ -817,13 +824,6 @@
       "municipalityName": "宇城市",
       "title": "12_報道資料（令和8年熊本地震の発災から1カ月を受けて：令和8年8月26日） (PDF 276KB)",
       "url": "https://www.city.uki.kumamoto.jp/resource.php?e=3e84ab57cc6d8da40948386a24d341b60f7e3f5950354a11da80aae86c23dd9eff18c29e36a1b58316a4b429813167ed",
-      "ruleId": "press",
-      "ruleLabel": "報道機関向け"
-    },
-    {
-      "municipalityName": "宇城市",
-      "title": "【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
       "ruleId": "press",
       "ruleLabel": "報道機関向け"
     },
@@ -966,7 +966,7 @@
     "duplicate_url": 36,
     "non_official_url": 2
   },
-  "warningCount": 26,
+  "warningCount": 24,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -996,16 +996,6 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_minamata",
-      "count": 1
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_yamaga",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_yamaga",
       "count": 1
     },
     {
@@ -1100,5 +1090,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 671
+  "previousClassifiedPageCount": 669
 }
