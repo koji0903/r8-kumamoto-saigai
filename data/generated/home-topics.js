@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-20T21:12:29.948Z",
-  "officialCheckedAt": "9/21 06:12",
+  "retrievedAt": "2026-09-20T23:34:36.386Z",
+  "officialCheckedAt": "9/21 08:34",
   "siteTopics": [
     {
       "date": "2026-09-19",
@@ -60,20 +60,20 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "避難所開設状況",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
+      "date": "2026-09-21",
+      "time": "08:16",
+      "category": "避難・安全",
+      "municipality": "八代市"
+    },
+    {
       "title": "被災者支援のための無料相談会の開催（司法書士・弁護士・行政書士）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2622040",
       "date": "2026-09-21",
       "time": null,
       "category": "支援・制度",
       "municipality": "宇城市"
-    },
-    {
-      "title": "【給水所情報】9月21日（月曜日）",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326773/index.html",
-      "date": "2026-09-20",
-      "time": "16:39",
-      "category": "ライフライン",
-      "municipality": "八代市"
     },
     {
       "title": "避難所について（9/19 17:00更新）",
