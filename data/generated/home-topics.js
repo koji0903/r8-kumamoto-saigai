@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-19T23:31:20.256Z",
-  "officialCheckedAt": "9/20 08:31",
+  "retrievedAt": "2026-09-20T05:19:03.654Z",
+  "officialCheckedAt": "9/20 14:19",
   "siteTopics": [
     {
       "date": "2026-09-19",
@@ -60,11 +60,19 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "10月災害ごみ仮置場の開設日カレンダー (PDF 666KB)",
-      "url": "https://www.city.uki.kumamoto.jp/resource.php?e=cb322d7b2d0b036a9489c158656d9b08af14966fc24870625c0fd22551dcaf936d4a14bb3f9bd4d17f32c35aaae9441e",
+      "title": "避難所開設状況",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
       "date": "2026-09-20",
-      "time": null,
-      "category": "ごみ・生活",
+      "time": "14:00",
+      "category": "避難・安全",
+      "municipality": "八代市"
+    },
+    {
+      "title": "2026年9月20日 令和8年熊本地震 関連情報 （9月20日11時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-09-20",
+      "time": "11:00",
+      "category": "その他",
       "municipality": "宇城市"
     },
     {
@@ -74,14 +82,6 @@ window.HOME_TOPICS = {
       "time": "21:09",
       "category": "避難・安全",
       "municipality": "山鹿市"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-09-19",
-      "time": "19:35",
-      "category": "その他",
-      "municipality": "八代市"
     },
     {
       "title": "避難所について（9/19 17:00更新）",

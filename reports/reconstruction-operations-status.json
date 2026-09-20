@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-19T23:31:37.570Z",
+  "generatedAt": "2026-09-20T05:19:22.634Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-19T23:12:50.239Z",
-    "inputCount": 829,
-    "classifiedPageCount": 669,
-    "displayCandidateCount": 569,
+    "generatedAt": "2026-09-20T05:00:47.378Z",
+    "inputCount": 831,
+    "classifiedPageCount": 671,
+    "displayCandidateCount": 570,
     "deltaFromPrevious": {
-      "inputCount": -1,
-      "classifiedPageCount": -1,
+      "inputCount": 2,
+      "classifiedPageCount": 2,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 74,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -36,7 +36,7 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 138,
+        "classified": 139,
         "displayCandidates": 115,
         "fallback": true
       },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 107,
-        "displayCandidates": 91,
+        "classified": 108,
+        "displayCandidates": 92,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,10 +138,10 @@
     },
     "categoryReport": {
       "home": {
-        "total": 186,
+        "total": 188,
         "high": 67,
-        "medium": 74,
-        "low": 45
+        "medium": 75,
+        "low": 46
       },
       "money": {
         "total": 212,
@@ -150,10 +150,10 @@
         "low": 117
       },
       "documents": {
-        "total": 172,
-        "high": 41,
+        "total": 174,
+        "high": 42,
         "medium": 28,
-        "low": 103
+        "low": 104
       },
       "health_care": {
         "total": 46,
@@ -162,10 +162,10 @@
         "low": 0
       },
       "family_education": {
-        "total": 78,
+        "total": 79,
         "high": 9,
         "medium": 29,
-        "low": 40
+        "low": 41
       },
       "work_business": {
         "total": 59,
@@ -180,16 +180,16 @@
         "low": 0
       },
       "daily_life": {
-        "total": 200,
+        "total": 199,
         "high": 63,
-        "medium": 137,
+        "medium": 136,
         "low": 0
       }
     },
     "confidence": {
-      "high": 255,
+      "high": 256,
       "medium": 314,
-      "low": 100
+      "low": 101
     },
     "unclassifiedCount": 39,
     "excludedCount": 38,
@@ -236,7 +236,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:37d4853de0174d8479518105268fa01d3948427978b6ddf69c57d5d40869a38a",
+        "currentHash": "sha256:caffc7f5f57fd6c126d129fb4c61ece5112680c56bca5d06e6b722fdad956c0b",
         "verificationStatus": "needs_review"
       }
     },
@@ -247,7 +247,7 @@
         "title": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
         "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
         "previousHash": "sha256:83be58e3c56963e18140658412145c461d5542c4e79c399f4bb85f687ef7beab",
-        "currentHash": "sha256:f7d237573412a54f3df2e57aa142d35f30a2d81ecc1b29c2d181c65837503eea",
+        "currentHash": "sha256:34d376c9d07ca5a41faeb272c8bc8a6df40c2fefd67dbd21a7bcb00578aa67ea",
         "verificationStatus": "needs_review"
       }
     },
@@ -418,7 +418,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:37d4853de0174d8479518105268fa01d3948427978b6ddf69c57d5d40869a38a",
+        "currentHash": "sha256:caffc7f5f57fd6c126d129fb4c61ece5112680c56bca5d06e6b722fdad956c0b",
         "verificationStatus": "needs_review"
       },
       {
@@ -426,7 +426,7 @@
         "title": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
         "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
         "previousHash": "sha256:83be58e3c56963e18140658412145c461d5542c4e79c399f4bb85f687ef7beab",
-        "currentHash": "sha256:f7d237573412a54f3df2e57aa142d35f30a2d81ecc1b29c2d181c65837503eea",
+        "currentHash": "sha256:34d376c9d07ca5a41faeb272c8bc8a6df40c2fefd67dbd21a7bcb00578aa67ea",
         "verificationStatus": "needs_review"
       },
       {
