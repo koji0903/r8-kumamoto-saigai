@@ -205,6 +205,11 @@ ART = {
 }
 
 PAGES = [
+    dict(file="uki-consultation.html", out="ogp-uki-consultation.png", tone="uki", art="meeting",
+         label="宇城市", tag="無料相談会",
+         target="法律・ローン・相続・解体・手続きで悩む被災者",
+         title="被災者支援のための/無料相談会ガイド",
+         lead="司法書士・弁護士・行政書士に予約不要・無料で相談。市役所新館と小川ラポートの曜日・時間・場所、相談内容を整理。"),
     dict(file="yatsushiro-safetynet4.html", out="ogp-yatsushiro-safetynet4.png", tone="blue", art="work",
          label="八代市", tag="令和8年熊本地震",
          target="売上減少・資金繰りに直面する事業者・個人事業主",
