@@ -3,10 +3,9 @@
 
     python3 tools/build-ogp-images.py
 
-SNSやLINEに貼られたとき、どのページも同じ共通画像だと中身が伝わらない。
-ページの色を使って1枚ずつ作る。絵は宇土市のページ（uto-waste / uto-bulletin）
-と同じ描き方（viewBox 120x82・線は currentColor・同じ配色）で描くので、
-画像を見てから開いても印象が食い違わない。
+SNSやLINEに貼られたとき、どのページも同じ共通画像だと「誰向けの情報か」が伝わらない。
+対象者（被災者、事業者、解体検討中の方、支援者など）を一目で伝える【対象】バッジと、
+自治体名・カテゴリタグを配置し、必要な人に確実に届く画像に仕上げる。
 
 文字は画像として焼き込む（フォントを配布するわけではない）。
 """
@@ -25,7 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 W, H = 1200, 630
 PAPER = "#fbfaf6"
 INK = "#123f38"
-MUTED = "#46605a"
+MUTED = "#334155"
 
 FONT_DIR = Path("/System/Library/Fonts")
 BOLD = FONT_DIR / "ヒラギノ角ゴシック W6.ttc"
@@ -68,14 +67,12 @@ ART = {
               '<circle fill="#fde047" stroke="#a16207" cx="86" cy="62" r="8"/>'
               '<circle fill="#93c5fd" stroke="#1d4ed8" cx="74" cy="22" r="8"/>'
               '<circle fill="#cbd5e1" stroke="#475569" cx="34" cy="62" r="8"/>',
-    # 人は頭と胴をつなげる（離すと顔だけ浮いて見える）
     "volunteer": '<path stroke="#475569" d="M8 76h104"/>'
                  '<circle fill="#2dd4bf" stroke="#0f766e" cx="30" cy="22" r="12"/>'
                  '<path fill="#2dd4bf" stroke="#0f766e" d="M14 76V56c0-9 7-16 16-16s16 7 16 16v20z"/>'
                  '<circle fill="#fb923c" stroke="#c2410c" cx="90" cy="26" r="10"/>'
                  '<path fill="#fb923c" stroke="#c2410c" d="M76 76V58c0-8 6-14 14-14s14 6 14 14v18z"/>'
                  '<path fill="#fde047" stroke="#a16207" d="M50 58h20v18H50z"/><path d="M50 65h20M60 58v7"/>',
-    # 会議資料＝紙と数字。棒は資料に並ぶ数字の推移を表す
     "hq": '<path fill="#cbd5e1" stroke="#475569" d="M16 10h60v62H16z"/><path d="M26 22h40M26 32h28"/>'
           '<path fill="#93c5fd" stroke="#1d4ed8" d="M28 66V46h10v20z"/>'
           '<path fill="#2dd4bf" stroke="#0f766e" d="M44 66V38h10v28z"/>'
@@ -85,7 +82,6 @@ ART = {
                '<path fill="#93c5fd" stroke="#1d4ed8" d="M52 14 92 44l-9 7-31-24-31 24-9-7Z"/>'
                '<path fill="#fb923c" stroke="#c2410c" d="M44 74V56h16v18"/>'
                '<path fill="#2dd4bf" stroke="#0f766e" d="M100 30c-5 7-8 11-8 15a8 8 0 0 0 16 0c0-4-3-8-8-15Z"/>',
-    # 応急修理＝屋根の当て板とスマホの記録写真
     "repair": '<path fill="#fed7aa" stroke="#c2410c" d="m10 44 34-26 34 26v28H10Z"/>'
               '<path fill="#fde047" stroke="#a16207" d="M34 30h18v10H34z"/>'
               '<path fill="#93c5fd" stroke="#1d4ed8" d="M20 50h14v12H20zM54 50h14v12H54z"/>'
@@ -210,211 +206,263 @@ ART = {
 
 PAGES = [
     dict(file="yatsushiro-safetynet4.html", out="ogp-yatsushiro-safetynet4.png", tone="blue", art="work",
-         label="八代市｜事業者支援・資金繰り",
-         title="セーフティネット保証4号/利用ガイド（令和八年熊本地震）",
+         label="八代市", tag="令和8年熊本地震",
+         target="売上減少・資金繰りに直面する事業者・個人事業主",
+         title="セーフティネット保証4号/利用ガイド",
          lead="別枠無担保8,000万円・100%信用保証。売上20%減要件の3パターン判定・指定期間12/17・必要書類・手続き手順を整理。"),
     dict(file="priority-support-summary.html", out="ogp-priority-support.png", tone="teal", art="support_fields",
-         label="5市町｜災害支援制度まとめ・比較",
+         label="5市町横断比較", tag="支援制度まとめ",
+         target="被災された住民・支援者・相談窓口担当",
          title="熊本市・宇土市・宇城市/氷川町・八代市の制度比較",
          lead="住まい・お金・減免・生活・事業の20制度を横断整理。制度の有無、金額、特設ガイド、自治体公式の受付状況を比較できます。"),
     dict(file="yatsushiro-loan.html", out="ogp-yatsushiro-loan.png", tone="blue", art="money",
-         label="八代市｜生活資金・貸付",
+         label="八代市", tag="生活資金・貸付",
+         target="当面の生活費や再建資金を必要とする世帯",
          title="災害援護資金の貸付/利用ガイド",
          lead="世帯主の負傷・住居や家財損害に最大350万円貸付。年1%（保証人で無利子）・据置最長5年・申請期限11/2・診断ツール。"),
     dict(file="uto-jizokuka.html", out="ogp-uto-jizokuka.png", tone="teal", art="work",
-         label="宇土市｜事業者支援",
+         label="宇土市", tag="事業者支援",
+         target="被災した小規模事業者・個人事業主",
          title="小規模事業者持続化補助金/＜一般型 災害支援枠＞",
          lead="直接被害最大200万円（定額10/10あり）、間接被害最大100万円。商工会確認締切10/9・申請締切10/16・受給額診断を整理。"),
     dict(file="yatsushiro-rebuild.html", out="ogp-yatsushiro-rebuild.png", tone="blue", art="rebuild",
-         label="八代市｜被災された方へ",
+         label="八代市", tag="生活再建支援",
+         target="全壊・大規模半壊・中規模半壊等の被災世帯",
          title="被災者生活再建支援金/利用ガイド",
          lead="全壊・解体・大規模半壊・中規模半壊。最大300万円の支援金・半壊解体の事前相談・申請書類・FAQを整理。"),
     dict(file="yatsushiro-support.html", out="ogp-yatsushiro-support.png", tone="blue", art="support_fields",
-         label="八代市｜被災された方へ",
+         label="八代市", tag="被災者応援",
+         target="八代市で被災された住民・ご家族",
          title="被災者応援ガイドブック/第6版を分かりやすく",
          lead="全50制度を対象、金額、期限、必要書類から整理。住家被害判定から主な支援候補も確認できます。"),
     dict(file="index.html", out="ogp-home.png", tone="teal", art="portal",
-         label="よか隊ネット熊本",
-         title="災害・支援状況レポート",
+         label="よか隊ネット熊本", tag="総合ポータル",
+         target="被災された方・支援者・関係自治体の皆さま",
+         title="災害・支援状況レポート/令和8年熊本地震",
          lead="令和8年熊本地震の被害状況、自治体の一次情報、生活再建と支援活動を分かりやすく伝えます。"),
     dict(file="404.html", out="ogp-404.png", tone="sky", art="search",
-         label="よか隊ネット熊本",
+         label="よか隊ネット熊本", tag="案内",
+         target="サイトをご利用の皆さま",
          title="ページが見つかりません",
          lead="お探しのページは移動または削除された可能性があります。トップページやサイト内検索から情報を探せます。"),
     dict(file="about.html", out="ogp-about.png", tone="teal", art="supporters",
-         label="団体について",
+         label="団体について", tag="よか隊ネット熊本",
+         target="団体の理念・活動を知りたい方・連携先",
          title="よか隊ネット熊本とは",
          lead="熊本の災害支援と地域のつながりを支える団体の目的、活動内容、運営方針をご紹介します。"),
     dict(file="join.html", out="ogp-join.png", tone="green", art="volunteer",
-         label="参加・協力のご案内",
+         label="参加・協力", tag="よか隊ネット熊本",
+         target="ボランティア・寄付・支援に関心のある方",
          title="支援・協力する",
          lead="会員、寄付、ボランティア、連携など、よか隊ネット熊本の活動へ参加・協力する方法をご案内します。"),
     dict(file="contact.html", out="ogp-contact.png", tone="blue", art="channels",
-         label="お問い合わせ",
+         label="お問い合わせ", tag="連絡窓口",
+         target="相談・取材・連携をご希望の方",
          title="連絡・相談窓口",
          lead="よか隊ネット熊本へのお問い合わせ方法と、災害時の緊急連絡に関する注意事項をご案内します。"),
     dict(file="privacy.html", out="ogp-privacy.png", tone="purple", art="docs",
-         label="サイト運営方針",
-         title="プライバシー/ポリシー",
+         label="運営方針", tag="プライバシー",
+         target="サイトをご利用の皆さま",
+         title="プライバシーポリシー",
          lead="個人情報の取得、利用目的、安全管理、アクセス解析、外部サービスの取り扱いを定めています。"),
     dict(file="accessibility.html", out="ogp-accessibility.png", tone="sky", art="guide_book",
-         label="サイト運営方針",
+         label="運営方針", tag="アクセシビリティ",
+         target="サイトをご利用の皆さま・閲覧支援が必要な方",
          title="アクセシビリティ方針",
          lead="災害時にも必要な情報へたどり着けるよう、読みやすさ、操作しやすさ、情報の伝わり方を整えます。"),
     dict(file="kumamoto-support.html", out="ogp-kumamoto-support.png", tone="uki", art="support_fields",
-         label="熊本市｜被災された方へ",
+         label="熊本市", tag="被災者支援",
+         target="熊本市で被災された住民・ご家族",
          title="被災者支援制度ガイド",
          lead="全95支援項目を7分野に整理。被害判定と世帯状況から対象候補、支給額、条件、期限、窓口を確認できます。"),
     dict(file="municipality-updates.html", out="ogp-municipality-updates.png", tone="orange", art="timeline",
-         label="令和8年熊本地震 / 21市町村",
+         label="21市町村", tag="公式発表",
+         target="自治体の一次情報を追う被災者・支援者",
          title="市町村からの公式発信",
          lead="被災自治体が公表した一次情報を自動収集し、日付、自治体、支援分野から探せるよう整理しています。"),
     dict(file="risai-certificate.html", out="ogp-risai-certificate.png", tone="teal", art="risai",
-         label="令和8年熊本地震 / 熊本県全域",
+         label="熊本県全域", tag="証明書手続き",
+         target="住まいに被害を受けたすべての被災者",
          title="り災証明書を/いちから分かりやすく",
          lead="写真・調査・判定・支援金・再調査。被災後の流れを絵と大きな文字で説明します。"),
     dict(file="uto-bulletin.html", out="ogp-uto-bulletin.png", tone="blue", art="bulletin",
-         label="宇土市の広報を読み解く",
+         label="宇土市", tag="広報解説",
+         target="宇土市で被災された住民・ご家族",
          title="広報うと 災害臨時号vol.1/の読み方",
          lead="り災証明・災害ごみ・住まいの修理・支援金・減免を、期限が近い順に並べ直しました。"),
     dict(file="alert-channels.html", out="ogp-alert-channels.png", tone="teal", art="channels",
-         label="令和8年熊本地震",
+         label="21市町村", tag="情報受信",
+         target="市町村からの緊急通知・情報を受け取りたい方",
          title="お知らせの受け取り方",
          lead="公式LINE・メール配信・防災行政無線。市町村ごとの受け取り方を、公式ページで確認してまとめました。"),
     dict(file="official-timeline.html", out="ogp-official-timeline.png", tone="orange", art="timeline",
-         label="21市町村の発信から読み解く",
+         label="21市町村分析", tag="復旧局面",
+         target="復旧経過・局面変化を把握したい支援者・自治体",
          title="発信でたどる被災地の局面",
          lead="何が話題になっていたかの移り変わりを、市町村の公式発信から3つの局面で示します。"),
     dict(file="official-water-recovery.html", out="ogp-official-water.png", tone="sky", art="water",
-         label="21市町村の発信から読み解く",
+         label="21市町村分析", tag="水道・井戸復旧",
+         target="断水・濁り水・井戸水問題に関わる住民・支援者",
          title="水の復旧と、/統計に表れない水の問題",
          lead="断水戸数では0と数えられる濁り水・時間断水・井戸水を、発信と会議記録から補います。"),
     dict(file="official-response-tracks.html", out="ogp-official-tracks.png", tone="purple", art="tracks",
-         label="21市町村の発信から読み解く",
+         label="21市町村分析", tag="初動・対応推移",
+         target="自治体の初動対応・推移を検証したい支援者・関係者",
          title="5つの対応の流れ",
          lead="断水・罹災証明・災害VC・災害ごみ・相談窓口。市町村ごとの動きを時間軸で並べます。"),
     dict(file="volunteer-centers.html", out="ogp-volunteer-centers.png", tone="green", art="volunteer",
-         label="令和8年熊本地震",
+         label="熊本県全域", tag="ボランティア",
+         target="ボランティア参加希望者・活動中の支援団体",
          title="災害ボランティアセンター",
          lead="各地の設置場所と活動状況、運営する社会福祉協議会からの募集・活動の発信をまとめています。"),
     dict(file="uto-housing.html", out="ogp-uto-housing.png", tone="amber", art="housing",
-         label="宇土市",
+         label="宇土市", tag="住まい再建",
+         target="宇土市で住宅被害を受けた被災世帯",
          title="住まいの相談・再建支援",
          lead="応急修理・みなし仮設・公費解体など、住まいの再建に関する宇土市の公式情報への入口です。"),
     dict(file="uto-repair.html", out="ogp-uto-repair.png", tone="teal", art="repair",
-         label="宇土市｜被災された方へ",
+         label="宇土市", tag="住宅修理",
+         target="一部損壊・準半壊・半壊等で自宅修理を行う方",
          title="住宅の応急修理/利用ガイド",
          lead="上限は75万7千円（準半壊は36万7千円）。対象になる修理・写真の撮り方・必要書類・手続きの流れを整理。"),
     dict(file="hq-kumamoto.html", out="ogp-hq-kumamoto.png", tone="pink", art="hq",
-         label="熊本市",
+         label="熊本市", tag="対策本部会議",
+         target="熊本市の被害・避難・本部決定を追う支援者・報道",
          title="災害対策本部会議/のまとめ",
          lead="第1回から公開されている会議資料を並べ、避難者数・住家被害・り災証明の推移を追えるようにしました。"),
     dict(file="hq-yatsushiro.html", out="ogp-hq-yatsushiro.png", tone="green", art="hq",
-         label="八代市",
+         label="八代市", tag="対策本部会議",
+         target="八代市の被害・避難・本部決定を追う支援者・報道",
          title="災害対策本部会議/のまとめ",
          lead="第2回から公開されている会議資料を並べ、避難者数と住家被害の内訳の動きを追えるようにしました。"),
     dict(file="hikawa-support.html", out="ogp-hikawa-support.png", tone="hikawa", art="hikawa",
-         label="氷川町｜被災された方へ",
+         label="氷川町", tag="被災者支援",
+         target="氷川町で被災された住民・ご家族",
          title="被災者支援制度一覧",
          lead="証明書・住まい・支援金・生活の困りごと。氷川町公式の支援制度と窓口を目的から探せます。"),
     dict(file="hikawa-demolition.html", out="ogp-hikawa-demolition.png", tone="hikawa", art="demolition",
-         label="氷川町｜被災家屋等の解体・撤去",
+         label="氷川町", tag="家屋解体",
+         target="半壊以上で家屋解体を検討中の世帯・所有者",
          title="公費解体・自費解体/利用ガイド",
          lead="全壊〜半壊が対象。完全電話予約制・竜北体育センター受付・全10様式と記載例・自費解体の保管書類を整理。"),
     dict(file="uki-support.html", out="ogp-uki-support.png", tone="uki", art="uki",
-         label="宇城市｜被災された方へ",
+         label="宇城市", tag="被災者支援",
+         target="宇城市で被災された住民・ご家族",
          title="被災者支援制度ガイド",
          lead="36の公的支援を全壊〜一部損壊の判定別・困りごと別に整理。支援額・必要書類・窓口を網羅。"),
     dict(file="reconstruction.html", out="ogp-reconstruction.png", tone="teal", art="rebuild",
-         label="被災後の暮らしを、一つずつ",
+         label="生活再建", tag="総合ナビ",
+         target="被災後の生活再建を進めるすべての被災者",
          title="暮らしの再建ナビ",
          lead="住まい・生活資金・各種手続き・健康・仕事。直面している困りごとから自治体や公的機関の支援へ。"),
     dict(file="temporary-housing.html", out="ogp-temporary-housing.png", tone="sky", art="housing_build",
-         label="熊本県全域 / 建設型応急住宅",
+         label="熊本県全域", tag="仮設住宅",
+         target="建設型応急住宅への入居を検討・希望する方",
          title="仮設住宅の整備状況",
          lead="宇土市・宇城市・美里町・甲佐町・氷川町。各団地の戸数、着工日、入居予定、進捗の最新まとめ。"),
     dict(file="guide.html", out="ogp-guide.png", tone="blue", art="guide_book",
-         label="令和8年熊本地震",
+         label="制度解説", tag="生活再建",
+         target="公的支援の仕組みや申請要点を知りたい被災者",
          title="制度・生活再建ガイド",
          lead="罹災証明・生活再建支援金・住宅応急修理・減免制度。知っておくべき支援の仕組みと申請の要点。"),
     dict(file="municipalities.html", out="ogp-municipalities.png", tone="green", art="dashboard",
-         label="21市町村 総合ダッシュボード",
+         label="21市町村", tag="ダッシュボード",
+         target="自治体別の被害・避難・支援状況を調べたい方",
          title="自治体別 被害・支援情報",
          lead="自治体ごとの公式発表タイムライン、被害・避難状況、支援制度、活動記録をワンストップで確認。"),
     dict(file="municipality-support-compare.html", out="ogp-support-compare.png", tone="purple", art="compare",
-         label="被災者支援制度の横断整理",
+         label="21市町村", tag="制度横断比較",
+         target="自治体ごとの支援手厚さ・受付状況を比較したい方",
          title="被災者支援制度/自治体間比較",
          lead="住まい修理・支援金・仮設住宅・災害ごみ。21市町村の対応状況と受付窓口を横並びで比較。"),
     dict(file="hq-uto.html", out="ogp-hq-uto.png", tone="amber", art="hq",
-         label="宇土市",
+         label="宇土市", tag="対策本部会議",
+         target="宇土市の被害・避難・本部決定を追う支援者・報道",
          title="災害対策本部会議/のまとめ",
          lead="公開された全本部会議資料から、避難者数・住家被害・給水・罹災証明受付の推移を整理。"),
     dict(file="shelters.html", out="ogp-shelters.png", tone="orange", art="shelter",
-         label="令和8年熊本地震",
+         label="避難所情報", tag="マップ・一覧",
+         target="避難所を利用中の方・受入状況を確認したい方",
          title="開設中の避難所マップ",
          lead="市町村別の指定避難所の開設・閉鎖状況、避難者数、所在地・設備情報を地図と一覧で確認。"),
     dict(file="timeline.html", out="ogp-timeline.png", tone="blue", art="calendar_clock",
-         label="令和8年熊本地震",
+         label="日々の記録", tag="時系列アーカイブ",
+         target="発災からの推移・経過を検証・確認したい方",
          title="日々の記録",
          lead="発災初日から現在までの地震発生、避難、インフラ復旧、公的支援の動きを日系列でたどる記録。"),
     dict(file="meetings.html", out="ogp-meetings.png", tone="teal", art="meeting",
-         label="支援団体合同会議",
+         label="火の国会議", tag="連携協議",
+         target="現地で救援・連携活動を行う支援関係者",
          title="火の国会議 議事録",
          lead="行政・社協・民間支援団体が共有した現地課題、支援ニーズ、連携の協議経過と公式資料。"),
     dict(file="terms.html", out="ogp-terms.png", tone="sky", art="dictionary",
-         label="災害用語を分かりやすく",
+         label="災害用語", tag="やさしい解説",
+         target="罹災証明や公費解体など制度用語を調べたい方",
          title="災害用語集",
          lead="罹災証明・みなし仮設・公費解体・緊急修理など、災害時に使われる公的用語をやさしく解説。"),
     dict(file="reconstruction-documents.html", out="ogp-reconstruction-documents.png", tone="blue", art="docs",
-         label="暮らしの再建 / テーマ別",
+         label="暮らしの再建", tag="手続き・証明",
+         target="罹災証明・被災届出証明の申請を行う被災者",
          title="証明・申請の手続き",
          lead="罹災証明書・被災届出証明の申請、被害箇所の撮影、必要書類と各自治体の受付窓口。"),
     dict(file="reconstruction-money.html", out="ogp-reconstruction-money.png", tone="amber", art="money",
-         label="暮らしの再建 / テーマ別",
+         label="暮らしの再建", tag="お金・給付",
+         target="支援金・義援金・融資・減免を申請したい被災者",
          title="お金・支払いの支援",
          lead="被災者生活再建支援金・義援金・各種見舞金・融資貸付・税や保険料の減免猶予。"),
     dict(file="reconstruction-health-care.html", out="ogp-reconstruction-health.png", tone="pink", art="health",
-         label="暮らしの再建 / テーマ別",
+         label="暮らしの再建", tag="医療・健康",
+         target="通院・服薬・介護・心のケアが必要な被災者",
          title="健康・医療・介護の支援",
          lead="保険証なし受診・医療費窓口負担の減免・介護保険サービス・こころの健康相談。"),
     dict(file="reconstruction-family.html", out="ogp-reconstruction-family.png", tone="orange", art="family",
-         label="暮らしの再建 / テーマ別",
+         label="暮らしの再建", tag="子ども・学校",
+         target="保育・就学・子育て支援を求める世帯",
          title="子ども・家族の支援",
          lead="保育園・学校の再開、教科書・学用品の給与、給食費減免、育児相談と子育て支援。"),
     dict(file="reconstruction-work-business.html", out="ogp-reconstruction-work.png", tone="purple", art="work",
-         label="暮らしの再建 / テーマ別",
+         label="暮らしの再建", tag="仕事・事業",
+         target="雇用維持・休業手当・事業再開を図る事業者・働く方",
          title="仕事・事業の再開支援",
          lead="雇用調整助成金・休業手当・事業者向け補助金・特別融資・労働相談窓口。"),
     dict(file="reconstruction-agriculture-fishery.html", out="ogp-reconstruction-agri.png", tone="green", art="agri",
-         label="暮らしの再建 / テーマ別",
+         label="暮らしの再建", tag="農林水産業",
+         target="農地・施設・機具・船に被害を受けた農漁業者",
          title="農業・漁業の復旧支援",
          lead="農地・農業用施設・農機具・漁船の被害復旧支援、共済金・特別融資の公的相談。"),
     dict(file="reconstruction-search.html", out="ogp-reconstruction-search.png", tone="teal", art="search",
-         label="暮らしの再建 / 横断検索",
+         label="暮らしの再建", tag="横断検索",
+         target="21市町村の公式情報をキーワードで探したい方",
          title="自治体公式情報を探す",
          lead="21市町村が公表する生活再建情報を、困りごとやキーワードから横断的に検索。"),
     dict(file="reconstruction-official.html", out="ogp-reconstruction-official.png", tone="blue", art="nav",
-         label="暮らしの再建 / 自治体リンク",
+         label="暮らしの再建", tag="公式リンク集",
+         target="各市町村の災害対策窓口へアクセスしたい方",
          title="自治体公式情報ナビ",
          lead="各市町村の災害対策特設ページ、生活支援情報、窓口案内への公式リンク集。"),
     dict(file="disaster.html", out="ogp-disaster-portal.png", tone="teal", art="portal",
-         label="令和8年熊本地震",
+         label="令和8年熊本地震", tag="支援ポータル",
+         target="すべての被災者・支援関係者・ボランティア",
          title="支援情報総合ポータル",
          lead="被災された方の生活再建から自治体公式発表、避難所、ボランティアまで全情報を網羅。"),
     dict(file="affected.html", out="ogp-affected.png", tone="amber", art="affected",
-         label="令和8年熊本地震",
+         label="令和8年熊本地震", tag="総合案内",
+         target="今すぐ生活再建・公的支援情報を必要とする被災者",
          title="被災された方へ",
          lead="今すぐ必要な生活支援、住まいの確保、罹災証明、健康管理、相談窓口の総合案内。"),
     dict(file="supporters.html", out="ogp-supporters.png", tone="green", art="supporters",
-         label="支援者・支援団体の方へ",
+         label="令和8年熊本地震", tag="支援者連携",
+         target="ボランティア・支援団体・物資支援に関わる方",
          title="支援活動・連携ガイド",
          lead="ボランティア参加、物資支援、現地連携会議、活動情報の発信ルールと注意点。"),
     dict(file="official.html", out="ogp-official.png", tone="blue", art="official",
-         label="令和8年熊本地震",
+         label="令和8年熊本地震", tag="一次情報",
+         target="国・県・市町村の公式通達・制度基準を確認したい方",
          title="国・県・市町村の公的情報",
          lead="内閣府・熊本県・各市町村が発表する一次情報、災害救助法の適用、公的支援の最新通達。"),
     dict(file="support.html", out="ogp-support-fields.png", tone="sky", art="support_fields",
-         label="令和8年熊本地震",
+         label="令和8年熊本地震", tag="分野別窓口",
+         target="住まい・お金・医療・雇用など分野別に探したい方",
          title="支援分野別インデックス",
          lead="住まい、生活物資、医療介護、子育て、雇用、法律相談など分野別に支援窓口を整理。"),
 ]
@@ -424,19 +472,20 @@ def font(path: Path, size: int) -> "ImageFont.FreeTypeFont":
     return ImageFont.truetype(str(path), size, index=0)
 
 
-def wrap(text: str, fnt, max_width: int) -> list[str]:
+def wrap(text: str, fnt, max_width: int, respect_slash: bool = True) -> list[str]:
     """日本語は単語で切れないので幅を測って折る。「/」があればそこで折る。"""
-    if "/" in text:
-        return [part for part in text.split("/") if part]
-    lines, current = [], ""
-    for char in text:
-        if fnt.getlength(current + char) > max_width and current:
+    chunks = [p for p in text.split("/") if p] if (respect_slash and "/" in text) else [text]
+    lines = []
+    for chunk in chunks:
+        current = ""
+        for char in chunk:
+            if fnt.getlength(current + char) > max_width and current:
+                lines.append(current)
+                current = char
+            else:
+                current += char
+        if current:
             lines.append(current)
-            current = char
-        else:
-            current += char
-    if current:
-        lines.append(current)
     return lines
 
 
@@ -460,48 +509,77 @@ def build(page: dict) -> Path:
     draw.rectangle([0, H - 76, W, H], fill=tone)
 
     # 絵は右に。薄い地色の板に載せる
-    art_box = (700, 150, 1130, 460)
-    draw.rounded_rectangle(art_box, radius=26, fill=soft)
-    art = render_art(ART[page["art"]], 340)
-    image.paste(art, (art_box[0] + (430 - art.width) // 2,
-                      art_box[1] + (312 - art.height) // 2), art)
+    art_box = (710, 140, 1130, 460)
+    draw.rounded_rectangle(art_box, radius=24, fill=soft, outline=tone, width=2)
+    art = render_art(ART[page["art"]], 320)
+    image.paste(art, (art_box[0] + (420 - art.width) // 2,
+                      art_box[1] + (320 - art.height) // 2), art)
 
     # 表題。2行に収まり、かつ絵の板に重ならない幅になるまで小さくする
-    # （「/」で明示的に折る場合は幅の検査を通らないので、ここで必ず見る）
-    text_width = 590
-    for size in (66, 60, 54, 48, 44, 40, 36):
+    text_width = 580
+    for size in (60, 54, 48, 44, 40, 36):
         title_font = font(BOLD, size)
-        title_lines = wrap(page["title"], title_font, text_width)
+        title_lines = wrap(page["title"], title_font, text_width, respect_slash=True)
         widest = max(title_font.getlength(line) for line in title_lines)
         if len(title_lines) <= 2 and widest <= text_width:
             break
-    lead_font = font(REGULAR, 27)
-    lead_lines = wrap(page["lead"], lead_font, 600)[:3]
 
-    # ラベル・表題・説明をひとまとまりとして、上下の中央に置く
-    title_step, lead_step = int(size * 1.34), 45
-    block = 48 + 26 + len(title_lines) * title_step + 20 + len(lead_lines) * lead_step
-    top = 16 + ((H - 76) - 16 - block) // 2
+    lead_font = font(REGULAR, 25)
+    # リード文は「/」で強制改行しない（スラッシュ記号や日付を保持）
+    lead_lines = wrap(page["lead"], lead_font, text_width, respect_slash=False)[:3]
 
-    label_font = font(BOLD, 26)
-    label_w = int(label_font.getlength(page["label"])) + 36
-    draw.rounded_rectangle([72, top, 72 + label_w, top + 48], radius=10, fill=tone)
-    draw.text((72 + 18, top + 24), page["label"], font=label_font, fill="#ffffff", anchor="lm")
+    label_font = font(BOLD, 22)
 
-    y = top + 48 + 26
+    # 対象者バッジのフォントサイズ調整（枠内に確実に収める）
+    target_raw = f"【対象】{page['target']}"
+    for t_size in (23, 21, 19, 17):
+        target_font = font(BOLD, t_size)
+        if target_font.getlength(target_raw) <= text_width - 32:
+            break
+
+    title_step = int(size * 1.30)
+    lead_step = 40
+
+    # 縦のレイアウト計算（上下中央揃え）
+    block_h = 36 + 12 + 42 + 20 + len(title_lines) * title_step + 16 + len(lead_lines) * lead_step
+    top = 16 + (538 - block_h) // 2
+
+    # ① 自治体・カテゴリバッジ
+    label_w = int(label_font.getlength(page["label"])) + 28
+    draw.rounded_rectangle([72, top, 72 + label_w, top + 36], radius=8, fill=tone)
+    draw.text((72 + 14, top + 18), page["label"], font=label_font, fill="#ffffff", anchor="lm")
+
+    # サブタグ
+    tag = page.get("tag", "令和8年熊本地震")
+    tag_w = int(label_font.getlength(tag)) + 24
+    tag_x = 72 + label_w + 10
+    draw.rounded_rectangle([tag_x, top, tag_x + tag_w, top + 36], radius=8, fill="#ffffff", outline=tone, width=2)
+    draw.text((tag_x + 12, top + 18), tag, font=label_font, fill=tone, anchor="lm")
+
+    # ② 対象者バッジ（一目で誰向けか伝わるように）
+    target_y = top + 36 + 12
+    target_w = int(target_font.getlength(target_raw)) + 28
+    draw.rounded_rectangle([72, target_y, 72 + target_w, target_y + 42], radius=8, fill=soft, outline="#cbd5e1", width=1)
+    draw.rectangle([72, target_y, 72 + 8, target_y + 42], fill="#c2410c")  # オレンジのアクセントライン
+    draw.text((72 + 18, target_y + 21), target_raw, font=target_font, fill="#0f2c3d", anchor="lm")
+
+    # ③ タイトル
+    y = target_y + 42 + 20
     for line in title_lines:
         draw.text((72, y), line, font=title_font, fill=INK)
         y += title_step
-    y += 20
+
+    # ④ リード文
+    y += 16
     for line in lead_lines:
         draw.text((72, y), line, font=lead_font, fill=MUTED)
         y += lead_step
 
-    # 下の帯にサイト名
-    site_font = font(BOLD, 27)
+    # 下の帯にサイト名とURL
+    site_font = font(BOLD, 26)
     draw.text((72, H - 38), "よか隊ネット熊本　災害・支援状況レポート", font=site_font,
               fill="#ffffff", anchor="lm")
-    url_font = font(REGULAR, 23)
+    url_font = font(REGULAR, 22)
     draw.text((W - 72, H - 38), "www.yokatainet.jp", font=url_font, fill="#ffffff", anchor="rm")
 
     path = ROOT / page["out"]
