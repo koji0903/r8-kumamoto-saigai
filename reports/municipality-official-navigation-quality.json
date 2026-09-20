@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-20T11:33:59.241Z",
+  "generatedAt": "2026-09-20T16:14:09.408Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 830,
-  "displayCandidateCount": 570,
-  "classifiedPageCount": 670,
+  "inputCount": 831,
+  "displayCandidateCount": 572,
+  "classifiedPageCount": 672,
   "categoryReport": {
     "home": {
-      "total": 188,
+      "total": 189,
       "high": 67,
-      "medium": 75,
+      "medium": 76,
       "low": 46
     },
     "money": {
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 200,
-      "high": 62,
+      "total": 201,
+      "high": 63,
       "medium": 137,
       "low": 1
     }
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 107,
-      "displayCandidates": 91,
+      "classified": 109,
+      "displayCandidates": 93,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 255,
-    "medium": 315,
+    "high": 256,
+    "medium": 316,
     "low": 100
   },
   "unclassifiedCount": 39,
@@ -365,7 +365,7 @@
       "url": "https://www.town.ashikita.lg.jp/bosai_site/hinan/2025278"
     }
   ],
-  "outOfScopeCount": 83,
+  "outOfScopeCount": 82,
   "outOfScopeByRule": {
     "donation_appeal": 1,
     "hq_meeting_material": 42,
@@ -373,7 +373,7 @@
     "disaster_preparedness": 5,
     "facility_notice": 5,
     "mayor_message": 2,
-    "index_page": 12,
+    "index_page": 11,
     "mutual_aid": 1,
     "overall_guide": 3,
     "press": 3
@@ -751,13 +751,6 @@
       "ruleLabel": "他自治体への応援・受援"
     },
     {
-      "municipalityName": "山鹿市",
-      "title": "震度速報 9月19日 21時9分",
-      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
       "municipalityName": "菊池市",
       "title": "地震関連情報",
       "url": "https://www.city.kikuchi.lg.jp/article/list/1350.html",
@@ -1090,5 +1083,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 671
+  "previousClassifiedPageCount": 670
 }
