@@ -1,0 +1,1028 @@
+/* hikawa-living-support.css - 氷川町 暮らしの支援・補助金総合ガイドスタイル */
+:root {
+  --uto-primary: #185f55;
+  --uto-primary-dark: #0f3d36;
+  --uto-primary-light: #edf7f4;
+  --uto-accent: #d97706;
+  --uto-accent-light: #fef3c7;
+  --uto-border: #cbd5e1;
+  --uto-bg-alt: #f8fafc;
+  --uto-text-main: #1e293b;
+  --uto-text-muted: #64748b;
+  --uto-shadow: 0 4px 6px -1px rgba(0,0,0,0.06), 0 2px 4px -2px rgba(0,0,0,0.04);
+}
+
+.hikawa-living-support-page {
+  color: var(--uto-text-main);
+  background-color: #f1f5f9;
+}
+
+/* ヒーローセクション */
+.uto-sup-hero {
+  background: linear-gradient(135deg, #0f3d36 0%, #185f55 60%, #237b6f 100%);
+  color: #ffffff;
+  padding: 28px 0 40px;
+  position: relative;
+}
+.uto-sup-hero-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.uto-sup-hero-inner .breadcrumb-nav {
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+.uto-sup-hero-inner .breadcrumb-nav a {
+  color: #f1f5f9;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.uto-sup-hero-inner .breadcrumb-nav span[aria-current="page"] {
+  color: #fef08a;
+  font-weight: 700;
+  text-decoration: none;
+}
+.uto-sup-hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+.uto-sup-hero h1 {
+  font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 0 0 16px;
+  color: #ffffff;
+}
+.uto-sup-hero-lead {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 860px;
+  color: #e2e8f0;
+  margin: 0;
+}
+.uto-sup-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.uto-sup-quick-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(255,255,255,0.92);
+  color: var(--uto-primary-dark);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.2s;
+}
+.uto-sup-quick-actions a:hover {
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+.uto-sup-quick-actions a.highlight {
+  background: #fde047;
+  color: #713f12;
+}
+
+/* メインシェル */
+.uto-support-main {
+  width: 100%;
+}
+.uto-sup-shell {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 28px 16px 64px;
+}
+
+/* ハイライト情報バナー（平時×震災連携） */
+.uto-sup-banner {
+  background: #ffffff;
+  border: 2px solid var(--uto-accent);
+  border-radius: 12px;
+  padding: 20px;
+  margin: -24px auto 32px;
+  box-shadow: var(--uto-shadow);
+  position: relative;
+  z-index: 10;
+}
+.uto-sup-banner-tag {
+  display: inline-block;
+  background: var(--uto-accent);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.uto-sup-banner h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #92400e;
+  margin: 0 0 10px;
+}
+.uto-sup-banner p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 12px;
+}
+.uto-sup-banner-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.uto-sup-banner-points li {
+  background: var(--uto-accent-light);
+  border-left: 4px solid var(--uto-accent);
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* 検索・絞り込みツールバー（余白をしっかり確保し選択しやすく改善） */
+.uto-sup-toolbar {
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+.uto-sup-search-row {
+  margin-bottom: 24px;
+}
+.uto-sup-search-label {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+.uto-sup-search-input {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 1.05rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+  background: #f8fafc;
+  color: #1e293b;
+  transition: all 0.2s ease;
+}
+.uto-sup-search-input:focus {
+  background: #ffffff;
+  border-color: var(--uto-primary);
+  box-shadow: 0 0 0 4px rgba(23, 109, 98, 0.15);
+}
+.uto-sup-cat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;
+  padding-top: 4px;
+}
+.uto-sup-cat-btn {
+  background: #ffffff;
+  border: 1.5px solid #94a3b8;
+  border-radius: 9999px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #334155;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.18s ease;
+  line-height: 1.2;
+}
+.uto-sup-cat-btn:hover {
+  background: var(--uto-primary-light);
+  border-color: var(--uto-primary);
+  color: var(--uto-primary-dark);
+  transform: translateY(-1px);
+}
+.uto-sup-cat-btn.active {
+  background: var(--uto-primary);
+  border-color: var(--uto-primary-dark);
+  color: #ffffff;
+  box-shadow: 0 3px 8px rgba(23, 109, 98, 0.28);
+}
+
+/* カウント・ステータスバー */
+.uto-sup-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 12px;
+  padding: 12px 18px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.uto-sup-caution {
+  margin-bottom: 32px;
+  padding: 14px 18px;
+  border: 1px solid #f3c969;
+  border-left: 5px solid #d97706;
+  border-radius: 8px;
+  background: #fffbeb;
+  color: #713f12;
+  font-size: 0.925rem;
+  line-height: 1.7;
+}
+
+.uto-sup-caution strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* セクションとカード（1列構成） */
+.uto-sup-section {
+  margin-bottom: 48px;
+}
+.uto-sup-sec-header {
+  border-bottom: 2px solid var(--uto-primary);
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.uto-sup-sec-header h2 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--uto-primary-dark);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.uto-sup-sec-header span.sec-count {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--uto-text-muted);
+}
+
+/* 1列構成（改行過多を防ぐシングルカラムリスト形式） */
+.uto-sup-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* カードスタイル（1列ワイド） */
+.uto-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1.5px solid #e2e8f0;
+  padding: 24px 28px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.uto-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: #94a3b8;
+}
+.uto-card-header-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.uto-card-icon-box {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--uto-primary-light);
+  border: 1.5px solid #b2dfdb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--uto-primary-dark);
+  box-shadow: 0 2px 5px rgba(23, 109, 98, 0.1);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.uto-card:hover .uto-card-icon-box {
+  transform: scale(1.08);
+  background: #d4ede7;
+}
+.uto-card-icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.uto-card-title-meta {
+  flex: 1;
+  min-width: 0;
+}
+.uto-card-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.uto-badge-cat {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--uto-primary-light);
+  color: var(--uto-primary-dark);
+}
+.uto-badge-feature {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #fef08a;
+  color: #854d0e;
+}
+.uto-badge-match {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+.uto-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.4;
+  margin: 0;
+  color: #0f172a;
+}
+.uto-card-amount {
+  background: #f0fdf4;
+  border-left: 4px solid #10b981;
+  border-radius: 0 6px 6px 0;
+  padding: 8px 14px;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #047857;
+}
+.uto-card-desc {
+  font-size: 0.975rem;
+  line-height: 1.75;
+  color: #334155;
+  margin: 0 0 14px;
+}
+.uto-card-extra {
+  font-size: 0.9rem;
+  background: #fffbeb;
+  border: 1px dashed #d97706;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #92400e;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+.uto-card-extra b {
+  display: inline-block;
+  margin-right: 4px;
+}
+.uto-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+.card-hash-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+.uto-card-footer {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 16px;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.uto-card-dept {
+  font-size: 0.925rem;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.uto-card-phone {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--uto-primary-dark);
+  text-decoration: none;
+  background: #e6f5f1;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: all 0.15s;
+}
+.uto-card-phone:hover {
+  background: #b2dfdb;
+  text-decoration: none;
+}
+.uto-card-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--uto-primary);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.925rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s;
+}
+.uto-card-link:hover {
+  background: var(--uto-primary-dark);
+  transform: translateY(-1px);
+}
+
+/* 一致なし表示 */
+.uto-sup-empty {
+  text-align: center;
+  padding: 48px 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  color: #64748b;
+  font-size: 1.05rem;
+}
+
+/* 相談・庁舎案内セクション */
+.uto-sup-contact-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid var(--uto-border);
+  box-shadow: var(--uto-shadow);
+  margin-top: 40px;
+}
+.uto-sup-contact-box h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--uto-primary-dark);
+  margin: 0 0 14px;
+}
+.uto-sup-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.uto-sup-contact-item {
+  background: var(--uto-bg-alt);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+.uto-sup-contact-item b {
+  display: block;
+  font-size: 0.95rem;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+.uto-sup-contact-item p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0 0 6px;
+}
+.uto-sup-contact-item a {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--uto-primary);
+  text-decoration: none;
+}
+
+/* かんたん条件シミュレーター スタイル */
+.uto-sim-card {
+  background: #ffffff;
+  border: 2px solid var(--uto-primary);
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 36px;
+  box-shadow: 0 4px 16px rgba(23, 109, 98, 0.08);
+}
+.uto-sim-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.uto-sim-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.uto-sim-badge {
+  display: inline-block;
+  background: var(--uto-primary);
+  color: #ffffff;
+  font-size: 0.825rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+.uto-sim-header h2 {
+  font-size: clamp(1.2rem, 2.4vw, 1.45rem);
+  font-weight: 800;
+  color: var(--uto-primary-dark);
+  margin: 0;
+}
+.uto-sim-reset-btn {
+  background: #f1f5f9;
+  border: 1.5px solid #cbd5e1;
+  color: #475569;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+.uto-sim-reset-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+.uto-sim-guide {
+  font-size: 0.975rem;
+  line-height: 1.7;
+  color: #334155;
+  margin: 0 0 24px;
+}
+.uto-sim-privacy-note {
+  display: block;
+  font-size: 0.825rem;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+/* クイック診断プリセット */
+.uto-sim-presets {
+  margin-bottom: 24px;
+}
+.uto-sim-presets-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+.uto-sim-preset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+.uto-sim-preset-btn {
+  min-width: 0;
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 14px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.uto-sim-preset-btn:hover {
+  border-color: var(--uto-primary);
+  background: var(--uto-primary-light);
+  transform: translateY(-2px);
+}
+.uto-sim-preset-btn.active {
+  background: var(--uto-primary);
+  border-color: var(--uto-primary-dark);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(23, 109, 98, 0.25);
+}
+.uto-sim-preset-btn .preset-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+.uto-sim-preset-btn .preset-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.uto-sim-preset-btn .preset-desc {
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.uto-sim-preset-btn.active .preset-desc {
+  color: #e6f5f1;
+}
+
+/* 詳細条件アコーディオン（押しやすく目立つデザインへ刷新） */
+.uto-sim-details {
+  border-top: 1.5px dashed #cbd5e1;
+  padding-top: 24px;
+  margin-top: 24px;
+}
+.uto-sim-details-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: linear-gradient(135deg, #e6f5f1 0%, #f0fdf4 100%);
+  border: 2px solid var(--uto-primary);
+  border-radius: 12px;
+  padding: 14px 20px;
+  box-shadow: 0 4px 14px rgba(23, 109, 98, 0.1);
+  transition: all 0.2s ease;
+  list-style: none;
+}
+.uto-sim-details-summary::-webkit-details-marker {
+  display: none;
+}
+.uto-sim-details-summary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(23, 109, 98, 0.18);
+  border-color: var(--uto-primary-dark);
+}
+.uto-sim-details[open] > .uto-sim-details-summary {
+  background: var(--uto-primary);
+  border-color: var(--uto-primary-dark);
+  color: #ffffff;
+  border-radius: 12px 12px 0 0;
+}
+.uto-sim-summary-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.uto-sim-gear-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1.5px solid #b2dfdb;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 5px rgba(23, 109, 98, 0.12);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.uto-sim-details-summary:hover .uto-sim-gear-icon {
+  transform: rotate(45deg);
+}
+.uto-sim-details[open] .uto-sim-gear-icon {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+.uto-sim-summary-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.uto-sim-summary-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--uto-primary-dark);
+  line-height: 1.3;
+}
+.uto-sim-details[open] .uto-sim-summary-title {
+  color: #ffffff;
+}
+.uto-sim-summary-sub {
+  font-size: 0.85rem;
+  color: #475569;
+  font-weight: 500;
+}
+.uto-sim-details[open] .uto-sim-summary-sub {
+  color: #e6f5f1;
+}
+.uto-sim-summary-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1.5px solid var(--uto-primary);
+  color: var(--uto-primary-dark);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+}
+.uto-sim-details-summary:hover .uto-sim-summary-toggle {
+  background: var(--uto-primary-light);
+}
+.uto-sim-details[open] .uto-sim-summary-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.uto-sim-details[open] .toggle-arrow {
+  transform: rotate(180deg);
+}
+.toggle-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 0.75rem;
+}
+.uto-sim-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 22px;
+  background: #f8fafc;
+  border-radius: 0 0 12px 12px;
+  border: 2px solid var(--uto-primary);
+  border-top: none;
+}
+.uto-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.uto-filter-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+.uto-filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+.uto-chip-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.uto-chip-label input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.uto-chip-label span {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  color: #334155;
+  transition: all 0.18s ease;
+}
+.uto-chip-label:hover span {
+  border-color: var(--uto-primary);
+  color: var(--uto-primary-dark);
+  background: var(--uto-primary-light);
+}
+.uto-chip-label input:checked + span {
+  background: var(--uto-primary);
+  border-color: var(--uto-primary-dark);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(23, 109, 98, 0.2);
+}
+
+/* 適用中条件・検索結果サマリーバー（リアルタイムフィードバック） */
+.uto-sim-active-bar {
+  background: #ffffff;
+  border: 2px solid var(--uto-primary);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-top: 24px;
+  box-shadow: 0 4px 16px rgba(23, 109, 98, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: utoFadeIn 0.25s ease-out;
+}
+@keyframes utoFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.uto-sim-active-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 1.5px solid #e2e8f0;
+  padding-bottom: 12px;
+}
+.uto-sim-result-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--uto-primary-dark);
+}
+.uto-sim-result-count {
+  background: var(--uto-primary);
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 800;
+  padding: 2px 14px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(23, 109, 98, 0.25);
+}
+.uto-sim-active-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.uto-sim-scroll-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--uto-primary);
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.925rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(23, 109, 98, 0.2);
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.uto-sim-scroll-btn:hover {
+  background: var(--uto-primary-dark);
+  transform: translateY(-1px);
+}
+.uto-sim-clear-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #f1f5f9;
+  border: 1.5px solid #cbd5e1;
+  color: #475569;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.uto-sim-clear-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+.uto-sim-active-tags-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.active-bar-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #475569;
+}
+.active-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.active-cond-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1.5px solid var(--uto-primary);
+  color: var(--uto-primary-dark);
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+.active-cond-tag .remove-cond {
+  cursor: pointer;
+  color: #94a3b8;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+}
+.active-cond-tag .remove-cond:hover {
+  color: #ef4444;
+}
+
+/* 条件一致カードの強調表示 */
+.uto-card.matched {
+  border: 2px solid #10b981;
+  border-left: 6px solid #10b981;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.15);
+  background: linear-gradient(to right, #f0fdf4 0%, #ffffff 90px);
+  position: relative;
+}
+.uto-card.matched .uto-badge-match {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 4px;
+  background: #d1fae5;
+  color: #065f46;
+  border: 1.5px solid #34d399;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(16, 185, 129, 0.2);
+}
+
+@media (max-width: 640px) {
+  .uto-sup-hero {
+    padding: 28px 16px 36px;
+  }
+  .uto-sup-banner {
+    margin-top: -16px;
+    padding: 16px;
+  }
+  .uto-sup-toolbar {
+    padding: 18px 16px;
+  }
+  .uto-sup-cat-btn {
+    padding: 8px 14px;
+    font-size: 0.875rem;
+  }
+  .uto-card {
+    padding: 18px 16px;
+  }
+  .uto-card-header-flex {
+    gap: 12px;
+  }
+  .uto-card-icon-box {
+    width: 44px;
+    height: 44px;
+  }
+  .uto-card-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .uto-card h3 {
+    font-size: 1.15rem;
+  }
+  .uto-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .uto-card-link {
+    width: 100%;
+    justify-content: center;
+  }
+  .uto-sim-card {
+    padding: 18px 16px;
+  }
+  .uto-sim-preset-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
