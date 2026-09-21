@@ -4,7 +4,7 @@ import fs from 'node:fs';
 console.log('宇土市 暮らしの支援・補助金総合ガイドテスト開始');
 
 const html = fs.readFileSync('uto-support.html', 'utf8');
-const expectedCardCount = 58;
+const expectedCardCount = 71;
 assert.ok(html.includes('<title>宇土市：暮らしの支援・補助金 総合ガイド'), 'タイトルが正しくありません');
 assert.ok(html.includes('<meta name="description"'), 'descriptionがありません');
 
