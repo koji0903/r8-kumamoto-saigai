@@ -205,6 +205,11 @@ ART = {
 }
 
 PAGES = [
+    dict(file="uto-support.html", out="ogp-uto-support.png", tone="teal", art="support_fields",
+         label="宇土市", tag="暮らしの支援・補助金",
+         target="宇土市民・被災者・子育て世帯・シニア・事業者",
+         title="暮らしの支援・補助金/総合ガイド",
+         lead="住まい（リフォーム・耐震）・子育て・健康・福祉・産業まで全53制度を整理。熊本地震復興支援との連携ルール・一次情報リンク完備。"),
     dict(file="uki-consultation.html", out="ogp-uki-consultation.png", tone="uki", art="meeting",
          label="宇城市", tag="無料相談会",
          target="法律・ローン・相続・解体・手続きで悩む被災者",
