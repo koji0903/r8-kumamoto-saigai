@@ -1618,11 +1618,20 @@ def generate_html():
           </div>
         </div>
 
-        <!-- ② 詳細条件折りたたみパネル -->
+        <!-- ② 詳細条件折りたたみパネル（目立つデザインへ刷新） -->
         <details class="uto-sim-details" id="utoSimDetails">
           <summary class="uto-sim-details-summary">
-            <span>⚙️ さらに詳細な条件で絞り込む（年齢・住まい・収入・被災状況など）</span>
-            <span class="uto-sim-summary-toggle">開く ▼</span>
+            <div class="uto-sim-summary-content">
+              <span class="uto-sim-gear-icon" aria-hidden="true">⚙️</span>
+              <div class="uto-sim-summary-text">
+                <strong class="uto-sim-summary-title">さらに詳細な条件で絞り込む</strong>
+                <span class="uto-sim-summary-sub">年齢・世帯・住まい・収入・被災状況・お仕事など全23項目から選ぶ</span>
+              </div>
+            </div>
+            <span class="uto-sim-summary-toggle">
+              <span class="toggle-text">条件を開く</span>
+              <span class="toggle-arrow" aria-hidden="true">▼</span>
+            </span>
           </summary>
           <div class="uto-sim-filter-grid">
 
@@ -1763,10 +1772,27 @@ def generate_html():
           </div>
         </details>
 
-        <!-- ③ 選択中条件の表示バー -->
+        <!-- ③ 選択中条件・絞り込み結果サマリーバー（リアルタイムフィードバック） -->
         <div class="uto-sim-active-bar" id="utoSimActiveBar" style="display: none;">
-          <span class="active-bar-label">適用中の条件：</span>
-          <div class="active-tags-container" id="utoSimActiveTags"></div>
+          <div class="uto-sim-active-top">
+            <div class="uto-sim-result-badge">
+              <span>🎯 絞り込み結果：</span>
+              <strong class="uto-sim-result-count" id="utoSimResultCount">0件</strong>
+              <span style="font-size: 0.85rem; color: #475569; font-weight: normal;">（主要58制度中）</span>
+            </div>
+            <div class="uto-sim-active-actions">
+              <button type="button" class="uto-sim-scroll-btn" id="utoSimScrollBtn">
+                <span>👇 該当する制度を見る</span>
+              </button>
+              <button type="button" class="uto-sim-clear-btn" id="utoSimClearBtn">
+                <span>条件をすべて解除 ×</span>
+              </button>
+            </div>
+          </div>
+          <div class="uto-sim-active-tags-row">
+            <span class="active-bar-label">適用中の条件：</span>
+            <div class="active-tags-container" id="utoSimActiveTags"></div>
+          </div>
         </div>
       </section>
 

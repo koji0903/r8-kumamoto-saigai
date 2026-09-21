@@ -662,45 +662,126 @@
   color: #e6f5f1;
 }
 
-/* 詳細条件アコーディオン */
+/* 詳細条件アコーディオン（押しやすく目立つデザインへ刷新） */
 .uto-sim-details {
-  border-top: 1.5px solid #e2e8f0;
-  padding-top: 20px;
-  margin-top: 20px;
+  border-top: 1.5px dashed #cbd5e1;
+  padding-top: 24px;
+  margin-top: 24px;
 }
 .uto-sim-details-summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--uto-primary);
-  padding: 10px 8px;
-  border-radius: 8px;
-  transition: background 0.15s;
+  background: linear-gradient(135deg, #e6f5f1 0%, #f0fdf4 100%);
+  border: 2px solid var(--uto-primary);
+  border-radius: 12px;
+  padding: 14px 20px;
+  box-shadow: 0 4px 14px rgba(23, 109, 98, 0.1);
+  transition: all 0.2s ease;
   list-style: none;
 }
 .uto-sim-details-summary::-webkit-details-marker {
   display: none;
 }
 .uto-sim-details-summary:hover {
-  background: var(--uto-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(23, 109, 98, 0.18);
+  border-color: var(--uto-primary-dark);
+}
+.uto-sim-details[open] > .uto-sim-details-summary {
+  background: var(--uto-primary);
+  border-color: var(--uto-primary-dark);
+  color: #ffffff;
+  border-radius: 12px 12px 0 0;
+}
+.uto-sim-summary-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.uto-sim-gear-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1.5px solid #b2dfdb;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 5px rgba(23, 109, 98, 0.12);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.uto-sim-details-summary:hover .uto-sim-gear-icon {
+  transform: rotate(45deg);
+}
+.uto-sim-details[open] .uto-sim-gear-icon {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+.uto-sim-summary-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.uto-sim-summary-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--uto-primary-dark);
+  line-height: 1.3;
+}
+.uto-sim-details[open] .uto-sim-summary-title {
+  color: #ffffff;
+}
+.uto-sim-summary-sub {
+  font-size: 0.85rem;
+  color: #475569;
+  font-weight: 500;
+}
+.uto-sim-details[open] .uto-sim-summary-sub {
+  color: #e6f5f1;
 }
 .uto-sim-summary-toggle {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #64748b;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1.5px solid var(--uto-primary);
+  color: var(--uto-primary-dark);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+}
+.uto-sim-details-summary:hover .uto-sim-summary-toggle {
+  background: var(--uto-primary-light);
+}
+.uto-sim-details[open] .uto-sim-summary-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.uto-sim-details[open] .toggle-arrow {
+  transform: rotate(180deg);
+}
+.toggle-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 0.75rem;
 }
 .uto-sim-filter-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  margin-top: 18px;
-  padding: 20px;
+  padding: 22px;
   background: #f8fafc;
-  border-radius: 10px;
-  border: 1.5px solid #e2e8f0;
+  border-radius: 0 0 12px 12px;
+  border: 2px solid var(--uto-primary);
+  border-top: none;
 }
 .uto-filter-group {
   display: flex;
@@ -750,22 +831,103 @@
   box-shadow: 0 2px 6px rgba(23, 109, 98, 0.2);
 }
 
-/* 適用中条件バー */
+/* 適用中条件・検索結果サマリーバー（リアルタイムフィードバック） */
 .uto-sim-active-bar {
+  background: #ffffff;
+  border: 2px solid var(--uto-primary);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-top: 24px;
+  box-shadow: 0 4px 16px rgba(23, 109, 98, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: utoFadeIn 0.25s ease-out;
+}
+@keyframes utoFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.uto-sim-active-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 1.5px solid #e2e8f0;
+  padding-bottom: 12px;
+}
+.uto-sim-result-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--uto-primary-dark);
+}
+.uto-sim-result-count {
+  background: var(--uto-primary);
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 800;
+  padding: 2px 14px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(23, 109, 98, 0.25);
+}
+.uto-sim-active-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.uto-sim-scroll-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--uto-primary);
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.925rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(23, 109, 98, 0.2);
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.uto-sim-scroll-btn:hover {
+  background: var(--uto-primary-dark);
+  transform: translateY(-1px);
+}
+.uto-sim-clear-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #f1f5f9;
+  border: 1.5px solid #cbd5e1;
+  color: #475569;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.uto-sim-clear-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+.uto-sim-active-tags-row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-  background: #e6f5f1;
-  border: 1.5px solid #b2dfdb;
-  border-radius: 10px;
-  padding: 12px 18px;
-  margin-top: 20px;
+  gap: 8px;
 }
 .active-bar-label {
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--uto-primary-dark);
+  color: #475569;
 }
 .active-tags-container {
   display: flex;
@@ -795,9 +957,26 @@
   color: #ef4444;
 }
 
+/* 条件一致カードの強調表示 */
 .uto-card.matched {
-  border-color: var(--uto-primary);
-  box-shadow: 0 4px 14px rgba(23, 109, 98, 0.14);
+  border: 2px solid #10b981;
+  border-left: 6px solid #10b981;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.15);
+  background: linear-gradient(to right, #f0fdf4 0%, #ffffff 90px);
+  position: relative;
+}
+.uto-card.matched .uto-badge-match {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 4px;
+  background: #d1fae5;
+  color: #065f46;
+  border: 1.5px solid #34d399;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(16, 185, 129, 0.2);
 }
 
 @media (max-width: 640px) {

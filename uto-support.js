@@ -9,8 +9,12 @@
     const presetButtons = document.querySelectorAll('.uto-sim-preset-btn');
     const resetBtn = document.getElementById('utoSimResetBtn');
     const simDetails = document.getElementById('utoSimDetails');
+    const simToggleText = document.querySelector('.uto-sim-summary-toggle .toggle-text');
     const activeBar = document.getElementById('utoSimActiveBar');
     const activeTagsContainer = document.getElementById('utoSimActiveTags');
+    const simResultCount = document.getElementById('utoSimResultCount');
+    const simScrollBtn = document.getElementById('utoSimScrollBtn');
+    const simClearBtn = document.getElementById('utoSimClearBtn');
     const filterCheckboxes = document.querySelectorAll('.uto-filter-chips input[type="checkbox"]');
 
     const sections = document.querySelectorAll('.uto-sup-section');
@@ -151,7 +155,7 @@
 
             if (hasActiveFilters) {
               card.classList.add('matched');
-              if (matchBadge) matchBadge.style.display = 'inline-block';
+              if (matchBadge) matchBadge.style.display = 'inline-flex';
             } else {
               card.classList.remove('matched');
               if (matchBadge) matchBadge.style.display = 'none';
@@ -175,9 +179,19 @@
         }
       });
 
-      // カウント表示更新
+      // サマリーバー・カウント表示更新
+      if (simResultCount) {
+        simResultCount.textContent = `${visibleCount}件`;
+      }
+      if (simScrollBtn) {
+        simScrollBtn.innerHTML = `<span>👇 該当する制度を見る（${visibleCount}件）</span>`;
+      }
       if (countDisplay) {
-        countDisplay.textContent = `表示中：${visibleCount}件 / 主要${cards.length}制度`;
+        if (hasActiveFilters || query || activeCategory !== 'all') {
+          countDisplay.innerHTML = `表示中：<strong style="color:var(--uto-primary-dark); font-size:1.1rem;">${visibleCount}件</strong> / 主要${cards.length}制度 <span class="uto-badge-match" style="display:inline-flex; vertical-align:middle; margin-left:6px;">条件で絞り込み中</span>`;
+        } else {
+          countDisplay.textContent = `表示中：${visibleCount}件 / 主要${cards.length}制度`;
+        }
       }
 
       // 該当なし表示
@@ -196,7 +210,7 @@
       activeTagsContainer.innerHTML = '';
       let tagCount = 0;
 
-      Object.entries(filters).forEach(([groupKey, values]) => {
+      Object.entries(filters).forEach(([, values]) => {
         values.forEach(val => {
           tagCount++;
           const tag = document.createElement('span');
@@ -241,6 +255,28 @@
       filterCards();
     }
 
+    // 詳細条件アコーディオンのトグル開閉テキスト制御
+    if (simDetails && simToggleText) {
+      simDetails.addEventListener('toggle', () => {
+        simToggleText.textContent = simDetails.open ? '条件を閉じる' : '条件を開く';
+      });
+    }
+
+    // 結果一覧へのスムーズスクロール
+    if (simScrollBtn) {
+      simScrollBtn.addEventListener('click', () => {
+        const target = document.querySelector('.uto-card:not([style*="display: none"])') || document.querySelector('.uto-sup-toolbar');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+
+    // 全解除ボタン
+    if (simClearBtn) {
+      simClearBtn.addEventListener('click', resetAll);
+    }
+
     // プリセットボタンのクリックイベント
     presetButtons.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -262,7 +298,7 @@
         // プリセットの定義をチェックボックスに反映
         const conf = presets[presetKey];
         if (conf) {
-          Object.entries(conf).forEach(([group, values]) => {
+          Object.entries(conf).forEach(([, values]) => {
             values.forEach(val => {
               const cb = document.querySelector(`.uto-filter-chips input[value="${val}"]`);
               if (cb) cb.checked = true;
