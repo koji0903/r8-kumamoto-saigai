@@ -109,7 +109,13 @@ function getFileDate(relPath) {
       gitDateCache.set(relPath, todayInJapan);
       return todayInJapan;
     }
-    const d = execFileSync("git", ["log", "-1", "--format=%cs", "--", relPath], { cwd: root, encoding: "utf8" }).trim();
+    // 未コミット時の todayInJapan と揃えるため、コミット日時も日本時間の日付で取る。
+    // %cs（UTC基準）だと、日本時間の朝9時より前に作られたコミットが前日付になり検査が落ちる。
+    const d = execFileSync("git", ["log", "-1", "--format=%cd", "--date=format-local:%Y-%m-%d", "--", relPath], {
+      cwd: root,
+      encoding: "utf8",
+      env: { ...process.env, TZ: "Asia/Tokyo" }
+    }).trim();
     gitDateCache.set(relPath, d);
     return d;
   } catch {
