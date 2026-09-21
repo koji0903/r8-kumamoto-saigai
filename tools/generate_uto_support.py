@@ -55,7 +55,7 @@ ICONS = {
     "tax_relief": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>'''
 }
 
-# 全53制度の定義
+# 宇土市の主要な支援制度の定義
 SYSTEMS = [
     # 1. 住まい・耐震・環境
     {
@@ -383,10 +383,10 @@ SYSTEMS = [
         "amount": "学用品費、通学用品費、校外活動費、修学旅行費、学校給食費等の全額または一部",
         "desc": "経済的理由により小中学校への就学が困難な世帯に対し、学用品費や給食費、修学旅行費などの必要な費用を援助する制度です（前年所得等による審査あり）。",
         "extra": "【熊本地震による特例】災害により家計が急変したり住家に甚大な被害を受けた世帯についても、随時申請・特例認定の対象となります。",
-        "dept": "学校教育課 学事給食係",
-        "phone": "0964-27-3338",
-        "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
-        "urlLabel": "宇土市公式：まちづくりハンドブック（学事給食係） ↗",
+        "dept": "学校教育課 学務係",
+        "phone": "0964-22-6500",
+        "url": "https://www.city.uto.lg.jp/article/view/1068/11514.html",
+        "urlLabel": "宇土市公式：就学援助 ↗",
         "icon": "school_aid",
         "life": ["child_school"],
         "family": ["childcare", "single_parent"],
@@ -1185,6 +1185,326 @@ SYSTEMS = [
     }
 ]
 
+# 公式資料との照合結果を反映する補正データ。
+# 元データを残しつつ、制度改定時に差分を追いやすい形で上書きする。
+HANDBOOK_URL = "https://www.city.uto.lg.jp/article/view/1032/14818.html"
+
+VERIFIED_UPDATES = {
+    "宇土市住宅リフォーム助成事業": {
+        "phone": "0964-27-3328",
+        "extra": "令和8年度は対象工事費（税抜）30万円以上、着工前申請が必要です。受付は令和8年6月19日から9月30日までですが、予定件数に達すると早期終了します。応急修理完了後の追加工事や、義援金・生活再建支援金の受給者も対象になり得ます。",
+    },
+    "戸建て木造住宅耐震診断事業補助金": {
+        "badge": "診断費の9/10以内",
+        "amount": "補助率9/10以内・上限13万5,000円等（住宅の区分により補助率・上限が異なります）",
+        "desc": "平成12年5月31日以前に着工した戸建て木造住宅、または平成28年熊本地震でり災したことを証明できる住宅について、精密耐震診断費用の一部を補助します。",
+        "extra": "現に所有者が居住する住宅などの要件があります。無料派遣制度ではないため、契約前に都市整備課へ補助対象と自己負担額を確認してください。",
+        "tags": ["#木造住宅", "#平成12年5月以前", "#精密耐震診断"],
+    },
+    "戸建て木造住宅耐震改修等事業補助金（建替え・改修）": {
+        "badge": "区分により最大157.5万円",
+        "amount": "耐震改修・建替え：補助率4/5～9/10以内、上限115万円～157万5,000円 / 耐震シェルター：1/2以内・上限20万円",
+        "desc": "耐震診断で倒壊の危険性があると判断された戸建て木造住宅等について、耐震改修設計・工事、建替え設計・工事、耐震シェルター設置費を補助します。",
+        "extra": "着工時期、世帯区分、住宅の建築時期により補助率と上限が異なります。交付決定前の契約・着工は避け、事前に都市整備課へ確認してください。",
+        "tags": ["#木造住宅", "#耐震改修・建替え", "#シェルター上限20万"],
+    },
+    "危険ブロック塀等安全確保支援事業補助金": {
+        "badge": "撤去最大20万円",
+        "amount": "補助率2/3以内。撤去は上限20万円、撤去後の安全な塀への改修は上限10万円（塀の長さによる限度額あり）",
+        "extra": "避難路に面し、高さや安全点検等の要件を満たす塀が対象です。職員の現地確認と交付決定の前に工事契約をすると対象外になります。",
+        "tags": ["#危険ブロック塀", "#撤去上限20万", "#事前現地確認"],
+        "url": "https://www.city.uto.lg.jp/d?q=5c4c3e8df8a89af6c6cb1df83fee2565.pdf",
+        "urlLabel": "宇土市公式：危険ブロック塀等補助案内 ↗",
+    },
+    "老朽危険空家等除去促進事業補助金": {
+        "badge": "解体費2/3・最大90万円",
+        "amount": "補助対象経費の2/3（上限90万円）",
+        "desc": "市の事前調査で老朽化の不良度・危険度要件を満たした空家について、市内の許可事業者による敷地全体の除却費用を補助します。",
+        "extra": "1年以上使用されていない住宅であることなど複数要件があります。申請前の事前調査が必要です。",
+        "tags": ["#危険空家", "#解体費2/3", "#上限90万円"],
+    },
+    "雨水貯留施設設置補助金": {
+        "title": "宇土市雨水タンク設置補助金",
+        "badge": "容量別・最大3.5万円",
+        "amount": "200L以上：上限3万5,000円 / 50L以上200L未満：設置費の1/2・上限2万4,000円",
+        "desc": "自ら居住する市内住宅に、有効貯水量50リットル以上で雨どい等に接続する雨水タンクを設置する費用を補助します。",
+        "extra": "同一住宅につき1基。交付決定を受けてから設置してください。",
+        "dept": "環境交通課 環境交通係",
+        "phone": "0964-27-3316",
+        "url": "https://www.city.uto.lg.jp/article/view/1048/2199.html",
+        "urlLabel": "宇土市公式：雨水タンク・雨水浸透ます補助 ↗",
+        "tags": ["#雨水タンク", "#50L以上", "#設置前申請"],
+    },
+    "合併処理浄化槽設置整備事業補助金": {
+        "dept": "環境交通課 環境交通係", "phone": "0964-27-3316",
+        "url": "https://www.city.uto.lg.jp/article/view/1240/245.html", "urlLabel": "宇土市公式：浄化槽設置事業補助金 ↗",
+    },
+    "生ごみ処理機器等購入費補助金": {
+        "title": "宇土市生ごみ処理機購入補助金", "dept": "環境交通課 環境交通係", "phone": "0964-27-3316",
+        "url": "https://www.city.uto.lg.jp/article/view/1006/247.html", "urlLabel": "宇土市公式：生ごみ処理機購入補助金 ↗",
+    },
+    "宇土市空き家バンク活用促進補助金": {
+        "title": "宇土市空き家バンク登録物件補助金",
+        "badge": "取得・改修・家財撤去を支援",
+        "amount": "空き家取得：上限50万円（指定区域100万円） / 賃貸物件改修：1/2・上限50万円（指定区域100万円） / 家財撤去：上限10万円（指定区域20万円）",
+        "desc": "空き家バンク登録物件の取得、賃貸物件の改修、売買・賃貸に伴う家財撤去費用を補助します。指定区域は住吉中学校区・網田中学校区です。",
+        "extra": "事業ごとに申請者、対象経費、申請期限が異なります。所有権移転登記または賃貸借契約後1年以内が基本です。",
+        "dept": "まちづくり推進課 定住移住推進係", "phone": "0964-27-4106",
+        "url": "https://www.city.uto.lg.jp/article/view/1207/8835.html", "urlLabel": "宇土市公式：空き家バンク登録物件補助金 ↗",
+        "tags": ["#空き家取得", "#賃貸物件改修", "#家財撤去"],
+    },
+    "子ども医療費助成事業": {
+        "title": "宇土市子ども医療費助成",
+        "url": "https://www.city.uto.lg.jp/article/view/1056/9210.html", "urlLabel": "宇土市公式：子ども医療費助成 ↗",
+    },
+    "児童手当": {
+        "url": "https://www.city.uto.lg.jp/article/view/1056/1078.html", "urlLabel": "宇土市公式：児童手当 ↗",
+    },
+    "児童扶養手当": {
+        "amount": "全部支給月額46,690円（児童1人・令和7年4月時点）／一部支給・児童数加算あり",
+        "extra": "手当額は物価変動等で改定されます。最新額と所得制限は申請前に公式ページで確認してください。",
+        "url": "https://www.city.uto.lg.jp/article/view/1058/1042.html", "urlLabel": "宇土市公式：児童扶養手当 ↗",
+    },
+    "ひとり親家庭等医療費助成": {
+        "amount": "保険診療による本人負担額の2/3を助成",
+        "extra": "親は児童が20歳になる月末まで、児童は18歳到達後最初の3月31日までが基本です。所得等の要件と申請期限があります。",
+        "url": "https://www.city.uto.lg.jp/article/view/1202/1032.html", "urlLabel": "宇土市公式：ひとり親家庭等医療費助成 ↗",
+    },
+    "ひとり親家庭児童入学祝金": {
+        "amount": "翌年度に小学校へ入学する児童1人につき2万円",
+        "desc": "3月1日現在、市内に住所を有するひとり親家庭で、翌年度4月に小学校へ入学する児童を養育する方へ祝金を支給します。",
+        "extra": "申請時期は2月です。中学校入学分は公式資料で確認できないため掲載対象に含めていません。",
+        "url": "https://www.city.uto.lg.jp/article/view/1202/1033.html", "urlLabel": "宇土市公式：ひとり親家庭児童入学祝金 ↗",
+        "tags": ["#ひとり親", "#小学校入学", "#2万円"],
+    },
+    "宇土市就学援助制度": {
+        "title": "宇土市就学援助", "dept": "学校教育課 学務係", "phone": "0964-22-6500",
+        "url": "https://www.city.uto.lg.jp/article/view/1068/11514.html", "urlLabel": "宇土市公式：就学援助 ↗",
+    },
+    "妊婦健康診査受診票交付": {
+        "title": "宇土市妊産婦健康診査助成", "dept": "健康づくり課 母子保健係", "phone": "0964-27-4428",
+        "url": HANDBOOK_URL, "urlLabel": "宇土市公式：まちづくりハンドブック（母子保健係） ↗",
+    },
+    "産後ケア事業（ショートステイ・デイサービス・アウトリーチ）": {
+        "title": "宇土市産後ケア事業", "dept": "健康づくり課 母子保健係", "phone": "0964-27-4428",
+        "url": "https://www.city.uto.lg.jp/article/view/1072/3363.html", "urlLabel": "宇土市公式：産後ケア事業 ↗",
+    },
+    "新生児聴覚検査費助成": {
+        "title": "宇土市新生児聴覚検査費用助成事業", "amount": "初回検査1回につき上限5,000円",
+        "extra": "検査当日に宇土市に住民票がある新生児が対象です。受診票の契約額を超える費用等は自己負担になる場合があります。",
+        "dept": "健康づくり課 母子保健係", "phone": "0964-27-4428",
+        "url": "https://www.city.uto.lg.jp/article/view/1153/6286.html", "urlLabel": "宇土市公式：新生児聴覚検査費用助成 ↗",
+    },
+    "熊本県・宇土市特定不妊治療費助成金": {
+        "title": "宇土市不妊治療費助成事業",
+        "badge": "一般・生殖補助医療を助成",
+        "amount": "一般不妊治療：年上限4万円（通算3年） / 生殖補助医療：1回上限8万円（年齢に応じ回数制限）",
+        "desc": "一般不妊治療（人工授精）や、保険適用・所定の保険適用外の生殖補助医療について、治療費の一部を助成します。",
+        "extra": "治療開始時の年齢、保険加入、市税滞納がないこと等の要件があります。原則、治療日から1年以内に申請してください。",
+        "dept": "健康づくり課 母子保健係", "phone": "0964-27-4428",
+        "url": "https://www.city.uto.lg.jp/article/view/1153/5248.html", "urlLabel": "宇土市公式：不妊治療費助成事業 ↗",
+        "tags": ["#一般不妊治療", "#生殖補助医療", "#治療日から1年以内"],
+    },
+    "成人各種がん検診・節目検診": {"dept": "健康づくり課 健康推進係", "phone": "0964-27-3324", "url": HANDBOOK_URL, "urlLabel": "宇土市公式：まちづくりハンドブック（健康推進係） ↗"},
+    "国民健康保険 人間ドック・脳ドック受診費用助成": {"dept": "市民保険課 国保年金係", "phone": "0964-27-3312", "url": HANDBOOK_URL, "urlLabel": "宇土市公式：まちづくりハンドブック（国保年金係） ↗"},
+    "緊急通報システム機器貸与事業": {
+        "title": "宇土市緊急通報装置貸与等事業", "amount": "緊急通報装置を貸与。世帯区分により月額0円・200円・500円・700円",
+        "extra": "概ね65歳以上の独居またはこれに準ずる世帯で、急病・転倒等の危険が高い方が対象です。利用可否は審査で決定します。",
+        "dept": "高齢者支援課 高齢者支援係", "phone": "0964-27-3320",
+        "url": "https://www.city.uto.lg.jp/article/view/1081/958.html", "urlLabel": "宇土市公式：高齢者在宅福祉サービス ↗",
+        "tags": ["#ひとり暮らし高齢者", "#緊急通報", "#月額負担あり"],
+    },
+    "高齢者等配食サービス事業": {
+        "title": "宇土市食の自立支援事業", "amount": "1食300円",
+        "dept": "高齢者支援課 高齢者支援係", "phone": "0964-27-3320",
+        "url": "https://www.city.uto.lg.jp/article/view/1081/958.html", "urlLabel": "宇土市公式：高齢者在宅福祉サービス ↗",
+        "tags": ["#配食", "#安否確認", "#1食300円"],
+    },
+    "宇土市福祉タクシー利用券交付事業": {
+        "title": "宇土市福祉タクシー料金助成事業", "amount": "タクシー乗車1回につき、普通車の初乗運賃の上限額まで助成",
+        "extra": "身体障害者手帳1級、療育手帳A1、精神障害者保健福祉手帳1級のいずれかに該当する市民が対象です。交付枚数等は窓口で確認してください。",
+        "dept": "福祉課 障がい者支援係", "phone": "0964-27-3318",
+        "url": "https://www.city.uto.lg.jp/article/view/1086/1898.html", "urlLabel": "宇土市公式：福祉タクシー料金助成 ↗",
+        "tags": ["#重度障がい", "#初乗運賃助成", "#外出支援"],
+    },
+    "重度障がい者日常生活用具給付等事業": {"title": "宇土市障害者等日常生活用具給付等事業", "dept": "福祉課 障がい者支援係", "phone": "0964-27-3318", "url": "https://www.city.uto.lg.jp/article/view/1087/1929.html", "urlLabel": "宇土市公式：日常生活用具給付等事業 ↗"},
+    "障がい者（児）地域生活支援事業（移動支援・日中一時支援）": {"dept": "福祉課 障がい者支援係", "phone": "0964-27-3318", "url": "https://www.city.uto.lg.jp/article/view/1088/1928.html", "urlLabel": "宇土市公式：地域生活支援事業 ↗"},
+    "ねたきり高齢者等紙おむつ等支給事業": {
+        "title": "宇土市家族介護用品給付事業", "amount": "紙おむつ・尿取りパッド等を1回2万円相当、年度2回まで給付",
+        "extra": "要介護4・5相当、概ね65歳以上、6か月以上介護用品を使用、市町村民税非課税等の要件があります。",
+        "dept": "高齢者支援課 高齢者支援係", "phone": "0964-27-3320", "url": HANDBOOK_URL, "urlLabel": "宇土市公式：まちづくりハンドブック（高齢者支援係） ↗",
+        "tags": ["#在宅介護", "#年2回", "#1回2万円相当"],
+    },
+    "宇土市結婚新生活支援事業": {
+        "dept": "まちづくり推進課 定住移住推進係", "phone": "0964-27-4106",
+        "url": "https://www.city.uto.lg.jp/article/view/1609/8791.html", "urlLabel": "宇土市公式：令和8年度結婚新生活支援事業 ↗",
+        "extra": "所得制限はありません。令和8年度から、夫婦双方が指定講座の受講または妊娠・出産に関する相談等を行うことが要件に追加されました。申請期限は令和9年2月26日です。",
+    },
+    "宇土市移住支援事業支援金（東京圏からの移住）": {"dept": "まちづくり推進課 定住移住推進係", "phone": "0964-27-4106", "url": "https://www.city.uto.lg.jp/article/view/1609/8235.html", "urlLabel": "宇土市公式：定住移住支援制度一覧 ↗"},
+    "宇土市自治会集会施設整備事業補助金": {
+        "title": "宇土市自治公民館等整備事業補助金", "badge": "整備費1/3・上限50万円", "amount": "補助率1/3以内（上限50万円）",
+        "desc": "自治組織が行う自治公民館等の新築、改築、増築または改修について、本体工事や附帯設備工事費を補助します。",
+        "extra": "対象年度内に事業を完了する必要があります。計画段階で生涯活動推進課へ相談してください。",
+        "dept": "生涯活動推進課 生涯学習係", "phone": "0964-22-6510", "url": HANDBOOK_URL, "urlLabel": "宇土市公式：まちづくりハンドブック（生涯学習係） ↗",
+        "tags": ["#自治公民館", "#補助率1/3", "#上限50万円"],
+    },
+    "宇土市新規創業者応援補助金": {
+        "title": "宇土市創業支援事業補助金", "badge": "通常100万円・西部500万円", "amount": "対象経費の2/3以内。通常上限100万円、指定区域（住吉・網田中学校区）での創業は上限500万円",
+        "desc": "市内で創業する方の賃借料、店舗等の建設・改修、設備購入、マーケティング費用等を補助します。",
+        "extra": "特定創業支援等事業の支援を受け、創業後に宇土市商工会へ加入することなどの要件があります。交付決定前の経費は対象外になる場合があります。",
+        "dept": "商工観光課 商工振興係", "phone": "0964-27-3328",
+        "url": "https://www.city.uto.lg.jp/d?q=afc2d1cb68f581f6c2b203d3a53841d0.pdf", "urlLabel": "宇土市公式：創業支援事業補助金 ↗",
+        "tags": ["#創業", "#補助率2/3", "#西部地区上限500万"],
+    },
+    "新規就農者育成・定着総合支援（農業次世代人材投資事業等）": {
+        "title": "宇土市新規就農者支援事業給付金", "badge": "年120万円・最長2年", "amount": "年120万円を最長2年間（西部地区へ移住して新規就農する場合は年180万円）",
+        "desc": "50歳以上65歳未満で独立・自営就農する方へ、就農直後の経営確立を支援する給付金を交付します。",
+        "extra": "農業所得が250万円未満であること、認定新規就農者であることなどの要件があります。申請前に農林政策課へ相談してください。",
+        "dept": "農林政策課 農林振興係", "phone": "0964-27-3325", "url": "https://www.city.uto.lg.jp/article/view/1609/8235.html", "urlLabel": "宇土市公式：定住移住支援制度一覧（就農支援） ↗",
+        "tags": ["#50歳以上65歳未満", "#年120万円", "#西部地区年180万円"],
+    },
+    "住宅の応急修理制度（災害救助法）": {
+        "badge": "半壊以上75.7万円・準半壊36.7万円", "amount": "半壊以上：1世帯75万7,000円以内 / 準半壊：1世帯36万7,000円以内（消費税込み）",
+        "extra": "市が修理業者へ直接支払う制度で、被災者への現金給付ではありません。契約・着工前に宇土市へ申し込み、対象工事と必要書類を確認してください。",
+        "tags": ["#半壊以上75.7万円", "#準半壊36.7万円", "#市が業者へ支払い"],
+    },
+    "小規模事業者持続化補助金＜一般型 災害支援枠＞": {
+        "badge": "直接200万円・間接100万円", "amount": "直接被害：上限200万円、基本補助率2/3以内（一定要件をすべて満たす場合は定額10/10） / 間接被害：上限100万円・2/3以内",
+        "extra": "宇土市商工会の事業支援計画書が必要です。定額10/10は直接被害を受けたすべての事業者に自動適用されるものではありません。締切と最新公募回を公式要領で確認してください。",
+        "tags": ["#直接被害最大200万", "#基本補助率2/3", "#定額は要件あり"],
+    },
+}
+
+UNVERIFIED_TITLES = {
+    "宇土市放課後児童クラブ利用料減免制度",
+    "宇土市勤労者教育ローン利子補給制度",
+    "宇土市遺児手当",
+    "高齢者補聴器購入費助成事業",
+    "認知症高齢者等個人賠償責任保険加入支援事業",
+    "宇土市木造住宅耐震診断士派遣（空き家バンク連携）",
+    "宇土市がんばる中小企業応援補助金",
+    "宇土市認定農業者等経営改善支援事業",
+    "高齢者等住宅改修費助成事業",
+    "自主防災組織育成事業補助金",
+    "まちづくり活動推進事業補助金",
+    "宇土市商工振興資金融資制度（振興資金・小口資金）",
+}
+
+def support_item(*, cat, cat_name, badge, title, amount, desc, extra, dept, phone, url, icon,
+                 life=("all",), family=("general",), housing=("general",), income=("no_limit",),
+                 disaster=("none",), work=("all",), tags=()):
+    return {
+        "cat": cat, "catName": cat_name, "badge": badge, "title": title, "amount": amount,
+        "desc": desc, "extra": extra, "dept": dept, "phone": phone, "url": url,
+        "urlLabel": f"宇土市公式：{title} ↗", "icon": icon, "life": list(life),
+        "family": list(family), "housing": list(housing), "income": list(income),
+        "disaster": list(disaster), "work": list(work), "tags": list(tags),
+    }
+
+ADDITIONAL_VERIFIED_SYSTEMS = [
+    support_item(cat="housing", cat_name="住まい・耐震・環境", badge="住宅取得最大100万円", title="宇土市定住移住促進補助金",
+        amount="指定区域の住宅取得：上限100万円。中学生以下の子どもの人数により20万円・50万円・100万円を加算",
+        desc="住吉中学校区・網田中学校区で住宅を取得し、定住する方を支援します。子育て世帯には人数に応じた加算があります。",
+        extra="所有権保存・移転登記後1年以内の申請が必要です。同趣旨の他補助金との重複不可などの要件があります。",
+        dept="まちづくり推進課 定住移住推進係", phone="0964-27-4106", url="https://www.city.uto.lg.jp/article/view/1207/8769.html", icon="moving",
+        life=("working","newlywed","child_school"), family=("general","childcare"), housing=("owned_wood",), tags=("#西部地区","#住宅取得100万円","#子育て加算")),
+    support_item(cat="housing", cat_name="住まい・耐震・環境", badge="家賃助成最大48万円", title="特定公共賃貸住宅における子育て世帯移住促進助成金",
+        amount="月2万円、最大24か月（上限48万円）", desc="宇土市外から入地団地14棟へ移住する子育て世帯に、家賃の一部を助成します。",
+        extra="特定公共賃貸住宅の入居条件等を満たす必要があり、先着受付枠があります。",
+        dept="都市整備課 建築住宅係", phone="0964-27-3332", url="https://www.city.uto.lg.jp/article/view/1290/12157.html", icon="moving",
+        life=("child_infant","child_school","working"), family=("childcare",), housing=("rental",), tags=("#子育て移住","#入地団地","#最大48万円")),
+    support_item(cat="childcare", cat_name="子育て・教育・就学支援", badge="妊婦5万円＋胎児数×5万円", title="妊婦のための支援給付制度",
+        amount="1回目：妊婦1人につき5万円 / 2回目：胎児1人につき5万円", desc="妊娠期から子育て期までの相談支援とあわせ、妊婦の身体的・精神的・経済的負担を軽減する給付金です。",
+        extra="流産・死産等の場合も対象となることがあります。転入前自治体との重複受給はできません。",
+        dept="健康づくり課 母子保健係", phone="0964-27-4428", url="https://www.city.uto.lg.jp/article/view/1056/11861.html", icon="maternity",
+        life=("child_infant",), family=("childcare","general"), tags=("#妊婦支援給付","#現金5万円","#胎児数加算")),
+    support_item(cat="health", cat_name="健康・出産・女性", badge="妊娠中1回・全額助成", title="宇土市妊婦歯科健康診査助成",
+        amount="市が定める妊婦歯科健診1回を10/10助成", desc="母子健康手帳の交付を受けた市内在住の妊婦へ、歯科健康診査受診票を交付します。",
+        extra="治療・歯石除去等は保険診療となり自己負担が生じます。受診票は市内の契約歯科医療機関で使用します。",
+        dept="健康づくり課 母子保健係", phone="0964-27-4428", url="https://www.city.uto.lg.jp/article/view/1072/911.html", icon="maternity",
+        life=("child_infant",), family=("childcare","general"), tags=("#妊婦歯科健診","#1回助成","#母子手帳")),
+    support_item(cat="health", cat_name="健康・出産・女性", badge="初回受診1万円まで", title="低所得妊婦初回産科受診費助成事業",
+        amount="初回産科受診1回につき上限1万円（同一年度2回まで）", desc="住民税非課税世帯等の妊婦について、妊娠判定のための初回産科受診費を助成します。",
+        extra="受診日から1年以内に申請し、所得確認と関係機関との情報共有への同意が必要です。",
+        dept="こども家庭センター", phone="0964-27-3322", url="https://www.city.uto.lg.jp/article/view/1072/7328.html", icon="maternity",
+        life=("child_infant",), family=("general","childcare"), income=("low_income",), tags=("#低所得妊婦","#初回産科受診","#上限1万円")),
+    support_item(cat="health", cat_name="健康・出産・女性", badge="治療費1/2・上限15万円", title="宇土市不育症治療費助成",
+        amount="1治療期間の本人負担額の1/2（上限15万円、通算5年）", desc="不育症と診断された方の保険適用外の治療・検査費用の一部を助成します。",
+        extra="治療開始時に妻が43歳未満などの要件があり、治療終了月末から6か月以内の申請が必要です。",
+        dept="健康づくり課 母子保健係", phone="0964-27-4428", url="https://www.city.uto.lg.jp/article/view/1153/2191.html", icon="fertility",
+        life=("working","newlywed"), family=("general",), tags=("#不育症","#上限15万円","#治療終了後6か月以内")),
+    support_item(cat="health", cat_name="健康・出産・女性", badge="1か月児健診を助成", title="1か月児健康診査費用助成事業",
+        amount="市が定める1か月児健康診査費用を助成（契約額・上限額の範囲）", desc="出生後おおむね1か月の乳児の健康診査費用を助成し、疾病の早期発見と健やかな成長を支援します。",
+        extra="対象時期、契約医療機関、県外受診時の償還払いは公式案内で確認してください。",
+        dept="健康づくり課 母子保健係", phone="0964-27-4428", url="https://www.city.uto.lg.jp/article/view/1153/11859.html", icon="child_med",
+        life=("child_infant",), family=("childcare",), tags=("#1か月児健診","#乳児","#費用助成")),
+    support_item(cat="senior", cat_name="シニア・高齢者・障がい福祉", badge="年6万円・12万円", title="宇土市在宅高齢者介護手当",
+        amount="要介護3：年6万円 / 要介護4・5：年12万円", desc="要介護3～5の方を、基準日前1年間にわたり在宅で介護した方へ介護手当を支給します。",
+        extra="入院・短期入所等の期間が通算120日以内であることなどの要件があります。申請は原則10月中です。",
+        dept="高齢者支援課 高齢者支援係", phone="0964-27-3320", url="https://www.city.uto.lg.jp/article/view/1213/10297.html", icon="heart",
+        life=("senior",), family=("senior_only","disability"), tags=("#在宅介護","#要介護3から5","#年6万・12万円")),
+    support_item(cat="senior", cat_name="シニア・高齢者・障がい福祉", badge="重度障がいの医療費助成", title="宇土市重度心身障害者医療費助成",
+        amount="保険診療の自己負担額について、制度所定の自己負担額を除き助成", desc="重度の身体・知的・精神障がいがある市民の医療費負担を軽減します。",
+        extra="障害等級、所得、他制度との優先関係等の要件があります。受給資格認定後に申請してください。",
+        dept="福祉課 障がい者支援係", phone="0964-27-3318", url="https://www.city.uto.lg.jp/article/view/1086/4133.html", icon="child_med",
+        family=("disability",), tags=("#重度障がい","#医療費助成","#所得要件")),
+    support_item(cat="senior", cat_name="シニア・高齢者・障がい福祉", badge="購入・修理費を支給", title="宇土市補装具費の支給",
+        amount="補装具の購入・修理費について原則1割を自己負担", desc="身体障がい者・障がい児・所定の難病患者に、車いす、補聴器、義肢等の補装具費を支給します。",
+        extra="品目や障がいの状況により判定・意見書等が必要です。購入・修理前に申請してください。",
+        dept="福祉課 障がい者支援係", phone="0964-27-3318", url="https://www.city.uto.lg.jp/article/view/1087/1923.html", icon="wheelchair",
+        family=("disability",), tags=("#補装具","#原則1割負担","#事前申請")),
+    support_item(cat="senior", cat_name="シニア・高齢者・障がい福祉", badge="基準価格の2/3", title="宇土市難聴児補聴器購入費助成事業",
+        amount="補聴器の基準価格の2/3を助成", desc="身体障害者手帳の対象とならない軽度・中等度の難聴がある18歳未満の児童へ補聴器購入費を助成します。",
+        extra="聴力30dB以上などの要件があります。修理・部品交換は対象外で、購入前の申請が必要です。",
+        dept="福祉課 障がい者支援係", phone="0964-27-3318", url="https://www.city.uto.lg.jp/article/view/1084/1925.html", icon="hearing",
+        life=("child_infant","child_school"), family=("childcare","disability"), tags=("#難聴児","#補聴器","#基準価格2/3")),
+    support_item(cat="senior", cat_name="シニア・高齢者・障がい福祉", badge="年12万円", title="宇土市在宅心身障がい者介護手当",
+        amount="要介護者1人につき年12万円", desc="重度の心身障がいがあり常時介護を必要とする方を、基準日前1年間にわたり在宅介護した方へ手当を支給します。",
+        extra="身体障害者手帳・医師判定または療育手帳A1等の要件があります。申請は原則10月中です。",
+        dept="福祉課 障がい者支援係", phone="0964-27-3318", url="https://www.city.uto.lg.jp/article/view/1085/1895.html", icon="heart",
+        family=("disability",), tags=("#在宅介護","#重度障がい","#年12万円")),
+    support_item(cat="childcare", cat_name="子育て・教育・就学支援", badge="月7.05万～14万円", title="宇土市母子家庭等高等職業訓練促進費",
+        amount="訓練促進費：月7万500円～14万円（課税区分・修業時期による）／修了支援給付金あり", desc="ひとり親が看護師、介護福祉士、保育士等の資格取得のため6か月以上修業する場合、生活費を支援します。",
+        extra="児童扶養手当受給相当の所得水準等の要件があります。受講前に必ず相談してください。",
+        dept="子育て支援課 子育て給付係", phone="0964-27-3337", url="https://www.city.uto.lg.jp/article/view/1202/1035.html", icon="school_aid",
+        life=("working",), family=("single_parent",), income=("low_income",), tags=("#ひとり親","#資格取得","#月額給付")),
+    support_item(cat="childcare", cat_name="子育て・教育・就学支援", badge="受講料60%・最大160万円", title="宇土市母子家庭等自立支援教育訓練給付金",
+        amount="対象講座の受講料60%（1.2万円～最大160万円、所定の場合は上乗せあり）", desc="ひとり親の就職に必要な指定教育訓練講座の受講費用を助成します。",
+        extra="受講開始前の講座指定と事前相談が必要です。雇用保険の教育訓練給付との調整があります。",
+        dept="子育て支援課 子育て給付係", phone="0964-27-3337", url="https://www.city.uto.lg.jp/article/view/1202/1034.html", icon="school_aid",
+        life=("working",), family=("single_parent",), income=("low_income",), tags=("#ひとり親","#教育訓練","#受講料60%")),
+    support_item(cat="childcare", cat_name="子育て・教育・就学支援", badge="生活・子育て支援員を派遣", title="宇土市ひとり親家庭等日常生活支援事業",
+        amount="生活援助・子育て支援を所得区分により無料または低額で利用", desc="修学、就職活動、疾病、出産、災害等で一時的に生活援助・保育が必要なひとり親家庭へ支援員を派遣します。",
+        extra="利用には事前登録が必要です。離婚調停中など離婚前に困難を抱える方も対象になり得ます。",
+        dept="子育て支援課 子育て給付係", phone="0964-27-3337", url="https://www.city.uto.lg.jp/article/view/1058/2121.html", icon="single_parent",
+        family=("single_parent",), income=("low_income","general"), tags=("#ひとり親","#家事・保育支援","#事前登録")),
+    support_item(cat="childcare", cat_name="子育て・教育・就学支援", badge="病児・病後児を一時保育", title="宇土市病児・病後児保育事業",
+        amount="1日2,000円（5時間未満は1,000円）", desc="病気または回復期で集団保育が難しく、保護者が家庭で保育できない生後6か月～小学6年生を一時的に預かります。",
+        extra="原則1日3人。利用前の登録と医療機関の確認等が必要です。",
+        dept="子育て支援課 保育支援係", phone="0964-27-3323", url="https://www.city.uto.lg.jp/article/view/1191/14796.html", icon="child_med",
+        life=("child_infant","child_school"), family=("childcare","single_parent"), tags=("#病児保育","#小学6年生まで","#事前登録")),
+    support_item(cat="childcare", cat_name="子育て・教育・就学支援", badge="高校5万円・大学等10万円", title="宇土市入学準備祝金",
+        amount="高校・高専・高等課程：5万円 / 大学・短大・専門課程：10万円", desc="生活保護世帯または市町村民税非課税世帯で、高校以上へ進学する方の入学時負担を支援します。",
+        extra="居住年数、滞納なし、人数枠、成績等の要件があります。申請期間は例年2月1日～3月31日です。",
+        dept="学校教育課 総務係", phone="0964-22-6502", url="https://www.city.uto.lg.jp/article/view/1290/13842.html", icon="school_aid",
+        life=("child_school",), family=("childcare","single_parent"), income=("low_income",), tags=("#進学","#非課税世帯","#返済不要")),
+]
+
+def apply_verified_updates():
+    global SYSTEMS
+    kept = []
+    for item in SYSTEMS:
+        original_title = item["title"]
+        if original_title in UNVERIFIED_TITLES:
+            continue
+        item.update(VERIFIED_UPDATES.get(original_title, {}))
+        kept.append(item)
+    existing_titles = {item["title"] for item in kept}
+    kept.extend(item for item in ADDITIONAL_VERIFIED_SYSTEMS if item["title"] not in existing_titles)
+    SYSTEMS = kept
+
+apply_verified_updates()
+
 def generate_html():
     categories = [
         {"key": "all", "name": "すべて表示"},
@@ -1208,11 +1528,11 @@ def generate_html():
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>宇土市：暮らしの支援・補助金 総合ガイド（住まい・子育て・健康・福祉・産業）｜よか隊ネット熊本</title>
-  <meta name="description" content="宇土市公式の平時支援制度および令和8年熊本地震特別支援の全53制度を網羅した総合ガイド。現在の状況（年齢・世帯・住まい・収入・被災度・事業）から活用可能な補助金を瞬時に調べる「かんたん条件シミュレーター」を搭載。全制度に一次情報リンクと担当窓口を明記。">
+  <meta name="description" content="宇土市のまちづくりハンドブックと公式制度ページを基に、暮らしに関わる主要な支援制度と令和8年熊本地震特別支援を整理したガイド。住まい、子育て、健康、福祉、移住、創業などを条件から検索でき、掲載制度ごとに公式情報と担当窓口を確認できます。">
   <link rel="stylesheet" href="styles.css?v=20260907-2">
   <link rel="stylesheet" href="design-system.css?v=20260907-2">
   <link rel="stylesheet" href="org-site.css?v=20260918-1">
-  <link rel="stylesheet" href="uto-support.css?v=20260921-3">
+  <link rel="stylesheet" href="uto-support.css?v=20260921-4">
 </head>
 <body class="organization-site uto-support-page">
   <a class="skip" href="#mainContent">本文へ移動</a>
@@ -1233,11 +1553,11 @@ def generate_html():
           <span aria-current="page">暮らしの支援・補助金 総合ガイド</span>
         </nav>
 
-        <div class="uto-sup-hero-badge">宇土市公式制度 徹底整理 · 全53制度</div>
+        <div class="uto-sup-hero-badge">宇土市公式情報を確認 · 主要''' + str(len(SYSTEMS)) + '''制度</div>
         <h1>宇土市 暮らしの支援・補助金 総合ガイド</h1>
         <p class="uto-sup-hero-lead">
           宇土市が市民の生活安定、住環境向上、子育て、健康、福祉、産業振興のために平時から整備している公的支援・補助金制度と、令和8年熊本地震に伴う特別支援制度を体系的に整理しました。<br>
-          「あなたの現在の状況」を選択して、活用できる制度を今すぐお探しいただけます。すべての制度に宇土市公式HP（一次情報）へのリンクと直通電話番号を掲載しています。
+          「あなたの現在の状況」を選択して、活用できる制度をお探しいただけます。掲載制度には宇土市公式情報へのリンクと担当窓口を記載しています。掲載内容は令和7年度版まちづくりハンドブックと令和8年度の個別案内を2026年9月21日に確認したものです。
         </p>
       </div>
     </header>
@@ -1273,12 +1593,12 @@ def generate_html():
             <button type="button" class="uto-sim-preset-btn" data-preset="senior">
               <span class="preset-icon">👴</span>
               <span class="preset-title">シニア・在宅介護</span>
-              <span class="preset-desc">住宅改修・通報・補聴器</span>
+              <span class="preset-desc">介護手当・緊急通報・配食</span>
             </button>
             <button type="button" class="uto-sim-preset-btn" data-preset="housing">
               <span class="preset-icon">🏠</span>
               <span class="preset-title">住まい改修・耐震</span>
-              <span class="preset-desc">リフォーム25万・耐震100万</span>
+              <span class="preset-desc">リフォーム25万・耐震最大157.5万</span>
             </button>
             <button type="button" class="uto-sim-preset-btn" data-preset="newlywed">
               <span class="preset-icon">💍</span>
@@ -1293,7 +1613,7 @@ def generate_html():
             <button type="button" class="uto-sim-preset-btn" data-preset="business">
               <span class="preset-icon">💼</span>
               <span class="preset-title">自営業・中小企業・農業</span>
-              <span class="preset-desc">融資補給・創業50万・持続化</span>
+              <span class="preset-desc">創業最大500万・就農・持続化</span>
             </button>
           </div>
         </div>
@@ -1467,7 +1787,7 @@ def generate_html():
           <div class="uto-sup-hl-item">
             <span class="hl-badge">耐震＋建替え</span>
             <h3>木造住宅耐震診断・改修・シェルター</h3>
-            <p>無料の耐震診断士派遣に加え、改修工事（最大100万）や建替え（最大100万）、高齢者寝室等の耐震シェルター設置（最大30万）まで幅広い選択肢が用意されています。</p>
+            <p>精密耐震診断は費用の9/10以内（上限13万5,000円等）、耐震改修・建替えは住宅区分により最大157万5,000円、耐震シェルターは最大20万円が補助されます。</p>
           </div>
         </div>
       </section>
@@ -1490,9 +1810,14 @@ def generate_html():
 
       <!-- 検索結果件数表示 -->
       <div class="uto-sup-status">
-        <span id="utoSupCount">表示中：''' + str(len(SYSTEMS)) + '''件 / 全''' + str(len(SYSTEMS)) + '''制度</span>
-        <span class="uto-sup-status-source">情報源：宇土市公式HP・まちづくりハンドブック（最新確認）</span>
+        <span id="utoSupCount">表示中：''' + str(len(SYSTEMS)) + '''件 / 主要''' + str(len(SYSTEMS)) + '''制度</span>
+        <span class="uto-sup-status-source">確認日：2026年9月21日／情報源：宇土市公式HP・令和7年度版まちづくりハンドブック</span>
       </div>
+
+      <aside class="uto-sup-caution" role="note">
+        <strong>申請前に必ず最新情報をご確認ください。</strong>
+        制度は年度、予算、世帯状況などにより受付終了・金額変更・対象外となる場合があります。このページは宇土市の全制度を網羅するものではありません。公式ページと担当窓口で、現在の受付状況・対象要件・必要書類を確認してください。
+      </aside>
 
       <!-- 一致なし表示 -->
       <div id="utoSupEmpty" class="uto-sup-empty" style="display: none;">
@@ -1612,7 +1937,7 @@ def generate_html():
   </main>
   <footer class="site-footer"></footer>
   <script src="org-site.js?v=20260907-2"></script>
-  <script src="uto-support.js?v=20260921-3"></script>
+  <script src="uto-support.js?v=20260921-4"></script>
 </body>
 </html>
 ''')

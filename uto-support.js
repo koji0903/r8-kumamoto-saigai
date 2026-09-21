@@ -177,7 +177,7 @@
 
       // カウント表示更新
       if (countDisplay) {
-        countDisplay.textContent = `表示中：${visibleCount}件 / 全${cards.length}制度`;
+        countDisplay.textContent = `表示中：${visibleCount}件 / 主要${cards.length}制度`;
       }
 
       // 該当なし表示
