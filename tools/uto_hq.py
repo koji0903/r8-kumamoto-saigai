@@ -82,15 +82,30 @@ def damage_figures(pages, date):
         if target not in dates:
             raise ValueError('被害報告の集計日が会議日と一致しません')
         column = dates.index(target)
-        block = text[header.end():].split('税務課',1)[0]
+        is_latest = (column == len(dates) - 1)
+        block = text[header.end():].split('税務課', 1)[0]
         result = {}
-        for label,key in [('全壊','utoHomesFull'),('大規模半壊','utoHomesLargeHalf'),('半壊(中規模半壊含)','utoHomesHalf'),('一部損壊(準半壊含)','utoHomesPartial'),('分類未確定','utoHomesUnclassified'),('合計','utoHomesTotal')]:
-            row = re.search(r'^\s*'+re.escape(label)+r'\s+([\d,\s]+)$', block, re.M)
+        labels = [
+            ('全壊', 'utoHomesFull'),
+            ('大規模半壊', 'utoHomesLargeHalf'),
+            ('半壊(中規模半壊含)', 'utoHomesHalf'),
+            ('一部損壊(準半壊含)', 'utoHomesPartial'),
+            ('分類未確定', 'utoHomesUnclassified'),
+            ('合計', 'utoHomesTotal')
+        ]
+        for label, key in labels:
+            row = re.search(r'^\s*' + re.escape(label) + r'([^\n]*)$', block, re.M)
             if not row:
                 raise ValueError(f'被害報告に{label}の数値行がありません')
-            values = re.findall(r'\d[\d,]*',row[1])
-            if column >= len(values):
+            values = re.findall(r'\d[\d,]*', row.group(1))
+            if not values:
+                raise ValueError(f'被害報告の{label}に数値がありません')
+            if is_latest:
+                val = values[-1]
+            elif column < len(values):
+                val = values[column]
+            else:
                 raise ValueError(f'被害報告の{label}に当日列がありません')
-            result[key] = int(values[column].replace(',',''))
+            result[key] = int(val.replace(',', ''))
         return result, page['page']
     return {}, None

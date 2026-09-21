@@ -7,7 +7,7 @@ vm.runInNewContext(fs.readFileSync('data/generated/municipality-hq-data.js','utf
 const city=context.window.MUNICIPALITY_HQ.municipalities.find(m=>m.key==='uto');
 assert.ok(city,'宇土市の会議データが必要');
 const numbers=Array.from(city.meetings,m=>m.meeting);
-for(let n=6;n<=35;n++) assert.ok(numbers.includes(n),`第${n}回が欠落`);
+for(let n=6;n<=37;n++) assert.ok(numbers.includes(n),`第${n}回が欠落`);
 assert.equal(new Set(numbers).size,numbers.length);
 for(const meeting of city.meetings){
   const saved=JSON.parse(fs.readFileSync(`sources/official/municipality-hq-text/uto-${String(meeting.meeting).padStart(3,'0')}.json`));
@@ -21,7 +21,7 @@ for(const summary of city.editorial.meetings){
   assert.ok(record && summary.page>=1 && summary.page<=record.pages);
   assert.ok(summary.title && summary.summary);
 }
-assert.equal(city.editorial.meetings.length,30);
+assert.equal(city.editorial.meetings.length,32);
 // 最新の公開回まで要約があること（無いと最新カードが「編集要約は未確認」になる）
 assert.equal(city.editorial.reviewedThrough,Math.max(...numbers),'編集要約が最新の公開回まで追いついていません');
 assert.ok(city.editorial.meetings.some(s=>s.meeting===Math.max(...numbers)),'最新の公開回の要約がありません');
@@ -54,12 +54,29 @@ assert.equal(m(35).figures.households,45);
 assert.equal(m(35).figures.utoHomesFull,28);
 assert.equal(m(35).figures.utoHomesUnclassified,3535);
 assert.equal(m(35).figures.utoHomesTotal,7805);
+// 第36回（9月15日・書面報告）と第37回（9月18日16:00）。
+assert.equal(m(36).date,'2026-09-15');
+assert.equal(m(36).writtenReport,true);
+assert.equal(m(36).time,null);
+assert.equal(m(36).figures.evacuees,77);
+assert.equal(m(36).figures.households,44);
+assert.equal(m(36).figures.utoHomesFull,33);
+assert.equal(m(36).figures.utoHomesUnclassified,1232);
+assert.equal(m(36).figures.utoHomesTotal,6669);
+assert.equal(m(37).date,'2026-09-18');
+assert.equal(m(37).time,'16:00');
+assert.equal(m(37).writtenReport,false);
+assert.equal(m(37).figures.evacuees,77);
+assert.equal(m(37).figures.households,44);
+assert.equal(m(37).figures.utoHomesFull,34);
+assert.equal(m(37).figures.utoHomesUnclassified,646);
+assert.equal(m(37).figures.utoHomesTotal,6820);
 // 区分の合計が計と一致すること（抽出の列ずれを検出する）
-for(const n of [34,35]){const f=m(n).figures;assert.equal(f.utoHomesFull+f.utoHomesLargeHalf+f.utoHomesHalf+f.utoHomesPartial+f.utoHomesUnclassified,f.utoHomesTotal,`第${n}回の住家被害の内訳と計が合いません`);}
+for(const n of [34,35,36,37]){const f=m(n).figures;assert.equal(f.utoHomesFull+f.utoHomesLargeHalf+f.utoHomesHalf+f.utoHomesPartial+f.utoHomesUnclassified,f.utoHomesTotal,`第${n}回の住家被害の内訳と計が合いません`);}
 // ページの説明文が古い回で止まっていないこと
 const page=fs.readFileSync('hq-uto.html','utf8');
-assert.ok(!page.includes('この節の内容は第33回まで'),'「次の支援につなぐ動き」が第33回のままです');
-assert.ok(page.includes('この節の内容は第35回まで'),'「次の支援につなぐ動き」を最新回まで確認した表示がありません');
+assert.ok(!page.includes('この節の内容は第35回まで'),'「次の支援につなぐ動き」が第35回のままです');
+assert.ok(page.includes('この節の内容は第37回まで'),'「次の支援につなぐ動き」を最新回まで確認した表示がありません');
 assert.ok(!fs.readFileSync('uto-hq.js','utf8').includes("'08/22〜09/04'"),'最後の期間の終わりが固定のままです');
 assert.ok(fs.readFileSync('app.js','utf8').includes('href="hq-uto.html"'));
 const result=spawnSync('python3',['-c',`
