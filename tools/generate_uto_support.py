@@ -1,9 +1,61 @@
 #!/usr/bin/env python3
-"""uto-support.html を生成するスクリプト（シミュレーター・ファセット属性付き）"""
+"""uto-support.html を生成するスクリプト（幅レイアウト適正化・SVGイラストアイコン・シミュレーター付き）"""
 import json
 from pathlib import Path
 
-# 各制度の定義（全53制度にファセット属性を完全付与）
+# SVGアイコン定義（親しみやすく直感的なベクターイラスト）
+ICONS = {
+    "reform": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M14.5 12a2.5 2.5 0 0 0-3.5-3.5L8 11.5l4.5 4.5z"/><path d="m11.5 15 3.5 3.5"/></svg>''',
+    "retrofit_check": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="14" r="3"/><path d="m14.5 16.5 2.5 2.5"/><path d="m9 13 2 2 4-4"/></svg>''',
+    "retrofit_build": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M12 11v7"/><path d="M8 15h8"/><path d="M12 22s5-3 5-8V9l-5-2-5 2v5c0 5 5 8 5 8z" opacity="0.3"/></svg>''',
+    "wall": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18"/><path d="M9 3v6M15 3v6M6 9v6M12 9v6M18 9v6M9 15v6M15 15v6"/></svg>''',
+    "demolish": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m7 7 10 10M17 7 7 17"/></svg>''',
+    "landslide": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 20 8-14 4 7 8-3"/><path d="m14 15 4-3 4 3v5H14z"/></svg>''',
+    "septic": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/><path d="M12 12v6M9 15h6"/></svg>''',
+    "compost": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 3.5 1 7.5-1.5 10.5M11 20a7 7 0 0 0 6.5-7.5"/><path d="M11 20v-8"/></svg>''',
+    "rainwater": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M8 19v2M8 13v2M12 21v2M12 15v2M16 19v2M16 13v2"/></svg>''',
+    "vacant": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="14" r="2"/><path d="M12 16v3"/></svg>''',
+    "child_med": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M19 8h4M21 6v4"/></svg>''',
+    "child_benefit": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01M18 12h.01"/></svg>''',
+    "single_parent": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>''',
+    "school_aid": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10M6 14h6"/></svg>''',
+    "afterschool": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>''',
+    "preschool": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="8" height="8" rx="1"/><rect x="13" y="11" width="8" height="8" rx="1"/><path d="m8 3 5 8H3z"/></svg>''',
+    "edu_loan": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>''',
+    "heart": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>''',
+    "maternity": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6M12 9v6"/><circle cx="12" cy="12" r="9"/></svg>''',
+    "postpartum": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z"/><circle cx="17" cy="7" r="3"/><path d="M14 14a5 5 0 0 1 7 4"/></svg>''',
+    "hearing": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a2.5 2.5 0 0 1-5 0"/><path d="M10 13a2.5 2.5 0 0 0 5 0"/></svg>''',
+    "fertility": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5c0 4-5 9-5 9s-5-5-5-9a5 5 0 0 1 5-5Z"/><circle cx="12" cy="7" r="2"/><path d="M12 16v6M8 20h8"/></svg>''',
+    "checkup": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>''',
+    "senior_house": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22v-6h6v6"/></svg>''',
+    "emergency_bell": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/><path d="M2 2l20 20" opacity="0.3"/></svg>''',
+    "meal": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2v20M18 10h4M2 8a4 4 0 0 1 4-4h4v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z"/><path d="M6 4v6"/></svg>''',
+    "aid_hearing": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h3l3-7 4 14 3-7h5"/></svg>''',
+    "taxi": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H10l-2 4H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h1a2 2 0 0 0 4 0h6a2 2 0 0 0 4 0h1a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-4z"/><circle cx="7" cy="18" r="1"/><circle cx="17" cy="18" r="1"/></svg>''',
+    "wheelchair": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="5" r="2"/><path d="M10 7v6h4l3 5M8 17a5 5 0 1 1 5-5"/></svg>''',
+    "assist_walk": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="m10 22 2-7 3 3v4M8 12h8"/><path d="m14 15 2 7"/></svg>''',
+    "diaper": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 7h-17A1.5 1.5 0 0 0 2 8.5v7A1.5 1.5 0 0 0 3.5 17h17a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 20.5 7z"/><path d="M7 7v10M17 7v10"/></svg>''',
+    "insurance_shield": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>''',
+    "wedding": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/><path d="m9 7 3-4 3 4"/></svg>''',
+    "moving": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>''',
+    "community": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>''',
+    "hall": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16M2 8l10-6 10 6v2H2zM6 10v9M10 10v9M14 10v9M18 10v9"/></svg>''',
+    "fire_prep": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a9 9 0 0 0-9 9v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a9 9 0 0 0-9-9z"/><path d="M12 12v6M9 15h6"/></svg>''',
+    "loan_biz": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>''',
+    "startup": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6M10 22h4"/></svg>''',
+    "sme": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/></svg>''',
+    "farmer": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22 12 2l10 20"/><path d="M5.5 15h13M8 10h8"/></svg>''',
+    "rebuild": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M12 3v4M3 12h4M17 12h4M12 18h.01"/></svg>''',
+    "emergency_repair": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>''',
+    "jizokuka_disaster": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M5 20V8l4 3 4-3 4 3 3-3v12"/><path d="M10 14h4"/></svg>''',
+    "public_demolish": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6M9 9l6 6"/></svg>''',
+    "relief_money": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8M12 18V6"/></svg>''',
+    "disaster_loan": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M7 15h.01M17 15h.01"/></svg>''',
+    "tax_relief": '''<svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>'''
+}
+
+# 全53制度の定義
 SYSTEMS = [
     # 1. 住まい・耐震・環境
     {
@@ -18,6 +70,7 @@ SYSTEMS = [
         "phone": "0964-27-3329",
         "url": "https://www.city.uto.lg.jp/article/view/1007/12355.html",
         "urlLabel": "宇土市公式：住宅リフォーム助成事業 ↗",
+        "icon": "reform",
         "life": ["working", "senior", "newlywed"],
         "family": ["general", "childcare", "senior_only"],
         "housing": ["owned_wood"],
@@ -38,6 +91,7 @@ SYSTEMS = [
         "phone": "0964-27-3332",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（建築住宅係） ↗",
+        "icon": "retrofit_check",
         "life": ["working", "senior"],
         "family": ["general", "senior_only"],
         "housing": ["owned_wood"],
@@ -58,6 +112,7 @@ SYSTEMS = [
         "phone": "0964-27-3332",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（建築住宅係） ↗",
+        "icon": "retrofit_build",
         "life": ["working", "senior"],
         "family": ["general", "senior_only"],
         "housing": ["owned_wood"],
@@ -78,6 +133,7 @@ SYSTEMS = [
         "phone": "0964-27-3332",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（建築住宅係） ↗",
+        "icon": "wall",
         "life": ["working", "senior"],
         "family": ["general"],
         "housing": ["owned_wood", "vacant"],
@@ -98,6 +154,7 @@ SYSTEMS = [
         "phone": "0964-27-3332",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（建築住宅係） ↗",
+        "icon": "demolish",
         "life": ["working", "senior"],
         "family": ["general"],
         "housing": ["vacant"],
@@ -118,6 +175,7 @@ SYSTEMS = [
         "phone": "0964-27-3332",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（建築住宅係） ↗",
+        "icon": "landslide",
         "life": ["working", "senior"],
         "family": ["general"],
         "housing": ["owned_wood"],
@@ -138,6 +196,7 @@ SYSTEMS = [
         "phone": "0964-27-3334",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（下水道係） ↗",
+        "icon": "septic",
         "life": ["all"],
         "family": ["general"],
         "housing": ["septic", "owned_wood"],
@@ -158,6 +217,7 @@ SYSTEMS = [
         "phone": "0964-27-3323",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（環境衛生係） ↗",
+        "icon": "compost",
         "life": ["all"],
         "family": ["general"],
         "housing": ["general"],
@@ -178,6 +238,7 @@ SYSTEMS = [
         "phone": "0964-27-3334",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（下水道係） ↗",
+        "icon": "rainwater",
         "life": ["all"],
         "family": ["general"],
         "housing": ["owned_wood"],
@@ -198,6 +259,7 @@ SYSTEMS = [
         "phone": "0964-27-3315",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（政策推進係） ↗",
+        "icon": "vacant",
         "life": ["newlywed", "working"],
         "family": ["general", "childcare"],
         "housing": ["vacant", "rental", "owned_wood"],
@@ -220,6 +282,7 @@ SYSTEMS = [
         "phone": "0964-27-3337",
         "url": "https://www.city.uto.lg.jp/article/view/1018/14818.html",
         "urlLabel": "宇土市公式：子ども医療費助成事業 ↗",
+        "icon": "child_med",
         "life": ["child_infant", "child_school"],
         "family": ["childcare", "single_parent"],
         "housing": ["general"],
@@ -240,6 +303,7 @@ SYSTEMS = [
         "phone": "0964-27-3337",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（子育て給付係） ↗",
+        "icon": "child_benefit",
         "life": ["child_infant", "child_school"],
         "family": ["childcare", "single_parent"],
         "housing": ["general"],
@@ -260,6 +324,7 @@ SYSTEMS = [
         "phone": "0964-27-3337",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（子育て給付係） ↗",
+        "icon": "single_parent",
         "life": ["child_infant", "child_school"],
         "family": ["single_parent"],
         "housing": ["general"],
@@ -280,6 +345,7 @@ SYSTEMS = [
         "phone": "0964-27-3337",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（子育て給付係） ↗",
+        "icon": "child_med",
         "life": ["child_infant", "child_school", "working"],
         "family": ["single_parent"],
         "housing": ["general"],
@@ -300,6 +366,7 @@ SYSTEMS = [
         "phone": "0964-27-3337",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（子育て給付係） ↗",
+        "icon": "school_aid",
         "life": ["child_school"],
         "family": ["single_parent"],
         "housing": ["general"],
@@ -320,6 +387,7 @@ SYSTEMS = [
         "phone": "0964-27-3338",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（学事給食係） ↗",
+        "icon": "school_aid",
         "life": ["child_school"],
         "family": ["childcare", "single_parent"],
         "housing": ["general"],
@@ -340,6 +408,7 @@ SYSTEMS = [
         "phone": "0964-27-3336",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（保育係） ↗",
+        "icon": "afterschool",
         "life": ["child_school"],
         "family": ["childcare", "single_parent"],
         "housing": ["general"],
@@ -360,6 +429,7 @@ SYSTEMS = [
         "phone": "0964-27-3336",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（保育係） ↗",
+        "icon": "preschool",
         "life": ["child_infant"],
         "family": ["childcare", "single_parent"],
         "housing": ["general"],
@@ -380,6 +450,7 @@ SYSTEMS = [
         "phone": "0964-27-3329",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（商工振興係） ↗",
+        "icon": "edu_loan",
         "life": ["child_school", "working"],
         "family": ["childcare"],
         "housing": ["general"],
@@ -400,6 +471,7 @@ SYSTEMS = [
         "phone": "0964-27-3337",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（子育て給付係） ↗",
+        "icon": "heart",
         "life": ["child_infant", "child_school"],
         "family": ["single_parent"],
         "housing": ["general"],
@@ -422,6 +494,7 @@ SYSTEMS = [
         "phone": "0964-22-2300",
         "url": "https://www.city.uto.lg.jp/article/view/1017/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（保健指導係） ↗",
+        "icon": "maternity",
         "life": ["child_infant"],
         "family": ["childcare"],
         "housing": ["general"],
@@ -442,6 +515,7 @@ SYSTEMS = [
         "phone": "0964-22-2300",
         "url": "https://www.city.uto.lg.jp/article/view/1017/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（保健指導係） ↗",
+        "icon": "postpartum",
         "life": ["child_infant"],
         "family": ["childcare", "single_parent"],
         "housing": ["general"],
@@ -462,6 +536,7 @@ SYSTEMS = [
         "phone": "0964-22-2300",
         "url": "https://www.city.uto.lg.jp/article/view/1017/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（保健指導係） ↗",
+        "icon": "hearing",
         "life": ["child_infant"],
         "family": ["childcare"],
         "housing": ["general"],
@@ -482,6 +557,7 @@ SYSTEMS = [
         "phone": "0964-22-2300",
         "url": "https://www.city.uto.lg.jp/article/view/1017/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（保健指導係） ↗",
+        "icon": "fertility",
         "life": ["newlywed", "working"],
         "family": ["general"],
         "housing": ["general"],
@@ -502,6 +578,7 @@ SYSTEMS = [
         "phone": "0964-22-2300",
         "url": "https://www.city.uto.lg.jp/article/view/1017/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（保健予防係） ↗",
+        "icon": "checkup",
         "life": ["working", "senior"],
         "family": ["general"],
         "housing": ["general"],
@@ -522,6 +599,7 @@ SYSTEMS = [
         "phone": "0964-27-3318",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（医療保険係） ↗",
+        "icon": "checkup",
         "life": ["working", "senior"],
         "family": ["general"],
         "housing": ["general"],
@@ -544,6 +622,7 @@ SYSTEMS = [
         "phone": "0964-27-3324",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（介護保険係） ↗",
+        "icon": "senior_house",
         "life": ["senior"],
         "family": ["senior_only", "disability"],
         "housing": ["owned_wood", "rental"],
@@ -564,6 +643,7 @@ SYSTEMS = [
         "phone": "0964-27-3325",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（高齢者支援係） ↗",
+        "icon": "emergency_bell",
         "life": ["senior"],
         "family": ["senior_only"],
         "housing": ["general"],
@@ -584,6 +664,7 @@ SYSTEMS = [
         "phone": "0964-27-3325",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（高齢者支援係） ↗",
+        "icon": "meal",
         "life": ["senior"],
         "family": ["senior_only"],
         "housing": ["general"],
@@ -604,6 +685,7 @@ SYSTEMS = [
         "phone": "0964-27-3325",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（高齢者支援係） ↗",
+        "icon": "aid_hearing",
         "life": ["senior"],
         "family": ["senior_only", "general"],
         "housing": ["general"],
@@ -624,6 +706,7 @@ SYSTEMS = [
         "phone": "0964-27-3322",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（障がい福祉係） ↗",
+        "icon": "taxi",
         "life": ["senior", "working"],
         "family": ["senior_only", "disability"],
         "housing": ["general"],
@@ -644,6 +727,7 @@ SYSTEMS = [
         "phone": "0964-27-3322",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（障がい福祉係） ↗",
+        "icon": "wheelchair",
         "life": ["all"],
         "family": ["disability"],
         "housing": ["general"],
@@ -664,6 +748,7 @@ SYSTEMS = [
         "phone": "0964-27-3322",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（障がい福祉係） ↗",
+        "icon": "assist_walk",
         "life": ["all"],
         "family": ["disability", "childcare"],
         "housing": ["general"],
@@ -684,6 +769,7 @@ SYSTEMS = [
         "phone": "0964-27-3325",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（高齢者支援係） ↗",
+        "icon": "diaper",
         "life": ["senior"],
         "family": ["senior_only", "disability"],
         "housing": ["general"],
@@ -704,6 +790,7 @@ SYSTEMS = [
         "phone": "0964-27-3325",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（高齢者支援係） ↗",
+        "icon": "insurance_shield",
         "life": ["senior"],
         "family": ["senior_only", "general"],
         "housing": ["general"],
@@ -726,6 +813,7 @@ SYSTEMS = [
         "phone": "0964-27-3315",
         "url": "https://www.city.uto.lg.jp/article/view/1005/11993.html",
         "urlLabel": "宇土市公式：結婚新生活支援事業 ↗",
+        "icon": "wedding",
         "life": ["newlywed"],
         "family": ["general"],
         "housing": ["rental", "owned_wood"],
@@ -746,6 +834,7 @@ SYSTEMS = [
         "phone": "0964-27-3315",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（政策推進係） ↗",
+        "icon": "moving",
         "life": ["working", "newlywed", "child_infant", "child_school"],
         "family": ["general", "childcare"],
         "housing": ["general"],
@@ -766,6 +855,7 @@ SYSTEMS = [
         "phone": "0964-27-3315",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（政策推進係） ↗",
+        "icon": "community",
         "life": ["working", "senior"],
         "family": ["general"],
         "housing": ["general"],
@@ -786,6 +876,7 @@ SYSTEMS = [
         "phone": "0964-27-3315",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（政策推進係） ↗",
+        "icon": "hall",
         "life": ["all"],
         "family": ["general"],
         "housing": ["general"],
@@ -806,6 +897,7 @@ SYSTEMS = [
         "phone": "0964-27-3314",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（防災交通係） ↗",
+        "icon": "fire_prep",
         "life": ["all"],
         "family": ["general"],
         "housing": ["general"],
@@ -826,6 +918,7 @@ SYSTEMS = [
         "phone": "0964-27-3332",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（建築住宅係） ↗",
+        "icon": "retrofit_check",
         "life": ["newlywed", "working"],
         "family": ["general"],
         "housing": ["vacant", "owned_wood"],
@@ -848,6 +941,7 @@ SYSTEMS = [
         "phone": "0964-27-3329",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（商工振興係） ↗",
+        "icon": "loan_biz",
         "life": ["working"],
         "family": ["general"],
         "housing": ["general"],
@@ -868,6 +962,7 @@ SYSTEMS = [
         "phone": "0964-27-3329",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（商工振興係） ↗",
+        "icon": "startup",
         "life": ["working", "newlywed"],
         "family": ["general"],
         "housing": ["general"],
@@ -888,6 +983,7 @@ SYSTEMS = [
         "phone": "0964-27-3329",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（商工振興係） ↗",
+        "icon": "sme",
         "life": ["working"],
         "family": ["general"],
         "housing": ["general"],
@@ -908,6 +1004,7 @@ SYSTEMS = [
         "phone": "0964-27-3327",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（農業振興係） ↗",
+        "icon": "farmer",
         "life": ["working", "newlywed"],
         "family": ["general"],
         "housing": ["general"],
@@ -928,6 +1025,7 @@ SYSTEMS = [
         "phone": "0964-27-3327",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（農業振興係） ↗",
+        "icon": "farmer",
         "life": ["working"],
         "family": ["general"],
         "housing": ["general"],
@@ -950,6 +1048,7 @@ SYSTEMS = [
         "phone": "0964-22-1111",
         "url": "uto-housing.html",
         "urlLabel": "解説：宇土市 住まいの再建支援ガイド ↗",
+        "icon": "rebuild",
         "life": ["all"],
         "family": ["general", "childcare", "senior_only", "single_parent"],
         "housing": ["owned_wood", "rental"],
@@ -970,6 +1069,7 @@ SYSTEMS = [
         "phone": "0964-22-1111",
         "url": "uto-repair.html",
         "urlLabel": "解説：宇土市 住宅応急修理ガイド ↗",
+        "icon": "emergency_repair",
         "life": ["all"],
         "family": ["general", "childcare", "senior_only"],
         "housing": ["owned_wood"],
@@ -990,6 +1090,7 @@ SYSTEMS = [
         "phone": "0964-22-1044",
         "url": "uto-jizokuka.html",
         "urlLabel": "解説：宇土市 持続化補助金＜災害支援枠＞ガイド ↗",
+        "icon": "jizokuka_disaster",
         "life": ["working"],
         "family": ["general"],
         "housing": ["general"],
@@ -1010,6 +1111,7 @@ SYSTEMS = [
         "phone": "0964-22-1111",
         "url": "uto-housing.html",
         "urlLabel": "解説：宇土市 住まいの再建支援ガイド ↗",
+        "icon": "public_demolish",
         "life": ["all"],
         "family": ["general", "senior_only"],
         "housing": ["owned_wood", "vacant"],
@@ -1030,6 +1132,7 @@ SYSTEMS = [
         "phone": "0964-27-3316",
         "url": "https://www.city.uto.lg.jp/article/view/1310/16725.html",
         "urlLabel": "宇土市公式：災害対策本部会議資料 ↗",
+        "icon": "relief_money",
         "life": ["all"],
         "family": ["general", "single_parent", "senior_only", "childcare"],
         "housing": ["owned_wood", "rental"],
@@ -1050,6 +1153,7 @@ SYSTEMS = [
         "phone": "0964-27-3321",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（福祉総務係） ↗",
+        "icon": "disaster_loan",
         "life": ["all"],
         "family": ["general", "single_parent", "senior_only"],
         "housing": ["owned_wood", "rental"],
@@ -1070,6 +1174,7 @@ SYSTEMS = [
         "phone": "0964-27-3317",
         "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
         "urlLabel": "宇土市公式：まちづくりハンドブック（税務課） ↗",
+        "icon": "tax_relief",
         "life": ["all"],
         "family": ["general"],
         "housing": ["general"],
@@ -1107,33 +1212,38 @@ def generate_html():
   <link rel="stylesheet" href="styles.css?v=20260907-2">
   <link rel="stylesheet" href="design-system.css?v=20260907-2">
   <link rel="stylesheet" href="org-site.css?v=20260918-1">
-  <link rel="stylesheet" href="uto-support.css?v=20260921-2">
+  <link rel="stylesheet" href="uto-support.css?v=20260921-3">
 </head>
-<body>
-  <header></header>
-  <main id="mainContent">
-    <div class="container">
+<body class="organization-site uto-support-page">
+  <a class="skip" href="#mainContent">本文へ移動</a>
+  <header class="site-header"></header>
+  <main id="mainContent" class="uto-support-main">
 
-      <!-- パンくずリスト -->
-      <nav class="breadcrumb-nav" aria-label="パンくずリスト">
-        <a href="index.html">ホーム</a>
-        <span>&gt;</span>
-        <a href="municipalities.html">自治体別の状況</a>
-        <span>&gt;</span>
-        <a href="hq-uto.html">宇土市</a>
-        <span>&gt;</span>
-        <span aria-current="page">暮らしの支援・補助金 総合ガイド</span>
-      </nav>
+    <!-- ヒーローヘッダー（全幅グラデーション＋内部幅制限1040px） -->
+    <header class="uto-sup-hero">
+      <div class="uto-sup-hero-inner">
+        <!-- パンくずリスト -->
+        <nav class="breadcrumb-nav" aria-label="パンくずリスト">
+          <a href="index.html">ホーム</a>
+          <span>&gt;</span>
+          <a href="municipalities.html">自治体別の状況</a>
+          <span>&gt;</span>
+          <a href="hq-uto.html">宇土市</a>
+          <span>&gt;</span>
+          <span aria-current="page">暮らしの支援・補助金 総合ガイド</span>
+        </nav>
 
-      <!-- ヒーローヘッダー -->
-      <header class="uto-sup-hero">
         <div class="uto-sup-hero-badge">宇土市公式制度 徹底整理 · 全53制度</div>
         <h1>宇土市 暮らしの支援・補助金 総合ガイド</h1>
         <p class="uto-sup-hero-lead">
           宇土市が市民の生活安定、住環境向上、子育て、健康、福祉、産業振興のために平時から整備している公的支援・補助金制度と、令和8年熊本地震に伴う特別支援制度を体系的に整理しました。<br>
           「あなたの現在の状況」を選択して、活用できる制度を今すぐお探しいただけます。すべての制度に宇土市公式HP（一次情報）へのリンクと直通電話番号を掲載しています。
         </p>
-      </header>
+      </div>
+    </header>
+
+    <!-- メインコンテンツシェル（幅1040px制限で中央揃え） -->
+    <div class="uto-sup-shell">
 
       <!-- かんたん条件シミュレーター -->
       <section class="uto-sim-card" id="utoSimulator" aria-labelledby="utoSimTitle">
@@ -1420,6 +1530,7 @@ def generate_html():
             disaster_attr = ",".join(item.get("disaster", ["none"]))
             work_attr = ",".join(item.get("work", ["all"]))
 
+            icon_svg = ICONS.get(item.get("icon", "reform"), ICONS["reform"])
             tag_spans = "".join([f'<span class="card-hash-tag">{t}</span>' for t in item.get("tags", [])])
 
             html_parts.append(f'''          <article class="uto-card"
@@ -1429,12 +1540,19 @@ def generate_html():
                    data-income="{income_attr}"
                    data-disaster="{disaster_attr}"
                    data-work="{work_attr}">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">{item["catName"]}</span>
-              <span class="uto-badge-feature">{item["badge"]}</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                {icon_svg}
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">{item["catName"]}</span>
+                  <span class="uto-badge-feature">{item["badge"]}</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>{item["title"]}</h3>
+              </div>
             </div>
-            <h3>{item["title"]}</h3>
             <div class="uto-card-amount">{item["amount"]}</div>
             <p class="uto-card-desc">{item["desc"]}</p>
             {extra_html}
@@ -1492,16 +1610,16 @@ def generate_html():
 
     </div>
   </main>
-  <footer></footer>
+  <footer class="site-footer"></footer>
   <script src="org-site.js?v=20260907-2"></script>
-  <script src="uto-support.js?v=20260921-2"></script>
+  <script src="uto-support.js?v=20260921-3"></script>
 </body>
 </html>
 ''')
 
     content = "".join(html_parts)
     Path("uto-support.html").write_text(content, encoding="utf-8")
-    print(f"Generated uto-support.html with {len(SYSTEMS)} systems.")
+    print(f"Generated uto-support.html with {len(SYSTEMS)} systems and SVG illustrations.")
 
 if __name__ == "__main__":
     generate_html()

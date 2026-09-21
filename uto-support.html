@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles.css?v=20260907-2">
   <link rel="stylesheet" href="design-system.css?v=20260907-2">
   <link rel="stylesheet" href="org-site.css?v=20260918-1">
-  <link rel="stylesheet" href="uto-support.css?v=20260921-2">
+  <link rel="stylesheet" href="uto-support.css?v=20260921-3">
   <link rel="canonical" href="https://www.yokatainet.jp/uto-support.html">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
@@ -28,31 +28,36 @@
   <meta name="twitter:description" content="宇土市公式の平時支援制度および令和8年熊本地震特別支援の全53制度を網羅した総合ガイド。現在の状況（年齢・世帯・住まい・収入・被災度・事業）から活用可能な補助金を瞬時に調べる「かんたん条件シミュレーター」を搭載。全制度に一次情報リンクと担当窓口を明記。">
   <meta name="twitter:image" content="https://www.yokatainet.jp/ogp-uto-support.png">
 </head>
-<body>
-  <header></header>
-  <main id="mainContent">
-    <div class="container">
+<body class="organization-site uto-support-page">
+  <a class="skip" href="#mainContent">本文へ移動</a>
+  <header class="site-header"></header>
+  <main id="mainContent" class="uto-support-main">
 
-      <!-- パンくずリスト -->
-      <nav class="breadcrumb-nav" aria-label="パンくずリスト">
-        <a href="index.html">ホーム</a>
-        <span>&gt;</span>
-        <a href="municipalities.html">自治体別の状況</a>
-        <span>&gt;</span>
-        <a href="hq-uto.html">宇土市</a>
-        <span>&gt;</span>
-        <span aria-current="page">暮らしの支援・補助金 総合ガイド</span>
-      </nav>
+    <!-- ヒーローヘッダー（全幅グラデーション＋内部幅制限1040px） -->
+    <header class="uto-sup-hero">
+      <div class="uto-sup-hero-inner">
+        <!-- パンくずリスト -->
+        <nav class="breadcrumb-nav" aria-label="パンくずリスト">
+          <a href="index.html">ホーム</a>
+          <span>&gt;</span>
+          <a href="municipalities.html">自治体別の状況</a>
+          <span>&gt;</span>
+          <a href="hq-uto.html">宇土市</a>
+          <span>&gt;</span>
+          <span aria-current="page">暮らしの支援・補助金 総合ガイド</span>
+        </nav>
 
-      <!-- ヒーローヘッダー -->
-      <header class="uto-sup-hero">
         <div class="uto-sup-hero-badge">宇土市公式制度 徹底整理 · 全53制度</div>
         <h1>宇土市 暮らしの支援・補助金 総合ガイド</h1>
         <p class="uto-sup-hero-lead">
           宇土市が市民の生活安定、住環境向上、子育て、健康、福祉、産業振興のために平時から整備している公的支援・補助金制度と、令和8年熊本地震に伴う特別支援制度を体系的に整理しました。<br>
           「あなたの現在の状況」を選択して、活用できる制度を今すぐお探しいただけます。すべての制度に宇土市公式HP（一次情報）へのリンクと直通電話番号を掲載しています。
         </p>
-      </header>
+      </div>
+    </header>
+
+    <!-- メインコンテンツシェル（幅1040px制限で中央揃え） -->
+    <div class="uto-sup-shell">
 
       <!-- かんたん条件シミュレーター -->
       <section class="uto-sim-card" id="utoSimulator" aria-labelledby="utoSimTitle">
@@ -324,12 +329,19 @@
                    data-income="no_limit"
                    data-disaster="none,damage_heavy,damage_half,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">住まい・耐震・環境</span>
-              <span class="uto-badge-feature">被災併用OK・最大25万円</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M14.5 12a2.5 2.5 0 0 0-3.5-3.5L8 11.5l4.5 4.5z"/><path d="m11.5 15 3.5 3.5"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">住まい・耐震・環境</span>
+                  <span class="uto-badge-feature">被災併用OK・最大25万円</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市住宅リフォーム助成事業</h3>
+              </div>
             </div>
-            <h3>宇土市住宅リフォーム助成事業</h3>
             <div class="uto-card-amount">対象工事費用の20%（最大25万円分の商品券）</div>
             <p class="uto-card-desc">市民の住環境向上と地元商工業の活性化のため、市内の施工業者による住宅リフォーム工事費用の一部を地域商品券で助成。外壁・屋根塗装、水回り改修、バリアフリー化などが対象です。</p>
             <div class="uto-card-extra">【熊本地震支援との連携】災害救助法に基づく「住宅の応急修理」を完了した世帯が、追加で自己負担リフォームを行う場合も本助成の対象となります。被災者生活再建支援金や義援金の受給世帯も申請可能です。</div>
@@ -351,12 +363,19 @@
                    data-income="no_limit"
                    data-disaster="none,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">住まい・耐震・環境</span>
-              <span class="uto-badge-feature">無料耐震診断</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="14" r="3"/><path d="m14.5 16.5 2.5 2.5"/><path d="m9 13 2 2 4-4"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">住まい・耐震・環境</span>
+                  <span class="uto-badge-feature">無料耐震診断</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>戸建て木造住宅耐震診断事業補助金</h3>
+              </div>
             </div>
-            <h3>戸建て木造住宅耐震診断事業補助金</h3>
             <div class="uto-card-amount">自己負担無料（市が木造住宅耐震診断士を派遣・全額補助）</div>
             <p class="uto-card-desc">昭和56年5月31日以前に着工された旧耐震基準の木造一戸建て住宅を対象に、市が専門の耐震診断士を派遣して耐震性を無料で総合調査します。</p>
             <div class="uto-card-extra">大地震に対する我が家の倒壊危険度を把握し、耐震改修や補強計画の基礎資料として活用できます。</div>
@@ -378,12 +397,19 @@
                    data-income="no_limit"
                    data-disaster="none,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">住まい・耐震・環境</span>
-              <span class="uto-badge-feature">最大100万円補助</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M12 11v7"/><path d="M8 15h8"/><path d="M12 22s5-3 5-8V9l-5-2-5 2v5c0 5 5 8 5 8z" opacity="0.3"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">住まい・耐震・環境</span>
+                  <span class="uto-badge-feature">最大100万円補助</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>戸建て木造住宅耐震改修等事業補助金（建替え・改修）</h3>
+              </div>
             </div>
-            <h3>戸建て木造住宅耐震改修等事業補助金（建替え・改修）</h3>
             <div class="uto-card-amount">耐震改修・建替え：最大100万円補助 / 耐震シェルター設置：最大30万円補助</div>
             <p class="uto-card-desc">耐震診断の結果、倒壊の危険性があると判定された旧耐震木造住宅について、耐震改修工事、建替え工事、または寝室等の安全を確保する耐震シェルターの設置費用を補助します。</p>
             <div class="uto-card-extra">改修だけでなく建替えも対象。高齢者世帯には耐震シェルター設置も有効です。</div>
@@ -405,12 +431,19 @@
                    data-income="no_limit"
                    data-disaster="none,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">住まい・耐震・環境</span>
-              <span class="uto-badge-feature">撤去・改修最大16万円</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18"/><path d="M9 3v6M15 3v6M6 9v6M12 9v6M18 9v6M9 15v6M15 15v6"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">住まい・耐震・環境</span>
+                  <span class="uto-badge-feature">撤去・改修最大16万円</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>危険ブロック塀等安全確保支援事業補助金</h3>
+              </div>
             </div>
-            <h3>危険ブロック塀等安全確保支援事業補助金</h3>
             <div class="uto-card-amount">撤去・建替え工事費用の2/3（上限16万円）</div>
             <p class="uto-card-desc">避難路や道路に面した倒壊の危険があるブロック塀、石積塀等の撤去、または安全な軽量フェンス等への建替え費用を補助し、地震時の倒壊事故や避難路閉塞を防ぎます。</p>
             <div class="uto-card-extra">道路境界に面する高さや傾きなどの安全点検基準があります。着工前の申請が必要です。</div>
@@ -432,12 +465,19 @@
                    data-income="no_limit"
                    data-disaster="none,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">住まい・耐震・環境</span>
-              <span class="uto-badge-feature">解体費最大50万円</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m7 7 10 10M17 7 7 17"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">住まい・耐震・環境</span>
+                  <span class="uto-badge-feature">解体費最大50万円</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>老朽危険空家等除去促進事業補助金</h3>
+              </div>
             </div>
-            <h3>老朽危険空家等除去促進事業補助金</h3>
             <div class="uto-card-amount">解体撤去費用の1/3（上限50万円）</div>
             <p class="uto-card-desc">長期間使用されず、周囲に危険を及ぼす恐れのある特定空家等の解体・撤去費用を補助し、市民の安全確保と生活環境の改善を図ります。</p>
             <div class="uto-card-extra">周囲への危険度判定基準を満たす必要があります。対象要件等の事前相談を受け付けています。</div>
@@ -459,12 +499,19 @@
                    data-income="general"
                    data-disaster="none,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">住まい・耐震・環境</span>
-              <span class="uto-badge-feature">危険区域からの移転</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 20 8-14 4 7 8-3"/><path d="m14 15 4-3 4 3v5H14z"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">住まい・耐震・環境</span>
+                  <span class="uto-badge-feature">危険区域からの移転</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>がけ地近接・土砂災害危険住宅移転事業補助金</h3>
+              </div>
             </div>
-            <h3>がけ地近接・土砂災害危険住宅移転事業補助金</h3>
             <div class="uto-card-amount">危険住宅除却費（最大97.5万円）＋住宅移転支援（融資利子等最大421万円）</div>
             <p class="uto-card-desc">土砂災害警戒区域やがけ地等の危険区域内にある住宅を安全な地域へ移転・建替える際、既存住宅の除却費用や新たな住宅の建設・購入のための借入利子等を補助します。</p>
             <div class="uto-card-extra">土砂災害特別警戒区域等に指定された区域内の住宅が対象となります。</div>
@@ -486,12 +533,19 @@
                    data-income="no_limit"
                    data-disaster="none,damage_heavy,damage_half,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">住まい・耐震・環境</span>
-              <span class="uto-badge-feature">水洗化・最大約58万円〜</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/><path d="M12 12v6M9 15h6"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">住まい・耐震・環境</span>
+                  <span class="uto-badge-feature">水洗化・最大約58万円〜</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>合併処理浄化槽設置整備事業補助金</h3>
+              </div>
             </div>
-            <h3>合併処理浄化槽設置整備事業補助金</h3>
             <div class="uto-card-amount">人槽区分・既存単独浄化槽撤去に応じて最大約58万円〜（配管工事加算あり）</div>
             <p class="uto-card-desc">生活排水による河川の水質汚濁を防ぐため、汲み取り便所や単独処理浄化槽から高度処理型合併処理浄化槽へ転換・設置する費用の一部を補助します。</p>
             <div class="uto-card-extra">既存単独槽の撤去や宅内配管工事を伴う場合は補助額が上乗せされます。</div>
@@ -513,12 +567,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">住まい・耐震・環境</span>
-              <span class="uto-badge-feature">購入費の1/2補助</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 3.5 1 7.5-1.5 10.5M11 20a7 7 0 0 0 6.5-7.5"/><path d="M11 20v-8"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">住まい・耐震・環境</span>
+                  <span class="uto-badge-feature">購入費の1/2補助</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>生ごみ処理機器等購入費補助金</h3>
+              </div>
             </div>
-            <h3>生ごみ処理機器等購入費補助金</h3>
             <div class="uto-card-amount">購入価格の2分の1（電動式上限20,000円 / 容器・コンポスト等上限3,000円）</div>
             <p class="uto-card-desc">家庭から排出される生ごみの自家減量化・堆肥化を促進するため、電動生ごみ処理機やコンポスト容器の購入費用の一部を助成します。</p>
             <div class="uto-card-extra">市内の販売店等で購入する前に要件をご確認ください。1世帯あたりの補助基数制限があります。</div>
@@ -540,12 +601,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">住まい・耐震・環境</span>
-              <span class="uto-badge-feature">設置費用の1/2助成</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M8 19v2M8 13v2M12 21v2M12 15v2M16 19v2M16 13v2"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">住まい・耐震・環境</span>
+                  <span class="uto-badge-feature">設置費用の1/2助成</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>雨水貯留施設設置補助金</h3>
+              </div>
             </div>
-            <h3>雨水貯留施設設置補助金</h3>
             <div class="uto-card-amount">設置費用の2分の1（上限20,000円）</div>
             <p class="uto-card-desc">雨水の有効利用と流出抑制、地震等の災害時における初期消火用水・生活用水の確保を図るため、住宅用雨水タンク（貯留施設）の設置費用を補助します。</p>
             <div class="uto-card-extra">容量100リットル以上の貯留施設が対象です。防災時の非常用水としても役立ちます。</div>
@@ -567,12 +635,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">住まい・耐震・環境</span>
-              <span class="uto-badge-feature">空き家改修最大50万円</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="14" r="2"/><path d="M12 16v3"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">住まい・耐震・環境</span>
+                  <span class="uto-badge-feature">空き家改修最大50万円</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市空き家バンク活用促進補助金</h3>
+              </div>
             </div>
-            <h3>宇土市空き家バンク活用促進補助金</h3>
             <div class="uto-card-amount">改修工事費用の1/2（上限50万円）＋不要家財処分費用（上限10万円）</div>
             <p class="uto-card-desc">空き家バンクに登録された物件の利活用を促進するため、物件の購入者または賃借人が行う改修工事費用や、所有者が行う家財処分費用を補助します。</p>
             <div class="uto-card-extra">市外からの移住者や子育て世帯が入居する場合に手厚い支援設定があります。</div>
@@ -604,12 +679,19 @@
                    data-income="no_limit"
                    data-disaster="none,damage_heavy,damage_half,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">子育て・教育・就学支援</span>
-              <span class="uto-badge-feature">高校生世代まで無料</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M19 8h4M21 6v4"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">子育て・教育・就学支援</span>
+                  <span class="uto-badge-feature">高校生世代まで無料</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>子ども医療費助成事業</h3>
+              </div>
             </div>
-            <h3>子ども医療費助成事業</h3>
             <div class="uto-card-amount">0歳〜高校生世代（18歳到達後最初の3月31日まで）：通院・入院の保険診療自己負担分を全額助成</div>
             <p class="uto-card-desc">宇土市内に住所のある高校生世代までのお子さんの医療費（保険適用分）を助成。窓口で「受給者証」を提示することで、熊本県内の医療機関窓口での支払いが不要（現物給付）となります。</p>
             <div class="uto-card-extra">所得制限はありません。入院時の食事代や保険適用外の費用は自己負担となります。</div>
@@ -631,12 +713,19 @@
                    data-income="no_limit"
                    data-disaster="none,damage_heavy,damage_half,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">子育て・教育・就学支援</span>
-              <span class="uto-badge-feature">高校生年代まで拡充</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01M18 12h.01"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">子育て・教育・就学支援</span>
+                  <span class="uto-badge-feature">高校生年代まで拡充</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>児童手当</h3>
+              </div>
             </div>
-            <h3>児童手当</h3>
             <div class="uto-card-amount">0歳〜3歳未満月額1.5万円 / 3歳〜高校生月額1万円（第3子以降月額3万円）</div>
             <p class="uto-card-desc">高校生年代（18歳到達後の最初の3月31日）までのお子さんを養育している方に支給されます。制度改正により所得制限が撤廃され、支給期間・多子加算が大幅に拡充されています。</p>
             <div class="uto-card-extra">年6回（偶数月）に2か月分ずつ指定口座へ支給されます。</div>
@@ -658,12 +747,19 @@
                    data-income="low_income"
                    data-disaster="none,damage_heavy,damage_half,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">子育て・教育・就学支援</span>
-              <span class="uto-badge-feature">ひとり親世帯手当</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">子育て・教育・就学支援</span>
+                  <span class="uto-badge-feature">ひとり親世帯手当</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>児童扶養手当</h3>
+              </div>
             </div>
-            <h3>児童扶養手当</h3>
             <div class="uto-card-amount">全部支給月額45,500円〜一部支給（所得・お子さんの人数に応じて算定）</div>
             <p class="uto-card-desc">父母の離婚や死亡などにより、父または母と生計を同じくしていない児童を養育しているひとり親世帯等の生活の安定と自立を助けるための手当です。</p>
             <div class="uto-card-extra">年6回（奇数月）に支給。所得額に応じた一部支給基準があります。</div>
@@ -685,12 +781,19 @@
                    data-income="low_income"
                    data-disaster="none,damage_heavy,damage_half,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">子育て・教育・就学支援</span>
-              <span class="uto-badge-feature">親子の通院・入院支援</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M19 8h4M21 6v4"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">子育て・教育・就学支援</span>
+                  <span class="uto-badge-feature">親子の通院・入院支援</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>ひとり親家庭等医療費助成</h3>
+              </div>
             </div>
-            <h3>ひとり親家庭等医療費助成</h3>
             <div class="uto-card-amount">ひとり親家庭の父・母・養育者および児童の医療費自己負担分を助成</div>
             <p class="uto-card-desc">母子家庭・父子家庭等の健康維持と福祉向上を図るため、健康保険適用による診療・調剤の自己負担額を助成します（所得制限等の所定要件あり）。</p>
             <div class="uto-card-extra">児童扶養手当受給世帯などが対象です。登録手続き後に受給者証が交付されます。</div>
@@ -712,12 +815,19 @@
                    data-income="low_income"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">子育て・教育・就学支援</span>
-              <span class="uto-badge-feature">入学時のお祝い金</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10M6 14h6"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">子育て・教育・就学支援</span>
+                  <span class="uto-badge-feature">入学時のお祝い金</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>ひとり親家庭児童入学祝金</h3>
+              </div>
             </div>
-            <h3>ひとり親家庭児童入学祝金</h3>
             <div class="uto-card-amount">小学校入学児童：1人1万円 / 中学校等入学児童：1人1万5千円</div>
             <p class="uto-card-desc">ひとり親家庭の児童が小学校または中学校・義務教育学校等に入学する際、入学に伴う経済的負担を和らげ健やかな成長を祝う祝金を支給します。</p>
             <div class="uto-card-extra">宇土市内に住所を有し、児童扶養手当受給資格等を有するひとり親世帯が対象です。</div>
@@ -739,12 +849,19 @@
                    data-income="low_income"
                    data-disaster="none,damage_heavy,damage_half,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">子育て・教育・就学支援</span>
-              <span class="uto-badge-feature">学用品・給食費の援助</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10M6 14h6"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">子育て・教育・就学支援</span>
+                  <span class="uto-badge-feature">学用品・給食費の援助</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市就学援助制度</h3>
+              </div>
             </div>
-            <h3>宇土市就学援助制度</h3>
             <div class="uto-card-amount">学用品費、通学用品費、校外活動費、修学旅行費、学校給食費等の全額または一部</div>
             <p class="uto-card-desc">経済的理由により小中学校への就学が困難な世帯に対し、学用品費や給食費、修学旅行費などの必要な費用を援助する制度です（前年所得等による審査あり）。</p>
             <div class="uto-card-extra">【熊本地震による特例】災害により家計が急変したり住家に甚大な被害を受けた世帯についても、随時申請・特例認定の対象となります。</div>
@@ -766,12 +883,19 @@
                    data-income="low_income"
                    data-disaster="none,damage_heavy,damage_half"
                    data-work="employee,business">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">子育て・教育・就学支援</span>
-              <span class="uto-badge-feature">放課後の安全な居場所</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">子育て・教育・就学支援</span>
+                  <span class="uto-badge-feature">放課後の安全な居場所</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市放課後児童クラブ利用料減免制度</h3>
+              </div>
             </div>
-            <h3>宇土市放課後児童クラブ利用料減免制度</h3>
             <div class="uto-card-amount">生活保護世帯・非課税世帯：月額利用料の全額免除または減額</div>
             <p class="uto-card-desc">放課後や学校休業日に就労等で保護者が不在となる児童を預かる放課後児童クラブ（学童保育）について、所得状況等に応じた利用料の減免措置を実施しています。</p>
             <div class="uto-card-extra">市内各小学校区に設置。長期休業中（夏休み等）の利用枠もあります。</div>
@@ -793,12 +917,19 @@
                    data-income="no_limit,low_income"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">子育て・教育・就学支援</span>
-              <span class="uto-badge-feature">3〜5歳児利用料0円</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="8" height="8" rx="1"/><rect x="13" y="11" width="8" height="8" rx="1"/><path d="m8 3 5 8H3z"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">子育て・教育・就学支援</span>
+                  <span class="uto-badge-feature">3〜5歳児利用料0円</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>幼児教育・保育の無償化および副食費免除</h3>
+              </div>
             </div>
-            <h3>幼児教育・保育の無償化および副食費免除</h3>
             <div class="uto-card-amount">3〜5歳児クラス全額無償 / 0〜2歳児住民税非課税世帯無償（副食費免除制度あり）</div>
             <p class="uto-card-desc">認可保育所、認定こども園、幼稚園等を利用する子どもの利用料が無償化されています。年収・世帯状況に応じた給食費（副食費）の免除制度も用意されています。</p>
             <div class="uto-card-extra">認可外保育施設等を利用する場合も、保育の必要性の認定により一定限度額まで無償化対象となります。</div>
@@ -820,12 +951,19 @@
                    data-income="general"
                    data-disaster="none"
                    data-work="employee,business">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">子育て・教育・就学支援</span>
-              <span class="uto-badge-feature">利子を市が全額補給</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">子育て・教育・就学支援</span>
+                  <span class="uto-badge-feature">利子を市が全額補給</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市勤労者教育ローン利子補給制度</h3>
+              </div>
             </div>
-            <h3>宇土市勤労者教育ローン利子補給制度</h3>
             <div class="uto-card-amount">教育資金借入利子の全額（年利1.5%相当を上限に在学中補給）</div>
             <p class="uto-card-desc">市内に居住する勤労者が、お子さんの高校・大学・専門学校等への進学・在学資金として金融機関（九州ろうきん等）から借り入れた教育ローンの利息分を市が全額補給します。</p>
             <div class="uto-card-extra">在学期間中の返済負担を大きく軽減。申請年度ごとに利子補給の受付が行われます。</div>
@@ -847,12 +985,19 @@
                    data-income="low_income"
                    data-disaster="none,damage_heavy"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">子育て・教育・就学支援</span>
-              <span class="uto-badge-feature">遺児等の育成支援</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">子育て・教育・就学支援</span>
+                  <span class="uto-badge-feature">遺児等の育成支援</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市遺児手当</h3>
+              </div>
             </div>
-            <h3>宇土市遺児手当</h3>
             <div class="uto-card-amount">対象児童1人につき月額手当を支給（学齢期加算あり）</div>
             <p class="uto-card-desc">交通事故、労働災害、病気や災害等により生計維持者を亡くした遺児を養育している保護者に対し、生活の安定と健全な育成を願って市独自の手当を支給します。</p>
             <div class="uto-card-extra">市内に1年以上在住などの要件があります。詳細は子育て給付係へご相談ください。</div>
@@ -884,12 +1029,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">妊娠・出産・女性・健康づくり</span>
-              <span class="uto-badge-feature">14回分無料受診票</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6M12 9v6"/><circle cx="12" cy="12" r="9"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">妊娠・出産・女性・健康づくり</span>
+                  <span class="uto-badge-feature">14回分無料受診票</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>妊婦健康診査受診票交付</h3>
+              </div>
             </div>
-            <h3>妊婦健康診査受診票交付</h3>
             <div class="uto-card-amount">妊婦一般健康診査14回分＋産婦健康診査2回分の費用助成（無料券交付）</div>
             <p class="uto-card-desc">母子健康手帳の交付時に、妊婦健診14回分および産後健診の公費助成受診票を交付。県内委託医療機関・助産所での健診費用が公費負担となります。</p>
             <div class="uto-card-extra">多胎妊娠（双子・三つ子等）の場合は受診票が追加交付されます。県外受診の償還払い制度もあります。</div>
@@ -911,12 +1063,19 @@
                    data-income="no_limit,low_income"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">妊娠・出産・女性・健康づくり</span>
-              <span class="uto-badge-feature">宿泊・通所・訪問サポート</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z"/><circle cx="17" cy="7" r="3"/><path d="M14 14a5 5 0 0 1 7 4"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">妊娠・出産・女性・健康づくり</span>
+                  <span class="uto-badge-feature">宿泊・通所・訪問サポート</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>産後ケア事業（ショートステイ・デイサービス・アウトリーチ）</h3>
+              </div>
             </div>
-            <h3>産後ケア事業（ショートステイ・デイサービス・アウトリーチ）</h3>
             <div class="uto-card-amount">宿泊型（1泊2日〜）・通所型・訪問型の自己負担軽減（非課税世帯減免あり）</div>
             <p class="uto-card-desc">出産後1年未満の産婦と乳児を対象に、助産所や産科医療機関で助産師等による授乳指導、乳房ケア、育児相談、休養サポートを提供します。</p>
             <div class="uto-card-extra">産後の孤立や育児不安を予防するため、心身のケアが必要な方が気軽に利用できます。</div>
@@ -938,12 +1097,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">妊娠・出産・女性・健康づくり</span>
-              <span class="uto-badge-feature">自己負担無料</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a2.5 2.5 0 0 1-5 0"/><path d="M10 13a2.5 2.5 0 0 0 5 0"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">妊娠・出産・女性・健康づくり</span>
+                  <span class="uto-badge-feature">自己負担無料</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>新生児聴覚検査費助成</h3>
+              </div>
             </div>
-            <h3>新生児聴覚検査費助成</h3>
             <div class="uto-card-amount">初回検査費用を公費負担（受診票による全額助成）</div>
             <p class="uto-card-desc">生まれつきの難聴を早期に発見し適切な療育につなげるため、出生後間もない入院中に産科医療機関で受ける「新生児聴覚検査（AABRまたはOAE）」の費用を助成します。</p>
             <div class="uto-card-extra">母子健康手帳交付時に受診票が配付されます。県外出産時も償還払いに対応します。</div>
@@ -965,12 +1131,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">妊娠・出産・女性・健康づくり</span>
-              <span class="uto-badge-feature">先進医療等へ独自助成</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5c0 4-5 9-5 9s-5-5-5-9a5 5 0 0 1 5-5Z"/><circle cx="12" cy="7" r="2"/><path d="M12 16v6M8 20h8"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">妊娠・出産・女性・健康づくり</span>
+                  <span class="uto-badge-feature">先進医療等へ独自助成</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>熊本県・宇土市特定不妊治療費助成金</h3>
+              </div>
             </div>
-            <h3>熊本県・宇土市特定不妊治療費助成金</h3>
             <div class="uto-card-amount">保険適用外の先進医療費用の一部助成（1回あたり上限5万円等）</div>
             <p class="uto-card-desc">不妊治療を受ける夫婦の経済的負担を軽減するため、保険適用された体外受精・顕微授精と併用して実施された「先進医療」の技術料の一部を助成します。</p>
             <div class="uto-card-extra">保険診療と併用可能な先進医療が対象です。申請期限は治療終了日の属する年度内です。</div>
@@ -992,12 +1165,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">妊娠・出産・女性・健康づくり</span>
-              <span class="uto-badge-feature">ワンコイン〜無料</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">妊娠・出産・女性・健康づくり</span>
+                  <span class="uto-badge-feature">ワンコイン〜無料</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>成人各種がん検診・節目検診</h3>
+              </div>
             </div>
-            <h3>成人各種がん検診・節目検診</h3>
             <div class="uto-card-amount">胃・肺・大腸・乳・子宮頸がん検診：自己負担500円〜1,500円程度（無料クーポン対象あり）</div>
             <p class="uto-card-desc">市民の健康寿命延伸のため、胃がん、肺がん（結核含む）、大腸がん、子宮頸がん、乳がん等の集団・個別検診を実施。節目年齢の方には無料受診券が届きます。</p>
             <div class="uto-card-extra">70歳以上の方や非課税世帯の方は受診料免除申請により無料となります。</div>
@@ -1019,12 +1199,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="business,all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">妊娠・出産・女性・健康づくり</span>
-              <span class="uto-badge-feature">人間ドック1.5万円助成</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">妊娠・出産・女性・健康づくり</span>
+                  <span class="uto-badge-feature">人間ドック1.5万円助成</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>国民健康保険 人間ドック・脳ドック受診費用助成</h3>
+              </div>
             </div>
-            <h3>国民健康保険 人間ドック・脳ドック受診費用助成</h3>
             <div class="uto-card-amount">1日人間ドック：助成額15,000円 / 脳ドック：助成額15,000円</div>
             <p class="uto-card-desc">宇土市国民健康保険の加入者（35歳以上等）を対象に、生活習慣病の早期発見や脳血管疾患予防のための人間ドック・脳ドック受診費用を助成します。</p>
             <div class="uto-card-extra">国保税の滞納がないこと、年度内に特定健診を受診していないこと等の要件があります。</div>
@@ -1056,12 +1243,19 @@
                    data-income="no_limit,low_income"
                    data-disaster="none,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
-              <span class="uto-badge-feature">バリアフリー改修支援</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22v-6h6v6"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
+                  <span class="uto-badge-feature">バリアフリー改修支援</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>高齢者等住宅改修費助成事業</h3>
+              </div>
             </div>
-            <h3>高齢者等住宅改修費助成事業</h3>
             <div class="uto-card-amount">介護保険給付限度額（20万円）を超えた追加工事や、独自改修に上限額まで助成</div>
             <p class="uto-card-desc">要介護・要支援認定を受けた高齢者や虚弱高齢者が、住み慣れた自宅で安全に自立した生活を送れるよう、手すり設置、段差解消、滑り防止床材変更等の費用を補助します。</p>
             <div class="uto-card-extra">必ず着工前の事前申請が必要です。ケアマネジャー等を通じた相談がスムーズです。</div>
@@ -1083,12 +1277,19 @@
                    data-income="no_limit,low_income"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
-              <span class="uto-badge-feature">24時間駆けつけ・機器無償</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/><path d="M2 2l20 20" opacity="0.3"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
+                  <span class="uto-badge-feature">24時間駆けつけ・機器無償</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>緊急通報システム機器貸与事業</h3>
+              </div>
             </div>
-            <h3>緊急通報システム機器貸与事業</h3>
             <div class="uto-card-amount">専用通報機器・ペンダント型発信器の無償貸与（通話料実費負担）</div>
             <p class="uto-card-desc">ひとり暮らしの高齢者や重度障がい者が急病や事故などの緊急時に、ボタン一つで受信センターに連絡でき、救急車の手配や安否確認を行えるシステムです。</p>
             <div class="uto-card-extra">固定電話回線がない世帯にも対応したモバイル型機器の導入も進められています。</div>
@@ -1110,12 +1311,19 @@
                    data-income="low_income"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
-              <span class="uto-badge-feature">見守り付き栄養食</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2v20M18 10h4M2 8a4 4 0 0 1 4-4h4v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z"/><path d="M6 4v6"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
+                  <span class="uto-badge-feature">見守り付き栄養食</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>高齢者等配食サービス事業</h3>
+              </div>
             </div>
-            <h3>高齢者等配食サービス事業</h3>
             <div class="uto-card-amount">1食あたり約400円〜の自己負担で栄養バランスの取れたお弁当を手渡し配達</div>
             <p class="uto-card-desc">食事の調理や買い物が困難な高齢者単身世帯等に対し、定期的に栄養バランスの取れたお弁当を届けるとともに、手渡し時の声かけによる安否確認を行います。</p>
             <div class="uto-card-extra">配達時に異変があった場合は、市役所や緊急連絡先へ直ちに通報・連携されます。</div>
@@ -1137,12 +1345,19 @@
                    data-income="low_income"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
-              <span class="uto-badge-feature">最大2万円補助</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h3l3-7 4 14 3-7h5"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
+                  <span class="uto-badge-feature">最大2万円補助</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>高齢者補聴器購入費助成事業</h3>
+              </div>
             </div>
-            <h3>高齢者補聴器購入費助成事業</h3>
             <div class="uto-card-amount">補聴器本体購入費用の1/2（上限20,000円）</div>
             <p class="uto-card-desc">加齢による聴力低下がある高齢者の社会参加と認知症予防を支援するため、医師の診断に基づいて購入する管理医療機器補聴器の購入費を助成します。</p>
             <div class="uto-card-extra">65歳以上で市民税非課税世帯等の要件があります。購入前の申請が必要です。</div>
@@ -1164,12 +1379,19 @@
                    data-income="no_limit,low_income"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
-              <span class="uto-badge-feature">年間最大24枚交付</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H10l-2 4H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h1a2 2 0 0 0 4 0h6a2 2 0 0 0 4 0h1a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-4z"/><circle cx="7" cy="18" r="1"/><circle cx="17" cy="18" r="1"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
+                  <span class="uto-badge-feature">年間最大24枚交付</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市福祉タクシー利用券交付事業</h3>
+              </div>
             </div>
-            <h3>宇土市福祉タクシー利用券交付事業</h3>
             <div class="uto-card-amount">1枚あたり初乗り運賃相当（年間最大24枚、人工透析等重度者は追加交付）</div>
             <p class="uto-card-desc">重度の身体障がい者や知的障がい者、精神障がい者等の外出支援と社会参加促進のため、市内運行の提携タクシーで利用できる利用券を交付します。</p>
             <div class="uto-card-extra">身体障害者手帳1・2級、療育手帳A判定、精神障害者保健福祉手帳1級等をお持ちの方が対象です。</div>
@@ -1191,12 +1413,19 @@
                    data-income="no_limit,low_income"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
-              <span class="uto-badge-feature">自己負担1割（上限あり）</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="5" r="2"/><path d="M10 7v6h4l3 5M8 17a5 5 0 1 1 5-5"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
+                  <span class="uto-badge-feature">自己負担1割（上限あり）</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>重度障がい者日常生活用具給付等事業</h3>
+              </div>
             </div>
-            <h3>重度障がい者日常生活用具給付等事業</h3>
             <div class="uto-card-amount">特殊寝台、車いす、入浴補助用具、意思伝達装置等の基準価格の原則9割を公費給付</div>
             <p class="uto-card-desc">重度の障がいのある方に対し、日常生活を円滑に過ごすための支援用具（特殊ベッド、便器、歩行支援用具、情報通信支援用具等）の購入費用を給付します。</p>
             <div class="uto-card-extra">障がいの種別・等級や年齢に応じた給付品目一覧があります。購入前の申請が必要です。</div>
@@ -1218,12 +1447,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
-              <span class="uto-badge-feature">外出・レスパイト支援</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="m10 22 2-7 3 3v4M8 12h8"/><path d="m14 15 2 7"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
+                  <span class="uto-badge-feature">外出・レスパイト支援</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>障がい者（児）地域生活支援事業（移動支援・日中一時支援）</h3>
+              </div>
             </div>
-            <h3>障がい者（児）地域生活支援事業（移動支援・日中一時支援）</h3>
             <div class="uto-card-amount">ガイドヘルパー派遣費用や一時預かり費用の原則9割公費負担（所得に応じた月額上限あり）</div>
             <p class="uto-card-desc">単独では外出が困難な障がいのある方への移動支援（余暇活動・通院等）や、保護者の休息・就労等のために日中の居場所を提供する日中一時支援を実施します。</p>
             <div class="uto-card-extra">特別支援学校の放課後や休日の余暇支援としても活用されています。</div>
@@ -1245,12 +1481,19 @@
                    data-income="low_income"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
-              <span class="uto-badge-feature">毎月自宅へ無料配達</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 7h-17A1.5 1.5 0 0 0 2 8.5v7A1.5 1.5 0 0 0 3.5 17h17a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 20.5 7z"/><path d="M7 7v10M17 7v10"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
+                  <span class="uto-badge-feature">毎月自宅へ無料配達</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>ねたきり高齢者等紙おむつ等支給事業</h3>
+              </div>
             </div>
-            <h3>ねたきり高齢者等紙おむつ等支給事業</h3>
             <div class="uto-card-amount">紙おむつ・尿取りパッド等（月額上限相当分を現物支給）</div>
             <p class="uto-card-desc">常時ねたきり状態にある65歳以上の高齢者や認知症高齢者を在宅で介護している世帯に対し、介護者の経済的負担軽減のため紙おむつ等の介護用品を自宅へ配送・支給します。</p>
             <div class="uto-card-extra">要介護4または5の認定を受けた市民税非課税世帯等が対象となります。</div>
@@ -1272,12 +1515,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
-              <span class="uto-badge-feature">最大3億円賠償保険・市負担</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">シニア・高齢者・障がい福祉</span>
+                  <span class="uto-badge-feature">最大3億円賠償保険・市負担</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>認知症高齢者等個人賠償責任保険加入支援事業</h3>
+              </div>
             </div>
-            <h3>認知症高齢者等個人賠償責任保険加入支援事業</h3>
             <div class="uto-card-amount">自己負担無料（保険料は宇土市が全額負担、最大3億円まで賠償補償）</div>
             <p class="uto-card-desc">認知症等により行方不明となる恐れのある高齢者が「宇土市SOSネットワーク」に事前登録することで、万一の線路立ち入りや他人の財物損壊等の事故に対する賠償保険に市負担で加入できます。</p>
             <div class="uto-card-extra">ご家族が多額の損害賠償を請求されるリスクを回避し、地域で安心して暮らせるセーフティネットです。</div>
@@ -1309,12 +1559,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="employee,business">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">移住・定住・新生活・地域</span>
-              <span class="uto-badge-feature">所得制限なし・最大60万円</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/><path d="m9 7 3-4 3 4"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">移住・定住・新生活・地域</span>
+                  <span class="uto-badge-feature">所得制限なし・最大60万円</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市結婚新生活支援事業</h3>
+              </div>
             </div>
-            <h3>宇土市結婚新生活支援事業</h3>
             <div class="uto-card-amount">夫婦とも29歳以下：最大60万円 / 夫婦とも39歳以下：最大30万円</div>
             <p class="uto-card-desc">婚姻に伴う新生活をスタートする新婚世帯を対象に、住宅の購入費、リフォーム費用、家賃・敷金・礼金、引越し費用を幅広く補助します。</p>
             <div class="uto-card-extra">【宇土市独自の特徴】一般的な自治体にある「夫婦合算所得500万円未満」の制限を宇土市独自で撤廃しており、所得制限なしで申請可能です。</div>
@@ -1336,12 +1593,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="employee,startup">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">移住・定住・新生活・地域</span>
-              <span class="uto-badge-feature">最大100万円＋子育て加算</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">移住・定住・新生活・地域</span>
+                  <span class="uto-badge-feature">最大100万円＋子育て加算</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市移住支援事業支援金（東京圏からの移住）</h3>
+              </div>
             </div>
-            <h3>宇土市移住支援事業支援金（東京圏からの移住）</h3>
             <div class="uto-card-amount">2人以上世帯：100万円 / 単身世帯：60万円（18歳未満の帯同児童1人につき100万円加算）</div>
             <p class="uto-card-desc">東京23区に在住または通勤していた方が宇土市へ移住し、県内企業等へ就業、テレワーク継続、または起業した場合に国・県・市が共同で支援金を支給します。</p>
             <div class="uto-card-extra">子育て世帯にはお子さん1人あたり最大100万円が上乗せ加算される手厚い制度です。</div>
@@ -1363,12 +1627,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">移住・定住・新生活・地域</span>
-              <span class="uto-badge-feature">地域活性化・最大30万円</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">移住・定住・新生活・地域</span>
+                  <span class="uto-badge-feature">地域活性化・最大30万円</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>まちづくり活動推進事業補助金</h3>
+              </div>
             </div>
-            <h3>まちづくり活動推進事業補助金</h3>
             <div class="uto-card-amount">事業費の2/3（初年度上限30万円、継続事業段階的補助）</div>
             <p class="uto-card-desc">市民が主体的・自発的に取り組む地域の課題解決、環境保全、文化振興、世代間交流などのまちづくり活動・イベントの立ち上げ・実施費用を助成します。</p>
             <div class="uto-card-extra">営利目的ではない市民グループやボランティア団体が対象となります。</div>
@@ -1390,12 +1661,19 @@
                    data-income="no_limit"
                    data-disaster="none,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">移住・定住・新生活・地域</span>
-              <span class="uto-badge-feature">自治会館新築・改修補助</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16M2 8l10-6 10 6v2H2zM6 10v9M10 10v9M14 10v9M18 10v9"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">移住・定住・新生活・地域</span>
+                  <span class="uto-badge-feature">自治会館新築・改修補助</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市自治会集会施設整備事業補助金</h3>
+              </div>
             </div>
-            <h3>宇土市自治会集会施設整備事業補助金</h3>
             <div class="uto-card-amount">新築・増築：事業費の1/2（上限1,000万円） / 改修・耐震化：事業費の1/2（上限300万円）</div>
             <p class="uto-card-desc">地域の絆づくりや防災避難の拠点となる自治会公民館・集会施設の新築、建替え、大規模改修、バリアフリー化工事などの費用を補助します。</p>
             <div class="uto-card-extra">地域の合意形成と自治会組織による申請が必要です。計画段階からの相談を受け付けています。</div>
@@ -1417,12 +1695,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">移住・定住・新生活・地域</span>
-              <span class="uto-badge-feature">防災資機材の購入補助</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a9 9 0 0 0-9 9v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a9 9 0 0 0-9-9z"/><path d="M12 12v6M9 15h6"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">移住・定住・新生活・地域</span>
+                  <span class="uto-badge-feature">防災資機材の購入補助</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>自主防災組織育成事業補助金</h3>
+              </div>
             </div>
-            <h3>自主防災組織育成事業補助金</h3>
             <div class="uto-card-amount">結成時資機材購入費：上限20万円 / 育成・維持資機材購入費：上限10万円</div>
             <p class="uto-card-desc">地震や豪雨災害等の発生時に住民同士が助け合う「自主防災組織」の結成や、救助工具、発電機、投光器、メガホン等の防災資機材の整備費用を補助します。</p>
             <div class="uto-card-extra">地域での防災訓練や避難訓練の実施と合わせて活用できます。</div>
@@ -1444,12 +1729,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">移住・定住・新生活・地域</span>
-              <span class="uto-badge-feature">購入前無料診断</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="14" r="3"/><path d="m14.5 16.5 2.5 2.5"/><path d="m9 13 2 2 4-4"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">移住・定住・新生活・地域</span>
+                  <span class="uto-badge-feature">購入前無料診断</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市木造住宅耐震診断士派遣（空き家バンク連携）</h3>
+              </div>
             </div>
-            <h3>宇土市木造住宅耐震診断士派遣（空き家バンク連携）</h3>
             <div class="uto-card-amount">自己負担無料（市が空き家バンク物件へ耐震診断士を派遣）</div>
             <p class="uto-card-desc">空き家バンクに登録された昭和56年以前建築の木造住宅について、購入や賃貸を検討する移住希望者や所有者の依頼に基づき、市が耐震診断士を無料で派遣します。</p>
             <div class="uto-card-extra">安全性を確認した上で物件を取得・改修することができ、その後の耐震改修補助とも接続可能です。</div>
@@ -1481,12 +1773,19 @@
                    data-income="general"
                    data-disaster="none"
                    data-work="business">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">産業・農業・創業・中小企業</span>
-              <span class="uto-badge-feature">低利融資＋利子補給</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">産業・農業・創業・中小企業</span>
+                  <span class="uto-badge-feature">低利融資＋利子補給</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市商工振興資金融資制度（振興資金・小口資金）</h3>
+              </div>
             </div>
-            <h3>宇土市商工振興資金融資制度（振興資金・小口資金）</h3>
             <div class="uto-card-amount">振興資金：最大1,500万円 / 小口資金：最大1,000万円（利子補給・保証料補助あり）</div>
             <p class="uto-card-desc">市内で1年以上事業を営む中小企業者・個人事業主の運転資金・設備資金の調達を支援。熊本県信用保証協会の保証を付し、市が利子補給や信用保証料の補助を行います。</p>
             <div class="uto-card-extra">市内金融機関と宇土市商工会が窓口となって手続きをサポートします。</div>
@@ -1508,12 +1807,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="startup,business">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">産業・農業・創業・中小企業</span>
-              <span class="uto-badge-feature">家賃・改修最大50万円</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6M10 22h4"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">産業・農業・創業・中小企業</span>
+                  <span class="uto-badge-feature">家賃・改修最大50万円</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市新規創業者応援補助金</h3>
+              </div>
             </div>
-            <h3>宇土市新規創業者応援補助金</h3>
             <div class="uto-card-amount">店舗・事務所家賃補助（月額上限2万円×最長12か月）＋店舗改装費用の1/2（上限26万円）＝最大50万円</div>
             <p class="uto-card-desc">市内で新たに起業・開業する個人や法人を応援するため、創業から1年以内の事業所・店舗賃借料や内外装工事・設備導入費用を助成します。</p>
             <div class="uto-card-extra">宇土市商工会の「特定創業支援事業」による事業計画作成支援を受けた方が対象です。</div>
@@ -1535,12 +1841,19 @@
                    data-income="no_limit"
                    data-disaster="none"
                    data-work="business">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">産業・農業・創業・中小企業</span>
-              <span class="uto-badge-feature">販路開拓・新商品開発</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">産業・農業・創業・中小企業</span>
+                  <span class="uto-badge-feature">販路開拓・新商品開発</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市がんばる中小企業応援補助金</h3>
+              </div>
             </div>
-            <h3>宇土市がんばる中小企業応援補助金</h3>
             <div class="uto-card-amount">対象経費の1/2（上限30万円）</div>
             <p class="uto-card-desc">市内の中小企業者が行う新商品・新サービスの開発、展示会出展、ECサイト構築、ブランディング等の販路開拓事業経費の一部を補助します。</p>
             <div class="uto-card-extra">地域資源を活かした特産品開発やDX推進・IT導入へのチャレンジも対象となります。</div>
@@ -1562,12 +1875,19 @@
                    data-income="general"
                    data-disaster="none"
                    data-work="agri">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">産業・農業・創業・中小企業</span>
-              <span class="uto-badge-feature">就農給付・最大年150万</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22 12 2l10 20"/><path d="M5.5 15h13M8 10h8"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">産業・農業・創業・中小企業</span>
+                  <span class="uto-badge-feature">就農給付・最大年150万</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>新規就農者育成・定着総合支援（農業次世代人材投資事業等）</h3>
+              </div>
             </div>
-            <h3>新規就農者育成・定着総合支援（農業次世代人材投資事業等）</h3>
             <div class="uto-card-amount">経営開始資金：年額最大150万円（最長3年間）＋機械・施設導入補助等</div>
             <p class="uto-card-desc">宇土市内で新たに自立就農を目指す新規就農者に対し、就農直後の経営確立に向けた資金給付や、農業用機械・ビニールハウス等の導入費用の助成を行います。</p>
             <div class="uto-card-extra">就農時の年齢要件（原則50歳未満等）や青年等就農計画の認定が必要です。</div>
@@ -1589,12 +1909,19 @@
                    data-income="general"
                    data-disaster="none"
                    data-work="agri">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">産業・農業・創業・中小企業</span>
-              <span class="uto-badge-feature">専業農家の経営強化</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22 12 2l10 20"/><path d="M5.5 15h13M8 10h8"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">産業・農業・創業・中小企業</span>
+                  <span class="uto-badge-feature">専業農家の経営強化</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市認定農業者等経営改善支援事業</h3>
+              </div>
             </div>
-            <h3>宇土市認定農業者等経営改善支援事業</h3>
             <div class="uto-card-amount">高性能農業機械導入費・スマート農業機器導入費の補助（国・県事業上乗せ）</div>
             <p class="uto-card-desc">農業経営改善計画の認定を受けた「認定農業者」や集落営農組織に対し、生産コスト削減や省力化を実現するスマート農業機器・大型機械の導入を支援します。</p>
             <div class="uto-card-extra">レンコン、不知火（デコポン）、トマトなど宇土市の基幹農産物の産地強化を推進しています。</div>
@@ -1626,12 +1953,19 @@
                    data-income="no_limit"
                    data-disaster="damage_heavy,damage_half"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">令和8年熊本地震 特別支援</span>
-              <span class="uto-badge-feature">最大300万円・生活再建</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M12 3v4M3 12h4M17 12h4M12 18h.01"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">令和8年熊本地震 特別支援</span>
+                  <span class="uto-badge-feature">最大300万円・生活再建</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>被災者生活再建支援金</h3>
+              </div>
             </div>
-            <h3>被災者生活再建支援金</h3>
             <div class="uto-card-amount">基礎支援金（最大100万円）＋加算支援金（住宅再建方法に応じ最大200万円）＝合計最大300万円</div>
             <p class="uto-card-desc">令和8年熊本地震により住家に著しい被害を受けた世帯に対し、被害程度に応じた「基礎支援金」と、その後の住宅再建方法（建設・購入・補修・賃借）に応じた「加算支援金」を支給します。</p>
             <div class="uto-card-extra">全壊、大規模半壊、中規模半壊、または半壊解体世帯が対象。宇土市役所1階「すまい再建支援室」が申請窓口です。</div>
@@ -1653,12 +1987,19 @@
                    data-income="no_limit"
                    data-disaster="damage_heavy,damage_half,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">令和8年熊本地震 特別支援</span>
-              <span class="uto-badge-feature">上限70万6千円・現物修理</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">令和8年熊本地震 特別支援</span>
+                  <span class="uto-badge-feature">上限70万6千円・現物修理</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>住宅の応急修理制度（災害救助法）</h3>
+              </div>
             </div>
-            <h3>住宅の応急修理制度（災害救助法）</h3>
             <div class="uto-card-amount">準半壊以上：1世帯あたり限度額706,000円（一部損壊準半壊基準あり）</div>
             <p class="uto-card-desc">地震で被災した住宅の屋根、外壁、床、トイレ、給排水設備等の日常生活に不可欠な部分を、市が業者に委託して自己負担なく応急修理する制度です。</p>
             <div class="uto-card-extra">【完了後のリフォーム併用】応急修理の完了後、追加で市内業者によるリフォームを行う場合、宇土市住宅リフォーム助成（最大25万商品券）を併用可能です。</div>
@@ -1680,12 +2021,19 @@
                    data-income="no_limit"
                    data-disaster="damage_heavy,damage_half,damage_partial"
                    data-work="business">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">令和8年熊本地震 特別支援</span>
-              <span class="uto-badge-feature">直接被害200万/定額10割</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M5 20V8l4 3 4-3 4 3 3-3v12"/><path d="M10 14h4"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">令和8年熊本地震 特別支援</span>
+                  <span class="uto-badge-feature">直接被害200万/定額10割</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>小規模事業者持続化補助金＜一般型 災害支援枠＞</h3>
+              </div>
             </div>
-            <h3>小規模事業者持続化補助金＜一般型 災害支援枠＞</h3>
             <div class="uto-card-amount">直接被害：上限200万円（定額10/10・自社施工特例あり） / 間接被害：上限100万円（補助率2/3）</div>
             <p class="uto-card-desc">令和8年熊本地震で被災した宇土市内の小規模事業者・個人事業主に対し、事業再開・販路開拓のための設備導入や店舗改装費用を補助します。</p>
             <div class="uto-card-extra">宇土市商工会の発行する事業支援計画書（様式4）が必要。商工会確認締切は10月9日、申請締切は10月16日です。</div>
@@ -1707,12 +2055,19 @@
                    data-income="no_limit"
                    data-disaster="damage_heavy,damage_half"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">令和8年熊本地震 特別支援</span>
-              <span class="uto-badge-feature">自己負担0円解体・自費償還</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">令和8年熊本地震 特別支援</span>
+                  <span class="uto-badge-feature">自己負担0円解体・自費償還</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>災害公費解体・自費解体費用償還事業</h3>
+              </div>
             </div>
-            <h3>災害公費解体・自費解体費用償還事業</h3>
             <div class="uto-card-amount">市による直接解体撤去：自己負担無料 / 所有者が自費施工：適正算定額を市が償還</div>
             <p class="uto-card-desc">り災証明書で全壊、大規模半壊、中規模半壊等の判定を受け、危険で倒壊のおそれがある被災家屋について、所有者の申請に基づき市が公費で解体撤去を行います。</p>
             <div class="uto-card-extra">自費解体を行う場合も着工前の写真や契約書類の保全が必要です。すまい再建支援室へ解体前にご相談ください。</div>
@@ -1734,12 +2089,19 @@
                    data-income="no_limit"
                    data-disaster="damage_heavy,damage_half,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">令和8年熊本地震 特別支援</span>
-              <span class="uto-badge-feature">見舞金・義援金配分</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8M12 18V6"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">令和8年熊本地震 特別支援</span>
+                  <span class="uto-badge-feature">見舞金・義援金配分</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>令和8年熊本地震 災害義援金・宇土市災害見舞金</h3>
+              </div>
             </div>
-            <h3>令和8年熊本地震 災害義援金・宇土市災害見舞金</h3>
             <div class="uto-card-amount">住家被害程度（全壊・大規模半壊・中規模半壊・半壊・一部損壊等）に応じた現金支給</div>
             <p class="uto-card-desc">全国から寄せられた災害義援金や宇土市の災害見舞金を、り災証明書の判定に基づき被災世帯へ配分・支給します（返済不要）。</p>
             <div class="uto-card-extra">人的被害（死亡・重傷）や住家損壊の区分に応じて市配分委員会で決定された金額が指定口座へ順次振り込まれます。</div>
@@ -1761,12 +2123,19 @@
                    data-income="low_income,general"
                    data-disaster="damage_heavy,damage_half,damage_partial"
                    data-work="all">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">令和8年熊本地震 特別支援</span>
-              <span class="uto-badge-feature">公的貸付・条件付無利子</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M7 15h.01M17 15h.01"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">令和8年熊本地震 特別支援</span>
+                  <span class="uto-badge-feature">公的貸付・条件付無利子</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>宇土市災害援護資金貸付制度</h3>
+              </div>
             </div>
-            <h3>宇土市災害援護資金貸付制度</h3>
             <div class="uto-card-amount">住居・家財被害や世帯主負傷に応じ最大350万円貸付（年利1%・保証人ありで無利子、据置5年）</div>
             <p class="uto-card-desc">地震で被害を受けた世帯主に対し、生活の立て直しに必要な当面の生活資金を長期・低利で貸し付けます。保証人を立てることで据置期間中も含め全期間無利子（0%）となります。</p>
             <div class="uto-card-extra">前年総所得要件（世帯人数に応じた限度額あり）がありますが、住家が全壊した場合は所得限度額が大幅に引き上げられます。</div>
@@ -1788,12 +2157,19 @@
                    data-income="low_income,general"
                    data-disaster="damage_heavy,damage_half,damage_partial"
                    data-work="all,employee,business">
-            <div class="uto-card-tag-row">
-              <span class="uto-badge-cat">令和8年熊本地震 特別支援</span>
-              <span class="uto-badge-feature">税・保険料の減免・猶予</span>
-              <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
+                <svg class="uto-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
+              </div>
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
+                  <span class="uto-badge-cat">令和8年熊本地震 特別支援</span>
+                  <span class="uto-badge-feature">税・保険料の減免・猶予</span>
+                  <span class="uto-badge-match" style="display: none;">🎯 該当</span>
+                </div>
+                <h3>熊本地震に伴う市税・各種保険料の減免・徴収猶予</h3>
+              </div>
             </div>
-            <h3>熊本地震に伴う市税・各種保険料の減免・徴収猶予</h3>
             <div class="uto-card-amount">固定資産税、市県民税、国民健康保険税、介護保険料、後期高齢者医療保険料の全額免除〜減額</div>
             <p class="uto-card-desc">住家が損壊したり所得が激減した世帯を対象に、り災証明書の判定や収入減少割合に応じて、市税や各種社会保険料の減免措置や徴収猶予を実施します。</p>
             <div class="uto-card-extra">申請により減免決定されます。納期限前の申請が必要な場合がありますので、お早めに税務窓口へご相談ください。</div>
@@ -1846,8 +2222,8 @@
 
     </div>
   </main>
-  <footer></footer>
+  <footer class="site-footer"></footer>
   <script src="org-site.js?v=20260907-2"></script>
-  <script src="uto-support.js?v=20260921-2"></script>
+  <script src="uto-support.js?v=20260921-3"></script>
 </body>
 </html>

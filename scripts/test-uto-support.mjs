@@ -67,10 +67,20 @@ assert.ok(html.includes('https://www.city.uto.lg.jp/article/view/1007/12355.html
 assert.ok(html.includes('https://www.city.uto.lg.jp/article/view/1005/11993.html'), '結婚新生活の公式URLがありません');
 assert.ok(html.includes('https://www.city.uto.lg.jp/article/view/1032/14818.html'), 'まちづくりハンドブックの公式URLがありません');
 
+// 幅制限レイアウトシェルの確認
+assert.ok(html.includes('class="uto-sup-hero-inner"'), 'ヒーロー内の幅制限（uto-sup-hero-inner）がありません');
+assert.ok(html.includes('class="uto-sup-shell"'), '本文エリアの幅制限（uto-sup-shell）がありません');
+
+// カード内SVGイラストアイコンの確認
+const iconBoxMatches = html.match(/class="uto-card-icon-box"/g) || [];
+assert.equal(iconBoxMatches.length, 53, `全53制度にSVGイラストボックスがありません（現在: ${iconBoxMatches.length}個）`);
+const iconSvgMatches = html.match(/class="uto-card-icon"/g) || [];
+assert.equal(iconSvgMatches.length, 53, `全53制度にSVGイラストアイコンがありません（現在: ${iconSvgMatches.length}個）`);
+
 // スクリプトとCSSの読み込み
 assert.ok(html.includes('src="uto-support.js'), 'uto-support.jsが読み込まれていません');
 assert.ok(html.includes('href="uto-support.css'), 'uto-support.cssが読み込まれていません');
 assert.ok(fs.existsSync('uto-support.css'), 'uto-support.cssが存在しません');
 assert.ok(fs.existsSync('uto-support.js'), 'uto-support.jsが存在しません');
 
-console.log(`宇土市 暮らしの支援・補助金総合ガイドテスト OK（全${cardMatches.length}制度・シミュレーター検証完了）`);
+console.log(`宇土市 暮らしの支援・補助金総合ガイドテスト OK（全${cardMatches.length}制度・シミュレーター・SVGイラスト・幅制限検証完了）`);
