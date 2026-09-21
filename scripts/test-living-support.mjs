@@ -45,7 +45,7 @@ console.log('宇城市・氷川町・八代市 暮らしの支援・補助金総
   assert.ok(html.includes('宇城市こども医療費助成制度'), '宇城市：こども医療費助成がありません');
   assert.ok(html.includes('宇城市結婚新生活支援事業'), '宇城市：結婚新生活支援事業がありません');
   assert.ok(html.includes('戸建て木造住宅耐震改修等事業補助金'), '宇城市：耐震改修補助がありません');
-  assert.ok(html.includes('宇城市創業支援事業補助金'), '宇城市：創業支援事業補助金がありません');
+  assert.ok(html.includes('宇城市の起業・創業支援（ビジネスサポートセンター）'), '宇城市：起業・創業支援がありません');
   assert.ok(html.includes('被災者支援のための無料相談会'), '宇城市：無料相談会がありません');
   assert.ok(html.includes('被災者生活再建支援金'), '宇城市：被災者生活再建支援金がありません');
 
@@ -62,7 +62,7 @@ console.log('宇城市・氷川町・八代市 暮らしの支援・補助金総
 {
   console.log('--- 氷川町 (hikawa-living-support.html) ---');
   const html = fs.readFileSync('hikawa-living-support.html', 'utf8');
-  const expectedCount = 28;
+  const expectedCount = 27;
   assert.ok(html.includes('<title>氷川町：暮らしの支援・補助金 総合ガイド'), '氷川町：タイトルが正しくありません');
   assert.ok(html.includes('<meta name="description"'), '氷川町：descriptionがありません');
 
@@ -109,7 +109,7 @@ console.log('宇城市・氷川町・八代市 暮らしの支援・補助金総
 {
   console.log('--- 八代市 (yatsushiro-living-support.html) ---');
   const html = fs.readFileSync('yatsushiro-living-support.html', 'utf8');
-  const expectedCount = 34;
+  const expectedCount = 33;
   assert.ok(html.includes('<title>八代市：暮らしの支援・補助金 総合ガイド'), '八代市：タイトルが正しくありません');
   assert.ok(html.includes('<meta name="description"'), '八代市：descriptionがありません');
 

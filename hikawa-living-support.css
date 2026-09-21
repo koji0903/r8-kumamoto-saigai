@@ -1180,3 +1180,38 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* カードの金額ボックス・担当ボックス（-box / -flex 系マークアップ用） */
+.uto-card-amount-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.uto-card-amount-label,
+.uto-card-dept-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #64748b;
+}
+.uto-card-footer-flex {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 16px;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.uto-card-dept-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.925rem;
+  color: #475569;
+}
+.uto-card-dept-name {
+  font-weight: 700;
+  color: #334155;
+}
