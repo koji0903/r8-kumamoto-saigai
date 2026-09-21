@@ -158,93 +158,105 @@
   line-height: 1.5;
 }
 
-/* 検索・コントロールエリア */
-.uto-sup-controls {
+/* 検索・絞り込みツールバー（余白をしっかり確保し選択しやすく改善） */
+.uto-sup-toolbar {
   background: #ffffff;
+  border: 1.5px solid #cbd5e1;
   border-radius: 12px;
-  padding: 20px;
-  box-shadow: var(--uto-shadow);
-  margin-bottom: 30px;
-  border: 1px solid var(--uto-border);
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
-.uto-sup-search-box {
-  position: relative;
-  margin-bottom: 16px;
+.uto-sup-search-row {
+  margin-bottom: 24px;
+}
+.uto-sup-search-label {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
 }
 .uto-sup-search-input {
   width: 100%;
-  padding: 12px 16px 12px 42px;
-  font-size: 1rem;
-  border: 2px solid #94a3b8;
+  padding: 14px 18px;
+  font-size: 1.05rem;
+  border: 2px solid #cbd5e1;
   border-radius: 8px;
   box-sizing: border-box;
   outline: none;
-  transition: border-color 0.2s;
+  background: #f8fafc;
+  color: #1e293b;
+  transition: all 0.2s ease;
 }
 .uto-sup-search-input:focus {
+  background: #ffffff;
   border-color: var(--uto-primary);
-  box-shadow: 0 0 0 3px rgba(23,109,98,0.2);
+  box-shadow: 0 0 0 4px rgba(23, 109, 98, 0.15);
 }
-.uto-sup-search-icon {
-  position: absolute;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  color: #64748b;
-  pointer-events: none;
-}
-.uto-sup-cats {
+.uto-sup-cat-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px 14px;
+  padding-top: 4px;
 }
 .uto-sup-cat-btn {
-  background: var(--uto-bg-alt);
-  border: 1px solid #cbd5e1;
-  border-radius: 20px;
-  padding: 6px 14px;
-  font-size: 0.875rem;
-  font-weight: 600;
+  background: #ffffff;
+  border: 1.5px solid #94a3b8;
+  border-radius: 9999px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: #334155;
   cursor: pointer;
-  transition: all 0.15s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.18s ease;
+  line-height: 1.2;
 }
 .uto-sup-cat-btn:hover {
-  background: #e2e8f0;
+  background: var(--uto-primary-light);
+  border-color: var(--uto-primary);
+  color: var(--uto-primary-dark);
+  transform: translateY(-1px);
 }
 .uto-sup-cat-btn.active {
   background: var(--uto-primary);
-  border-color: var(--uto-primary);
+  border-color: var(--uto-primary-dark);
   color: #ffffff;
+  box-shadow: 0 3px 8px rgba(23, 109, 98, 0.28);
 }
 
-/* カウント・ステータス */
+/* カウント・ステータスバー */
 .uto-sup-status {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
   font-size: 0.95rem;
-  color: var(--uto-text-muted);
-  margin-bottom: 16px;
-  padding: 0 4px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 32px;
+  padding: 12px 18px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
 }
 
-/* セクションとカード */
+/* セクションとカード（1列構成） */
 .uto-sup-section {
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 .uto-sup-sec-header {
   border-bottom: 2px solid var(--uto-primary);
-  padding-bottom: 8px;
-  margin-bottom: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
 .uto-sup-sec-header h2 {
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: var(--uto-primary-dark);
   margin: 0;
@@ -253,51 +265,52 @@
   gap: 8px;
 }
 .uto-sup-sec-header span.sec-count {
-  font-size: 0.9rem;
-  font-weight: normal;
+  font-size: 0.95rem;
+  font-weight: 600;
   color: var(--uto-text-muted);
 }
 
+/* 1列構成（改行過多を防ぐシングルカラムリスト形式） */
 .uto-sup-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 18px;
-}
-
-/* カードスタイル */
-.uto-card {
-  background: #ffffff;
-  border-radius: 10px;
-  border: 1px solid #e2e8f0;
-  padding: 20px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  gap: 20px;
+}
+
+/* カードスタイル（1列ワイド） */
+.uto-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1.5px solid #e2e8f0;
+  padding: 24px 28px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .uto-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px -2px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   border-color: #94a3b8;
 }
 .uto-card-header-flex {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 10px;
+  gap: 16px;
+  margin-bottom: 14px;
 }
 .uto-card-icon-box {
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
   background: var(--uto-primary-light);
-  border: 1px solid #b2dfdb;
+  border: 1.5px solid #b2dfdb;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--uto-primary-dark);
-  box-shadow: 0 2px 4px rgba(23, 109, 98, 0.08);
+  box-shadow: 0 2px 5px rgba(23, 109, 98, 0.1);
   transition: transform 0.2s ease, background 0.2s ease;
 }
 .uto-card:hover .uto-card-icon-box {
@@ -305,8 +318,8 @@
   background: #d4ede7;
 }
 .uto-card-icon {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   display: block;
 }
 .uto-card-title-meta {
@@ -316,101 +329,135 @@
 .uto-card-tag-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 6px;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 .uto-badge-cat {
-  font-size: 0.725rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  padding: 2px 6px;
+  padding: 3px 8px;
   border-radius: 4px;
   background: var(--uto-primary-light);
   color: var(--uto-primary-dark);
 }
 .uto-badge-feature {
-  font-size: 0.725rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  padding: 2px 6px;
+  padding: 3px 8px;
   border-radius: 4px;
   background: #fef08a;
   color: #854d0e;
 }
-.uto-card h3 {
-  font-size: 1.075rem;
+.uto-badge-match {
+  font-size: 0.75rem;
   font-weight: 700;
-  line-height: 1.35;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+.uto-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.4;
   margin: 0;
   color: #0f172a;
 }
 .uto-card-amount {
-  background: #f8fafc;
-  border-left: 3px solid var(--uto-primary);
-  padding: 6px 10px;
-  margin-bottom: 12px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  background: #f0fdf4;
+  border-left: 4px solid #10b981;
+  border-radius: 0 6px 6px 0;
+  padding: 8px 14px;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  font-weight: 700;
   color: #047857;
 }
 .uto-card-desc {
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.975rem;
+  line-height: 1.75;
   color: #334155;
-  margin: 0 0 12px;
-  flex-grow: 1;
+  margin: 0 0 14px;
 }
 .uto-card-extra {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   background: #fffbeb;
   border: 1px dashed #d97706;
-  border-radius: 6px;
-  padding: 8px 10px;
+  border-radius: 8px;
+  padding: 10px 14px;
   color: #92400e;
-  margin-bottom: 14px;
-  line-height: 1.5;
+  margin-bottom: 16px;
+  line-height: 1.6;
 }
 .uto-card-extra b {
   display: inline-block;
   margin-right: 4px;
 }
+.uto-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+.card-hash-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
 .uto-card-footer {
   border-top: 1px solid #e2e8f0;
-  padding-top: 12px;
+  padding-top: 16px;
   margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.uto-card-dept {
-  font-size: 0.85rem;
-  color: #475569;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.uto-card-dept {
+  font-size: 0.925rem;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 .uto-card-phone {
   font-weight: 700;
+  font-size: 1rem;
   color: var(--uto-primary-dark);
   text-decoration: none;
+  background: #e6f5f1;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: all 0.15s;
 }
 .uto-card-phone:hover {
-  text-decoration: underline;
+  background: #b2dfdb;
+  text-decoration: none;
 }
 .uto-card-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 6px;
   background: var(--uto-primary);
   color: #ffffff;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 0.875rem;
-  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.925rem;
+  font-weight: 700;
   text-decoration: none;
-  transition: background 0.15s;
+  transition: background 0.15s, transform 0.15s;
 }
 .uto-card-link:hover {
   background: var(--uto-primary-dark);
+  transform: translateY(-1px);
 }
 
 /* 一致なし表示 */
@@ -471,49 +518,49 @@
 .uto-sim-card {
   background: #ffffff;
   border: 2px solid var(--uto-primary);
-  border-radius: 12px;
-  padding: 24px;
-  margin-bottom: 32px;
-  box-shadow: 0 4px 12px rgba(23, 109, 98, 0.08);
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 36px;
+  box-shadow: 0 4px 16px rgba(23, 109, 98, 0.08);
 }
 .uto-sim-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: 14px;
+  margin-bottom: 14px;
 }
 .uto-sim-title-group {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 .uto-sim-badge {
   display: inline-block;
   background: var(--uto-primary);
   color: #ffffff;
-  font-size: 0.8rem;
+  font-size: 0.825rem;
   font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 4px;
+  padding: 4px 10px;
+  border-radius: 6px;
   letter-spacing: 0.04em;
 }
 .uto-sim-header h2 {
-  font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+  font-size: clamp(1.2rem, 2.4vw, 1.45rem);
   font-weight: 800;
   color: var(--uto-primary-dark);
   margin: 0;
 }
 .uto-sim-reset-btn {
   background: #f1f5f9;
-  border: 1px solid #cbd5e1;
+  border: 1.5px solid #cbd5e1;
   color: #475569;
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 8px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -525,46 +572,46 @@
   color: #0f172a;
 }
 .uto-sim-guide {
-  font-size: 0.925rem;
-  line-height: 1.6;
+  font-size: 0.975rem;
+  line-height: 1.7;
   color: #334155;
-  margin: 0 0 20px;
+  margin: 0 0 24px;
 }
 .uto-sim-privacy-note {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.825rem;
   color: #64748b;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 /* クイック診断プリセット */
 .uto-sim-presets {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .uto-sim-presets-label {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #1e293b;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .uto-sim-preset-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
 }
 .uto-sim-preset-btn {
   background: #f8fafc;
   border: 1.5px solid #cbd5e1;
-  border-radius: 8px;
-  padding: 12px 10px;
+  border-radius: 10px;
+  padding: 14px 12px;
   text-align: center;
   cursor: pointer;
   transition: all 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 .uto-sim-preset-btn:hover {
   border-color: var(--uto-primary);
@@ -575,21 +622,21 @@
   background: var(--uto-primary);
   border-color: var(--uto-primary-dark);
   color: #ffffff;
-  box-shadow: 0 4px 8px rgba(23, 109, 98, 0.2);
+  box-shadow: 0 4px 10px rgba(23, 109, 98, 0.25);
 }
 .uto-sim-preset-btn .preset-icon {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1;
 }
 .uto-sim-preset-btn .preset-title {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.3;
 }
 .uto-sim-preset-btn .preset-desc {
-  font-size: 0.725rem;
+  font-size: 0.75rem;
   color: #64748b;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 .uto-sim-preset-btn.active .preset-desc {
   color: #e6f5f1;
@@ -597,20 +644,20 @@
 
 /* 詳細条件アコーディオン */
 .uto-sim-details {
-  border-top: 1px solid #e2e8f0;
-  padding-top: 16px;
-  margin-top: 16px;
+  border-top: 1.5px solid #e2e8f0;
+  padding-top: 20px;
+  margin-top: 20px;
 }
 .uto-sim-details-summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--uto-primary);
-  padding: 8px 4px;
-  border-radius: 6px;
+  padding: 10px 8px;
+  border-radius: 8px;
   transition: background 0.15s;
   list-style: none;
 }
@@ -621,34 +668,34 @@
   background: var(--uto-primary-light);
 }
 .uto-sim-summary-toggle {
-  font-size: 0.8rem;
-  font-weight: normal;
+  font-size: 0.85rem;
+  font-weight: 600;
   color: #64748b;
 }
 .uto-sim-filter-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-  margin-top: 16px;
-  padding: 16px;
+  gap: 20px;
+  margin-top: 18px;
+  padding: 20px;
   background: #f8fafc;
-  border-radius: 8px;
-  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
 }
 .uto-filter-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 .uto-filter-label {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #0f172a;
 }
 .uto-filter-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px 10px;
 }
 .uto-chip-label {
   display: inline-flex;
@@ -662,23 +709,25 @@
 }
 .uto-chip-label span {
   display: inline-block;
-  padding: 5px 10px;
-  border-radius: 6px;
-  font-size: 0.8rem;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
   background: #ffffff;
-  border: 1px solid #cbd5e1;
+  border: 1.5px solid #cbd5e1;
   color: #334155;
-  transition: all 0.15s;
+  transition: all 0.18s ease;
 }
 .uto-chip-label:hover span {
   border-color: var(--uto-primary);
   color: var(--uto-primary-dark);
+  background: var(--uto-primary-light);
 }
 .uto-chip-label input:checked + span {
   background: var(--uto-primary);
-  border-color: var(--uto-primary);
+  border-color: var(--uto-primary-dark);
   color: #ffffff;
-  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(23, 109, 98, 0.2);
 }
 
 /* 適用中条件バー */
@@ -686,74 +735,49 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   background: #e6f5f1;
-  border: 1px solid #b2dfdb;
-  border-radius: 8px;
-  padding: 10px 14px;
-  margin-top: 16px;
+  border: 1.5px solid #b2dfdb;
+  border-radius: 10px;
+  padding: 12px 18px;
+  margin-top: 20px;
 }
 .active-bar-label {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--uto-primary-dark);
 }
 .active-tags-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
 }
 .active-cond-tag {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   background: #ffffff;
-  border: 1px solid var(--uto-primary);
+  border: 1.5px solid var(--uto-primary);
   color: var(--uto-primary-dark);
-  font-size: 0.8rem;
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 700;
 }
 .active-cond-tag .remove-cond {
   cursor: pointer;
   color: #94a3b8;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  line-height: 1;
 }
 .active-cond-tag .remove-cond:hover {
   color: #ef4444;
 }
 
-/* カード内のタグとマッチバッジ */
-.uto-card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 10px 0 14px;
-}
-.card-hash-tag {
-  display: inline-block;
-  font-size: 0.75rem;
-  background: #f1f5f9;
-  color: #475569;
-  padding: 2px 8px;
-  border-radius: 4px;
-  border: 1px solid #e2e8f0;
-}
-.uto-badge-match {
-  display: inline-block;
-  background: #e0f2fe;
-  color: #0369a1;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 2px 6px;
-  border-radius: 4px;
-  border: 1px solid #bae6fd;
-}
 .uto-card.matched {
   border-color: var(--uto-primary);
-  box-shadow: 0 4px 12px rgba(23, 109, 98, 0.15);
+  box-shadow: 0 4px 14px rgba(23, 109, 98, 0.14);
 }
 
 @media (max-width: 640px) {
@@ -764,13 +788,42 @@
     margin-top: -16px;
     padding: 16px;
   }
+  .uto-sup-toolbar {
+    padding: 18px 16px;
+  }
+  .uto-sup-cat-btn {
+    padding: 8px 14px;
+    font-size: 0.875rem;
+  }
+  .uto-card {
+    padding: 18px 16px;
+  }
+  .uto-card-header-flex {
+    gap: 12px;
+  }
+  .uto-card-icon-box {
+    width: 44px;
+    height: 44px;
+  }
+  .uto-card-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .uto-card h3 {
+    font-size: 1.15rem;
+  }
+  .uto-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .uto-card-link {
+    width: 100%;
+    justify-content: center;
+  }
   .uto-sim-card {
-    padding: 16px;
+    padding: 18px 16px;
   }
   .uto-sim-preset-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .uto-sup-grid {
-    grid-template-columns: 1fr;
   }
 }
