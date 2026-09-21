@@ -192,7 +192,7 @@
 .uto-sup-search-input:focus {
   background: #ffffff;
   border-color: var(--uto-primary);
-  box-shadow: 0 0 0 4px rgba(23, 109, 98, 0.15);
+  box-shadow: 0 0 0 4px rgba(23, 107, 135, 0.15);
 }
 .uto-sup-cat-row {
   display: flex;
@@ -223,7 +223,7 @@
   background: var(--uto-primary);
   border-color: var(--uto-primary-dark);
   color: #ffffff;
-  box-shadow: 0 3px 8px rgba(23, 109, 98, 0.28);
+  box-shadow: 0 3px 8px rgba(23, 107, 135, 0.28);
 }
 
 /* カウント・ステータスバー */
@@ -327,7 +327,7 @@
   align-items: center;
   justify-content: center;
   color: var(--uto-primary-dark);
-  box-shadow: 0 2px 5px rgba(23, 109, 98, 0.1);
+  box-shadow: 0 2px 5px rgba(23, 107, 135, 0.1);
   transition: transform 0.2s ease, background 0.2s ease;
 }
 .uto-card:hover .uto-card-icon-box {
@@ -538,7 +538,7 @@
   border-radius: 14px;
   padding: 28px;
   margin-bottom: 36px;
-  box-shadow: 0 4px 16px rgba(23, 109, 98, 0.08);
+  box-shadow: 0 4px 16px rgba(23, 107, 135, 0.08);
 }
 .uto-sim-header {
   display: flex;
@@ -640,7 +640,7 @@
   background: var(--uto-primary);
   border-color: var(--uto-primary-dark);
   color: #ffffff;
-  box-shadow: 0 4px 10px rgba(23, 109, 98, 0.25);
+  box-shadow: 0 4px 10px rgba(23, 107, 135, 0.25);
 }
 .uto-sim-preset-btn .preset-icon {
   font-size: 1.6rem;
@@ -677,7 +677,7 @@
   border: 2px solid var(--uto-primary);
   border-radius: 12px;
   padding: 14px 20px;
-  box-shadow: 0 4px 14px rgba(23, 109, 98, 0.1);
+  box-shadow: 0 4px 14px rgba(23, 107, 135, 0.1);
   transition: all 0.2s ease;
   list-style: none;
 }
@@ -686,7 +686,7 @@
 }
 .uto-sim-details-summary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(23, 109, 98, 0.18);
+  box-shadow: 0 6px 18px rgba(23, 107, 135, 0.18);
   border-color: var(--uto-primary-dark);
 }
 .uto-sim-details[open] > .uto-sim-details-summary {
@@ -709,7 +709,7 @@
   display: grid;
   place-items: center;
   font-size: 1.5rem;
-  box-shadow: 0 2px 5px rgba(23, 109, 98, 0.12);
+  box-shadow: 0 2px 5px rgba(23, 107, 135, 0.12);
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
@@ -828,7 +828,7 @@
   background: var(--uto-primary);
   border-color: var(--uto-primary-dark);
   color: #ffffff;
-  box-shadow: 0 2px 6px rgba(23, 109, 98, 0.2);
+  box-shadow: 0 2px 6px rgba(23, 107, 135, 0.2);
 }
 
 /* 適用中条件・検索結果サマリーバー（リアルタイムフィードバック） */
@@ -838,7 +838,7 @@
   border-radius: 12px;
   padding: 18px 22px;
   margin-top: 24px;
-  box-shadow: 0 4px 16px rgba(23, 109, 98, 0.12);
+  box-shadow: 0 4px 16px rgba(23, 107, 135, 0.12);
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -872,7 +872,7 @@
   font-weight: 800;
   padding: 2px 14px;
   border-radius: 9999px;
-  box-shadow: 0 2px 6px rgba(23, 109, 98, 0.25);
+  box-shadow: 0 2px 6px rgba(23, 107, 135, 0.25);
 }
 .uto-sim-active-actions {
   display: flex;
@@ -892,7 +892,7 @@
   font-size: 0.925rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(23, 109, 98, 0.2);
+  box-shadow: 0 2px 6px rgba(23, 107, 135, 0.2);
   transition: all 0.2s;
   text-decoration: none;
 }

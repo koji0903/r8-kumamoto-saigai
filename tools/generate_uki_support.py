@@ -761,289 +761,408 @@ CATEGORIES = [
 
 def generate_html():
     html_parts = []
+    total_count = len(SYSTEMS)
     
     # ヘッダー部分
-    html_parts.append('''<!doctype html>
+    html_parts.append(f'''<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#176b87">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>宇城市：暮らしの支援・補助金 総合ガイド（住まい・子育て・健康・福祉・産業）｜よか隊ネット熊本</title>
   <meta name="description" content="宇城市の公式制度・補助金を網羅した総合ガイド。住まい、子育て（高校生医療費無償化）、健康・出産、シニア福祉、移住新婚、創業支援から令和8年熊本地震特別支援まで、条件シミュレーターで活用できる制度を即座に探せます。">
-  <link rel="icon" href="favicon.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=20260817-4">
-  <link rel="stylesheet" href="design-system.css?v=20260810-1">
-  <link rel="stylesheet" href="org-site.css?v=20260907-2">
-  <link rel="stylesheet" href="uki-living-support.css?v=20260921-1">
+  <link rel="stylesheet" href="styles.css?v=20260907-2">
+  <link rel="stylesheet" href="design-system.css?v=20260907-2">
+  <link rel="stylesheet" href="org-site.css?v=20260918-1">
+  <link rel="stylesheet" href="uki-living-support.css?v=20260921-2">
+  <link rel="canonical" href="https://www.yokatainet.jp/uki-living-support.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="よか隊ネット熊本　災害・支援状況レポート">
+  <meta property="og:title" content="宇城市：暮らしの支援・補助金 総合ガイド（住まい・子育て・健康・福祉・産業）">
+  <meta property="og:description" content="宇城市の公式制度・補助金を網羅した総合ガイド。住まい、子育て（高校生医療費無償化）、健康・出産、シニア福祉、移住新婚、創業支援から令和8年熊本地震特別支援まで、条件シミュレーターで活用できる制度を即座に探せます。">
+  <meta property="og:url" content="https://www.yokatainet.jp/uki-living-support.html">
+  <meta property="og:image" content="https://www.yokatainet.jp/ogp-uki-living-support.png">
+  <meta property="og:image:secure_url" content="https://www.yokatainet.jp/ogp-uki-living-support.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="宇城市：暮らしの支援・補助金 総合ガイド（住まい・子育て・健康・福祉・産業）｜よか隊ネット熊本　災害・支援状況レポート">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="宇城市：暮らしの支援・補助金 総合ガイド（住まい・子育て・健康・福祉・産業）">
+  <meta name="twitter:description" content="宇城市の公式制度・補助金を網羅した総合ガイド。住まい、子育て（高校生医療費無償化）、健康・出産、シニア福祉、移住新婚、創業支援から令和8年熊本地震特別支援まで、条件シミュレーターで活用できる制度を即座に探せます。">
+  <meta name="twitter:image" content="https://www.yokatainet.jp/ogp-uki-living-support.png">
 </head>
 <body class="organization-site uki-living-support-page">
-  <a class="skip" href="#main">本文へ移動</a>
+  <a class="skip" href="#mainContent">本文へ移動</a>
   <header class="site-header"></header>
-  <main id="main">
-    <section class="uto-sup-hero" style="background: linear-gradient(135deg, #0e4c61 0%, #176b87 60%, #1f8ba3 100%);">
+  <main id="mainContent" class="uto-support-main">
+
+    <!-- ヒーローヘッダー（全幅グラデーション＋内部幅制限1040px） -->
+    <header class="uto-sup-hero">
       <div class="uto-sup-hero-inner">
+        <!-- パンくずリスト -->
         <nav class="breadcrumb-nav" aria-label="パンくずリスト">
-          <a href="index.html">ホーム</a> &gt;
-          <a href="municipalities.html">自治体別情報</a> &gt;
-          <a href="municipalities.html?name=宇城市">宇城市</a> &gt;
+          <a href="index.html">ホーム</a>
+          <span>&gt;</span>
+          <a href="municipalities.html">自治体別の状況</a>
+          <span>&gt;</span>
+          <a href="municipalities.html?name=宇城市">宇城市</a>
+          <span>&gt;</span>
           <span aria-current="page">暮らしの支援・補助金 総合ガイド</span>
         </nav>
-        <span class="uto-sup-hero-badge">宇城市公式制度 総合ナビゲーション</span>
+
+        <div class="uto-sup-hero-badge">宇城市公式情報を確認 · 主要{total_count}制度</div>
         <h1>宇城市 暮らしの支援・補助金 総合ガイド</h1>
         <p class="uto-sup-hero-lead">
-          宇城市にお住まいの皆さまが活用できる、平時からの主要な支援制度・補助金と、令和8年熊本地震の特別支援を1つに集約しました。<br>
-          「年齢」「世帯状況」「住まい」「被災状況」などの条件を選ぶだけで、あなたやご家族が使える制度をカンタンに調べることができます。
+          宇城市が市民の生活安定、住環境向上、子育て、健康、福祉、産業振興のために平時から整備している公的支援・補助金制度と、令和8年熊本地震に伴う特別支援制度を体系的に整理しました。<br>
+          「あなたの現在の状況」を選択して、活用できる制度をお探しいただけます。掲載制度には宇城市公式情報へのリンクと担当窓口を記載しています。掲載内容は令和8年度の宇城市公式案内を2026年9月21日に確認したものです。
         </p>
-        <div class="uto-sup-quick-actions" style="margin-top:20px;">
-          <a href="#simulator" class="highlight">🔍 条件から制度を調べる</a>
-          <a href="#uki-special">💡 宇城市の独自メリット</a>
-          <a href="#cat-housing">🏠 住まい</a>
-          <a href="#cat-childcare">🎒 子育て</a>
-          <a href="#cat-senior">🤝 シニア福祉</a>
-          <a href="#cat-migration">🌸 移住・新婚</a>
-          <a href="#cat-business">💼 産業・創業</a>
-          <a href="#cat-disaster">🆘 地震特別支援</a>
-          <a href="uki-support.html" style="background:#e0f2fe; color:#0369a1;">📋 被災者支援ガイド（36制度）へ ↗</a>
-        </div>
       </div>
-    </section>
+    </header>
 
-    <!-- 被災者専用ガイドとの連携バナー -->
-    <aside class="hk-alert" style="max-width:1040px; margin:20px auto 0; padding:16px 20px; border-radius:12px; border-left:6px solid #176b87; background:#f0f9ff;">
-      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
-        <div>
-          <b style="color:#0f4d61; font-size:1.05rem;">令和8年熊本地震の被災手続き・被害判定を急ぎ確認したい方へ</b>
-          <p style="margin:4px 0 0; font-size:0.92rem; color:#334155;">り災証明書の判定（全壊〜一部損壊）や無料相談会（司法書士・弁護士等）に特化した案内は専用ページで確認できます。</p>
+    <!-- メインコンテンツシェル（幅1040px制限で中央揃え） -->
+    <div class="uto-sup-shell">
+
+      <!-- 被災者専用ガイドとの連携バナー -->
+      <aside class="uto-sup-banner" aria-labelledby="uki-banner-title">
+        <span class="uto-sup-banner-tag">熊本地震被災者支援連携</span>
+        <h2 id="uki-banner-title">令和8年熊本地震の被災手続き・無料相談会を急ぎ確認したい方へ</h2>
+        <p>り災証明書の判定（全壊〜一部損壊）や専門家無料相談会（司法書士・弁護士・行政書士）に特化した案内は専用ページで詳しく整理しています。</p>
+        <ul class="uto-sup-banner-points">
+          <li><strong>無料相談会（予約不要）：</strong>司法書士（相続・調停）・弁護士（被災ローン減免・ADR）・行政書士（書類作成）が市役所新館・小川ラポートで定期開設</li>
+          <li><strong>被災者生活再建支援金：</strong>全壊・解体等で最大300万円支給（申請期限と加算支援金の確認）</li>
+          <li><strong>平時制度との併用：</strong>耐震診断・改修補助や在宅高齢者住宅改造助成など、復旧工事と連動できる制度もあわせてご活用いただけます</li>
+        </ul>
+        <div style="margin-top:16px;">
+          <a href="uki-support.html" class="uto-card-link" style="display:inline-flex;">宇城市 被災者支援制度ガイド（全36制度）を見る →</a>
         </div>
-        <a href="uki-support.html" style="background:#176b87; color:#fff; padding:8px 16px; border-radius:6px; font-weight:700; text-decoration:none; font-size:0.9rem; white-space:nowrap;">被災者支援制度ガイド（36制度）を見る →</a>
-      </div>
-    </aside>
+      </aside>
 
-    <div class="uto-sup-container">
-
-      <!-- シミュレーターセクション -->
-      <section class="uto-sup-sim-box" id="simulator" aria-labelledby="sim-title">
-        <div class="uto-sup-sim-header">
-          <h2 id="sim-title">現在の状況から、使える制度を調べる</h2>
-          <p>当てはまる立場や条件を選ぶと、該当する制度がハイライトされ、絞り込んで確認できます。</p>
+      <!-- かんたん条件シミュレーター -->
+      <section class="uto-sim-card" id="utoSimulator" aria-labelledby="utoSimTitle">
+        <div class="uto-sim-header">
+          <div class="uto-sim-title-group">
+            <span class="uto-sim-badge">条件シミュレーター</span>
+            <h2 id="utoSimTitle">現在の状況から、使える制度を調べる</h2>
+          </div>
+          <button type="button" class="uto-sim-reset-btn" id="utoSimResetBtn" aria-label="すべての選択条件をリセット">
+            <span aria-hidden="true">↺</span> 条件をクリア
+          </button>
         </div>
+        <p class="uto-sim-guide">
+          お困りごとや世帯の状況に合わせて、ワンタップで探せる「クイック診断」または「詳細条件」をお選びください。<br>
+          <small class="uto-sim-privacy-note">※入力・選択された情報は外部に送信されず、お使いの端末（ブラウザ）内でのみ即座に計算されます。</small>
+        </p>
 
-        <!-- かんたんプリセット -->
+        <!-- ① クイック診断プリセットボタン -->
         <div class="uto-sim-presets">
-          <span class="uto-sim-preset-label">よく使われる立場から選ぶ：</span>
-          <div class="uto-sim-preset-chips">
-            <button type="button" class="uto-sim-preset-btn" data-preset="childcare">🎒 子育て世帯</button>
-            <button type="button" class="uto-sim-preset-btn" data-preset="senior">👴 シニア・高齢者世帯</button>
-            <button type="button" class="uto-sim-preset-btn" data-preset="housing">🏠 持ち家・リフォーム検討</button>
-            <button type="button" class="uto-sim-preset-btn" data-preset="newlywed">🌸 新婚・移住検討</button>
-            <button type="button" class="uto-sim-preset-btn" data-preset="business">💼 自営業・中小企業・農業</button>
-            <button type="button" class="uto-sim-preset-btn" data-preset="disaster">🆘 地震で被災された方</button>
-            <button type="button" class="uto-sim-reset-btn" id="utoSimResetBtn">🔄 条件をクリア</button>
+          <span class="uto-sim-presets-label">おすすめクイック診断：</span>
+          <div class="uto-sim-preset-grid" role="group" aria-label="おすすめクイック診断">
+            <button type="button" class="uto-sim-preset-btn" data-preset="childcare">
+              <span class="preset-icon">🎒</span>
+              <span class="preset-title">子育て・教育世帯</span>
+              <span class="preset-desc">18歳まで医療費無償・児童手当・応援金</span>
+            </button>
+            <button type="button" class="uto-sim-preset-btn" data-preset="senior">
+              <span class="preset-icon">👴</span>
+              <span class="preset-title">シニア・在宅介護</span>
+              <span class="preset-desc">住宅改造助成・福祉タクシー・配食</span>
+            </button>
+            <button type="button" class="uto-sim-preset-btn" data-preset="housing">
+              <span class="preset-icon">🏠</span>
+              <span class="preset-title">住まい改修・耐震</span>
+              <span class="preset-desc">無料耐震診断・改修100万・空き家解体</span>
+            </button>
+            <button type="button" class="uto-sim-preset-btn" data-preset="newlywed">
+              <span class="preset-icon">💍</span>
+              <span class="preset-title">新婚・若年夫婦</span>
+              <span class="preset-desc">結婚新生活最大60万・移住100万</span>
+            </button>
+            <button type="button" class="uto-sim-preset-btn" data-preset="disaster">
+              <span class="preset-icon">🚨</span>
+              <span class="preset-title">熊本地震の被災世帯</span>
+              <span class="preset-desc">再建金300万・無料相談会・応急修理</span>
+            </button>
+            <button type="button" class="uto-sim-preset-btn" data-preset="business">
+              <span class="preset-icon">💼</span>
+              <span class="preset-title">自営業・中小企業・農業</span>
+              <span class="preset-desc">小川ラボ創業支援・低利融資・新規就農</span>
+            </button>
           </div>
         </div>
 
-        <!-- 詳細条件アコーディオン -->
+        <!-- ② 詳細条件折りたたみパネル（目立つデザイン） -->
         <details class="uto-sim-details" id="utoSimDetails">
           <summary class="uto-sim-details-summary">
-            <div class="uto-sim-summary-left">
-              <span class="uto-sim-summary-icon" aria-hidden="true">⚙️</span>
-              <div class="uto-sim-summary-headings">
-                <span class="uto-sim-summary-title">さらに詳細な条件で絞り込む</span>
-                <span class="uto-sim-summary-sub">対象者の年齢・世帯状況・被災程度・事業形態など</span>
+            <div class="uto-sim-summary-content">
+              <span class="uto-sim-gear-icon" aria-hidden="true">⚙️</span>
+              <div class="uto-sim-summary-text">
+                <strong class="uto-sim-summary-title">さらに詳細な条件で絞り込む</strong>
+                <span class="uto-sim-summary-sub">年齢・世帯・住まい・収入・被災状況・お仕事など全23項目から選ぶ</span>
               </div>
             </div>
-            <div class="uto-sim-summary-toggle">
-              <span class="toggle-text">詳細条件を開く</span>
+            <span class="uto-sim-summary-toggle">
+              <span class="toggle-text">条件を開く</span>
               <span class="toggle-arrow" aria-hidden="true">▼</span>
-            </div>
+            </span>
           </summary>
-          <div class="uto-sim-details-content">
-            <div class="uto-sim-grid">
-              <!-- ライフステージ -->
-              <div class="uto-sim-col">
-                <b>① 年齢・ライフステージ</b>
-                <div class="uto-filter-chips">
-                  <label><input type="checkbox" name="simLife" value="child_infant"> 乳幼児（0〜5歳）</label>
-                  <label><input type="checkbox" name="simLife" value="child_school"> 小中高生（6〜18歳）</label>
-                  <label><input type="checkbox" name="simLife" value="newlywed"> 新婚・若者夫婦</label>
-                  <label><input type="checkbox" name="simLife" value="working"> 現役・勤労世代</label>
-                  <label><input type="checkbox" name="simLife" value="senior"> シニア（65歳以上）</label>
-                </div>
-              </div>
-              <!-- 家族構成 -->
-              <div class="uto-sim-col">
-                <b>② 世帯・家族の状況</b>
-                <div class="uto-filter-chips">
-                  <label><input type="checkbox" name="simFamily" value="childcare"> 子どもと同居中</label>
-                  <label><input type="checkbox" name="simFamily" value="single_parent"> ひとり親世帯</label>
-                  <label><input type="checkbox" name="simFamily" value="senior_only"> 高齢者のみ世帯</label>
-                  <label><input type="checkbox" name="simFamily" value="disability"> 障がい・要介護認定</label>
-                </div>
-              </div>
-              <!-- 住まいの状況 -->
-              <div class="uto-sim-col">
-                <b>③ 住まいの状況</b>
-                <div class="uto-filter-chips">
-                  <label><input type="checkbox" name="simHousing" value="owned_wood"> 持ち家（木造戸建て）</label>
-                  <label><input type="checkbox" name="simHousing" value="rental"> 借家・賃貸住宅</label>
-                  <label><input type="checkbox" name="simHousing" value="septic"> 浄化槽を使用</label>
-                  <label><input type="checkbox" name="simHousing" value="vacant"> 空き家所有・解体検討</label>
-                </div>
-              </div>
-              <!-- 熊本地震の被災状況 -->
-              <div class="uto-sim-col">
-                <b>④ 熊本地震の被害（り災判定）</b>
-                <div class="uto-filter-chips">
-                  <label><input type="checkbox" name="simDisaster" value="damage_heavy"> 全壊〜中規模半壊</label>
-                  <label><input type="checkbox" name="simDisaster" value="damage_half"> 半壊（解体含む）</label>
-                  <label><input type="checkbox" name="simDisaster" value="damage_partial"> 一部損壊（準半壊含む）</label>
-                  <label><input type="checkbox" name="simDisaster" value="none"> 被害なし（平時）</label>
-                </div>
-              </div>
-              <!-- 仕事・産業 -->
-              <div class="uto-sim-col">
-                <b>⑤ 仕事・生業</b>
-                <div class="uto-filter-chips">
-                  <label><input type="checkbox" name="simWork" value="employee"> 会社員・公務員など</label>
-                  <label><input type="checkbox" name="simWork" value="business"> 個人事業主・中小企業</label>
-                  <label><input type="checkbox" name="simWork" value="agri"> 農業・漁業・林業</label>
-                  <label><input type="checkbox" name="simWork" value="startup"> 創業検討・起業家</label>
-                </div>
-              </div>
-              <!-- 所得要件 -->
-              <div class="uto-sim-col">
-                <b>⑥ 所得の目安</b>
-                <div class="uto-filter-chips">
-                  <label><input type="checkbox" name="simIncome" value="low_income"> 非課税・低所得世帯</label>
-                  <label><input type="checkbox" name="simIncome" value="no_limit"> 所得制限なし（全般）</label>
-                </div>
+          <div class="uto-sim-filter-grid">
+
+            <!-- 年代・ライフステージ -->
+            <div class="uto-filter-group">
+              <label class="uto-filter-label">年代・ライフステージ</label>
+              <div class="uto-filter-chips">
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simLife" value="child_infant">
+                  <span>妊娠中・乳幼児（0〜5歳）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simLife" value="child_school">
+                  <span>小中高生（6〜18歳）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simLife" value="newlywed">
+                  <span>新婚・若者（夫婦39歳以下）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simLife" value="working">
+                  <span>現役・勤労世代</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simLife" value="senior">
+                  <span>シニア・高齢者（65歳以上）</span>
+                </label>
               </div>
             </div>
+
+            <!-- 世帯・家族構成 -->
+            <div class="uto-filter-group">
+              <label class="uto-filter-label">世帯・家族の状況</label>
+              <div class="uto-filter-chips">
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simFamily" value="childcare">
+                  <span>子育て中（子どもと同居）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simFamily" value="single_parent">
+                  <span>ひとり親世帯（母子・父子）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simFamily" value="senior_only">
+                  <span>独居・高齢者のみ世帯</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simFamily" value="disability">
+                  <span>障がい者手帳・要介護認定あり</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 住まいの形態 -->
+            <div class="uto-filter-group">
+              <label class="uto-filter-label">住まいの状況</label>
+              <div class="uto-filter-chips">
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simHousing" value="owned_wood">
+                  <span>持ち家（木造一戸建て）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simHousing" value="rental">
+                  <span>借家・賃貸アパート</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simHousing" value="septic">
+                  <span>浄化槽使用（水洗化検討）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simHousing" value="vacant">
+                  <span>空き家を所有・解体検討中</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 収入・所得の状況 -->
+            <div class="uto-filter-group">
+              <label class="uto-filter-label">所得・収入の状況</label>
+              <div class="uto-filter-chips">
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simIncome" value="no_limit">
+                  <span>所得制限なし（誰でもOK）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simIncome" value="low_income">
+                  <span>住民税非課税・低所得世帯</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 熊本地震の被害度 -->
+            <div class="uto-filter-group">
+              <label class="uto-filter-label">熊本地震の被害状況</label>
+              <div class="uto-filter-chips">
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simDisaster" value="damage_heavy">
+                  <span>全壊・大規模半壊・中規模半壊</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simDisaster" value="damage_half">
+                  <span>半壊（解体検討含む）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simDisaster" value="damage_partial">
+                  <span>一部損壊（準半壊含む）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simDisaster" value="none">
+                  <span>被害なし（平時の支援を探す）</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- お仕事・事業 -->
+            <div class="uto-filter-group">
+              <label class="uto-filter-label">お仕事・事業形態</label>
+              <div class="uto-filter-chips">
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simWork" value="employee">
+                  <span>会社員・パート・一般勤労</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simWork" value="business">
+                  <span>個人事業主・自営業・中小企業</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simWork" value="agri">
+                  <span>農林水産業（就農・農家）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simWork" value="startup">
+                  <span>新規創業・起業予定</span>
+                </label>
+              </div>
+            </div>
+
           </div>
         </details>
 
-        <!-- 選択中の条件表示バー -->
+        <!-- ③ 選択中条件・絞り込み結果サマリーバー -->
         <div class="uto-sim-active-bar" id="utoSimActiveBar" style="display: none;">
-          <div class="uto-sim-active-header">
-            <div class="uto-sim-active-title">
-              <span>🎯 適用中の条件：</span>
-              <span class="uto-sim-result-count" id="utoSimResultCount">該当 0件</span>
+          <div class="uto-sim-active-top">
+            <div class="uto-sim-result-badge">
+              <span>🎯 絞り込み結果：</span>
+              <strong class="uto-sim-result-count" id="utoSimResultCount">0件</strong>
+              <span style="font-size: 0.85rem; color: #475569; font-weight: normal;">（主要{total_count}制度中）</span>
             </div>
             <div class="uto-sim-active-actions">
-              <button type="button" class="uto-sim-scroll-btn" id="utoSimScrollBtn">該当する制度を見る（↓）</button>
-              <button type="button" class="uto-sim-clear-btn" id="utoSimClearBtn">✕ 条件をすべて解除</button>
+              <button type="button" class="uto-sim-scroll-btn" id="utoSimScrollBtn">
+                <span>👇 該当する制度を見る</span>
+              </button>
+              <button type="button" class="uto-sim-clear-btn" id="utoSimClearBtn">
+                <span>条件をすべて解除 ×</span>
+              </button>
             </div>
           </div>
-          <div class="uto-sim-active-tags" id="utoSimActiveTags"></div>
+          <div class="uto-sim-active-tags-row">
+            <span class="active-bar-label">適用中の条件：</span>
+            <div class="active-tags-container" id="utoSimActiveTags"></div>
+          </div>
         </div>
       </section>
 
-      <!-- 宇城市独自の連携・独自メリット解説 -->
-      <section class="uto-sup-merit-box" id="uki-special" aria-labelledby="uki-merit-title">
-        <div class="uto-sup-merit-header">
-          <h2 id="uki-merit-title">知っておきたい！宇城市の制度連携・独自メリット</h2>
-          <p>宇城市が提供する支援制度には、他自治体にない独自の手厚い支援や、組み合わせることで効果が高まる連携策があります。</p>
-        </div>
-        <div class="uto-sup-merit-grid">
-          <div class="uto-sup-merit-card">
-            <div class="uto-sup-merit-icon">🎒</div>
-            <h3>こども医療費 18歳まで完全無償化へ拡充</h3>
-            <p>
-              宇城市では令和8年10月診療分より、0歳から高校生年代（18歳到達年度末）までの医療費自己負担が<strong>完全無償化</strong>されます。
-              通院・入院ともに窓口での自己負担がなくなり、子育て世帯の安心感が飛躍的に向上します。
-            </p>
+      <!-- 宇城市の3大特徴ハイライト -->
+      <section class="uto-sup-highlights" aria-labelledby="uki-hl-title">
+        <h2 id="uki-hl-title">知っておきたい！宇城市の制度連携・独自メリット</h2>
+        <div class="uto-sup-hl-grid">
+          <div class="uto-sup-hl-item">
+            <span class="hl-badge">完全無償化拡充</span>
+            <h3>こども医療費 18歳まで完全無償化</h3>
+            <p>令和8年10月診療分より、0歳から高校生年代（18歳到達年度末）までの医療費窓口自己負担が完全無償化。子育て世帯の医療費負担を大幅にゼロ化します。</p>
           </div>
-          <div class="uto-sup-merit-card">
-            <div class="uto-sup-merit-icon">🤝</div>
+          <div class="uto-sup-hl-item">
+            <span class="hl-badge">予約不要・無料</span>
             <h3>被災者支援のための「無料相談会」定期開設</h3>
-            <p>
-              宇城市役所新館・小川ラポートにおいて、司法書士・弁護士・行政書士が常駐する<strong>予約不要の無料相談会</strong>を定期開催。
-              被災ローン減免制度や建物の相続・登記、公費解体申請書類の確認など、複雑な手続きをワンストップで解決できます。
-            </p>
+            <p>市役所新館と小川ラポートで司法書士・弁護士・行政書士が常駐。被災ローン減免制度や建物の相続・登記、公費解体申請書類の確認などをワンストップで解決。</p>
           </div>
-          <div class="uto-sup-merit-card">
-            <div class="uto-sup-merit-icon">💡</div>
-            <h3>「OGAWA Lab.」「うきコテナ」等と連動した創業支援</h3>
-            <p>
-              起業支援施設「OGAWA Lab.（小川ラボ）」を中心に、特定創業支援事業や創業補助金（店舗改修・設備投資支援）が充実。
-              移住支援金（最大100万円＋加算）と組み合わせることで、移住起業の初期投資を強力にバックアップします。
-            </p>
+          <div class="uto-sup-hl-item">
+            <span class="hl-badge">OGAWA Lab.連携</span>
+            <h3>創業支援・特定創業支援事業＋移住支援金</h3>
+            <p>起業支援拠点「OGAWA Lab.」を中心に創業補助金や専門家相談が充実。東京圏等からの移住支援金（最大100万円＋加算）と併せて新規起業を強力にサポート。</p>
           </div>
         </div>
       </section>
 
-      <!-- 検索・カテゴリタブ -->
-      <div class="uto-sup-controls">
-        <div class="uto-sup-search-wrap">
-          <input type="search" id="utoSupSearch" placeholder="キーワードで制度を検索（例：耐震、医療費、タクシー、補助金、創業...）" aria-label="制度をキーワード検索">
+      <!-- 検索・絞り込みツールバー -->
+      <section class="uto-sup-toolbar" aria-labelledby="uki-tool-title">
+        <div class="uto-sup-search-row">
+          <label for="utoSupSearch" id="uki-tool-title" class="uto-sup-search-label">キーワード検索：</label>
+          <input type="text" id="utoSupSearch" class="uto-sup-search-input" placeholder="例：耐震、医療費、タクシー、補助金、創業、解体、新婚..." autocomplete="off">
         </div>
-        <div class="uto-sup-cat-tabs" role="tablist" aria-label="制度のカテゴリ">
-          <button type="button" class="uto-sup-cat-btn active" data-cat="all" role="tab" aria-selected="true">すべて表示 (''')
-    html_parts.append(str(len(SYSTEMS)))
-    html_parts.append('''件)</button>
+        <div class="uto-sup-cat-row" role="group" aria-label="分野別カテゴリフィルター">
+          <button type="button" class="uto-sup-cat-btn active" data-target-cat="all">すべて表示</button>
 ''')
 
     for cat in CATEGORIES:
-        count = sum(1 for s in SYSTEMS if s["cat"] == cat["id"])
-        html_parts.append(f'''          <button type="button" class="uto-sup-cat-btn" data-cat="{cat["id"]}" role="tab" aria-selected="false">{cat["icon"]} {cat["name"]} ({count})</button>\n''')
+        html_parts.append(f'''          <button type="button" class="uto-sup-cat-btn" data-target-cat="{cat["id"]}">{cat["name"]}</button>\n''')
 
-    html_parts.append('''        </div>
+    html_parts.append(f'''        </div>
+      </section>
+
+      <!-- 検索結果件数表示 -->
+      <div class="uto-sup-status">
+        <span id="utoSupCount">表示中：{total_count}件 / 主要{total_count}制度</span>
+        <span class="uto-sup-status-source">確認日：2026年9月21日／情報源：宇城市公式HP等</span>
       </div>
 
-      <!-- 該当件数カウンター -->
-      <div class="uto-sup-count-bar">
-        <span>表示中の制度：<b id="utoSupCount">''')
-    html_parts.append(str(len(SYSTEMS)))
-    html_parts.append('''</b>件</span>
-      </div>
+      <aside class="uto-sup-caution" role="note">
+        <strong>申請前に必ず最新情報をご確認ください。</strong>
+        制度は年度、予算、世帯状況などにより受付終了・金額変更・対象外となる場合があります。このページは宇城市の全制度を網羅するものではありません。公式ページと担当窓口で、現在の受付状況・対象要件・必要書類を確認してください。
+      </aside>
 
-      <!-- 該当なしメッセージ -->
-      <div class="uto-sup-empty" id="utoSupEmpty" style="display: none;">
-        <p>選択された条件に一致する制度が見つかりませんでした。<br>条件を緩めるか、別のキーワードでお試しください。</p>
+      <!-- 一致なし表示 -->
+      <div id="utoSupEmpty" class="uto-sup-empty" style="display: none;">
+        <p>該当する制度が見つかりませんでした。条件シミュレーターの「条件をクリア」ボタンを押すか、別のキーワードで検索してください。</p>
       </div>
-
-      <!-- 制度一覧（1列カードレイアウト） -->
-      <div class="uto-sup-sections" id="utoSupSections">
 ''')
 
+    # 各カテゴリセクションとカード（1列構成）
     for cat in CATEGORIES:
         cat_items = [s for s in SYSTEMS if s["cat"] == cat["id"]]
         if not cat_items:
             continue
 
         html_parts.append(f'''
-      <!-- カテゴリ：{cat["name"]} -->
-      <section class="uto-sup-section" id="cat-{cat["id"]}" data-cat="{cat["id"]}" aria-labelledby="heading-{cat["id"]}">
-        <div class="uto-sup-section-head">
-          <h2 id="heading-{cat["id"]}">{cat["icon"]} {cat["name"]}</h2>
-          <p>{cat["desc"]}</p>
-        </div>
-        <div class="uto-sup-cards-flow">
+      <!-- セクション: {cat["name"]} -->
+      <section class="uto-sup-section" id="sec-{cat["id"]}" data-cat="{cat["id"]}">
+        <header class="uto-sup-sec-header">
+          <h2>{cat["name"]}</h2>
+          <span class="sec-count">（{len(cat_items)}件）</span>
+        </header>
+        <div class="uto-sup-grid">
 ''')
 
         for item in cat_items:
             icon_svg = ICONS.get(item["icon"], ICONS["reform"])
-            tag_spans = " ".join([f'<span class="uto-tag">{t}</span>' for t in item.get("tags", [])])
+            tag_spans = "".join([f'<span class="card-hash-tag">{t}</span>' for t in item.get("tags", [])])
             extra_html = f'<div class="uto-card-extra">{item["extra"]}</div>' if item.get("extra") else ''
-            phone_link = f'<a href="tel:{item["phone"].replace("-", "")}">{item["phone"]}</a>' if item.get("phone") else ''
+            phone_raw = item.get("phone", "").replace("-", "")
+            phone_link = f'<a class="uto-card-phone" href="tel:{phone_raw}">{item["phone"]}</a>' if item.get("phone") else ''
             url_target = ' target="_blank" rel="noopener"' if item["url"].startswith("http") else ''
 
-            html_parts.append(f'''          <article class="uto-card" 
-            data-cat="{item["cat"]}"
-            data-life="{",".join(item["life"])}"
-            data-family="{",".join(item["family"])}"
-            data-housing="{",".join(item["housing"])}"
-            data-income="{",".join(item["income"])}"
-            data-disaster="{",".join(item["disaster"])}"
-            data-work="{",".join(item["work"])}">
-            <div class="uto-card-header">
-              <div class="uto-card-icon-box">
+            html_parts.append(f'''          <article class="uto-card"
+                   data-life="{",".join(item["life"])}"
+                   data-family="{",".join(item["family"])}"
+                   data-housing="{",".join(item["housing"])}"
+                   data-income="{",".join(item["income"])}"
+                   data-disaster="{",".join(item["disaster"])}"
+                   data-work="{",".join(item["work"])}">
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
                 {icon_svg}
               </div>
-              <div class="uto-card-title-group">
-                <div class="uto-card-badges">
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
                   <span class="uto-badge-cat">{item["catName"]}</span>
                   <span class="uto-badge-feature">{item["badge"]}</span>
                   <span class="uto-badge-match" style="display: none;">🎯 該当</span>
@@ -1110,14 +1229,14 @@ def generate_html():
   </main>
   <footer class="site-footer"></footer>
   <script src="org-site.js?v=20260907-2"></script>
-  <script src="uki-living-support.js?v=20260921-1"></script>
+  <script src="uki-living-support.js?v=20260921-2"></script>
 </body>
 </html>
 ''')
 
     content = "".join(html_parts)
     Path("uki-living-support.html").write_text(content, encoding="utf-8")
-    print(f"Generated uki-living-support.html with {len(SYSTEMS)} systems and SVG illustrations.")
+    print(f"Generated uki-living-support.html with {len(SYSTEMS)} systems and full 1-column layout.")
 
 if __name__ == "__main__":
     generate_html()

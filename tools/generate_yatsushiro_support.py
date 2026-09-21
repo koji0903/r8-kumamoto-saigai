@@ -784,254 +784,370 @@ CATEGORIES = [
 
 def generate_html():
     html_parts = []
+    total_count = len(SYSTEMS)
     
     # ヘッダー部分
-    html_parts.append('''<!doctype html>
+    html_parts.append(f'''<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#1d5b79">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>八代市：暮らしの支援・補助金 総合ガイド（住まい・子育て・健康・福祉・産業）｜よか隊ネット熊本</title>
   <meta name="description" content="八代市の公式制度・補助金を網羅した総合ガイド。住まい（八代産材利用・耐震）、子育て（高校生医療費・0〜5歳児保育料の完全無償化）、シニア福祉、移住新婚、創業から被災者応援ガイドブック第7版など令和8年熊本地震特別支援まで、条件シミュレーターで活用できる制度を即座に探せます。">
-  <link rel="icon" href="favicon.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=20260817-4">
-  <link rel="stylesheet" href="design-system.css?v=20260810-1">
-  <link rel="stylesheet" href="org-site.css?v=20260907-2">
-  <link rel="stylesheet" href="yatsushiro-living-support.css?v=20260921-1">
+  <link rel="stylesheet" href="styles.css?v=20260907-2">
+  <link rel="stylesheet" href="design-system.css?v=20260907-2">
+  <link rel="stylesheet" href="org-site.css?v=20260918-1">
+  <link rel="stylesheet" href="yatsushiro-living-support.css?v=20260921-2">
+  <link rel="canonical" href="https://www.yokatainet.jp/yatsushiro-living-support.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="よか隊ネット熊本　災害・支援状況レポート">
+  <meta property="og:title" content="八代市：暮らしの支援・補助金 総合ガイド（住まい・子育て・健康・福祉・産業）">
+  <meta property="og:description" content="八代市の公式制度・補助金を網羅した総合ガイド。住まい（八代産材利用・耐震）、子育て（高校生医療費・0〜5歳児保育料の完全無償化）、シニア福祉、移住新婚、創業から被災者応援ガイドブック第7版など令和8年熊本地震特別支援まで、条件シミュレーターで活用できる制度を即座に探せます。">
+  <meta property="og:url" content="https://www.yokatainet.jp/yatsushiro-living-support.html">
+  <meta property="og:image" content="https://www.yokatainet.jp/ogp-yatsushiro-living-support.png">
+  <meta property="og:image:secure_url" content="https://www.yokatainet.jp/ogp-yatsushiro-living-support.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="八代市：暮らしの支援・補助金 総合ガイド（住まい・子育て・健康・福祉・産業）｜よか隊ネット熊本　災害・支援状況レポート">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="八代市：暮らしの支援・補助金 総合ガイド（住まい・子育て・健康・福祉・産業）">
+  <meta name="twitter:description" content="八代市の公式制度・補助金を網羅した総合ガイド。住まい（八代産材利用・耐震）、子育て（高校生医療費・0〜5歳児保育料の完全無償化）、シニア福祉、移住新婚、創業から被災者応援ガイドブック第7版など令和8年熊本地震特別支援まで、条件シミュレーターで活用できる制度を即座に探せます。">
+  <meta name="twitter:image" content="https://www.yokatainet.jp/ogp-yatsushiro-living-support.png">
 </head>
 <body class="organization-site yatsushiro-living-support-page">
-  <a class="skip" href="#main">本文へ移動</a>
+  <a class="skip" href="#mainContent">本文へ移動</a>
   <header class="site-header"></header>
-  <main id="main">
-    <section class="uto-sup-hero" style="background: linear-gradient(135deg, #103b4f 0%, #1d5b79 60%, #2a7a9e 100%);">
+  <main id="mainContent" class="uto-support-main">
+
+    <!-- ヒーローヘッダー（全幅グラデーション＋内部幅制限1040px） -->
+    <header class="uto-sup-hero">
       <div class="uto-sup-hero-inner">
+        <!-- パンくずリスト -->
         <nav class="breadcrumb-nav" aria-label="パンくずリスト">
-          <a href="index.html">ホーム</a> &gt;
-          <a href="municipalities.html">自治体別情報</a> &gt;
-          <a href="municipalities.html?name=八代市">八代市</a> &gt;
+          <a href="index.html">ホーム</a>
+          <span>&gt;</span>
+          <a href="municipalities.html">自治体別の状況</a>
+          <span>&gt;</span>
+          <a href="municipalities.html?name=八代市">八代市</a>
+          <span>&gt;</span>
           <span aria-current="page">暮らしの支援・補助金 総合ガイド</span>
         </nav>
-        <span class="uto-sup-hero-badge">八代市公式制度 総合ナビゲーション</span>
+
+        <div class="uto-sup-hero-badge">八代市公式情報を確認 · 主要{total_count}制度</div>
         <h1>八代市 暮らしの支援・補助金 総合ガイド</h1>
         <p class="uto-sup-hero-lead">
-          八代市にお住まいの皆さまが活用できる、平時からの主要な支援制度・補助金と、令和8年熊本地震の特別支援を1つに集約しました。<br>
-          「年齢」「世帯状況」「住まい」「被災状況」などの条件を選ぶだけで、あなたやご家族が使える制度をカンタンに調べることができます。
+          八代市にお住まいの皆さまが活用できる、平時からの主要な支援制度・補助金と、令和8年熊本地震の特別支援を体系的に整理しました。<br>
+          「あなたの現在の状況」を選択して、活用できる制度をお探しいただけます。掲載制度には八代市公式情報へのリンクと担当窓口を記載しています。掲載内容は令和8年9月21日改定の八代市「被災者応援ガイドブック第7版」および最新公式案内を確認したものです。
         </p>
-        <div class="uto-sup-quick-actions" style="margin-top:20px;">
-          <a href="#simulator" class="highlight">🔍 条件から制度を調べる</a>
-          <a href="#yatsushiro-special">💡 八代市の独自メリット</a>
-          <a href="#cat-housing">🏠 住まい</a>
-          <a href="#cat-childcare">🎒 子育て</a>
-          <a href="#cat-senior">🤝 シニア福祉</a>
-          <a href="#cat-migration">🌸 移住・新婚</a>
-          <a href="#cat-business">💼 産業・創業</a>
-          <a href="#cat-disaster">🆘 地震特別支援</a>
-          <a href="yatsushiro-support.html" style="background:#e0f2fe; color:#0369a1;">📋 被災者応援ガイド（第7版）へ ↗</a>
-        </div>
       </div>
-    </section>
+    </header>
 
-    <!-- 被災者専用ガイドとの連携バナー -->
-    <aside class="hk-alert" style="max-width:1040px; margin:20px auto 0; padding:16px 20px; border-radius:12px; border-left:6px solid #1d5b79; background:#f0f9ff;">
-      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
-        <div>
-          <b style="color:#103b4f; font-size:1.05rem;">令和8年熊本地震「被災者応援ガイドブック第7版」を詳しく見たい方へ</b>
-          <p style="margin:4px 0 0; font-size:0.92rem; color:#334155;">全54制度の対象・金額・窓口や公費解体受付（9/28〜）、緊急修理期限延長（10/27まで）など、災害特化の解説は専用ページをご覧ください。</p>
+    <!-- メインコンテンツシェル（幅1040px制限で中央揃え） -->
+    <div class="uto-sup-shell">
+
+      <!-- 被災者専用ガイドとの連携バナー -->
+      <aside class="uto-sup-banner" aria-labelledby="yatsushiro-banner-title">
+        <span class="uto-sup-banner-tag">熊本地震被災者支援連携</span>
+        <h2 id="yatsushiro-banner-title">令和8年熊本地震「被災者応援ガイドブック第7版」を詳しく見たい方へ</h2>
+        <p>八代市が令和8年9月21日に発行した第7版・全54制度の対象・金額・窓口や公費解体受付（9/28〜）、緊急修理期限延長（10/27まで）など、災害特化の解説は専用ページをご覧ください。</p>
+        <ul class="uto-sup-banner-points">
+          <li><strong>被災者応援ガイドブック第7版：</strong>令和8年9月21日改定・全54制度の支援メニューを完全網羅</li>
+          <li><strong>公費解体・自費解体受付：</strong>半壊以上の住家等を市が解体撤去（事前予約：0965-37-7550）</li>
+          <li><strong>緊急修理・応急修理：</strong>ブルーシート展張等の完了報告は10月27日まで延長、応急修理最大75.7万円</li>
+        </ul>
+        <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a href="yatsushiro-support.html" class="uto-card-link" style="display:inline-flex;">八代市 応援ガイド第7版を見る →</a>
+          <a href="yatsushiro-rebuild.html" class="uto-card-link" style="display:inline-flex; background:#103b4f;">生活再建支援金ガイド →</a>
         </div>
-        <div style="display:flex; gap:8px; flex-wrap:wrap;">
-          <a href="yatsushiro-support.html" style="background:#1d5b79; color:#fff; padding:8px 14px; border-radius:6px; font-weight:700; text-decoration:none; font-size:0.875rem;">応援ガイド第7版を見る →</a>
-          <a href="yatsushiro-rebuild.html" style="background:#e0f2fe; color:#0369a1; border:1px solid #1d5b79; padding:8px 14px; border-radius:6px; font-weight:700; text-decoration:none; font-size:0.875rem;">生活再建支援金ガイド →</a>
+      </aside>
+
+      <!-- かんたん条件シミュレーター -->
+      <section class="uto-sim-card" id="utoSimulator" aria-labelledby="utoSimTitle">
+        <div class="uto-sim-header">
+          <div class="uto-sim-title-group">
+            <span class="uto-sim-badge">条件シミュレーター</span>
+            <h2 id="utoSimTitle">現在の状況から、使える制度を調べる</h2>
+          </div>
+          <button type="button" class="uto-sim-reset-btn" id="utoSimResetBtn" aria-label="すべての選択条件をリセット">
+            <span aria-hidden="true">↺</span> 条件をクリア
+          </button>
         </div>
-      </div>
-    </aside>
+        <p class="uto-sim-guide">
+          お困りごとや世帯の状況に合わせて、ワンタップで探せる「クイック診断」または「詳細条件」をお選びください。<br>
+          <small class="uto-sim-privacy-note">※入力・選択された情報は外部に送信されず、お使いの端末（ブラウザ）内でのみ即座に計算されます。</small>
+        </p>
 
-    <div class="uto-sup-container">
-
-      <!-- シミュレーターセクション -->
-      <section class="uto-sup-sim-box" id="simulator" aria-labelledby="sim-title">
-        <div class="uto-sup-sim-header">
-          <h2 id="sim-title">現在の状況から、使える制度を調べる</h2>
-          <p>当てはまる立場や条件を選ぶと、該当する制度がハイライトされ、絞り込んで確認できます。</p>
-        </div>
-
-        <!-- かんたんプリセット -->
+        <!-- ① クイック診断プリセットボタン -->
         <div class="uto-sim-presets">
-          <span class="uto-sim-preset-label">よく使われる立場から選ぶ：</span>
-          <div class="uto-sim-preset-chips">
-            <button type="button" class="uto-sim-preset-btn" data-preset="childcare">🎒 子育て世帯</button>
-            <button type="button" class="uto-sim-preset-btn" data-preset="senior">👴 シニア・高齢者世帯</button>
-            <button type="button" class="uto-sim-preset-btn" data-preset="housing">🏠 持ち家・リフォーム検討</button>
-            <button type="button" class="uto-sim-preset-btn" data-preset="newlywed">🌸 新婚・移住検討</button>
-            <button type="button" class="uto-sim-preset-btn" data-preset="business">💼 自営業・中小企業・農業</button>
-            <button type="button" class="uto-sim-preset-btn" data-preset="disaster">🆘 地震で被災された方</button>
-            <button type="button" class="uto-sim-reset-btn" id="utoSimResetBtn">🔄 条件をクリア</button>
+          <span class="uto-sim-presets-label">おすすめクイック診断：</span>
+          <div class="uto-sim-preset-grid" role="group" aria-label="おすすめクイック診断">
+            <button type="button" class="uto-sim-preset-btn" data-preset="childcare">
+              <span class="preset-icon">🎒</span>
+              <span class="preset-title">子育て・教育世帯</span>
+              <span class="preset-desc">高校生まで医療費・0〜5歳保育料完全無償化</span>
+            </button>
+            <button type="button" class="uto-sim-preset-btn" data-preset="senior">
+              <span class="preset-icon">👴</span>
+              <span class="preset-title">シニア・在宅介護</span>
+              <span class="preset-desc">住宅改修補助・福祉タクシー・緊急通報装置</span>
+            </button>
+            <button type="button" class="uto-sim-preset-btn" data-preset="housing">
+              <span class="preset-icon">🏠</span>
+              <span class="preset-title">住まい改修・耐震</span>
+              <span class="preset-desc">耐震100万・八代産材利用助成・浄化槽補助</span>
+            </button>
+            <button type="button" class="uto-sim-preset-btn" data-preset="newlywed">
+              <span class="preset-icon">💍</span>
+              <span class="preset-title">新婚・移住検討</span>
+              <span class="preset-desc">新生活最大60万・移住定住補助金50万</span>
+            </button>
+            <button type="button" class="uto-sim-preset-btn" data-preset="disaster">
+              <span class="preset-icon">🚨</span>
+              <span class="preset-title">熊本地震の被災世帯</span>
+              <span class="preset-desc">応援ガイド第7版・公費解体・応急修理・支援金</span>
+            </button>
+            <button type="button" class="uto-sim-preset-btn" data-preset="business">
+              <span class="preset-icon">💼</span>
+              <span class="preset-title">自営業・農業・創業</span>
+              <span class="preset-desc">セーフティネット4号・創業補助・新規就農</span>
+            </button>
           </div>
         </div>
 
-        <!-- 詳細条件アコーディオン -->
+        <!-- ② 詳細条件折りたたみパネル（目立つデザイン） -->
         <details class="uto-sim-details" id="utoSimDetails">
           <summary class="uto-sim-details-summary">
-            <div class="uto-sim-summary-left">
-              <span class="uto-sim-summary-icon" aria-hidden="true">⚙️</span>
-              <div class="uto-sim-summary-headings">
-                <span class="uto-sim-summary-title">さらに詳細な条件で絞り込む</span>
-                <span class="uto-sim-summary-sub">対象者の年齢・世帯状況・被災程度・事業形態など</span>
+            <div class="uto-sim-summary-content">
+              <span class="uto-sim-gear-icon" aria-hidden="true">⚙️</span>
+              <div class="uto-sim-summary-text">
+                <strong class="uto-sim-summary-title">さらに詳細な条件で絞り込む</strong>
+                <span class="uto-sim-summary-sub">年齢・世帯・住まい・収入・被災状況・お仕事など全23項目から選ぶ</span>
               </div>
             </div>
-            <div class="uto-sim-summary-toggle">
-              <span class="toggle-text">詳細条件を開く</span>
+            <span class="uto-sim-summary-toggle">
+              <span class="toggle-text">条件を開く</span>
               <span class="toggle-arrow" aria-hidden="true">▼</span>
-            </div>
+            </span>
           </summary>
-          <div class="uto-sim-details-content">
-            <div class="uto-sim-grid">
-              <!-- ライフステージ -->
-              <div class="uto-sim-col">
-                <b>① 年齢・ライフステージ</b>
-                <div class="uto-filter-chips">
-                  <label><input type="checkbox" name="simLife" value="child_infant"> 乳幼児（0〜5歳）</label>
-                  <label><input type="checkbox" name="simLife" value="child_school"> 小中高生（6〜18歳）</label>
-                  <label><input type="checkbox" name="simLife" value="newlywed"> 新婚・若者夫婦</label>
-                  <label><input type="checkbox" name="simLife" value="working"> 現役・勤労世代</label>
-                  <label><input type="checkbox" name="simLife" value="senior"> シニア（65歳以上）</label>
-                </div>
-              </div>
-              <!-- 家族構成 -->
-              <div class="uto-sim-col">
-                <b>② 世帯・家族の状況</b>
-                <div class="uto-filter-chips">
-                  <label><input type="checkbox" name="simFamily" value="childcare"> 子どもと同居中</label>
-                  <label><input type="checkbox" name="simFamily" value="single_parent"> ひとり親世帯</label>
-                  <label><input type="checkbox" name="simFamily" value="senior_only"> 高齢者のみ世帯</label>
-                  <label><input type="checkbox" name="simFamily" value="disability"> 障がい・要介護認定</label>
-                </div>
-              </div>
-              <!-- 住まいの状況 -->
-              <div class="uto-sim-col">
-                <b>③ 住まいの状況</b>
-                <div class="uto-filter-chips">
-                  <label><input type="checkbox" name="simHousing" value="owned_wood"> 持ち家（木造戸建て）</label>
-                  <label><input type="checkbox" name="simHousing" value="rental"> 借家・賃貸住宅</label>
-                  <label><input type="checkbox" name="simHousing" value="septic"> 浄化槽を使用</label>
-                  <label><input type="checkbox" name="simHousing" value="vacant"> 空き家所有・解体検討</label>
-                </div>
-              </div>
-              <!-- 熊本地震の被災状況 -->
-              <div class="uto-sim-col">
-                <b>④ 熊本地震の被害（り災判定）</b>
-                <div class="uto-filter-chips">
-                  <label><input type="checkbox" name="simDisaster" value="damage_heavy"> 全壊〜中規模半壊</label>
-                  <label><input type="checkbox" name="simDisaster" value="damage_half"> 半壊（解体含む）</label>
-                  <label><input type="checkbox" name="simDisaster" value="damage_partial"> 一部損壊（準半壊含む）</label>
-                  <label><input type="checkbox" name="simDisaster" value="none"> 被害なし（平時）</label>
-                </div>
-              </div>
-              <!-- 仕事・産業 -->
-              <div class="uto-sim-col">
-                <b>⑤ 仕事・生業</b>
-                <div class="uto-filter-chips">
-                  <label><input type="checkbox" name="simWork" value="employee"> 会社員・公務員など</label>
-                  <label><input type="checkbox" name="simWork" value="business"> 個人事業主・中小企業</label>
-                  <label><input type="checkbox" name="simWork" value="agri"> 農業・林業・漁業</label>
-                  <label><input type="checkbox" name="simWork" value="startup"> 創業検討・起業家</label>
-                </div>
-              </div>
-              <!-- 所得要件 -->
-              <div class="uto-sim-col">
-                <b>⑥ 所得の目安</b>
-                <div class="uto-filter-chips">
-                  <label><input type="checkbox" name="simIncome" value="low_income"> 非課税・低所得世帯</label>
-                  <label><input type="checkbox" name="simIncome" value="no_limit"> 所得制限なし（全般）</label>
-                </div>
+          <div class="uto-sim-filter-grid">
+
+            <!-- 年代・ライフステージ -->
+            <div class="uto-filter-group">
+              <label class="uto-filter-label">年代・ライフステージ</label>
+              <div class="uto-filter-chips">
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simLife" value="child_infant">
+                  <span>妊娠中・乳幼児（0〜5歳）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simLife" value="child_school">
+                  <span>小中高生（6〜18歳）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simLife" value="newlywed">
+                  <span>新婚・若者（夫婦39歳以下）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simLife" value="working">
+                  <span>現役・勤労世代</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simLife" value="senior">
+                  <span>シニア・高齢者（65歳以上）</span>
+                </label>
               </div>
             </div>
+
+            <!-- 世帯・家族構成 -->
+            <div class="uto-filter-group">
+              <label class="uto-filter-label">世帯・家族の状況</label>
+              <div class="uto-filter-chips">
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simFamily" value="childcare">
+                  <span>子育て中（子どもと同居）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simFamily" value="single_parent">
+                  <span>ひとり親世帯（母子・父子）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simFamily" value="senior_only">
+                  <span>独居・高齢者のみ世帯</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simFamily" value="disability">
+                  <span>障がい者手帳・要介護認定あり</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 住まいの形態 -->
+            <div class="uto-filter-group">
+              <label class="uto-filter-label">住まいの状況</label>
+              <div class="uto-filter-chips">
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simHousing" value="owned_wood">
+                  <span>持ち家（木造一戸建て）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simHousing" value="rental">
+                  <span>借家・賃貸アパート</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simHousing" value="septic">
+                  <span>浄化槽使用（水洗化検討）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simHousing" value="vacant">
+                  <span>空き家を所有・解体検討中</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 収入・所得の状況 -->
+            <div class="uto-filter-group">
+              <label class="uto-filter-label">所得・収入の状況</label>
+              <div class="uto-filter-chips">
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simIncome" value="no_limit">
+                  <span>所得制限なし（誰でもOK）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simIncome" value="low_income">
+                  <span>住民税非課税・低所得世帯</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 熊本地震の被害度 -->
+            <div class="uto-filter-group">
+              <label class="uto-filter-label">熊本地震の被害状況</label>
+              <div class="uto-filter-chips">
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simDisaster" value="damage_heavy">
+                  <span>全壊・大規模半壊・中規模半壊</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simDisaster" value="damage_half">
+                  <span>半壊（解体検討含む）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simDisaster" value="damage_partial">
+                  <span>一部損壊（準半壊含む）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simDisaster" value="none">
+                  <span>被害なし（平時の支援を探す）</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- お仕事・事業 -->
+            <div class="uto-filter-group">
+              <label class="uto-filter-label">お仕事・事業形態</label>
+              <div class="uto-filter-chips">
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simWork" value="employee">
+                  <span>会社員・パート・一般勤労</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simWork" value="business">
+                  <span>個人事業主・自営業・中小企業</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simWork" value="agri">
+                  <span>農林水産業（就農・農家）</span>
+                </label>
+                <label class="uto-chip-label">
+                  <input type="checkbox" name="simWork" value="startup">
+                  <span>新規創業・起業予定</span>
+                </label>
+              </div>
+            </div>
+
           </div>
         </details>
 
-        <!-- 選択中の条件表示バー -->
+        <!-- ③ 選択中条件・絞り込み結果サマリーバー -->
         <div class="uto-sim-active-bar" id="utoSimActiveBar" style="display: none;">
-          <div class="uto-sim-active-header">
-            <div class="uto-sim-active-title">
-              <span>🎯 適用中の条件：</span>
-              <span class="uto-sim-result-count" id="utoSimResultCount">該当 0件</span>
+          <div class="uto-sim-active-top">
+            <div class="uto-sim-result-badge">
+              <span>🎯 絞り込み結果：</span>
+              <strong class="uto-sim-result-count" id="utoSimResultCount">0件</strong>
+              <span style="font-size: 0.85rem; color: #475569; font-weight: normal;">（主要{total_count}制度中）</span>
             </div>
             <div class="uto-sim-active-actions">
-              <button type="button" class="uto-sim-scroll-btn" id="utoSimScrollBtn">該当する制度を見る（↓）</button>
-              <button type="button" class="uto-sim-clear-btn" id="utoSimClearBtn">✕ 条件をすべて解除</button>
+              <button type="button" class="uto-sim-scroll-btn" id="utoSimScrollBtn">
+                <span>👇 該当する制度を見る</span>
+              </button>
+              <button type="button" class="uto-sim-clear-btn" id="utoSimClearBtn">
+                <span>条件をすべて解除 ×</span>
+              </button>
             </div>
           </div>
-          <div class="uto-sim-active-tags" id="utoSimActiveTags"></div>
+          <div class="uto-sim-active-tags-row">
+            <span class="active-bar-label">適用中の条件：</span>
+            <div class="active-tags-container" id="utoSimActiveTags"></div>
+          </div>
         </div>
       </section>
 
-      <!-- 八代市独自の連携・独自メリット解説 -->
-      <section class="uto-sup-merit-box" id="yatsushiro-special" aria-labelledby="yatsushiro-merit-title">
-        <div class="uto-sup-merit-header">
-          <h2 id="yatsushiro-merit-title">知っておきたい！八代市の制度連携・独自メリット</h2>
-          <p>八代市が提供する支援制度には、県内でも突出した子育て支援策や、豊かな森林資源を活かした独自助成などがあります。</p>
-        </div>
-        <div class="uto-sup-merit-grid">
-          <div class="uto-sup-merit-card">
-            <div class="uto-sup-merit-icon">🎒</div>
-            <h3>「0〜5歳児保育料完全無料」＋「高校生医療費無料」</h3>
-            <p>
-              八代市では国の幼児教育無償化に加え、市独自で<strong>0〜2歳児の保育料も完全無償化</strong>。
-              さらに<strong>高校生までの医療費自己負担も全額助成</strong>（窓口負担原則ゼロ）されており、子育て負担の軽さは県内屈指です。
-            </p>
+      <!-- 八代市の3大特徴ハイライト -->
+      <section class="uto-sup-highlights" aria-labelledby="yatsushiro-hl-title">
+        <h2 id="yatsushiro-hl-title">知っておきたい！八代市の制度連携・独自メリット</h2>
+        <div class="uto-sup-hl-grid">
+          <div class="uto-sup-hl-item">
+            <span class="hl-badge">全国屈指の手厚さ</span>
+            <h3>「0〜5歳児保育料完全無償化」＋「高校生医療費完全無償化」</h3>
+            <p>八代市では国の幼児教育無償化に加え、市独自で0〜2歳児の保育料も完全無償化。さらに高校生までの医療費自己負担も全額助成（窓口負担原則ゼロ）されており、子育て負担の軽さは県内屈指です。</p>
           </div>
-          <div class="uto-sup-merit-card">
-            <div class="uto-sup-merit-icon">🌲</div>
-            <h3>地産地消の住まいづくり「八代産材利用促進事業」</h3>
-            <p>
-              新築やリフォームにおいて八代産木材を使用することで<strong>工事費用の一部を助成</strong>。
-              木造住宅耐震改修補助金やリフォームと併用することで、安心・安全で温もりのある住まいをお得に実現できます。
-            </p>
+          <div class="uto-sup-hl-item">
+            <span class="hl-badge">地産地消の住まい</span>
+            <h3>八代産材利用促進事業＋木造耐震改修補助（100万円）</h3>
+            <p>新築やリフォームにおいて八代産木材を使用することで工事費用の一部を助成。耐震改修補助金（最大100万円）と併用することで、安全で温もりのある住まいをお得に実現できます。</p>
           </div>
-          <div class="uto-sup-merit-card">
-            <div class="uto-sup-merit-icon">🆘</div>
+          <div class="uto-sup-hl-item">
+            <span class="hl-badge">最新被災者支援連携</span>
             <h3>被災者応援ガイドブック「第7版」全54制度との連携</h3>
-            <p>
-              令和8年9月21日改定の「第7版」全54制度（住家の緊急修理期限延長、公費解体受付、生活再建支援金など）を網羅。
-              平時の補助金と被災特別支援をひとつの画面でスムーズに見比べることができます。
-            </p>
+            <p>令和8年9月21日改定の「第7版」全54制度（住家の緊急修理期限延長、公費解体受付、生活再建支援金など）を網羅。平時の補助金と被災特別支援をひとつの画面でスムーズに見比べられます。</p>
           </div>
         </div>
       </section>
 
-      <!-- 検索・カテゴリタブ -->
-      <div class="uto-sup-controls">
-        <div class="uto-sup-search-wrap">
-          <input type="search" id="utoSupSearch" placeholder="キーワードで制度を検索（例：耐震、八代産材、医療費、保育料、解体...）" aria-label="制度をキーワード検索">
+      <!-- 検索・絞り込みツールバー -->
+      <section class="uto-sup-toolbar" aria-labelledby="yatsushiro-tool-title">
+        <div class="uto-sup-search-row">
+          <label for="utoSupSearch" id="yatsushiro-tool-title" class="uto-sup-search-label">キーワード検索：</label>
+          <input type="text" id="utoSupSearch" class="uto-sup-search-input" placeholder="例：耐震、八代産材、医療費、保育料、解体、移住、創業..." autocomplete="off">
         </div>
-        <div class="uto-sup-cat-tabs" role="tablist" aria-label="制度のカテゴリ">
-          <button type="button" class="uto-sup-cat-btn active" data-cat="all" role="tab" aria-selected="true">すべて表示 (''')
-    html_parts.append(str(len(SYSTEMS)))
-    html_parts.append('''件)</button>
+        <div class="uto-sup-cat-row" role="group" aria-label="分野別カテゴリフィルター">
+          <button type="button" class="uto-sup-cat-btn active" data-target-cat="all">すべて表示</button>
 ''')
 
     for cat in CATEGORIES:
-        count = sum(1 for s in SYSTEMS if s["cat"] == cat["id"])
-        html_parts.append(f'''          <button type="button" class="uto-sup-cat-btn" data-cat="{cat["id"]}" role="tab" aria-selected="false">{cat["icon"]} {cat["name"]} ({count})</button>\n''')
+        html_parts.append(f'''          <button type="button" class="uto-sup-cat-btn" data-target-cat="{cat["id"]}">{cat["name"]}</button>\n''')
 
-    html_parts.append('''        </div>
+    html_parts.append(f'''        </div>
+      </section>
+
+      <!-- 検索結果件数表示 -->
+      <div class="uto-sup-status">
+        <span id="utoSupCount">表示中：{total_count}件 / 主要{total_count}制度</span>
+        <span class="uto-sup-status-source">確認日：2026年9月21日／情報源：八代市公式HP・応援ガイド第7版等</span>
       </div>
 
-      <!-- 該当件数カウンター -->
-      <div class="uto-sup-count-bar">
-        <span>表示中の制度：<b id="utoSupCount">''')
-    html_parts.append(str(len(SYSTEMS)))
-    html_parts.append('''</b>件</span>
-      </div>
+      <aside class="uto-sup-caution" role="note">
+        <strong>申請前に必ず最新情報をご確認ください。</strong>
+        制度は年度、予算、世帯状況などにより受付終了・金額変更・対象外となる場合があります。このページは八代市の全制度を網羅するものではありません。公式ページと担当窓口で、現在の受付状況・対象要件・必要書類を確認してください。
+      </aside>
 
-      <!-- 該当なしメッセージ -->
-      <div class="uto-sup-empty" id="utoSupEmpty" style="display: none;">
-        <p>選択された条件に一致する制度が見つかりませんでした。<br>条件を緩めるか、別のキーワードでお試しください。</p>
+      <!-- 一致なし表示 -->
+      <div id="utoSupEmpty" class="uto-sup-empty" style="display: none;">
+        <p>該当する制度が見つかりませんでした。条件シミュレーターの「条件をクリア」ボタンを押すか、別のキーワードで検索してください。</p>
       </div>
-
-      <!-- 制度一覧（1列カードレイアウト） -->
-      <div class="uto-sup-sections" id="utoSupSections">
 ''')
 
     for cat in CATEGORIES:
@@ -1040,36 +1156,36 @@ def generate_html():
             continue
 
         html_parts.append(f'''
-      <!-- カテゴリ：{cat["name"]} -->
-      <section class="uto-sup-section" id="cat-{cat["id"]}" data-cat="{cat["id"]}" aria-labelledby="heading-{cat["id"]}">
-        <div class="uto-sup-section-head">
-          <h2 id="heading-{cat["id"]}">{cat["icon"]} {cat["name"]}</h2>
-          <p>{cat["desc"]}</p>
-        </div>
-        <div class="uto-sup-cards-flow">
+      <!-- セクション: {cat["name"]} -->
+      <section class="uto-sup-section" id="sec-{cat["id"]}" data-cat="{cat["id"]}">
+        <header class="uto-sup-sec-header">
+          <h2>{cat["name"]}</h2>
+          <span class="sec-count">（{len(cat_items)}件）</span>
+        </header>
+        <div class="uto-sup-grid">
 ''')
 
         for item in cat_items:
             icon_svg = ICONS.get(item["icon"], ICONS["reform"])
-            tag_spans = " ".join([f'<span class="uto-tag">{t}</span>' for t in item.get("tags", [])])
+            tag_spans = "".join([f'<span class="card-hash-tag">{t}</span>' for t in item.get("tags", [])])
             extra_html = f'<div class="uto-card-extra">{item["extra"]}</div>' if item.get("extra") else ''
-            phone_link = f'<a href="tel:{item["phone"].replace("-", "")}">{item["phone"]}</a>' if item.get("phone") else ''
+            phone_raw = item.get("phone", "").replace("-", "")
+            phone_link = f'<a class="uto-card-phone" href="tel:{phone_raw}">{item["phone"]}</a>' if item.get("phone") else ''
             url_target = ' target="_blank" rel="noopener"' if item["url"].startswith("http") else ''
 
-            html_parts.append(f'''          <article class="uto-card" 
-            data-cat="{item["cat"]}"
-            data-life="{",".join(item["life"])}"
-            data-family="{",".join(item["family"])}"
-            data-housing="{",".join(item["housing"])}"
-            data-income="{",".join(item["income"])}"
-            data-disaster="{",".join(item["disaster"])}"
-            data-work="{",".join(item["work"])}">
-            <div class="uto-card-header">
-              <div class="uto-card-icon-box">
+            html_parts.append(f'''          <article class="uto-card"
+                   data-life="{",".join(item["life"])}"
+                   data-family="{",".join(item["family"])}"
+                   data-housing="{",".join(item["housing"])}"
+                   data-income="{",".join(item["income"])}"
+                   data-disaster="{",".join(item["disaster"])}"
+                   data-work="{",".join(item["work"])}">
+            <div class="uto-card-header-flex">
+              <div class="uto-card-icon-box" aria-hidden="true">
                 {icon_svg}
               </div>
-              <div class="uto-card-title-group">
-                <div class="uto-card-badges">
+              <div class="uto-card-title-meta">
+                <div class="uto-card-tag-row">
                   <span class="uto-badge-cat">{item["catName"]}</span>
                   <span class="uto-badge-feature">{item["badge"]}</span>
                   <span class="uto-badge-match" style="display: none;">🎯 該当</span>
@@ -1077,15 +1193,19 @@ def generate_html():
                 <h3>{item["title"]}</h3>
               </div>
             </div>
-            <div class="uto-card-amount">{item["amount"]}</div>
+            <div class="uto-card-amount-box">
+              <span class="uto-card-amount-label">支援金額・内容</span>
+              <div class="uto-card-amount">{item["amount"]}</div>
+            </div>
             <p class="uto-card-desc">{item["desc"]}</p>
             {extra_html}
             <div class="uto-card-tags">
               {tag_spans}
             </div>
-            <div class="uto-card-footer">
-              <div class="uto-card-dept">
-                <span>担当：{item["dept"]}</span>
+            <div class="uto-card-footer-flex">
+              <div class="uto-card-dept-box">
+                <span class="uto-card-dept-label">お問い合わせ・担当</span>
+                <span class="uto-card-dept-name">{item["dept"]}</span>
                 {phone_link}
               </div>
               <a class="uto-card-link" href="{item["url"]}"{url_target}>{item["urlLabel"]}</a>
@@ -1136,14 +1256,14 @@ def generate_html():
   </main>
   <footer class="site-footer"></footer>
   <script src="org-site.js?v=20260907-2"></script>
-  <script src="yatsushiro-living-support.js?v=20260921-1"></script>
+  <script src="yatsushiro-living-support.js?v=20260921-2"></script>
 </body>
 </html>
 ''')
 
     content = "".join(html_parts)
     Path("yatsushiro-living-support.html").write_text(content, encoding="utf-8")
-    print(f"Generated yatsushiro-living-support.html with {len(SYSTEMS)} systems and SVG illustrations.")
+    print(f"Generated yatsushiro-living-support.html with {len(SYSTEMS)} systems and full 1-column layout.")
 
 if __name__ == "__main__":
     generate_html()

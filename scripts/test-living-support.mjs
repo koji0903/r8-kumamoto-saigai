@@ -13,14 +13,14 @@ console.log('宇城市・氷川町・八代市 暮らしの支援・補助金総
 
   const expectedCats = ['housing', 'childcare', 'health', 'senior', 'migration', 'business', 'disaster'];
   for (const cat of expectedCats) {
-    assert.ok(html.includes(`id="cat-${cat}"`), `宇城市：カテゴリ ${cat} のセクションがありません`);
+    assert.ok(html.includes(`id="sec-${cat}"`), `宇城市：カテゴリ ${cat} のセクションがありません`);
     assert.ok(html.includes(`data-cat="${cat}"`), `宇城市：カテゴリ ${cat} のdata-catがありません`);
   }
 
   const cardMatches = html.match(/class="uto-card"/g) || [];
   assert.equal(cardMatches.length, expectedCount, `宇城市：主要${expectedCount}制度のカードが存在しません（現在: ${cardMatches.length}件）`);
 
-  assert.ok(html.includes('id="simulator"'), '宇城市：シミュレーターコンポーネントがありません');
+  assert.ok(html.includes('id="utoSimulator"'), '宇城市：シミュレーターコンポーネントがありません');
   assert.ok(html.includes('id="utoSimResetBtn"'), '宇城市：リセットボタンがありません');
   assert.ok(html.includes('data-preset="childcare"'), '宇城市：子育てプリセットがありません');
   assert.ok(html.includes('data-preset="senior"'), '宇城市：シニアプリセットがありません');
@@ -36,7 +36,7 @@ console.log('宇城市・氷川町・八代市 暮らしの支援・補助金総
   assert.ok(html.includes('name="simDisaster"'), '宇城市：被災フィルタがありません');
   assert.ok(html.includes('name="simWork"'), '宇城市：事業フィルタがありません');
 
-  assert.ok(html.includes('class="uto-tag"'), 'ハッシュタグが表示されていません');
+  assert.ok(html.includes('class="card-hash-tag"'), '宇城市：ハッシュタグが表示されていません');
   assert.ok(html.includes('class="uto-badge-match"'), '宇城市：マッチバッジがありません');
   const iconMatches = html.match(/class="uto-card-icon"/g) || [];
   assert.equal(iconMatches.length, expectedCount, `宇城市：主要${expectedCount}制度にSVGアイコンがありません（現在: ${iconMatches.length}個）`);
@@ -50,7 +50,7 @@ console.log('宇城市・氷川町・八代市 暮らしの支援・補助金総
   assert.ok(html.includes('被災者生活再建支援金'), '宇城市：被災者生活再建支援金がありません');
 
   assert.ok(html.includes('class="uto-sup-hero-inner"'), '宇城市：ヒーロー内の幅制限がありません');
-  assert.ok(html.includes('class="uto-sup-container"'), '本文エリアの幅制限がありません');
+  assert.ok(html.includes('class="uto-sup-shell"'), '宇城市：本文エリアの幅制限（uto-sup-shell）がありません');
   assert.ok(html.includes('src="uki-living-support.js'), '宇城市：JS読み込みがありません');
   assert.ok(html.includes('href="uki-living-support.css'), '宇城市：CSS読み込みがありません');
   assert.ok(fs.existsSync('uki-living-support.css'), '宇城市：CSSファイルがありません');
@@ -68,14 +68,14 @@ console.log('宇城市・氷川町・八代市 暮らしの支援・補助金総
 
   const expectedCats = ['housing', 'childcare', 'health', 'senior', 'migration', 'business', 'disaster'];
   for (const cat of expectedCats) {
-    assert.ok(html.includes(`id="cat-${cat}"`), `氷川町：カテゴリ ${cat} のセクションがありません`);
+    assert.ok(html.includes(`id="sec-${cat}"`), `氷川町：カテゴリ ${cat} のセクションがありません`);
     assert.ok(html.includes(`data-cat="${cat}"`), `氷川町：カテゴリ ${cat} のdata-catがありません`);
   }
 
   const cardMatches = html.match(/class="uto-card"/g) || [];
   assert.equal(cardMatches.length, expectedCount, `氷川町：主要${expectedCount}制度のカードが存在しません（現在: ${cardMatches.length}件）`);
 
-  assert.ok(html.includes('id="simulator"'), '氷川町：シミュレーターコンポーネントがありません');
+  assert.ok(html.includes('id="utoSimulator"'), '氷川町：シミュレーターコンポーネントがありません');
   assert.ok(html.includes('id="utoSimResetBtn"'), '氷川町：リセットボタンがありません');
   assert.ok(html.includes('data-preset="childcare"'), '氷川町：子育てプリセットがありません');
   assert.ok(html.includes('data-preset="senior"'), '氷川町：シニアプリセットがありません');
@@ -83,13 +83,13 @@ console.log('宇城市・氷川町・八代市 暮らしの支援・補助金総
   assert.ok(html.includes('data-preset="disaster"'), '氷川町：被災プリセットがありません');
   assert.ok(html.includes('data-preset="business"'), '氷川町：事業プリセットがありません');
 
-  assert.ok(html.includes('class="uto-tag"'), '氷川町：ハッシュタグが表示されていません');
+  assert.ok(html.includes('class="card-hash-tag"'), '氷川町：ハッシュタグが表示されていません');
   assert.ok(html.includes('class="uto-badge-match"'), '氷川町：マッチバッジがありません');
   const iconMatches = html.match(/class="uto-card-icon"/g) || [];
   assert.equal(iconMatches.length, expectedCount, `氷川町：主要${expectedCount}制度にSVGアイコンがありません（現在: ${iconMatches.length}個）`);
 
   // 特有・主要制度
-  assert.ok(html.includes('氷川町畳表張替助成事業'), '氷川町：畳表張替助成事業がありません');
+  assert.ok(html.includes('氷川町町内産畳表張替助成事業'), '氷川町：畳表張替助成事業がありません');
   assert.ok(html.includes('すこやか赤ちゃん出産祝金（町独自）'), '氷川町：出産祝金がありません');
   assert.ok(html.includes('氷川町こども医療費助成事業'), '氷川町：こども医療費助成がありません');
   assert.ok(html.includes('氷川町移住体験住宅（ひかわ暮らし体験）'), '氷川町：移住体験住宅がありません');
@@ -97,7 +97,7 @@ console.log('宇城市・氷川町・八代市 暮らしの支援・補助金総
   assert.ok(html.includes('住宅の応急修理制度（災害救助法）'), '氷川町：応急修理がありません');
 
   assert.ok(html.includes('class="uto-sup-hero-inner"'), '氷川町：ヒーロー内の幅制限がありません');
-  assert.ok(html.includes('class="uto-sup-container"'), '氷川町：本文エリアの幅制限がありません');
+  assert.ok(html.includes('class="uto-sup-shell"'), '氷川町：本文エリアの幅制限（uto-sup-shell）がありません');
   assert.ok(html.includes('src="hikawa-living-support.js'), '氷川町：JS読み込みがありません');
   assert.ok(html.includes('href="hikawa-living-support.css'), '氷川町：CSS読み込みがありません');
   assert.ok(fs.existsSync('hikawa-living-support.css'), '氷川町：CSSファイルがありません');
@@ -115,14 +115,14 @@ console.log('宇城市・氷川町・八代市 暮らしの支援・補助金総
 
   const expectedCats = ['housing', 'childcare', 'health', 'senior', 'migration', 'business', 'disaster'];
   for (const cat of expectedCats) {
-    assert.ok(html.includes(`id="cat-${cat}"`), `八代市：カテゴリ ${cat} のセクションがありません`);
+    assert.ok(html.includes(`id="sec-${cat}"`), `八代市：カテゴリ ${cat} のセクションがありません`);
     assert.ok(html.includes(`data-cat="${cat}"`), `八代市：カテゴリ ${cat} のdata-catがありません`);
   }
 
   const cardMatches = html.match(/class="uto-card"/g) || [];
   assert.equal(cardMatches.length, expectedCount, `八代市：主要${expectedCount}制度のカードが存在しません（現在: ${cardMatches.length}件）`);
 
-  assert.ok(html.includes('id="simulator"'), '八代市：シミュレーターコンポーネントがありません');
+  assert.ok(html.includes('id="utoSimulator"'), '八代市：シミュレーターコンポーネントがありません');
   assert.ok(html.includes('id="utoSimResetBtn"'), '八代市：リセットボタンがありません');
   assert.ok(html.includes('data-preset="childcare"'), '八代市：子育てプリセットがありません');
   assert.ok(html.includes('data-preset="senior"'), '八代市：シニアプリセットがありません');
@@ -130,7 +130,7 @@ console.log('宇城市・氷川町・八代市 暮らしの支援・補助金総
   assert.ok(html.includes('data-preset="disaster"'), '八代市：被災プリセットがありません');
   assert.ok(html.includes('data-preset="business"'), '八代市：事業プリセットがありません');
 
-  assert.ok(html.includes('class="uto-tag"'), '八代市：ハッシュタグが表示されていません');
+  assert.ok(html.includes('class="card-hash-tag"'), '八代市：ハッシュタグが表示されていません');
   assert.ok(html.includes('class="uto-badge-match"'), '八代市：マッチバッジがありません');
   const iconMatches = html.match(/class="uto-card-icon"/g) || [];
   assert.equal(iconMatches.length, expectedCount, `八代市：主要${expectedCount}制度にSVGアイコンがありません（現在: ${iconMatches.length}個）`);
@@ -145,7 +145,7 @@ console.log('宇城市・氷川町・八代市 暮らしの支援・補助金総
   assert.ok(html.includes('セーフティネット保証4号（中小企業支援）'), '八代市：セーフティネット4号がありません');
 
   assert.ok(html.includes('class="uto-sup-hero-inner"'), '八代市：ヒーロー内の幅制限がありません');
-  assert.ok(html.includes('class="uto-sup-container"'), '八代市：本文エリアの幅制限がありません');
+  assert.ok(html.includes('class="uto-sup-shell"'), '八代市：本文エリアの幅制限（uto-sup-shell）がありません');
   assert.ok(html.includes('src="yatsushiro-living-support.js'), '八代市：JS読み込みがありません');
   assert.ok(html.includes('href="yatsushiro-living-support.css'), '八代市：CSS読み込みがありません');
   assert.ok(fs.existsSync('yatsushiro-living-support.css'), '八代市：CSSファイルがありません');
