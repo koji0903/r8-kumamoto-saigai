@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-22T17:18:54.892Z",
-  "officialCheckedAt": "9/23 02:18",
+  "retrievedAt": "2026-09-22T21:43:33.756Z",
+  "officialCheckedAt": "9/23 06:43",
   "siteTopics": [
     {
       "date": "2026-09-22",
@@ -76,6 +76,14 @@ window.HOME_TOPICS = {
       "municipality": "八代市"
     },
     {
+      "title": "避難所について（9/22 17:00更新）",
+      "url": "https://www.city.uto.lg.jp/article/view/1014/16888.html",
+      "date": "2026-09-22",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市"
+    },
+    {
       "title": "令和8年熊本地震関連情報",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
       "date": "2026-09-22",
@@ -90,14 +98,6 @@ window.HOME_TOPICS = {
       "time": "08:00",
       "category": "その他",
       "municipality": "宇城市"
-    },
-    {
-      "title": "避難所について（9/19 17:00更新）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
-      "date": "2026-09-19",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市"
     },
     {
       "title": "＜令和8年熊本地震＞ 災害救助法 「住家の応急修理」制度の御案内",

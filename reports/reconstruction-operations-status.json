@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-22T17:19:12.405Z",
+  "generatedAt": "2026-09-22T21:43:53.291Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-22T17:02:18.059Z",
+    "generatedAt": "2026-09-22T21:25:35.757Z",
     "inputCount": 835,
     "classifiedPageCount": 674,
     "displayCandidateCount": 572,
     "deltaFromPrevious": {
       "inputCount": 0,
-      "classifiedPageCount": 1,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 60,
+      "ageHours": 64,
       "limitHours": 336
     }
   },
@@ -307,7 +307,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 13
     },
     {
       "code": "HTTP_404_CANDIDATE",
