@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-22T08:58:31+09:00",
+  "municipalities": [
+    {
+      "id": "uto",
+      "name": "宇土市",
+      "page": "uto-support.html",
+      "cardCount": 71,
+      "candidateCount": 71,
+      "listedCount": 39,
+      "siblingCount": 0,
+      "knownCount": 32,
+      "indexErrors": [],
+      "unlisted": [],
+      "staleCandidates": []
+    },
+    {
+      "id": "uki",
+      "name": "宇城市",
+      "page": "uki-living-support.html",
+      "cardCount": 52,
+      "candidateCount": 39,
+      "listedCount": 28,
+      "siblingCount": 0,
+      "knownCount": 10,
+      "indexErrors": [],
+      "unlisted": [],
+      "staleCandidates": []
+    },
+    {
+      "id": "hikawa",
+      "name": "氷川町",
+      "page": "hikawa-living-support.html",
+      "cardCount": 47,
+      "candidateCount": 45,
+      "listedCount": 34,
+      "siblingCount": 0,
+      "knownCount": 11,
+      "indexErrors": [],
+      "unlisted": [],
+      "staleCandidates": []
+    },
+    {
+      "id": "yatsushiro",
+      "name": "八代市",
+      "page": "yatsushiro-living-support.html",
+      "cardCount": 46,
+      "candidateCount": 19,
+      "listedCount": 13,
+      "siblingCount": 1,
+      "knownCount": 5,
+      "indexErrors": [],
+      "unlisted": [
+        {
+          "title": "令和８年熊本地震による八代市災害援護資金の貸付について",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00324914/index.html",
+          "coverage": "sibling",
+          "reason": "yatsushiro-loan.html に掲載"
+        }
+      ],
+      "staleCandidates": []
+    }
+  ],
+  "deadLinks": [],
+  "summary": {
+    "cardCount": 216,
+    "unlistedCount": 1,
+    "deadLinkCount": 0,
+    "indexErrorCount": 0,
+    "staleCandidateCount": 0
+  }
+}

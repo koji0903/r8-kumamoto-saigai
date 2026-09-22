@@ -1,0 +1,118 @@
+name: 暮らしの支援ガイドの掲載監視
+
+on:
+  schedule:
+    # 毎月2日 5:05 JST（UTC 20:05）。自治体の年度・月初の制度更新を拾う。
+    - cron: "5 20 1 * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "監視だけを実行し、レポートのcommit/pushとIssue作成を行わない"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: monitor-living-support-coverage
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    name: 4市町の掲載漏れとリンク切れを監視
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v5
+
+      - name: Node.jsを準備
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          package-manager-cache: false
+
+      - name: 掲載カバー率を監視
+        id: monitor
+        shell: bash
+        run: |
+          set +e
+          node scripts/monitor-living-support-coverage.mjs --check > monitor-output.txt 2>&1
+          status=$?
+          set -e
+          cat monitor-output.txt
+          if [ "$status" -gt 1 ]; then
+            echo "::error::監視スクリプトが異常終了しました（終了コード ${status}）"
+            exit "$status"
+          fi
+          echo "findings=${status}" >> "$GITHUB_OUTPUT"
+          {
+            echo "## 暮らしの支援ガイドの掲載監視"
+            echo ""
+            echo '```'
+            cat monitor-output.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$status" -eq 1 ]; then
+            echo "::warning::新しい未掲載制度またはリンク切れを検出しました。Issueを確認してください。"
+          fi
+
+      - name: 検出結果をIssueに登録
+        if: steps.monitor.outputs.findings == '1' && inputs.dry_run != true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          title="暮らしの支援ガイド：新しい未掲載制度・リンク切れを検出（$(TZ=Asia/Tokyo date '+%Y-%m-%d')）"
+          {
+            echo "\`scripts/monitor-living-support-coverage.mjs\` が4市町の公式サイトと掲載内容を突き合わせ、前回レポートに無かった項目を検出しました。"
+            echo ""
+            echo "対応の目安"
+            echo "- 未掲載制度：金額・対象・期限・担当窓口を公式ページから転記してカードを追加する"
+            echo "- リンク切れ：公式の後継ページへ差し替える（見つからない場合はカードの扱いを見直す）"
+            echo "- 制度ではない記事：\`sources/living-support-coverage-targets.json\` の \`known\` に理由付きで登録する"
+            echo ""
+            echo "<details><summary>監視ログ</summary>"
+            echo ""
+            echo '```'
+            cat monitor-output.txt
+            echo '```'
+            echo ""
+            echo "</details>"
+          } > issue-body.md
+          gh issue create --title "$title" --body-file issue-body.md --label "" || \
+            gh issue create --title "$title" --body-file issue-body.md
+
+      - name: レポートを反映
+        if: inputs.dry_run != true
+        shell: bash
+        run: |
+          rm -f monitor-output.txt issue-body.md
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/living-support-coverage.json
+          if git diff --cached --quiet; then
+            echo "レポートの差分はありません。"
+            exit 0
+          fi
+          checked_at="$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST')"
+          git commit -m "暮らしの支援ガイドの掲載監視レポートを更新（${checked_at}）"
+          # 定期更新Workflowと同時に走っても壊さないよう、rebaseしてから通常pushで反映する。
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main; then
+              if git push origin HEAD:main; then
+                echo "反映しました（${attempt}回目）"
+                exit 0
+              fi
+            else
+              git rebase --abort || true
+              echo "::warning::rebaseに失敗しました。force pushは行いません。"
+              exit 1
+            fi
+          done
+          echo "::error::pushが3回失敗しました。"
+          exit 1
