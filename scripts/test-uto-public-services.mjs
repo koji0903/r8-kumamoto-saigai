@@ -23,6 +23,10 @@ assert.ok(html.includes('id="facilityCardsContainer"'), "施設カードコン�
 assert.ok(html.includes('id="serviceSearchInput"'), "検索入力欄がありません");
 assert.ok(html.includes('id="catFilterGroup"'), "カテゴリフィルターがありません");
 assert.ok(html.includes('id="targetFilterGroup"'), "対象者フィルターがありません");
+assert.ok(html.includes('id="btnResetMapView"'), "全体表示リセットボタンがありません");
+assert.ok(html.includes('id="btnLocateUser"'), "現在地ボタンがありません");
+assert.ok(html.includes('id="btnToggleFullscreen"'), "全画面切り替えボタンがありません");
+assert.ok(html.includes('id="mapGestureHint"'), "ジェスチャーヒント要素がありません");
 assert.ok(html.includes("<noscript>"), "noscriptフォールバックがありません");
 
 // 2. CSSファイルの検証

@@ -136,36 +136,148 @@
 }
 
 .uto-map-header {
-  padding: 18px 24px;
+  padding: 16px 20px;
   background: #ffffff;
   border-bottom: 1px solid #e2e8f0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 14px;
+}
+
+.uto-map-header-main {
+  flex: 1;
+  min-width: 260px;
 }
 
 .uto-map-header h2 {
   font-size: 1.25rem;
   font-weight: 700;
   color: #0f172a;
-  margin: 0;
+  margin: 0 0 4px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .uto-map-header p {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: #64748b;
   margin: 0;
+  line-height: 1.45;
+}
+
+/* 地図ツールバー */
+.uto-map-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.map-ctrl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 12px;
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.map-ctrl-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+}
+
+.map-ctrl-btn:active {
+  transform: translateY(0);
+}
+
+/* 地図ラッパー & ジェスチャーヒント */
+.uto-map-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
 #publicServicesMap {
   width: 100%;
-  height: 480px;
+  height: 500px;
   background: #e2e8f0;
+  cursor: grab;
+}
+
+#publicServicesMap:active {
+  cursor: grabbing;
+}
+
+.map-gesture-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+.map-gesture-hint.is-visible {
+  opacity: 1;
+}
+
+.map-gesture-hint span {
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* フルスクリーン表示 */
+.uto-map-section.is-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.uto-map-section.is-fullscreen .uto-map-header {
+  border-radius: 0;
+}
+
+.uto-map-section.is-fullscreen .uto-map-wrapper {
+  flex: 1;
+  height: calc(100vh - 75px);
+}
+
+.uto-map-section.is-fullscreen #publicServicesMap {
+  height: 100%;
 }
 
 /* 地図ピン */
@@ -182,15 +294,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
   border: 2px solid #ffffff;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
 }
 
 .uto-map-pin:hover {
-  transform: rotate(-45deg) scale(1.15);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+  transform: rotate(-45deg) scale(1.2);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+}
+
+.uto-map-pin.is-active {
+  transform: rotate(-45deg) scale(1.25);
+  box-shadow: 0 0 0 4px #0284c7, 0 8px 18px rgba(0, 0, 0, 0.45);
 }
 
 .uto-map-pin span {
@@ -199,14 +317,80 @@
   line-height: 1;
 }
 
-/* ポップアップ */
+/* 現在地パルスマーカー */
+.uto-user-location-marker {
+  width: 20px;
+  height: 20px;
+  background: #0284c7;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(2, 132, 199, 0.8);
+  position: relative;
+}
+
+.uto-user-location-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid #0284c7;
+  animation: uto-pulse 1.8s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+@keyframes uto-pulse {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* Leaflet ポップアップ外枠・影・閉じるボタンの洗練 */
+.leaflet-popup-content-wrapper {
+  border-radius: 14px !important;
+  box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.22), 0 8px 16px -4px rgba(15, 23, 42, 0.12) !important;
+  padding: 4px !important;
+  border: 1px solid #e2e8f0;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px 10px !important;
+  line-height: 1.5;
+}
+
+.leaflet-popup-tip {
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.12) !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  top: 10px !important;
+  right: 10px !important;
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 50% !important;
+  background: #f1f5f9 !important;
+  color: #64748b !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  border: 1px solid #e2e8f0 !important;
+  transition: all 0.15s ease;
+  padding: 0 !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover {
+  background: #e2e8f0 !important;
+  color: #0f172a !important;
+  transform: scale(1.1);
+}
+
+/* ポップアップ内部 */
 .uto-map-popup {
   font-family: inherit;
   font-size: 0.875rem;
   line-height: 1.5;
   color: #1e293b;
-  min-width: 240px;
-  max-width: 300px;
+  min-width: 250px;
+  max-width: 320px;
 }
 
 .popup-cat-badge {
@@ -219,10 +403,11 @@
 }
 
 .popup-title {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: #0f172a;
   margin: 0 0 6px;
+  line-height: 1.35;
 }
 
 .popup-addr, .popup-hours {
@@ -233,9 +418,9 @@
 
 .popup-services {
   margin: 8px 0;
-  padding: 8px;
+  padding: 8px 10px;
   background: #f8fafc;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #e2e8f0;
 }
 

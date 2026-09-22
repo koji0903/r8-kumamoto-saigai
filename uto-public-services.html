@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="design-system.css">
   <link rel="stylesheet" href="org-site.css?v=20260918-1">
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-  <link rel="stylesheet" href="uto-public-services.css?v=20260923-1">
+  <link rel="stylesheet" href="uto-public-services.css?v=20260923-2">
   <link rel="canonical" href="https://www.yokatainet.jp/uto-public-services.html">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
@@ -101,14 +101,30 @@
       </section>
 
       <!-- インタラクティブ・マップ -->
-      <section class="uto-map-section" aria-labelledby="mapSectionTitle">
+      <section class="uto-map-section" id="utoMapSection" aria-labelledby="mapSectionTitle">
         <div class="uto-map-header">
-          <div>
+          <div class="uto-map-header-main">
             <h2 id="mapSectionTitle">🗺️ 宇土市 公的施設マップ</h2>
-            <p>ピンをクリックすると施設情報と受けられるサービスが表示されます。地図は拡大・縮小・移動が可能です。</p>
+            <p>ピンをクリックすると施設情報と受けられるサービスが表示されます。マウスドラッグで移動、＋/−ボタンまたは【Ctrl/⌘ + スクロール】で拡大縮小できます。</p>
+          </div>
+          <div class="uto-map-controls" role="toolbar" aria-label="地図操作メニュー">
+            <button type="button" class="map-ctrl-btn" id="btnResetMapView" title="宇土市全域の初期表示に戻す">
+              <span>🎯 全体表示</span>
+            </button>
+            <button type="button" class="map-ctrl-btn" id="btnLocateUser" title="現在地を表示する（位置情報の許可が必要）">
+              <span>📍 現在地</span>
+            </button>
+            <button type="button" class="map-ctrl-btn" id="btnToggleFullscreen" title="地図を全画面/通常サイズで切り替える">
+              <span id="fullscreenBtnText">⛶ 全画面拡大</span>
+            </button>
           </div>
         </div>
-        <div id="publicServicesMap" role="region" aria-label="宇土市公的施設マップ"></div>
+        <div class="uto-map-wrapper">
+          <div id="publicServicesMap" role="region" aria-label="宇土市公的施設マップ"></div>
+          <div id="mapGestureHint" class="map-gesture-hint" aria-hidden="true">
+            <span>⌘ または Ctrl キーを押しながらスクロールで地図をズーム</span>
+          </div>
+        </div>
         <noscript>
           <div style="padding: 20px; background: #fff3cd; color: #856404; text-align: center;">
             JavaScriptが無効になっているため、地図は表示されません。下記の施設カード一覧から各施設の詳細をご確認いただけます。
@@ -198,6 +214,6 @@
 
   <script src="org-site.js?v=20260907-2"></script>
   <script src="vendor/leaflet/leaflet.js"></script>
-  <script src="uto-public-services.js?v=20260923-1"></script>
+  <script src="uto-public-services.js?v=20260923-2"></script>
 </body>
 </html>

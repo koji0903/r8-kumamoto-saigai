@@ -789,12 +789,28 @@
   const catFilterContainer = document.getElementById("catFilterGroup");
   const targetFilterContainer = document.getElementById("targetFilterGroup");
   const resetBtn = document.getElementById("resetFilterBtn");
+  const gestureHint = document.getElementById("mapGestureHint");
+  const btnResetMap = document.getElementById("btnResetMapView");
+  const btnLocate = document.getElementById("btnLocateUser");
+  const btnFullscreen = document.getElementById("btnToggleFullscreen");
 
   let activeCat = "all";
   let activeTarget = "all";
   let searchQuery = "";
   let map = null;
   let markers = [];
+  let userLocationMarker = null;
+  let hintTimer = null;
+
+  // ジェスチャーヒント表示（Google Maps風スクロール誘導）
+  function showGestureHint() {
+    if (!gestureHint) return;
+    gestureHint.classList.add("is-visible");
+    clearTimeout(hintTimer);
+    hintTimer = setTimeout(() => {
+      gestureHint.classList.remove("is-visible");
+    }, 1300);
+  }
 
   // Leaflet初期化
   function initMap() {
@@ -802,8 +818,15 @@
 
     // 宇土市全体を見渡す中心位置 (市役所と網津・網田の中間付近)
     map = L.map("publicServicesMap", {
-      scrollWheelZoom: false,
-      zoomControl: true
+      scrollWheelZoom: false, // ページ閲覧中の意図しないズーム暴発を防止
+      zoomControl: true,
+      inertia: true,
+      inertiaDeceleration: 3000,
+      inertiaMaxSpeed: 1500,
+      easeLinearity: 0.25,
+      zoomAnimation: true,
+      fadeAnimation: true,
+      markerZoomAnimation: true
     }).setView([32.684, 130.630], 12);
 
     L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png", {
@@ -811,6 +834,28 @@
       maxZoom: 18,
       minZoom: 10
     }).addTo(map);
+
+    // マウス操作性・スクロールジェスチャー制御
+    mapElement.addEventListener("wheel", (e) => {
+      if (e.ctrlKey || e.metaKey) {
+        // Ctrl または ⌘ キー押下時はスムーズにホイールズームを許可
+        map.scrollWheelZoom.enable();
+      } else {
+        // キーなしの時は地図ズームを無効化し、ヒントを表示して通常のページスクロールを通す
+        map.scrollWheelZoom.disable();
+        showGestureHint();
+      }
+    }, { passive: true });
+
+    // 地図をクリックした時は直接ホイールズームを有効化
+    map.on("click", () => {
+      map.scrollWheelZoom.enable();
+    });
+
+    // マウスが地図エリアから離れたら安全のためホイールズームを無効化
+    mapElement.addEventListener("mouseleave", () => {
+      map.scrollWheelZoom.disable();
+    });
 
     updateMarkers();
   }
@@ -832,12 +877,12 @@
       // カスタムピン作成
       const customIcon = L.divIcon({
         className: "uto-map-pin-wrap",
-        html: `<div class="uto-map-pin" style="background:${catInfo.color}; border-color:#fff;" title="${f.name}">
+        html: `<div class="uto-map-pin" id="pin-${f.id}" style="background:${catInfo.color}; border-color:#fff;" title="${f.name}">
           <span>${catInfo.icon}</span>
         </div>`,
         iconSize: [36, 36],
         iconAnchor: [18, 36],
-        popupAnchor: [0, -36]
+        popupAnchor: [0, -38]
       });
 
       const popupHtml = `
@@ -860,11 +905,28 @@
       `;
 
       const marker = L.marker([f.lat, f.lng], { icon: customIcon }).addTo(map);
-      marker.bindPopup(popupHtml);
+
+      // ポップアップ設定：位置ズレを防ぐため上下左右にゆとりを持ったautoPanPaddingを指定
+      marker.bindPopup(popupHtml, {
+        maxWidth: 320,
+        minWidth: 260,
+        autoPan: true,
+        autoPanPaddingTopLeft: L.point(40, 95),
+        autoPanPaddingBottomRight: L.point(40, 40),
+        closeButton: true
+      });
+
+      // マウスホバーで施設名ツールチップ表示
+      marker.bindTooltip(f.name, {
+        direction: "top",
+        offset: [0, -38],
+        opacity: 0.95
+      });
+
       marker.facilityId = f.id;
 
       marker.on("click", () => {
-        // カードをハイライトしてスクロール
+        // ピンをクリックした時はカードをハイライト（地図位置は崩さない）
         highlightCard(f.id, false);
       });
 
@@ -873,9 +935,76 @@
     });
 
     if (bounds.length > 0 && map) {
-      map.fitBounds(bounds, { padding: [30, 30], maxZoom: 15 });
+      map.fitBounds(bounds, { padding: [40, 40], maxZoom: 15 });
     }
   }
+
+  // 全体表示リセット
+  window.resetMapView = () => {
+    if (!map) return;
+    const visibleItems = getFilteredFacilities();
+    if (visibleItems.length > 0) {
+      const bounds = visibleItems.map(f => [f.lat, f.lng]);
+      map.fitBounds(bounds, { padding: [40, 40], maxZoom: 15 });
+    } else {
+      map.setView([32.684, 130.630], 12);
+    }
+  };
+
+  // 現在地取得と表示
+  window.locateUser = () => {
+    if (!navigator.geolocation) {
+      alert("お使いの端末またはブラウザは位置情報に対応していません。");
+      return;
+    }
+    const btn = document.getElementById("btnLocateUser");
+    if (btn) btn.innerHTML = "<span>⏳ 測位中...</span>";
+
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        if (btn) btn.innerHTML = "<span>📍 現在地</span>";
+        const lat = pos.coords.latitude;
+        const lng = pos.coords.longitude;
+
+        if (userLocationMarker && map) {
+          map.removeLayer(userLocationMarker);
+        }
+
+        const userIcon = L.divIcon({
+          className: "uto-user-location-wrap",
+          html: `<div class="uto-user-location-marker"><div class="uto-user-location-pulse"></div></div>`,
+          iconSize: [20, 20],
+          iconAnchor: [10, 10]
+        });
+
+        userLocationMarker = L.marker([lat, lng], { icon: userIcon, zIndexOffset: 2000 }).addTo(map);
+        userLocationMarker.bindPopup("<b>📍 あなたの現在地</b>").openPopup();
+
+        map.flyTo([lat, lng], 15, { duration: 1 });
+      },
+      () => {
+        if (btn) btn.innerHTML = "<span>📍 現在地</span>";
+        alert("現在地を取得できませんでした。ブラウザの位置情報の利用を許可してください。");
+      },
+      { enableHighAccuracy: true, timeout: 8000 }
+    );
+  };
+
+  // 全画面モード切り替え
+  window.toggleMapFullscreen = () => {
+    const mapSection = document.getElementById("utoMapSection");
+    const btnText = document.getElementById("fullscreenBtnText");
+    if (!mapSection) return;
+
+    const isFs = mapSection.classList.toggle("is-fullscreen");
+    if (btnText) {
+      btnText.textContent = isFs ? "✕ 全画面を閉じる" : "⛶ 全画面拡大";
+    }
+
+    setTimeout(() => {
+      if (map) map.invalidateSize();
+    }, 200);
+  };
 
   // フィルタリング処理
   function getFilteredFacilities() {
@@ -1027,18 +1156,39 @@
     }
   }
 
-  // 地図ズーム＆ポップアップ表示
+  // 地図ズーム＆ポップアップ表示（位置ズレ防止オフセット計算付き）
   window.zoomToFacility = (id) => {
     const f = FACILITIES.find(item => item.id === id);
     if (!f || !map) return;
 
-    map.flyTo([f.lat, f.lng], 16, { duration: 1 });
-    const targetMarker = markers.find(m => m.facilityId === id);
-    if (targetMarker) {
-      targetMarker.openPopup();
+    // 地図セクションへスムーズスクロール（全画面時は不要）
+    const mapSection = document.getElementById("utoMapSection");
+    if (mapSection && !mapSection.classList.contains("is-fullscreen")) {
+      mapSection.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-    // 地図へスムーズスクロール
-    mapElement.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    const zoomLevel = 16;
+
+    // ポップアップがピン上部に約220px展開されるため、
+    // 地図の中心をピン位置から上（北）へ約95ピクセル分オフセットして投影計算する
+    const targetPoint = map.project([f.lat, f.lng], zoomLevel);
+    const offsetPoint = L.point(targetPoint.x, targetPoint.y - 95);
+    const offsetLatLng = map.unproject(offsetPoint, zoomLevel);
+
+    // スムーズにアニメーション移動
+    map.flyTo(offsetLatLng, zoomLevel, {
+      duration: 0.8,
+      easeLinearity: 0.25
+    });
+
+    // 移動の進行に合わせてポップアップを展開（自動パンによるガクつきを防止）
+    setTimeout(() => {
+      const targetMarker = markers.find(m => m.facilityId === id);
+      if (targetMarker) {
+        targetMarker.openPopup();
+      }
+    }, 450);
+
     highlightCard(id, false);
   };
 
@@ -1111,6 +1261,27 @@
     if (resetBtn) {
       resetBtn.addEventListener("click", window.resetAllFilters);
     }
+
+    // 地図操作ツールバーボタン
+    if (btnResetMap) {
+      btnResetMap.addEventListener("click", window.resetMapView);
+    }
+    if (btnLocate) {
+      btnLocate.addEventListener("click", window.locateUser);
+    }
+    if (btnFullscreen) {
+      btnFullscreen.addEventListener("click", window.toggleMapFullscreen);
+    }
+
+    // Escキーで全画面解除
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        const mapSection = document.getElementById("utoMapSection");
+        if (mapSection && mapSection.classList.contains("is-fullscreen")) {
+          window.toggleMapFullscreen();
+        }
+      }
+    });
   }
 
   // 初期化実行
