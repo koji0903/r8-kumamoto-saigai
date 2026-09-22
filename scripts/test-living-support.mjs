@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 
-console.log('宇城市・氷川町・八代市 暮らしの支援・補助金総合ガイドテスト開始');
+console.log('宇城市・氷川町・八代市・熊本市 暮らしの支援・補助金総合ガイドテスト開始');
 
 // 1. 宇城市テスト
 {
@@ -151,6 +151,51 @@ console.log('宇城市・氷川町・八代市 暮らしの支援・補助金総
   assert.ok(fs.existsSync('yatsushiro-living-support.css'), '八代市：CSSファイルがありません');
   assert.ok(fs.existsSync('yatsushiro-living-support.js'), '八代市：JSファイルがありません');
   console.log('八代市 テスト OK');
+}
+
+// 4. 熊本市テスト
+{
+  console.log('--- 熊本市 (kumamoto-living-support.html) ---');
+  const html = fs.readFileSync('kumamoto-living-support.html', 'utf8');
+  const expectedCount = 104;
+  assert.ok(html.includes('<title>熊本市：暮らしの支援・補助金 総合ガイド'), '熊本市：タイトルが正しくありません');
+  assert.ok(html.includes('<meta name="description"'), '熊本市：descriptionがありません');
+
+  const expectedCats = ['housing', 'childcare', 'health', 'senior', 'migration', 'business', 'disaster'];
+  for (const cat of expectedCats) {
+    assert.ok(html.includes(`id="sec-${cat}"`), `熊本市：カテゴリ ${cat} のセクションがありません`);
+    assert.ok(html.includes(`data-cat="${cat}"`), `熊本市：カテゴリ ${cat} のdata-catがありません`);
+  }
+
+  const cardMatches = html.match(/class="uto-card"/g) || [];
+  assert.equal(cardMatches.length, expectedCount, `熊本市：主要${expectedCount}制度のカードが存在しません（現在: ${cardMatches.length}件）`);
+
+  assert.ok(html.includes('id="utoSimulator"'), '熊本市：シミュレーターコンポーネントがありません');
+  assert.ok(html.includes('id="utoSimResetBtn"'), '熊本市：リセットボタンがありません');
+  for (const preset of ['childcare', 'senior', 'housing', 'disaster', 'business']) {
+    assert.ok(html.includes(`data-preset="${preset}"`), `熊本市：${preset}プリセットがありません`);
+  }
+
+  assert.ok(html.includes('class="card-hash-tag"'), '熊本市：ハッシュタグが表示されていません');
+  assert.ok(html.includes('class="uto-badge-match"'), '熊本市：マッチバッジがありません');
+  const iconMatches = html.match(/class="uto-card-icon"/g) || [];
+  assert.equal(iconMatches.length, expectedCount, `熊本市：主要${expectedCount}制度にSVGアイコンがありません（現在: ${iconMatches.length}個）`);
+
+  // 政令市ならではの窓口案内と、主要制度
+  assert.ok(html.includes('区役所'), '熊本市：区役所の窓口案内がありません');
+  assert.ok(html.includes('こども医療費助成（ひまわりカード）'), '熊本市：こども医療費助成がありません');
+  assert.ok(html.includes('被災者生活再建支援金'), '熊本市：被災者生活再建支援金がありません');
+  assert.ok(html.includes('住宅の応急修理（災害救助法）'), '熊本市：応急修理がありません');
+  assert.ok(html.includes('おでかけICカード'), '熊本市：おでかけICカードがありません');
+  assert.ok(html.includes('kumamoto-support.html'), '熊本市：被災者支援制度ガイドへの導線がありません');
+
+  assert.ok(html.includes('class="uto-sup-hero-inner"'), '熊本市：ヒーロー内の幅制限がありません');
+  assert.ok(html.includes('class="uto-sup-shell"'), '熊本市：本文エリアの幅制限（uto-sup-shell）がありません');
+  assert.ok(html.includes('src="kumamoto-living-support.js'), '熊本市：JS読み込みがありません');
+  assert.ok(html.includes('href="kumamoto-living-support.css'), '熊本市：CSS読み込みがありません');
+  assert.ok(fs.existsSync('kumamoto-living-support.css'), '熊本市：CSSファイルがありません');
+  assert.ok(fs.existsSync('kumamoto-living-support.js'), '熊本市：JSファイルがありません');
+  console.log('熊本市 テスト OK');
 }
 
 console.log('=== 全自治体 暮らしの支援・補助金総合ガイドテスト 全て合格 ===');

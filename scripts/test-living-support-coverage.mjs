@@ -14,7 +14,7 @@ console.log("暮らしの支援ガイド 掲載カバー率モニタのテスト
 // 1. 設定ファイル
 const config = readJson(configPath);
 assert.equal(config.schemaVersion, "1.0.0", "設定のschemaVersionが想定と異なります");
-assert.equal(config.municipalities.length, 4, "監視対象は4市町です");
+assert.equal(config.municipalities.length, 5, "監視対象は5市町です");
 for (const municipality of config.municipalities) {
   for (const key of ["id", "name", "page", "origin", "indexes"]) {
     assert.ok(municipality[key], `${municipality.id || "?"}：${key} がありません`);
@@ -91,7 +91,7 @@ console.log("掲載判定 OK");
 
 // 5. レポート組み立てと差分
 const report = buildReport({ config, fetched: new Map(), now: "2026-09-22T00:00:00+09:00", deadLinks: [] });
-assert.equal(report.municipalities.length, 4, "レポートの自治体数が想定と異なります");
+assert.equal(report.municipalities.length, 5, "レポートの自治体数が想定と異なります");
 assert.ok(report.summary.cardCount > 100, "レポートの掲載件数が想定より少なすぎます");
 assert.equal(report.summary.indexErrorCount, config.municipalities.reduce((total, m) => total + m.indexes.length, 0), "索引未取得時はすべて取得失敗として数えます");
 assert.equal(report.summary.unlistedCount, 0, "索引未取得時は未掲載を0件として扱います");
@@ -157,7 +157,7 @@ console.log("監視Workflow OK");
 if (fs.existsSync(reportPath)) {
   const saved = readJson(reportPath);
   assert.equal(saved.schemaVersion, "1.0.0", "保存済みレポートのschemaVersionが想定と異なります");
-  assert.ok(Array.isArray(saved.municipalities) && saved.municipalities.length === 4, "保存済みレポートの自治体数が想定と異なります");
+  assert.ok(Array.isArray(saved.municipalities) && saved.municipalities.length === 5, "保存済みレポートの自治体数が想定と異なります");
   assert.ok(saved.generatedAt && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+09:00$/.test(saved.generatedAt), "保存済みレポートのgeneratedAtがJST表記ではありません");
   console.log("保存済みレポート OK");
 }
