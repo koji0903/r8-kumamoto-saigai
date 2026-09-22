@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-22T00:26:37.177Z",
-  "officialCheckedAt": "9/22 09:26",
+  "retrievedAt": "2026-09-22T05:26:06.134Z",
+  "officialCheckedAt": "9/22 14:26",
   "siteTopics": [
     {
       "date": "2026-09-22",
@@ -60,20 +60,20 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-09-22",
+      "time": "14:05",
+      "category": "その他",
+      "municipality": "八代市"
+    },
+    {
       "title": "令和8年熊本地震関連情報",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
       "date": "2026-09-22",
       "time": "09:17",
       "category": "その他",
       "municipality": "氷川町"
-    },
-    {
-      "title": "避難所開設状況",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
-      "date": "2026-09-22",
-      "time": "08:58",
-      "category": "避難・安全",
-      "municipality": "八代市"
     },
     {
       "title": "2026年09月22日 令和8年熊本地震 関連情報 （9月22日8時00分更新）",
