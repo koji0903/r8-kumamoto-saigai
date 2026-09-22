@@ -38,6 +38,10 @@ jobs:
       - name: 掲載カバー率を監視
         id: monitor
         shell: bash
+        env:
+          # 自治体サイトのWAFに弾かれないよう、GitHub Actionsからは控えめに取得する。
+          COVERAGE_MONITOR_CONCURRENCY: "2"
+          COVERAGE_MONITOR_RETRIES: "3"
         run: |
           set +e
           node scripts/monitor-living-support-coverage.mjs --check > monitor-output.txt 2>&1

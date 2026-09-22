@@ -123,7 +123,10 @@ export function classifyCandidate(candidate, { cards, cardUrls, siblingTexts, kn
   return { coverage: "unlisted", reason: "" };
 }
 
-export function buildReport({ config, fetched, now, deadLinks }) {
+// WAFやレート制限による403・429・5xxは「リンク切れ」ではなく判定不能として扱う。
+export const isDeadStatus = status => status === 404 || status === 410 || status === 0;
+
+export function buildReport({ config, fetched, now, deadLinks, blockedLinks, indexErrorDetails }) {
   const municipalities = [];
   for (const municipality of config.municipalities) {
     const cards = readCards(municipality.page);
@@ -176,10 +179,13 @@ export function buildReport({ config, fetched, now, deadLinks }) {
     generatedAt: now,
     municipalities,
     deadLinks: deadLinks || [],
+    blockedLinks: blockedLinks || [],
+    indexErrorDetails: indexErrorDetails || [],
     summary: {
       cardCount: municipalities.reduce((total, item) => total + item.cardCount, 0),
       unlistedCount: municipalities.reduce((total, item) => total + item.unlisted.length, 0),
       deadLinkCount: (deadLinks || []).length,
+      blockedLinkCount: (blockedLinks || []).length,
       indexErrorCount: municipalities.reduce((total, item) => total + item.indexErrors.length, 0)
     }
   };
@@ -228,6 +234,16 @@ export function formatSummary(report) {
     for (const entry of report.deadLinks) lines.push(`    ✕ [${entry.status}] ${entry.page} → ${entry.url}`);
   } else {
     lines.push("- リンク切れ: なし");
+  }
+  if (report.blockedLinks?.length) {
+    lines.push(`- 判定不能（403・429・5xx等） ${report.blockedLinks.length}件：実行環境からのアクセスが拒否された可能性があります`);
+    for (const entry of report.blockedLinks.slice(0, 5)) lines.push(`    ? [${entry.status}] ${entry.url}`);
+    if (report.blockedLinks.length > 5) lines.push(`    …ほか ${report.blockedLinks.length - 5}件`);
+  }
+  if (report.indexErrorDetails?.length) {
+    lines.push(`- 索引の取得に失敗 ${report.indexErrorDetails.length}件：この自治体は掲載漏れを検出できていません`);
+    for (const entry of report.indexErrorDetails.slice(0, 5)) lines.push(`    ! [${entry.status}] ${entry.url}`);
+    if (report.indexErrorDetails.length > 5) lines.push(`    …ほか ${report.indexErrorDetails.length - 5}件`);
   }
   return lines.join("\n");
 }

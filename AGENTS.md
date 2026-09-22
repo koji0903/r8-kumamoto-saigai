@@ -19,6 +19,7 @@
 - 宇土市・宇城市・氷川町・八代市の「暮らしの支援・補助金 総合ガイド」は、`scripts/monitor-living-support-coverage.mjs` が自治体公式の制度一覧・カテゴリ索引と突き合わせて掲載漏れとリンク切れを監視する（毎月2日にGitHub Actionsで実行）。
 - 監視対象の索引URLと対象外（制度でない記事）は `sources/living-support-coverage-targets.json` で管理する。制度でない記事を検出した場合は、除外理由を添えて `known` に追加する。
 - 検出結果は `reports/living-support-coverage.json` に保存し、前回レポートに無かった項目だけを新規として扱う。新規があれば `--check` が終了コード1を返し、WorkflowがIssueを作成する。
+- 自治体サイトのWAFがGitHub Actionsからのアクセスを拒否することがある（宇土市で403を確認）。403・429・5xxは「リンク切れ」ではなく判定不能として記録し、索引を取得できなかった自治体はWorkflowのwarningに出す。続く場合は手元で `npm run monitor:living-support` を実行して確認する。
 - カードを追加・削除した場合は、ヒーローバッジ・絞り込み表示・セクションの件数表記と `scripts/test-living-support.mjs` / `scripts/test-uto-support.mjs` の期待値を合わせて更新する。
 
 ## 作業完了前の検査
