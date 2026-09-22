@@ -205,6 +205,11 @@ ART = {
 }
 
 PAGES = [
+    dict(file="uto-public-services.html", out="ogp-uto-public-services.png", tone="sky", art="support_fields",
+         label="宇土市", tag="公的施設・市民サービス",
+         target="宇土市民・子育て世帯・シニア・転入者・被災者",
+         title="公的施設・市民サービス/マップ＆総合ガイド",
+         lead="市役所・支所・保健・子育て・福祉・公民館・体育館など全27施設。場所と受けられる公的サービスを地図から探せます。"),
     dict(file="uto-support.html", out="ogp-uto-support.png", tone="teal", art="support_fields",
          label="宇土市", tag="暮らしの支援・補助金",
          target="宇土市民・被災者・子育て世帯・シニア・事業者",

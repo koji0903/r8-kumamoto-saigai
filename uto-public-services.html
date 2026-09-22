@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宇土市 公的施設・市民サービス マップ＆総合ガイド｜よか隊ネット熊本</title>
+  <meta name="description" content="熊本県宇土市の公的施設（本庁舎・支所、保健センター、子育て支援施設、福祉センター、図書館・公民館、体育施設、消防・防災拠点など全27施設）の場所・受けられる行政サービス・対象者・開館時間を地図上で一括確認できる総合ガイドです。">
+  <link rel="stylesheet" href="design-system.css">
+  <link rel="stylesheet" href="org-site.css?v=20260918-1">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="uto-public-services.css?v=20260923-1">
+  <link rel="canonical" href="https://www.yokatainet.jp/uto-public-services.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="よか隊ネット熊本　災害・支援状況レポート">
+  <meta property="og:title" content="宇土市 公的施設・市民サービス マップ＆総合ガイド">
+  <meta property="og:description" content="熊本県宇土市の公的施設（本庁舎・支所、保健センター、子育て支援施設、福祉センター、図書館・公民館、体育施設、消防・防災拠点など全27施設）の場所・受けられる行政サービス・対象者・開館時間を地図上で一括確認できる総合ガイドです。">
+  <meta property="og:url" content="https://www.yokatainet.jp/uto-public-services.html">
+  <meta property="og:image" content="https://www.yokatainet.jp/ogp-uto-public-services.png">
+  <meta property="og:image:secure_url" content="https://www.yokatainet.jp/ogp-uto-public-services.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="宇土市 公的施設・市民サービス マップ＆総合ガイド｜よか隊ネット熊本　災害・支援状況レポート">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="宇土市 公的施設・市民サービス マップ＆総合ガイド">
+  <meta name="twitter:description" content="熊本県宇土市の公的施設（本庁舎・支所、保健センター、子育て支援施設、福祉センター、図書館・公民館、体育施設、消防・防災拠点など全27施設）の場所・受けられる行政サービス・対象者・開館時間を地図上で一括確認できる総合ガイドです。">
+  <meta name="twitter:image" content="https://www.yokatainet.jp/ogp-uto-public-services.png">
+</head>
+<body class="organization-site uto-public-services-page">
+  <a class="skip" href="#mainContent">本文へ移動</a>
+  <header class="site-header"></header>
+
+  <main id="mainContent" class="uto-services-main">
+    <!-- ヒーローセクション -->
+    <header class="uto-services-hero">
+      <div class="uto-services-hero-inner">
+        <nav class="breadcrumb-nav" aria-label="パンくずリスト">
+          <a href="index.html">ホーム</a>
+          <span>&gt;</span>
+          <a href="municipalities.html">自治体別の状況</a>
+          <span>&gt;</span>
+          <a href="municipalities.html?name=宇土市">宇土市</a>
+          <span>&gt;</span>
+          <span aria-current="page">公的施設・市民サービス マップ</span>
+        </nav>
+
+        <div class="uto-services-hero-badge">
+          <span>🏛️</span>
+          <span>宇土市公式データ確認 · 全27施設・7分野</span>
+        </div>
+
+        <h1>宇土市 公的施設・市民サービス マップ＆総合ガイド</h1>
+        <p class="uto-services-hero-lead">
+          宇土市で生活する市民の皆さまや、復興・生活再建に取り組む方々が利用できる、市役所・支所、保健センター、子育て支援施設、福祉拠点、図書館・公民館、体育施設、消防・防災拠点の場所と受けられる公的サービスを体系的にまとめました。<br>
+          地図から直感的に場所を探せるほか、対象者やキーワードから「どこでどんな手続きや支援が受けられるか」を即座に確認できます。
+        </p>
+
+        <div class="uto-services-hero-meta">
+          <span>📅 情報確認日：2026年9月23日</span>
+          <span>🏢 情報元：宇土市公式ホームページ・公共施設案内・AED設置データ・県指定避難所データ</span>
+          <span>📍 掲載：主要27施設（全域網羅）</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="uto-services-shell">
+      <!-- クイックサマリー -->
+      <section class="uto-services-summary" aria-label="ガイドの活用ポイント">
+        <div class="summary-grid">
+          <div class="summary-item">
+            <span class="summary-icon">🏛️</span>
+            <div>
+              <h3>身近な窓口で手続き</h3>
+              <p>本庁舎のほか、網津支所・網田支所でも各種証明発行やマイナンバー手続きが可能です。</p>
+            </div>
+          </div>
+          <div class="summary-item">
+            <span class="summary-icon">👶</span>
+            <div>
+              <h3>充実した子育て拠点</h3>
+              <p>保健センター2Fの「サンサン」や「ひまわり」「くるくる」「緑川」など無料の交流広場が市内各地にあります。</p>
+            </div>
+          </div>
+          <div class="summary-item">
+            <span class="summary-icon">🤝</span>
+            <div>
+              <h3>福祉・シニア支援</h3>
+              <p>福祉センターでの車いす一時無料貸出や、新小路町・網田の老人福祉センターなど安心の拠点を完備。</p>
+            </div>
+          </div>
+          <div class="summary-item">
+            <span class="summary-icon">🗺️</span>
+            <div>
+              <h3>地図連動・経路検索</h3>
+              <p>ピンをクリックすると詳細が表示され、「現在地から行く」でGoogleマップ経路案内へ直通します。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- インタラクティブ・マップ -->
+      <section class="uto-map-section" aria-labelledby="mapSectionTitle">
+        <div class="uto-map-header">
+          <div>
+            <h2 id="mapSectionTitle">🗺️ 宇土市 公的施設マップ</h2>
+            <p>ピンをクリックすると施設情報と受けられるサービスが表示されます。地図は拡大・縮小・移動が可能です。</p>
+          </div>
+        </div>
+        <div id="publicServicesMap" role="region" aria-label="宇土市公的施設マップ"></div>
+        <noscript>
+          <div style="padding: 20px; background: #fff3cd; color: #856404; text-align: center;">
+            JavaScriptが無効になっているため、地図は表示されません。下記の施設カード一覧から各施設の詳細をご確認いただけます。
+          </div>
+        </noscript>
+      </section>
+
+      <!-- 絞り込みツールバー -->
+      <section class="uto-toolbar-section" aria-labelledby="toolbarTitle">
+        <h2 id="toolbarTitle" class="visually-hidden">施設・サービスの検索と絞り込み</h2>
+
+        <!-- フリーワード検索 -->
+        <div class="toolbar-search-box">
+          <div class="search-input-wrapper">
+            <span class="search-input-icon" aria-hidden="true">🔍</span>
+            <input type="search" id="serviceSearchInput" class="service-search-input" placeholder="施設名、サービス、手続き、キーワードで検索（例：離乳食、車いす、マイナンバー、図書館、トレーニング、温泉...）" aria-label="施設・サービスのキーワード検索">
+          </div>
+        </div>
+
+        <!-- 分野別フィルター -->
+        <div class="filter-group-row">
+          <span class="filter-label">分野・カテゴリーで絞り込む：</span>
+          <div class="filter-buttons" id="catFilterGroup" role="group" aria-label="分野フィルター">
+            <button type="button" class="filter-btn active" data-cat="all">すべて表示</button>
+            <button type="button" class="filter-btn" data-cat="admin">🏛️ 行政窓口</button>
+            <button type="button" class="filter-btn" data-cat="child">👶 子育て・母子</button>
+            <button type="button" class="filter-btn" data-cat="health">🏥 健康・保健</button>
+            <button type="button" class="filter-btn" data-cat="welfare">🤝 福祉・シニア</button>
+            <button type="button" class="filter-btn" data-cat="culture">📚 文化・生涯学習</button>
+            <button type="button" class="filter-btn" data-cat="sports">⚽ スポーツ・運動</button>
+            <button type="button" class="filter-btn" data-cat="safety">🚒 防災・消防</button>
+          </div>
+        </div>
+
+        <!-- 対象者別フィルター -->
+        <div class="filter-group-row">
+          <span class="filter-label">利用対象者で絞り込む：</span>
+          <div class="filter-buttons" id="targetFilterGroup" role="group" aria-label="対象者フィルター">
+            <button type="button" class="filter-btn active" data-target="all">誰でも・全対象</button>
+            <button type="button" class="filter-btn" data-target="infant">👶 乳幼児・保護者</button>
+            <button type="button" class="filter-btn" data-target="child">🎒 児童・小中高生</button>
+            <button type="button" class="filter-btn" data-target="senior">👵 シニア・高齢者（60歳〜）</button>
+          </div>
+        </div>
+
+        <!-- 状態・リセットバー -->
+        <div class="toolbar-status-row">
+          <span class="facility-count" id="facilityResultCount">表示中：27施設 / 全27施設</span>
+          <button type="button" class="btn-reset-filters" id="resetFilterBtn">絞り込みをリセット</button>
+        </div>
+      </section>
+
+      <!-- 施設カード一覧コンテナ -->
+      <section aria-labelledby="facilityListHeading">
+        <h2 id="facilityListHeading" class="visually-hidden">施設詳細カード一覧</h2>
+        <div class="facility-cards-container" id="facilityCardsContainer">
+          <!-- JavaScriptにより動的レンダリングされます -->
+        </div>
+      </section>
+
+      <!-- 関連リンク・相互ナビゲーション -->
+      <nav class="uto-services-nav-box" aria-labelledby="relatedNavTitle">
+        <h3 id="relatedNavTitle">関連する宇土市の暮らし・支援情報</h3>
+        <div class="nav-links-grid">
+          <a href="uto-support.html" class="nav-link-card">
+            <b>宇土市 暮らしの支援・補助金 総合ガイド ↗</b>
+            <span>住宅耐震化、子ども医療費、給付金など宇土市の公式制度を網羅。</span>
+          </a>
+          <a href="uto-housing.html" class="nav-link-card">
+            <b>宇土市 すまいの相談窓口・住まい再建 ↗</b>
+            <span>被災住家の応急修理や生活再建支援金の窓口案内。</span>
+          </a>
+          <a href="uto-waste.html" class="nav-link-card">
+            <b>宇土市 片付けごみ・災害ごみ仮置場ナビ ↗</b>
+            <span>ごみ品目別の持込先施設・入場券待機場所マップ。</span>
+          </a>
+          <a href="uto-bulletin.html" class="nav-link-card">
+            <b>宇土市 災害臨時号・生活支援情報 ↗</b>
+            <span>罹災証明書・生活再建・相談窓口の紙面解説。</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="org-site.js?v=20260907-2"></script>
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="uto-public-services.js?v=20260923-1"></script>
+</body>
+</html>

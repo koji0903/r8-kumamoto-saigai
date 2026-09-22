@@ -1,0 +1,798 @@
+/**
+ * 宇土市 公的施設・市民サービス マップ＆総合ガイド スタイルシート
+ */
+
+/* メインコンテンツシェル */
+.uto-services-main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #f8fafc;
+  padding-bottom: 80px;
+}
+
+/* ヒーローセクション */
+.uto-services-hero {
+  background: linear-gradient(135deg, #0f4c81 0%, #1e3a8a 60%, #172554 100%);
+  color: #ffffff;
+  padding: 48px 20px 42px;
+  border-bottom: 4px solid #38bdf8;
+}
+
+.uto-services-hero-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.uto-services-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  padding: 4px 14px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.uto-services-hero h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.uto-services-hero-lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+  max-width: 900px;
+  margin: 0 0 20px;
+}
+
+.uto-services-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 14px;
+}
+
+.uto-services-hero-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* 1040px幅コンテンツコンテナ */
+.uto-services-shell {
+  max-width: 1040px;
+  margin: -24px auto 0;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* クイックサマリーカード */
+.uto-services-summary {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  margin-bottom: 28px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.summary-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+}
+
+.summary-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.summary-item h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 4px;
+}
+
+.summary-item p {
+  font-size: 0.8125rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 地図セクション */
+.uto-map-section {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.uto-map-header {
+  padding: 18px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.uto-map-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.uto-map-header p {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+}
+
+#publicServicesMap {
+  width: 100%;
+  height: 480px;
+  background: #e2e8f0;
+}
+
+/* 地図ピン */
+.uto-map-pin-wrap {
+  background: transparent;
+  border: none;
+}
+
+.uto-map-pin {
+  width: 36px;
+  height: 36px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.uto-map-pin:hover {
+  transform: rotate(-45deg) scale(1.15);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+}
+
+.uto-map-pin span {
+  transform: rotate(45deg);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ポップアップ */
+.uto-map-popup {
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #1e293b;
+  min-width: 240px;
+  max-width: 300px;
+}
+
+.popup-cat-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.popup-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 6px;
+}
+
+.popup-addr, .popup-hours {
+  font-size: 0.8125rem;
+  margin: 2px 0;
+  color: #475569;
+}
+
+.popup-services {
+  margin: 8px 0;
+  padding: 8px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.popup-services b {
+  display: block;
+  font-size: 0.75rem;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.popup-services ul {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 0.75rem;
+  color: #334155;
+}
+
+.popup-services li {
+  margin-bottom: 2px;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.popup-btn-card, .popup-btn-route {
+  flex: 1;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.popup-btn-card {
+  background: #0284c7;
+  color: #ffffff;
+  border: none;
+}
+
+.popup-btn-card:hover {
+  background: #0369a1;
+}
+
+.popup-btn-route {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.popup-btn-route:hover {
+  background: #e2e8f0;
+}
+
+/* ツールバー・フィルター・検索 */
+.uto-toolbar-section {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  margin-bottom: 28px;
+}
+
+.toolbar-search-box {
+  margin-bottom: 20px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 1.1rem;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.service-search-input {
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #0f172a;
+  background: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.service-search-input:focus {
+  outline: none;
+  border-color: #0284c7;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.12);
+}
+
+.filter-group-row {
+  margin-bottom: 16px;
+}
+
+.filter-group-row:last-child {
+  margin-bottom: 0;
+}
+
+.filter-label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.filter-btn.active {
+  background: #0f4c81;
+  color: #ffffff;
+  border-color: #0f4c81;
+  box-shadow: 0 2px 6px rgba(15, 76, 129, 0.3);
+}
+
+.toolbar-status-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+  gap: 10px;
+}
+
+.facility-count {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0284c7;
+}
+
+.btn-reset-filters {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-reset-filters:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* 施設カードグリッド */
+.facility-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.uto-service-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.uto-service-card:hover {
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+}
+
+.uto-service-card.highlighted {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2), 0 12px 28px rgba(15, 23, 42, 0.12);
+  animation: cardPulse 1.5s ease-out 1;
+}
+
+@keyframes cardPulse {
+  0% { transform: scale(1.02); }
+  50% { transform: scale(1.01); }
+  100% { transform: scale(1); }
+}
+
+.service-card-header {
+  padding: 24px 28px 18px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.service-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.service-badge-cat {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.service-badge-target {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.service-card-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.service-card-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #0f172a;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.service-card-ruby {
+  font-size: 0.75rem;
+  color: #64748b;
+  display: block;
+}
+
+.service-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.service-card-desc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 8px 0 0;
+}
+
+.service-card-body {
+  padding: 22px 28px;
+}
+
+/* サービス一覧ボックス */
+.service-card-services-box {
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+}
+
+.services-box-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.services-list {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.services-list li {
+  font-size: 0.9375rem;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* メタ情報グリッド */
+.service-card-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px 24px;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.meta-item dt {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+
+.meta-item dd {
+  font-size: 0.9375rem;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.phone-link {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0284c7;
+  text-decoration: none;
+}
+
+.phone-link:hover {
+  text-decoration: underline;
+}
+
+.phone-dept {
+  font-size: 0.8125rem;
+  color: #64748b;
+}
+
+.service-card-note {
+  font-size: 0.875rem;
+  color: #475569;
+  background: #fffbeb;
+  border-left: 4px solid #f59e0b;
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin: 16px 0 0;
+  line-height: 1.6;
+}
+
+/* カードフッターアクション */
+.service-card-footer {
+  padding: 16px 28px 20px;
+  background: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-focus-map, .btn-route-map, .btn-official-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-focus-map {
+  background: #0284c7;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-focus-map:hover {
+  background: #0369a1;
+}
+
+.btn-route-map {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+.btn-route-map:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.btn-official-link {
+  background: transparent;
+  color: #0284c7;
+  border: 1px dashed #0284c7;
+  margin-left: auto;
+}
+
+.btn-official-link:hover {
+  background: #eff6ff;
+}
+
+/* 一致なし空状態 */
+.uto-empty-state {
+  text-align: center;
+  padding: 48px 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px dashed #cbd5e1;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin: 0 0 12px;
+}
+
+.uto-empty-state h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+
+.uto-empty-state p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0 0 20px;
+}
+
+.empty-reset-btn {
+  background: #0284c7;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* 関連リンク・ナビゲーション */
+.uto-services-nav-box {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.uto-services-nav-box h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 14px;
+}
+
+.nav-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.nav-link-card {
+  display: block;
+  padding: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.nav-link-card:hover {
+  background: #f0fdf4;
+  border-color: #86efac;
+  transform: translateY(-2px);
+}
+
+.nav-link-card b {
+  display: block;
+  font-size: 0.95rem;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.nav-link-card span {
+  display: block;
+  font-size: 0.8125rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .uto-services-hero {
+    padding: 36px 16px 32px;
+  }
+
+  .uto-services-hero h1 {
+    font-size: 1.55rem;
+  }
+
+  .uto-services-shell {
+    padding: 0 12px;
+    margin-top: -16px;
+  }
+
+  #publicServicesMap {
+    height: 380px;
+  }
+
+  .service-card-header, .service-card-body, .service-card-footer {
+    padding: 16px;
+  }
+
+  .service-card-title {
+    font-size: 1.2rem;
+  }
+
+  .service-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-official-link {
+    margin-left: 0;
+  }
+}
