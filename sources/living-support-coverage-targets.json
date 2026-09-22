@@ -1,0 +1,329 @@
+{
+  "schemaVersion": "1.0.0",
+  "description": "暮らしの支援・補助金 総合ガイド（4市町）の掲載漏れとリンク切れを監視するための、自治体公式の制度一覧・カテゴリ索引。scripts/monitor-living-support-coverage.mjs が使用する。",
+  "municipalities": [
+    {
+      "id": "uto",
+      "name": "宇土市",
+      "page": "uto-support.html",
+      "origin": "https://www.city.uto.lg.jp",
+      "siblingPages": [
+        "uto-housing.html",
+        "uto-repair.html",
+        "uto-jizokuka.html",
+        "uto-waste.html",
+        "uto-bulletin.html",
+        "priority-support-summary.html"
+      ],
+      "indexes": [
+        "https://www.city.uto.lg.jp/article/list/1206.html",
+        "https://www.city.uto.lg.jp/article/list/1114.html",
+        "https://www.city.uto.lg.jp/article/list/1193.html",
+        "https://www.city.uto.lg.jp/article/list/1056.html",
+        "https://www.city.uto.lg.jp/article/list/1018.html",
+        "https://www.city.uto.lg.jp/article/list/1048.html",
+        "https://www.city.uto.lg.jp/article/list/1235.html",
+        "https://www.city.uto.lg.jp/article/list/1212.html",
+        "https://www.city.uto.lg.jp/category/list/1083.html",
+        "https://www.city.uto.lg.jp/article/view/1309/16342.html",
+        {
+          "url": "https://www.city.uto.lg.jp/article/view/1207/8235.html",
+          "curated": true
+        },
+        "https://www.city.uto.lg.jp/article/keyword/144.html"
+      ]
+    },
+    {
+      "id": "uki",
+      "name": "宇城市",
+      "page": "uki-living-support.html",
+      "origin": "https://www.city.uki.kumamoto.jp",
+      "siblingPages": [
+        "uki-support.html",
+        "uki-consultation.html",
+        "priority-support-summary.html"
+      ],
+      "indexes": [
+        "https://www.city.uki.kumamoto.jp/kosodate",
+        "https://www.city.uki.kumamoto.jp/kosodate/shienseido",
+        "https://www.city.uki.kumamoto.jp/kosodate/nyugaku",
+        "https://www.city.uki.kumamoto.jp/kurashi/ninshin",
+        "https://www.city.uki.kumamoto.jp/iryo_fukushi/kaigo",
+        "https://www.city.uki.kumamoto.jp/iryo_fukushi/fukushi/shogaishafukushi",
+        "https://www.city.uki.kumamoto.jp/iryo_fukushi/hoken/kokuho",
+        "https://www.city.uki.kumamoto.jp/kurashi/sumai",
+        "https://www.city.uki.kumamoto.jp/kurashi/kankyo",
+        "https://www.city.uki.kumamoto.jp/kurashi/sonota_kurashi",
+        "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/shokogyo",
+        "https://www.city.uki.kumamoto.jp/jigyosha/machizukuri",
+        {
+          "url": "https://www.city.uki.kumamoto.jp/toppage/ijuteiju/akiya/iju_akiya/hojo_bank",
+          "curated": true
+        },
+        "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
+      ]
+    },
+    {
+      "id": "hikawa",
+      "name": "氷川町",
+      "page": "hikawa-living-support.html",
+      "origin": "https://www.town.hikawa.kumamoto.jp",
+      "siblingPages": [
+        "hikawa-support.html",
+        "hikawa-demolition.html",
+        "priority-support-summary.html"
+      ],
+      "indexes": [
+        {
+          "url": "https://www.town.hikawa.kumamoto.jp/ijuu/list00812.html",
+          "curated": true
+        },
+        {
+          "url": "https://www.town.hikawa.kumamoto.jp/ijuu/list00696.html",
+          "curated": true
+        },
+        {
+          "url": "https://www.town.hikawa.kumamoto.jp/ijuu/list00698.html",
+          "curated": true
+        },
+        "https://www.town.hikawa.kumamoto.jp/list00637.html",
+        "https://www.town.hikawa.kumamoto.jp/list00103.html",
+        "https://www.town.hikawa.kumamoto.jp/list00744.html",
+        "https://www.town.hikawa.kumamoto.jp/list00117.html",
+        "https://www.town.hikawa.kumamoto.jp/list00118.html",
+        "https://www.town.hikawa.kumamoto.jp/list00114.html",
+        "https://www.town.hikawa.kumamoto.jp/list00167.html",
+        "https://www.town.hikawa.kumamoto.jp/new_list.html"
+      ]
+    },
+    {
+      "id": "yatsushiro",
+      "name": "八代市",
+      "page": "yatsushiro-living-support.html",
+      "origin": "https://www.city.yatsushiro.lg.jp",
+      "siblingPages": [
+        "yatsushiro-support.html",
+        "yatsushiro-rebuild.html",
+        "yatsushiro-loan.html",
+        "yatsushiro-safetynet4.html",
+        "priority-support-summary.html"
+      ],
+      "indexes": [
+        "https://www.city.yatsushiro.lg.jp/list00301.html",
+        "https://www.city.yatsushiro.lg.jp/list01213.html",
+        "https://www.city.yatsushiro.lg.jp/list00302.html",
+        "https://www.city.yatsushiro.lg.jp/list01216.html",
+        "https://www.city.yatsushiro.lg.jp/list01217.html",
+        "https://www.city.yatsushiro.lg.jp/list02049.html",
+        "https://www.city.yatsushiro.lg.jp/list00306.html",
+        "https://www.city.yatsushiro.lg.jp/list01209.html",
+        "https://www.city.yatsushiro.lg.jp/list00305.html",
+        "https://www.city.yatsushiro.lg.jp/list01208.html",
+        "https://www.city.yatsushiro.lg.jp/list01220.html",
+        "https://www.city.yatsushiro.lg.jp/list01222.html",
+        {
+          "url": "https://www.city.yatsushiro.lg.jp/ijyu/list01957.html",
+          "curated": true
+        },
+        "https://www.city.yatsushiro.lg.jp/list01272.html",
+        "https://www.city.yatsushiro.lg.jp/list01207.html",
+        "https://www.city.yatsushiro.lg.jp/list01214.html",
+        "https://www.city.yatsushiro.lg.jp/list00304.html"
+      ]
+    }
+  ],
+  "known": [
+    {
+      "title": "保育園・幼稚園について",
+      "reason": "施設案内であり支援制度ではない"
+    },
+    {
+      "title": "小中学校について",
+      "reason": "施設案内であり支援制度ではない"
+    },
+    {
+      "title": "子育て支援センター",
+      "reason": "施設案内であり支援制度ではない"
+    },
+    {
+      "title": "介護予防教室（健康教室）",
+      "reason": "教室案内であり給付制度ではない"
+    },
+    {
+      "title": "いきいきサロン事業",
+      "reason": "通いの場の案内であり給付制度ではない"
+    },
+    {
+      "title": "フッ化物洗口事業",
+      "reason": "学校での保健事業であり給付制度ではない"
+    },
+    {
+      "title": "支援・助成",
+      "reason": "カテゴリ索引ページ"
+    },
+    {
+      "title": "障害者手当",
+      "reason": "カテゴリ索引ページ（個別手当はカードに掲載）"
+    },
+    {
+      "title": "スポーツに関する補助金",
+      "reason": "カテゴリ索引ページ"
+    },
+    {
+      "title": "その他の助成金",
+      "reason": "カテゴリ索引ページ"
+    },
+    {
+      "title": "融資・助成制度",
+      "reason": "カテゴリ索引ページ"
+    },
+    {
+      "title": "各種保険給付について",
+      "reason": "国保の各種保険給付カードに統合"
+    },
+    {
+      "title": "子ども・子育て支援金制度",
+      "reason": "国の保険料制度の周知であり給付制度ではない"
+    },
+    {
+      "title": "プレミアム付き食事券「食べて応援！食のみやこ熊本券」",
+      "reason": "県事業の周知（販売・参加店募集）"
+    },
+    {
+      "title": "みらいろパーク（道の駅ウェルネスあらお敷地内）の無料開放",
+      "reason": "他市の施設開放であり市町の支援制度ではない"
+    },
+    {
+      "title": "災害ボランティア従事者への無料入浴支援",
+      "reason": "支援者向けであり被災者向け制度ではない"
+    },
+    {
+      "title": "八代港国際コンテナ定期航路曳船利用助成金",
+      "reason": "港湾事業者向けで暮らしの支援の対象外"
+    },
+    {
+      "title": "無料写真洗浄（あらいぐま人吉）",
+      "reason": "他団体のボランティア活動の紹介"
+    },
+    {
+      "title": "児童扶養手当現況届の手続き再開",
+      "reason": "手続き再開のお知らせであり制度そのものはカードに掲載"
+    },
+    {
+      "title": "住宅リフォーム助成事業商品券取扱事業所一覧及び取扱事業所の募集",
+      "reason": "取扱事業所の募集であり住民向け制度はカードに掲載"
+    },
+    {
+      "title": "空き家バンクの補助金を活用される場合に、フラット35金利引き下げがあります",
+      "reason": "金利優遇の周知であり市の補助制度ではない"
+    },
+    {
+      "title": "不足額給付",
+      "reason": "定額減税の調整給付（終了済みの国の給付）"
+    },
+    {
+      "title": "調整給付金",
+      "reason": "定額減税の調整給付（終了済みの国の給付）"
+    },
+    {
+      "title": "放課後等デイサービス支給決定におけるガイドライン",
+      "reason": "事業者向けのガイドラインであり住民向け給付制度ではない"
+    },
+    {
+      "title": "令和8年度地域少子化対策重点推進交付金活用事業",
+      "reason": "交付金の実施計画の公表（実体は結婚サポートセンター運営）"
+    },
+    {
+      "title": "ファミリーサポートセンター",
+      "reason": "有償の相互援助活動の案内であり給付制度ではない"
+    },
+    {
+      "title": "つどいの広場",
+      "reason": "子育て交流の場の案内であり給付制度ではない"
+    },
+    {
+      "title": "チャイルドシート貸出",
+      "reason": "貸出サービスの案内（宇土市）"
+    },
+    {
+      "title": "ふくしの相談窓口",
+      "reason": "相談窓口の案内"
+    },
+    {
+      "title": "子育て心理相談",
+      "reason": "相談事業の案内"
+    },
+    {
+      "title": "休日一時預かり事業",
+      "reason": "保育サービスの案内"
+    },
+    {
+      "title": "放課後児童（学童）クラブ",
+      "reason": "保育サービスの案内"
+    },
+    {
+      "title": "放課後子供教室推進事業",
+      "reason": "学校・地域の活動であり給付制度ではない"
+    },
+    {
+      "title": "教育支援センター事業",
+      "reason": "相談・支援機関の案内"
+    },
+    {
+      "title": "地域学校協働活動推進事業",
+      "reason": "学校・地域の活動であり給付制度ではない"
+    },
+    {
+      "title": "子ども見守りボランティア事業",
+      "reason": "ボランティア活動の案内"
+    },
+    {
+      "title": "小規模特認校制度の導入",
+      "reason": "就学制度の案内であり給付制度ではない"
+    },
+    {
+      "title": "宇土市英語検定チャレンジ事業",
+      "reason": "検定受験の機会提供であり給付制度ではない"
+    },
+    {
+      "title": "ジュニアスポーツ応援事業",
+      "reason": "スポーツ活動支援の案内"
+    },
+    {
+      "title": "予防接種事業",
+      "reason": "定期予防接種の案内（費用助成はカードに掲載）"
+    },
+    {
+      "title": "乳幼児の健康診査",
+      "reason": "法定健診の案内であり給付制度ではない"
+    },
+    {
+      "title": "親子（母子）健康手帳の交付",
+      "reason": "手帳交付の案内"
+    },
+    {
+      "title": "各種健康診断・がん検診",
+      "reason": "がん検診カードに統合（同一制度の総合案内ページ）"
+    },
+    {
+      "title": "非課税世帯支援臨時給付金",
+      "reason": "受付終了した国の臨時給付金"
+    },
+    {
+      "title": "住民税非課税世帯等給付金",
+      "reason": "受付終了した国の臨時給付金"
+    },
+    {
+      "title": "空き家・空き地バンク利用者情報登録申込がインターネットで申請できるようになりました",
+      "reason": "申請方法のお知らせであり補助制度ではない"
+    },
+    {
+      "title": "生ごみ処理容器等購入補助金",
+      "reason": "同一制度の別記事（カードに掲載済み）"
+    },
+    {
+      "title": "中小企業店舗改装等支援事業",
+      "reason": "市側のリンクが切れており制度の現況が確認できない"
+    }
+  ]
+}
