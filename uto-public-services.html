@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="design-system.css">
   <link rel="stylesheet" href="org-site.css?v=20260918-1">
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-  <link rel="stylesheet" href="uto-public-services.css?v=20260923-2">
+  <link rel="stylesheet" href="uto-public-services.css?v=20260923-3">
   <link rel="canonical" href="https://www.yokatainet.jp/uto-public-services.html">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
@@ -136,17 +136,43 @@
       <section class="uto-toolbar-section" aria-labelledby="toolbarTitle">
         <h2 id="toolbarTitle" class="visually-hidden">施設・サービスの検索と絞り込み</h2>
 
+        <!-- かんたん目的・シーン別クイックタグ -->
+        <div class="toolbar-quick-tags" role="navigation" aria-label="目的別クイック検索">
+          <span class="quick-tag-label">💡 よくある目的から探す：</span>
+          <div class="quick-tags-list" id="quickTagsGroup">
+            <button type="button" class="quick-tag-btn" data-tag="childcare">👶 赤ちゃん・子育て広場</button>
+            <button type="button" class="quick-tag-btn" data-tag="cert">🏛️ 住民票・マイナンバー</button>
+            <button type="button" class="quick-tag-btn" data-tag="library">📖 図書館・読書・自習</button>
+            <button type="button" class="quick-tag-btn" data-tag="senior">🤝 車いす貸出・シニア健康</button>
+            <button type="button" class="quick-tag-btn" data-tag="sports">⚽ 体育館・運動・トレーニング</button>
+            <button type="button" class="quick-tag-btn" data-tag="weekend">📅 土日も利用可能</button>
+            <button type="button" class="quick-tag-btn" data-tag="parking">🚗 駐車場が広い（30台以上）</button>
+            <button type="button" class="quick-tag-btn quick-tag-fav" id="filterFavBtn" data-tag="favorite">⭐ お気に入り (<span id="favCount">0</span>)</button>
+          </div>
+        </div>
+
         <!-- フリーワード検索 -->
         <div class="toolbar-search-box">
           <div class="search-input-wrapper">
             <span class="search-input-icon" aria-hidden="true">🔍</span>
-            <input type="search" id="serviceSearchInput" class="service-search-input" placeholder="施設名、サービス、手続き、キーワードで検索（例：離乳食、車いす、マイナンバー、図書館、トレーニング、温泉...）" aria-label="施設・サービスのキーワード検索">
+            <input type="search" id="serviceSearchInput" class="service-search-input" placeholder="施設名、サービス、手続き、設備で検索（例：離乳食、車いす、マイナンバー、図書館、トレーニング、温泉...）" aria-label="施設・サービスのキーワード検索">
+          </div>
+        </div>
+
+        <!-- 地域・地区フィルター -->
+        <div class="filter-group-row">
+          <span class="filter-label">お住まいの地域・エリア：</span>
+          <div class="filter-buttons filter-buttons-area" id="areaFilterGroup" role="group" aria-label="地域フィルター">
+            <button type="button" class="filter-btn active" data-area="all">宇土市全域</button>
+            <button type="button" class="filter-btn" data-area="central">中心部（市役所・宇土駅周辺）</button>
+            <button type="button" class="filter-btn" data-area="west">西部（網津・網田・赤瀬）</button>
+            <button type="button" class="filter-btn" data-area="north">北部・東部（緑川・走潟・花園）</button>
           </div>
         </div>
 
         <!-- 分野別フィルター -->
         <div class="filter-group-row">
-          <span class="filter-label">分野・カテゴリーで絞り込む：</span>
+          <span class="filter-label">分野・カテゴリー：</span>
           <div class="filter-buttons" id="catFilterGroup" role="group" aria-label="分野フィルター">
             <button type="button" class="filter-btn active" data-cat="all">すべて表示</button>
             <button type="button" class="filter-btn" data-cat="admin">🏛️ 行政窓口</button>
@@ -159,28 +185,58 @@
           </div>
         </div>
 
-        <!-- 対象者別フィルター -->
-        <div class="filter-group-row">
-          <span class="filter-label">利用対象者で絞り込む：</span>
-          <div class="filter-buttons" id="targetFilterGroup" role="group" aria-label="対象者フィルター">
-            <button type="button" class="filter-btn active" data-target="all">誰でも・全対象</button>
-            <button type="button" class="filter-btn" data-target="infant">👶 乳幼児・保護者</button>
-            <button type="button" class="filter-btn" data-target="child">🎒 児童・小中高生</button>
-            <button type="button" class="filter-btn" data-target="senior">👵 シニア・高齢者（60歳〜）</button>
+        <!-- 対象者別フィルター ＆ 開館中トグル -->
+        <div class="filter-group-row filter-row-multi">
+          <div>
+            <span class="filter-label">利用対象者：</span>
+            <div class="filter-buttons" id="targetFilterGroup" role="group" aria-label="対象者フィルター">
+              <button type="button" class="filter-btn active" data-target="all">誰でも・全対象</button>
+              <button type="button" class="filter-btn" data-target="infant">👶 乳幼児・保護者</button>
+              <button type="button" class="filter-btn" data-target="child">🎒 児童・小中高生</button>
+              <button type="button" class="filter-btn" data-target="senior">👵 シニア・高齢者</button>
+            </div>
+          </div>
+          <div class="open-now-toggle-wrap">
+            <label class="toggle-switch-label">
+              <input type="checkbox" id="openNowCheckbox" class="toggle-switch-input">
+              <span class="toggle-switch-slider"></span>
+              <span class="toggle-switch-text">🟢 いま開館中の施設のみ</span>
+            </label>
           </div>
         </div>
 
-        <!-- 状態・リセットバー -->
+        <!-- 状態・表示切替・リセットバー -->
         <div class="toolbar-status-row">
-          <span class="facility-count" id="facilityResultCount">表示中：27施設 / 全27施設</span>
-          <button type="button" class="btn-reset-filters" id="resetFilterBtn">絞り込みをリセット</button>
+          <div class="status-left">
+            <span class="facility-count" id="facilityResultCount">表示中：27施設 / 全27施設</span>
+            <span class="realtime-status-info" id="realtimeStatusInfo"></span>
+          </div>
+          <div class="status-right">
+            <!-- 表示モード切り替え -->
+            <div class="view-mode-switcher" role="group" aria-label="一覧の表示形式">
+              <button type="button" class="view-mode-btn active" id="btnViewCards" title="詳細カード形式で表示">
+                <span>📋 詳細カード</span>
+              </button>
+              <button type="button" class="view-mode-btn" id="btnViewTable" title="コンパクトな一覧表で表示">
+                <span>📑 コンパクト一覧表</span>
+              </button>
+            </div>
+            <button type="button" class="btn-reset-filters" id="resetFilterBtn">条件をリセット</button>
+          </div>
         </div>
       </section>
 
       <!-- 施設カード一覧コンテナ -->
-      <section aria-labelledby="facilityListHeading">
-        <h2 id="facilityListHeading" class="visually-hidden">施設詳細カード一覧</h2>
+      <section aria-labelledby="facilityListHeading" class="facility-list-section">
+        <h2 id="facilityListHeading" class="visually-hidden">施設詳細一覧</h2>
+
+        <!-- 詳細カード表示 -->
         <div class="facility-cards-container" id="facilityCardsContainer">
+          <!-- JavaScriptにより動的レンダリングされます -->
+        </div>
+
+        <!-- コンパクト一覧表表示（デフォルト非表示） -->
+        <div class="facility-table-container" id="facilityTableContainer" style="display: none;">
           <!-- JavaScriptにより動的レンダリングされます -->
         </div>
       </section>
@@ -214,6 +270,6 @@
 
   <script src="org-site.js?v=20260907-2"></script>
   <script src="vendor/leaflet/leaflet.js"></script>
-  <script src="uto-public-services.js?v=20260923-2"></script>
+  <script src="uto-public-services.js?v=20260923-3"></script>
 </body>
 </html>

@@ -489,6 +489,76 @@
   margin-bottom: 28px;
 }
 
+/* かんたん目的・シーン別クイックタグ */
+.toolbar-quick-tags {
+  background: #f8fafc;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 18px;
+}
+
+.quick-tag-label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.quick-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.quick-tag-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #334155;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.quick-tag-btn:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+}
+
+.quick-tag-btn.active {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.35);
+}
+
+.quick-tag-fav {
+  border-color: #fde68a;
+  background: #fffbeb;
+  color: #b45309;
+}
+
+.quick-tag-fav:hover {
+  background: #fef3c7;
+  border-color: #f59e0b;
+}
+
+.quick-tag-fav.active {
+  background: #d97706;
+  color: #ffffff;
+  border-color: #d97706;
+  box-shadow: 0 2px 6px rgba(217, 119, 6, 0.35);
+}
+
 .toolbar-search-box {
   margin-bottom: 20px;
 }
@@ -533,6 +603,14 @@
   margin-bottom: 0;
 }
 
+.filter-row-multi {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
 .filter-label {
   display: block;
   font-size: 0.8125rem;
@@ -575,15 +653,92 @@
   box-shadow: 0 2px 6px rgba(15, 76, 129, 0.3);
 }
 
+/* 地域フィルター専用デザイン */
+.filter-buttons-area .filter-btn.active {
+  background: #0d9488;
+  border-color: #0d9488;
+  box-shadow: 0 2px 6px rgba(13, 148, 136, 0.3);
+}
+
+/* 開館中トグルスイッチ */
+.open-now-toggle-wrap {
+  padding-bottom: 2px;
+}
+
+.toggle-switch-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1e293b;
+  background: #f8fafc;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  border: 1px solid #cbd5e1;
+  user-select: none;
+  transition: all 0.15s ease;
+}
+
+.toggle-switch-label:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.toggle-switch-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toggle-switch-slider {
+  width: 38px;
+  height: 22px;
+  background-color: #cbd5e1;
+  border-radius: 9999px;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-switch-slider::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch-input:checked + .toggle-switch-slider {
+  background-color: #16a34a;
+}
+
+.toggle-switch-input:checked + .toggle-switch-slider::before {
+  transform: translateX(16px);
+}
+
+/* ツールバー状態行 */
 .toolbar-status-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin-top: 18px;
-  padding-top: 14px;
+  margin-top: 20px;
+  padding-top: 16px;
   border-top: 1px solid #f1f5f9;
-  gap: 10px;
+  gap: 12px;
+}
+
+.status-left, .status-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .facility-count {
@@ -592,12 +747,53 @@
   color: #0284c7;
 }
 
+.realtime-status-info {
+  font-size: 0.75rem;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+/* 表示モード切替スイッチャー */
+.view-mode-switcher {
+  display: inline-flex;
+  background: #f1f5f9;
+  padding: 3px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.view-mode-btn {
+  border: none;
+  background: transparent;
+  padding: 5px 12px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #64748b;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.view-mode-btn:hover {
+  color: #0f172a;
+}
+
+.view-mode-btn.active {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
 .btn-reset-filters {
   background: transparent;
   border: 1px solid #cbd5e1;
-  padding: 5px 12px;
-  border-radius: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
   font-size: 0.8125rem;
+  font-weight: 600;
   color: #64748b;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -606,6 +802,7 @@
 .btn-reset-filters:hover {
   background: #f1f5f9;
   color: #0f172a;
+  border-color: #94a3b8;
 }
 
 /* 施設カードグリッド */
@@ -647,11 +844,20 @@
   border-bottom: 1px solid #f1f5f9;
 }
 
+.service-card-meta-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
 .service-card-badges {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
-  margin-bottom: 12px;
 }
 
 .service-badge-cat {
@@ -659,6 +865,99 @@
   font-weight: 700;
   padding: 3px 10px;
   border-radius: 6px;
+}
+
+.service-badge-area {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0d9488;
+  background: #f0fdfa;
+  border: 1px solid #ccfbf1;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* 開館ステータスバッジ */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 9999px;
+  line-height: 1.2;
+}
+
+.status-badge.status-open {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+}
+
+.status-badge.status-closed {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+}
+
+.status-badge.status-ended {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+}
+
+.status-badge.status-upcoming {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+/* お気に入りボタン */
+.btn-card-fav {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #64748b;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-card-fav:hover {
+  background: #fffbeb;
+  color: #b45309;
+  border-color: #fde68a;
+}
+
+.btn-card-fav.is-fav {
+  background: #fef3c7;
+  color: #b45309;
+  border-color: #f59e0b;
+  box-shadow: 0 1px 4px rgba(245, 158, 11, 0.2);
+}
+
+/* 特徴クイックタグ（チップ） */
+.card-service-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0 6px;
+}
+
+.card-chip {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0369a1;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  padding: 2px 8px;
+  border-radius: 4px;
 }
 
 .service-badge-target {
@@ -943,6 +1242,110 @@
   font-size: 0.8125rem;
   color: #64748b;
   line-height: 1.4;
+}
+
+/* コンパクト一覧表 */
+.facility-table-container {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e2e8f0;
+  overflow-x: auto;
+  margin-bottom: 40px;
+}
+
+.uto-compact-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.uto-compact-table th {
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 700;
+  padding: 14px 16px;
+  border-bottom: 2px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.uto-compact-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.uto-compact-table tr:hover {
+  background: #f8fafc;
+}
+
+.table-facility-name b {
+  display: block;
+  color: #0f172a;
+  font-size: 0.9375rem;
+  margin-bottom: 2px;
+}
+
+.table-facility-name small {
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.table-actions {
+  display: flex;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.table-btn {
+  padding: 5px 9px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  border: none;
+}
+
+.table-btn-map {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+.table-btn-map:hover {
+  background: #0369a1;
+}
+
+.table-btn-route {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.table-btn-route:hover {
+  background: #e2e8f0;
+}
+
+/* 印刷用対応 */
+@media print {
+  .site-header, .site-footer, .uto-services-nav-box, .uto-toolbar-section, .btn-focus-map, .btn-route-map, .btn-card-fav, .view-mode-switcher {
+    display: none !important;
+  }
+  .uto-services-shell {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .uto-service-card {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    margin-bottom: 16px !important;
+  }
 }
 
 /* レスポンシブ対応 */

@@ -23,6 +23,12 @@ assert.ok(html.includes('id="facilityCardsContainer"'), "施設カードコン�
 assert.ok(html.includes('id="serviceSearchInput"'), "検索入力欄がありません");
 assert.ok(html.includes('id="catFilterGroup"'), "カテゴリフィルターがありません");
 assert.ok(html.includes('id="targetFilterGroup"'), "対象者フィルターがありません");
+assert.ok(html.includes('id="areaFilterGroup"'), "地域フィルターがありません");
+assert.ok(html.includes('id="quickTagsGroup"'), "クイックタググループがありません");
+assert.ok(html.includes('id="openNowCheckbox"'), "開館中トグルがありません");
+assert.ok(html.includes('id="facilityTableContainer"'), "コンパクト一覧テーブルコンテナがありません");
+assert.ok(html.includes('id="btnViewCards"'), "カード表示切り替えボタンがありません");
+assert.ok(html.includes('id="btnViewTable"'), "テーブル表示切り替えボタンがありません");
 assert.ok(html.includes('id="btnResetMapView"'), "全体表示リセットボタンがありません");
 assert.ok(html.includes('id="btnLocateUser"'), "現在地ボタンがありません");
 assert.ok(html.includes('id="btnToggleFullscreen"'), "全画面切り替えボタンがありません");
@@ -36,6 +42,9 @@ const css = fs.readFileSync(cssPath, "utf8");
 assert.ok(css.includes("#publicServicesMap"), "地図コンテナのスタイルがありません");
 assert.ok(css.includes(".uto-service-card"), "施設カードのスタイルがありません");
 assert.ok(css.includes(".uto-map-pin"), "カスタムピンのスタイルがありません");
+assert.ok(css.includes(".status-badge"), "開館状況バッジのスタイルがありません");
+assert.ok(css.includes(".btn-card-fav"), "お気に入りボタンのスタイルがありません");
+assert.ok(css.includes(".uto-compact-table"), "コンパクトテーブルのスタイルがありません");
 
 // 3. JSファイルの検証とデータ構造の検査
 const jsPath = path.join(root, "uto-public-services.js");
@@ -55,6 +64,7 @@ const facilities = context.facilities;
 assert.equal(facilities.length, 27, `施設数は27件である必要があります（現在: ${facilities.length}件）`);
 
 const expectedCats = new Set(["admin", "child", "health", "welfare", "culture", "sports", "safety"]);
+const expectedAreas = new Set(["central", "west", "north"]);
 const foundCats = new Set();
 const seenIds = new Set();
 
@@ -73,6 +83,11 @@ for (const f of facilities) {
 
   assert.ok(expectedCats.has(f.cat), `未知のカテゴリです: ${f.cat} in ${f.name}`);
   foundCats.add(f.cat);
+
+  assert.ok(expectedAreas.has(f.area), `未知のエリアです: ${f.area} in ${f.name}`);
+  assert.ok(f.areaLabel, `エリア名が未定義: ${f.name}`);
+  assert.ok(Array.isArray(f.openDays) && f.openDays.length > 0, `営業曜日が未定義: ${f.name}`);
+  assert.ok(Array.isArray(f.quickTags) && f.quickTags.length > 0, `クイックタグが未定義: ${f.name}`);
 
   assert.ok(Array.isArray(f.target) && f.target.length > 0, `対象者が未定義: ${f.name}`);
   assert.ok(f.targetLabel, `対象者ラベルが未定義: ${f.name}`);

@@ -14,6 +14,13 @@
     safety: { label: "防災・消防", color: "#d97706", bg: "#fffbeb", icon: "🚒" }
   };
 
+  // エリア定義
+  const AREAS = {
+    central: "中心部（市役所・宇土駅周辺）",
+    west: "西部（網津・網田・赤瀬）",
+    north: "北部・東部（緑川・走潟・花園）"
+  };
+
   // 宇土市 27施設の公式データ
   const FACILITIES = [
     // 1. 行政窓口
@@ -22,13 +29,20 @@
       name: "宇土市役所（本庁舎）",
       ruby: "うとしやくしょ ほんちょうしゃ",
       cat: "admin",
+      area: "central",
+      areaLabel: "中心部（市役所・駅周辺）",
       target: ["all"],
       targetLabel: "全市民・市外からの転入者・事業者",
       address: "宇土市浦田町51",
       lat: 32.687169,
       lng: 130.659132,
-      hours: "平日 8:30〜17:15（毎週木曜窓口延長時は一部証明交付可）",
-      closed: "土曜・日曜・祝日・年末年始（12/29〜1/3）",
+      hours: "平日 8:30〜17:15（木曜一部窓口延長）",
+      closed: "土曜・日曜・祝日・年末年始",
+      openDays: [1, 2, 3, 4, 5],
+      openTime: "08:30",
+      closeTime: "17:15",
+      isFree: false,
+      quickTags: ["#証明窓口", "#マイナンバー", "#無料駐車場250台", "#授乳室完備"],
       fee: "窓口相談無料（各種証明書発行・手数料は所定料金）",
       parking: "あり（市役所立体・平面駐車場 約250台・無料）",
       phone: "0964-22-1111",
@@ -54,6 +68,8 @@
       name: "宇土市 網津支所（網津防災センター内）",
       ruby: "うとし おうづししょ",
       cat: "admin",
+      area: "west",
+      areaLabel: "西部（網津・網田）",
       target: ["all", "senior"],
       targetLabel: "網津・住吉・西部地域住民・全市民",
       address: "宇土市網津町1991-1",
@@ -61,6 +77,11 @@
       lng: 130.600871,
       hours: "平日 8:30〜17:15",
       closed: "土曜・日曜・祝日・年末年始",
+      openDays: [1, 2, 3, 4, 5],
+      openTime: "08:30",
+      closeTime: "17:15",
+      isFree: false,
+      quickTags: ["#西部行政窓口", "#証明交付", "#税金納付", "#駐車場30台"],
       fee: "窓口相談無料（証明書交付は所定手数料）",
       parking: "あり（約30台・無料）",
       phone: "0964-24-3211",
@@ -82,6 +103,8 @@
       name: "宇土市 網田支所（網田コミセン「しとらす」内）",
       ruby: "うとし おうだししょ",
       cat: "admin",
+      area: "west",
+      areaLabel: "西部（網津・網田）",
       target: ["all", "senior"],
       targetLabel: "網田・赤瀬・西部地域住民・全市民",
       address: "宇土市下網田町1819",
@@ -89,6 +112,11 @@
       lng: 130.550636,
       hours: "平日 8:30〜17:15",
       closed: "土曜・日曜・祝日・年末年始",
+      openDays: [1, 2, 3, 4, 5],
+      openTime: "08:30",
+      closeTime: "17:15",
+      isFree: false,
+      quickTags: ["#コミセンしとらす", "#証明交付", "#マイナンバー", "#駐車場50台"],
       fee: "窓口相談無料（証明書交付は所定手数料）",
       parking: "あり（網田コミセン駐車場 約50台・無料）",
       phone: "0964-27-1111",
@@ -112,6 +140,8 @@
       name: "つどいの広場サンサン（宇土市保健センター2F）",
       ruby: "つどいのひろば さんさん",
       cat: "child",
+      area: "central",
+      areaLabel: "中心部（保健センター内）",
       target: ["infant"],
       targetLabel: "おおむね0歳〜3歳児の乳幼児とその保護者（妊婦含む）",
       address: "宇土市南段原町164-3 宇土市保健センター2階",
@@ -119,6 +149,11 @@
       lng: 130.662452,
       hours: "火曜〜土曜 9:30〜12:00／13:30〜16:00",
       closed: "日曜・月曜・祝日・年末年始",
+      openDays: [2, 3, 4, 5, 6],
+      openTime: "09:30",
+      closeTime: "16:00",
+      isFree: true,
+      quickTags: ["#完全無料", "#土曜も開館", "#乳幼児遊び場", "#育児相談", "#授乳室完備"],
       fee: "完全無料（利用登録・予約不要、入退室自由）",
       parking: "あり（保健センター駐車場 約40台・無料）",
       phone: "0964-22-2408",
@@ -141,6 +176,8 @@
       name: "子育て支援センターひまわり",
       ruby: "こそだてしえんせんたー ひまわり",
       cat: "child",
+      area: "central",
+      areaLabel: "中心部（南段原町）",
       target: ["infant"],
       targetLabel: "未就学児（0歳〜就学前）とその保護者・祖父母",
       address: "宇土市南段原町56-3 城東ビル2F",
@@ -148,6 +185,11 @@
       lng: 130.664800,
       hours: "月曜〜金曜 9:30〜15:00",
       closed: "土曜・日曜・祝日・年末年始",
+      openDays: [1, 2, 3, 4, 5],
+      openTime: "09:30",
+      closeTime: "15:00",
+      isFree: true,
+      quickTags: ["#未就学児広場", "#離乳食相談", "#手作りおやつ", "#無料"],
       fee: "無料（事前予約不要・いつでも自由利用可）",
       parking: "あり（専用5台程度、満車時はスタッフへ声掛け）",
       phone: "0964-22-7033",
@@ -169,6 +211,8 @@
       name: "子育てつどいの広場緑川",
       ruby: "こそだてつどいのひろば みどりかわ",
       cat: "child",
+      area: "north",
+      areaLabel: "北部・東部（緑川）",
       target: ["infant"],
       targetLabel: "乳幼児とその保護者・ファミリー",
       address: "宇土市野鶴町353",
@@ -176,6 +220,11 @@
       lng: 130.631000,
       hours: "月曜〜土曜 9:30〜14:30",
       closed: "日曜・祝日・年末年始",
+      openDays: [1, 2, 3, 4, 5, 6],
+      openTime: "09:30",
+      closeTime: "14:30",
+      isFree: true,
+      quickTags: ["#土曜も開館", "#広い園庭外遊び", "#大型遊具", "#育児相談", "#無料"],
       fee: "無料",
       parking: "あり（約8台・無料）",
       phone: "0964-22-0321",
@@ -197,6 +246,8 @@
       name: "網津つくしんぼ広場",
       ruby: "おうづつくしんぼひろば",
       cat: "child",
+      area: "west",
+      areaLabel: "西部（網津）",
       target: ["infant"],
       targetLabel: "西部・網津地区の乳幼児と保護者・全市民",
       address: "宇土市網津町2032",
@@ -204,6 +255,11 @@
       lng: 130.599500,
       hours: "月曜〜金曜 9:30〜14:30",
       closed: "土曜・日曜・祝日・年末年始",
+      openDays: [1, 2, 3, 4, 5],
+      openTime: "09:30",
+      closeTime: "14:30",
+      isFree: true,
+      quickTags: ["#令和7年新設", "#西部子育て拠点", "#絵本・知育玩具", "#無料"],
       fee: "無料",
       parking: "あり（無料）",
       phone: "0964-24-3332",
@@ -224,6 +280,8 @@
       name: "コミュニティーガーデン くるくる",
       ruby: "こみゅにてぃーがーでん くるくる",
       cat: "child",
+      area: "north",
+      areaLabel: "北部・東部（神馬町）",
       target: ["infant", "all"],
       targetLabel: "未就学児親子・地域住民・多世代",
       address: "宇土市神馬町308-1",
@@ -231,6 +289,11 @@
       lng: 130.637000,
       hours: "月曜〜土曜 9:30〜14:30",
       closed: "年末年始",
+      openDays: [1, 2, 3, 4, 5, 6],
+      openTime: "09:30",
+      closeTime: "14:30",
+      isFree: true,
+      quickTags: ["#土曜も開館", "#芝生ピクニック", "#カフェ併設", "#多世代交流"],
       fee: "施設利用無料（カフェメニュー等は実費）",
       parking: "あり（無料）",
       phone: "0964-24-6300",
@@ -251,6 +314,8 @@
       name: "お出かけつどいの広場（長浜福祉館内）",
       ruby: "おでかけつどいのひろば ながはまふくしかん",
       cat: "child",
+      area: "west",
+      areaLabel: "西部（長浜）",
       target: ["infant"],
       targetLabel: "長浜・網田周辺の乳幼児と保護者",
       address: "宇土市長浜町411-2 長浜福祉館内",
@@ -258,6 +323,11 @@
       lng: 130.565012,
       hours: "毎週月曜 10:00〜15:00",
       closed: "火曜〜日曜・祝日・年末年始",
+      openDays: [1],
+      openTime: "10:00",
+      closeTime: "15:00",
+      isFree: true,
+      quickTags: ["#出張定期広場", "#毎週月曜開催", "#乳幼児相談", "#無料"],
       fee: "無料（予約不要）",
       parking: "あり（長浜福祉館駐車場 無料）",
       phone: "0964-22-2408",
@@ -277,13 +347,20 @@
       name: "宇土市児童センター",
       ruby: "うとし じどうせんたー",
       cat: "child",
+      area: "central",
+      areaLabel: "中心部（北段原町）",
       target: ["child"],
       targetLabel: "0歳〜18歳未満の児童生徒およびその保護者",
       address: "宇土市北段原町27-2",
       lat: 32.684500,
       lng: 130.660500,
       hours: "火曜〜日曜 9:00〜17:00",
-      closed: "毎週月曜・第1日曜（8月除く）・祝日・年末年始",
+      closed: "毎週月曜・第1日曜・祝日・年末年始",
+      openDays: [0, 2, 3, 4, 5, 6],
+      openTime: "09:00",
+      closeTime: "17:00",
+      isFree: true,
+      quickTags: ["#土日も開館", "#室内スポーツ", "#卓球・図書室", "#放課後無料"],
       fee: "入館・利用無料",
       parking: "あり（無料）",
       phone: "0964-23-3303",
@@ -307,6 +384,8 @@
       name: "宇土市保健センター（健康づくり課・こども家庭センター）",
       ruby: "うとし ほけんせんたー",
       cat: "health",
+      area: "central",
+      areaLabel: "中心部（南段原町）",
       target: ["all", "infant"],
       targetLabel: "全市民・妊産婦・乳幼児・高齢者",
       address: "宇土市南段原町164-3",
@@ -314,6 +393,11 @@
       lng: 130.662452,
       hours: "平日 8:30〜17:15（各種健診等は指定日時）",
       closed: "土曜・日曜・祝日・年末年始",
+      openDays: [1, 2, 3, 4, 5],
+      openTime: "08:30",
+      closeTime: "17:15",
+      isFree: true,
+      quickTags: ["#集団健診", "#母子手帳交付", "#乳幼児健診", "#予防接種助成"],
       fee: "健康相談無料（集団健診等は受診券に準ずる低額負担・一部無料）",
       parking: "あり（約40台・無料）",
       phone: "0964-27-3324",
@@ -340,6 +424,8 @@
       name: "宇土市福祉センター（宇土市社会福祉協議会）",
       ruby: "うとし ふくしせんたー",
       cat: "welfare",
+      area: "central",
+      areaLabel: "中心部（浦田町）",
       target: ["all", "senior"],
       targetLabel: "生活にお困りの方・高齢者・障害者・ボランティア希望者",
       address: "宇土市浦田町44",
@@ -347,6 +433,11 @@
       lng: 130.658787,
       hours: "平日 8:30〜17:15",
       closed: "土曜・日曜・祝日・年末年始",
+      openDays: [1, 2, 3, 4, 5],
+      openTime: "08:30",
+      closeTime: "17:15",
+      isFree: true,
+      quickTags: ["#社協窓口", "#車いす無料貸出", "#生活困窮相談", "#善意銀行"],
       fee: "相談無料（福祉機器貸出原則無料）",
       parking: "あり（市役所隣接・無料）",
       phone: "0964-23-3776",
@@ -370,6 +461,8 @@
       name: "宇土市老人福祉センター",
       ruby: "うとし ろうじんふくしせんたー",
       cat: "welfare",
+      area: "central",
+      areaLabel: "中心部（新小路町）",
       target: ["senior"],
       targetLabel: "市内在住のおおむね60歳以上の方",
       address: "宇土市新小路町138-2",
@@ -377,6 +470,11 @@
       lng: 130.662812,
       hours: "火曜〜日曜 9:00〜16:30",
       closed: "月曜日・祝日・年末年始",
+      openDays: [0, 2, 3, 4, 5, 6],
+      openTime: "09:00",
+      closeTime: "16:30",
+      isFree: true,
+      quickTags: ["#60歳以上無料", "#土日も開館", "#大広間開放", "#囲碁将棋", "#健康体操"],
       fee: "無料（一部講座の材料費等実費）",
       parking: "あり（市民会館・体育館周辺駐車場利用可）",
       phone: "0964-22-1111",
@@ -397,6 +495,8 @@
       name: "宇土市 西部老人福祉センター",
       ruby: "うとし せいぶろうじんふくしせんたー",
       cat: "welfare",
+      area: "west",
+      areaLabel: "西部（下網田町）",
       target: ["senior"],
       targetLabel: "網田・網津・西部地区にお住まいの60歳以上の方",
       address: "宇土市下網田町1942-1",
@@ -404,6 +504,11 @@
       lng: 130.551331,
       hours: "火曜〜土曜 9:00〜16:00",
       closed: "日曜・月曜・祝日・年末年始",
+      openDays: [2, 3, 4, 5, 6],
+      openTime: "09:00",
+      closeTime: "16:00",
+      isFree: true,
+      quickTags: ["#入浴サービス", "#土曜も開館", "#網田地区", "#シニア交流"],
       fee: "無料（入浴料所定低額）",
       parking: "あり（約20台・無料）",
       phone: "0964-27-0205",
@@ -426,13 +531,20 @@
       name: "宇土市立図書館",
       ruby: "うとしりつ としょかん",
       cat: "culture",
+      area: "central",
+      areaLabel: "中心部（浦田町）",
       target: ["all", "child", "senior"],
       targetLabel: "宇土市在住・在勤・在学の方および近隣自治体住民",
       address: "宇土市浦田町131-1",
       lat: 32.685893,
       lng: 130.657462,
       hours: "火曜〜金曜 9:30〜18:00／土曜・日曜 9:30〜17:00",
-      closed: "毎週月曜（祝日の場合は翌日）・館内整理日（月末）・年末年始・特別図書整理期間",
+      closed: "毎週月曜・館内整理日・年末年始",
+      openDays: [0, 2, 3, 4, 5, 6],
+      openTime: "09:30",
+      closeTime: "18:00",
+      isFree: true,
+      quickTags: ["#蔵書15万冊", "#土日も開館", "#無料Wi-Fi", "#自習スペース", "#読み聞かせ"],
       fee: "閲覧・貸出完全無料",
       parking: "あり（約30台・無料）",
       phone: "0964-22-0941",
@@ -455,6 +567,8 @@
       name: "宇土市民会館",
       ruby: "うとしみんかいかん",
       cat: "culture",
+      area: "central",
+      areaLabel: "中心部（新小路町）",
       target: ["all"],
       targetLabel: "市民・文化団体・各種サークル・一般",
       address: "宇土市新小路町123",
@@ -462,6 +576,11 @@
       lng: 130.661253,
       hours: "9:00〜22:00",
       closed: "月曜日・年末年始",
+      openDays: [0, 2, 3, 4, 5, 6],
+      openTime: "09:00",
+      closeTime: "22:00",
+      isFree: false,
+      quickTags: ["#1000席大ホール", "#土日も開館", "#文化芸術発表", "#大型駐車場200台"],
       fee: "施設貸出は条例規定料金（一般催事鑑賞は公演に準ずる）",
       parking: "あり（市民会館・体育館共用 約200台・無料）",
       phone: "0964-22-0114",
@@ -482,6 +601,8 @@
       name: "宇土市中央公民館",
       ruby: "うとし ちゅうおうこうみんかん",
       cat: "culture",
+      area: "central",
+      areaLabel: "中心部（新小路町）",
       target: ["all"],
       targetLabel: "全市民・自主学習グループ・各種サークル",
       address: "宇土市新小路町96-1",
@@ -489,6 +610,11 @@
       lng: 130.661771,
       hours: "9:00〜22:00（窓口受付は平日17:15まで）",
       closed: "年末年始",
+      openDays: [0, 1, 2, 3, 4, 5, 6],
+      openTime: "09:00",
+      closeTime: "22:00",
+      isFree: false,
+      quickTags: ["#生涯学習講座", "#土日も開館", "#調理実習室", "#サークル活動"],
       fee: "施設利用は所定料金（主催講座等は受講料無料・教材費等実費）",
       parking: "あり（共用駐車場利用）",
       phone: "0964-22-0325",
@@ -509,6 +635,8 @@
       name: "轟公民館（地区公民館）",
       ruby: "とどろきこうみんかん",
       cat: "culture",
+      area: "central",
+      areaLabel: "中心部・南部（石橋町）",
       target: ["all"],
       targetLabel: "轟・石橋地区住民・近隣市民",
       address: "宇土市石橋町10-2",
@@ -516,6 +644,11 @@
       lng: 130.644851,
       hours: "9:00〜22:00（予約利用時）",
       closed: "年末年始",
+      openDays: [0, 1, 2, 3, 4, 5, 6],
+      openTime: "09:00",
+      closeTime: "22:00",
+      isFree: false,
+      quickTags: ["#轟水源近く", "#土日も開館", "#地域コミュニティ", "#集会室利用"],
       fee: "施設利用は所定規定による",
       parking: "あり（約15台・無料）",
       phone: "0964-22-0325",
@@ -535,6 +668,8 @@
       name: "緑川公民館（地区公民館）",
       ruby: "みどりかわこうみんかん",
       cat: "culture",
+      area: "north",
+      areaLabel: "北部・東部（野鶴町）",
       target: ["all"],
       targetLabel: "緑川・野鶴地区住民・近隣市民",
       address: "宇土市野鶴町294-1",
@@ -542,6 +677,11 @@
       lng: 130.630070,
       hours: "9:00〜22:00（予約利用時）",
       closed: "年末年始",
+      openDays: [0, 1, 2, 3, 4, 5, 6],
+      openTime: "09:00",
+      closeTime: "22:00",
+      isFree: false,
+      quickTags: ["#緑川地区", "#土日も開館", "#文教エリア", "#地域活動拠点"],
       fee: "施設利用は所定規定による",
       parking: "あり（約20台・無料）",
       phone: "0964-22-0325",
@@ -561,6 +701,8 @@
       name: "走潟公民館（地区公民館）",
       ruby: "はしりがたこうみんかん",
       cat: "culture",
+      area: "north",
+      areaLabel: "北部・東部（走潟町）",
       target: ["all"],
       targetLabel: "走潟地区住民・全市民",
       address: "宇土市走潟町822",
@@ -568,6 +710,11 @@
       lng: 130.647017,
       hours: "9:00〜22:00（予約利用時）",
       closed: "年末年始",
+      openDays: [0, 1, 2, 3, 4, 5, 6],
+      openTime: "09:00",
+      closeTime: "22:00",
+      isFree: false,
+      quickTags: ["#走潟校区", "#土日も開館", "#防災活動拠点", "#研修室貸出"],
       fee: "施設利用は所定規定による",
       parking: "あり（約20台・無料）",
       phone: "0964-22-0325",
@@ -587,6 +734,8 @@
       name: "網田公民館（地区公民館）",
       ruby: "おうだこうみんかん",
       cat: "culture",
+      area: "west",
+      areaLabel: "西部（下網田町）",
       target: ["all"],
       targetLabel: "網田地区住民・全市民",
       address: "宇土市下網田町566-1",
@@ -594,6 +743,11 @@
       lng: 130.556858,
       hours: "9:00〜22:00（予約利用時）",
       closed: "年末年始",
+      openDays: [0, 1, 2, 3, 4, 5, 6],
+      openTime: "09:00",
+      closeTime: "22:00",
+      isFree: false,
+      quickTags: ["#網田校区", "#土日も開館", "#伝統文化継承", "#地域集会"],
       fee: "施設利用は所定規定による",
       parking: "あり（約15台・無料）",
       phone: "0964-22-0325",
@@ -613,6 +767,8 @@
       name: "花園コミュニティセンター",
       ruby: "はなぞのこみゅにてぃせんたー",
       cat: "culture",
+      area: "north",
+      areaLabel: "北部・東部（古保里町）",
       target: ["all"],
       targetLabel: "花園校区住民・全市民",
       address: "宇土市古保里町977",
@@ -620,6 +776,11 @@
       lng: 130.683304,
       hours: "9:00〜22:00",
       closed: "月曜日・年末年始",
+      openDays: [0, 2, 3, 4, 5, 6],
+      openTime: "09:00",
+      closeTime: "22:00",
+      isFree: false,
+      quickTags: ["#花園校区", "#土日も開館", "#学童クラブ隣接", "#多目的集会室"],
       fee: "施設利用は所定規定による",
       parking: "あり（花園小隣接 約30台・無料）",
       phone: "0964-22-1111",
@@ -642,13 +803,20 @@
       name: "ecowin宇土アリーナ（宇土市民体育館）",
       ruby: "えこうぃん うとありーな（うとしみんたいいくかん）",
       cat: "sports",
+      area: "central",
+      areaLabel: "中心部（旭町）",
       target: ["all"],
       targetLabel: "全市民・スポーツ愛好者・少年少女スポーツクラブ・一般",
       address: "宇土市旭町504",
       lat: 32.684215,
       lng: 130.664516,
       hours: "火曜〜土曜 9:00〜22:00／日曜・祝日 9:00〜17:00",
-      closed: "毎週月曜日（祝日の場合は翌日）・年末年始",
+      closed: "毎週月曜日・年末年始",
+      openDays: [0, 2, 3, 4, 5, 6],
+      openTime: "09:00",
+      closeTime: "22:00",
+      isFree: false,
+      quickTags: ["#冷暖房完備", "#トレーニング室", "#土日も開館", "#駐車場300台"],
       fee: "個人利用低額（トレーニング室1回200円等・専用貸切は所定料金）",
       parking: "あり（アリーナ・運動公園駐車場 約300台・無料）",
       phone: "0964-23-0105",
@@ -670,13 +838,20 @@
       name: "宇土市スポーツセンター",
       ruby: "うとし すぽーつせんたー",
       cat: "sports",
+      area: "north",
+      areaLabel: "北部・東部（花園町）",
       target: ["all"],
       targetLabel: "全市民・野球・陸上・テニス愛好者・学校部活動",
       address: "宇土市花園町523-2",
       lat: 32.677037,
       lng: 130.694326,
       hours: "8:30〜21:30（夜間照明設備あり）",
-      closed: "年末年始（悪天候時整備休止あり）",
+      closed: "年末年始",
+      openDays: [0, 1, 2, 3, 4, 5, 6],
+      openTime: "08:30",
+      closeTime: "21:30",
+      isFree: false,
+      quickTags: ["#市営野球場", "#陸上トラック", "#テニスコート6面", "#ナイター照明"],
       fee: "施設利用料（専用利用は所定規定による）",
       parking: "あり（大型駐車場完備・無料）",
       phone: "0964-22-1111",
@@ -697,13 +872,20 @@
       name: "あじさいの湯（宇土市営温泉施設）",
       ruby: "あじさいのゆ",
       cat: "sports",
+      area: "west",
+      areaLabel: "西部（網津）",
       target: ["all", "senior"],
       targetLabel: "全市民・高齢者・観光客・一般",
       address: "宇土市網津町2283",
       lat: 32.689157,
       lng: 130.598309,
       hours: "10:00〜21:00（受付は20:30まで）",
-      closed: "第2・第4水曜日（祝日の場合は翌日）・年末年始",
+      closed: "第2・第4水曜日・年末年始",
+      openDays: [0, 1, 2, 4, 5, 6],
+      openTime: "10:00",
+      closeTime: "21:00",
+      isFree: false,
+      quickTags: ["#天然温泉", "#サウナ露天", "#シニア割引", "#大広間休憩", "#駐車場50台"],
       fee: "入浴料：大人400円、高齢者（宇土市内65歳以上）300円、小人200円",
       parking: "あり（約50台・無料）",
       phone: "0964-24-3456",
@@ -726,6 +908,8 @@
       name: "宇城広域連合 北消防署",
       ruby: "うきこういきれんごう きたしょうぼうしょ",
       cat: "safety",
+      area: "central",
+      areaLabel: "中心部（境目町）",
       target: ["all"],
       targetLabel: "宇土市民・宇城広域圏住民",
       address: "宇土市境目町427",
@@ -733,6 +917,11 @@
       lng: 130.668000,
       hours: "24時間（火災・救急出動）／窓口受付：平日 8:30〜17:15",
       closed: "年中無休（窓口業務は土日祝休）",
+      openDays: [0, 1, 2, 3, 4, 5, 6],
+      openTime: "00:00",
+      closeTime: "23:59",
+      isFree: true,
+      quickTags: ["#24時間体制", "#救命救急", "#AED講習", "#防災拠点"],
       fee: "消防救急出動・救命講習無料",
       parking: "あり（来署者用無料）",
       phone: "0964-22-0119",
@@ -754,13 +943,20 @@
       name: "網津防災センター",
       ruby: "おうづぼうさいせんたー",
       cat: "safety",
+      area: "west",
+      areaLabel: "西部（網津）",
       target: ["all"],
       targetLabel: "網津・西部地区住民・全市民",
       address: "宇土市網津町1991-1",
       lat: 32.696676,
       lng: 130.600871,
-      hours: "通常開庁：平日 8:30〜17:15（災害時24時間警戒・避難所開設）",
+      hours: "平日 8:30〜17:15（災害時24時間警戒・避難所開設）",
       closed: "土日祝（災害警戒時は即時開設）",
+      openDays: [1, 2, 3, 4, 5],
+      openTime: "08:30",
+      closeTime: "17:15",
+      isFree: true,
+      quickTags: ["#一時避難所", "#高台避難", "#非常用備蓄物資", "#駐車場30台"],
       fee: "無料",
       parking: "あり（約30台・無料）",
       phone: "0964-24-3211",
@@ -781,26 +977,103 @@
   // Google Maps経路URL生成
   const mapsUrl = (item) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`宇土市 ${item.name} ${item.address}`)}`;
 
+  // お気に入り（localStorage）管理
+  const FAV_STORAGE_KEY = "yokatai_uto_fav_facilities";
+  function loadFavorites() {
+    try {
+      const saved = localStorage.getItem(FAV_STORAGE_KEY);
+      return new Set(saved ? JSON.parse(saved) : []);
+    } catch {
+      return new Set();
+    }
+  }
+  function saveFavorites(set) {
+    try {
+      localStorage.setItem(FAV_STORAGE_KEY, JSON.stringify([...set]));
+    } catch {}
+  }
+  let favorites = loadFavorites();
+
+  // 開館ステータス判定
+  function getFacilityOpenStatus(f, now = new Date()) {
+    const day = now.getDay(); // 0:日, 1:月...6:土
+    const curMinutes = now.getHours() * 60 + now.getMinutes();
+
+    if (!f.openDays || !f.openDays.includes(day)) {
+      return { isOpen: false, badgeClass: "status-closed", text: "⚪ 本日休館", detail: f.closed };
+    }
+
+    if (f.openTime && f.closeTime) {
+      const [oh, om] = f.openTime.split(":").map(Number);
+      const [ch, cm] = f.closeTime.split(":").map(Number);
+      const oMin = oh * 60 + om;
+      const cMin = ch * 60 + cm;
+
+      if (curMinutes >= oMin && curMinutes < cMin) {
+        return { isOpen: true, badgeClass: "status-open", text: `🟢 開館中（〜${f.closeTime}）`, detail: f.hours };
+      } else if (curMinutes < oMin) {
+        return { isOpen: false, badgeClass: "status-upcoming", text: `🟡 本日 ${f.openTime}〜 開館`, detail: f.hours };
+      } else {
+        return { isOpen: false, badgeClass: "status-ended", text: "🔴 本日受付終了", detail: f.hours };
+      }
+    }
+
+    return { isOpen: true, badgeClass: "status-open", text: "🟢 利用可能", detail: f.hours };
+  }
+
   // DOM要素
   const mapElement = document.getElementById("publicServicesMap");
   const cardsContainer = document.getElementById("facilityCardsContainer");
+  const tableContainer = document.getElementById("facilityTableContainer");
   const countDisplay = document.getElementById("facilityResultCount");
+  const realtimeInfoDisplay = document.getElementById("realtimeStatusInfo");
   const searchInput = document.getElementById("serviceSearchInput");
   const catFilterContainer = document.getElementById("catFilterGroup");
   const targetFilterContainer = document.getElementById("targetFilterGroup");
+  const areaFilterContainer = document.getElementById("areaFilterGroup");
+  const quickTagsContainer = document.getElementById("quickTagsGroup");
+  const openNowCheckbox = document.getElementById("openNowCheckbox");
   const resetBtn = document.getElementById("resetFilterBtn");
   const gestureHint = document.getElementById("mapGestureHint");
   const btnResetMap = document.getElementById("btnResetMapView");
   const btnLocate = document.getElementById("btnLocateUser");
   const btnFullscreen = document.getElementById("btnToggleFullscreen");
+  const btnViewCards = document.getElementById("btnViewCards");
+  const btnViewTable = document.getElementById("btnViewTable");
+  const favCountDisplay = document.getElementById("favCount");
 
   let activeCat = "all";
   let activeTarget = "all";
+  let activeArea = "all";
+  let activeQuickTag = null;
+  let openNowOnly = false;
   let searchQuery = "";
+  let currentViewMode = "cards"; // "cards" or "table"
   let map = null;
   let markers = [];
   let userLocationMarker = null;
   let hintTimer = null;
+
+  // お気に入りカウント更新
+  function updateFavCount() {
+    if (favCountDisplay) {
+      favCountDisplay.textContent = String(favorites.size);
+    }
+  }
+
+  // お気に入りトグル
+  window.toggleFavorite = (id, event) => {
+    if (event) event.stopPropagation();
+    if (favorites.has(id)) {
+      favorites.delete(id);
+    } else {
+      favorites.add(id);
+    }
+    saveFavorites(favorites);
+    updateFavCount();
+    renderCards();
+    renderTable();
+  };
 
   // ジェスチャーヒント表示（Google Maps風スクロール誘導）
   function showGestureHint() {
@@ -816,9 +1089,8 @@
   function initMap() {
     if (!window.L || !mapElement) return;
 
-    // 宇土市全体を見渡す中心位置 (市役所と網津・網田の中間付近)
     map = L.map("publicServicesMap", {
-      scrollWheelZoom: false, // ページ閲覧中の意図しないズーム暴発を防止
+      scrollWheelZoom: false,
       zoomControl: true,
       inertia: true,
       inertiaDeceleration: 3000,
@@ -838,21 +1110,17 @@
     // マウス操作性・スクロールジェスチャー制御
     mapElement.addEventListener("wheel", (e) => {
       if (e.ctrlKey || e.metaKey) {
-        // Ctrl または ⌘ キー押下時はスムーズにホイールズームを許可
         map.scrollWheelZoom.enable();
       } else {
-        // キーなしの時は地図ズームを無効化し、ヒントを表示して通常のページスクロールを通す
         map.scrollWheelZoom.disable();
         showGestureHint();
       }
     }, { passive: true });
 
-    // 地図をクリックした時は直接ホイールズームを有効化
     map.on("click", () => {
       map.scrollWheelZoom.enable();
     });
 
-    // マウスが地図エリアから離れたら安全のためホイールズームを無効化
     mapElement.addEventListener("mouseleave", () => {
       map.scrollWheelZoom.disable();
     });
@@ -864,17 +1132,17 @@
   function updateMarkers() {
     if (!map) return;
 
-    // 既存マーカークリア
     markers.forEach(m => map.removeLayer(m));
     markers = [];
 
     const visibleItems = getFilteredFacilities();
     const bounds = [];
+    const now = new Date();
 
     visibleItems.forEach((f) => {
       const catInfo = CATEGORIES[f.cat] || CATEGORIES.admin;
+      const status = getFacilityOpenStatus(f, now);
 
-      // カスタムピン作成
       const customIcon = L.divIcon({
         className: "uto-map-pin-wrap",
         html: `<div class="uto-map-pin" id="pin-${f.id}" style="background:${catInfo.color}; border-color:#fff;" title="${f.name}">
@@ -887,9 +1155,12 @@
 
       const popupHtml = `
         <div class="uto-map-popup">
-          <div class="popup-cat-badge" style="background:${catInfo.bg}; color:${catInfo.color};">${catInfo.icon} ${catInfo.label}</div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <div class="popup-cat-badge" style="background:${catInfo.bg}; color:${catInfo.color};">${catInfo.icon} ${catInfo.label}</div>
+            <span class="status-badge ${status.badgeClass}" style="font-size:0.7rem; padding:2px 6px;">${status.text}</span>
+          </div>
           <h4 class="popup-title">${f.name}</h4>
-          <p class="popup-addr">📍 ${f.address}</p>
+          <p class="popup-addr">📍 ${f.address} <small style="color:#0d9488;">(${f.areaLabel})</small></p>
           <p class="popup-hours">⏰ ${f.hours}</p>
           <div class="popup-services">
             <b>主な公的サービス：</b>
@@ -906,7 +1177,6 @@
 
       const marker = L.marker([f.lat, f.lng], { icon: customIcon }).addTo(map);
 
-      // ポップアップ設定：位置ズレを防ぐため上下左右にゆとりを持ったautoPanPaddingを指定
       marker.bindPopup(popupHtml, {
         maxWidth: 320,
         minWidth: 260,
@@ -916,7 +1186,6 @@
         closeButton: true
       });
 
-      // マウスホバーで施設名ツールチップ表示
       marker.bindTooltip(f.name, {
         direction: "top",
         offset: [0, -38],
@@ -926,7 +1195,6 @@
       marker.facilityId = f.id;
 
       marker.on("click", () => {
-        // ピンをクリックした時はカードをハイライト（地図位置は崩さない）
         highlightCard(f.id, false);
       });
 
@@ -1008,26 +1276,54 @@
 
   // フィルタリング処理
   function getFilteredFacilities() {
+    const now = new Date();
+
     return FACILITIES.filter(f => {
-      // カテゴリ
+      // 1. カテゴリ
       if (activeCat !== "all" && f.cat !== activeCat) return false;
 
-      // 対象者
+      // 2. 地域・エリア
+      if (activeArea !== "all" && f.area !== activeArea) return false;
+
+      // 3. 対象者
       if (activeTarget !== "all") {
         if (!f.target.includes(activeTarget) && !f.target.includes("all")) {
           return false;
         }
       }
 
-      // 検索クエリ
+      // 4. 開館中のみ
+      if (openNowOnly) {
+        const st = getFacilityOpenStatus(f, now);
+        if (!st.isOpen) return false;
+      }
+
+      // 5. 目的別クイックタグ
+      if (activeQuickTag) {
+        if (activeQuickTag === "childcare" && f.cat !== "child") return false;
+        if (activeQuickTag === "cert" && !f.services.some(s => s.includes("住民票") || s.includes("証明") || s.includes("マイナンバー"))) return false;
+        if (activeQuickTag === "library" && f.id !== "uto_library" && f.id !== "uto_civic_hall") return false;
+        if (activeQuickTag === "senior" && f.cat !== "welfare" && !f.target.includes("senior")) return false;
+        if (activeQuickTag === "sports" && f.cat !== "sports") return false;
+        if (activeQuickTag === "weekend" && !(f.openDays && (f.openDays.includes(0) || f.openDays.includes(6)))) return false;
+        if (activeQuickTag === "parking") {
+          const m = f.parking.match(/(\d+)台/);
+          if (!m || parseInt(m[1], 10) < 30) return false;
+        }
+        if (activeQuickTag === "favorite" && !favorites.has(f.id)) return false;
+      }
+
+      // 6. 検索クエリ
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
         const searchable = [
           f.name,
           f.ruby,
           f.address,
+          f.areaLabel,
           f.desc,
           f.targetLabel,
+          ...(f.quickTags || []),
           ...f.services,
           f.note
         ].join(" ").toLowerCase();
@@ -1040,13 +1336,26 @@
     });
   }
 
+  // リアルタイム日時の表示更新
+  function updateRealtimeStatus() {
+    if (!realtimeInfoDisplay) return;
+    const now = new Date();
+    const days = ["日", "月", "火", "水", "木", "金", "土"];
+    const month = now.getMonth() + 1;
+    const date = now.getDate();
+    const day = days[now.getDay()];
+    const hour = String(now.getHours()).padStart(2, "0");
+    const min = String(now.getMinutes()).padStart(2, "0");
+    realtimeInfoDisplay.textContent = `判定基準：${month}月${date}日(${day}) ${hour}:${min} 現在`;
+  }
+
   // カード一覧レンダリング
   function renderCards() {
     if (!cardsContainer) return;
 
     const filtered = getFilteredFacilities();
+    updateRealtimeStatus();
 
-    // 件数更新
     if (countDisplay) {
       countDisplay.textContent = `表示中：${filtered.length}施設 / 全${FACILITIES.length}施設`;
     }
@@ -1063,19 +1372,30 @@
       return;
     }
 
+    const now = new Date();
+
     cardsContainer.innerHTML = filtered.map((f, idx) => {
       const catInfo = CATEGORIES[f.cat] || CATEGORIES.admin;
       const phoneDigits = f.phone.replace(/[^0-9]/g, "");
+      const isFav = favorites.has(f.id);
+      const status = getFacilityOpenStatus(f, now);
 
       return `
         <article class="uto-service-card" id="card-${f.id}" data-id="${f.id}" data-cat="${f.cat}">
           <header class="service-card-header">
-            <div class="service-card-badges">
-              <span class="service-badge-cat" style="background:${catInfo.bg}; color:${catInfo.color};">
-                ${catInfo.icon} ${catInfo.label}
-              </span>
-              <span class="service-badge-target">対象：${f.targetLabel}</span>
+            <div class="service-card-meta-top">
+              <div class="service-card-badges">
+                <span class="service-badge-cat" style="background:${catInfo.bg}; color:${catInfo.color};">
+                  ${catInfo.icon} ${catInfo.label}
+                </span>
+                <span class="service-badge-area">📍 ${f.areaLabel}</span>
+                <span class="status-badge ${status.badgeClass}">${status.text}</span>
+              </div>
+              <button type="button" class="btn-card-fav ${isFav ? 'is-fav' : ''}" onclick="window.toggleFavorite('${f.id}', event)" title="お気に入り登録">
+                <span>${isFav ? '⭐ 保存済み' : '☆ お気に入り'}</span>
+              </button>
             </div>
+
             <div class="service-card-title-row">
               <span class="service-card-num">${idx + 1}</span>
               <div>
@@ -1083,6 +1403,13 @@
                 <h3 class="service-card-title">${f.name}</h3>
               </div>
             </div>
+
+            ${f.quickTags ? `
+              <div class="card-service-chips">
+                ${f.quickTags.map(tag => `<span class="card-chip">${tag}</span>`).join("")}
+              </div>
+            ` : ""}
+
             <p class="service-card-desc">${f.desc}</p>
           </header>
 
@@ -1112,7 +1439,7 @@
               </div>
               <div class="meta-item">
                 <dt>💴 利用料金・費用</dt>
-                <dd>${f.fee}</dd>
+                <dd>${f.isFree ? '<span style="color:#16a34a; font-weight:700;">🟢 無料</span>' : ''} ${f.fee}</dd>
               </div>
               <div class="meta-item">
                 <dt>🚗 駐車場</dt>
@@ -1144,6 +1471,88 @@
     }).join("");
   }
 
+  // コンパクト一覧表レンダリング
+  function renderTable() {
+    if (!tableContainer) return;
+
+    const filtered = getFilteredFacilities();
+    if (filtered.length === 0) {
+      tableContainer.innerHTML = `<p style="padding:20px; text-align:center; color:#64748b;">条件に一致する公的施設がありません。</p>`;
+      return;
+    }
+
+    const now = new Date();
+
+    tableContainer.innerHTML = `
+      <table class="uto-compact-table">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>施設名・地域</th>
+            <th>分野</th>
+            <th>開館状況</th>
+            <th>開庁・開館日時</th>
+            <th>駐車場</th>
+            <th>電話番号</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${filtered.map((f, idx) => {
+            const catInfo = CATEGORIES[f.cat] || CATEGORIES.admin;
+            const phoneDigits = f.phone.replace(/[^0-9]/g, "");
+            const status = getFacilityOpenStatus(f, now);
+
+            return `
+              <tr>
+                <td><b>${idx + 1}</b></td>
+                <td class="table-facility-name">
+                  <b>${f.name}</b>
+                  <small>📍 ${f.areaLabel}</small>
+                </td>
+                <td>
+                  <span class="service-badge-cat" style="background:${catInfo.bg}; color:${catInfo.color}; font-size:0.75rem;">
+                    ${catInfo.icon} ${catInfo.label}
+                  </span>
+                </td>
+                <td>
+                  <span class="status-badge ${status.badgeClass}">${status.text}</span>
+                </td>
+                <td style="font-size:0.8125rem;">
+                  <div>${f.hours}</div>
+                  <small style="color:#64748b;">休：${f.closed}</small>
+                </td>
+                <td style="font-size:0.8125rem;">${f.parking}</td>
+                <td>
+                  <a class="phone-link" style="font-size:0.875rem;" href="tel:${phoneDigits}">${f.phone}</a>
+                </td>
+                <td>
+                  <div class="table-actions">
+                    <button type="button" class="table-btn table-btn-map" onclick="window.zoomToFacility('${f.id}')">🗺️ 地図</button>
+                    <a href="${mapsUrl(f)}" target="_blank" rel="noopener" class="table-btn table-btn-route">🚗 経路 ↗</a>
+                  </div>
+                </td>
+              </tr>
+            `;
+          }).join("")}
+        </tbody>
+      </table>
+    `;
+  }
+
+  // 表示モード切り替え
+  function setViewMode(mode) {
+    currentViewMode = mode;
+    if (btnViewCards) btnViewCards.classList.toggle("active", mode === "cards");
+    if (btnViewTable) btnViewTable.classList.toggle("active", mode === "table");
+
+    if (cardsContainer) cardsContainer.style.display = mode === "cards" ? "flex" : "none";
+    if (tableContainer) tableContainer.style.display = mode === "table" ? "block" : "none";
+
+    if (mode === "cards") renderCards();
+    else renderTable();
+  }
+
   // カードハイライト＆スクロール
   function highlightCard(id, shouldScroll = true) {
     document.querySelectorAll(".uto-service-card").forEach(c => c.classList.remove("highlighted"));
@@ -1156,32 +1565,26 @@
     }
   }
 
-  // 地図ズーム＆ポップアップ表示（位置ズレ防止オフセット計算付き）
+  // 地図ズーム＆ポップアップ表示
   window.zoomToFacility = (id) => {
     const f = FACILITIES.find(item => item.id === id);
     if (!f || !map) return;
 
-    // 地図セクションへスムーズスクロール（全画面時は不要）
     const mapSection = document.getElementById("utoMapSection");
     if (mapSection && !mapSection.classList.contains("is-fullscreen")) {
       mapSection.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
     const zoomLevel = 16;
-
-    // ポップアップがピン上部に約220px展開されるため、
-    // 地図の中心をピン位置から上（北）へ約95ピクセル分オフセットして投影計算する
     const targetPoint = map.project([f.lat, f.lng], zoomLevel);
     const offsetPoint = L.point(targetPoint.x, targetPoint.y - 95);
     const offsetLatLng = map.unproject(offsetPoint, zoomLevel);
 
-    // スムーズにアニメーション移動
     map.flyTo(offsetLatLng, zoomLevel, {
       duration: 0.8,
       easeLinearity: 0.25
     });
 
-    // 移動の進行に合わせてポップアップを展開（自動パンによるガクつきを防止）
     setTimeout(() => {
       const targetMarker = markers.find(m => m.facilityId === id);
       if (targetMarker) {
@@ -1194,6 +1597,9 @@
 
   // カードへフォーカス
   window.focusFacilityCard = (id) => {
+    if (currentViewMode !== "cards") {
+      setViewMode("cards");
+    }
     highlightCard(id, true);
   };
 
@@ -1201,10 +1607,14 @@
   window.resetAllFilters = () => {
     activeCat = "all";
     activeTarget = "all";
+    activeArea = "all";
+    activeQuickTag = null;
+    openNowOnly = false;
     searchQuery = "";
-    if (searchInput) searchInput.value = "";
 
-    // ボタンUI更新
+    if (searchInput) searchInput.value = "";
+    if (openNowCheckbox) openNowCheckbox.checked = false;
+
     if (catFilterContainer) {
       catFilterContainer.querySelectorAll("button").forEach(b => {
         b.classList.toggle("active", b.dataset.cat === "all");
@@ -1215,13 +1625,60 @@
         b.classList.toggle("active", b.dataset.target === "all");
       });
     }
+    if (areaFilterContainer) {
+      areaFilterContainer.querySelectorAll("button").forEach(b => {
+        b.classList.toggle("active", b.dataset.area === "all");
+      });
+    }
+    if (quickTagsContainer) {
+      quickTagsContainer.querySelectorAll("button").forEach(b => {
+        b.classList.remove("active");
+      });
+    }
 
     renderCards();
+    renderTable();
     updateMarkers();
   };
 
   // イベントリスナー設定
   function setupEvents() {
+    // クイックタグボタン
+    if (quickTagsContainer) {
+      quickTagsContainer.addEventListener("click", (e) => {
+        const btn = e.target.closest("button[data-tag]");
+        if (!btn) return;
+        const tag = btn.dataset.tag;
+
+        if (activeQuickTag === tag) {
+          activeQuickTag = null;
+          btn.classList.remove("active");
+        } else {
+          quickTagsContainer.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          activeQuickTag = tag;
+        }
+
+        renderCards();
+        renderTable();
+        updateMarkers();
+      });
+    }
+
+    // 地域・エリアボタン
+    if (areaFilterContainer) {
+      areaFilterContainer.addEventListener("click", (e) => {
+        const btn = e.target.closest("button[data-area]");
+        if (!btn) return;
+        areaFilterContainer.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeArea = btn.dataset.area;
+        renderCards();
+        renderTable();
+        updateMarkers();
+      });
+    }
+
     // カテゴリボタン
     if (catFilterContainer) {
       catFilterContainer.addEventListener("click", (e) => {
@@ -1231,6 +1688,7 @@
         btn.classList.add("active");
         activeCat = btn.dataset.cat;
         renderCards();
+        renderTable();
         updateMarkers();
       });
     }
@@ -1244,6 +1702,17 @@
         btn.classList.add("active");
         activeTarget = btn.dataset.target;
         renderCards();
+        renderTable();
+        updateMarkers();
+      });
+    }
+
+    // 開館中トグル
+    if (openNowCheckbox) {
+      openNowCheckbox.addEventListener("change", (e) => {
+        openNowOnly = e.target.checked;
+        renderCards();
+        renderTable();
         updateMarkers();
       });
     }
@@ -1253,8 +1722,17 @@
       searchInput.addEventListener("input", (e) => {
         searchQuery = e.target.value.trim();
         renderCards();
+        renderTable();
         updateMarkers();
       });
+    }
+
+    // 表示切り替えボタン
+    if (btnViewCards) {
+      btnViewCards.addEventListener("click", () => setViewMode("cards"));
+    }
+    if (btnViewTable) {
+      btnViewTable.addEventListener("click", () => setViewMode("table"));
     }
 
     // リセットボタン
@@ -1286,8 +1764,10 @@
 
   // 初期化実行
   document.addEventListener("DOMContentLoaded", () => {
+    updateFavCount();
     setupEvents();
     renderCards();
+    renderTable();
     initMap();
   });
 })();
