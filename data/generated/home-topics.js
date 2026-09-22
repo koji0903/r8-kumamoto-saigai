@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-21T20:18:30.531Z",
-  "officialCheckedAt": "9/22 05:18",
+  "retrievedAt": "2026-09-22T00:26:37.177Z",
+  "officialCheckedAt": "9/22 09:26",
   "siteTopics": [
     {
       "date": "2026-09-22",
@@ -60,36 +60,36 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震関連情報",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
+      "date": "2026-09-22",
+      "time": "09:17",
+      "category": "その他",
+      "municipality": "氷川町"
+    },
+    {
+      "title": "避難所開設状況",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
+      "date": "2026-09-22",
+      "time": "08:58",
+      "category": "避難・安全",
+      "municipality": "八代市"
+    },
+    {
+      "title": "2026年09月22日 令和8年熊本地震 関連情報 （9月22日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
+      "date": "2026-09-22",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "宇城市"
+    },
+    {
       "title": "震度速報 9月22日 1時40分",
       "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
       "date": "2026-09-22",
       "time": "01:40",
       "category": "避難・安全",
       "municipality": "山鹿市"
-    },
-    {
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "date": "2026-09-21",
-      "time": "18:10",
-      "category": "その他",
-      "municipality": "八代市"
-    },
-    {
-      "title": "令和8年熊本地震に伴う災害ごみ仮置場への受入れについて",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036755/index.html",
-      "date": "2026-09-21",
-      "time": "18:09",
-      "category": "ごみ・生活",
-      "municipality": "氷川町"
-    },
-    {
-      "title": "2026年9月21日 令和8年熊本地震 関連情報 （9月21日18時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-09-21",
-      "time": "18:00",
-      "category": "その他",
-      "municipality": "宇城市"
     },
     {
       "title": "避難所について（9/19 17:00更新）",
