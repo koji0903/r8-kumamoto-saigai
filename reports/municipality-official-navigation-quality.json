@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-22T11:48:34.730Z",
+  "generatedAt": "2026-09-22T17:02:18.059Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 835,
-  "displayCandidateCount": 571,
-  "classifiedPageCount": 673,
+  "displayCandidateCount": 572,
+  "classifiedPageCount": 674,
   "categoryReport": {
     "home": {
-      "total": 189,
-      "high": 66,
+      "total": 190,
+      "high": 67,
       "medium": 77,
       "low": 46
     },
@@ -19,10 +19,10 @@
       "low": 117
     },
     "documents": {
-      "total": 176,
+      "total": 177,
       "high": 42,
       "medium": 29,
-      "low": 105
+      "low": 106
     },
     "health_care": {
       "total": 46,
@@ -57,8 +57,8 @@
   },
   "municipalityReport": {
     "municipality_kumamoto": {
-      "classified": 66,
-      "displayCandidates": 56,
+      "classified": 67,
+      "displayCandidates": 57,
       "fallback": true
     },
     "municipality_yatsushiro": {
@@ -163,7 +163,7 @@
     }
   },
   "confidence": {
-    "high": 253,
+    "high": 254,
     "medium": 318,
     "low": 102
   },
@@ -302,7 +302,7 @@
     {
       "municipalityName": "上天草市",
       "title": "上天草市令和8年熊本地震利子補給について",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23456.html"
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/141/23456.html"
     },
     {
       "municipalityName": "宇城市",
@@ -365,14 +365,14 @@
       "url": "https://www.town.ashikita.lg.jp/bosai_site/hinan/2025278"
     }
   ],
-  "outOfScopeCount": 85,
+  "outOfScopeCount": 84,
   "outOfScopeByRule": {
     "donation_appeal": 1,
     "hq_meeting_material": 44,
     "public_relations": 9,
     "disaster_preparedness": 5,
     "facility_notice": 5,
-    "index_page": 12,
+    "index_page": 11,
     "mayor_message": 2,
     "mutual_aid": 1,
     "overall_guide": 3,
@@ -738,7 +738,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -763,13 +763,6 @@
       "url": "https://www.city.yamaga.kumamoto.jp/kiji0033149/index.html",
       "ruleId": "mutual_aid",
       "ruleLabel": "他自治体への応援・受援"
-    },
-    {
-      "municipalityName": "山鹿市",
-      "title": "震度速報 9月22日 1時40分",
-      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "菊池市",

@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-22T12:06:44.321Z",
-  "officialCheckedAt": "9/22 21:06",
+  "retrievedAt": "2026-09-22T17:18:54.892Z",
+  "officialCheckedAt": "9/23 02:18",
   "siteTopics": [
     {
       "date": "2026-09-22",
@@ -60,6 +60,14 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "＜ 2026年7月熊本地震 ＞ 災害救助法「被災した住宅の応急修理」制度の案内",
+      "url": "https://www.city.kumamoto.jp/kiji00372104/index.html",
+      "date": "2026-09-23",
+      "time": "00:00",
+      "category": "住まい・証明",
+      "municipality": "熊本市"
+    },
+    {
       "title": "【給水所情報】9月23日（水曜日）",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326773/index.html",
       "date": "2026-09-22",
@@ -84,14 +92,6 @@ window.HOME_TOPICS = {
       "municipality": "宇城市"
     },
     {
-      "title": "震度速報 9月22日 1時40分",
-      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-      "date": "2026-09-22",
-      "time": "01:40",
-      "category": "避難・安全",
-      "municipality": "山鹿市"
-    },
-    {
       "title": "避難所について（9/19 17:00更新）",
       "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
       "date": "2026-09-19",
@@ -106,14 +106,6 @@ window.HOME_TOPICS = {
       "time": "18:30",
       "category": "住まい・証明",
       "municipality": "御船町"
-    },
-    {
-      "title": "「令和8年熊本地震」により被災を受けた方の保健衛生手数料を免除します",
-      "url": "https://www.city.kumamoto.jp/kiji00372879/index.html",
-      "date": "2026-09-18",
-      "time": "17:11",
-      "category": "その他",
-      "municipality": "熊本市"
     },
     {
       "title": "【令和8年熊本地震】（国補助事業）小規模事業者持続化補助金＜一般型 災害支援枠＞",
@@ -178,6 +170,14 @@ window.HOME_TOPICS = {
       "time": "14:00",
       "category": "その他",
       "municipality": "美里町"
+    },
+    {
+      "title": "（令和８年熊本地震関連）営農再開支援事業（ソフト事業）の要望調査について",
+      "url": "https://www.city.yamaga.kumamoto.jp/kiji0033241/index.html",
+      "date": "2026-09-17",
+      "time": "08:48",
+      "category": "支援・制度",
+      "municipality": "山鹿市"
     }
   ],
   "prefectureUpdates": [
