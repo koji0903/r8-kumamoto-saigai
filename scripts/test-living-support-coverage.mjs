@@ -5,8 +5,8 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import {
-  applyCandidateStatuses, buildReport, classifyCandidate, cleanTitle, configPath, diffReports,
-  extractCandidates, indexEntry, isProgramTitle, normalizeTitle, readCards, readJson, reportPath, urlKey
+  applyCandidateStatuses, buildReport, classifyCandidate, cleanTitle, configPath, diffReports, formatSummary,
+  extractCandidates, indexEntry, isDeadStatus, isProgramTitle, normalizeTitle, readCards, readJson, reportPath, urlKey
 } from "./living-support-coverage.mjs";
 
 console.log("暮らしの支援ガイド 掲載カバー率モニタのテスト開始");
@@ -118,6 +118,25 @@ assert.equal(statusReport.summary.staleCandidateCount, 1, "死んだ候補を st
 assert.equal(statusReport.municipalities[0].staleCandidates[0].status, 404, "staleCandidates にステータスを残せていません");
 console.log("候補URLの死活反映 OK");
 
+// 6.5 リンク状態の分類（WAFの403をリンク切れと誤報しない）
+assert.equal(isDeadStatus(404), true, "404はリンク切れです");
+assert.equal(isDeadStatus(410), true, "410はリンク切れです");
+assert.equal(isDeadStatus(0), true, "接続失敗はリンク切れとして扱います");
+for (const status of [403, 429, 500, 503]) {
+  assert.equal(isDeadStatus(status), false, `${status} はリンク切れではなく判定不能として扱います`);
+}
+const blockedReport = buildReport({
+  config, fetched: new Map(), now: "2026-09-22T00:00:00+09:00",
+  deadLinks: [{ page: "uto-support.html", url: "https://example.com/gone", status: 404 }],
+  blockedLinks: [{ page: "uto-support.html", url: "https://example.com/blocked", status: 403 }],
+  indexErrorDetails: [{ url: "https://example.com/index", status: 403 }]
+});
+assert.equal(blockedReport.summary.deadLinkCount, 1, "リンク切れの件数が想定と異なります");
+assert.equal(blockedReport.summary.blockedLinkCount, 1, "判定不能なリンクを分離できていません");
+assert.ok(formatSummary(blockedReport).includes("判定不能"), "サマリーに判定不能なリンクを表示していません");
+assert.ok(formatSummary(blockedReport).includes("索引の取得に失敗"), "サマリーに索引の取得失敗を表示していません");
+console.log("リンク状態の分類 OK");
+
 // 7. 監視Workflow
 const workflow = fs.readFileSync(".github/workflows/monitor-living-support-coverage.yml", "utf8");
 for (const text of [
@@ -125,6 +144,7 @@ for (const text of [
   "concurrency:", "cancel-in-progress: false", "timeout-minutes: 30",
   "scripts/monitor-living-support-coverage.mjs --check", "reports/living-support-coverage.json",
   "GITHUB_STEP_SUMMARY", "gh issue create", "git fetch origin main", "git rebase origin/main",
+  "COVERAGE_MONITOR_CONCURRENCY",
   "git push origin HEAD:main", "for attempt in 1 2 3", "inputs.dry_run != true"
 ]) {
   assert.ok(workflow.includes(text), `監視Workflowに ${text} が必要です`);
