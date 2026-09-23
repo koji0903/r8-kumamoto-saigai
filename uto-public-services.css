@@ -1131,7 +1131,7 @@
 /* メタ情報グリッド */
 .service-card-meta-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   gap: 14px 24px;
   margin: 0 0 16px;
   padding: 0;
@@ -1334,6 +1334,17 @@
   margin-bottom: 40px;
 }
 
+.table-scroll-hint {
+  display: none;
+  font-size: 0.75rem;
+  color: #0369a1;
+  background: #f0f9ff;
+  border-bottom: 1px solid #e0f2fe;
+  padding: 8px 12px;
+  text-align: center;
+  font-weight: 700;
+}
+
 .uto-compact-table {
   width: 100%;
   border-collapse: collapse;
@@ -1429,49 +1440,395 @@
 }
 
 /* レスポンシブ対応 */
+/* レスポンシブ対応（スマホ・タブレット） */
 @media (max-width: 768px) {
+  /* ヒーローセクション */
   .uto-services-hero {
-    padding: 36px 16px 32px;
+    padding: 32px 14px 28px;
   }
 
   .uto-services-hero h1 {
-    font-size: 1.55rem;
+    font-size: 1.45rem;
+    line-height: 1.35;
   }
 
+  .uto-services-hero-lead {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .uto-services-hero-meta {
+    gap: 8px 12px;
+    font-size: 0.8125rem;
+    padding-top: 12px;
+  }
+
+  /* コンテナシェル */
   .uto-services-shell {
-    padding: 0 12px;
+    padding: 0 10px;
     margin-top: -16px;
+  }
+
+  /* クイックサマリーカード */
+  .uto-services-summary {
+    padding: 16px 14px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .summary-item {
+    padding: 10px 12px;
+  }
+
+  /* 地図セクション */
+  .uto-map-section {
+    border-radius: 14px;
+    margin-bottom: 20px;
+  }
+
+  .uto-map-header {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .uto-map-header-main {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .uto-map-header h2 {
+    font-size: 1.125rem;
+  }
+
+  .uto-map-header p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  /* 地図操作ボタン：スマホで均等3分割配置でタップしやすく */
+  .uto-map-controls {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .map-ctrl-btn {
+    padding: 7px 4px;
+    font-size: 0.75rem;
+    justify-content: center;
+    text-align: center;
   }
 
   #publicServicesMap {
     height: 380px;
   }
 
-  .service-card-header, .service-card-body, .service-card-footer {
-    padding: 16px;
+  /* 地図ポップアップ（スマホ最適化） */
+  .uto-map-popup {
+    min-width: 210px;
+    max-width: 250px;
+    font-size: 0.75rem;
   }
 
-  .service-card-title {
-    font-size: 1.2rem;
+  .popup-title {
+    font-size: 0.875rem;
   }
 
-  .service-card-footer {
-    flex-direction: column;
-    align-items: stretch;
+  .popup-btn-card, .popup-btn-route {
+    padding: 7px 4px;
+    font-size: 0.7rem;
   }
 
-  .btn-official-link {
-    margin-left: 0;
+  /* 全画面モード時のスマホ調整 */
+  .uto-map-section.is-fullscreen .uto-map-header {
+    padding: 10px 14px;
   }
 
-  .uto-service-card {
-    scroll-margin-top: 76px;
+  .uto-map-section.is-fullscreen .uto-map-header p {
+    display: none; /* スマホ全画面時は説明文を隠して地図表示領域を最大化 */
   }
 
   .uto-map-section.is-fullscreen .map-fs-exit-btn {
-    top: 12px;
-    right: 12px;
-    padding: 8px 14px;
+    top: 10px;
+    right: 10px;
+    padding: 7px 13px;
+    font-size: 0.75rem;
+  }
+
+  /* ツールバー・検索・絞り込み */
+  .uto-toolbar-section {
+    padding: 16px 12px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+  }
+
+  .toolbar-quick-tags {
+    padding: 10px 10px;
+    margin-bottom: 14px;
+  }
+
+  .quick-tag-label {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+
+  .quick-tag-btn {
+    padding: 5px 9px;
+    font-size: 0.75rem;
+  }
+
+  .toolbar-search-box {
+    margin-bottom: 14px;
+  }
+
+  .service-search-input {
+    padding: 11px 12px 11px 38px;
+    font-size: 0.875rem;
+    border-radius: 10px;
+  }
+
+  .search-input-icon {
+    left: 12px;
+    font-size: 0.95rem;
+  }
+
+  .filter-group-row {
+    margin-bottom: 12px;
+  }
+
+  .filter-label {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+
+  .filter-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  /* 地域＋開館中トグルの行：スマホでは縦積みで整列 */
+  .filter-row-multi {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .open-now-toggle-wrap {
+    padding-bottom: 0;
+  }
+
+  .toggle-switch-label {
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
     font-size: 0.8125rem;
+    padding: 8px 14px;
+  }
+
+  /* ツールバーステータス行：スマホ整列 */
+  .toolbar-status-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 14px;
+    padding-top: 12px;
+  }
+
+  .status-left {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .status-right {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .facility-count {
+    font-size: 0.875rem;
+  }
+
+  .btn-reset-filters {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+
+  /* 施設カード（スマホ最適化） */
+  .uto-service-card {
+    border-radius: 14px;
+    scroll-margin-top: 76px;
+  }
+
+  .service-card-header {
+    padding: 14px 14px 12px;
+  }
+
+  .service-card-meta-top {
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .service-badge-cat {
+    font-size: 0.75rem;
+    padding: 2px 7px;
+  }
+
+  .service-badge-area {
+    font-size: 0.7rem;
+    padding: 1px 6px;
+  }
+
+  .status-badge {
+    font-size: 0.7rem;
+    padding: 2px 7px;
+  }
+
+  .btn-card-fav {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    margin-left: auto;
+  }
+
+  .service-card-title-row {
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+
+  .service-card-num {
+    width: 26px;
+    height: 26px;
+    font-size: 0.8125rem;
+    border-radius: 6px;
+  }
+
+  .service-card-title {
+    font-size: 1.125rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .service-card-desc {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    margin-top: 6px;
+  }
+
+  .service-card-body {
+    padding: 14px 14px;
+  }
+
+  .service-card-services-box {
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+  }
+
+  .services-box-heading {
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+  }
+
+  .services-list {
+    padding-left: 16px;
+    gap: 6px;
+  }
+
+  .services-list li {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* メタ情報グリッド：スマホでは完全に1カラム化し横はみ出しを完全根絶 */
+  .service-card-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .meta-item dt {
+    font-size: 0.75rem;
+  }
+
+  .meta-item dd {
+    font-size: 0.8125rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .phone-link {
+    font-size: 0.875rem;
+  }
+
+  .service-card-note {
+    font-size: 0.75rem;
+    padding: 8px 10px;
+    margin-top: 10px;
+  }
+
+  /* カードフッターアクション：2列グリッド＋下部全幅で指で押しやすく綺麗に配置 */
+  .service-card-footer {
+    padding: 12px 14px 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .btn-focus-map, .btn-route-map {
+    padding: 9px 8px;
+    font-size: 0.8125rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .btn-official-link {
+    grid-column: 1 / -1;
+    margin-left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    font-size: 0.8125rem;
+    text-align: center;
+  }
+
+  /* 関連ナビ */
+  .uto-services-nav-box {
+    padding: 16px 14px;
+    border-radius: 14px;
+  }
+
+  .nav-links-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .nav-link-card {
+    padding: 12px;
+  }
+
+  /* コンパクト一覧テーブル */
+  .facility-table-container {
+    border-radius: 14px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table-scroll-hint {
+    display: block;
+  }
+
+  .uto-compact-table {
+    font-size: 0.75rem;
+  }
+
+  .uto-compact-table th, .uto-compact-table td {
+    padding: 10px 10px;
   }
 }

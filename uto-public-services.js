@@ -1495,6 +1495,7 @@
     const now = new Date();
 
     tableContainer.innerHTML = `
+      <div class="table-scroll-hint">👆 左右にスワイプして全項目を確認できます</div>
       <table class="uto-compact-table">
         <thead>
           <tr>
