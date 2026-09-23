@@ -20,7 +20,7 @@
 }
 
 .uto-services-hero-inner {
-  max-width: 1040px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
@@ -71,9 +71,9 @@
   gap: 5px;
 }
 
-/* 1040px幅コンテンツコンテナ */
+/* 1180px幅コンテンツコンテナ */
 .uto-services-shell {
-  max-width: 1040px;
+  max-width: 1180px;
   margin: -24px auto 0;
   padding: 0 20px;
   position: relative;
@@ -1331,7 +1331,33 @@
   box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
   border: 1px solid #e2e8f0;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   margin-bottom: 40px;
+  /* Firefox用カスタムスクロールバー（常時視認可能） */
+  scrollbar-width: thin;
+  scrollbar-color: #0284c7 #f1f5f9;
+}
+
+/* WebKit（Chrome, Safari, Edge）用カスタムスクロールバー */
+.facility-table-container::-webkit-scrollbar {
+  height: 10px;
+  background-color: #f1f5f9;
+  border-radius: 0 0 16px 16px;
+}
+
+.facility-table-container::-webkit-scrollbar-track {
+  background-color: #f8fafc;
+  border-radius: 0 0 16px 16px;
+}
+
+.facility-table-container::-webkit-scrollbar-thumb {
+  background-color: #94a3b8;
+  border-radius: 9999px;
+  border: 2px solid #f8fafc;
+}
+
+.facility-table-container::-webkit-scrollbar-thumb:hover {
+  background-color: #0284c7;
 }
 
 .table-scroll-hint {
@@ -1347,7 +1373,7 @@
 
 .uto-compact-table {
   width: 100%;
-  min-width: 980px; /* PC・タブレットで不自然な改行を完全阻止 */
+  min-width: 940px; /* PC・タブレットで不自然な改行を完全阻止しつつ100%全幅に収容 */
   border-collapse: separate;
   border-spacing: 0;
   font-size: 0.8125rem;
@@ -1386,7 +1412,7 @@
 /* 各列の幅・折り返し制御 */
 /* 1. No. */
 .uto-compact-table .col-num {
-  width: 44px;
+  width: 38px;
   text-align: center;
   white-space: nowrap;
   font-weight: 700;
@@ -1395,7 +1421,7 @@
 
 /* 2. 施設名・地域 */
 .uto-compact-table .col-facility {
-  min-width: 190px;
+  min-width: 170px;
 }
 
 .table-facility-name b {
@@ -1424,7 +1450,7 @@
 /* 3. 分野 */
 .uto-compact-table .col-cat {
   white-space: nowrap;
-  width: 110px;
+  width: 100px;
 }
 
 .uto-compact-table .service-badge-cat {
@@ -1441,7 +1467,7 @@
 /* 4. 開館状況 */
 .uto-compact-table .col-status {
   white-space: nowrap;
-  width: 130px;
+  width: 120px;
 }
 
 .uto-compact-table .status-badge {
@@ -1456,7 +1482,7 @@
 
 /* 5. 開館日時 */
 .uto-compact-table .col-hours {
-  min-width: 180px;
+  min-width: 165px;
   font-size: 0.78125rem;
 }
 
@@ -1473,7 +1499,7 @@
 
 /* 6. 駐車場 */
 .uto-compact-table .col-parking {
-  min-width: 140px;
+  min-width: 130px;
   font-size: 0.78125rem;
   color: #475569;
 }
@@ -1481,7 +1507,7 @@
 /* 7. 電話番号 */
 .uto-compact-table .col-phone {
   white-space: nowrap;
-  width: 125px;
+  width: 115px;
 }
 
 .uto-compact-table .phone-link {
@@ -1497,7 +1523,7 @@
 /* 8. 操作 */
 .uto-compact-table .col-actions {
   white-space: nowrap;
-  width: 130px;
+  width: 125px;
   text-align: right;
 }
 
