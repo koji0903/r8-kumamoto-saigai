@@ -269,15 +269,67 @@
 
 .uto-map-section.is-fullscreen .uto-map-header {
   border-radius: 0;
+  background: #f8fafc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.uto-map-section.is-fullscreen #btnToggleFullscreen {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0369a1;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.35);
+  font-weight: 700;
+}
+
+.uto-map-section.is-fullscreen #btnToggleFullscreen:hover {
+  background: #0369a1;
 }
 
 .uto-map-section.is-fullscreen .uto-map-wrapper {
   flex: 1;
   height: calc(100vh - 75px);
+  position: relative;
 }
 
 .uto-map-section.is-fullscreen #publicServicesMap {
   height: 100%;
+}
+
+/* 全画面モード時の右上の戻るフローティングボタン */
+.map-fs-exit-btn {
+  display: none;
+}
+
+.uto-map-section.is-fullscreen .map-fs-exit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 1005; /* Leafletのコントロール(z-index: 1000)より前面 */
+  padding: 10px 18px;
+  background: #0f172a;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.uto-map-section.is-fullscreen .map-fs-exit-btn:hover {
+  background: #0284c7;
+  border-color: #e0f2fe;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 22px rgba(2, 132, 199, 0.5);
+}
+
+.uto-map-section.is-fullscreen .map-fs-exit-btn:active {
+  transform: translateY(0) scale(0.98);
 }
 
 /* 地図ピン */
@@ -838,6 +890,7 @@
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  scroll-margin-top: 96px;
 }
 
 .uto-service-card:hover {
@@ -847,14 +900,23 @@
 
 .uto-service-card.highlighted {
   border-color: #0284c7;
-  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2), 0 12px 28px rgba(15, 23, 42, 0.12);
-  animation: cardPulse 1.5s ease-out 1;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.35), 0 16px 36px rgba(15, 23, 42, 0.16);
+  animation: cardPulse 2s cubic-bezier(0.16, 1, 0.3, 1) 1;
 }
 
 @keyframes cardPulse {
-  0% { transform: scale(1.02); }
-  50% { transform: scale(1.01); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 8px rgba(2, 132, 199, 0.5), 0 20px 40px rgba(15, 23, 42, 0.2);
+  }
+  50% {
+    transform: scale(1.008);
+    box-shadow: 0 0 0 5px rgba(2, 132, 199, 0.4), 0 16px 32px rgba(15, 23, 42, 0.15);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.35), 0 16px 36px rgba(15, 23, 42, 0.16);
+  }
 }
 
 .service-card-header {
@@ -1400,5 +1462,16 @@
 
   .btn-official-link {
     margin-left: 0;
+  }
+
+  .uto-service-card {
+    scroll-margin-top: 76px;
+  }
+
+  .uto-map-section.is-fullscreen .map-fs-exit-btn {
+    top: 12px;
+    right: 12px;
+    padding: 8px 14px;
+    font-size: 0.8125rem;
   }
 }

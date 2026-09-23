@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="design-system.css">
   <link rel="stylesheet" href="org-site.css?v=20260918-1">
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-  <link rel="stylesheet" href="uto-public-services.css?v=20260923-4">
+  <link rel="stylesheet" href="uto-public-services.css?v=20260923-5">
   <link rel="canonical" href="https://www.yokatainet.jp/uto-public-services.html">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
@@ -121,6 +121,10 @@
         </div>
         <div class="uto-map-wrapper">
           <div id="publicServicesMap" role="region" aria-label="宇土市公的施設マップ"></div>
+          <!-- 全画面モード時の戻るフローティングボタン -->
+          <button type="button" class="map-fs-exit-btn" id="btnExitFullscreenFloating" title="全画面表示を終了してもとの画面に戻る">
+            <span>✕ 通常表示にもどる</span>
+          </button>
           <div id="mapGestureHint" class="map-gesture-hint" aria-hidden="true">
             <span>⌘ または Ctrl キーを押しながらスクロールで地図をズーム</span>
           </div>
@@ -270,6 +274,6 @@
 
   <script src="org-site.js?v=20260907-2"></script>
   <script src="vendor/leaflet/leaflet.js"></script>
-  <script src="uto-public-services.js?v=20260923-4"></script>
+  <script src="uto-public-services.js?v=20260923-5"></script>
 </body>
 </html>

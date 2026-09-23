@@ -32,6 +32,7 @@ assert.ok(html.includes('id="btnViewTable"'), "テーブル表示切り替えボ
 assert.ok(html.includes('id="btnResetMapView"'), "全体表示リセットボタンがありません");
 assert.ok(html.includes('id="btnLocateUser"'), "現在地ボタンがありません");
 assert.ok(html.includes('id="btnToggleFullscreen"'), "全画面切り替えボタンがありません");
+assert.ok(html.includes('id="btnExitFullscreenFloating"'), "全画面解除フローティングボタンがありません");
 assert.ok(html.includes('id="mapGestureHint"'), "ジェスチャーヒント要素がありません");
 assert.ok(html.includes("<noscript>"), "noscriptフォールバックがありません");
 
@@ -45,11 +46,14 @@ assert.ok(css.includes(".uto-map-pin"), "カスタムピンのスタイルがあ
 assert.ok(css.includes(".status-badge"), "開館状況バッジのスタイルがありません");
 assert.ok(css.includes(".btn-card-fav"), "お気に入りボタンのスタイルがありません");
 assert.ok(css.includes(".uto-compact-table"), "コンパクトテーブルのスタイルがありません");
+assert.ok(css.includes(".map-fs-exit-btn"), "全画面解除フローティングボタンのスタイルがありません");
 
 // 3. JSファイルの検証とデータ構造の検査
 const jsPath = path.join(root, "uto-public-services.js");
 assert.ok(fs.existsSync(jsPath), "uto-public-services.js が存在しません");
 const jsContent = fs.readFileSync(jsPath, "utf8");
+assert.ok(jsContent.includes("window.focusFacilityCard"), "focusFacilityCard 関数が定義されていません");
+assert.ok(jsContent.includes("window.toggleMapFullscreen"), "toggleMapFullscreen 関数が定義されていません");
 
 // JSコードから FACILITIES 配列を抽出して検査
 const match = jsContent.match(/const FACILITIES = (\[[\s\S]*?\]);\s*\n\s*\/\//);

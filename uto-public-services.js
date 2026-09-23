@@ -1038,6 +1038,7 @@
   const btnResetMap = document.getElementById("btnResetMapView");
   const btnLocate = document.getElementById("btnLocateUser");
   const btnFullscreen = document.getElementById("btnToggleFullscreen");
+  const btnExitFsFloating = document.getElementById("btnExitFullscreenFloating");
   const btnViewCards = document.getElementById("btnViewCards");
   const btnViewTable = document.getElementById("btnViewTable");
   const favCountDisplay = document.getElementById("favCount");
@@ -1272,7 +1273,11 @@
 
     const isFs = mapSection.classList.toggle("is-fullscreen");
     if (btnText) {
-      btnText.textContent = isFs ? "✕ 全画面を閉じる" : "⛶ 全画面拡大";
+      btnText.textContent = isFs ? "✕ もとに戻る（通常表示）" : "⛶ 全画面拡大";
+    }
+    if (btnFullscreen) {
+      btnFullscreen.setAttribute("aria-expanded", String(isFs));
+      btnFullscreen.title = isFs ? "全画面表示を終了してもとの画面に戻る（Escキー）" : "地図を全画面表示にする";
     }
 
     setTimeout(() => {
@@ -1566,7 +1571,9 @@
     if (targetCard) {
       targetCard.classList.add("highlighted");
       if (shouldScroll) {
-        targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
+        targetCard.scrollIntoView({ behavior: "smooth", block: "start" });
+        targetCard.setAttribute("tabindex", "-1");
+        targetCard.focus({ preventScroll: true });
       }
     }
   }
@@ -1601,12 +1608,33 @@
     highlightCard(id, false);
   };
 
-  // カードへフォーカス
+  // カードへフォーカス＆確実に移動
   window.focusFacilityCard = (id) => {
+    const mapSection = document.getElementById("utoMapSection");
+    const isFs = mapSection && mapSection.classList.contains("is-fullscreen");
+
+    // 1. 全画面モード中なら通常表示に戻す
+    if (isFs) {
+      window.toggleMapFullscreen();
+    }
+
+    // 2. 表示モードがカード形式でなければカード形式に切り替える
     if (currentViewMode !== "cards") {
       setViewMode("cards");
     }
-    highlightCard(id, true);
+
+    // 3. 対象カードが現在のフィルターで非表示になっていないか確認
+    let targetCard = document.getElementById(`card-${id}`);
+    if (!targetCard) {
+      // フィルターによって非表示になっている場合は全件表示にリセット
+      window.resetAllFilters();
+    }
+
+    // 4. 全画面解除やDOMレイアウト再計算の完了を待ってスクロール＆ハイライト
+    const delay = isFs ? 280 : 50;
+    setTimeout(() => {
+      highlightCard(id, true);
+    }, delay);
   };
 
   // フィルターリセット
@@ -1755,6 +1783,9 @@
     }
     if (btnFullscreen) {
       btnFullscreen.addEventListener("click", window.toggleMapFullscreen);
+    }
+    if (btnExitFsFloating) {
+      btnExitFsFloating.addEventListener("click", window.toggleMapFullscreen);
     }
 
     // Escキーで全画面解除
