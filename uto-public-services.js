@@ -1499,14 +1499,14 @@
       <table class="uto-compact-table">
         <thead>
           <tr>
-            <th>No.</th>
-            <th>施設名・地域</th>
-            <th>分野</th>
-            <th>開館状況</th>
-            <th>開庁・開館日時</th>
-            <th>駐車場</th>
-            <th>電話番号</th>
-            <th>操作</th>
+            <th class="col-num">No.</th>
+            <th class="col-facility">施設名・地域</th>
+            <th class="col-cat">分野</th>
+            <th class="col-status">開館状況</th>
+            <th class="col-hours">開庁・開館日時</th>
+            <th class="col-parking">駐車場</th>
+            <th class="col-phone">電話番号</th>
+            <th class="col-actions">操作</th>
           </tr>
         </thead>
         <tbody>
@@ -1517,28 +1517,28 @@
 
             return `
               <tr>
-                <td><b>${idx + 1}</b></td>
-                <td class="table-facility-name">
+                <td class="col-num"><b>${idx + 1}</b></td>
+                <td class="col-facility table-facility-name">
                   <b>${f.name}</b>
                   <small>📍 ${f.areaLabel}</small>
                 </td>
-                <td>
-                  <span class="service-badge-cat" style="background:${catInfo.bg}; color:${catInfo.color}; font-size:0.75rem;">
+                <td class="col-cat">
+                  <span class="service-badge-cat" style="background:${catInfo.bg}; color:${catInfo.color};">
                     ${catInfo.icon} ${catInfo.label}
                   </span>
                 </td>
-                <td>
+                <td class="col-status">
                   <span class="status-badge ${status.badgeClass}">${status.text}</span>
                 </td>
-                <td style="font-size:0.8125rem;">
-                  <div>${f.hours}</div>
-                  <small style="color:#64748b;">休：${f.closed}</small>
+                <td class="col-hours">
+                  <div class="table-hours-time">${f.hours}</div>
+                  <div class="table-hours-closed">休：${f.closed}</div>
                 </td>
-                <td style="font-size:0.8125rem;">${f.parking}</td>
-                <td>
-                  <a class="phone-link" style="font-size:0.875rem;" href="tel:${phoneDigits}">${f.phone}</a>
+                <td class="col-parking">${f.parking}</td>
+                <td class="col-phone">
+                  <a class="phone-link" href="tel:${phoneDigits}">📞 ${f.phone}</a>
                 </td>
-                <td>
+                <td class="col-actions">
                   <div class="table-actions">
                     <button type="button" class="table-btn table-btn-map" onclick="window.zoomToFacility('${f.id}')">🗺️ 地図</button>
                     <a href="${mapsUrl(f)}" target="_blank" rel="noopener" class="table-btn table-btn-route">🚗 経路 ↗</a>

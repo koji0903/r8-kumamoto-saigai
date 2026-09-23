@@ -1347,8 +1347,11 @@
 
 .uto-compact-table {
   width: 100%;
-  border-collapse: collapse;
-  font-size: 0.875rem;
+  min-width: 980px; /* PC・タブレットで不自然な改行を完全阻止 */
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.8125rem;
+  line-height: 1.4;
   text-align: left;
 }
 
@@ -1356,41 +1359,157 @@
   background: #f8fafc;
   color: #475569;
   font-weight: 700;
-  padding: 14px 16px;
-  border-bottom: 2px solid #e2e8f0;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  padding: 12px 14px;
+  border-bottom: 2px solid #cbd5e1;
   white-space: nowrap;
 }
 
 .uto-compact-table td {
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-bottom: 1px solid #f1f5f9;
   vertical-align: middle;
+  color: #334155;
+  background-color: #ffffff;
 }
 
-.uto-compact-table tr:hover {
-  background: #f8fafc;
+/* ゼブラストライプ & ホバー */
+.uto-compact-table tbody tr:nth-child(even) td {
+  background-color: #f8fafc;
+}
+
+.uto-compact-table tbody tr:hover td {
+  background-color: #f0f9ff !important;
+}
+
+/* 各列の幅・折り返し制御 */
+/* 1. No. */
+.uto-compact-table .col-num {
+  width: 44px;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 700;
+  color: #64748b;
+}
+
+/* 2. 施設名・地域 */
+.uto-compact-table .col-facility {
+  min-width: 190px;
 }
 
 .table-facility-name b {
   display: block;
   color: #0f172a;
   font-size: 0.9375rem;
-  margin-bottom: 2px;
+  font-weight: 800;
+  margin-bottom: 3px;
+  line-height: 1.35;
 }
 
 .table-facility-name small {
-  color: #64748b;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: #0d9488;
+  background: #f0fdfa;
+  border: 1px solid #ccfbf1;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* 3. 分野 */
+.uto-compact-table .col-cat {
+  white-space: nowrap;
+  width: 110px;
+}
+
+.uto-compact-table .service-badge-cat {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+/* 4. 開館状況 */
+.uto-compact-table .col-status {
+  white-space: nowrap;
+  width: 130px;
+}
+
+.uto-compact-table .status-badge {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+}
+
+/* 5. 開館日時 */
+.uto-compact-table .col-hours {
+  min-width: 180px;
+  font-size: 0.78125rem;
+}
+
+.table-hours-time {
+  color: #0f172a;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.table-hours-closed {
+  color: #64748b;
+  font-size: 0.72rem;
+}
+
+/* 6. 駐車場 */
+.uto-compact-table .col-parking {
+  min-width: 140px;
+  font-size: 0.78125rem;
+  color: #475569;
+}
+
+/* 7. 電話番号 */
+.uto-compact-table .col-phone {
+  white-space: nowrap;
+  width: 125px;
+}
+
+.uto-compact-table .phone-link {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #0284c7;
+}
+
+/* 8. 操作 */
+.uto-compact-table .col-actions {
+  white-space: nowrap;
+  width: 130px;
+  text-align: right;
 }
 
 .table-actions {
-  display: flex;
+  display: inline-flex;
+  align-items: center;
   gap: 6px;
   white-space: nowrap;
 }
 
 .table-btn {
-  padding: 5px 9px;
+  padding: 5px 8px;
   font-size: 0.75rem;
   font-weight: 600;
   border-radius: 6px;
@@ -1399,7 +1518,9 @@
   display: inline-flex;
   align-items: center;
   gap: 3px;
-  border: none;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
 }
 
 .table-btn-map {
@@ -1412,13 +1533,14 @@
 }
 
 .table-btn-route {
-  background: #f1f5f9;
+  background: #ffffff;
   color: #334155;
   border: 1px solid #cbd5e1;
 }
 
 .table-btn-route:hover {
-  background: #e2e8f0;
+  background: #f1f5f9;
+  border-color: #94a3b8;
 }
 
 /* 印刷用対応 */
@@ -1815,20 +1937,39 @@
   }
 
   /* コンパクト一覧テーブル */
+  /* コンパクト一覧テーブル（スマホ最適化） */
   .facility-table-container {
     border-radius: 14px;
     -webkit-overflow-scrolling: touch;
+    margin-bottom: 24px;
   }
 
   .table-scroll-hint {
     display: block;
+    padding: 7px 10px;
+    font-size: 0.72rem;
   }
 
   .uto-compact-table {
+    min-width: 920px; /* スマホでも横スクロールで文字折り返しを完全防止 */
     font-size: 0.75rem;
   }
 
-  .uto-compact-table th, .uto-compact-table td {
+  .uto-compact-table th {
     padding: 10px 10px;
+    font-size: 0.7rem;
+  }
+
+  .uto-compact-table td {
+    padding: 8px 10px;
+  }
+
+  .table-facility-name b {
+    font-size: 0.875rem;
+  }
+
+  .table-btn {
+    padding: 4px 7px;
+    font-size: 0.7rem;
   }
 }
