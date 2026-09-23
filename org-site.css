@@ -501,7 +501,7 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
 .shelter-detail header{padding-right:56px}
 @media print{.shelter-backdrop,.shelter-detail{display:none!important}}
 
-.page-municipalities .municipality-reconstruction-entry,.page-municipalities .municipality-feature-list{display:none}.municipality-hub{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.municipality-hub>p{grid-column:1/-1;margin:0;padding:20px 24px;border-left:5px solid #0d7b6e;background:#edf7f4}.municipality-hub>p b,.municipality-hub>p span{display:block}.municipality-hub>p b{color:#123f38;font-size:21px}.municipality-hub>p span{margin-top:5px;color:#526c65}.municipality-hub-group{padding:22px;border:2px solid #bfd4cf;border-radius:11px;background:#fff;box-shadow:6px 6px 0 #e0ebe8}.municipality-hub-group h4{margin:0 0 14px;color:#154d44;font-size:18px}.municipality-hub-group>div{display:grid;gap:10px}.municipality-hub-group a{display:grid;gap:3px;padding:13px;border:1px solid #cfdfdb;border-radius:8px;color:#174b43;text-decoration:none}.municipality-hub-group a:hover{border-color:#0d7b6e;background:#f2faf7}.municipality-hub-group a b{font-size:15px}.municipality-hub-group a span{color:#5b6f69;font-size:13px;line-height:1.55}.municipality-hub-group a i{margin-top:4px;color:#0d7468;font-size:12px;font-style:normal;font-weight:900}.municipality-hub-records{background:#f7f7f4}.municipality-hub-official{background:#f5f9fb}@media(max-width:800px){.municipality-hub{grid-template-columns:1fr}}
+.page-municipalities .municipality-reconstruction-entry,.page-municipalities .municipality-feature-list{display:none}nav.municipality-hub{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}nav.municipality-hub>p{grid-column:1/-1;margin:0;padding:20px 24px;border-left:5px solid #0d7b6e;background:#edf7f4}nav.municipality-hub>p b,nav.municipality-hub>p span{display:block}nav.municipality-hub>p b{color:#123f38;font-size:21px}nav.municipality-hub>p span{margin-top:5px;color:#526c65}.municipality-hub-group{padding:22px;border:2px solid #bfd4cf;border-radius:11px;background:#fff;box-shadow:6px 6px 0 #e0ebe8}.municipality-hub-group h4{margin:0 0 14px;color:#154d44;font-size:18px}.municipality-hub-group>div{display:grid;gap:10px}.municipality-hub-group a{display:grid;gap:3px;padding:13px;border:1px solid #cfdfdb;border-radius:8px;color:#174b43;text-decoration:none}.municipality-hub-group a:hover{border-color:#0d7b6e;background:#f2faf7}.municipality-hub-group a b{font-size:15px}.municipality-hub-group a span{color:#5b6f69;font-size:13px;line-height:1.55}.municipality-hub-group a i{margin-top:4px;color:#0d7468;font-size:12px;font-style:normal;font-weight:900}.municipality-hub-records{background:#f7f7f4}.municipality-hub-official{background:#f5f9fb}@media(max-width:800px){nav.municipality-hub{grid-template-columns:1fr}}
 
 /* 建設型応急住宅：整備規模から団地・時系列・相談先へ読み進める */
 .temporary-housing-page{background:#f6f8f5;color:var(--org-deep)}
@@ -1475,6 +1475,7 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
   border-top: 6px solid #0d7468;
   background: linear-gradient(180deg, #f7fbf9 0%, #ffffff 120px);
 }
+.portal-hub-section.municipality-portal-hub,
 .portal-hub-section.municipality-hub {
   border-top: 6px solid #285e94;
   background: linear-gradient(180deg, #f6f9fc 0%, #ffffff 120px);
@@ -1496,6 +1497,7 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
   letter-spacing: .08em;
   color: #0d7468;
 }
+.municipality-portal-hub .portal-hub-head .kicker,
 .municipality-hub .portal-hub-head .kicker { color: #285e94; }
 .supporter-hub .portal-hub-head .kicker { color: #c97d08; }
 .portal-hub-head h2 {
@@ -1617,6 +1619,8 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
   margin-bottom: 12px;
   padding-bottom: 10px;
   border-bottom: 1px solid #e2edf6;
@@ -1628,12 +1632,13 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
   color: #183e63;
 }
 .muni-badge {
-  padding: 3px 8px;
+  padding: 4px 9px;
   border-radius: 6px;
   background: #eef5fc;
   color: #285e94;
   font-size: 12px;
   font-weight: 850;
+  white-space: nowrap;
 }
 .muni-portal-card p {
   margin: 0 0 14px;
@@ -1743,6 +1748,12 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
   font-size: 14px;
   color: #4a665f;
   font-weight: 750;
+}
+.hub-bottom-actions .municipality-caveat {
+  width: 100%;
+  margin: 0 0 8px;
+  padding: 12px 18px;
+  box-sizing: border-box;
 }
 .hub-action-btn {
   display: inline-flex;
