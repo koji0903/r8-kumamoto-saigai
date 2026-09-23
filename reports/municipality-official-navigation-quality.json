@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-23T04:52:18.409Z",
+  "generatedAt": "2026-09-23T11:48:23.469Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 838,
-  "displayCandidateCount": 575,
-  "classifiedPageCount": 676,
+  "inputCount": 836,
+  "displayCandidateCount": 574,
+  "classifiedPageCount": 675,
   "categoryReport": {
     "home": {
-      "total": 192,
+      "total": 191,
       "high": 67,
-      "medium": 78,
+      "medium": 77,
       "low": 47
     },
     "money": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 109,
-      "displayCandidates": 93,
+      "classified": 108,
+      "displayCandidates": 92,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 255,
-    "medium": 320,
+    "medium": 319,
     "low": 101
   },
   "unclassifiedCount": 40,
@@ -321,12 +321,12 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年9月23日 令和8年熊本地震 関連情報 （9月23日11時00分更新）",
+      "title": "2026年9月23日 令和8年熊本地震 関連情報 （9月23日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年09月23日 令和8年熊本地震 関連情報 （9月23日11時00分更新）",
+      "title": "2026年09月23日 令和8年熊本地震 関連情報 （9月23日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699"
     },
     {
@@ -736,22 +736,22 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "八代市",
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -973,9 +973,9 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 38,
+  "excludedCount": 37,
   "excludedByType": {
-    "duplicate_url": 36,
+    "duplicate_url": 35,
     "non_official_url": 2
   },
   "warningCount": 22,
@@ -1092,5 +1092,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 674
+  "previousClassifiedPageCount": 676
 }

@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-23T05:08:38.827Z",
-  "officialCheckedAt": "9/23 14:08",
+  "retrievedAt": "2026-09-23T12:08:11.529Z",
+  "officialCheckedAt": "9/23 21:08",
   "siteTopics": [
     {
       "date": "2026-09-23",
@@ -60,28 +60,28 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
-      "date": "2026-09-23",
-      "time": "11:08",
-      "category": "その他",
-      "municipality": "八代市"
-    },
-    {
-      "title": "2026年9月23日 令和8年熊本地震 関連情報 （9月23日11時00分更新）",
+      "title": "2026年9月23日 令和8年熊本地震 関連情報 （9月23日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-09-23",
-      "time": "11:00",
+      "time": "18:00",
       "category": "その他",
       "municipality": "宇城市"
     },
     {
-      "title": "自ら解体を行った被災家屋等の解体・撤去費用について（自費解体）",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036841/index.html",
+      "title": "令和8年熊本地震で被災した家屋等の解体・撤去について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036794/index.html",
       "date": "2026-09-23",
-      "time": "08:10",
+      "time": "15:58",
       "category": "その他",
       "municipality": "氷川町"
+    },
+    {
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-09-23",
+      "time": "14:27",
+      "category": "その他",
+      "municipality": "八代市"
     },
     {
       "title": "＜ 2026年7月熊本地震 ＞ 災害救助法「被災した住宅の応急修理」制度の案内",
