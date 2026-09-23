@@ -65,7 +65,7 @@ const context = {};
 vm.runInNewContext(`facilities = ${facilitiesJson}`, context);
 const facilities = context.facilities;
 
-assert.equal(facilities.length, 32, `施設数は32件である必要があります（現在: ${facilities.length}件）`);
+assert.equal(facilities.length, 39, `施設数は39件である必要があります（現在: ${facilities.length}件）`);
 
 const expectedCats = new Set(["admin", "child", "health", "welfare", "culture", "sports", "safety"]);
 const expectedAreas = new Set(["central", "west", "north"]);
@@ -81,7 +81,7 @@ for (const f of facilities) {
   assert.ok(f.name, `名称が未定義: ${f.id}`);
   assert.ok(f.ruby, `ふりがなが未定義: ${f.id}`);
   assert.ok(f.address, `住所が未定義: ${f.id}`);
-  assert.ok(f.address.includes("宇土市"), `住所に宇土市が含まれていません: ${f.address}`);
+  assert.ok(f.address.includes("宇土市") || f.address.includes("宇城市"), `住所に宇土市または宇城市（管轄隣接自治体）が含まれていません: ${f.address}`);
 
   assert.ok(typeof f.lat === "number" && f.lat >= 32.6 && f.lat <= 32.8, `緯度が不正です: ${f.name} (${f.lat})`);
   assert.ok(typeof f.lng === "number" && f.lng >= 130.45 && f.lng <= 130.8, `経度が不正です: ${f.name} (${f.lng})`);
@@ -120,6 +120,38 @@ assert.ok(silver, "宇土市シルバー人材センターが含まれていま�
 
 const consumer = facilities.find(f => f.id === "uto_consumer_center");
 assert.ok(consumer, "宇土市消費生活センターが含まれていません");
+
+// 今回の拡充（7施設）の存在検証
+const waterWorks = facilities.find(f => f.id === "uto_water_works");
+assert.ok(waterWorks, "宇土市役所 上下水道部が含まれていません");
+assert.equal(waterWorks.cat, "admin");
+
+const eduSupport = facilities.find(f => f.id === "uto_education_support");
+assert.ok(eduSupport, "宇土市教育支援センター「ほっとスペース」が含まれていません");
+assert.equal(eduSupport.cat, "child");
+
+const ukiHealth = facilities.find(f => f.id === "uki_health_office");
+assert.ok(ukiHealth, "熊本県 宇城保健所が含まれていません");
+assert.equal(ukiHealth.cat, "health");
+
+const ukiPolice = facilities.find(f => f.id === "uki_police_station");
+assert.ok(ukiPolice, "熊本県 宇城警察署が含まれていません");
+assert.equal(ukiPolice.cat, "safety");
+assert.equal(ukiPolice.holidayRule, "always_open");
+
+const wasteCs = facilities.find(f => f.id === "uto_waste_cs_network");
+assert.ok(wasteCs, "CSネットワーク（一般廃棄物持込受入施設）が含まれていません");
+assert.equal(wasteCs.cat, "safety");
+assert.equal(wasteCs.holidayRule, "year_end_only");
+
+const cleanCenter = facilities.find(f => f.id === "uki_clean_center");
+assert.ok(cleanCenter, "宇城クリーンセンター「うきくりん」が含まれていません");
+assert.equal(cleanCenter.cat, "safety");
+
+const tsurushiro = facilities.find(f => f.id === "uto_tsurushiro_jhs");
+assert.ok(tsurushiro, "宇土市立鶴城中学校体育館（指定避難所）が含まれていません");
+assert.equal(tsurushiro.cat, "safety");
+assert.equal(tsurushiro.holidayRule, "always_open");
 
 // 4. 祝日および開館判定ロジックの単体検証
 // 全体JSをモック環境で評価して判定関数をテスト
