@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-22T21:43:33.756Z",
-  "officialCheckedAt": "9/23 06:43",
+  "retrievedAt": "2026-09-23T05:08:38.827Z",
+  "officialCheckedAt": "9/23 14:08",
   "siteTopics": [
     {
       "date": "2026-09-23",
@@ -60,6 +60,30 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "date": "2026-09-23",
+      "time": "11:08",
+      "category": "その他",
+      "municipality": "八代市"
+    },
+    {
+      "title": "2026年9月23日 令和8年熊本地震 関連情報 （9月23日11時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-09-23",
+      "time": "11:00",
+      "category": "その他",
+      "municipality": "宇城市"
+    },
+    {
+      "title": "自ら解体を行った被災家屋等の解体・撤去費用について（自費解体）",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036841/index.html",
+      "date": "2026-09-23",
+      "time": "08:10",
+      "category": "その他",
+      "municipality": "氷川町"
+    },
+    {
       "title": "＜ 2026年7月熊本地震 ＞ 災害救助法「被災した住宅の応急修理」制度の案内",
       "url": "https://www.city.kumamoto.jp/kiji00372104/index.html",
       "date": "2026-09-23",
@@ -68,36 +92,12 @@ window.HOME_TOPICS = {
       "municipality": "熊本市"
     },
     {
-      "title": "【給水所情報】9月23日（水曜日）",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326773/index.html",
-      "date": "2026-09-22",
-      "time": "17:24",
-      "category": "ライフライン",
-      "municipality": "八代市"
-    },
-    {
       "title": "避難所について（9/22 17:00更新）",
       "url": "https://www.city.uto.lg.jp/article/view/1014/16888.html",
       "date": "2026-09-22",
       "time": "17:00",
       "category": "避難・安全",
       "municipality": "宇土市"
-    },
-    {
-      "title": "令和8年熊本地震関連情報",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
-      "date": "2026-09-22",
-      "time": "09:17",
-      "category": "その他",
-      "municipality": "氷川町"
-    },
-    {
-      "title": "2026年09月22日 令和8年熊本地震 関連情報 （9月22日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
-      "date": "2026-09-22",
-      "time": "08:00",
-      "category": "その他",
-      "municipality": "宇城市"
     },
     {
       "title": "＜令和8年熊本地震＞ 災害救助法 「住家の応急修理」制度の御案内",
