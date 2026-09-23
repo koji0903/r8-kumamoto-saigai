@@ -1155,19 +1155,25 @@
 
       const popupHtml = `
         <div class="uto-map-popup">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-            <div class="popup-cat-badge" style="background:${catInfo.bg}; color:${catInfo.color};">${catInfo.icon} ${catInfo.label}</div>
-            <span class="status-badge ${status.badgeClass}" style="font-size:0.7rem; padding:2px 6px;">${status.text}</span>
+          <div class="popup-header-row">
+            <div class="popup-badges">
+              <span class="popup-cat-badge" style="background:${catInfo.bg}; color:${catInfo.color};">${catInfo.icon} ${catInfo.label}</span>
+              <span class="status-badge ${status.badgeClass}">${status.text}</span>
+            </div>
           </div>
           <h4 class="popup-title">${f.name}</h4>
-          <p class="popup-addr">📍 ${f.address} <small style="color:#0d9488;">(${f.areaLabel})</small></p>
-          <p class="popup-hours">⏰ ${f.hours}</p>
-          <div class="popup-services">
-            <b>主な公的サービス：</b>
-            <ul>
-              ${f.services.slice(0, 3).map(s => `<li>${s}</li>`).join("")}
-            </ul>
+          <div class="popup-meta-line">
+            <span>📍 ${f.address}</span>
+            <span class="popup-area-badge">${f.areaLabel}</span>
           </div>
+          <div class="popup-meta-line">
+            <span>⏰ ${f.hours}</span>
+          </div>
+          ${f.quickTags ? `
+            <div class="popup-chips">
+              ${f.quickTags.slice(0, 3).map(t => `<span class="popup-chip">${t}</span>`).join("")}
+            </div>
+          ` : ""}
           <div class="popup-actions">
             <button type="button" class="popup-btn-card" onclick="window.focusFacilityCard('${f.id}')">詳細カードを見る ↓</button>
             <a href="${mapsUrl(f)}" target="_blank" rel="noopener" class="popup-btn-route">現在地から行く ↗</a>
@@ -1178,11 +1184,11 @@
       const marker = L.marker([f.lat, f.lng], { icon: customIcon }).addTo(map);
 
       marker.bindPopup(popupHtml, {
-        maxWidth: 320,
-        minWidth: 260,
+        maxWidth: 300,
+        minWidth: 240,
         autoPan: true,
-        autoPanPaddingTopLeft: L.point(40, 95),
-        autoPanPaddingBottomRight: L.point(40, 40),
+        autoPanPaddingTopLeft: L.point(30, 60),
+        autoPanPaddingBottomRight: L.point(30, 30),
         closeButton: true
       });
 
