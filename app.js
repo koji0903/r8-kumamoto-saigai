@@ -189,7 +189,83 @@ if($("#metricTabs")){
   const renderMetrics=()=>{$("#metricTabs").innerHTML=metrics.map(m=>`<button class="metric-button ${m.key===activeMetric?"active":""}" data-key="${m.key}" aria-pressed="${m.key===activeMetric}"><span>${m.label}</span><strong>${statDisplay(latest,m.key)}</strong>${latest.stats[m.key]==null?"":` ${m.unit}`}</button>`).join("");$$('.metric-button').forEach(b=>b.onclick=()=>{activeMetric=b.dataset.key;renderMetrics();renderChart()})};
   // 変化量の起点(baseIdx)は指標ごとに違う（住家被害は7/31〜、断水は8/3〜）。
   // 「記録開始比」だと全期間の変化に見えるので、比較の起点になった日を表示する。
-  const renderChart=()=>{const metric=metrics.find(m=>m.key===activeMetric),values=days.map(d=>d.stats[activeMetric]),valid=values.filter(v=>v!=null),max=Math.max(...valid)*1.12,W=1000,H=220,pad=22,pts=values.map((v,i)=>v==null?null:{x:pad+i*(W-pad*2)/(values.length-1),y:H-pad-(v/max)*(H-pad*2),v});const segs=[];let cur=[];pts.forEach((p,i)=>{if(metricBreakDates[activeMetric]?.has(days[i].date)&&cur.length){segs.push(cur);cur=[]}if(p)cur.push(p);else if(cur.length){segs.push(cur);cur=[]}});if(cur.length)segs.push(cur);$("#chart").innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><path d="M${pad} ${H-pad}H${W-pad}" stroke="#d9ded8"/>${segs.map(s=>`<polyline fill="none" stroke="${metric.color}" stroke-width="5" points="${s.map(p=>`${p.x},${p.y}`).join(' ')}"/>`).join('')}${pts.map(p=>p?`<g><circle cx="${p.x}" cy="${p.y}" r="7" fill="#fff" stroke="${metric.color}" stroke-width="4"/><text x="${p.x}" y="${p.y-16}" text-anchor="middle" font-size="13">${fmt(p.v)}</text></g>`:'').join('')}</svg>`;$("#chartDates").style.gridTemplateColumns=`repeat(${days.length},1fr)`;$("#chartDates").innerHTML=days.map(d=>`<span>${dateLabel(d.date,false)}</span>`).join('');$("#chartLabel").textContent=metric.label;$("#chartLatest").textContent=latest.stats[activeMetric]==null?statDisplay(latest,activeMetric):`${fmt(latest.stats[activeMetric])} ${metric.unit}`;const baseIdx=values.findIndex(v=>v!=null),diff=valid.at(-1)-valid[0],hasDefinitionBreak=metricBreakDates[activeMetric]?.size;$("#chartChange").textContent=latest.stats[activeMetric]==null?"最新報告は定量値なし":hasDefinitionBreak?"定義変更箇所で折れ線を分割":`${dateLabel(days[baseIdx].date,false)}比 ${diff>0?"+":""}${fmt(diff)} ${metric.unit}`;if($("#trendTable"))$("#trendTable").innerHTML=`<table><thead><tr><th>会議日</th><th>会議</th><th>${metric.label}</th></tr></thead><tbody>${days.map(d=>`<tr><td>${dateLabel(d.date,false)}</td><td>第${d.meeting}回</td><td>${d.stats[activeMetric]==null?statDisplay(d,activeMetric):`${fmt(d.stats[activeMetric])} ${metric.unit}`}</td></tr>`).join('')}</tbody></table>`};
+  const renderChart=()=>{
+    const metric=metrics.find(m=>m.key===activeMetric),
+          values=days.map(d=>d.stats[activeMetric]),
+          valid=values.filter(v=>v!=null),
+          max=Math.max(...valid)*1.14,
+          W=1000,
+          H=220,
+          padX=24,
+          topPad=34,
+          botPad=22,
+          pts=values.map((v,i)=>v==null?null:{x:padX+i*(W-padX*2)/(values.length-1),y:(H-botPad)-(v/max)*(H-topPad-botPad),v,i,date:days[i].date});
+    const segs=[];let cur=[];
+    pts.forEach((p,i)=>{
+      if(metricBreakDates[activeMetric]?.has(days[i].date)&&cur.length){segs.push(cur);cur=[]}
+      if(p)cur.push(p);else if(cur.length){segs.push(cur);cur=[]}
+    });
+    if(cur.length)segs.push(cur);
+
+    // 数値ラベルの重なり防止：最新値・起点・節目を優先し、70px以上の十分な間隔がある点のみラベル表示
+    const validPts=pts.filter(p=>p!=null);
+    const lastValid=validPts[validPts.length-1];
+    const labeledSet=new Set();
+    if(lastValid) labeledSet.add(lastValid);
+    if(validPts.length>0) labeledSet.add(validPts[0]);
+    pts.forEach((p,i)=>{
+      if(p&&metricBreakDates[activeMetric]?.has(days[i].date)) labeledSet.add(p);
+    });
+
+    let lastX=-999;
+    validPts.forEach(p=>{
+      if(p===lastValid) return;
+      if(labeledSet.has(p)){lastX=p.x;return}
+      const distToLast=lastValid?(lastValid.x-p.x):999;
+      const distToPrev=p.x-lastX;
+      if(distToPrev>=72&&distToLast>=72){
+        labeledSet.add(p);
+        lastX=p.x;
+      }
+    });
+
+    const pointsSvg=pts.map(p=>{
+      if(!p) return '';
+      const isLatest=p===lastValid;
+      const hasLabel=labeledSet.has(p);
+      const d=days[p.i];
+      const tooltip=`${dateLabel(d.date,false)}: ${fmt(p.v)} ${metric.unit}`;
+      const label=hasLabel?`<text x="${p.x}" y="${p.y-12}" text-anchor="middle" font-size="12" font-weight="${isLatest?'bold':'600'}" fill="${isLatest?'#0f172a':'#334155'}" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke fill">${fmt(p.v)}</text>`:'';
+      return `<g class="chart-point" data-idx="${p.i}" style="cursor:pointer;"><circle cx="${p.x}" cy="${p.y}" r="${isLatest?6:5}" fill="${isLatest?metric.color:'#ffffff'}" stroke="${metric.color}" stroke-width="3"/><circle cx="${p.x}" cy="${p.y}" r="15" fill="transparent"><title>${tooltip}</title></circle>${label}</g>`;
+    }).join('');
+
+    $("#chart").innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><path d="M${padX} ${H-botPad}H${W-padX}" stroke="#d9ded8" stroke-width="1"/>${segs.map(s=>`<polyline fill="none" stroke="${metric.color}" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" points="${s.map(p=>`${p.x},${p.y}`).join(' ')}"/>`).join('')}${pointsSvg}</svg>`;
+
+    $("#chartDates").style.gridTemplateColumns=`repeat(${days.length},1fr)`;
+    $("#chartDates").innerHTML=days.map(d=>`<span>${dateLabel(d.date,false)}</span>`).join('');
+
+    const resetHeader=()=>{
+      $("#chartLabel").textContent=metric.label;
+      $("#chartLatest").textContent=latest.stats[activeMetric]==null?statDisplay(latest,activeMetric):`${fmt(latest.stats[activeMetric])} ${metric.unit}`;
+    };
+    resetHeader();
+
+    // ホバー時にその日の数値をプレビュー表示
+    $$("#chart .chart-point").forEach(el=>{
+      const idx=el.dataset.idx;
+      if(idx==null) return;
+      const d=days[idx],val=d.stats[activeMetric];
+      el.addEventListener("mouseenter",()=>{
+        $("#chartLabel").textContent=`${metric.label}（${dateLabel(d.date,false)}時点）`;
+        $("#chartLatest").textContent=val==null?statDisplay(d,activeMetric):`${fmt(val)} ${metric.unit}`;
+      });
+      el.addEventListener("mouseleave",resetHeader);
+    });
+
+    const baseIdx=values.findIndex(v=>v!=null),diff=valid.at(-1)-valid[0],hasDefinitionBreak=metricBreakDates[activeMetric]?.size;
+    $("#chartChange").textContent=latest.stats[activeMetric]==null?"最新報告は定量値なし":hasDefinitionBreak?"定義変更箇所で折れ線を分割":`${dateLabel(days[baseIdx].date,false)}比 ${diff>0?"+":""}${fmt(diff)} ${metric.unit}`;
+    if($("#trendTable"))$("#trendTable").innerHTML=`<table><thead><tr><th>会議日</th><th>会議</th><th>${metric.label}</th></tr></thead><tbody>${days.map(d=>`<tr><td>${dateLabel(d.date,false)}</td><td>第${d.meeting}回</td><td>${d.stats[activeMetric]==null?statDisplay(d,activeMetric):`${fmt(d.stats[activeMetric])} ${metric.unit}`}</td></tr>`).join('')}</tbody></table>`;
+  };
   renderMetrics();renderChart();
 }
 
