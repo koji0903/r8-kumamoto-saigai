@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-23T12:08:32.951Z",
+  "generatedAt": "2026-09-23T17:29:42.945Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-23T11:48:23.469Z",
-    "inputCount": 836,
-    "classifiedPageCount": 675,
-    "displayCandidateCount": 574,
+    "generatedAt": "2026-09-23T17:11:42.745Z",
+    "inputCount": 837,
+    "classifiedPageCount": 676,
+    "displayCandidateCount": 575,
     "deltaFromPrevious": {
-      "inputCount": -2,
-      "classifiedPageCount": -1,
+      "inputCount": 1,
+      "classifiedPageCount": 1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 79,
+      "ageHours": 84,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 108,
-        "displayCandidates": 92,
+        "classified": 109,
+        "displayCandidates": 93,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -180,14 +180,14 @@
         "low": 0
       },
       "daily_life": {
-        "total": 201,
-        "high": 62,
+        "total": 202,
+        "high": 63,
         "medium": 138,
         "low": 1
       }
     },
     "confidence": {
-      "high": 255,
+      "high": 256,
       "medium": 319,
       "low": 101
     },
@@ -307,7 +307,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 15
+      "count": 16
     },
     {
       "code": "HTTP_404_CANDIDATE",
