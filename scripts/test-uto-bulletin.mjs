@@ -13,7 +13,8 @@ const read = file => fs.readFileSync(new URL(`../${file}`, import.meta.url), "ut
 const data = JSON.parse(read("data/reconstruction/uto-bulletin-vol1.json"));
 const html = read("uto-bulletin.html");
 const bulletinCss = read("uto-bulletin.css");
-const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+const text = html.replace(/<script\b[\s\S]*?<\/script>/gi, " ").replace(/<style\b[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+
 
 // ---- 出典 -------------------------------------------------------------------
 assert.match(html, /https:\/\/www\.city\.uto\.lg\.jp\/article\/view\/1310\/16632\.html/, "元の記事へのリンクが必要です");

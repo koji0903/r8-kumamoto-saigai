@@ -81,11 +81,208 @@ const meta = (property, content, name = false) => `<meta ${name ? "name" : "prop
 function stripSeo(html) {
   return html
     .replace(/\s*<meta\s+(?:property|name)="(?:og:[^"]+|twitter:[^"]+|robots)"[^>]*>/gi, "")
-    .replace(/\s*<link\s+rel="canonical"[^>]*>/gi, "");
+    .replace(/\s*<link\s+rel="canonical"[^>]*>/gi, "")
+    .replace(/\s*<script\s+type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, "");
 }
 
 function canonicalFor(file) {
   return file === "index.html" ? `${origin}/` : `${origin}/${file}`;
+}
+
+const specialFaqs = new Map([
+  [
+    "risai-certificate.html",
+    [
+      {
+        q: "り災証明書と被災届出証明書の違いは何ですか？",
+        a: "り災証明書は住家（居住用の家屋）の被害の程度（全壊、大規模半壊、中規模半壊、半壊、準半壊、一部損壊など）を自治体が現地調査・判定して公的に証明する書類です。公的支援金や住宅の応急修理、仮設住宅の申請に必要となります。一方、被災届出証明書は非住家（店舗、倉庫、車庫等）や動産（車、家財等）の被害について、届出があった事実を自治体が証明する書類です。"
+      },
+      {
+        q: "片付けや修理の前に被害状況の写真を撮る際のポイントは？",
+        a: "家の全景（4方向から）、浸水深が分かる引きの写真、表札、損壊した屋根・外壁・柱・基礎、室内の各部屋の被害状況（全景と床・壁・天井・建具の破損部位の拡大）を撮影してください。メジャー等を当てて被害の深さや幅が分かるようにすると判定がスムーズになります。"
+      },
+      {
+        q: "り災証明書の申請に必要な書類は何ですか？",
+        a: "1. 罹災証明書交付申請書（各自治体窓口またはHPからダウンロード）、2. 本人確認書類（マイナンバーカード、運転免許証、保険証等）、3. 被害状況が確認できるカラー写真です。代理人が申請する場合は委任状が必要となります。"
+      }
+    ]
+  ],
+  [
+    "temporary-housing.html",
+    [
+      {
+        q: "建設型応急住宅（仮設住宅）の入居要件はどうなっていますか？",
+        a: "原則として、り災証明書の判定が「全壊」「大規模半壊」、または「中規模半壊」「半壊」であって解体・撤去を余儀なくされるなど、居住する住家を失った方が対象となります。自治体によって高齢者世帯や障害者世帯等の優先枠が設定されます。"
+      },
+      {
+        q: "賃貸型応急住宅（みなし仮設）とはどのような制度ですか？",
+        a: "民間の賃貸住宅を自治体が借り上げ、被災された方に無償で提供する制度です。家賃の上限額や入居期間（原則2年間）が定められており、被災者自身が物件を探して自治体と契約を結ぶ流れが一般的です。"
+      }
+    ]
+  ],
+  [
+    "uto-repair.html",
+    [
+      {
+        q: "住宅の応急修理制度（災害救助法）の限度額はいくらですか？",
+        a: "1世帯あたりの限度額は最大757,000円（準半壊の場合は367,000円）です。日常生活に不可欠な最小限の修理（屋根、外壁、給排水、電気、トイレ等）が対象となります。"
+      },
+      {
+        q: "応急修理制度を利用した工事の前に着工してしまった場合は対象になりますか？",
+        a: "原則として自治体による工事前確認と依頼が必要です。ただし災害救助の緊急性から事前着工の救済措置が取られる場合もあるため、着工前の被災写真と見積書・領収書を必ず保管の上、宇土市役所の窓口へご相談ください。"
+      }
+    ]
+  ],
+  [
+    "affected.html",
+    [
+      {
+        q: "被災直後、まず何から手続きを進めればよいですか？",
+        a: "まずは安全を確保した上で、家の被害状況を写真に記録してください（片付け・修理前）。次に自治体窓口またはオンラインで「り災証明書」の交付申請を行い、避難所の利用、住宅応急修理制度や仮設住宅の相談を進めます。"
+      },
+      {
+        q: "生活費や当面の資金が足りない場合の公的支援はありますか？",
+        a: "生活福祉資金の緊急小口資金（特例貸付）や、災害弔慰金・災害障害見舞金、被災者生活再建支援金（基礎支援金・加算支援金）、自治体独自の災害見舞金などがあります。社会福祉協議会や市役所の福祉課窓口で相談できます。"
+      }
+    ]
+  ]
+]);
+
+function buildStructuredData(file, pageTitle, description, canonical) {
+  const graph = [
+    {
+      "@type": "Organization",
+      "@id": `${origin}/#organization`,
+      name: "一般社団法人よか隊ネット熊本",
+      url: `${origin}/`,
+      logo: `${origin}/yokatai-logo.png`,
+      address: {
+        "@type": "PostalAddress",
+        postalCode: "869-0404",
+        addressRegion: "熊本県",
+        addressLocality: "宇土市",
+        streetAddress: "走潟町2235"
+      },
+      telephone: "090-2719-4037",
+      email: "info.yokatai@gmail.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${origin}/#website`,
+      url: `${origin}/`,
+      name: "一般社団法人よか隊ネット熊本",
+      publisher: { "@id": `${origin}/#organization` },
+      inLanguage: "ja"
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${canonical}#webpage`,
+      url: canonical,
+      name: pageTitle,
+      description: description,
+      isPartOf: { "@id": `${origin}/#website` },
+      inLanguage: "ja"
+    }
+  ];
+
+  if (file !== "index.html") {
+    const breadcrumbItems = [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: `${origin}/` }
+    ];
+
+    const orgPages = ["join.html", "contact.html", "privacy.html", "accessibility.html"];
+    const recordPages = ["timeline.html", "meetings.html", "official-timeline.html", "official-water-recovery.html", "official-response-tracks.html", "terms.html"];
+
+    if (file === "about.html") {
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: pageTitle, item: canonical });
+    } else if (orgPages.includes(file)) {
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: "団体情報", item: `${origin}/about.html` });
+      breadcrumbItems.push({ "@type": "ListItem", position: 3, name: pageTitle, item: canonical });
+    } else if (file === "reconstruction.html") {
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: pageTitle, item: canonical });
+    } else if (file.startsWith("reconstruction-")) {
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: "暮らしの再建ナビ", item: `${origin}/reconstruction.html` });
+      breadcrumbItems.push({ "@type": "ListItem", position: 3, name: pageTitle, item: canonical });
+    } else if (file.startsWith("uto-")) {
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: "宇土市の支援・情報", item: `${origin}/municipalities.html` });
+      breadcrumbItems.push({ "@type": "ListItem", position: 3, name: pageTitle, item: canonical });
+    } else if (file.startsWith("uki-")) {
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: "宇城市の支援・情報", item: `${origin}/municipalities.html` });
+      breadcrumbItems.push({ "@type": "ListItem", position: 3, name: pageTitle, item: canonical });
+    } else if (file.startsWith("hikawa-")) {
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: "氷川町の支援・情報", item: `${origin}/municipalities.html` });
+      breadcrumbItems.push({ "@type": "ListItem", position: 3, name: pageTitle, item: canonical });
+    } else if (file.startsWith("yatsushiro-")) {
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: "八代市の支援・情報", item: `${origin}/municipalities.html` });
+      breadcrumbItems.push({ "@type": "ListItem", position: 3, name: pageTitle, item: canonical });
+    } else if (file.startsWith("kumamoto-")) {
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: "熊本市の支援・情報", item: `${origin}/municipalities.html` });
+      breadcrumbItems.push({ "@type": "ListItem", position: 3, name: pageTitle, item: canonical });
+    } else if (file.startsWith("hq-")) {
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: "自治体災害対策本部会議", item: `${origin}/municipalities.html` });
+      breadcrumbItems.push({ "@type": "ListItem", position: 3, name: pageTitle, item: canonical });
+    } else if (recordPages.includes(file)) {
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: "被災地の記録・検証", item: `${origin}/timeline.html` });
+      breadcrumbItems.push({ "@type": "ListItem", position: 3, name: pageTitle, item: canonical });
+    } else if (file === "disaster.html") {
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: pageTitle, item: canonical });
+    } else {
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: "令和8年熊本地震 支援情報", item: `${origin}/disaster.html` });
+      breadcrumbItems.push({ "@type": "ListItem", position: 3, name: pageTitle, item: canonical });
+    }
+
+    graph.push({
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbItems
+    });
+  }
+
+  const faqs = specialFaqs.get(file);
+  if (faqs && faqs.length > 0) {
+    graph.push({
+      "@type": "FAQPage",
+      mainEntity: faqs.map(faq => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.a
+        }
+      }))
+    });
+  }
+
+  return JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
+}
+
+function getSitemapMeta(file) {
+  if (file === "index.html") {
+    return { priority: "1.0", changefreq: "daily" };
+  }
+  const highPriority = [
+    "disaster.html", "affected.html", "supporters.html", "municipalities.html",
+    "municipality-updates.html", "reconstruction.html", "priority-support-summary.html",
+    "municipality-support-compare.html"
+  ];
+  if (highPriority.includes(file)) {
+    return { priority: "0.9", changefreq: "daily" };
+  }
+  const livingSupportPages = [
+    "uto-support.html", "uto-living-support.html", "uto-repair.html", "uto-housing.html",
+    "uki-support.html", "uki-living-support.html",
+    "hikawa-support.html", "hikawa-living-support.html", "hikawa-demolition.html",
+    "yatsushiro-support.html", "yatsushiro-living-support.html", "yatsushiro-rebuild.html",
+    "kumamoto-support.html", "kumamoto-living-support.html",
+    "risai-certificate.html", "temporary-housing.html", "shelters.html", "volunteer-centers.html"
+  ];
+  if (livingSupportPages.includes(file) || file.startsWith("reconstruction-")) {
+    return { priority: "0.8", changefreq: "weekly" };
+  }
+  const lowPriority = ["about.html", "join.html", "contact.html", "privacy.html", "accessibility.html"];
+  if (lowPriority.includes(file)) {
+    return { priority: "0.4", changefreq: "monthly" };
+  }
+  return { priority: "0.6", changefreq: "weekly" };
 }
 
 const globalAssets = new Set([
@@ -164,6 +361,7 @@ for (const file of files) {
   const image = `${origin}${imagePath}`;
   const pageTitle = title.split("｜")[0];
   const robots = excluded.has(file) ? "noindex,follow" : "index,follow,max-image-preview:large";
+  const jsonLd = buildStructuredData(file, pageTitle, description, canonical);
   const tags = [
     `<link rel="canonical" href="${canonical}">`,
     meta("robots", robots, true),
@@ -172,7 +370,8 @@ for (const file of files) {
     meta("og:image", image), meta("og:image:secure_url", image), meta("og:image:type", "image/png"),
     meta("og:image:width", "1200"), meta("og:image:height", "630"), meta("og:image:alt", `${pageTitle}｜${siteName}`),
     meta("twitter:card", "summary_large_image", true), meta("twitter:title", pageTitle, true),
-    meta("twitter:description", description, true), meta("twitter:image", image, true)
+    meta("twitter:description", description, true), meta("twitter:image", image, true),
+    `<script type="application/ld+json">${jsonLd}</script>`
   ].join("\n  ");
   html = html.replace(/<\/head>/i, `  ${tags}\n</head>`);
   if (html !== original) stale.push(file);
@@ -186,7 +385,8 @@ const sitemapFiles = files.filter(file => !excluded.has(file)).sort((a, b) => {
 });
 const urls = sitemapFiles.map(file => {
   const date = lastModified(file, htmlContents.get(file));
-  return `  <url>\n    <loc>${canonicalFor(file)}</loc>${date ? `\n    <lastmod>${date}</lastmod>` : ""}\n  </url>`;
+  const { priority, changefreq } = getSitemapMeta(file);
+  return `  <url>\n    <loc>${canonicalFor(file)}</loc>${date ? `\n    <lastmod>${date}</lastmod>` : ""}\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
 }).join("\n");
 const sitemapPath = path.join(root, "sitemap.xml");
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
