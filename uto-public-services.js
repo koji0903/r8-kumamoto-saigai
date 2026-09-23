@@ -1,6 +1,6 @@
 /**
  * 宇土市 公的施設・市民サービス マップ＆総合ガイド
- * 宇土市公式配信データ・公共施設データに基づく27施設の詳細情報とインタラクティブ機能
+ * 宇土市公式配信データ・公共施設データに基づく32施設の詳細情報とインタラクティブ機能
  */
 (() => {
   // 分野カテゴリー定義
@@ -21,7 +21,83 @@
     north: "北部・東部（緑川・走潟・花園）"
   };
 
-  // 宇土市 27施設の公式データ
+  // 国民の祝日（基本祝日）判定ヘルパー
+  function getRawHoliday(date) {
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1; // 1〜12
+    const day = date.getDate();
+
+    // 春分・秋分の計算（1980〜2099年対応）
+    const vernalEquinoxDay = Math.floor(20.8431 + 0.242194 * (year - 1980) - Math.floor((year - 1980) / 4));
+    const autumnEquinoxDay = Math.floor(23.2488 + 0.242194 * (year - 1980) - Math.floor((year - 1980) / 4));
+
+    const getNthMonday = (m, n) => {
+      const firstDay = new Date(year, m - 1, 1).getDay(); // 0:日, 1:月...
+      const firstMonday = (firstDay <= 1) ? (1 + (1 - firstDay)) : (1 + (8 - firstDay));
+      return firstMonday + (n - 1) * 7;
+    };
+
+    if (month === 1) {
+      if (day === 1) return "元日";
+      if (day === getNthMonday(1, 2)) return "成人の日";
+    } else if (month === 2) {
+      if (day === 11) return "建国記念の日";
+      if (day === 23) return "天皇誕生日";
+    } else if (month === 3) {
+      if (day === vernalEquinoxDay) return "春分の日";
+    } else if (month === 4) {
+      if (day === 29) return "昭和の日";
+    } else if (month === 5) {
+      if (day === 3) return "憲法記念日";
+      if (day === 4) return "みどりの日";
+      if (day === 5) return "こどもの日";
+    } else if (month === 7) {
+      if (day === getNthMonday(7, 3)) return "海の日";
+    } else if (month === 8) {
+      if (day === 11) return "山の日";
+    } else if (month === 9) {
+      const respectDay = getNthMonday(9, 3);
+      if (day === respectDay) return "敬老の日";
+      if (day === autumnEquinoxDay) return "秋分の日";
+      if (autumnEquinoxDay - respectDay === 2 && day === respectDay + 1) return "国民の休日";
+    } else if (month === 10) {
+      if (day === getNthMonday(10, 2)) return "スポーツの日";
+    } else if (month === 11) {
+      if (day === 3) return "文化の日";
+      if (day === 23) return "勤労感謝の日";
+    }
+    return null;
+  }
+
+  // 振替休日を含む国民の祝日判定
+  function getJapaneseHoliday(date) {
+    const raw = getRawHoliday(date);
+    if (raw) return raw;
+
+    const dayOfWeek = date.getDay();
+    // 振替休日：祝日が日曜日の場合、その後の直近の「祝日でない平日」が振替休日
+    if (dayOfWeek >= 1 && dayOfWeek <= 6) {
+      let check = new Date(date.getFullYear(), date.getMonth(), date.getDate() - 1);
+      while (true) {
+        const checkRaw = getRawHoliday(check);
+        if (!checkRaw) break;
+        if (check.getDay() === 0) {
+          return "振替休日";
+        }
+        check.setDate(check.getDate() - 1);
+      }
+    }
+    return null;
+  }
+
+  // 年末年始判定（12月29日〜1月3日）
+  function isYearEndNewYear(date) {
+    const m = date.getMonth() + 1;
+    const d = date.getDate();
+    return (m === 12 && d >= 29) || (m === 1 && d <= 3);
+  }
+
+  // 宇土市 32施設の公式・関連機関データ
   const FACILITIES = [
     // 1. 行政窓口
     {
@@ -41,6 +117,7 @@
       openDays: [1, 2, 3, 4, 5],
       openTime: "08:30",
       closeTime: "17:15",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: false,
       quickTags: ["#証明窓口", "#マイナンバー", "#無料駐車場250台", "#授乳室完備"],
       fee: "窓口相談無料（各種証明書発行・手数料は所定料金）",
@@ -80,6 +157,7 @@
       openDays: [1, 2, 3, 4, 5],
       openTime: "08:30",
       closeTime: "17:15",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: false,
       quickTags: ["#西部行政窓口", "#証明交付", "#税金納付", "#駐車場30台"],
       fee: "窓口相談無料（証明書交付は所定手数料）",
@@ -115,6 +193,7 @@
       openDays: [1, 2, 3, 4, 5],
       openTime: "08:30",
       closeTime: "17:15",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: false,
       quickTags: ["#コミセンしとらす", "#証明交付", "#マイナンバー", "#駐車場50台"],
       fee: "窓口相談無料（証明書交付は所定手数料）",
@@ -132,6 +211,42 @@
         "網田地区コミュニティ活動・生涯学習・地域見守り相談"
       ],
       note: "2025年に最新の網田コミュニティセンター「しとらす」内へ移転。コミュニティスペースやカフェエリアも併設。"
+    },
+    {
+      id: "uto_consumer_center",
+      name: "宇土市消費生活センター（市役所内）",
+      ruby: "うとし しょうひせいかつせんたー",
+      cat: "admin",
+      area: "central",
+      areaLabel: "中心部（市役所本庁舎内）",
+      target: ["all", "senior"],
+      targetLabel: "宇土市在住・在勤・在学の市民全般",
+      address: "宇土市浦田町51 宇土市役所1階",
+      lat: 32.687169,
+      lng: 130.659132,
+      hours: "月・火・水・金 10:00〜16:00",
+      closed: "木曜・土曜・日曜・祝日・年末年始",
+      openDays: [1, 2, 3, 5],
+      openTime: "10:00",
+      closeTime: "16:00",
+      holidayRule: "closed_holidays_and_year_end",
+      isFree: true,
+      quickTags: ["#消費生活相談", "#クーリングオフ", "#悪質商法対策", "#相談無料", "#秘密厳守"],
+      fee: "相談無料（秘密厳守）",
+      parking: "あり（市役所駐車場 約250台・無料）",
+      phone: "0964-22-1111",
+      phoneDept: "市民保険課内（消費者ホットライン188も対応）",
+      url: "https://www.city.uto.lg.jp/site/soshiki/10210.html",
+      urlLabel: "宇土市公式：消費生活相談窓口 ↗",
+      desc: "商品やサービスの契約トラブル、悪質商法、ネット通販詐欺、多重債務などについて専門の相談員が公正に解決を助言・支援する公的窓口です。",
+      services: [
+        "悪質な訪問販売・点検商法・電話勧誘へのクーリング・オフ（契約解除）指導",
+        "定期購入・インターネット通販・副業詐欺・情報商材トラブルの相談・事業者斡旋",
+        "高齢者を狙った架空請求・オレオレ詐欺・還付金詐欺の未然防止アドバイス",
+        "多重債務・借金問題に関する一次相談・弁護士会や法テラス等への連携取次",
+        "最新の消費者トラブル手口や注意点の情報発信・出前啓発講座"
+      ],
+      note: "市役所1階の市民保険課内に窓口があり、来庁相談および電話相談が可能です。木曜・土日祝はお休みです。"
     },
 
     // 2. 子育て・母子支援
@@ -152,6 +267,7 @@
       openDays: [2, 3, 4, 5, 6],
       openTime: "09:30",
       closeTime: "16:00",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: true,
       quickTags: ["#完全無料", "#土曜も開館", "#乳幼児遊び場", "#育児相談", "#授乳室完備"],
       fee: "完全無料（利用登録・予約不要、入退室自由）",
@@ -188,6 +304,7 @@
       openDays: [1, 2, 3, 4, 5],
       openTime: "09:30",
       closeTime: "15:00",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: true,
       quickTags: ["#未就学児広場", "#離乳食相談", "#手作りおやつ", "#無料"],
       fee: "無料（事前予約不要・いつでも自由利用可）",
@@ -223,6 +340,7 @@
       openDays: [1, 2, 3, 4, 5, 6],
       openTime: "09:30",
       closeTime: "14:30",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: true,
       quickTags: ["#土曜も開館", "#広い園庭外遊び", "#大型遊具", "#育児相談", "#無料"],
       fee: "無料",
@@ -258,6 +376,7 @@
       openDays: [1, 2, 3, 4, 5],
       openTime: "09:30",
       closeTime: "14:30",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: true,
       quickTags: ["#令和7年新設", "#西部子育て拠点", "#絵本・知育玩具", "#無料"],
       fee: "無料",
@@ -288,10 +407,11 @@
       lat: 32.688500,
       lng: 130.637000,
       hours: "月曜〜土曜 9:30〜14:30",
-      closed: "年末年始",
+      closed: "日曜・祝日・年末年始",
       openDays: [1, 2, 3, 4, 5, 6],
       openTime: "09:30",
       closeTime: "14:30",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: true,
       quickTags: ["#土曜も開館", "#芝生ピクニック", "#カフェ併設", "#多世代交流"],
       fee: "施設利用無料（カフェメニュー等は実費）",
@@ -326,6 +446,7 @@
       openDays: [1],
       openTime: "10:00",
       closeTime: "15:00",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: true,
       quickTags: ["#出張定期広場", "#毎週月曜開催", "#乳幼児相談", "#無料"],
       fee: "無料（予約不要）",
@@ -359,6 +480,7 @@
       openDays: [0, 2, 3, 4, 5, 6],
       openTime: "09:00",
       closeTime: "17:00",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: true,
       quickTags: ["#土日も開館", "#室内スポーツ", "#卓球・図書室", "#放課後無料"],
       fee: "入館・利用無料",
@@ -376,6 +498,42 @@
         "放課後の安全な居場所・児童厚生員による見守りと健全育成指導"
       ],
       note: "小中学生は放課後ランドセルのまま来て過ごすこともできます。乳幼児親子の利用も歓迎されています。"
+    },
+    {
+      id: "uto_family_support",
+      name: "宇土市ファミリーサポートセンター（保健センター内）",
+      ruby: "うとし ふぁみりーさぽーとせんたー",
+      cat: "child",
+      area: "central",
+      areaLabel: "中心部（保健センター内）",
+      target: ["infant", "child"],
+      targetLabel: "生後3か月から小学校6年生までの子どもがいる保護者（依頼会員）および援助できる市民（協力会員）",
+      address: "宇土市南段原町164-3 宇土市保健センター内",
+      lat: 32.679847,
+      lng: 130.662452,
+      hours: "火曜〜土曜 9:00〜17:00",
+      closed: "日曜・月曜・祝日・年末年始",
+      openDays: [2, 3, 4, 5, 6],
+      openTime: "09:00",
+      closeTime: "17:00",
+      holidayRule: "closed_holidays_and_year_end",
+      isFree: false,
+      quickTags: ["#子育て送迎", "#一時預かり", "#会員相互援助", "#保健センター内", "#事前登録制"],
+      fee: "会員登録無料・利用料金 平日1時間700円／土日祝1時間800円（※援助活動実施時）",
+      parking: "あり（保健センター共用駐車場 約40台・無料）",
+      phone: "0964-22-1111",
+      phoneDept: "保健センター内（内線818）",
+      url: "https://www.city.uto.lg.jp/site/kosodate/1230.html",
+      urlLabel: "宇土市公式：ファミリーサポートセンター案内 ↗",
+      desc: "「子育ての手助けをしてほしい人（おねがい会員）」と「お手伝いしたい人（まかせて会員）」が地域で助け合う有償ボランティア組織です。令和8年4月より保健センター内へ移転。",
+      services: [
+        "保育所・幼稚園・学童保育・放課後児童クラブへの送迎代行",
+        "保育開始前や保育終了後の子どもの預かり、保護者通院時・リフレッシュ時の一時預かり",
+        "冠婚葬祭や学校行事の際の子どもの一時預かり",
+        "依頼会員・協力会員の登録受付・事前打ち合わせ・マッチングコーディネート",
+        "協力会員向け普通救命講習・子育て支援スキルアップ講習会の開催"
+      ],
+      note: "事前の会員登録が必要です。利用には事前顔合わせを行い、安心してサポートを受けられる体制を整えています。"
     },
 
     // 3. 健康・保健
@@ -396,6 +554,7 @@
       openDays: [1, 2, 3, 4, 5],
       openTime: "08:30",
       closeTime: "17:15",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: true,
       quickTags: ["#集団健診", "#母子手帳交付", "#乳幼児健診", "#予防接種助成"],
       fee: "健康相談無料（集団健診等は受診券に準ずる低額負担・一部無料）",
@@ -417,6 +576,42 @@
       ],
       note: "1階が保健センター窓口・診察室・相談室、2階がつどいの広場サンサンになっています。"
     },
+    {
+      id: "uto_ishikai",
+      name: "一般社団法人 宇土地区医師会（地域医療連携・訪問看護）",
+      ruby: "いっぱんしゃだんほうじん うとちくいしかい",
+      cat: "health",
+      area: "central",
+      areaLabel: "中心部（南段原町）",
+      target: ["all", "senior"],
+      targetLabel: "宇土市・宇城地域の全市民・在宅療養者・地域医療機関",
+      address: "宇土市南段原町155",
+      lat: 32.680450,
+      lng: 130.661850,
+      hours: "平日 8:30〜17:00（休日在宅当番医は日曜・祝日 9:00〜17:00 各指定医療機関）",
+      closed: "土曜・日曜・祝日・年末年始（事務局）",
+      openDays: [1, 2, 3, 4, 5],
+      openTime: "08:30",
+      closeTime: "17:00",
+      holidayRule: "closed_holidays_and_year_end",
+      isFree: true,
+      quickTags: ["#休日当番医案内", "#訪問看護ステーション", "#在宅医療介護連携", "#救急医療体制", "#駐車場あり"],
+      fee: "在宅医療相談・休日当番医案内無料（診療・訪問看護利用は健康保険・介護保険適用）",
+      parking: "あり（医師会館敷地内 約20台・無料）",
+      phone: "0964-22-2111",
+      phoneDept: "医師会事務局",
+      url: "http://www.uto-ishikai.com/",
+      urlLabel: "宇土地区医師会公式サイト ↗",
+      desc: "宇土市および近隣地区の地域医療を支える公的医療法人です。日曜・祝日の休日在宅当番医の編成・公表や、訪問看護ステーション運営、在宅療養連携を担います。",
+      services: [
+        "宇土市・宇城地区の休日在宅当番医（日曜・祝日急患診療）の編成・公表・電話案内",
+        "宇土地区医師会訪問看護ステーションの運営（看護師・PT・OTによる居宅療養支援）",
+        "在宅医療・介護連携推進事業（地域包括支援センターや多職種との合同カンファレンス）",
+        "乳幼児健診・特定健診・高齢者健診・各種予防接種の実施協力体制",
+        "学校医・産業医の派遣・地域防災計画における災害時医療救護体制の構築"
+      ],
+      note: "休日急患当番医の最新情報案内も実施。保健センター・地域包括支援センター至近の地域医療中枢機関です。"
+    },
 
     // 4. 福祉・シニア
     {
@@ -436,6 +631,7 @@
       openDays: [1, 2, 3, 4, 5],
       openTime: "08:30",
       closeTime: "17:15",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: true,
       quickTags: ["#社協窓口", "#車いす無料貸出", "#生活困窮相談", "#善意銀行"],
       fee: "相談無料（福祉機器貸出原則無料）",
@@ -473,6 +669,7 @@
       openDays: [0, 2, 3, 4, 5, 6],
       openTime: "09:00",
       closeTime: "16:30",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: true,
       quickTags: ["#60歳以上無料", "#土日も開館", "#大広間開放", "#囲碁将棋", "#健康体操"],
       fee: "無料（一部講座の材料費等実費）",
@@ -507,6 +704,7 @@
       openDays: [2, 3, 4, 5, 6],
       openTime: "09:00",
       closeTime: "16:00",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: true,
       quickTags: ["#入浴サービス", "#土曜も開館", "#網田地区", "#シニア交流"],
       fee: "無料（入浴料所定低額）",
@@ -524,6 +722,78 @@
       ],
       note: "網田コミセン「しとらす」のすぐ近く。西部地域で安心して入浴と交流ができる貴重な施設です。"
     },
+    {
+      id: "uto_houkatsu",
+      name: "宇土市地域包括支援センター（白日会受託）",
+      ruby: "うとし ちいきほうかつしえんせんたー",
+      cat: "welfare",
+      area: "central",
+      areaLabel: "中心部（保健センター隣接）",
+      target: ["senior", "all"],
+      targetLabel: "高齢者・ご家族・ケアマネジャー・地域支援者",
+      address: "宇土市南段原町164-5",
+      lat: 32.679750,
+      lng: 130.662750,
+      hours: "平日 8:15〜17:15（夜間休日緊急電話体制あり）",
+      closed: "土曜・日曜・祝日・年末年始",
+      openDays: [1, 2, 3, 4, 5],
+      openTime: "08:15",
+      closeTime: "17:15",
+      holidayRule: "closed_holidays_and_year_end",
+      isFree: true,
+      quickTags: ["#高齢者総合相談", "#介護予防", "#権利擁護", "#認知症相談", "#夜間休日緊急対応"],
+      fee: "相談無料",
+      parking: "あり（保健センター・包括支援センター共用 約50台・無料）",
+      phone: "0964-24-1555",
+      phoneDept: "地域包括支援センター直通",
+      url: "https://www.city.uto.lg.jp/site/soshiki/10230.html",
+      urlLabel: "宇土市公式：地域包括支援センター案内 ↗",
+      desc: "社会福祉法人白日会が宇土市から委託を受けて運営する高齢者の総合相談・包括ケア中核拠点です。保健師・社会福祉士・主任ケアマネジャーが連携して支援します。",
+      services: [
+        "介護予防ケアマネジメント（要支援1・2の方や事業対象者の介護予防サービス計画作成）",
+        "高齢者の総合相談支援（健康・介護・生活・医療・福祉に関するワンストップ相談）",
+        "高齢者虐待の早期発見・防止対応、成年後見制度の利用支援、消費者被害防止などの権利擁護",
+        "包括的・継続的ケアマネジメント支援（地域のケアマネジャーへの助言・医療介護連携ネットワーク推進）",
+        "認知症初期集中支援チームによる早期対応・認知症サポーター養成講座・家族介護者支援"
+      ],
+      note: "宇土市保健センターの東隣に立地。夜間・休日の緊急相談電話体制も確保されています。"
+    },
+    {
+      id: "uto_silver",
+      name: "公益社団法人 宇土市シルバー人材センター",
+      ruby: "こうえきしゃだんほうじん うとししるばーじんざいせんたー",
+      cat: "welfare",
+      area: "central",
+      areaLabel: "中心部（築籠町）",
+      target: ["senior", "all"],
+      targetLabel: "原則60歳以上のシニア市民・一般市民・市内企業・団体",
+      address: "宇土市築籠町183",
+      lat: 32.695320,
+      lng: 130.665180,
+      hours: "平日 8:30〜17:15",
+      closed: "土曜・日曜・祝日・年末年始",
+      openDays: [1, 2, 3, 4, 5],
+      openTime: "08:30",
+      closeTime: "17:15",
+      holidayRule: "closed_holidays_and_year_end",
+      isFree: false,
+      quickTags: ["#シニア就労", "#生きがい", "#庭木剪定", "#草刈り依頼", "#駐車場完備"],
+      fee: "入会相談・会員登録無料（作業依頼・発注は内容に応じた所定料金）",
+      parking: "あり（事務所前駐車場 約15台・無料）",
+      phone: "0964-22-3780",
+      phoneDept: "事務局代表",
+      url: "http://www.sjc.ne.jp/uto/",
+      urlLabel: "宇土市シルバー人材センター公式 ↗",
+      desc: "高年齢者が長年の経験と知識を生かして働き、生きがいと社会参加を得る公益法人です。市民・企業からの各種作業依頼も受け付けています。",
+      services: [
+        "シニア会員の入会説明会・会員登録・各種技能講習の実施",
+        "市民・一般家庭からの庭木剪定・除草（草刈り・草引き）・障子襖張替等の作業受託",
+        "市内事業者・公共機関からの施設清掃・屋内軽作業・管理業務受託",
+        "シルバーボランティア活動（地域美化・環境保全活動・通学路見守り）",
+        "独自事業（手芸品・リサイクル製品・自主製作竹箒などの販売）"
+      ],
+      note: "概ね60歳以上の健康で働く意欲のある市民なら誰でも入会可能。家庭の困りごと解決の頼れる相談先です。"
+    },
 
     // 5. 文化・生涯学習・図書館・公民館
     {
@@ -539,10 +809,11 @@
       lat: 32.685893,
       lng: 130.657462,
       hours: "火曜〜金曜 9:30〜18:00／土曜・日曜 9:30〜17:00",
-      closed: "毎週月曜・館内整理日・年末年始",
+      closed: "毎週月曜（祝日の場合は翌平日休館）・館内整理日・年末年始",
       openDays: [0, 2, 3, 4, 5, 6],
       openTime: "09:30",
       closeTime: "18:00",
+      holidayRule: "transfer_if_monday",
       isFree: true,
       quickTags: ["#蔵書15万冊", "#土日も開館", "#無料Wi-Fi", "#自習スペース", "#読み聞かせ"],
       fee: "閲覧・貸出完全無料",
@@ -575,10 +846,11 @@
       lat: 32.684003,
       lng: 130.661253,
       hours: "9:00〜22:00",
-      closed: "月曜日・年末年始",
+      closed: "月曜日（祝日の場合は翌平日休館）・年末年始",
       openDays: [0, 2, 3, 4, 5, 6],
       openTime: "09:00",
       closeTime: "22:00",
+      holidayRule: "transfer_if_monday",
       isFree: false,
       quickTags: ["#1000席大ホール", "#土日も開館", "#文化芸術発表", "#大型駐車場200台"],
       fee: "施設貸出は条例規定料金（一般催事鑑賞は公演に準ずる）",
@@ -613,6 +885,7 @@
       openDays: [0, 1, 2, 3, 4, 5, 6],
       openTime: "09:00",
       closeTime: "22:00",
+      holidayRule: "year_end_only",
       isFree: false,
       quickTags: ["#生涯学習講座", "#土日も開館", "#調理実習室", "#サークル活動"],
       fee: "施設利用は所定料金（主催講座等は受講料無料・教材費等実費）",
@@ -647,6 +920,7 @@
       openDays: [0, 1, 2, 3, 4, 5, 6],
       openTime: "09:00",
       closeTime: "22:00",
+      holidayRule: "year_end_only",
       isFree: false,
       quickTags: ["#轟水源近く", "#土日も開館", "#地域コミュニティ", "#集会室利用"],
       fee: "施設利用は所定規定による",
@@ -680,6 +954,7 @@
       openDays: [0, 1, 2, 3, 4, 5, 6],
       openTime: "09:00",
       closeTime: "22:00",
+      holidayRule: "year_end_only",
       isFree: false,
       quickTags: ["#緑川地区", "#土日も開館", "#文教エリア", "#地域活動拠点"],
       fee: "施設利用は所定規定による",
@@ -713,6 +988,7 @@
       openDays: [0, 1, 2, 3, 4, 5, 6],
       openTime: "09:00",
       closeTime: "22:00",
+      holidayRule: "year_end_only",
       isFree: false,
       quickTags: ["#走潟校区", "#土日も開館", "#防災活動拠点", "#研修室貸出"],
       fee: "施設利用は所定規定による",
@@ -746,6 +1022,7 @@
       openDays: [0, 1, 2, 3, 4, 5, 6],
       openTime: "09:00",
       closeTime: "22:00",
+      holidayRule: "year_end_only",
       isFree: false,
       quickTags: ["#網田校区", "#土日も開館", "#伝統文化継承", "#地域集会"],
       fee: "施設利用は所定規定による",
@@ -775,10 +1052,11 @@
       lat: 32.676378,
       lng: 130.683304,
       hours: "9:00〜22:00",
-      closed: "月曜日・年末年始",
+      closed: "月曜日（祝日の場合は翌平日休館）・年末年始",
       openDays: [0, 2, 3, 4, 5, 6],
       openTime: "09:00",
       closeTime: "22:00",
+      holidayRule: "transfer_if_monday",
       isFree: false,
       quickTags: ["#花園校区", "#土日も開館", "#学童クラブ隣接", "#多目的集会室"],
       fee: "施設利用は所定規定による",
@@ -811,10 +1089,11 @@
       lat: 32.684215,
       lng: 130.664516,
       hours: "火曜〜土曜 9:00〜22:00／日曜・祝日 9:00〜17:00",
-      closed: "毎週月曜日・年末年始",
+      closed: "毎週月曜日（祝日の場合は翌平日休館）・年末年始",
       openDays: [0, 2, 3, 4, 5, 6],
       openTime: "09:00",
       closeTime: "22:00",
+      holidayRule: "transfer_if_monday",
       isFree: false,
       quickTags: ["#冷暖房完備", "#トレーニング室", "#土日も開館", "#駐車場300台"],
       fee: "個人利用低額（トレーニング室1回200円等・専用貸切は所定料金）",
@@ -850,6 +1129,7 @@
       openDays: [0, 1, 2, 3, 4, 5, 6],
       openTime: "08:30",
       closeTime: "21:30",
+      holidayRule: "year_end_only",
       isFree: false,
       quickTags: ["#市営野球場", "#陸上トラック", "#テニスコート6面", "#ナイター照明"],
       fee: "施設利用料（専用利用は所定規定による）",
@@ -880,10 +1160,11 @@
       lat: 32.689157,
       lng: 130.598309,
       hours: "10:00〜21:00（受付は20:30まで）",
-      closed: "第2・第4水曜日・年末年始",
-      openDays: [0, 1, 2, 4, 5, 6],
+      closed: "第2・第4水曜日・元日",
+      openDays: [0, 1, 2, 3, 4, 5, 6],
       openTime: "10:00",
       closeTime: "21:00",
+      holidayRule: "ajisai_special",
       isFree: false,
       quickTags: ["#天然温泉", "#サウナ露天", "#シニア割引", "#大広間休憩", "#駐車場50台"],
       fee: "入浴料：大人400円、高齢者（宇土市内65歳以上）300円、小人200円",
@@ -899,7 +1180,7 @@
         "無料休憩大広間（お風呂上がりのリラックス・飲食持ち込み等）",
         "市内高齢者向け入浴利用割引（健康増進支援）"
       ],
-      note: "地域の高齢者の健康づくりと市民のリフレッシュ拠点として親しまれています。"
+      note: "地域の高齢者の健康づくりと市民のリフレッシュ拠点として親しまれています。毎月第2・第4水曜日が定休日です。"
     },
 
     // 7. 防災・安全・消防
@@ -920,6 +1201,7 @@
       openDays: [0, 1, 2, 3, 4, 5, 6],
       openTime: "00:00",
       closeTime: "23:59",
+      holidayRule: "always_open",
       isFree: true,
       quickTags: ["#24時間体制", "#救命救急", "#AED講習", "#防災拠点"],
       fee: "消防救急出動・救命講習無料",
@@ -955,6 +1237,7 @@
       openDays: [1, 2, 3, 4, 5],
       openTime: "08:30",
       closeTime: "17:15",
+      holidayRule: "closed_holidays_and_year_end",
       isFree: true,
       quickTags: ["#一時避難所", "#高台避難", "#非常用備蓄物資", "#駐車場30台"],
       fee: "無料",
@@ -994,15 +1277,69 @@
   }
   let favorites = loadFavorites();
 
-  // 開館ステータス判定
+  // 開館ステータス判定（国民の祝日・振替休日・年末年始・翌日振替休館・定期休館を完全考慮）
   function getFacilityOpenStatus(f, now = new Date()) {
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1; // 1〜12
+    const date = now.getDate();
     const day = now.getDay(); // 0:日, 1:月...6:土
     const curMinutes = now.getHours() * 60 + now.getMinutes();
 
-    if (!f.openDays || !f.openDays.includes(day)) {
-      return { isOpen: false, badgeClass: "status-closed", text: "⚪ 本日休館", detail: f.closed };
+    const holiday = getJapaneseHoliday(now);
+    const isYearEnd = isYearEndNewYear(now);
+
+    // 1. 24時間常時出動・年中無休（消防署等）
+    if (f.holidayRule === "always_open") {
+      return { isOpen: true, badgeClass: "status-open", text: "🟢 24時間受付・運用中", detail: f.hours };
     }
 
+    // 2. 年末年始（12月29日〜1月3日）閉庁・休館
+    if (isYearEnd) {
+      return { isOpen: false, badgeClass: "status-closed", text: "⚪ 本日閉庁（年末年始）", detail: "年末年始（12/29〜1/3）休業期間中" };
+    }
+
+    // 3. あじさいの湯の特殊定休日（第2・第4水曜休館、元日休館）
+    if (f.holidayRule === "ajisai_special") {
+      if (month === 1 && date === 1) {
+        return { isOpen: false, badgeClass: "status-closed", text: "⚪ 元日休館", detail: "元日休館" };
+      }
+      if (day === 3) {
+        const weekNum = Math.ceil(date / 7);
+        if (weekNum === 2 || weekNum === 4) {
+          return { isOpen: false, badgeClass: "status-closed", text: `⚪ 本日休館（第${weekNum}水曜 定休日）`, detail: "第2・第4水曜日休館" };
+        }
+      }
+    }
+
+    // 4. 祝日休館施設（市役所、支所、包括支援センター、保健センター、福祉センター、社協、シルバー等）
+    if (holiday && f.holidayRule === "closed_holidays_and_year_end") {
+      return { isOpen: false, badgeClass: "status-closed", text: `⚪ 本日休館（${holiday}）`, detail: `祝日・休日のため休館（${holiday}）` };
+    }
+
+    // 5. 月曜祝日振替休館施設（図書館、市民会館、花園コミセン、体育館等）
+    let isMondayHolidaySpecialOpen = false;
+    if (f.holidayRule === "transfer_if_monday") {
+      if (day === 1) {
+        if (!holiday) {
+          return { isOpen: false, badgeClass: "status-closed", text: "⚪ 本日休館（月曜 定休日）", detail: f.closed };
+        }
+        // 月曜かつ祝日の場合は特別開館（曜日判定をパスして営業時間判定へ）
+        isMondayHolidaySpecialOpen = true;
+      } else {
+        // 月曜以外：前日（昨日）が月曜かつ祝日だった場合は火曜が振替休館
+        const yesterday = new Date(year, month - 1, date - 1);
+        if (yesterday.getDay() === 1 && getJapaneseHoliday(yesterday)) {
+          return { isOpen: false, badgeClass: "status-closed", text: "⚪ 本日休館（月曜祝日の翌日振替）", detail: "月曜祝日の翌日振替休館" };
+        }
+      }
+    }
+
+    // 6. 曜日判定（openDays）
+    if (!isMondayHolidaySpecialOpen && (!f.openDays || !f.openDays.includes(day))) {
+      return { isOpen: false, badgeClass: "status-closed", text: "⚪ 本日休館（定期休館日）", detail: f.closed };
+    }
+
+    // 7. 営業時間判定
     if (f.openTime && f.closeTime) {
       const [oh, om] = f.openTime.split(":").map(Number);
       const [ch, cm] = f.closeTime.split(":").map(Number);
@@ -1020,6 +1357,11 @@
 
     return { isOpen: true, badgeClass: "status-open", text: "🟢 利用可能", detail: f.hours };
   }
+
+  // 外部テスト・シミュレーション用エクスポート
+  window.getFacilityOpenStatus = getFacilityOpenStatus;
+  window.getJapaneseHoliday = getJapaneseHoliday;
+  window.isYearEndNewYear = isYearEndNewYear;
 
   // DOM要素
   const mapElement = document.getElementById("publicServicesMap");

@@ -65,10 +65,11 @@ const context = {};
 vm.runInNewContext(`facilities = ${facilitiesJson}`, context);
 const facilities = context.facilities;
 
-assert.equal(facilities.length, 27, `施設数は27件である必要があります（現在: ${facilities.length}件）`);
+assert.equal(facilities.length, 32, `施設数は32件である必要があります（現在: ${facilities.length}件）`);
 
 const expectedCats = new Set(["admin", "child", "health", "welfare", "culture", "sports", "safety"]);
 const expectedAreas = new Set(["central", "west", "north"]);
+const expectedHolidayRules = new Set(["closed_holidays_and_year_end", "transfer_if_monday", "year_end_only", "ajisai_special", "always_open"]);
 const foundCats = new Set();
 const seenIds = new Set();
 
@@ -93,6 +94,7 @@ for (const f of facilities) {
   assert.ok(Array.isArray(f.openDays) && f.openDays.length > 0, `営業曜日が未定義: ${f.name}`);
   assert.ok(Array.isArray(f.quickTags) && f.quickTags.length > 0, `クイックタグが未定義: ${f.name}`);
 
+  assert.ok(expectedHolidayRules.has(f.holidayRule), `未知の休館ルールです: ${f.holidayRule} in ${f.name}`);
   assert.ok(Array.isArray(f.target) && f.target.length > 0, `対象者が未定義: ${f.name}`);
   assert.ok(f.targetLabel, `対象者ラベルが未定義: ${f.name}`);
   assert.ok(f.hours, `利用時間が未定義: ${f.name}`);
@@ -107,10 +109,108 @@ for (const f of facilities) {
 
 assert.equal(foundCats.size, expectedCats.size, "7分野すべてのカテゴリに施設が存在する必要があります");
 
-// 4. OGP画像の存在とサイズ検査
+// 新規追加施設の存在検証
+const houkatsu = facilities.find(f => f.id === "uto_houkatsu");
+assert.ok(houkatsu, "宇土市地域包括支援センターが含まれていません");
+assert.equal(houkatsu.cat, "welfare");
+assert.ok(houkatsu.services.some(s => s.includes("高齢者")), "包括支援センターに高齢者支援サービスが含まれていません");
+
+const silver = facilities.find(f => f.id === "uto_silver");
+assert.ok(silver, "宇土市シルバー人材センターが含まれていません");
+
+const consumer = facilities.find(f => f.id === "uto_consumer_center");
+assert.ok(consumer, "宇土市消費生活センターが含まれていません");
+
+// 4. 祝日および開館判定ロジックの単体検証
+// 全体JSをモック環境で評価して判定関数をテスト
+const mockDom = {
+  getElementById: () => ({ addEventListener: () => {}, classList: { contains: () => false } }),
+  querySelectorAll: () => [],
+  addEventListener: () => {}
+};
+const scriptContext = {
+  window: {},
+  document: mockDom,
+  localStorage: { getItem: () => null, setItem: () => {} },
+  navigator: {},
+  L: null
+};
+vm.runInNewContext(jsContent, scriptContext);
+
+const { getJapaneseHoliday, isYearEndNewYear, getFacilityOpenStatus } = scriptContext.window;
+assert.ok(typeof getJapaneseHoliday === "function", "getJapaneseHoliday がエクスポートされていません");
+assert.ok(typeof isYearEndNewYear === "function", "isYearEndNewYear がエクスポートされていません");
+assert.ok(typeof getFacilityOpenStatus === "function", "getFacilityOpenStatus がエクスポートされていません");
+
+// 祝日判定テスト
+assert.equal(getJapaneseHoliday(new Date("2026-01-01T10:00:00")), "元日");
+assert.equal(getJapaneseHoliday(new Date("2026-02-11T10:00:00")), "建国記念の日");
+assert.equal(getJapaneseHoliday(new Date("2026-02-23T10:00:00")), "天皇誕生日");
+assert.equal(getJapaneseHoliday(new Date("2026-03-20T10:00:00")), "春分の日");
+assert.equal(getJapaneseHoliday(new Date("2026-05-03T10:00:00")), "憲法記念日");
+assert.equal(getJapaneseHoliday(new Date("2026-05-04T10:00:00")), "みどりの日");
+assert.equal(getJapaneseHoliday(new Date("2026-05-05T10:00:00")), "こどもの日");
+assert.equal(getJapaneseHoliday(new Date("2026-05-06T10:00:00")), "振替休日"); // 5/3(日)憲法記念日の振替
+assert.equal(getJapaneseHoliday(new Date("2026-08-11T10:00:00")), "山の日");
+assert.equal(getJapaneseHoliday(new Date("2026-11-03T10:00:00")), "文化の日");
+assert.equal(getJapaneseHoliday(new Date("2026-11-23T10:00:00")), "勤労感謝の日");
+assert.equal(getJapaneseHoliday(new Date("2026-06-10T10:00:00")), null); // 平日は祝日なし
+
+// 年末年始判定テスト
+assert.equal(isYearEndNewYear(new Date("2026-12-28T10:00:00")), false);
+assert.equal(isYearEndNewYear(new Date("2026-12-29T10:00:00")), true);
+assert.equal(isYearEndNewYear(new Date("2026-12-31T10:00:00")), true);
+assert.equal(isYearEndNewYear(new Date("2026-01-01T10:00:00")), true);
+assert.equal(isYearEndNewYear(new Date("2026-01-03T10:00:00")), true);
+assert.equal(isYearEndNewYear(new Date("2026-01-04T10:00:00")), false);
+
+// 施設ステータス判定テスト
+const cityHall = facilities.find(f => f.id === "uto_city_hall");
+const fireDept = facilities.find(f => f.id === "uto_fire_north");
+const library = facilities.find(f => f.id === "uto_library");
+
+// (a) 通常の平日昼間（2026年6月10日 水曜 10:00）: 市役所は開館中
+const normalWeekday = new Date("2026-06-10T10:00:00");
+const st1 = getFacilityOpenStatus(cityHall, normalWeekday);
+assert.equal(st1.isOpen, true, "平日の昼間に市役所が開館判定になっていません");
+assert.ok(st1.text.includes("開館中"));
+
+// (b) 祝日の平日昼間（2026年5月6日 水曜 10:00 振替休日）: 市役所・地域包括支援センターは休館！
+const holidayDay = new Date("2026-05-06T10:00:00");
+const st2 = getFacilityOpenStatus(cityHall, holidayDay);
+assert.equal(st2.isOpen, false, "祝日に市役所が休館判定になっていません");
+assert.ok(st2.text.includes("本日休館"));
+
+const stHoukatsu = getFacilityOpenStatus(houkatsu, holidayDay);
+assert.equal(stHoukatsu.isOpen, false, "祝日に地域包括支援センターが休館判定になっていません");
+
+// (c) 年末年始（2026年12月30日 水曜 10:00）: 市役所は年末年始閉庁！
+const yearEndDay = new Date("2026-12-30T10:00:00");
+const st3 = getFacilityOpenStatus(cityHall, yearEndDay);
+assert.equal(st3.isOpen, false, "年末年始に市役所が閉庁判定になっていません");
+assert.ok(st3.text.includes("本日閉庁"));
+
+// (d) 消防署は年末年始・祝日・夜間でも24時間常時運用中
+const stFire = getFacilityOpenStatus(fireDept, yearEndDay);
+assert.equal(stFire.isOpen, true, "消防署が年末年始でも開館判定になっていません");
+assert.ok(stFire.text.includes("24時間"));
+
+// (e) 図書館の月曜祝日特別開館と翌火曜振替休館
+// 2026年10月12日（月・スポーツの日 祝日）
+const sportsDayMonday = new Date("2026-10-12T11:00:00");
+const stLib1 = getFacilityOpenStatus(library, sportsDayMonday);
+assert.equal(stLib1.isOpen, true, "図書館が月曜祝日に開館判定になっていません");
+
+// 2026年10月13日（火・月曜祝日の翌日振替休館日）
+const sportsDayTransferTuesday = new Date("2026-10-13T11:00:00");
+const stLib2 = getFacilityOpenStatus(library, sportsDayTransferTuesday);
+assert.equal(stLib2.isOpen, false, "図書館が月曜祝日の翌日火曜に振替休館判定になっていません");
+assert.ok(stLib2.text.includes("振替"));
+
+// 5. OGP画像の存在とサイズ検査
 const ogpPath = path.join(root, "ogp-uto-public-services.png");
 assert.ok(fs.existsSync(ogpPath), "ogp-uto-public-services.png が存在しません");
 const ogpStat = fs.statSync(ogpPath);
 assert.ok(ogpStat.size > 50000, "OGP画像のファイルサイズが小さすぎます");
 
-console.log(`宇土市 公的施設・市民サービス マップ＆総合ガイド テスト OK（全${facilities.length}施設・7分野・座標・サービス検証完了）`);
+console.log(`宇土市 公的施設・市民サービス マップ＆総合ガイド テスト OK（全${facilities.length}施設・祝日・年末年始判定・開館シミュレーション検証完了）`);
