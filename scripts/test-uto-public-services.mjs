@@ -147,11 +147,29 @@ assert.equal(wasteCs.holidayRule, "year_end_only");
 const cleanCenter = facilities.find(f => f.id === "uki_clean_center");
 assert.ok(cleanCenter, "宇城クリーンセンター「うきくりん」が含まれていません");
 assert.equal(cleanCenter.cat, "safety");
+assert.ok(cleanCenter.lat > 32.65 && cleanCenter.lat < 32.67, "宇城クリーンセンターの緯度が不正です");
+assert.ok(cleanCenter.lng > 130.70 && cleanCenter.lng < 130.72, "宇城クリーンセンターの経度が不正です");
 
 const tsurushiro = facilities.find(f => f.id === "uto_tsurushiro_jhs");
 assert.ok(tsurushiro, "宇土市立鶴城中学校体育館（指定避難所）が含まれていません");
 assert.equal(tsurushiro.cat, "safety");
 assert.equal(tsurushiro.holidayRule, "always_open");
+assert.ok(tsurushiro.address.includes("新小路町151"), "鶴城中学校体育館の住所が新小路町151ではありません");
+
+// 座標是正の個別検証
+assert.ok(ukiPolice.lat > 32.645 && ukiPolice.lat < 32.652, "宇城警察署の緯度が松橋町久具庁舎の位置と一致しません");
+assert.ok(ukiHealth.lat > 32.645 && ukiHealth.lat < 32.652, "宇城保健所の緯度が宇城地域振興局の位置と一致しません");
+assert.ok(wasteCs.lat > 32.665 && wasteCs.lat < 32.672, "CSネットワークの緯度が松山町3941の位置と一致しません");
+
+const fireNorth = facilities.find(f => f.id === "uto_fire_north");
+assert.ok(fireNorth.lat > 32.674 && fireNorth.lat < 32.679, "北消防署の緯度が境目町427の位置と一致しません");
+
+const jidou = facilities.find(f => f.id === "uto_jidou_center");
+assert.ok(jidou.lat > 32.686 && jidou.lat < 32.689, "宇土市児童センターの緯度が市公式KML位置（市役所西側・北段原町）と一致しません");
+
+const ishikai = facilities.find(f => f.id === "uto_ishikai");
+assert.ok(ishikai.address.includes("三拾町264"), "宇土地区医師会の住所が三拾町264ではありません");
+assert.ok(ishikai.lat > 32.694 && ishikai.lat < 32.698, "宇土地区医師会の緯度が三拾町位置と一致しません");
 
 // 4. 祝日および開館判定ロジックの単体検証
 // 全体JSをモック環境で評価して判定関数をテスト
