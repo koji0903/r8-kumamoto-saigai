@@ -419,8 +419,7 @@
 }
 
 .uh-card.is-summary-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr);
+  display: block;
   padding: 0;
 }
 
@@ -443,7 +442,7 @@
 .uh-card-overview { background: linear-gradient(145deg, #fff 0%, #fffcf5 100%); }
 
 .uh-card-body {
-  border-left: 1px solid var(--uh-line);
+  border-top: 1px solid var(--uh-line);
   background: #fafaf9;
 }
 
@@ -711,9 +710,7 @@
   .uh-supporter > p { grid-column: auto; }
   .uh-finder { padding: 16px; }
   .uh-dir-card li { flex-direction: column; gap: 2px; }
-  .uh-card.is-summary-layout { grid-template-columns: minmax(0, 1fr); }
   .uh-card-overview, .uh-card-body { padding: 18px; }
-  .uh-card-body { border-top: 1px solid var(--uh-line); border-left: 0; }
   .uh-card:hover { transform: none; }
   .uh-back-to-top { right: max(12px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); }
 }

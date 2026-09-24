@@ -56,7 +56,7 @@
     card.insertBefore(link, card.querySelector(".uh-card-tags"));
   });
 
-  // PCでは「制度の要点」と「申請前の確認事項」を左右に分け、
+  // 「制度の要点」と「申請前の確認事項」を上下に分け、
   // 一覧を流し読みしても支援内容・対象・期限を先に把握できるようにする。
   cards.forEach(card => {
     const overview = document.createElement("div");

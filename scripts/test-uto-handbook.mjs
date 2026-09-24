@@ -157,8 +157,9 @@ assert.match(css, /\.uh-grid\s*\{[\s\S]*?grid-template-columns:\s*minmax\(0,\s*1
 for (const className of ["uh-card-overview", "uh-card-body", "uh-card-body-title"]) {
   assert.ok(js.includes(className), `カードの要点整理に ${className} が必要です`);
 }
-assert.ok(js.includes('classList.add("is-summary-layout")'), "JS適用後だけ2分割レイアウトを有効にする必要があります");
-assert.match(css, /\.uh-card\.is-summary-layout\s*\{[\s\S]*?grid-template-columns:/, "要点と確認事項のPC向け2分割が必要です");
+assert.ok(js.includes('classList.add("is-summary-layout")'), "JS適用後に要点整理レイアウトを有効にする必要があります");
+assert.match(css, /\.uh-card\.is-summary-layout\s*\{[\s\S]*?display:\s*block/, "カード内部もPCで1列表示にする必要があります");
+assert.doesNotMatch(css, /\.uh-card\.is-summary-layout\s*\{[^}]*grid-template-columns:/, "カード内部をPCで2列表示にしないでください");
 assert.match(js, /apply\(\);\s*revealFromHash\(\);/, "カード再配置後にページ内リンクの位置を補正する必要があります");
 assert.match(css, /\.uh-card-amount::before[\s\S]*?支援内容・金額/, "カード上部で支援内容・金額が分かる見出しが必要です");
 assert.match(css, /\.uh-card-target\s*\{[\s\S]*?background:/, "対象者をひと目で確認できる強調表示が必要です");
