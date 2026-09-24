@@ -1,0 +1,564 @@
+/* 宇土市 被災者支援制度ハンドブック 検索ガイド
+   テーマ：宇土市ページ系のアンバー／ブラウン。共通トークンは design-system.css / org-site.css を利用。 */
+
+.uh-page {
+  --uh-main: #b45309;
+  --uh-dark: #7c2d12;
+  --uh-light: #fffbeb;
+  --uh-border: #fde68a;
+  --uh-accent: #0f766e;
+  --uh-accent-light: #f0fdfa;
+  --uh-accent-border: #99f6e4;
+  --uh-red: #b91c1c;
+  --uh-red-light: #fef2f2;
+  --uh-red-border: #fecaca;
+  --uh-ink: #1c1917;
+  --uh-slate: #44403c;
+  --uh-muted: #78716c;
+  --uh-line: #d6d3d1;
+}
+
+/* ===== ヒーロー ===== */
+.uh-hero {
+  background: radial-gradient(circle at 90% 8%, #fde68a 0%, transparent 46%),
+              linear-gradient(135deg, #ffffff 0%, #fffbeb 42%, #fef3c7 100%);
+  border-bottom: 2px solid var(--uh-border);
+  padding: 58px max(6vw, 24px) 48px;
+}
+
+.uh-hero-inner { max-width: 1140px; margin: 0 auto; }
+
+.uh-eyebrow {
+  margin: 0 0 14px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--uh-slate);
+}
+
+.uh-eyebrow span {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--uh-main);
+  color: #fff;
+  font-weight: 800;
+}
+
+.uh-hero h1 {
+  margin: 0 0 18px;
+  font-size: clamp(26px, 4.2vw, 40px);
+  font-weight: 900;
+  line-height: 1.35;
+  color: var(--uh-dark);
+}
+
+.uh-hero h1 small {
+  display: block;
+  margin-bottom: 8px;
+  font-size: clamp(13px, 1.7vw, 16px);
+  font-weight: 700;
+  color: var(--uh-slate);
+}
+
+.uh-hero h1 span { color: var(--uh-main); }
+
+.uh-lead {
+  max-width: 920px;
+  margin: 0 0 16px;
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: var(--uh-slate);
+}
+
+.uh-lead b { color: var(--uh-dark); }
+
+.uh-source-note {
+  max-width: 920px;
+  margin: 0 0 22px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .82);
+  border: 1px solid var(--uh-border);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--uh-slate);
+}
+
+.uh-source-note a { color: var(--uh-dark); font-weight: 700; text-decoration: underline; }
+
+/* ===== ボタン ===== */
+.uh-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+
+.uh-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  font-size: 14.5px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.uh-btn.primary { background: var(--uh-main); border-color: var(--uh-main); color: #fff; }
+.uh-btn.secondary { background: #fff; border-color: var(--uh-border); color: var(--uh-dark); }
+.uh-btn.ghost { background: #fff; border-color: var(--uh-line); color: var(--uh-slate); padding: 9px 16px; font-size: 13.5px; }
+.uh-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(180, 83, 9, .18); }
+.uh-btn:focus-visible { outline: 3px solid var(--uh-main); outline-offset: 2px; }
+
+/* ===== キーファクト ===== */
+.uh-keyfacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 0;
+}
+
+.uh-keyfact {
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--uh-line);
+}
+
+.uh-keyfact.highlight { border: 2px solid var(--uh-accent); background: var(--uh-accent-light); }
+.uh-keyfact.gold { border: 2px solid var(--uh-main); background: var(--uh-light); }
+
+.uh-keyfact dt { font-size: 13px; font-weight: 800; color: var(--uh-slate); line-height: 1.5; }
+
+.uh-keyfact dd {
+  margin: 6px 0 4px;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--uh-main);
+  line-height: 1.1;
+}
+
+.uh-keyfact.highlight dd { color: var(--uh-accent); }
+.uh-keyfact dd small { font-size: 15px; font-weight: 800; }
+.uh-keyfact .sub { font-size: 12.5px; line-height: 1.55; color: var(--uh-muted); }
+
+/* ===== 最初に読む ===== */
+.uh-first {
+  max-width: 1140px;
+  margin: 26px auto 0;
+  padding: 22px 24px;
+  border-radius: 12px;
+  border: 2px solid var(--uh-accent);
+  background: var(--uh-accent-light);
+}
+
+.uh-first h2 {
+  margin: 0 0 12px;
+  font-size: 19px;
+  font-weight: 900;
+  color: #134e4a;
+}
+
+.uh-first ol { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+
+.uh-first li { font-size: 15px; line-height: 1.75; color: var(--uh-slate); }
+.uh-first b { color: #134e4a; }
+.uh-first a { color: var(--uh-accent); font-weight: 700; }
+
+/* ===== セクション ===== */
+.uh-shell { max-width: 1140px; margin: 0 auto; padding: 38px max(6vw, 24px) 56px; }
+
+.uh-section {
+  padding-bottom: 38px;
+  margin-bottom: 38px;
+  border-bottom: 1px solid var(--uh-line);
+}
+
+.uh-section-head { margin-bottom: 20px; }
+
+.uh-section-head h2 {
+  margin: 0 0 8px;
+  font-size: clamp(20px, 2.8vw, 26px);
+  font-weight: 900;
+  color: var(--uh-dark);
+  line-height: 1.4;
+}
+
+.uh-sec-count { margin-left: 8px; font-size: 15px; font-weight: 800; color: var(--uh-main); }
+
+.uh-section-head p { margin: 0; font-size: 14.5px; line-height: 1.75; color: var(--uh-slate); }
+
+/* ===== 期限カード ===== */
+.uh-deadline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.uh-deadline-card {
+  display: block;
+  padding: 16px 18px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--uh-line);
+  border-left: 5px solid var(--uh-line);
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.uh-deadline-card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0, 0, 0, .1); }
+.uh-deadline-card:focus-visible { outline: 3px solid var(--uh-main); outline-offset: 2px; }
+.uh-deadline-card.level-urgent { border-left-color: var(--uh-red); background: var(--uh-red-light); }
+.uh-deadline-card.level-soon { border-left-color: var(--uh-main); background: var(--uh-light); }
+.uh-deadline-card.level-closed { border-left-color: var(--uh-muted); background: #f5f5f4; opacity: .85; }
+
+.uh-dl-date {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--uh-main);
+}
+
+.uh-deadline-card.level-urgent .uh-dl-date { color: var(--uh-red); }
+.uh-deadline-card.level-closed .uh-dl-date { color: var(--uh-muted); text-decoration: line-through; }
+
+.uh-deadline-card b {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--uh-ink);
+  line-height: 1.45;
+}
+
+.uh-deadline-card small { display: block; font-size: 12.5px; line-height: 1.6; color: var(--uh-muted); }
+
+.uh-deadline-note { margin: 14px 0 0; font-size: 13px; color: var(--uh-muted); }
+
+/* ===== 絞り込み ===== */
+.uh-finder {
+  padding: 22px;
+  border-radius: 12px;
+  background: #fff;
+  border: 2px solid var(--uh-border);
+}
+
+.uh-finder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.uh-field-wide { grid-column: 1 / -1; }
+
+.uh-field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--uh-dark);
+}
+
+.uh-field select,
+.uh-field input[type="search"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #a8a29e;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--uh-ink);
+  background: #fff;
+}
+
+.uh-field select:focus-visible,
+.uh-field input[type="search"]:focus-visible { outline: 3px solid var(--uh-main); outline-offset: 1px; }
+
+.uh-field small { display: block; margin-top: 4px; font-size: 12px; line-height: 1.6; color: var(--uh-muted); }
+
+.uh-finder-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--uh-line);
+}
+
+.uh-toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: var(--uh-slate); cursor: pointer; }
+.uh-toggle input { width: 18px; height: 18px; accent-color: var(--uh-main); }
+.uh-toggle input:focus-visible { outline: 3px solid var(--uh-main); outline-offset: 2px; }
+
+.uh-finder-result { margin-top: 14px; font-size: 15px; color: var(--uh-slate); }
+.uh-finder-result b { font-size: 22px; font-weight: 900; color: var(--uh-main); }
+.uh-finder-result span { font-size: 13.5px; color: var(--uh-muted); }
+
+.uh-empty {
+  margin-top: 18px;
+  padding: 22px;
+  border-radius: 12px;
+  background: var(--uh-light);
+  border: 1px solid var(--uh-border);
+}
+
+.uh-empty h3 { margin: 0 0 8px; font-size: 17px; font-weight: 900; color: var(--uh-dark); }
+.uh-empty p { margin: 0; font-size: 14.5px; line-height: 1.75; color: var(--uh-slate); }
+
+/* ===== 制度カード ===== */
+.uh-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 18px;
+}
+
+.uh-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--uh-line);
+  scroll-margin-top: 20px;
+}
+
+.uh-card.is-urgent { border: 2px solid var(--uh-red-border); }
+.uh-card.is-closed { background: #fafaf9; }
+
+.uh-card-head { margin-bottom: 10px; }
+
+.uh-card-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+
+.uh-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.uh-badge-type { background: #e7e5e4; color: var(--uh-ink); }
+.uh-badge-type.type-grant { background: #fee2e2; color: #991b1b; }
+.uh-badge-type.type-reduce { background: #dbeafe; color: #1e40af; }
+.uh-badge-type.type-loan { background: #ede9fe; color: #5b21b6; }
+.uh-badge-type.type-subsidy { background: #dcfce7; color: #166534; }
+.uh-badge-type.type-housing { background: #ffedd5; color: #9a3412; }
+.uh-badge-type.type-consult { background: #ccfbf1; color: #115e59; }
+.uh-badge-type.type-goods { background: #fce7f3; color: #9d174d; }
+.uh-badge-type.type-cert { background: #fef3c7; color: #854d0e; }
+
+.uh-badge-any { background: var(--uh-accent-light); color: #115e59; border: 1px solid var(--uh-accent-border); }
+.uh-badge-damage { background: #fff7ed; color: #9a3412; border: 1px solid #fed7aa; }
+.uh-badge-noapply { background: #16a34a; color: #fff; }
+.uh-badge-pending { background: #f5f5f4; color: var(--uh-muted); border: 1px solid var(--uh-line); }
+.uh-badge-urgent { background: var(--uh-red); color: #fff; }
+.uh-badge-closed { background: #57534e; color: #fff; }
+
+.uh-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--uh-dark);
+  line-height: 1.45;
+}
+
+.uh-card-amount {
+  margin: 0 0 10px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  background: var(--uh-light);
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--uh-dark);
+  line-height: 1.55;
+}
+
+.uh-card-deadline {
+  margin: 0 0 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--uh-red-light);
+  border: 1px solid var(--uh-red-border);
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #991b1b;
+}
+
+.uh-card-deadline b { display: block; font-size: 11.5px; font-weight: 800; letter-spacing: .06em; }
+
+.uh-card-lead { margin: 0 0 10px; font-size: 14px; line-height: 1.75; color: var(--uh-slate); }
+
+.uh-card-detail {
+  margin: 0 0 10px;
+  padding-left: 18px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--uh-slate);
+}
+
+.uh-card-detail li { margin-bottom: 5px; }
+.uh-card-detail li:last-child { margin-bottom: 0; }
+
+.uh-card-target,
+.uh-card-note {
+  margin: 0 0 8px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--uh-slate);
+}
+
+.uh-card-target b,
+.uh-card-note b {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  color: var(--uh-muted);
+}
+
+.uh-card-warn {
+  margin: 0 0 8px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  background: var(--uh-red-light);
+  border: 1px solid var(--uh-red-border);
+  font-size: 13px;
+  line-height: 1.7;
+  color: #991b1b;
+  font-weight: 700;
+}
+
+.uh-card-contact {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px dashed var(--uh-line);
+}
+
+.uh-card-contact > b {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  color: var(--uh-muted);
+}
+
+.uh-card-contact ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+
+.uh-card-contact li { font-size: 13.5px; line-height: 1.6; color: var(--uh-slate); }
+.uh-card-contact li span { display: block; font-size: 12.5px; color: var(--uh-muted); }
+.uh-card-contact a { color: var(--uh-main); font-weight: 800; text-decoration: none; border-bottom: 1px solid currentColor; }
+.uh-card-contact a:focus-visible { outline: 3px solid var(--uh-main); outline-offset: 2px; }
+.uh-card-contact small { display: block; margin-top: 6px; font-size: 12px; line-height: 1.6; color: var(--uh-muted); }
+
+.uh-card-links { margin-top: 10px; display: grid; gap: 4px; }
+.uh-card-links a { font-size: 13px; font-weight: 700; color: var(--uh-accent); }
+
+.uh-card-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 5px; }
+
+.uh-card-tags span {
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: #f5f5f4;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--uh-muted);
+}
+
+/* ===== 電話帳 ===== */
+.uh-dir-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 16px;
+}
+
+.uh-dir-card {
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--uh-line);
+}
+
+.uh-dir-card h3 { margin: 0 0 10px; font-size: 16px; font-weight: 900; color: var(--uh-dark); }
+
+.uh-dir-card ul { margin: 0 0 10px; padding: 0; list-style: none; display: grid; gap: 6px; }
+
+.uh-dir-card li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--uh-line);
+  font-size: 13.5px;
+}
+
+.uh-dir-card li span { color: var(--uh-slate); font-weight: 700; }
+.uh-dir-card li a { color: var(--uh-main); font-weight: 900; text-decoration: none; border-bottom: 1px solid currentColor; white-space: nowrap; }
+.uh-dir-card li a:focus-visible { outline: 3px solid var(--uh-main); outline-offset: 2px; }
+.uh-dir-card > small { display: block; font-size: 12px; line-height: 1.6; color: var(--uh-muted); }
+
+.uh-note {
+  margin-top: 18px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  border-left: 5px solid var(--uh-main);
+  background: var(--uh-light);
+}
+
+.uh-note h3 { margin: 0 0 8px; font-size: 15.5px; font-weight: 900; color: var(--uh-dark); }
+.uh-note ul { margin: 0; padding-left: 20px; font-size: 13.5px; line-height: 1.75; color: var(--uh-slate); }
+.uh-note li + li { margin-top: 6px; }
+
+/* ===== このページについて ===== */
+.uh-about-card {
+  padding: 26px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #7c2d12 0%, #b45309 100%);
+  color: #fff;
+}
+
+.uh-about-card h3 { margin: 0 0 10px; font-size: 20px; font-weight: 900; color: #fff; }
+.uh-about-card > p { margin: 0 0 18px; font-size: 14.5px; line-height: 1.75; color: #fef3c7; }
+.uh-about-card > p b { color: #fff; }
+
+.uh-about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+
+.uh-about-item {
+  padding: 15px 17px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .22);
+}
+
+.uh-about-item b { display: block; margin-bottom: 6px; font-size: 12.5px; font-weight: 800; color: #fde68a; }
+.uh-about-item span { display: block; font-size: 14px; line-height: 1.7; color: #fff; }
+.uh-about-item a { color: #fde68a; text-decoration: underline; }
+
+/* ===== レスポンシブ ===== */
+@media(max-width: 768px) {
+  .uh-hero { padding: 38px max(5vw, 18px) 32px; }
+  .uh-shell { padding: 28px max(5vw, 18px) 42px; }
+  .uh-first { margin-inline: max(5vw, 18px); padding: 18px; }
+  .uh-grid, .uh-deadline-grid, .uh-dir-grid, .uh-about-grid { grid-template-columns: 1fr; }
+  .uh-finder { padding: 16px; }
+  .uh-dir-card li { flex-direction: column; gap: 2px; }
+}
+
+/* ===== 印刷 ===== */
+@media print {
+  .site-header, .site-footer, .org-context-bar, .uh-actions, .uh-finder, .uh-empty {
+    display: none !important;
+  }
+  .uh-hero { background: none !important; border-bottom: 2px solid #000 !important; padding: 10px 0 !important; }
+  .uh-shell { padding: 10px 0 !important; }
+  .uh-source-note, .uh-first { background: none !important; border: 1px solid #000 !important; }
+  .uh-card, .uh-deadline-card, .uh-dir-card { break-inside: avoid; border: 1px solid #555 !important; }
+  .uh-card[hidden], .uh-section[hidden] { display: none !important; }
+  .uh-about-card { background: none !important; border: 2px solid #000 !important; color: #000 !important; }
+  .uh-about-card h3, .uh-about-card > p, .uh-about-card > p b,
+  .uh-about-item b, .uh-about-item span, .uh-about-item a { color: #000 !important; }
+}
