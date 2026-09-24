@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-23T17:29:42.945Z",
+  "generatedAt": "2026-09-24T05:22:14.010Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-23T17:11:42.745Z",
-    "inputCount": 837,
-    "classifiedPageCount": 676,
-    "displayCandidateCount": 575,
+    "generatedAt": "2026-09-24T05:01:41.025Z",
+    "inputCount": 844,
+    "classifiedPageCount": 681,
+    "displayCandidateCount": 578,
     "deltaFromPrevious": {
-      "inputCount": 1,
-      "classifiedPageCount": 1,
-      "unclassifiedCount": 0
+      "inputCount": 7,
+      "classifiedPageCount": 5,
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 84,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -31,13 +31,13 @@
     "municipalityFallbackRate": "21/21",
     "municipalityReport": {
       "municipality_kumamoto": {
-        "classified": 67,
-        "displayCandidates": 57,
+        "classified": 68,
+        "displayCandidates": 58,
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 137,
-        "displayCandidates": 114,
+        "classified": 135,
+        "displayCandidates": 112,
         "fallback": true
       },
       "municipality_minamata": {
@@ -61,13 +61,13 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 27,
-        "displayCandidates": 23,
+        "classified": 33,
+        "displayCandidates": 27,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 109,
-        "displayCandidates": 93,
+        "classified": 110,
+        "displayCandidates": 94,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -101,8 +101,8 @@
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 19,
-        "displayCandidates": 10,
+        "classified": 18,
+        "displayCandidates": 9,
         "fallback": true
       },
       "municipality_kashima": {
@@ -111,13 +111,13 @@
         "fallback": true
       },
       "municipality_mashiki": {
-        "classified": 37,
-        "displayCandidates": 34,
+        "classified": 39,
+        "displayCandidates": 36,
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 30,
-        "displayCandidates": 26,
+        "classified": 28,
+        "displayCandidates": 24,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -140,32 +140,32 @@
       "home": {
         "total": 191,
         "high": 67,
-        "medium": 77,
-        "low": 47
+        "medium": 78,
+        "low": 46
       },
       "money": {
-        "total": 210,
+        "total": 215,
         "high": 43,
-        "medium": 51,
-        "low": 116
+        "medium": 53,
+        "low": 119
       },
       "documents": {
         "total": 178,
-        "high": 42,
+        "high": 41,
         "medium": 30,
-        "low": 106
+        "low": 107
       },
       "health_care": {
-        "total": 46,
+        "total": 49,
         "high": 17,
-        "medium": 29,
+        "medium": 32,
         "low": 0
       },
       "family_education": {
-        "total": 79,
+        "total": 78,
         "high": 9,
         "medium": 29,
-        "low": 41
+        "low": 40
       },
       "work_business": {
         "total": 58,
@@ -180,18 +180,18 @@
         "low": 0
       },
       "daily_life": {
-        "total": 202,
-        "high": 63,
+        "total": 203,
+        "high": 64,
         "medium": 138,
         "low": 1
       }
     },
     "confidence": {
-      "high": 256,
-      "medium": 319,
-      "low": 101
+      "high": 255,
+      "medium": 323,
+      "low": 103
     },
-    "unclassifiedCount": 40,
+    "unclassifiedCount": 41,
     "excludedCount": 37,
     "overrideCount": 2
   },
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:15cfa67ba3a32f0bdb7ac93f8748a7160d1dbe01b7bb83140cc66e8460e3c657",
+        "currentHash": "sha256:7c333737e291bb82cfaf43e3f8603ee365f41b2ea747b4d09f8c0e3cdd293018",
         "verificationStatus": "needs_review"
       }
     },
@@ -307,7 +307,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 16
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -320,9 +320,14 @@
       "count": 2
     },
     {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_uki",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -400,7 +405,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:15cfa67ba3a32f0bdb7ac93f8748a7160d1dbe01b7bb83140cc66e8460e3c657",
+        "currentHash": "sha256:7c333737e291bb82cfaf43e3f8603ee365f41b2ea747b4d09f8c0e3cdd293018",
         "verificationStatus": "needs_review"
       },
       {
