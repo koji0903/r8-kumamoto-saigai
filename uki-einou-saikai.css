@@ -1,0 +1,1120 @@
+/* 宇城市 営農再開支援事業（ハード事業）申請ガイド
+   テーマ：農業＝グリーン系。共通トークンは design-system.css / org-site.css を利用する。 */
+
+.einou-page {
+  --e-green: #15803d;
+  --e-green-dark: #14532d;
+  --e-green-light: #f0fdf4;
+  --e-green-border: #bbf7d0;
+  --e-gold: #b45309;
+  --e-gold-light: #fffbeb;
+  --e-gold-border: #fde68a;
+  --e-ink: #0f172a;
+  --e-navy: #14532d;
+  --e-slate: #475569;
+  --e-muted: #64748b;
+  --e-line: #cbd5e1;
+}
+
+/* ===== ヒーロー ===== */
+.einou-hero {
+  position: relative;
+  background: radial-gradient(circle at 88% 12%, #d9f99d 0%, transparent 46%),
+              linear-gradient(135deg, #ffffff 0%, #f0fdf4 42%, #ecfdf5 100%);
+  border-bottom: 2px solid var(--e-green-border);
+  padding: 60px max(6vw, 24px) 50px;
+}
+
+.einou-hero-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.einou-eyebrow {
+  margin: 0 0 14px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--e-slate);
+}
+
+.einou-eyebrow span {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--e-green);
+  color: #fff;
+  font-weight: 800;
+}
+
+.einou-hero h1 {
+  margin: 0 0 18px;
+  font-size: clamp(26px, 4.2vw, 40px);
+  font-weight: 900;
+  line-height: 1.35;
+  color: var(--e-navy);
+  letter-spacing: .01em;
+}
+
+.einou-hero h1 small {
+  display: block;
+  margin-bottom: 8px;
+  font-size: clamp(13px, 1.7vw, 16px);
+  font-weight: 700;
+  color: var(--e-slate);
+  letter-spacing: 0;
+}
+
+.einou-hero h1 span {
+  color: var(--e-green);
+}
+
+.einou-lead {
+  max-width: 900px;
+  margin: 0 0 18px;
+  color: var(--e-slate);
+  font-size: 16.5px;
+  line-height: 1.75;
+}
+
+.einou-lead b {
+  color: var(--e-navy);
+}
+
+.einou-source-note {
+  max-width: 900px;
+  margin: 0 0 24px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .8);
+  border: 1px solid var(--e-green-border);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--e-slate);
+}
+
+.einou-source-note b {
+  color: var(--e-navy);
+}
+
+.einou-source-note a {
+  color: var(--e-green-dark);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ===== ボタン ===== */
+.einou-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.einou-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14.5px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.einou-btn.primary {
+  background: var(--e-green);
+  border-color: var(--e-green);
+  color: #fff;
+}
+
+.einou-btn.secondary {
+  background: #fff;
+  border-color: var(--e-green-border);
+  color: var(--e-green-dark);
+}
+
+.einou-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(21, 128, 61, .18);
+}
+
+.einou-btn:focus-visible {
+  outline: 3px solid var(--e-green);
+  outline-offset: 2px;
+}
+
+/* ===== キーファクト ===== */
+.einou-keyfacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin: 0;
+}
+
+.einou-keyfact-card {
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--e-line);
+}
+
+.einou-keyfact-card.highlight {
+  border: 2px solid var(--e-green);
+  background: var(--e-green-light);
+}
+
+.einou-keyfact-card.gold {
+  border: 2px solid var(--e-gold-border);
+  background: var(--e-gold-light);
+}
+
+.einou-keyfact-card dt {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--e-slate);
+  line-height: 1.5;
+}
+
+.einou-keyfact-card dt small {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--e-muted);
+}
+
+.einou-keyfact-card dd {
+  margin: 6px 0 4px;
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--e-green);
+  line-height: 1.1;
+}
+
+.einou-keyfact-card.gold dd {
+  color: var(--e-gold);
+}
+
+.einou-keyfact-card dd small {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.einou-keyfact-card .sub-info {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--e-muted);
+}
+
+/* ===== アラート ===== */
+.einou-alert {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  max-width: 1120px;
+  margin: 26px auto 0;
+  padding: 20px 22px;
+  border-radius: 12px;
+  border: 2px solid #fca5a5;
+  background: #fef2f2;
+}
+
+.einou-alert svg {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: #b91c1c;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.einou-alert-content h2 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 900;
+  color: #991b1b;
+  line-height: 1.5;
+}
+
+.einou-alert-content p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--e-slate);
+}
+
+.einou-alert-content b {
+  color: #991b1b;
+}
+
+/* ===== セクション ===== */
+.einou-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px max(6vw, 24px) 60px;
+}
+
+.einou-section {
+  padding-bottom: 42px;
+  margin-bottom: 42px;
+  border-bottom: 1px solid var(--e-line);
+}
+
+.einou-section-title {
+  margin-bottom: 22px;
+}
+
+.einou-section-title .section-en {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  color: var(--e-green);
+}
+
+.einou-section-title h2 {
+  margin: 0 0 10px;
+  font-size: clamp(21px, 2.8vw, 27px);
+  font-weight: 900;
+  color: var(--e-navy);
+  line-height: 1.4;
+}
+
+.einou-section-title .section-lead {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--e-slate);
+}
+
+.einou-subhead {
+  margin: 30px 0 14px;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--e-navy);
+}
+
+/* ===== 支援メニュー ===== */
+.einou-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.einou-menu-card {
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--e-line);
+  border-top: 5px solid var(--e-green);
+}
+
+.einou-menu-card.rate-90 { border-top-color: #15803d; }
+.einou-menu-card.rate-80 { border-top-color: #0f766e; }
+.einou-menu-card.rate-70 { border-top-color: #0e7490; }
+
+.einou-menu-head {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.einou-menu-icon {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.einou-menu-badge {
+  display: inline-block;
+  margin-bottom: 4px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--e-green-light);
+  border: 1px solid var(--e-green-border);
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--e-green-dark);
+}
+
+.einou-menu-head h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--e-navy);
+  line-height: 1.4;
+}
+
+.einou-menu-sub {
+  margin: 4px 0 0;
+  font-size: 12.5px;
+  color: var(--e-muted);
+}
+
+.einou-rate {
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--e-green-light);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--e-green-dark);
+  text-align: center;
+}
+
+.einou-rate b {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+/* ===== 汎用リスト ===== */
+.einou-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--e-slate);
+}
+
+.einou-list li {
+  margin-bottom: 6px;
+}
+
+.einou-list li:last-child {
+  margin-bottom: 0;
+}
+
+.einou-list b {
+  color: var(--e-navy);
+}
+
+/* ===== 注記ボックス ===== */
+.einou-caution {
+  margin-top: 14px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: var(--e-gold-light);
+  border: 1px solid var(--e-gold-border);
+  font-size: 13px;
+  line-height: 1.7;
+  color: #92400e;
+}
+
+.einou-caution strong {
+  color: #78350f;
+}
+
+.einou-caution a {
+  color: #78350f;
+  font-weight: 700;
+}
+
+.einou-notice {
+  margin-top: 20px;
+  padding: 18px 20px;
+  border-radius: 10px;
+  border-left: 5px solid var(--e-green);
+  background: var(--e-green-light);
+}
+
+.einou-notice.gold {
+  border-left-color: var(--e-gold);
+  background: var(--e-gold-light);
+}
+
+.einou-notice h3 {
+  margin: 0 0 10px;
+  font-size: 16.5px;
+  font-weight: 900;
+  color: var(--e-navy);
+}
+
+.einou-notice p {
+  margin: 0 0 8px;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--e-slate);
+}
+
+.einou-notice-foot {
+  margin: 10px 0 0 !important;
+  font-size: 13.5px !important;
+}
+
+.einou-meta-list {
+  margin: 12px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.einou-meta-list > div {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--e-line);
+}
+
+.einou-meta-list dt {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--e-navy);
+}
+
+.einou-meta-list dd {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--e-slate);
+}
+
+/* ===== 2カラムパネル ===== */
+.einou-two-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.einou-panel {
+  padding: 22px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--e-line);
+}
+
+.einou-panel h3 {
+  margin: 0 0 12px;
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--e-navy);
+}
+
+.einou-panel p {
+  margin: 0 0 10px;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--e-slate);
+}
+
+.einou-panel b {
+  color: var(--e-navy);
+}
+
+/* ===== シミュレーター ===== */
+.einou-sim-box {
+  padding: 24px;
+  border-radius: 12px;
+  background: #fff;
+  border: 2px solid var(--e-green-border);
+}
+
+.sim-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media(max-width: 768px) {
+  .sim-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sim-form-group {
+  margin-bottom: 18px;
+}
+
+.sim-form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--e-navy);
+}
+
+.sim-form-group small {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--e-muted);
+}
+
+.sim-select, .sim-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #94a3b8;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--e-ink);
+  background: #fff;
+}
+
+.sim-select:focus-visible, .sim-input:focus-visible {
+  outline: 3px solid var(--e-green);
+  outline-offset: 1px;
+}
+
+.sim-result-panel {
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--e-green-light);
+  border: 1px solid var(--e-green-border);
+  height: 100%;
+}
+
+.sim-result-panel h3 {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--e-navy);
+}
+
+.sim-result-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sim-result-card {
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid var(--e-green-border);
+}
+
+.sim-result-card.primary-result {
+  grid-column: span 2;
+  border: 2px solid var(--e-green);
+}
+
+.sim-result-card dt {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--e-muted);
+  line-height: 1.5;
+}
+
+.sim-result-card dd {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--e-navy);
+  line-height: 1.2;
+}
+
+.sim-result-card.primary-result dd {
+  font-size: 26px;
+  color: var(--e-green);
+}
+
+/* ===== 説明会 ===== */
+.einou-briefing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.einou-briefing-card {
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--e-line);
+}
+
+.einou-briefing-date {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.einou-date-main {
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--e-green);
+}
+
+.einou-area-tag {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--e-green-light);
+  border: 1px solid var(--e-green-border);
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--e-green-dark);
+}
+
+.einou-briefing-venue {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--e-navy);
+  line-height: 1.5;
+}
+
+.einou-briefing-meta {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--e-line);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--e-slate);
+}
+
+.einou-cta {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--e-green-light);
+  border: 1px solid var(--e-green-border);
+  text-align: center;
+}
+
+.einou-cta p {
+  margin: 12px 0 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--e-slate);
+}
+
+/* ===== 必要書類 ===== */
+.einou-doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.einou-doc-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--e-line);
+}
+
+.einou-doc-card.accent-repair {
+  border: 2px solid var(--e-green-border);
+  background: var(--e-green-light);
+}
+
+.einou-doc-card.accent-replace {
+  border: 2px solid var(--e-gold-border);
+  background: var(--e-gold-light);
+}
+
+.einou-doc-card h4 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--e-navy);
+  line-height: 1.45;
+}
+
+.einou-doc-card p {
+  margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--e-slate);
+}
+
+.einou-doc-card b {
+  color: var(--e-navy);
+}
+
+.einou-doc-note {
+  margin: 8px 0 0 !important;
+  font-size: 12.5px !important;
+  color: var(--e-muted) !important;
+}
+
+/* ===== 見積書チェック ===== */
+.einou-check-list {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: einou-check;
+  display: grid;
+  gap: 10px;
+}
+
+.einou-check-list > li {
+  position: relative;
+  padding: 14px 16px 14px 56px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--e-green-border);
+}
+
+.einou-check-list > li::before {
+  counter-increment: einou-check;
+  content: counter(einou-check);
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--e-green);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.einou-check-list h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--e-navy);
+  line-height: 1.5;
+}
+
+.einou-check-list p {
+  margin: 4px 0 0;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--e-slate);
+}
+
+/* ===== ステップ ===== */
+.einou-steps {
+  display: grid;
+  gap: 14px;
+}
+
+.step-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.step-num {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--e-green);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-card {
+  flex: 1 1 auto;
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--e-line);
+}
+
+.step-card h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--e-navy);
+  line-height: 1.5;
+}
+
+.step-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--e-slate);
+}
+
+.step-card b {
+  color: var(--e-navy);
+}
+
+/* ===== FAQ ===== */
+.einou-faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.einou-faq-item {
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--e-line);
+  overflow: hidden;
+}
+
+.einou-faq-item > summary {
+  cursor: pointer;
+  padding: 16px 20px;
+  font-size: 15.5px;
+  font-weight: 800;
+  color: var(--e-navy);
+  background: var(--e-green-light);
+  list-style: none;
+  line-height: 1.55;
+}
+
+.einou-faq-item > summary::-webkit-details-marker {
+  display: none;
+}
+
+.einou-faq-item > summary::before {
+  content: "Q";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: var(--e-green);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.einou-faq-item > summary:focus-visible {
+  outline: 3px solid var(--e-green);
+  outline-offset: -3px;
+}
+
+.einou-faq-body {
+  padding: 16px 20px;
+}
+
+.einou-faq-body p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: var(--e-slate);
+}
+
+.einou-faq-body b {
+  color: var(--e-navy);
+}
+
+.einou-faq-body a {
+  color: var(--e-green-dark);
+  font-weight: 700;
+}
+
+/* ===== 関連制度 ===== */
+.einou-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.einou-related-card {
+  display: block;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--e-line);
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.einou-related-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(21, 128, 61, .14);
+}
+
+.einou-related-card:focus-visible {
+  outline: 3px solid var(--e-green);
+  outline-offset: 2px;
+}
+
+.einou-related-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--e-green-light);
+  border: 1px solid var(--e-green-border);
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--e-green-dark);
+}
+
+.einou-related-card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--e-navy);
+  line-height: 1.45;
+}
+
+.einou-related-card p {
+  margin: 0 0 10px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--e-slate);
+}
+
+.einou-related-meta {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--e-green-dark);
+}
+
+/* ===== 問い合わせ ===== */
+.einou-contact-card {
+  padding: 28px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #14532d 0%, #15803d 100%);
+  color: #fff;
+}
+
+.einou-contact-card h3 {
+  margin: 0 0 10px;
+  font-size: 21px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.einou-contact-card > p {
+  margin: 0 0 18px;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: #dcfce7;
+}
+
+.einou-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 14px;
+}
+
+.einou-contact-item {
+  padding: 16px 18px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .22);
+}
+
+.einou-contact-item b {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #bbf7d0;
+}
+
+.einou-contact-item span {
+  display: block;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #fff;
+}
+
+.einou-contact-item a {
+  color: #bbf7d0;
+  text-decoration: underline;
+}
+
+.einou-contact-note {
+  margin: 18px 0 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #dcfce7;
+}
+
+.einou-contact-note b {
+  color: #fff;
+}
+
+/* ===== レスポンシブ ===== */
+@media(max-width: 768px) {
+  .einou-hero {
+    padding: 40px max(5vw, 18px) 34px;
+  }
+  .einou-shell {
+    padding: 30px max(5vw, 18px) 44px;
+  }
+  .sim-result-items {
+    grid-template-columns: 1fr;
+  }
+  .sim-result-card.primary-result,
+  .sim-result-card[style*="span 2"] {
+    grid-column: auto !important;
+  }
+  .einou-meta-list > div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .step-item {
+    gap: 10px;
+  }
+  .step-num {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+  }
+  .einou-check-list > li {
+    padding: 14px 14px 14px 14px;
+  }
+  .einou-check-list > li::before {
+    position: static;
+    margin-bottom: 8px;
+  }
+}
+
+/* ===== 印刷 ===== */
+@media print {
+  .site-header, .site-footer, .org-context-bar, .einou-actions, .einou-cta {
+    display: none !important;
+  }
+  .einou-hero {
+    background: none !important;
+    border-bottom: 2px solid #000 !important;
+    padding: 10px 0 !important;
+  }
+  .einou-shell {
+    padding: 10px 0 !important;
+  }
+  .einou-source-note {
+    background: none !important;
+    border: 1px solid #000 !important;
+  }
+  .einou-faq-item,
+  .einou-menu-card,
+  .einou-doc-card,
+  .einou-check-list > li,
+  .step-item,
+  .einou-related-card {
+    break-inside: avoid;
+  }
+  .einou-faq-item[open] .einou-faq-body {
+    display: block !important;
+  }
+  .einou-contact-card {
+    background: none !important;
+    border: 2px solid #000 !important;
+    color: #000 !important;
+  }
+  .einou-contact-card h3,
+  .einou-contact-card > p,
+  .einou-contact-item span,
+  .einou-contact-item a,
+  .einou-contact-note,
+  .einou-contact-note b {
+    color: #000 !important;
+  }
+  .einou-contact-item b {
+    color: #000 !important;
+  }
+}

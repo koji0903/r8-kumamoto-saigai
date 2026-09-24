@@ -11,6 +11,7 @@ const excluded = new Set(["404.html"]);
 // ここに足したら画像も作ること（scripts/test-ogp.mjs が実体を確認する）。
 const specialImages = new Map([
   ["uto-public-services.html", "/ogp-uto-public-services.png"],
+  ["uki-einou-saikai.html", "/ogp-uki-einou-saikai.png"],
   ["kumamoto-living-support.html", "/ogp-kumamoto-living-support.png"],
   ["yatsushiro-living-support.html", "/ogp-yatsushiro-living-support.png"],
   ["hikawa-living-support.html", "/ogp-hikawa-living-support.png"],
