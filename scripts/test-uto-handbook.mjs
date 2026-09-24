@@ -19,6 +19,7 @@ for (const file of [
 const html = read("uto-handbook.html");
 const css = read("uto-handbook.css");
 const js = read("uto-handbook.js");
+const sourceText = read("sources/official/uto/uto-handbook.txt");
 const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
 
 // ---- 基本メタ ---------------------------------------------------------------
@@ -30,6 +31,7 @@ const pdf = "https://www.city.uto.lg.jp/d?q=64a2f70ed8565cbae8ab6cc0030be8e7.pdf
 assert.ok(html.includes(pdf), "ハンドブック原本PDFへのリンクが必要です");
 assert.match(text, /令和8年9月24日現在/, "ハンドブックの基準日（令和8年9月24日現在）の明記が必要です");
 assert.match(text, /75ページ/, "原本のページ数の明記が必要です");
+assert.equal((sourceText.match(/制度の名称/g) || []).length, 69, "原本抽出テキストに69制度が必要です");
 
 // ---- 制度カードの総数と構造 --------------------------------------------------
 const cards = [...html.matchAll(/<article class="uh-card[^"]*"[^>]*>/g)].map(m => m[0]);
@@ -74,6 +76,8 @@ assert.equal(withDeadline, 11, `期限があり受付中の制度は11件であ�
 for (const d of ["9月30日", "10月9日", "10月16日", "10月27日", "11月4日", "12月28日"]) {
   assert.ok(text.includes(d), `期限「${d}」の記載が必要です`);
 }
+assert.match(text, /10月27日（火）/, "令和8年10月27日の曜日は暦どおり火曜日と表示する必要があります");
+assert.match(text, /原本は[^。]*曜日[^。]*「木」/, "原本の曜日表記との差異を明示する必要があります");
 
 // ---- 主要制度の金額（ハンドブック記載どおり） --------------------------------
 const amounts = [
@@ -117,9 +121,20 @@ assert.match(text, /0964-27-6602/, "被害認定調査室の直通番号の記�
 for (const phrase of ["写真", "り災証明書", "被災証明書", "自己判定方式", "土日祝"]) {
   assert.ok(text.includes(phrase), `被災者向けの案内に「${phrase}」が必要です`);
 }
+assert.ok(!text.includes("ほとんどの制度で必要"), "写真がほとんどの制度で必須と誤認させないでください");
 assert.ok(html.includes('id="finder"'), "絞り込みセクションが必要です");
 assert.ok(html.includes('id="deadline"'), "期限セクションが必要です");
 assert.ok(html.includes('id="directory"'), "担当課の電話番号一覧が必要です");
+
+// ---- 支援者目線・原本照合の導線 ---------------------------------------------
+assert.ok(html.includes('id="pathways"'), "困りごと別の入口が必要です");
+assert.equal((html.match(/class="uh-quick"/g) || []).length, 8, "困りごと別の入口は8件必要です");
+for (const phrase of ["支援者・ご家族の方へ", "本人と一緒に確認する4項目", "本人の同意", "保存・送信されません"]) {
+  assert.ok(text.includes(phrase), `支援者向け案内に「${phrase}」が必要です`);
+}
+assert.ok(js.includes("uh-source-page"), "各制度から原本掲載ページを開く導線が必要です");
+assert.ok(js.includes("64～65"), "原本で2ページにまたがる制度のページ表記が必要です");
+assert.ok(js.includes("quickButtons"), "困りごと別入口の絞り込み処理が必要です");
 
 // ---- 絞り込みUIとJS ---------------------------------------------------------
 for (const id of ["fDamage", "fCat", "fType", "fWho", "fSearch", "fDeadline", "fNoapply", "fReset", "fCount"]) {

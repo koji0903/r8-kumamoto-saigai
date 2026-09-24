@@ -23,6 +23,24 @@
   const fCount = document.getElementById("fCount");
   const fActive = document.getElementById("fActive");
   const fEmpty = document.getElementById("fEmpty");
+  const quickButtons = [...document.querySelectorAll(".uh-quick")];
+
+  // 原本の印刷ページとPDFビューア上のページを対応させる。
+  // 制度61「持続的生産強化対策事業」のみ印刷ページ64～65の2ページ構成。
+  const sourcePdf = "https://www.city.uto.lg.jp/d?q=64a2f70ed8565cbae8ab6cc0030be8e7.pdf";
+  cards.forEach((card, index) => {
+    const printedPage = index <= 60 ? index + 4 : index + 5;
+    const printedLabel = index === 60 ? "64～65" : String(printedPage);
+    const pdfPage = printedPage + 2;
+    const link = document.createElement("a");
+    link.className = "uh-source-page";
+    link.href = `${sourcePdf}#page=${pdfPage}`;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = `原本 p.${printedLabel} を確認 ↗`;
+    link.setAttribute("aria-label", `${card.querySelector("h3")?.textContent?.trim() || "制度"}の原本掲載ページを開く`);
+    card.insertBefore(link, card.querySelector(".uh-card-tags"));
+  });
 
   // 各制度の data-damage には、その制度が対象とする判定区分がすべて並んでいる。
   // 例）住宅の応急修理は準半壊以上なので "z,d,c,h,j"、生活再建支援金は半壊以上なので "z,d,c,h"。
@@ -91,7 +109,7 @@
   }
   fSearch.addEventListener("input", apply);
 
-  fReset.addEventListener("click", () => {
+  const clearFilters = () => {
     fDamage.value = "";
     fCat.value = "";
     fType.value = "";
@@ -99,9 +117,27 @@
     fSearch.value = "";
     fDeadline.checked = false;
     fNoapply.checked = false;
+  };
+
+  fReset.addEventListener("click", () => {
+    clearFilters();
     apply();
     document.getElementById("finder")?.scrollIntoView({ block: "start" });
   });
+
+  // 制度名を知らない方のための、困りごと別ワンタップ検索。
+  for (const button of quickButtons) {
+    button.addEventListener("click", () => {
+      clearFilters();
+      if (button.dataset.quickCat) fCat.value = button.dataset.quickCat;
+      if (button.dataset.quickType) fType.value = button.dataset.quickType;
+      if (button.dataset.quickWho) fWho.value = button.dataset.quickWho;
+      if (button.dataset.quickDeadline === "1") fDeadline.checked = true;
+      apply();
+      document.getElementById("finder")?.scrollIntoView({ block: "start" });
+      requestAnimationFrame(() => fCount?.focus?.({ preventScroll: true }));
+    });
+  }
 
   // 期限カードなどから制度へ飛んだとき、絞り込みで隠れていたら解除して表示する
   const revealFromHash = () => {

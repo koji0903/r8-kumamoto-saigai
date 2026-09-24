@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="styles.css?v=20260817-4">
   <link rel="stylesheet" href="design-system.css?v=20260810-1">
   <link rel="stylesheet" href="org-site.css?v=20260907-2">
-  <link rel="stylesheet" href="uto-handbook.css?v=20260924-1">
+  <link rel="stylesheet" href="uto-handbook.css?v=20260924-2">
   <link rel="canonical" href="https://www.yokatainet.jp/uto-handbook.html">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
@@ -52,7 +52,7 @@
 
         <p class="uh-source-note">
           出典：宇土市「【令和8年熊本地震】被災者支援制度ハンドブック」（令和8年9月24日現在・全75ページ）。
-          金額・期限・要件は今後変わることがあります。申請の前に必ず<a href="https://www.city.uto.lg.jp/d?q=64a2f70ed8565cbae8ab6cc0030be8e7.pdf" target="_blank" rel="noopener">原本のPDF</a>と担当課でご確認ください。
+          金額・期限・要件は今後変わることがあります。申請の前に必ず<a href="https://www.city.uto.lg.jp/d?q=64a2f70ed8565cbae8ab6cc0030be8e7.pdf" target="_blank" rel="noopener">原本のPDF</a>と担当課でご確認ください。各制度カードから原本の掲載ページも開けます。
         </p>
 
         <div class="uh-actions">
@@ -94,7 +94,7 @@
       <div class="uh-first-body">
         <h2>最初に、これだけは</h2>
         <ol>
-          <li><b>写真を残す。</b>片付けや修理を始める前に、被害が分かる写真を撮ってください。ほとんどの制度で必要になります。スマホのデータで構いません。</li>
+          <li><b>写真を残す。</b>片付けや修理を始める前に、被害が分かる写真を撮ってください。り災証明書、修理、解体などの手続きで必要になる場合があります。スマホのデータで構いません。</li>
           <li><b>り災証明書か被災証明書をとる。</b>多くの支援の入口です。住家は「り災証明書」、車・カーポート・家財は「被災証明書」。<a href="#sec-cert">→ 手続きを見る</a></li>
           <li><b>判定が軽くてもあきらめない。</b>69制度のうち<b>53制度</b>は、被害の程度を問わず利用できます。</li>
           <li><b>先にお金を払わない。</b>住家の緊急修理・住宅の応急修理は、<b>市が業者へ直接支払う</b>しくみです。自分で立て替えると対象外になります。</li>
@@ -104,17 +104,49 @@
     </div>
 
     <div class="uh-shell">
+      <!-- 被災者・支援者向け入口 -->
+      <section class="uh-section uh-pathways" id="pathways" aria-labelledby="pathways-title">
+        <div class="uh-section-head">
+          <h2 id="pathways-title">いまの困りごとから、すぐ探す</h2>
+          <p>制度名が分からなくても大丈夫です。近い項目を選ぶと、該当分野だけに絞り込みます。</p>
+        </div>
+        <div class="uh-quick-grid" aria-label="困りごと別の検索入口">
+          <button type="button" class="uh-quick" data-quick-cat="cert"><b>証明書を取りたい</b><span>り災証明書・被災証明書</span></button>
+          <button type="button" class="uh-quick" data-quick-cat="house"><b>家に住めない・直したい</b><span>仮設住宅・修理・解体</span></button>
+          <button type="button" class="uh-quick" data-quick-cat="money"><b>生活費・見舞金を確認</b><span>支援金・義援金・貸付</span></button>
+          <button type="button" class="uh-quick" data-quick-cat="tax"><b>支払いを減らしたい</b><span>税・保険料・公共料金</span></button>
+          <button type="button" class="uh-quick" data-quick-cat="medical"><b>医療・介護・心の相談</b><span>受診・介護・こころのケア</span></button>
+          <button type="button" class="uh-quick" data-quick-cat="business" data-quick-who="business"><b>事業・農林漁業を再建</b><span>融資・補助金・営農再開</span></button>
+          <button type="button" class="uh-quick" data-quick-type="consult"><b>まず誰かに相談したい</b><span>無料相談・専門窓口</span></button>
+          <button type="button" class="uh-quick" data-quick-deadline="1"><b>期限がある制度を確認</b><span>受付・修理・申請期限</span></button>
+        </div>
+
+        <aside class="uh-supporter" aria-labelledby="supporter-title">
+          <div>
+            <p class="uh-supporter-label">支援者・ご家族の方へ</p>
+            <h3 id="supporter-title">本人と一緒に確認する4項目</h3>
+          </div>
+          <ol>
+            <li>被害は「住家」か、車・家財・事業用設備などか</li>
+            <li>り災証明書の判定は出ているか。未取得でも利用できる制度はあります</li>
+            <li>修理・解体・購入代金をすでに支払っていないか</li>
+            <li>直近の期限と、担当課へ伝える内容・手元の書類</li>
+          </ol>
+          <p>この検索欄に入力した内容は保存・送信されません。相談時は、本人の同意を得て必要最小限の情報だけを扱ってください。</p>
+        </aside>
+      </section>
+
       <!-- 期限アラート -->
       <section class="uh-section uh-deadline-section" id="deadline" aria-labelledby="deadline-title">
         <div class="uh-section-head">
           <h2 id="deadline-title">期限が決まっている制度</h2>
-          <p>ハンドブックに期限の記載がある12制度です。<b>本日は令和8年9月24日</b>。締切の近いものから並べています。</p>
+          <p>ハンドブックに期限の記載がある12制度です。<b>原本の基準日は令和8年9月24日</b>。原本に記載された締切の近いものから並べています。</p>
         </div>
         <div class="uh-deadline-grid">
           <a class="uh-deadline-card level-urgent" href="#p-kensetsu"><span class="uh-dl-date">9月30日(水)</span><b>建設型応急住宅の提供</b><small>申込期間の締切。みなし仮設に申込済み・入居中の方は申込できません。</small></a>
           <a class="uh-deadline-card level-urgent" href="#p-jizokuka"><span class="uh-dl-date">10月9日(金)</span><b>小規模事業者持続化補助金＜災害支援枠＞</b><small>支援機関確認書（様式3）の発行受付締切。申請締切より1週間早い。</small></a>
           <a class="uh-deadline-card level-urgent" href="#p-jizokuka"><span class="uh-dl-date">10月16日(金)</span><b>小規模事業者持続化補助金＜災害支援枠＞</b><small>申請受付締切。郵送は当日消印有効、電子申請は17:00まで。</small></a>
-          <a class="uh-deadline-card level-soon" href="#p-kinkyu-shuri"><span class="uh-dl-date">10月27日(木)</span><b>住家の緊急修理</b><small>修理期間の終了日。限度額56,400円。</small></a>
+          <a class="uh-deadline-card level-soon" href="#p-kinkyu-shuri"><span class="uh-dl-date">10月27日(火)</span><b>住家の緊急修理</b><small>修理期間の終了日。限度額56,400円。原本は曜日を「木」と表記していますが、令和8年10月27日は火曜日です。</small></a>
           <a class="uh-deadline-card level-soon" href="#p-sn4"><span class="uh-dl-date">11月4日(水)</span><b>セーフティネット保証4号</b><small>認定の申請期限。</small></a>
           <a class="uh-deadline-card level-soon" href="#p-kaigo-riyou"><span class="uh-dl-date">11月末</span><b>介護サービス利用料の猶予・免除</b><small>対象となるサービス提供分の期限。</small></a>
           <a class="uh-deadline-card" href="#p-nhk"><span class="uh-dl-date">12月末</span><b>NHK受信料の免除</b><small>令和8年7月〜12月の6か月が免除期間。</small></a>
@@ -433,14 +465,14 @@
             <h3>住家の緊急修理</h3>
             </div>
             <p class="uh-card-amount">限度額 56,400円（税込）</p>
-            <p class="uh-card-deadline"><b>期限</b>修理期間 令和8年10月27日（木）まで</p>
+            <p class="uh-card-deadline"><b>期限</b>修理期間 令和8年10月27日（火）まで</p>
             <p class="uh-card-lead">地震により被害を受けた住家の屋根・外壁・建具（玄関、窓やサッシ等）等から雨水が入ることを防ぐために、緊急修理（ブルーシートの展張など）の費用を支援します。</p>
             <ul class="uh-card-detail">
             <li>限度額までの費用を市から修理業者へ支払う制度です。</li>
             <li>被害の程度は、申込時に被害状況の写真等で判定します。</li>
             </ul>
             <p class="uh-card-target"><b>活用できる方</b>準半壊以上（相当）の被害を受けた住家に居住する世帯</p>
-            <p class="uh-card-note"><b>注意事項</b>業者に代金を先に支払ってしまうと制度を利用できません。修理前後の写真が必要です。ブルーシートは申請者自身でご準備ください。空き家、物置、駐車場等は対象外です。</p>
+            <p class="uh-card-note"><b>注意事項</b>業者に代金を先に支払ってしまうと制度を利用できません。修理前後の写真が必要です。ブルーシートは申請者自身でご準備ください。空き家、物置、駐車場等は対象外です。原本は期限の曜日を「木」と表記していますが、暦上は火曜日です。</p>
             <div class="uh-card-contact"><b>お問い合わせ</b><ul>
             <li><span>福祉課 福祉政策係</span><a href="tel:0964273317">0964-27-3317</a></li>
             </ul>
@@ -1976,6 +2008,6 @@
   <footer class="site-footer"></footer>
 
   <script src="org-site.js?v=20260907-2"></script>
-  <script src="uto-handbook.js?v=20260924-1"></script>
+  <script src="uto-handbook.js?v=20260924-2"></script>
 </body>
 </html>

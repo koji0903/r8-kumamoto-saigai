@@ -166,6 +166,63 @@
 .uh-first b { color: #134e4a; }
 .uh-first a { color: var(--uh-accent); font-weight: 700; }
 
+/* ===== 困りごと別入口・支援者向け確認 ===== */
+.uh-pathways { padding-top: 4px; }
+
+.uh-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px;
+}
+
+.uh-quick {
+  display: grid;
+  gap: 3px;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--uh-border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--uh-dark);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.uh-quick:hover {
+  transform: translateY(-1px);
+  border-color: var(--uh-main);
+  box-shadow: 0 5px 14px rgba(180, 83, 9, .14);
+}
+
+.uh-quick:focus-visible { outline: 3px solid var(--uh-main); outline-offset: 2px; }
+.uh-quick b { font-size: 14.5px; font-weight: 900; line-height: 1.45; }
+.uh-quick span { font-size: 12.5px; line-height: 1.5; color: var(--uh-muted); }
+
+.uh-supporter {
+  display: grid;
+  grid-template-columns: minmax(190px, .65fr) minmax(300px, 1.35fr);
+  gap: 14px 28px;
+  margin-top: 22px;
+  padding: 20px 22px;
+  border: 2px solid var(--uh-accent);
+  border-radius: 12px;
+  background: var(--uh-accent-light);
+}
+
+.uh-supporter-label {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--uh-accent);
+}
+
+.uh-supporter h3 { margin: 0; font-size: 18px; color: #134e4a; }
+.uh-supporter ol { margin: 0; padding-left: 20px; display: grid; gap: 5px; }
+.uh-supporter li { font-size: 13.5px; line-height: 1.65; color: var(--uh-slate); }
+.uh-supporter > p { grid-column: 1 / -1; margin: 0; font-size: 12.5px; line-height: 1.65; color: var(--uh-muted); }
+
 /* ===== セクション ===== */
 .uh-shell { max-width: 1140px; margin: 0 auto; padding: 38px max(6vw, 24px) 56px; }
 
@@ -457,6 +514,19 @@
 .uh-card-links { margin-top: 10px; display: grid; gap: 4px; }
 .uh-card-links a { font-size: 13px; font-weight: 700; color: var(--uh-accent); }
 
+.uh-source-page {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--uh-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.uh-source-page:focus-visible { outline: 3px solid var(--uh-main); outline-offset: 2px; }
+
 .uh-card-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 5px; }
 
 .uh-card-tags span {
@@ -543,14 +613,15 @@
   .uh-hero { padding: 38px max(5vw, 18px) 32px; }
   .uh-shell { padding: 28px max(5vw, 18px) 42px; }
   .uh-first { margin-inline: max(5vw, 18px); padding: 18px; }
-  .uh-grid, .uh-deadline-grid, .uh-dir-grid, .uh-about-grid { grid-template-columns: 1fr; }
+  .uh-grid, .uh-deadline-grid, .uh-dir-grid, .uh-about-grid, .uh-quick-grid, .uh-supporter { grid-template-columns: 1fr; }
+  .uh-supporter > p { grid-column: auto; }
   .uh-finder { padding: 16px; }
   .uh-dir-card li { flex-direction: column; gap: 2px; }
 }
 
 /* ===== 印刷 ===== */
 @media print {
-  .site-header, .site-footer, .org-context-bar, .uh-actions, .uh-finder, .uh-empty {
+  .site-header, .site-footer, .org-context-bar, .uh-actions, .uh-quick-grid, .uh-finder, .uh-empty {
     display: none !important;
   }
   .uh-hero { background: none !important; border-bottom: 2px solid #000 !important; padding: 10px 0 !important; }
