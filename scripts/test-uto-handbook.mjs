@@ -162,6 +162,9 @@ assert.match(js, /apply\(\);\s*revealFromHash\(\);/, "カード再配置後に�
 assert.match(css, /\.uh-card-amount::before[\s\S]*?支援内容・金額/, "カード上部で支援内容・金額が分かる見出しが必要です");
 assert.match(css, /\.uh-card-target\s*\{[\s\S]*?background:/, "対象者をひと目で確認できる強調表示が必要です");
 assert.match(html, /id="backToTopBtn"[^>]+aria-label="ページトップへ戻る"[^>]+hidden/, "ページトップへ戻るボタンが必要です");
+assert.match(html, /class="uh-back-to-top-icon"[^>]+viewBox="0 0 24 24"/, "ページトップへ戻るボタンは矢印アイコンで表示する必要があります");
+assert.ok(!html.includes("<span>ページトップへ</span>"), "ページトップへ戻るボタンに表示文字を置かないでください");
+assert.match(css, /\.uh-back-to-top\s*\{[\s\S]*?width:\s*56px;[\s\S]*?height:\s*56px;[\s\S]*?border-radius:\s*50%/, "ページトップへ戻るボタンは丸いアイコンボタンである必要があります");
 assert.match(css, /\.uh-back-to-top\s*\{[\s\S]*?position:\s*fixed/, "ページトップへ戻るボタンを画面に固定する必要があります");
 assert.match(css, /\.uh-back-to-top\[hidden\]\s*\{\s*display:\s*none/, "未スクロール時はページトップへ戻るボタンを隠す必要があります");
 for (const behavior of ["backToTopBtn", "window.scrollY", "window.scrollTo", "prefers-reduced-motion", "passive: true"]) {

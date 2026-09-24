@@ -119,17 +119,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  min-height: 48px;
-  padding: 10px 16px;
+  width: 56px;
+  height: 56px;
+  padding: 0;
   border: 2px solid #fff;
-  border-radius: 999px;
+  border-radius: 50%;
   background: var(--uh-dark);
   box-shadow: 0 6px 20px rgba(28, 25, 23, .28);
   color: #fff;
-  font: inherit;
-  font-size: 13.5px;
-  font-weight: 800;
   cursor: pointer;
   transition: transform .15s ease, background-color .15s ease, box-shadow .15s ease;
 }
@@ -137,7 +134,15 @@
 .uh-back-to-top[hidden] { display: none; }
 .uh-back-to-top:hover { background: var(--uh-main); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(28, 25, 23, .34); }
 .uh-back-to-top:focus-visible { outline: 3px solid #facc15; outline-offset: 3px; }
-.uh-back-to-top-icon { font-size: 19px; line-height: 1; }
+.uh-back-to-top-icon {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
 /* ===== キーファクト ===== */
 .uh-keyfacts {
