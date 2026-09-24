@@ -135,6 +135,7 @@ for (const phrase of ["支援者・ご家族の方へ", "本人と一緒に確�
 assert.ok(js.includes("uh-source-page"), "各制度から原本掲載ページを開く導線が必要です");
 assert.ok(js.includes("64～65"), "原本で2ページにまたがる制度のページ表記が必要です");
 assert.ok(js.includes("quickButtons"), "困りごと別入口の絞り込み処理が必要です");
+assert.ok(!html.includes('href="uki-einou-saikai.html"'), "宇土市の制度カードから宇城市専用ガイドへ誘導しないでください");
 
 // ---- 絞り込みUIとJS ---------------------------------------------------------
 for (const id of ["fDamage", "fCat", "fType", "fWho", "fSearch", "fDeadline", "fNoapply", "fReset", "fCount"]) {
