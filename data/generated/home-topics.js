@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-24T17:33:18.045Z",
-  "officialCheckedAt": "9/25 02:33",
+  "retrievedAt": "2026-09-24T21:52:14.590Z",
+  "officialCheckedAt": "9/25 06:52",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -96,8 +96,8 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "10月災害ごみ仮置場の開設日カレンダー (PDF 666KB)",
-      "url": "https://www.city.uki.kumamoto.jp/resource.php?e=cb322d7b2d0b036a9489c158656d9b08af14966fc24870625c0fd22551dcaf936d4a14bb3f9bd4d17f32c35aaae9441e",
+      "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
       "date": "2026-09-25",
       "time": null,
       "category": "ごみ・生活",
