@@ -10,6 +10,27 @@
     });
   }
 
+  // 印刷時はFAQと補足の折りたたみをすべて開く（閉じたdetailsは印刷されないため）
+  let reclose = [];
+  window.addEventListener("beforeprint", () => {
+    reclose = [...document.querySelectorAll("details:not([open])")];
+    for (const item of reclose) item.open = true;
+  });
+  window.addEventListener("afterprint", () => {
+    for (const item of reclose) item.open = false;
+    reclose = [];
+  });
+
+  // ページ内リンクでdetailsを指した場合は自動で開く
+  const openTarget = () => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (target?.tagName === "DETAILS") target.open = true;
+  };
+  window.addEventListener("hashchange", openTarget);
+  openTarget();
+
   // シミュレーター要素
   const typeSelect = document.getElementById("simType");
   const costInput = document.getElementById("simCost");
@@ -62,10 +83,14 @@
         const over = targetExpense - 500000000;
         subsidyAmount = Math.min(1500000000, 500000000 + Math.floor(over * 0.5));
       }
-    } else if (type === "specific") {
-      // 特定被災事業者：3/4（中堅1/2）、上限15億円
-      rateText = "3/4（上限15億円）";
+    } else if (type === "specific_sme") {
+      // 特定被災事業者（中小）：①の補助率に準ずる＝3/4、上限15億円（定額補助なし）
+      rateText = "3/4（上限15億円・定額補助なし）";
       subsidyAmount = Math.min(1500000000, Math.floor(targetExpense * 0.75));
+    } else if (type === "specific_mid") {
+      // 特定被災事業者（中堅）：②の補助率に準ずる＝1/2、上限15億円（定額補助なし）
+      rateText = "1/2（上限15億円・定額補助なし）";
+      subsidyAmount = Math.min(1500000000, Math.floor(targetExpense * 0.5));
     }
 
     // 千円未満切り捨て（制度概要P4準拠）
