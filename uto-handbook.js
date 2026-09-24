@@ -7,6 +7,20 @@
   const printBtn = document.getElementById("printGuideBtn");
   if (printBtn) printBtn.addEventListener("click", () => window.print());
 
+  const backToTopBtn = document.getElementById("backToTopBtn");
+  if (backToTopBtn) {
+    const updateBackToTop = () => {
+      backToTopBtn.hidden = window.scrollY < 600;
+    };
+
+    backToTopBtn.addEventListener("click", () => {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+    window.addEventListener("scroll", updateBackToTop, { passive: true });
+    updateBackToTop();
+  }
+
   const list = document.getElementById("uhList");
   if (!list) return;
 
@@ -40,6 +54,30 @@
     link.textContent = `原本 p.${printedLabel} を確認 ↗`;
     link.setAttribute("aria-label", `${card.querySelector("h3")?.textContent?.trim() || "制度"}の原本掲載ページを開く`);
     card.insertBefore(link, card.querySelector(".uh-card-tags"));
+  });
+
+  // PCでは「制度の要点」と「申請前の確認事項」を左右に分け、
+  // 一覧を流し読みしても支援内容・対象・期限を先に把握できるようにする。
+  cards.forEach(card => {
+    const overview = document.createElement("div");
+    overview.className = "uh-card-overview";
+    const details = document.createElement("div");
+    details.className = "uh-card-body";
+    const detailsTitle = document.createElement("h4");
+    detailsTitle.className = "uh-card-body-title";
+    detailsTitle.textContent = "申請前に確認すること";
+    details.append(detailsTitle);
+
+    const overviewClasses = ["uh-card-head", "uh-card-amount", "uh-card-deadline", "uh-card-lead", "uh-card-target"];
+    [...card.children].forEach(child => {
+      if (overviewClasses.some(className => child.classList.contains(className))) {
+        overview.append(child);
+      } else {
+        details.append(child);
+      }
+    });
+    card.classList.add("is-summary-layout");
+    card.append(overview, details);
   });
 
   // 各制度の data-damage には、その制度が対象とする判定区分がすべて並んでいる。
@@ -146,11 +184,13 @@
     const target = document.getElementById(id);
     if (target && target.hidden) {
       fReset.click();
-      requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
     }
+    // カードを2領域に組み替えると高さが変わるため、初期アンカー位置も計算し直す。
+    requestAnimationFrame(() => target?.scrollIntoView({ block: "start" }));
   };
   window.addEventListener("hashchange", revealFromHash);
 
   // 印刷時は絞り込みを解除せず、表示中のものだけを印刷する（そのままでよい）
   apply();
+  revealFromHash();
 })();

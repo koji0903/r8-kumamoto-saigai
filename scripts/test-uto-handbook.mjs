@@ -152,6 +152,21 @@ assert.match(css, /@media print/, "印刷用スタイルが必要です");
 assert.match(css, /max-width:\s*768px/, "モバイル用スタイルが必要です");
 assert.match(css, /:focus-visible/, "フォーカス表示のスタイルが必要です");
 assert.match(html, /aria-live="polite"/, "件数表示にaria-liveが必要です");
+assert.match(css, /\.uh-grid\s*\{[\s\S]*?grid-template-columns:\s*minmax\(0,\s*1fr\)/, "制度カードはPCでも1列表示である必要があります");
+for (const className of ["uh-card-overview", "uh-card-body", "uh-card-body-title"]) {
+  assert.ok(js.includes(className), `カードの要点整理に ${className} が必要です`);
+}
+assert.ok(js.includes('classList.add("is-summary-layout")'), "JS適用後だけ2分割レイアウトを有効にする必要があります");
+assert.match(css, /\.uh-card\.is-summary-layout\s*\{[\s\S]*?grid-template-columns:/, "要点と確認事項のPC向け2分割が必要です");
+assert.match(js, /apply\(\);\s*revealFromHash\(\);/, "カード再配置後にページ内リンクの位置を補正する必要があります");
+assert.match(css, /\.uh-card-amount::before[\s\S]*?支援内容・金額/, "カード上部で支援内容・金額が分かる見出しが必要です");
+assert.match(css, /\.uh-card-target\s*\{[\s\S]*?background:/, "対象者をひと目で確認できる強調表示が必要です");
+assert.match(html, /id="backToTopBtn"[^>]+aria-label="ページトップへ戻る"[^>]+hidden/, "ページトップへ戻るボタンが必要です");
+assert.match(css, /\.uh-back-to-top\s*\{[\s\S]*?position:\s*fixed/, "ページトップへ戻るボタンを画面に固定する必要があります");
+assert.match(css, /\.uh-back-to-top\[hidden\]\s*\{\s*display:\s*none/, "未スクロール時はページトップへ戻るボタンを隠す必要があります");
+for (const behavior of ["backToTopBtn", "window.scrollY", "window.scrollTo", "prefers-reduced-motion", "passive: true"]) {
+  assert.ok(js.includes(behavior), `ページトップへ戻る処理に ${behavior} が必要です`);
+}
 
 // ---- サイト内導線 -----------------------------------------------------------
 const siteTopics = JSON.parse(read("sources/site-topics.json"));

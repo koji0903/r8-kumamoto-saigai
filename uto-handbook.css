@@ -111,6 +111,34 @@
 .uh-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(180, 83, 9, .18); }
 .uh-btn:focus-visible { outline: 3px solid var(--uh-main); outline-offset: 2px; }
 
+.uh-back-to-top {
+  position: fixed;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 48px;
+  padding: 10px 16px;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: var(--uh-dark);
+  box-shadow: 0 6px 20px rgba(28, 25, 23, .28);
+  color: #fff;
+  font: inherit;
+  font-size: 13.5px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .15s ease, background-color .15s ease, box-shadow .15s ease;
+}
+
+.uh-back-to-top[hidden] { display: none; }
+.uh-back-to-top:hover { background: var(--uh-main); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(28, 25, 23, .34); }
+.uh-back-to-top:focus-visible { outline: 3px solid #facc15; outline-offset: 3px; }
+.uh-back-to-top-icon { font-size: 19px; line-height: 1; }
+
 /* ===== キーファクト ===== */
 .uh-keyfacts {
   display: grid;
@@ -367,24 +395,54 @@
 /* ===== 制度カード ===== */
 .uh-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
 }
 
 .uh-card {
-  display: flex;
-  flex-direction: column;
+  --uh-card-accent: var(--uh-main);
+  display: block;
+  overflow: hidden;
   padding: 20px;
-  border-radius: 12px;
-  background: #fff;
   border: 1px solid var(--uh-line);
+  border-left: 7px solid var(--uh-card-accent);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(68, 64, 60, .08);
   scroll-margin-top: 20px;
+  transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease;
 }
 
-.uh-card.is-urgent { border: 2px solid var(--uh-red-border); }
+.uh-card.is-summary-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr);
+  padding: 0;
+}
+
+.uh-card:hover { box-shadow: 0 12px 30px rgba(68, 64, 60, .13); transform: translateY(-1px); }
+.uh-card[data-cat="cert"] { --uh-card-accent: #d97706; }
+.uh-card[data-cat="money"], .uh-card[data-cat="cash"] { --uh-card-accent: #b91c1c; }
+.uh-card[data-cat="house"] { --uh-card-accent: #c2410c; }
+.uh-card[data-cat="life"] { --uh-card-accent: #0f766e; }
+.uh-card[data-cat="private"] { --uh-card-accent: #6d28d9; }
+.uh-card[data-cat="work"], .uh-card[data-cat="business"] { --uh-card-accent: #166534; }
+.uh-card[data-cat="tax"] { --uh-card-accent: #1d4ed8; }
+.uh-card[data-cat="medical"] { --uh-card-accent: #be185d; }
+.uh-card[data-cat="other"] { --uh-card-accent: #57534e; }
+.uh-card.is-urgent { border-top-color: var(--uh-red); border-right-color: var(--uh-red); border-bottom-color: var(--uh-red); }
 .uh-card.is-closed { background: #fafaf9; }
 
-.uh-card-head { margin-bottom: 10px; }
+.uh-card-overview,
+.uh-card-body { min-width: 0; padding: 22px 24px; }
+
+.uh-card-overview { background: linear-gradient(145deg, #fff 0%, #fffcf5 100%); }
+
+.uh-card-body {
+  border-left: 1px solid var(--uh-line);
+  background: #fafaf9;
+}
+
+.uh-card-head { margin-bottom: 14px; }
 
 .uh-card-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
 
@@ -416,21 +474,32 @@
 
 .uh-card h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: clamp(20px, 2.2vw, 25px);
   font-weight: 900;
   color: var(--uh-dark);
   line-height: 1.45;
 }
 
 .uh-card-amount {
-  margin: 0 0 10px;
-  padding: 9px 12px;
-  border-radius: 8px;
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border-left: 4px solid var(--uh-card-accent);
+  border-radius: 0 9px 9px 0;
   background: var(--uh-light);
-  font-size: 14.5px;
+  font-size: 16px;
   font-weight: 800;
   color: var(--uh-dark);
   line-height: 1.55;
+}
+
+.uh-card-amount::before {
+  content: "支援内容・金額";
+  display: block;
+  margin-bottom: 3px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  color: var(--uh-muted);
 }
 
 .uh-card-deadline {
@@ -446,7 +515,7 @@
 
 .uh-card-deadline b { display: block; font-size: 11.5px; font-weight: 800; letter-spacing: .06em; }
 
-.uh-card-lead { margin: 0 0 10px; font-size: 14px; line-height: 1.75; color: var(--uh-slate); }
+.uh-card-lead { margin: 0 0 14px; font-size: 15px; line-height: 1.75; color: var(--uh-slate); }
 
 .uh-card-detail {
   margin: 0 0 10px;
@@ -467,6 +536,15 @@
   color: var(--uh-slate);
 }
 
+.uh-card-target {
+  margin-bottom: 0;
+  padding: 12px 14px;
+  border-radius: 9px;
+  background: var(--uh-accent-light);
+  border: 1px solid var(--uh-accent-border);
+  font-size: 14px;
+}
+
 .uh-card-target b,
 .uh-card-note b {
   display: block;
@@ -474,6 +552,17 @@
   font-weight: 800;
   letter-spacing: .06em;
   color: var(--uh-muted);
+}
+
+.uh-card-target b { color: #115e59; }
+
+.uh-card-body-title {
+  margin: 0 0 12px;
+  padding-bottom: 9px;
+  border-bottom: 2px solid var(--uh-card-accent);
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--uh-ink);
 }
 
 .uh-card-warn {
@@ -489,7 +578,7 @@
 }
 
 .uh-card-contact {
-  margin-top: auto;
+  margin-top: 12px;
   padding-top: 12px;
   border-top: 1px dashed var(--uh-line);
 }
@@ -617,17 +706,28 @@
   .uh-supporter > p { grid-column: auto; }
   .uh-finder { padding: 16px; }
   .uh-dir-card li { flex-direction: column; gap: 2px; }
+  .uh-card.is-summary-layout { grid-template-columns: minmax(0, 1fr); }
+  .uh-card-overview, .uh-card-body { padding: 18px; }
+  .uh-card-body { border-top: 1px solid var(--uh-line); border-left: 0; }
+  .uh-card:hover { transform: none; }
+  .uh-back-to-top { right: max(12px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .uh-back-to-top, .uh-card { transition: none; }
 }
 
 /* ===== 印刷 ===== */
 @media print {
-  .site-header, .site-footer, .org-context-bar, .uh-actions, .uh-quick-grid, .uh-finder, .uh-empty {
+  .site-header, .site-footer, .org-context-bar, .uh-actions, .uh-quick-grid, .uh-finder, .uh-empty, .uh-back-to-top {
     display: none !important;
   }
   .uh-hero { background: none !important; border-bottom: 2px solid #000 !important; padding: 10px 0 !important; }
   .uh-shell { padding: 10px 0 !important; }
   .uh-source-note, .uh-first { background: none !important; border: 1px solid #000 !important; }
   .uh-card, .uh-deadline-card, .uh-dir-card { break-inside: avoid; border: 1px solid #555 !important; }
+  .uh-card.is-summary-layout { display: block !important; }
+  .uh-card-body { border-top: 1px solid #777 !important; border-left: 0 !important; }
   .uh-card[hidden], .uh-section[hidden] { display: none !important; }
   .uh-about-card { background: none !important; border: 2px solid #000 !important; color: #000 !important; }
   .uh-about-card h3, .uh-about-card > p, .uh-about-card > p b,
