@@ -62,7 +62,7 @@ async function main() {
   const homeTopicsData = {
     retrievedAt,
     officialCheckedAt: checkedAt,
-    siteTopics: siteTopics.slice(0, 6),
+    siteTopics: siteTopics.slice(0, 10),
     municipalityUpdates: municipalities.slice(0, 15),
     prefectureUpdates: prefecture.slice(0, 3),
     nationalUpdates: national.slice(0, 3)
@@ -76,7 +76,7 @@ async function main() {
   }
 
   // 2. index.html 内のトピックスセクション HTML を生成
-  const siteTopicsHtml = siteTopics.slice(0, 5).map(item => `            <article class="home-topic-card">
+  const siteTopicsHtml = siteTopics.slice(0, 10).map(item => `            <article class="home-topic-card">
               <div class="home-topic-meta">
                 <time datetime="${esc(item.date)}">${formatDate(item.date)}</time>
                 <span class="home-topic-badge">${esc(item.badge || item.category)}</span>
@@ -85,7 +85,6 @@ async function main() {
               <h3 class="home-topic-title">
                 <a href="${esc(item.url)}">${esc(item.title)} <span aria-hidden="true">→</span></a>
               </h3>
-              <p class="home-topic-desc">${esc(item.description)}</p>
             </article>`).join("\n");
 
   const officialItems = municipalities.slice(0, 15);
@@ -121,7 +120,7 @@ async function main() {
               <span class="col-icon" aria-hidden="true">📌</span>
               <div>
                 <h3>サイト更新・重要支援ガイド</h3>
-                <small>何が新しくなり、何がわかるかを要約</small>
+                <small>新着・更新されたガイドと制度情報（最新10件）</small>
               </div>
             </div>
             <div class="home-topic-list">

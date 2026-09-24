@@ -1237,14 +1237,14 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
 .col-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:#e5f3ee;font-size:18px}
 .home-topics-col-head h3{margin:0;color:#123f38;font-size:18px;font-weight:900}
 .home-topics-col-head small{display:block;color:#5a756e;font-size:12px}
-.home-topic-list,.home-official-list{display:flex;flex-direction:column;gap:14px;flex-grow:1}
-.home-topic-card{display:flex;flex-direction:column;padding:14px 16px;border:1px solid #d4e5df;border-radius:10px;background:#fff;transition:border-color .2s,box-shadow .2s}
-.home-topic-card:hover{border-color:#0d7468;box-shadow:0 4px 12px rgba(13,116,104,.1)}
-.home-topic-meta{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.home-topic-list,.home-official-list{display:flex;flex-direction:column;gap:10px;flex-grow:1}
+.home-topic-card{display:flex;flex-direction:column;padding:12px 14px;border:1px solid #d4e5df;border-radius:8px;background:#fff;transition:border-color .2s,box-shadow .2s}
+.home-topic-card:hover{border-color:#0d7468;box-shadow:0 3px 10px rgba(13,116,104,.1)}
+.home-topic-meta{display:flex;align-items:center;gap:8px;margin-bottom:5px}
 .home-topic-meta time{color:#657b74;font-size:12.5px;font-weight:750}
 .home-topic-badge{padding:2px 7px;border-radius:4px;background:#e8f4f0;color:#0d7468;font-size:11.5px;font-weight:900}
 .home-topic-cat{padding:2px 7px;border-radius:4px;background:#fef3e2;color:#9b5a0a;font-size:11.5px;font-weight:800}
-.home-topic-title{margin:0 0 6px;font-size:15.5px;line-height:1.5}
+.home-topic-title{margin:0;font-size:14.5px;line-height:1.55}
 .home-topic-title a{color:#123f38;font-weight:850;text-decoration:none}
 .home-topic-title a:hover{color:#0d7468;text-decoration:underline}
 .home-topic-desc{margin:0;color:#4c665f;font-size:13.5px;line-height:1.7}

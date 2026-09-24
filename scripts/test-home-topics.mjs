@@ -28,7 +28,7 @@ assert.ok(indexHtml.includes('class="home-topic-card"'), "サイト更新カー�
 assert.ok(indexHtml.includes('class="home-official-card"'), "自治体公式発表カードがありません");
 
 const siteCards = indexHtml.match(/class="home-topic-card"/g) || [];
-assert.ok(siteCards.length >= 4, `サイト更新カードが不足しています（${siteCards.length}件）`);
+assert.equal(siteCards.length, 10, `サイト更新カードは最新10件である必要があります（現在${siteCards.length}件）`);
 
 const officialCards = indexHtml.match(/class="home-official-card"/g) || [];
 assert.equal(officialCards.length, 15, `自治体発表カードは最新15件である必要があります（現在${officialCards.length}件）`);
@@ -36,7 +36,7 @@ assert.equal(officialCards.length, 15, `自治体発表カードは最新15件�
 // 3. 各カードの要素検証
 assert.ok(indexHtml.includes('class="home-topic-meta"'), "home-topic-meta がありません");
 assert.ok(indexHtml.includes('class="home-topic-title"'), "home-topic-title がありません");
-assert.ok(indexHtml.includes('class="home-topic-desc"'), "home-topic-desc がありません");
+assert.ok(!indexHtml.includes('class="home-topic-desc"'), "概要説明（home-topic-desc）は非表示である必要があります");
 assert.ok(indexHtml.includes('class="home-official-muni"'), "home-official-muni がありません");
 
 // 4. data/generated/home-topics.js の構文・構造検証
@@ -44,6 +44,7 @@ const sandboxWindow = {};
 new Function("window", homeTopicsJs)(sandboxWindow);
 assert.ok(sandboxWindow.HOME_TOPICS, "window.HOME_TOPICS が定義されていません");
 assert.ok(Array.isArray(sandboxWindow.HOME_TOPICS.siteTopics), "HOME_TOPICS.siteTopics が配列ではありません");
+assert.equal(sandboxWindow.HOME_TOPICS.siteTopics.length, 10, `siteTopics は最新10件である必要があります（現在${sandboxWindow.HOME_TOPICS.siteTopics.length}件）`);
 assert.ok(Array.isArray(sandboxWindow.HOME_TOPICS.municipalityUpdates), "HOME_TOPICS.municipalityUpdates が配列ではありません");
 assert.equal(sandboxWindow.HOME_TOPICS.municipalityUpdates.length, 15, `municipalityUpdates は15件である必要があります（現在${sandboxWindow.HOME_TOPICS.municipalityUpdates.length}件）`);
 
