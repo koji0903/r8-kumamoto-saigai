@@ -21,6 +21,7 @@ const specialImages = new Map([
   ["priority-support-summary.html", "/ogp-priority-support.png"],
   ["yatsushiro-loan.html", "/ogp-yatsushiro-loan.png"],
   ["uto-jizokuka.html", "/ogp-uto-jizokuka.png"],
+  ["kumamoto-saishuppatsu.html", "/ogp-kumamoto-saishuppatsu.png"],
   ["yatsushiro-rebuild.html", "/ogp-yatsushiro-rebuild.png"],
   ["yatsushiro-support.html", "/ogp-yatsushiro-support.png"],
   ["404.html", "/ogp-404.png"],
@@ -143,6 +144,23 @@ const specialFaqs = new Map([
       {
         q: "生活費や当面の資金が足りない場合の公的支援はありますか？",
         a: "生活福祉資金の緊急小口資金（特例貸付）や、災害弔慰金・災害障害見舞金、被災者生活再建支援金（基礎支援金・加算支援金）、自治体独自の災害見舞金などがあります。社会福祉協議会や市役所の福祉課窓口で相談できます。"
+      }
+    ]
+  ],
+  [
+    "kumamoto-saishuppatsu.html",
+    [
+      {
+        q: "すでに修理を発注・完了してしまったが補助対象になりますか？",
+        a: "対象になります（事前着手特例）。発災日（令和8年7月28日）以降に着手または完了した復旧事業であれば、交付決定前であっても補助対象に含まれます。ただし、被災前の状況や被害箇所の写真、発注書・契約書、請求書、口座振込の領収書・出金記録が揃っている必要があります。"
+      },
+      {
+        q: "車両を買い替える（入替購入）場合の必須条件は何ですか？",
+        a: "被災車両を必ず廃車（永久抹消登録）にすることが絶対条件です。下取りに出して中古車市場で再流通できる車両は「修理可能」とみなされ入替購入は認められません。また復旧後の車両には車体に企業名・屋号を明示し、運行日誌の記録、事業所車庫、任意保険の事業用登録を遵守する必要があります。"
+      },
+      {
+        q: "見積書は1社だけでもよいですか？",
+        a: "1件当たりの工事・購入費が税込100万円以上の場合は、原則として2者以上からの相見積もりが必要です。すでに発注済みで複数取得が困難な場合などは、「見積書が不足している理由書」を提出することで1者見積もりが例外的に認められます。"
       }
     ]
   ]
@@ -268,7 +286,8 @@ function getSitemapMeta(file) {
     return { priority: "0.9", changefreq: "daily" };
   }
   const livingSupportPages = [
-    "uto-support.html", "uto-living-support.html", "uto-repair.html", "uto-housing.html",
+    "uto-support.html", "uto-living-support.html", "uto-repair.html", "uto-housing.html", "uto-jizokuka.html",
+    "kumamoto-saishuppatsu.html",
     "uki-support.html", "uki-living-support.html",
     "hikawa-support.html", "hikawa-living-support.html", "hikawa-demolition.html",
     "yatsushiro-support.html", "yatsushiro-living-support.html", "yatsushiro-rebuild.html",
