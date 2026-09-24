@@ -450,6 +450,35 @@
 
 .uh-card-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
 
+.uh-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.uh-card-pictogram {
+  display: inline-flex;
+  flex: 0 0 54px;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--uh-card-accent);
+  box-shadow: 0 5px 14px rgba(28, 25, 23, .15);
+  color: #fff;
+}
+
+.uh-card-pictogram svg {
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .uh-badge {
   display: inline-block;
   padding: 3px 10px;
@@ -711,6 +740,9 @@
   .uh-finder { padding: 16px; }
   .uh-dir-card li { flex-direction: column; gap: 2px; }
   .uh-card-overview, .uh-card-body { padding: 18px; }
+  .uh-card-title-row { align-items: flex-start; gap: 11px; }
+  .uh-card-pictogram { flex-basis: 46px; width: 46px; height: 46px; border-radius: 12px; }
+  .uh-card-pictogram svg { width: 27px; height: 27px; }
   .uh-card:hover { transform: none; }
   .uh-back-to-top { right: max(12px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); }
 }
@@ -730,6 +762,7 @@
   .uh-card, .uh-deadline-card, .uh-dir-card { break-inside: avoid; border: 1px solid #555 !important; }
   .uh-card.is-summary-layout { display: block !important; }
   .uh-card-body { border-top: 1px solid #777 !important; border-left: 0 !important; }
+  .uh-card-pictogram { background: #fff !important; border: 1px solid #000 !important; box-shadow: none !important; color: #000 !important; }
   .uh-card[hidden], .uh-section[hidden] { display: none !important; }
   .uh-about-card { background: none !important; border: 2px solid #000 !important; color: #000 !important; }
   .uh-about-card h3, .uh-about-card > p, .uh-about-card > p b,

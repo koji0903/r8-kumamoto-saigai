@@ -157,6 +157,11 @@ assert.match(css, /\.uh-grid\s*\{[\s\S]*?grid-template-columns:\s*minmax\(0,\s*1
 for (const className of ["uh-card-overview", "uh-card-body", "uh-card-body-title"]) {
   assert.ok(js.includes(className), `カードの要点整理に ${className} が必要です`);
 }
+for (const category of ["cert", "money", "cash", "house", "life", "private", "work", "business", "tax", "medical", "other"]) {
+  assert.match(js, new RegExp(`\\b${category}:`), `分野 ${category} のピクトグラムが必要です`);
+}
+assert.ok(js.includes("uh-card-pictogram"), "各制度カードに分野別ピクトグラムが必要です");
+assert.match(css, /\.uh-card-pictogram\s*\{[\s\S]*?background:\s*var\(--uh-card-accent\)/, "ピクトグラムを分野色で表示する必要があります");
 assert.ok(js.includes('classList.add("is-summary-layout")'), "JS適用後に要点整理レイアウトを有効にする必要があります");
 assert.match(css, /\.uh-card\.is-summary-layout\s*\{[\s\S]*?display:\s*block/, "カード内部もPCで1列表示にする必要があります");
 assert.doesNotMatch(css, /\.uh-card\.is-summary-layout\s*\{[^}]*grid-template-columns:/, "カード内部をPCで2列表示にしないでください");

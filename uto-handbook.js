@@ -58,7 +58,34 @@
 
   // 「制度の要点」と「申請前の確認事項」を上下に分け、
   // 一覧を流し読みしても支援内容・対象・期限を先に把握できるようにする。
+  const cardPictograms = {
+    cert: '<path d="M7 3h7l4 4v14H7zM14 3v5h5M9.5 14l2 2 4-4"/>',
+    money: '<circle cx="12" cy="12" r="9"/><path d="m8 7 4 6 4-6M9 13h6M9 16h6M12 13v5"/>',
+    cash: '<circle cx="12" cy="12" r="9"/><path d="m8 7 4 6 4-6M9 13h6M9 16h6M12 13v5"/>',
+    house: '<path d="m3 11 9-8 9 8M5 10v11h14V10M9 21v-7h6v7"/>',
+    life: '<path d="M20.8 5.7a5.2 5.2 0 0 0-7.4 0L12 7.1l-1.4-1.4a5.2 5.2 0 0 0-7.4 7.4L12 22l8.8-8.9a5.2 5.2 0 0 0 0-7.4Z"/>',
+    private: '<path d="M12 3 4.5 6v5.4c0 4.8 3.1 8.2 7.5 9.6 4.4-1.4 7.5-4.8 7.5-9.6V6zM8.5 12l2.2 2.2 4.8-5"/>',
+    work: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3M3 12h18M10 12v2h4v-2"/>',
+    business: '<path d="M12 21v-9M12 14c-5 0-7-3-7-7 5 0 7 3 7 7ZM12 11c0-4 2-7 7-7 0 4-2 7-7 7ZM5 21h14"/>',
+    tax: '<path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6M9 16h3"/>',
+    medical: '<circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/>',
+    other: '<path d="M4 4h16v13H9l-5 4zM12 8v4M12 15h.01"/>'
+  };
+
   cards.forEach(card => {
+    const head = card.querySelector(".uh-card-head");
+    const title = head?.querySelector("h3");
+    if (head && title) {
+      const titleRow = document.createElement("div");
+      titleRow.className = "uh-card-title-row";
+      const pictogram = document.createElement("span");
+      pictogram.className = "uh-card-pictogram";
+      pictogram.setAttribute("aria-hidden", "true");
+      pictogram.innerHTML = `<svg viewBox="0 0 24 24">${cardPictograms[card.dataset.cat] || cardPictograms.other}</svg>`;
+      titleRow.append(pictogram, title);
+      head.append(titleRow);
+    }
+
     const overview = document.createElement("div");
     overview.className = "uh-card-overview";
     const details = document.createElement("div");
