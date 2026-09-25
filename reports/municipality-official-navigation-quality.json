@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-09-25T11:58:04.109Z",
+  "generatedAt": "2026-09-25T17:18:20.942Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 827,
-  "displayCandidateCount": 556,
-  "classifiedPageCount": 665,
+  "inputCount": 832,
+  "displayCandidateCount": 558,
+  "classifiedPageCount": 669,
   "categoryReport": {
     "home": {
-      "total": 186,
+      "total": 187,
       "high": 66,
       "medium": 75,
-      "low": 45
+      "low": 46
     },
     "money": {
-      "total": 219,
+      "total": 222,
       "high": 42,
       "medium": 54,
-      "low": 123
+      "low": 126
     },
     "documents": {
-      "total": 171,
-      "high": 40,
+      "total": 172,
+      "high": 41,
       "medium": 28,
       "low": 103
     },
@@ -31,10 +31,10 @@
       "low": 0
     },
     "family_education": {
-      "total": 75,
+      "total": 74,
       "high": 10,
       "medium": 25,
-      "low": 40
+      "low": 39
     },
     "work_business": {
       "total": 55,
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 196,
-      "high": 60,
+      "total": 197,
+      "high": 61,
       "medium": 135,
       "low": 1
     }
@@ -62,7 +62,7 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 135,
+      "classified": 137,
       "displayCandidates": 110,
       "fallback": true
     },
@@ -142,8 +142,8 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 28,
-      "displayCandidates": 23,
+      "classified": 30,
+      "displayCandidates": 25,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 245,
+    "high": 247,
     "medium": 311,
-    "low": 109
+    "low": 111
   },
-  "unclassifiedCount": 40,
+  "unclassifiedCount": 41,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -270,6 +270,16 @@
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326974/index.html"
     },
     {
+      "municipalityName": "八代市",
+      "title": "令和８年熊本地震災害復旧関連事業に係る要望受付会について",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00327093/index.html"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "コミュニティセンターの貸出再開（一部）について",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326816/index.html"
+    },
+    {
       "municipalityName": "宇土市",
       "title": "水質検査の結果を公表します",
       "url": "https://www.city.uto.lg.jp/article/view/1308/16737.html"
@@ -298,11 +308,6 @@
       "municipalityName": "上天草市",
       "title": "上天草市令和8年熊本地震利子補給について",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/357/23456.html"
-    },
-    {
-      "municipalityName": "上天草市",
-      "title": "【報道資料】雲仙天草国立公園天草地域指定70周年記念第55回天草パールラインマラソン大会の開催について",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/446/23451.html"
     },
     {
       "municipalityName": "宇城市",
@@ -1030,7 +1035,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 12
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1089,5 +1094,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 664
+  "previousClassifiedPageCount": 665
 }

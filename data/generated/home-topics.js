@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-25T12:13:57.114Z",
-  "officialCheckedAt": "9/25 21:13",
+  "retrievedAt": "2026-09-25T17:33:33.702Z",
+  "officialCheckedAt": "9/26 02:33",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -96,10 +96,18 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "り災証明書(2次調査)の発行申請受付について",
+      "url": "https://www.town.kosa.lg.jp/q/aview/101/13690.html",
+      "date": "2026-09-26",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "甲佐町"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-09-25",
-      "time": "20:22",
+      "time": "22:10",
       "category": "その他",
       "municipality": "八代市"
     },
@@ -166,14 +174,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "施設・学校",
       "municipality": "益城町"
-    },
-    {
-      "title": "令和８年熊本地震関連 各種支援申請・相談窓口について",
-      "url": "https://www.town.kosa.lg.jp/q/aview/51/13806.html",
-      "date": "2026-09-25",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "甲佐町"
     },
     {
       "title": "令和8年熊本地震（7月28日発生）に関する情報（9月24日17時更新）",
