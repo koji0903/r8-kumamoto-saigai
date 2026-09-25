@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-25T05:21:26.578Z",
+  "generatedAt": "2026-09-25T12:14:13.679Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-25T05:05:06.261Z",
-    "inputCount": 826,
-    "classifiedPageCount": 664,
-    "displayCandidateCount": 560,
+    "generatedAt": "2026-09-25T11:58:04.109Z",
+    "inputCount": 827,
+    "classifiedPageCount": 665,
+    "displayCandidateCount": 556,
     "deltaFromPrevious": {
       "inputCount": 1,
       "classifiedPageCount": 1,
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 7,
       "limitHours": 336
     }
   },
@@ -36,7 +36,7 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 134,
+        "classified": 135,
         "displayCandidates": 110,
         "fallback": true
       },
@@ -51,23 +51,23 @@
         "fallback": true
       },
       "municipality_kikuchi": {
-        "classified": 12,
-        "displayCandidates": 10,
+        "classified": 11,
+        "displayCandidates": 9,
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 45,
+        "classified": 47,
         "displayCandidates": 41,
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 35,
+        "classified": 36,
         "displayCandidates": 29,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 104,
-        "displayCandidates": 87,
+        "classified": 103,
+        "displayCandidates": 86,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -86,8 +86,8 @@
         "fallback": true
       },
       "municipality_ozu": {
-        "classified": 12,
-        "displayCandidates": 12,
+        "classified": 11,
+        "displayCandidates": 11,
         "fallback": true
       },
       "municipality_kikuyo": {
@@ -117,7 +117,7 @@
       },
       "municipality_kosa": {
         "classified": 28,
-        "displayCandidates": 24,
+        "displayCandidates": 23,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 187,
+        "total": 186,
         "high": 66,
-        "medium": 76,
+        "medium": 75,
         "low": 45
       },
       "money": {
-        "total": 216,
+        "total": 219,
         "high": 42,
-        "medium": 55,
-        "low": 119
+        "medium": 54,
+        "low": 123
       },
       "documents": {
-        "total": 173,
+        "total": 171,
         "high": 40,
-        "medium": 29,
-        "low": 104
+        "medium": 28,
+        "low": 103
       },
       "health_care": {
         "total": 50,
@@ -162,34 +162,34 @@
         "low": 0
       },
       "family_education": {
-        "total": 73,
+        "total": 75,
         "high": 10,
         "medium": 25,
-        "low": 38
+        "low": 40
       },
       "work_business": {
-        "total": 56,
+        "total": 55,
         "high": 15,
-        "medium": 41,
+        "medium": 40,
         "low": 0
       },
       "agriculture_fishery": {
-        "total": 17,
+        "total": 18,
         "high": 5,
-        "medium": 12,
+        "medium": 13,
         "low": 0
       },
       "daily_life": {
-        "total": 198,
-        "high": 61,
-        "medium": 136,
+        "total": 196,
+        "high": 60,
+        "medium": 135,
         "low": 1
       }
     },
     "confidence": {
-      "high": 246,
-      "medium": 314,
-      "low": 104
+      "high": 245,
+      "medium": 311,
+      "low": 109
     },
     "unclassifiedCount": 40,
     "excludedCount": 37,
@@ -307,7 +307,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 12
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -362,7 +362,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 12
+      "count": 13
     }
   ],
   "strictSources": {

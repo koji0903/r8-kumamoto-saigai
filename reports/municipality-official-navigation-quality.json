@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-09-25T05:05:06.261Z",
+  "generatedAt": "2026-09-25T11:58:04.109Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 826,
-  "displayCandidateCount": 560,
-  "classifiedPageCount": 664,
+  "inputCount": 827,
+  "displayCandidateCount": 556,
+  "classifiedPageCount": 665,
   "categoryReport": {
     "home": {
-      "total": 187,
+      "total": 186,
       "high": 66,
-      "medium": 76,
+      "medium": 75,
       "low": 45
     },
     "money": {
-      "total": 216,
+      "total": 219,
       "high": 42,
-      "medium": 55,
-      "low": 119
+      "medium": 54,
+      "low": 123
     },
     "documents": {
-      "total": 173,
+      "total": 171,
       "high": 40,
-      "medium": 29,
-      "low": 104
+      "medium": 28,
+      "low": 103
     },
     "health_care": {
       "total": 50,
@@ -31,27 +31,27 @@
       "low": 0
     },
     "family_education": {
-      "total": 73,
+      "total": 75,
       "high": 10,
       "medium": 25,
-      "low": 38
+      "low": 40
     },
     "work_business": {
-      "total": 56,
+      "total": 55,
       "high": 15,
-      "medium": 41,
+      "medium": 40,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 17,
+      "total": 18,
       "high": 5,
-      "medium": 12,
+      "medium": 13,
       "low": 0
     },
     "daily_life": {
-      "total": 198,
-      "high": 61,
-      "medium": 136,
+      "total": 196,
+      "high": 60,
+      "medium": 135,
       "low": 1
     }
   },
@@ -62,7 +62,7 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 134,
+      "classified": 135,
       "displayCandidates": 110,
       "fallback": true
     },
@@ -77,23 +77,23 @@
       "fallback": true
     },
     "municipality_kikuchi": {
-      "classified": 12,
-      "displayCandidates": 10,
+      "classified": 11,
+      "displayCandidates": 9,
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 45,
+      "classified": 47,
       "displayCandidates": 41,
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 35,
+      "classified": 36,
       "displayCandidates": 29,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 104,
-      "displayCandidates": 87,
+      "classified": 103,
+      "displayCandidates": 86,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -112,8 +112,8 @@
       "fallback": true
     },
     "municipality_ozu": {
-      "classified": 12,
-      "displayCandidates": 12,
+      "classified": 11,
+      "displayCandidates": 11,
       "fallback": true
     },
     "municipality_kikuyo": {
@@ -143,7 +143,7 @@
     },
     "municipality_kosa": {
       "classified": 28,
-      "displayCandidates": 24,
+      "displayCandidates": 23,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 246,
-    "medium": 314,
-    "low": 104
+    "high": 245,
+    "medium": 311,
+    "low": 109
   },
   "unclassifiedCount": 40,
   "unclassifiedItems": [
@@ -221,11 +221,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "【図書館 せんちょう分館・かがみ分館】9月1日（火曜日）より開館のお知らせ",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326974/index.html"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "母子保健事業一部再開のお知らせ",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326751/index.html"
     },
@@ -271,8 +266,8 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "コミュニティセンターの貸出再開（一部）について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326816/index.html"
+      "title": "【図書館 本館】10月1日（木曜日）より開館のお知らせ",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326974/index.html"
     },
     {
       "municipalityName": "宇土市",
@@ -326,12 +321,17 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年9月25日 令和8年熊本地震 関連情報 （9月25日8時00分更新）",
+      "title": "2026年09月25日 地震後の犬の逸走防止について",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/petto/2640761"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "2026年9月25日 令和8年熊本地震 関連情報 （9月25日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年09月25日 令和8年熊本地震 関連情報 （9月25日8時00分更新）",
+      "title": "2026年09月25日 令和8年熊本地震 関連情報 （9月25日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699"
     },
     {
@@ -377,8 +377,8 @@
     "public_relations": 9,
     "disaster_preparedness": 5,
     "facility_notice": 4,
-    "mayor_message": 2,
     "index_page": 11,
+    "mayor_message": 2,
     "mutual_aid": 1,
     "overall_guide": 3,
     "press": 3
@@ -743,17 +743,17 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "八代市",
@@ -1030,7 +1030,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 12
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1085,9 +1085,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 12
+      "count": 13
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 663
+  "previousClassifiedPageCount": 664
 }
