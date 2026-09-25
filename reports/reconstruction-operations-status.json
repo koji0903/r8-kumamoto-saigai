@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-24T21:52:32.485Z",
+  "generatedAt": "2026-09-25T05:21:26.578Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-24T21:35:52.594Z",
-    "inputCount": 825,
-    "classifiedPageCount": 663,
-    "displayCandidateCount": 561,
+    "generatedAt": "2026-09-25T05:05:06.261Z",
+    "inputCount": 826,
+    "classifiedPageCount": 664,
+    "displayCandidateCount": 560,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
+      "inputCount": 1,
+      "classifiedPageCount": 1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 17,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 135,
-        "displayCandidates": 112,
+        "classified": 134,
+        "displayCandidates": 110,
         "fallback": true
       },
       "municipality_minamata": {
@@ -61,13 +61,13 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 33,
-        "displayCandidates": 27,
+        "classified": 35,
+        "displayCandidates": 29,
         "fallback": true
       },
       "municipality_uki": {
         "classified": 104,
-        "displayCandidates": 88,
+        "displayCandidates": 87,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -140,36 +140,36 @@
       "home": {
         "total": 187,
         "high": 66,
-        "medium": 75,
-        "low": 46
+        "medium": 76,
+        "low": 45
       },
       "money": {
-        "total": 210,
-        "high": 41,
-        "medium": 53,
-        "low": 116
+        "total": 216,
+        "high": 42,
+        "medium": 55,
+        "low": 119
       },
       "documents": {
-        "total": 174,
-        "high": 41,
+        "total": 173,
+        "high": 40,
         "medium": 29,
         "low": 104
       },
       "health_care": {
-        "total": 49,
-        "high": 17,
+        "total": 50,
+        "high": 18,
         "medium": 32,
         "low": 0
       },
       "family_education": {
-        "total": 76,
+        "total": 73,
         "high": 10,
-        "medium": 28,
+        "medium": 25,
         "low": 38
       },
       "work_business": {
-        "total": 57,
-        "high": 16,
+        "total": 56,
+        "high": 15,
         "medium": 41,
         "low": 0
       },
@@ -187,9 +187,9 @@
       }
     },
     "confidence": {
-      "high": 247,
+      "high": 246,
       "medium": 314,
-      "low": 102
+      "low": 104
     },
     "unclassifiedCount": 40,
     "excludedCount": 37,
@@ -203,7 +203,7 @@
         "title": "内閣府防災担当からの各都道府県等への通知等",
         "url": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
         "previousHash": "sha256:f0a3a40563c1901508dd1173a2d42577ffcbbbf711ab728034f5079ce665d113",
-        "currentHash": "sha256:2adc9bed5d7b080f0269955e20f1b388c0abaf651c0a8484f709c764f7ad87a1",
+        "currentHash": "sha256:5785ced4d0c35fd2a7803ce6b850ea5782657b349428751beaa06b4868273435",
         "verificationStatus": "needs_review"
       }
     },
@@ -282,7 +282,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -320,14 +320,9 @@
       "count": 2
     },
     {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_uki",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 4
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -367,7 +362,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 11
+      "count": 12
     }
   ],
   "strictSources": {
@@ -379,7 +374,7 @@
         "title": "内閣府防災担当からの各都道府県等への通知等",
         "url": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
         "previousHash": "sha256:f0a3a40563c1901508dd1173a2d42577ffcbbbf711ab728034f5079ce665d113",
-        "currentHash": "sha256:2adc9bed5d7b080f0269955e20f1b388c0abaf651c0a8484f709c764f7ad87a1",
+        "currentHash": "sha256:5785ced4d0c35fd2a7803ce6b850ea5782657b349428751beaa06b4868273435",
         "verificationStatus": "needs_review"
       },
       {

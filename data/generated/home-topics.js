@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-24T21:52:14.590Z",
-  "officialCheckedAt": "9/25 06:52",
+  "retrievedAt": "2026-09-25T05:21:06.087Z",
+  "officialCheckedAt": "9/25 14:21",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -96,20 +96,36 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
+      "title": "【給水所情報】9月23日以降分",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326773/index.html",
       "date": "2026-09-25",
-      "time": null,
-      "category": "ごみ・生活",
+      "time": "13:46",
+      "category": "ライフライン",
+      "municipality": "八代市"
+    },
+    {
+      "title": "2026年9月25日 令和8年熊本地震 関連情報 （9月25日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-09-25",
+      "time": "08:00",
+      "category": "その他",
       "municipality": "宇城市"
     },
     {
-      "title": "避難所開設状況",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
-      "date": "2026-09-24",
-      "time": "20:44",
-      "category": "避難・安全",
-      "municipality": "八代市"
+      "title": "令和8年熊本地震に伴う町の施設の開館情報について【9月25日現在】 - 重要なお知らせ",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/3496.html",
+      "date": "2026-09-25",
+      "time": null,
+      "category": "施設・学校",
+      "municipality": "嘉島町"
+    },
+    {
+      "title": "町立保育所給食調理業務委託に係る公募型プロポーザルの実施について",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038169/index.html",
+      "date": "2026-09-25",
+      "time": null,
+      "category": "施設・学校",
+      "municipality": "益城町"
     },
     {
       "title": "支援物資の受け入れについて",
@@ -118,6 +134,14 @@ window.HOME_TOPICS = {
       "time": "17:21",
       "category": "支援・制度",
       "municipality": "氷川町"
+    },
+    {
+      "title": "令和8年熊本地震（7月28日発生）に関する情報（9月24日17時更新）",
+      "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
+      "date": "2026-09-24",
+      "time": "17:00",
+      "category": "その他",
+      "municipality": "美里町"
     },
     {
       "title": "令和８年熊本地震に関する支援等",
@@ -150,22 +174,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "その他",
       "municipality": "大津町"
-    },
-    {
-      "title": "令和8年熊本地震に伴う災害支援について - 総務課",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/123/6206.html",
-      "date": "2026-09-24",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "嘉島町"
-    },
-    {
-      "title": "町立保育所給食調理業務委託に係る公募型プロポーザルの実施について",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038169/index.html",
-      "date": "2026-09-24",
-      "time": null,
-      "category": "施設・学校",
-      "municipality": "益城町"
     },
     {
       "title": "令和8年熊本地震災害支援情報まとめ(9/24更新)",
@@ -206,14 +214,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "支援・制度",
       "municipality": "菊池市"
-    },
-    {
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（9月17日14時更新）",
-      "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
-      "date": "2026-09-17",
-      "time": "14:00",
-      "category": "その他",
-      "municipality": "美里町"
     }
   ],
   "prefectureUpdates": [
