@@ -1826,3 +1826,201 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
     padding: 12px 14px;
   }
 }
+
+/* ---- 寄付案内・寄付口座カード（Donation） ---- */
+.donation-section {
+  background: linear-gradient(180deg, #f7faf9 0%, #edf5f2 100%);
+  padding: 64px max(24px, calc((100vw - 1100px) / 2)) 80px;
+}
+.donation-header {
+  margin-bottom: 36px;
+  text-align: center;
+}
+.donation-header .kicker {
+  color: var(--color-brand-primary, #0c6c60);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.donation-header h2 {
+  font-size: clamp(24px, 3.2vw, 34px);
+  color: var(--color-brand-primary-dark, #134e48);
+  margin: 0 0 14px;
+  font-weight: 800;
+}
+.donation-header .lead {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: var(--color-text-body, #2d3b36);
+}
+.donation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.donation-card {
+  background: #ffffff;
+  border: 1px solid #d4e3de;
+  border-radius: 14px;
+  padding: 26px 28px;
+  box-shadow: 0 4px 16px rgba(18, 59, 50, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+.donation-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #eef5f2;
+}
+.donation-bank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #ffffff;
+}
+.badge-higo {
+  background: #c22026;
+}
+.badge-jpbank {
+  background: #007d46;
+}
+.donation-card-head h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #173d36;
+  font-weight: 800;
+}
+.donation-dl {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  row-gap: 12px;
+  column-gap: 14px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin: 0;
+}
+.donation-dl dt {
+  color: #55726a;
+  font-weight: 700;
+}
+.donation-dl dd {
+  margin: 0;
+  color: #18332d;
+  font-weight: 600;
+}
+.donation-account-num {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0b6055;
+  letter-spacing: 0.05em;
+  font-family: var(--font-numeric, "SF Pro Display", -apple-system, sans-serif);
+}
+.donation-sub-section {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px dashed #d5e4df;
+}
+.donation-sub-title {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  color: #0c6c60;
+  background: #eef6f3;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.donation-notice-box {
+  background: #fffdf7;
+  border: 2px solid #ecd8ab;
+  border-radius: 12px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 14px rgba(184, 142, 40, 0.08);
+}
+.donation-notice-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.donation-notice-head h3 {
+  margin: 0;
+  font-size: 17px;
+  color: #7a5003;
+  font-weight: 800;
+}
+.donation-notice-desc {
+  font-size: 14.5px;
+  color: #433822;
+  line-height: 1.75;
+  margin: 0 0 16px;
+}
+.donation-email-action {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  padding: 14px 18px;
+  border-radius: 8px;
+  border: 1px solid #e7d6b3;
+  margin-bottom: 16px;
+}
+.donation-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0d7468;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14.5px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+.donation-email-link:hover {
+  background: #09594f;
+}
+.donation-email-address {
+  font-size: 15px;
+  font-weight: 700;
+  color: #173d36;
+}
+.donation-notice-checklist {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: #5c4b28;
+}
+.donation-notice-checklist li {
+  margin-bottom: 4px;
+}
+@media (max-width: 768px) {
+  .donation-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .donation-card {
+    padding: 20px;
+  }
+  .donation-notice-box {
+    padding: 20px 18px;
+  }
+  .donation-dl {
+    grid-template-columns: 90px 1fr;
+    font-size: 14px;
+  }
+}

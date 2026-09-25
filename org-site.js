@@ -115,7 +115,7 @@
     inner?.querySelector('.contact-actions')?.insertAdjacentHTML('beforebegin',`<div class="join-flow"><span>お問い合わせ</span><i aria-hidden="true">→</i><span>内容を確認</span><i aria-hidden="true">→</i><span>関わり方をご相談</span></div>`);
   }
   if(path==='contact.html'){
-    document.querySelector('.contact-section')?.insertAdjacentHTML('beforebegin',`<section class="contact-topics" aria-labelledby="contact-topics-title"><div><p class="kicker">相談内容から確認</p><h2 id="contact-topics-title">このようなご相談を受け付けています</h2><ul><li><b>支援について</b><span>被災地支援や生活再建に関する連携</span></li><li><b>活動について</b><span>活動内容や参加方法の確認</span></li><li><b>企業・団体連携</b><span>専門性・物資・場所を生かした協力</span></li><li><b>取材・情報提供</b><span>活動への取材、地域の支援情報</span></li></ul></div></section>`);
+    document.querySelector('.contact-section')?.insertAdjacentHTML('beforebegin',`<section class="contact-topics" aria-labelledby="contact-topics-title"><div><p class="kicker">相談内容から確認</p><h2 id="contact-topics-title">このようなご相談を受け付けています</h2><ul><li><b>支援・ご寄付</b><span>被災地支援や活動資金のご寄付連絡</span></li><li><b>活動について</b><span>活動内容や参加方法の確認</span></li><li><b>企業・団体連携</b><span>専門性・物資・場所を生かした協力</span></li><li><b>取材・情報提供</b><span>活動への取材、地域の支援情報</span></li></ul></div></section>`);
   }
   const visualIcon=(type)=>{
     const icons={
