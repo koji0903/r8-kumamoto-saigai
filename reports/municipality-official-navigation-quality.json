@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-26T16:29:53.202Z",
+  "generatedAt": "2026-09-26T21:16:38.512Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 830,
-  "displayCandidateCount": 555,
-  "classifiedPageCount": 665,
+  "inputCount": 832,
+  "displayCandidateCount": 556,
+  "classifiedPageCount": 667,
   "categoryReport": {
     "home": {
       "total": 186,
@@ -13,10 +13,10 @@
       "low": 46
     },
     "money": {
-      "total": 220,
+      "total": 221,
       "high": 42,
       "medium": 55,
-      "low": 123
+      "low": 124
     },
     "documents": {
       "total": 171,
@@ -31,8 +31,8 @@
       "low": 0
     },
     "family_education": {
-      "total": 73,
-      "high": 9,
+      "total": 74,
+      "high": 10,
       "medium": 25,
       "low": 39
     },
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 100,
-      "displayCandidates": 84,
+      "classified": 102,
+      "displayCandidates": 85,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 245,
+    "high": 246,
     "medium": 310,
-    "low": 110
+    "low": 111
   },
   "unclassifiedCount": 40,
   "unclassifiedItems": [
@@ -743,7 +743,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -1044,7 +1044,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 12
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1103,5 +1103,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 670
+  "previousClassifiedPageCount": 665
 }

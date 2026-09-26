@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-26T16:48:09.476Z",
-  "officialCheckedAt": "9/27 01:48",
+  "retrievedAt": "2026-09-26T21:35:15.309Z",
+  "officialCheckedAt": "9/27 06:35",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -112,6 +112,14 @@ window.HOME_TOPICS = {
       "municipality": "宇城市"
     },
     {
+      "title": "避難所について（9/26 17:00更新）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
+      "date": "2026-09-26",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市"
+    },
+    {
       "title": "震度速報 9月26日 10時32分",
       "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
       "date": "2026-09-26",
@@ -142,14 +150,6 @@ window.HOME_TOPICS = {
       "time": "17:27",
       "category": "支援・制度",
       "municipality": "熊本市"
-    },
-    {
-      "title": "避難所について（9/25 17:00更新）",
-      "url": "https://www.city.uto.lg.jp/article/view/1014/16888.html",
-      "date": "2026-09-25",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市"
     },
     {
       "title": "令和8年熊本地震で被災された方に対する支援制度について",
