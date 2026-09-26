@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-26T05:23:18.797Z",
-  "officialCheckedAt": "9/26 14:23",
+  "retrievedAt": "2026-09-26T11:51:48.085Z",
+  "officialCheckedAt": "9/26 20:51",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -96,11 +96,19 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "避難所開設状況",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
+      "title": "2026年9月26日 令和8年熊本地震 関連情報 （9月26日18時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-09-26",
-      "time": "14:08",
-      "category": "避難・安全",
+      "time": "18:00",
+      "category": "その他",
+      "municipality": "宇城市"
+    },
+    {
+      "title": "【給水所情報】9月27日12時（正午）以降分",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326773/index.html",
+      "date": "2026-09-26",
+      "time": "16:49",
+      "category": "ライフライン",
       "municipality": "八代市"
     },
     {
@@ -118,14 +126,6 @@ window.HOME_TOPICS = {
       "time": "10:32",
       "category": "その他",
       "municipality": "益城町"
-    },
-    {
-      "title": "2026年9月26日 令和8年熊本地震 関連情報 （9月26日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-09-26",
-      "time": "08:00",
-      "category": "その他",
-      "municipality": "宇城市"
     },
     {
       "title": "り災証明書(2次調査)の発行申請受付について",
