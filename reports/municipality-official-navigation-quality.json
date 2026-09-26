@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-25T21:39:55.638Z",
+  "generatedAt": "2026-09-26T05:07:53.635Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 832,
-  "displayCandidateCount": 558,
-  "classifiedPageCount": 669,
+  "inputCount": 834,
+  "displayCandidateCount": 559,
+  "classifiedPageCount": 670,
   "categoryReport": {
     "home": {
       "total": 187,
@@ -15,8 +15,8 @@
     "money": {
       "total": 222,
       "high": 42,
-      "medium": 54,
-      "low": 126
+      "medium": 55,
+      "low": 125
     },
     "documents": {
       "total": 172,
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 197,
+      "total": 198,
       "high": 61,
-      "medium": 135,
+      "medium": 136,
       "low": 1
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 137,
-      "displayCandidates": 110,
+      "classified": 138,
+      "displayCandidates": 111,
       "fallback": true
     },
     "municipality_minamata": {
@@ -164,10 +164,10 @@
   },
   "confidence": {
     "high": 247,
-    "medium": 311,
+    "medium": 312,
     "low": 111
   },
-  "unclassifiedCount": 41,
+  "unclassifiedCount": 40,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -266,11 +266,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "【図書館 本館】10月1日（木曜日）より開館のお知らせ",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326974/index.html"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "令和８年熊本地震災害復旧関連事業に係る要望受付会について",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00327093/index.html"
     },
@@ -331,12 +326,12 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年9月25日 令和8年熊本地震 関連情報 （9月25日18時00分更新）",
+      "title": "2026年9月26日 令和8年熊本地震 関連情報 （9月26日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年09月25日 令和8年熊本地震 関連情報 （9月25日18時00分更新）",
+      "title": "2026年09月26日 令和8年熊本地震 関連情報 （9月26日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699"
     },
     {
@@ -375,15 +370,15 @@
       "url": "https://www.town.ashikita.lg.jp/bosai_site/hinan/2025278"
     }
   ],
-  "outOfScopeCount": 85,
+  "outOfScopeCount": 87,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "hq_meeting_material": 45,
     "public_relations": 9,
     "disaster_preparedness": 5,
     "facility_notice": 4,
-    "index_page": 11,
     "mayor_message": 2,
+    "index_page": 13,
     "mutual_aid": 1,
     "overall_guide": 3,
     "press": 3
@@ -748,13 +743,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
@@ -764,6 +752,13 @@
       "municipalityName": "八代市",
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -780,6 +775,13 @@
       "url": "https://www.city.yamaga.kumamoto.jp/kiji0033149/index.html",
       "ruleId": "mutual_aid",
       "ruleLabel": "他自治体への応援・受援"
+    },
+    {
+      "municipalityName": "山鹿市",
+      "title": "震度速報 9月26日 10時32分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "菊池市",
@@ -950,6 +952,13 @@
       "ruleLabel": "公共施設の休止・再開・紹介"
     },
     {
+      "municipalityName": "益城町",
+      "title": "地震情報",
+      "url": "https://www.town.mashiki.lg.jp/kinkyu.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
       "municipalityName": "甲佐町",
       "title": "『広報こうさ』号外第2報(令和8年熊本地震関連情報)",
       "url": "https://www.town.kosa.lg.jp/q/aview/1/13631.html",
@@ -1035,7 +1044,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 14
     },
     {
       "code": "HTTP_404_CANDIDATE",

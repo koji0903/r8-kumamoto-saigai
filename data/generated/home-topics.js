@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-25T21:58:17.832Z",
-  "officialCheckedAt": "9/26 06:58",
+  "retrievedAt": "2026-09-26T05:23:18.797Z",
+  "officialCheckedAt": "9/26 14:23",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -96,28 +96,44 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "避難所開設状況",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
+      "date": "2026-09-26",
+      "time": "14:08",
+      "category": "避難・安全",
+      "municipality": "八代市"
+    },
+    {
+      "title": "震度速報 9月26日 10時32分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "date": "2026-09-26",
+      "time": "10:32",
+      "category": "避難・安全",
+      "municipality": "山鹿市"
+    },
+    {
+      "title": "地震情報",
+      "url": "https://www.town.mashiki.lg.jp/kinkyu.html",
+      "date": "2026-09-26",
+      "time": "10:32",
+      "category": "その他",
+      "municipality": "益城町"
+    },
+    {
+      "title": "2026年9月26日 令和8年熊本地震 関連情報 （9月26日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-09-26",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "宇城市"
+    },
+    {
       "title": "り災証明書(2次調査)の発行申請受付について",
       "url": "https://www.town.kosa.lg.jp/q/aview/101/13690.html",
       "date": "2026-09-26",
       "time": null,
       "category": "住まい・証明",
       "municipality": "甲佐町"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-09-25",
-      "time": "22:10",
-      "category": "その他",
-      "municipality": "八代市"
-    },
-    {
-      "title": "2026年9月25日 令和8年熊本地震 関連情報 （9月25日18時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-09-25",
-      "time": "18:00",
-      "category": "その他",
-      "municipality": "宇城市"
     },
     {
       "title": "令和8年熊本地震被災者へ熊本市宿泊支援事業を実施します ※新規受付は終了しました",
@@ -129,7 +145,7 @@ window.HOME_TOPICS = {
     },
     {
       "title": "避難所について（9/25 17:00更新）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1014/16888.html",
       "date": "2026-09-25",
       "time": "17:00",
       "category": "避難・安全",
@@ -168,28 +184,12 @@ window.HOME_TOPICS = {
       "municipality": "嘉島町"
     },
     {
-      "title": "町立保育所給食調理業務委託に係る公募型プロポーザルの実施について",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038169/index.html",
-      "date": "2026-09-25",
-      "time": null,
-      "category": "施設・学校",
-      "municipality": "益城町"
-    },
-    {
       "title": "令和8年熊本地震（7月28日発生）に関する情報（9月24日17時更新）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
       "date": "2026-09-24",
       "time": "17:00",
       "category": "その他",
       "municipality": "美里町"
-    },
-    {
-      "title": "「令和８年熊本地震」により住宅被害を受けた方へ（井戸等の応急修理制度）",
-      "url": "https://www.city.yamaga.kumamoto.jp/kiji0033232/index.html",
-      "date": "2026-09-24",
-      "time": "14:45",
-      "category": "住まい・証明",
-      "municipality": "山鹿市"
     },
     {
       "title": "（令和8年熊本地震）マイナ保険証、資格確認書がなくても医療機関等を受診できます",
