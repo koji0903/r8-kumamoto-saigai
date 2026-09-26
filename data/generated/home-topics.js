@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-26T11:51:48.085Z",
-  "officialCheckedAt": "9/26 20:51",
+  "retrievedAt": "2026-09-26T16:48:09.476Z",
+  "officialCheckedAt": "9/27 01:48",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -96,20 +96,20 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "2026年9月26日 令和8年熊本地震 関連情報 （9月26日18時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-09-26",
-      "time": "18:00",
-      "category": "その他",
-      "municipality": "宇城市"
-    },
-    {
-      "title": "【給水所情報】9月27日12時（正午）以降分",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326773/index.html",
-      "date": "2026-09-26",
-      "time": "16:49",
+      "title": "９月２７日（日）１２時（正午）以降の応急給水活動について",
+      "url": "https://www.city.yatsushiro.lg.jp/kinkyu.html",
+      "date": "2026-09-27",
+      "time": null,
       "category": "ライフライン",
       "municipality": "八代市"
+    },
+    {
+      "title": "ペットの健康相談会を開催します",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/petto/2626116",
+      "date": "2026-09-27",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "宇城市"
     },
     {
       "title": "震度速報 9月26日 10時32分",
