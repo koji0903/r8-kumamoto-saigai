@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-27T12:27:51.743Z",
+  "generatedAt": "2026-09-27T17:20:57.070Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-27T12:11:45.266Z",
-    "inputCount": 845,
-    "classifiedPageCount": 683,
-    "displayCandidateCount": 573,
+    "generatedAt": "2026-09-27T17:03:12.517Z",
+    "inputCount": 843,
+    "classifiedPageCount": 681,
+    "displayCandidateCount": 572,
     "deltaFromPrevious": {
-      "inputCount": 9,
-      "classifiedPageCount": 11,
-      "unclassifiedCount": -2
+      "inputCount": -2,
+      "classifiedPageCount": -2,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 55,
+      "ageHours": 60,
       "limitHours": 336
     }
   },
@@ -101,7 +101,7 @@
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 18,
+        "classified": 17,
         "displayCandidates": 9,
         "fallback": true
       },
@@ -111,8 +111,8 @@
         "fallback": true
       },
       "municipality_mashiki": {
-        "classified": 40,
-        "displayCandidates": 37,
+        "classified": 39,
+        "displayCandidates": 36,
         "fallback": true
       },
       "municipality_kosa": {
@@ -138,16 +138,16 @@
     },
     "categoryReport": {
       "home": {
-        "total": 192,
+        "total": 191,
         "high": 68,
-        "medium": 79,
+        "medium": 78,
         "low": 45
       },
       "money": {
-        "total": 224,
+        "total": 223,
         "high": 44,
         "medium": 54,
-        "low": 126
+        "low": 125
       },
       "documents": {
         "total": 176,
@@ -188,8 +188,8 @@
     },
     "confidence": {
       "high": 249,
-      "medium": 324,
-      "low": 110
+      "medium": 323,
+      "low": 109
     },
     "unclassifiedCount": 39,
     "excludedCount": 38,

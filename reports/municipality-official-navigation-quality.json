@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-09-27T12:11:45.266Z",
+  "generatedAt": "2026-09-27T17:03:12.517Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 845,
-  "displayCandidateCount": 573,
-  "classifiedPageCount": 683,
+  "inputCount": 843,
+  "displayCandidateCount": 572,
+  "classifiedPageCount": 681,
   "categoryReport": {
     "home": {
-      "total": 192,
+      "total": 191,
       "high": 68,
-      "medium": 79,
+      "medium": 78,
       "low": 45
     },
     "money": {
-      "total": 224,
+      "total": 223,
       "high": 44,
       "medium": 54,
-      "low": 126
+      "low": 125
     },
     "documents": {
       "total": 176,
@@ -127,7 +127,7 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 18,
+      "classified": 17,
       "displayCandidates": 9,
       "fallback": true
     },
@@ -137,8 +137,8 @@
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 40,
-      "displayCandidates": 37,
+      "classified": 39,
+      "displayCandidates": 36,
       "fallback": true
     },
     "municipality_kosa": {
@@ -164,8 +164,8 @@
   },
   "confidence": {
     "high": 249,
-    "medium": 324,
-    "low": 110
+    "medium": 323,
+    "low": 109
   },
   "unclassifiedCount": 39,
   "unclassifiedItems": [
@@ -1099,5 +1099,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 672
+  "previousClassifiedPageCount": 683
 }
