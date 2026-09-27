@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-09-26T21:16:38.512Z",
+  "generatedAt": "2026-09-26T23:41:18.344Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 832,
-  "displayCandidateCount": 556,
-  "classifiedPageCount": 667,
+  "inputCount": 828,
+  "displayCandidateCount": 553,
+  "classifiedPageCount": 663,
   "categoryReport": {
     "home": {
-      "total": 186,
+      "total": 185,
       "high": 66,
       "medium": 74,
-      "low": 46
+      "low": 45
     },
     "money": {
-      "total": 221,
+      "total": 220,
       "high": 42,
-      "medium": 55,
+      "medium": 54,
       "low": 124
     },
     "documents": {
       "total": 171,
-      "high": 41,
-      "medium": 28,
+      "high": 40,
+      "medium": 29,
       "low": 102
     },
     "health_care": {
@@ -37,9 +37,9 @@
       "low": 39
     },
     "work_business": {
-      "total": 53,
+      "total": 55,
       "high": 14,
-      "medium": 39,
+      "medium": 41,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 197,
-      "high": 61,
-      "medium": 135,
+      "total": 194,
+      "high": 59,
+      "medium": 134,
       "low": 1
     }
   },
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 47,
-      "displayCandidates": 41,
+      "classified": 43,
+      "displayCandidates": 38,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -163,12 +163,17 @@
     }
   },
   "confidence": {
-    "high": 246,
+    "high": 243,
     "medium": 310,
-    "low": 111
+    "low": 110
   },
   "unclassifiedCount": 40,
   "unclassifiedItems": [
+    {
+      "municipalityName": "熊本市",
+      "title": "【避難情報】情報を更新しました。",
+      "url": "https://www.city.kumamoto.jp/kinkyu.html"
+    },
     {
       "municipalityName": "熊本市",
       "title": "「2026年ベネズエラ地震救援金募金」について",
@@ -286,18 +291,13 @@
     },
     {
       "municipalityName": "宇土市",
-      "title": "お知らせ：【レベル5 大雨特別警報】発表時の適切な行動及...",
-      "url": "https://www.city.uto.lg.jp/article/view/1310/16777.html"
-    },
-    {
-      "municipalityName": "宇土市",
-      "title": "5 令和８年熊本地震に係るふるさと納税を受け付けます 2026年09月01日",
-      "url": "https://www.city.uto.lg.jp/article/view/1033/16630.html"
-    },
-    {
-      "municipalityName": "宇土市",
       "title": "洪水・大雨・高潮・土砂災害の危険性が高まっています！",
       "url": "https://www.city.uto.lg.jp/article/view/1310/16857.html"
+    },
+    {
+      "municipalityName": "宇土市",
+      "title": "令和８年熊本地震に係るふるさと納税を受け付けます",
+      "url": "https://www.city.uto.lg.jp/article/view/1307/16630.html"
     },
     {
       "municipalityName": "上天草市",
@@ -743,7 +743,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -1044,7 +1044,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 12
+      "count": 82
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1103,5 +1103,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 665
+  "previousClassifiedPageCount": 667
 }

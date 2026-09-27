@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-26T21:35:15.309Z",
-  "officialCheckedAt": "9/27 06:35",
+  "retrievedAt": "2026-09-27T00:00:41.091Z",
+  "officialCheckedAt": "9/27 09:00",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -104,11 +104,11 @@ window.HOME_TOPICS = {
       "municipality": "八代市"
     },
     {
-      "title": "ペットの健康相談会を開催します",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/petto/2626116",
+      "title": "2026年09月27日 避難者数",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
       "date": "2026-09-27",
       "time": null,
-      "category": "支援・制度",
+      "category": "避難・安全",
       "municipality": "宇城市"
     },
     {
