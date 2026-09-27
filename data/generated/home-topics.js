@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-27T17:20:34.810Z",
-  "officialCheckedAt": "9/28 02:20",
+  "retrievedAt": "2026-09-27T21:45:04.746Z",
+  "officialCheckedAt": "9/28 06:45",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -96,11 +96,11 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "2026年9月27日 令和8年熊本地震 関連情報 （9月27日18時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-09-27",
-      "time": "18:00",
-      "category": "その他",
+      "title": "令和8年熊本地震被災者支援に関する各種制度の概要（R8.9.28時点） (PDF 2,170KB)",
+      "url": "https://www.city.uki.kumamoto.jp/resource.php?e=efc57db7cff7ca83992c9269cb87363aa0983721279ff1636d9aaaf91305708c2cf3eb8515c4d2b5cc7b72900ab96a66",
+      "date": "2026-09-28",
+      "time": null,
+      "category": "支援・制度",
       "municipality": "宇城市"
     },
     {

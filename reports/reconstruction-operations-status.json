@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-27T17:20:57.070Z",
+  "generatedAt": "2026-09-27T21:45:24.278Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-27T17:03:12.517Z",
+    "generatedAt": "2026-09-27T21:26:02.944Z",
     "inputCount": 843,
     "classifiedPageCount": 681,
     "displayCandidateCount": 572,
     "deltaFromPrevious": {
-      "inputCount": -2,
-      "classifiedPageCount": -2,
+      "inputCount": 0,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 60,
+      "ageHours": 64,
       "limitHours": 336
     }
   },
@@ -302,7 +302,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "count": 1
+      "count": 2
     },
     {
       "code": "RETRIEVAL_ISSUE",
