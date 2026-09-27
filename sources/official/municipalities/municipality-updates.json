@@ -2,7 +2,7 @@
   "metadata": {
     "event": "令和8年熊本地震",
     "disasterDate": "2026-07-28",
-    "retrievedAt": "2026-09-26T23:41:18.344Z",
+    "retrievedAt": "2026-09-27T05:25:38.209Z",
     "scope": "各市町村の公式トップページ、確認済みの地震情報集約ページ、そのページに掲載された個別記事、および集約ページのページ送りを確認。令和8年7月28日以降の日付を公式ページ上で確認できた記事リンク",
     "caveat": "公式サイトの構造・公開方式・検索可否により網羅性は保証できません。未検出は情報が存在しないことを意味しません。内容と最新状況はリンク先の一次情報で確認してください。",
     "categoryNote": "分類は記事タイトルに基づく閲覧用の便宜的な分類です。"
@@ -11,7 +11,7 @@
     {
       "name": "熊本市",
       "officialUrl": "https://www.city.kumamoto.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -43,6 +43,13 @@
           "category": "その他"
         },
         {
+          "title": "地震発生後の食品営業施設における衛生管理について",
+          "url": "https://www.city.kumamoto.jp/kiji00372124/index.html",
+          "date": "2026-07-29",
+          "time": null,
+          "category": "施設・学校"
+        },
+        {
           "title": "令和8年熊本地震に伴う区役所窓口対応について",
           "url": "https://www.city.kumamoto.jp/kiji00372108/index.html",
           "date": "2026-07-29",
@@ -55,13 +62,6 @@
           "date": "2026-07-29",
           "time": null,
           "category": "避難・安全"
-        },
-        {
-          "title": "地震発生後の食品営業施設における衛生管理について",
-          "url": "https://www.city.kumamoto.jp/kiji00372124/index.html",
-          "date": "2026-07-29",
-          "time": "00:00",
-          "category": "施設・学校"
         },
         {
           "title": "市内保育施設等の開園状況について",
@@ -531,6 +531,13 @@
           "date": "2026-09-25",
           "time": "17:27",
           "category": "支援・制度"
+        },
+        {
+          "title": "避難所開設に伴う公設公民館の臨時休館について",
+          "url": "https://www.city.kumamoto.jp/kiji00357130/index.html",
+          "date": "2026-09-27",
+          "time": "13:27",
+          "category": "避難・安全"
         }
       ],
       "sourcesChecked": [
@@ -571,6 +578,7 @@
         "https://www.city.kumamoto.jp/list04842.html",
         "https://www.city.kumamoto.jp/list04460.html",
         "https://www.city.kumamoto.jp/kiji00366571/index.html",
+        "https://www.city.kumamoto.jp/kiji00357130/index.html",
         "https://www.city.kumamoto.jp/kiji00372590/index.html",
         "https://www.city.kumamoto.jp/kiji00372110/index.html",
         "https://www.city.kumamoto.jp/kiji00372846/index.html",
@@ -613,8 +621,7 @@
         "https://www.city.kumamoto.jp/kiji00372879/index.html",
         "https://www.city.kumamoto.jp/kiji00372551/index.html",
         "https://www.city.kumamoto.jp/kiji00372296/index.html",
-        "https://www.city.kumamoto.jp/kiji00372340/index.html",
-        "https://www.city.kumamoto.jp/kiji00372124/index.html"
+        "https://www.city.kumamoto.jp/kiji00372340/index.html"
       ],
       "pagesFetched": 80,
       "errors": [
@@ -624,7 +631,7 @@
     {
       "name": "八代市",
       "officialUrl": "https://www.city.yatsushiro.lg.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2175,20 +2182,6 @@
           "category": "その他"
         },
         {
-          "title": "避難所開設状況一覧（R8.9.26 12時時点）（PDF：402.3キロバイト）",
-          "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/3_26798_160293_up_2vlzziz1.pdf",
-          "date": "2026-09-26",
-          "time": "12:00",
-          "category": "避難・安全"
-        },
-        {
-          "title": "避難所開設状況",
-          "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
-          "date": "2026-09-26",
-          "time": "14:08",
-          "category": "避難・安全"
-        },
-        {
           "title": "【給水所情報】9月27日12時（正午）以降分",
           "url": "https://www.city.yatsushiro.lg.jp/kiji00326773/index.html",
           "date": "2026-09-26",
@@ -2208,6 +2201,20 @@
           "date": "2026-09-27",
           "time": null,
           "category": "ライフライン"
+        },
+        {
+          "title": "避難所開設状況一覧（R8.9.27 12時時点）（PDF：402.3キロバイト）",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/3_26798_160295_up_agug6xov.pdf",
+          "date": "2026-09-27",
+          "time": "12:00",
+          "category": "避難・安全"
+        },
+        {
+          "title": "避難所開設状況",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
+          "date": "2026-09-27",
+          "time": "14:01",
+          "category": "避難・安全"
         }
       ],
       "sourcesChecked": [
@@ -2441,7 +2448,7 @@
     {
       "name": "水俣市",
       "officialUrl": "https://localcms.city.minamata.lg.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2526,7 +2533,7 @@
     {
       "name": "山鹿市",
       "officialUrl": "https://www.city.yamaga.kumamoto.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2635,10 +2642,10 @@
           "category": "住まい・証明"
         },
         {
-          "title": "震度速報 9月26日 10時32分",
+          "title": "避難所開設について",
           "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-          "date": "2026-09-26",
-          "time": "10:32",
+          "date": "2026-09-27",
+          "time": "07:30",
           "category": "避難・安全"
         }
       ],
@@ -2727,7 +2734,7 @@
     {
       "name": "菊池市",
       "officialUrl": "https://www.city.kikuchi.lg.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2813,6 +2820,20 @@
           "date": "2026-09-18",
           "time": null,
           "category": "支援・制度"
+        },
+        {
+          "title": "2026年09月27日 避難指示",
+          "url": "https://www.city.kikuchi.lg.jp/article/view/900/18396.html",
+          "date": "2026-09-27",
+          "time": null,
+          "category": "避難・安全"
+        },
+        {
+          "title": "避難所を開設しています（9月27日8時30分時点）",
+          "url": "https://www.city.kikuchi.lg.jp/article/view/900/18702.html",
+          "date": "2026-09-27",
+          "time": "08:30",
+          "category": "避難・安全"
         }
       ],
       "sourcesChecked": [
@@ -2832,6 +2853,8 @@
         "https://www.city.kikuchi.lg.jp/article/view/1350/18829.html",
         "https://www.city.kikuchi.lg.jp/article/view/1350/18808.html",
         "https://www.city.kikuchi.lg.jp/article/view/1350/18800.html",
+        "https://www.city.kikuchi.lg.jp/article/view/900/18396.html",
+        "https://www.city.kikuchi.lg.jp/article/view/900/18702.html",
         "https://www.city.kikuchi.lg.jp/article/view/1040/18831.html",
         "https://www.city.kikuchi.lg.jp/article/view/1039/19138.html",
         "https://www.city.kikuchi.lg.jp/article/view/1044/18831.html",
@@ -2845,7 +2868,7 @@
         "https://www.city.kikuchi.lg.jp/article/view/1349/18266.html",
         "https://www.city.kikuchi.lg.jp/article/view/1341/18747.html"
       ],
-      "pagesFetched": 27,
+      "pagesFetched": 29,
       "errors": [
         "https://www.city.kikuchi.lg.jp/article/view/1341/18747.html: 404 Not Found"
       ]
@@ -2853,7 +2876,7 @@
     {
       "name": "宇土市",
       "officialUrl": "https://www.city.uto.lg.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3202,180 +3225,18 @@
       ],
       "sourcesChecked": [
         "https://www.city.uto.lg.jp/category/list/1301.html",
-        "https://www.city.uto.lg.jp/",
-        "https://www.city.uto.lg.jp/category/list/1001.html",
-        "https://www.city.uto.lg.jp/category/list/1012.html",
-        "https://www.city.uto.lg.jp/category/list/1054.html",
-        "https://www.city.uto.lg.jp/category/list/1070.html",
-        "https://www.city.uto.lg.jp/category/list/1090.html",
-        "https://www.city.uto.lg.jp/category/list/1105.html",
-        "https://www.city.uto.lg.jp/article/keyword/22145.html",
-        "https://www.city.uto.lg.jp/article/keyword/29211.html",
-        "https://www.city.uto.lg.jp/article/keyword/125.html",
-        "https://www.city.uto.lg.jp/article/keyword/240.html",
-        "https://www.city.uto.lg.jp/article/keyword/264.html",
-        "https://www.city.uto.lg.jp/article/view/1017/5569.html",
-        "https://www.city.uto.lg.jp/d?q=ae1a43fd2883a1bcfef56bf1699a5004.pdf",
-        "https://www.city.uto.lg.jp/article/view/1302/16888.html",
-        "https://www.city.uto.lg.jp/article/view/1302/8162.html",
-        "https://www.city.uto.lg.jp/article/view/1302/16857.html",
-        "https://www.city.uto.lg.jp/article/view/1302/16807.html",
-        "https://www.city.uto.lg.jp/article/view/1302/16545.html",
-        "https://www.city.uto.lg.jp/article/view/1302/15768.html",
-        "https://www.city.uto.lg.jp/article/view/1302/5569.html",
-        "https://www.city.uto.lg.jp/article/view/1303/16352.html",
-        "https://www.city.uto.lg.jp/article/view/1303/16328.html",
-        "https://www.city.uto.lg.jp/article/view/1306/16680.html",
-        "https://www.city.uto.lg.jp/article/view/1306/16413.html",
-        "https://www.city.uto.lg.jp/article/view/1306/15768.html",
-        "https://www.city.uto.lg.jp/article/view/1306/1870.html",
-        "https://www.city.uto.lg.jp/article/view/1306/5569.html",
-        "https://www.city.uto.lg.jp/article/view/1307/16551.html",
-        "https://www.city.uto.lg.jp/article/view/1307/17021.html",
-        "https://www.city.uto.lg.jp/article/view/1307/16522.html",
-        "https://www.city.uto.lg.jp/article/view/1307/16406.html",
-        "https://www.city.uto.lg.jp/article/view/1307/16537.html",
-        "https://www.city.uto.lg.jp/article/view/1307/16892.html",
-        "https://www.city.uto.lg.jp/article/view/1307/16465.html",
-        "https://www.city.uto.lg.jp/article/view/1307/16820.html",
-        "https://www.city.uto.lg.jp/article/view/1307/16630.html",
-        "https://www.city.uto.lg.jp/article/view/1304/16680.html",
-        "https://www.city.uto.lg.jp/article/view/1304/16466.html",
-        "https://www.city.uto.lg.jp/article/view/1304/16467.html",
-        "https://www.city.uto.lg.jp/article/view/1304/16449.html",
-        "https://www.city.uto.lg.jp/article/view/1304/5569.html",
-        "https://www.city.uto.lg.jp/article/view/1305/16837.html",
-        "https://www.city.uto.lg.jp/article/view/1305/16828.html",
-        "https://www.city.uto.lg.jp/article/view/1305/8162.html",
-        "https://www.city.uto.lg.jp/article/view/1305/16552.html",
-        "https://www.city.uto.lg.jp/article/view/1305/16620.html",
-        "https://www.city.uto.lg.jp/article/view/1305/16338.html",
-        "https://www.city.uto.lg.jp/article/view/1305/16448.html",
-        "https://www.city.uto.lg.jp/article/view/1305/16385.html",
-        "https://www.city.uto.lg.jp/article/view/1305/16384.html",
-        "https://www.city.uto.lg.jp/article/view/1308/8162.html",
-        "https://www.city.uto.lg.jp/article/view/1308/16473.html",
-        "https://www.city.uto.lg.jp/article/view/1308/16322.html",
-        "https://www.city.uto.lg.jp/article/view/1308/16737.html",
-        "https://www.city.uto.lg.jp/article/view/1308/16317.html",
-        "https://www.city.uto.lg.jp/article/view/1308/16543.html",
-        "https://www.city.uto.lg.jp/article/view/1308/16554.html",
-        "https://www.city.uto.lg.jp/article/view/1321/17025.html",
-        "https://www.city.uto.lg.jp/article/view/1321/16977.html",
-        "https://www.city.uto.lg.jp/article/view/1321/16936.html",
-        "https://www.city.uto.lg.jp/article/view/1321/16873.html",
-        "https://www.city.uto.lg.jp/article/view/1321/16864.html",
-        "https://www.city.uto.lg.jp/article/view/1321/16716.html",
-        "https://www.city.uto.lg.jp/article/view/1321/16569.html",
-        "https://www.city.uto.lg.jp/article/view/1321/16441.html",
-        "https://www.city.uto.lg.jp/article/view/1321/16462.html",
-        "https://www.city.uto.lg.jp/article/view/1322/16865.html",
-        "https://www.city.uto.lg.jp/article/view/1322/16668.html",
-        "https://www.city.uto.lg.jp/article/view/1322/16553.html",
-        "https://www.city.uto.lg.jp/article/view/1310/8162.html",
-        "https://www.city.uto.lg.jp/article/view/1310/16528.html",
-        "https://www.city.uto.lg.jp/article/view/1310/16967.html",
-        "https://www.city.uto.lg.jp/article/view/1310/16344.html",
-        "https://www.city.uto.lg.jp/article/view/1310/16725.html",
-        "https://www.city.uto.lg.jp/article/view/1310/16857.html",
-        "https://www.city.uto.lg.jp/article/view/1310/16630.html",
-        "https://www.city.uto.lg.jp/article/view/1310/16783.html",
-        "https://www.city.uto.lg.jp/article/view/1310/16807.html",
-        "https://www.city.uto.lg.jp/article/list/1280.html",
-        "https://www.city.uto.lg.jp/inquiry_s/form.html",
-        "https://www.city.uto.lg.jp/article/view/1280/11.html",
-        "https://www.city.uto.lg.jp/article/list/1282.html"
+        "https://www.city.uto.lg.jp/"
       ],
-      "pagesFetched": 2,
+      "pagesFetched": 0,
       "errors": [
-        "https://www.city.uto.lg.jp/: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/category/list/1001.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/category/list/1001.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/category/list/1012.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/category/list/1012.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/category/list/1054.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/category/list/1054.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/category/list/1070.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/category/list/1070.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/category/list/1090.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/category/list/1090.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/category/list/1105.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/category/list/1105.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/keyword/22145.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/keyword/22145.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/keyword/29211.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/keyword/29211.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/keyword/125.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/keyword/125.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/keyword/240.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/keyword/240.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/keyword/264.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/keyword/264.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1017/5569.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1017/5569.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/d?q=ae1a43fd2883a1bcfef56bf1699a5004.pdf: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/d?q=ae1a43fd2883a1bcfef56bf1699a5004.pdf\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1302/16888.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/16888.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1302/8162.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/8162.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1302/16857.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/16857.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1302/16807.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/16807.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1302/16545.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/16545.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1302/15768.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/15768.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1302/5569.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1302/5569.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1303/16352.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1303/16352.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1303/16328.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1303/16328.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1306/16680.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1306/16680.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1306/16413.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1306/16413.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1306/15768.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1306/15768.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1306/1870.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1306/1870.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1306/5569.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1306/5569.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1307/16551.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16551.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1307/17021.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/17021.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1307/16522.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16522.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1307/16406.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16406.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1307/16537.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16537.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1307/16892.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16892.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1307/16465.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16465.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1307/16820.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16820.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1307/16630.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1307/16630.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1304/16680.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1304/16680.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1304/16466.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1304/16466.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1304/16467.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1304/16467.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1304/16449.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1304/16449.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1304/5569.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1304/5569.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1305/16837.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16837.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1305/16828.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16828.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1305/8162.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/8162.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1305/16552.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16552.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1305/16620.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16620.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1305/16338.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16338.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1305/16448.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16448.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1305/16385.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16385.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1305/16384.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1305/16384.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1308/8162.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1308/8162.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1308/16473.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1308/16473.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1308/16322.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1308/16322.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1308/16737.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1308/16737.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1308/16317.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1308/16317.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1308/16543.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1308/16543.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1308/16554.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1308/16554.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1321/17025.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/17025.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1321/16977.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/16977.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1321/16936.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/16936.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1321/16873.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/16873.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1321/16864.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/16864.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1321/16716.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/16716.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1321/16569.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/16569.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1321/16441.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/16441.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1321/16462.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1321/16462.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1322/16865.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1322/16865.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1322/16668.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1322/16668.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1322/16553.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1322/16553.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1310/8162.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/8162.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1310/16967.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16967.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1310/16344.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16344.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1310/16725.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16725.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1310/16857.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16857.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1310/16630.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16630.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1310/16783.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16783.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1310/16807.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1310/16807.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/list/1280.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/list/1280.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/inquiry_s/form.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/inquiry_s/form.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/view/1280/11.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/view/1280/11.html\ncurl: (22) The requested URL returned error: 403\n",
-        "https://www.city.uto.lg.jp/article/list/1282.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/article/list/1282.html\ncurl: (22) The requested URL returned error: 403\n"
+        "https://www.city.uto.lg.jp/category/list/1301.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/category/list/1301.html\ncurl: (22) The requested URL returned error: 403\n",
+        "https://www.city.uto.lg.jp/: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.uto.lg.jp/\ncurl: (22) The requested URL returned error: 403\n"
       ]
     },
     {
       "name": "上天草市",
       "officialUrl": "https://www.city.kamiamakusa.kumamoto.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3723,7 +3584,7 @@
     {
       "name": "宇城市",
       "officialUrl": "https://www.city.uki.kumamoto.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3762,18 +3623,18 @@
           "category": "施設・学校"
         },
         {
+          "title": "2026年8月1日 令和８年熊本地震によるパスポート手数料の減免申請ができます",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/2611693",
+          "date": "2026-08-01",
+          "time": null,
+          "category": "その他"
+        },
+        {
           "title": "炊き出し支援をご検討いただいている皆様",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610313",
           "date": "2026-08-03",
           "time": null,
           "category": "支援・制度"
-        },
-        {
-          "title": "パスポート手数料の減免申請ができます（令和8年8月4日更新）",
-          "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/2611693",
-          "date": "2026-08-04",
-          "time": null,
-          "category": "その他"
         },
         {
           "title": "市役所の窓口を臨時開庁しています",
@@ -3991,6 +3852,20 @@
           "date": "2026-08-23",
           "time": null,
           "category": "ごみ・生活"
+        },
+        {
+          "title": "環境・廃棄物",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo",
+          "date": "2026-08-23",
+          "time": null,
+          "category": "ごみ・生活"
+        },
+        {
+          "title": "2026年8月23日 令和8年熊本地震により被災した家屋等の解体・撤去について",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/2641256",
+          "date": "2026-08-23",
+          "time": null,
+          "category": "その他"
         },
         {
           "title": "10_報道資料（令和8年熊本地震に関する避難所等の建物内での「取材・撮影可能場所」等の変更について：令和8年8月22日） (PDF 299KB)",
@@ -4308,6 +4183,13 @@
           "category": "住まい・証明"
         },
         {
+          "title": "ペットの健康相談会を開催します（令和8年9月18日更新）",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/petto/2626116",
+          "date": "2026-09-18",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
           "title": "17_報道資料（避難所巡回バスの運行を始めます：令和8年9月16日） (PDF 522KB)",
           "url": "https://www.city.uki.kumamoto.jp/resource.php?e=730113afda7abceb86f7e35fed0cafb48593e49e24dcdfd98b91d4e39b13916dfb84d383f13616d92fc007b5acd69d82",
           "date": "2026-09-18",
@@ -4329,6 +4211,13 @@
           "category": "その他"
         },
         {
+          "title": "宇城市屋内多目的広場の利用を再開しました",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2634142",
+          "date": "2026-09-19",
+          "time": null,
+          "category": "その他"
+        },
+        {
           "title": "令和8年熊本地震の罹災証明・被災証明・罹災届出証明について",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2515854",
           "date": "2026-09-19",
@@ -4343,7 +4232,7 @@
           "category": "支援・制度"
         },
         {
-          "title": "令和8年熊本地震に係る第1期建設型応急住宅の入居選定結果について",
+          "title": "2026年09月20日 令和8年熊本地震に係る第1期建設型応急住宅の入居選定結果について",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2639147",
           "date": "2026-09-20",
           "time": null,
@@ -4399,13 +4288,6 @@
           "category": "その他"
         },
         {
-          "title": "宇城市屋内多目的広場の利用を再開しました",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2634142",
-          "date": "2026-09-23",
-          "time": null,
-          "category": "その他"
-        },
-        {
           "title": "20_報道資料（建設型応急住宅への入居が始まります：令和8年9月20日） (PDF 793KB)",
           "url": "https://www.city.uki.kumamoto.jp/resource.php?e=9e2b2f09884947246df85d6f9bb19c8944e8c915b2a4ededeadef745bed7197c8e394a8c3ea98921c1cc5c1a708c8278",
           "date": "2026-09-23",
@@ -4427,6 +4309,13 @@
           "category": "避難・安全"
         },
         {
+          "title": "令和8年熊本地震により被災した家屋等の解体・撤去について",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2641256",
+          "date": "2026-09-24",
+          "time": null,
+          "category": "その他"
+        },
+        {
           "title": "2026年09月25日 令和8年熊本地震の罹災証明・被災証明・罹災届出証明について",
           "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/sonota_bousai/2515854",
           "date": "2026-09-25",
@@ -4434,7 +4323,7 @@
           "category": "住まい・証明"
         },
         {
-          "title": "2026年09月25日 令和8年熊本地震で被災した家屋等の解体・撤去について",
+          "title": "被災した家屋等の解体・撤去について（令和8年9月25日更新）",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2622644",
           "date": "2026-09-25",
           "time": null,
@@ -4470,7 +4359,7 @@
         },
         {
           "title": "2026年09月25日 罹災証明書・被災証明書の交付に必要な被害認定調査を実施しています",
-          "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/sonota_bousai/2616414",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/sonota_kurashi/2616414",
           "date": "2026-09-25",
           "time": null,
           "category": "住まい・証明"
@@ -4483,32 +4372,11 @@
           "category": "ごみ・生活"
         },
         {
-          "title": "2026年9月26日 令和8年熊本地震 関連情報 （9月26日18時00分更新）",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-          "date": "2026-09-26",
-          "time": "18:00",
-          "category": "その他"
-        },
-        {
-          "title": "2026年09月26日 令和8年熊本地震 関連情報 （9月26日18時00分更新）",
-          "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
-          "date": "2026-09-26",
-          "time": "18:00",
-          "category": "その他"
-        },
-        {
           "title": "2026年09月27日 避難者数",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
           "date": "2026-09-27",
           "time": null,
           "category": "避難・安全"
-        },
-        {
-          "title": "ペットの健康相談会を開催します",
-          "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/petto/2626116",
-          "date": "2026-09-27",
-          "time": null,
-          "category": "支援・制度"
         },
         {
           "title": "ブルーシート（支援物資）を配布します",
@@ -4518,11 +4386,32 @@
           "category": "住まい・証明"
         },
         {
+          "title": "2026年09月27日 令和8年熊本地震により被災した家屋等の解体・撤去について",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2641256",
+          "date": "2026-09-27",
+          "time": null,
+          "category": "その他"
+        },
+        {
           "title": "旧宇城市戸馳花の学校及び不知火温泉ふるさと交流センターの利活用事業者を募集します",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2564357",
           "date": "2026-09-27",
           "time": null,
           "category": "施設・学校"
+        },
+        {
+          "title": "2026年9月27日 令和8年熊本地震 関連情報 （9月27日8時00分更新）",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+          "date": "2026-09-27",
+          "time": "08:00",
+          "category": "その他"
+        },
+        {
+          "title": "2026年09月27日 令和8年熊本地震 関連情報 （9月27日8時00分更新）",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
+          "date": "2026-09-27",
+          "time": "08:00",
+          "category": "その他"
         }
       ],
       "sourcesChecked": [
@@ -4610,8 +4499,9 @@
         "https://www.city.uki.kumamoto.jp/resource.php?e=b59cac1a91337a89d9596251e49815bd25660d8eb2268926b6b2067ce7488cd754f5b324860749b496c9cf380ff80a81",
         "https://www.city.uki.kumamoto.jp/resource.php?e=1d4dda29caa36622d0a149828aa9a9f2414f3d372d517c49c1c20122ae91c23c8d3031199054cd1195b7295c85f36def",
         "https://www.city.uki.kumamoto.jp/toppage/important/2620169",
-        "https://www.city.uki.kumamoto.jp/toppage/important/2626116",
+        "https://www.city.uki.kumamoto.jp/toppage/important/2635811",
         "https://www.city.uki.kumamoto.jp/toppage/furusato",
+        "https://www.city.uki.kumamoto.jp/toppage/important/2641256",
         "https://www.city.uki.kumamoto.jp/toppage/important/2607719",
         "https://www.city.uki.kumamoto.jp/toppage/important/2606668",
         "https://www.city.uki.kumamoto.jp/toppage/important/2614182",
@@ -4621,24 +4511,25 @@
         "https://www.city.uki.kumamoto.jp/toppage/important/2610825",
         "https://www.city.uki.kumamoto.jp/toppage/important/2607146",
         "https://www.city.uki.kumamoto.jp/toppage/important/2578019",
+        "https://www.city.uki.kumamoto.jp/toppage/important/2564357",
         "https://www.city.uki.kumamoto.jp/toppage/important/2620848",
         "https://www.city.uki.kumamoto.jp/toppage/important/2620459",
         "https://www.city.uki.kumamoto.jp/toppage/important/2609591",
         "https://www.city.uki.kumamoto.jp/toppage/important/2515854",
         "https://www.city.uki.kumamoto.jp/toppage/important/2609706",
         "https://www.city.uki.kumamoto.jp/toppage/important/2616414",
-        "https://www.city.uki.kumamoto.jp/toppage/important/2564357",
         "https://www.city.uki.kumamoto.jp/toppage/important/2422985",
         "https://www.city.uki.kumamoto.jp/toppage/important/2136905",
-        "https://www.city.uki.kumamoto.jp/toppage/important/2635811",
         "https://www.city.uki.kumamoto.jp/toppage/important/2606682",
         "https://www.city.uki.kumamoto.jp/toppage/important/2631028",
         "https://www.city.uki.kumamoto.jp/toppage/important/2630892",
         "https://www.city.uki.kumamoto.jp/toppage/important/2630205"
       ],
-      "pagesFetched": 106,
+      "pagesFetched": 104,
       "errors": [
         "https://www.city.uki.kumamoto.jp/resource.php?e=9c698a6a0b6118fc5a6f9a654a3f6c1b90c9d75783ecfda0761998747cb762884beb6135dab98bbfc5f04e33056cb97f: HTMLではありません: application/pdf",
+        "https://www.city.uki.kumamoto.jp/kurashi/kankyo/petto/2626116: 404 Not Found",
+        "https://www.city.uki.kumamoto.jp/toppage/important/2622644: 404 Not Found",
         "https://www.city.uki.kumamoto.jp/resource.php?e=b59cac1a91337a89d9596251e49815bd25660d8eb2268926b6b2067ce7488cd754f5b324860749b496c9cf380ff80a81: HTMLではありません: application/pdf",
         "https://www.city.uki.kumamoto.jp/resource.php?e=1d4dda29caa36622d0a149828aa9a9f2414f3d372d517c49c1c20122ae91c23c8d3031199054cd1195b7295c85f36def: HTMLではありません: application/pdf"
       ]
@@ -4646,7 +4537,7 @@
     {
       "name": "天草市",
       "officialUrl": "https://www.city.amakusa.kumamoto.jp/default.html?site=1",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4872,7 +4763,7 @@
     {
       "name": "合志市",
       "officialUrl": "https://www.city.koshi.lg.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4900,7 +4791,7 @@
     {
       "name": "美里町",
       "officialUrl": "https://www.town.kumamoto-misato.lg.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5103,7 +4994,7 @@
     {
       "name": "大津町",
       "officialUrl": "https://www.town.ozu.kumamoto.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5172,9 +5063,16 @@
         {
           "title": "災害による被害の証明書（罹災証明書と被災証明書）",
           "url": "https://www.town.ozu.kumamoto.jp/site/bousai/2564.html",
-          "date": "2026-09-11",
+          "date": "2026-09-01",
           "time": null,
           "category": "住まい・証明"
+        },
+        {
+          "title": "避難所指示",
+          "url": "https://www.town.ozu.kumamoto.jp/page/27508.html",
+          "date": "2026-09-11",
+          "time": null,
+          "category": "避難・安全"
         },
         {
           "title": "令和8年熊本地震災害関連情報（企業・事業者向け）",
@@ -5186,7 +5084,7 @@
         {
           "title": "（令和8年熊本地震）マイナ保険証、資格確認書がなくても医療機関等を受診できます",
           "url": "https://www.town.ozu.kumamoto.jp/page/26664.html",
-          "date": "2026-09-24",
+          "date": "2026-09-27",
           "time": null,
           "category": "その他"
         }
@@ -5203,7 +5101,7 @@
     {
       "name": "菊陽町",
       "officialUrl": "https://www.town.kikuyo.lg.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5434,7 +5332,7 @@
     {
       "name": "西原村",
       "officialUrl": "https://www.vill.nishihara.kumamoto.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5570,7 +5468,7 @@
     {
       "name": "御船町",
       "officialUrl": "https://www.town.mifune.kumamoto.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5764,7 +5662,7 @@
     {
       "name": "嘉島町",
       "officialUrl": "https://www.town.kumamoto-kashima.lg.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5889,23 +5787,23 @@
         {
           "title": "「令和8年熊本地震」における災害救助法に基づく住宅の緊急修理・応急修理の支援について - 企画情報課",
           "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6047.html",
-          "date": "2026-09-04",
+          "date": "2026-09-03",
           "time": null,
           "category": "住まい・証明"
+        },
+        {
+          "title": "令和8年熊本地震 くまもと事業者再出発支援補助金及び説明会の開...",
+          "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6307.html",
+          "date": "2026-09-14",
+          "time": null,
+          "category": "支援・制度"
         },
         {
           "title": "【事業者向け】セーフティネット保証4号の認定について(令和8年熊本地震) - 企画情報課",
           "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6187.html",
-          "date": "2026-09-14",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "災害救助法「住家の緊急修理」制度のご案内 - 企画情報課",
-          "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6040.html",
           "date": "2026-09-18",
           "time": null,
-          "category": "住まい・証明"
+          "category": "その他"
         },
         {
           "title": "令和8年熊本地震に伴う災害支援について - 総務課",
@@ -5934,6 +5832,13 @@
           "date": "2026-09-25",
           "time": null,
           "category": "施設・学校"
+        },
+        {
+          "title": "災害救助法「住家の緊急修理」制度のご案内 - 企画情報課",
+          "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6040.html",
+          "date": "2026-09-25",
+          "time": null,
+          "category": "住まい・証明"
         }
       ],
       "sourcesChecked": [
@@ -5941,6 +5846,7 @@
         "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6035.html",
         "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6103.html",
         "https://www.town.kumamoto-kashima.lg.jp/q/aview/1/6103.html",
+        "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6307.html",
         "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6298.html",
         "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6226.html",
         "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/3496.html",
@@ -5969,13 +5875,13 @@
         "https://www.town.kumamoto-kashima.lg.jp/q/aview/123/6206.html",
         "https://www.town.kumamoto-kashima.lg.jp/q/aview/123/3145.html"
       ],
-      "pagesFetched": 31,
+      "pagesFetched": 32,
       "errors": []
     },
     {
       "name": "益城町",
       "officialUrl": "https://www.town.mashiki.lg.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6278,13 +6184,6 @@
           "date": "2026-09-25",
           "time": null,
           "category": "施設・学校"
-        },
-        {
-          "title": "地震情報",
-          "url": "https://www.town.mashiki.lg.jp/kinkyu.html",
-          "date": "2026-09-26",
-          "time": "10:32",
-          "category": "その他"
         }
       ],
       "sourcesChecked": [
@@ -6378,7 +6277,7 @@
     {
       "name": "甲佐町",
       "officialUrl": "https://www.town.kosa.lg.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6708,7 +6607,7 @@
     {
       "name": "氷川町",
       "officialUrl": "https://www.town.hikawa.kumamoto.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -7308,7 +7207,7 @@
     {
       "name": "芦北町",
       "officialUrl": "https://www.town.ashikita.lg.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {
@@ -7372,7 +7271,7 @@
     {
       "name": "津奈木町",
       "officialUrl": "https://www.town.tsunagi.lg.jp/",
-      "checkedAt": "2026-09-26T23:41:18.344Z",
+      "checkedAt": "2026-09-27T05:25:38.209Z",
       "status": "confirmed",
       "updates": [
         {

@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-27T00:00:41.091Z",
-  "officialCheckedAt": "9/27 09:00",
+  "retrievedAt": "2026-09-27T05:43:42.057Z",
+  "officialCheckedAt": "9/27 14:43",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -96,20 +96,52 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "９月２７日（日）１２時（正午）以降の応急給水活動について",
-      "url": "https://www.city.yatsushiro.lg.jp/kinkyu.html",
+      "title": "避難所開設状況",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
       "date": "2026-09-27",
-      "time": null,
-      "category": "ライフライン",
+      "time": "14:01",
+      "category": "避難・安全",
       "municipality": "八代市"
     },
     {
-      "title": "2026年09月27日 避難者数",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
+      "title": "避難所開設に伴う公設公民館の臨時休館について",
+      "url": "https://www.city.kumamoto.jp/kiji00357130/index.html",
+      "date": "2026-09-27",
+      "time": "13:27",
+      "category": "避難・安全",
+      "municipality": "熊本市"
+    },
+    {
+      "title": "避難所を開設しています（9月27日8時30分時点）",
+      "url": "https://www.city.kikuchi.lg.jp/article/view/900/18702.html",
+      "date": "2026-09-27",
+      "time": "08:30",
+      "category": "避難・安全",
+      "municipality": "菊池市"
+    },
+    {
+      "title": "2026年9月27日 令和8年熊本地震 関連情報 （9月27日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-09-27",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "宇城市"
+    },
+    {
+      "title": "避難所開設について",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "date": "2026-09-27",
+      "time": "07:30",
+      "category": "避難・安全",
+      "municipality": "山鹿市"
+    },
+    {
+      "title": "（令和8年熊本地震）マイナ保険証、資格確認書がなくても医療機関等を受診できます",
+      "url": "https://www.town.ozu.kumamoto.jp/page/26664.html",
       "date": "2026-09-27",
       "time": null,
-      "category": "避難・安全",
-      "municipality": "宇城市"
+      "category": "その他",
+      "municipality": "大津町"
     },
     {
       "title": "避難所について（9/26 17:00更新）",
@@ -120,36 +152,12 @@ window.HOME_TOPICS = {
       "municipality": "宇土市"
     },
     {
-      "title": "震度速報 9月26日 10時32分",
-      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-      "date": "2026-09-26",
-      "time": "10:32",
-      "category": "避難・安全",
-      "municipality": "山鹿市"
-    },
-    {
-      "title": "地震情報",
-      "url": "https://www.town.mashiki.lg.jp/kinkyu.html",
-      "date": "2026-09-26",
-      "time": "10:32",
-      "category": "その他",
-      "municipality": "益城町"
-    },
-    {
       "title": "り災証明書(2次調査)の発行申請受付について",
       "url": "https://www.town.kosa.lg.jp/q/aview/101/13690.html",
       "date": "2026-09-26",
       "time": null,
       "category": "住まい・証明",
       "municipality": "甲佐町"
-    },
-    {
-      "title": "令和8年熊本地震被災者へ熊本市宿泊支援事業を実施します ※新規受付は終了しました",
-      "url": "https://www.city.kumamoto.jp/kiji00372265/index.html",
-      "date": "2026-09-25",
-      "time": "17:27",
-      "category": "支援・制度",
-      "municipality": "熊本市"
     },
     {
       "title": "令和8年熊本地震で被災された方に対する支援制度について",
@@ -184,6 +192,14 @@ window.HOME_TOPICS = {
       "municipality": "嘉島町"
     },
     {
+      "title": "町立保育所給食調理業務委託に係る公募型プロポーザルの実施について",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038169/index.html",
+      "date": "2026-09-25",
+      "time": null,
+      "category": "施設・学校",
+      "municipality": "益城町"
+    },
+    {
       "title": "令和8年熊本地震（7月28日発生）に関する情報（9月24日17時更新）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
       "date": "2026-09-24",
@@ -192,28 +208,12 @@ window.HOME_TOPICS = {
       "municipality": "美里町"
     },
     {
-      "title": "（令和8年熊本地震）マイナ保険証、資格確認書がなくても医療機関等を受診できます",
-      "url": "https://www.town.ozu.kumamoto.jp/page/26664.html",
-      "date": "2026-09-24",
-      "time": null,
-      "category": "その他",
-      "municipality": "大津町"
-    },
-    {
       "title": "医療・健診",
       "url": "https://www.town.mifune.kumamoto.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1046",
       "date": "2026-09-24",
       "time": null,
       "category": "その他",
       "municipality": "御船町"
-    },
-    {
-      "title": "建築確認などの手数料の減免措置",
-      "url": "https://www.city.amakusa.kumamoto.jp/bousai/kiji00314759/index.html",
-      "date": "2026-09-18",
-      "time": "16:25",
-      "category": "その他",
-      "municipality": "天草市"
     }
   ],
   "prefectureUpdates": [
