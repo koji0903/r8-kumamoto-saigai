@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-09-27T05:25:38.209Z",
+  "generatedAt": "2026-09-27T12:11:45.266Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 836,
-  "displayCandidateCount": 562,
-  "classifiedPageCount": 672,
+  "inputCount": 845,
+  "displayCandidateCount": 573,
+  "classifiedPageCount": 683,
   "categoryReport": {
     "home": {
-      "total": 188,
-      "high": 66,
-      "medium": 77,
+      "total": 192,
+      "high": 68,
+      "medium": 79,
       "low": 45
     },
     "money": {
-      "total": 221,
-      "high": 42,
+      "total": 224,
+      "high": 44,
       "medium": 54,
-      "low": 125
+      "low": 126
     },
     "documents": {
-      "total": 171,
+      "total": 176,
       "high": 40,
-      "medium": 29,
-      "low": 102
+      "medium": 30,
+      "low": 106
     },
     "health_care": {
       "total": 49,
@@ -37,21 +37,21 @@
       "low": 39
     },
     "work_business": {
-      "total": 56,
+      "total": 58,
       "high": 14,
-      "medium": 42,
+      "medium": 44,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 18,
-      "high": 5,
-      "medium": 13,
+      "total": 22,
+      "high": 6,
+      "medium": 16,
       "low": 0
     },
     "daily_life": {
-      "total": 199,
-      "high": 59,
-      "medium": 139,
+      "total": 201,
+      "high": 60,
+      "medium": 140,
       "low": 1
     }
   },
@@ -77,8 +77,8 @@
       "fallback": true
     },
     "municipality_kikuchi": {
-      "classified": 12,
-      "displayCandidates": 10,
+      "classified": 11,
+      "displayCandidates": 9,
       "fallback": true
     },
     "municipality_uto": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 106,
-      "displayCandidates": 89,
+      "classified": 105,
+      "displayCandidates": 88,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -102,8 +102,8 @@
       "fallback": true
     },
     "municipality_koshi": {
-      "classified": 1,
-      "displayCandidates": 1,
+      "classified": 15,
+      "displayCandidates": 14,
       "fallback": true
     },
     "municipality_misato": {
@@ -142,7 +142,7 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 30,
+      "classified": 29,
       "displayCandidates": 25,
       "fallback": true
     },
@@ -163,17 +163,12 @@
     }
   },
   "confidence": {
-    "high": 243,
-    "medium": 319,
+    "high": 249,
+    "medium": 324,
     "low": 110
   },
-  "unclassifiedCount": 41,
+  "unclassifiedCount": 39,
   "unclassifiedItems": [
-    {
-      "municipalityName": "熊本市",
-      "title": "【避難情報】情報を更新しました。",
-      "url": "https://www.city.kumamoto.jp/kinkyu.html"
-    },
     {
       "municipalityName": "熊本市",
       "title": "「2026年ベネズエラ地震救援金募金」について",
@@ -280,11 +275,6 @@
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326816/index.html"
     },
     {
-      "municipalityName": "菊池市",
-      "title": "2026年09月27日 避難指示",
-      "url": "https://www.city.kikuchi.lg.jp/article/view/900/18396.html"
-    },
-    {
       "municipalityName": "宇土市",
       "title": "水質検査の結果を公表します",
       "url": "https://www.city.uto.lg.jp/article/view/1308/16737.html"
@@ -331,12 +321,12 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年9月27日 令和8年熊本地震 関連情報 （9月27日8時00分更新）",
+      "title": "2026年9月27日 令和8年熊本地震 関連情報 （9月27日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年09月27日 令和8年熊本地震 関連情報 （9月27日8時00分更新）",
+      "title": "2026年09月27日 令和8年熊本地震 関連情報 （9月27日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699"
     },
     {
@@ -748,7 +738,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -990,7 +980,7 @@
     "duplicate_url": 36,
     "non_official_url": 2
   },
-  "warningCount": 21,
+  "warningCount": 23,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1055,7 +1045,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 5
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1065,6 +1055,16 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_amakusa",
+      "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_koshi",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_koshi",
       "count": 1
     },
     {
@@ -1099,5 +1099,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 663
+  "previousClassifiedPageCount": 672
 }

@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-27T05:43:42.057Z",
-  "officialCheckedAt": "9/27 14:43",
+  "retrievedAt": "2026-09-27T12:27:36.428Z",
+  "officialCheckedAt": "9/27 21:27",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -96,6 +96,14 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "2026年9月27日 令和8年熊本地震 関連情報 （9月27日18時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-09-27",
+      "time": "18:00",
+      "category": "その他",
+      "municipality": "宇城市"
+    },
+    {
       "title": "避難所開設状況",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
       "date": "2026-09-27",
@@ -110,22 +118,6 @@ window.HOME_TOPICS = {
       "time": "13:27",
       "category": "避難・安全",
       "municipality": "熊本市"
-    },
-    {
-      "title": "避難所を開設しています（9月27日8時30分時点）",
-      "url": "https://www.city.kikuchi.lg.jp/article/view/900/18702.html",
-      "date": "2026-09-27",
-      "time": "08:30",
-      "category": "避難・安全",
-      "municipality": "菊池市"
-    },
-    {
-      "title": "2026年9月27日 令和8年熊本地震 関連情報 （9月27日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-09-27",
-      "time": "08:00",
-      "category": "その他",
-      "municipality": "宇城市"
     },
     {
       "title": "避難所開設について",
@@ -214,6 +206,14 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "その他",
       "municipality": "御船町"
+    },
+    {
+      "title": "【令和8年熊本地震】（国補助事業）小規模事業者持続化補助金＜一般型 災害支援枠＞",
+      "url": "https://www.city.koshi.lg.jp/kiji00325833/index.html",
+      "date": "2026-09-18",
+      "time": "17:00",
+      "category": "支援・制度",
+      "municipality": "合志市"
     }
   ],
   "prefectureUpdates": [
