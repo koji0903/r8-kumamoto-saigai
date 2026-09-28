@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-28T14:27:10.575Z",
-  "officialCheckedAt": "9/28 23:27",
+  "retrievedAt": "2026-09-28T21:34:35.386Z",
+  "officialCheckedAt": "9/29 06:34",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -144,6 +144,14 @@ window.HOME_TOPICS = {
       "municipality": "上天草市"
     },
     {
+      "title": "令和８年熊本地震で被災した家屋等の解体・撤去について",
+      "url": "https://www.town.ozu.kumamoto.jp/page/27479.html",
+      "date": "2026-09-28",
+      "time": null,
+      "category": "その他",
+      "municipality": "大津町"
+    },
+    {
       "title": "令和8年熊本地震災害支援情報まとめ(9/28更新)",
       "url": "https://www.town.kosa.lg.jp/q/aview/55/13531.html",
       "date": "2026-09-28",
@@ -158,14 +166,6 @@ window.HOME_TOPICS = {
       "time": "07:30",
       "category": "避難・安全",
       "municipality": "山鹿市"
-    },
-    {
-      "title": "（令和8年熊本地震）マイナ保険証、資格確認書がなくても医療機関等を受診できます",
-      "url": "https://www.town.ozu.kumamoto.jp/page/26664.html",
-      "date": "2026-09-27",
-      "time": null,
-      "category": "その他",
-      "municipality": "大津町"
     },
     {
       "title": "避難所について（9/26 17:00更新）",

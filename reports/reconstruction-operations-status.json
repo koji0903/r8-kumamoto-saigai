@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-28T14:27:32.013Z",
+  "generatedAt": "2026-09-28T21:34:56.308Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-28T14:08:24.457Z",
-    "inputCount": 831,
-    "classifiedPageCount": 670,
-    "displayCandidateCount": 565,
+    "generatedAt": "2026-09-28T21:16:14.470Z",
+    "inputCount": 829,
+    "classifiedPageCount": 668,
+    "displayCandidateCount": 564,
     "deltaFromPrevious": {
-      "inputCount": 2,
-      "classifiedPageCount": 2,
+      "inputCount": -2,
+      "classifiedPageCount": -2,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 81,
+      "ageHours": 88,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 136,
-        "displayCandidates": 112,
+        "classified": 135,
+        "displayCandidates": 111,
         "fallback": true
       },
       "municipality_minamata": {
@@ -66,7 +66,7 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 105,
+        "classified": 104,
         "displayCandidates": 89,
         "fallback": true
       },
@@ -144,10 +144,10 @@
         "low": 45
       },
       "money": {
-        "total": 216,
+        "total": 214,
         "high": 42,
         "medium": 54,
-        "low": 120
+        "low": 118
       },
       "documents": {
         "total": 172,
@@ -168,9 +168,9 @@
         "low": 39
       },
       "work_business": {
-        "total": 57,
+        "total": 56,
         "high": 14,
-        "medium": 43,
+        "medium": 42,
         "low": 0
       },
       "agriculture_fishery": {
@@ -188,8 +188,8 @@
     },
     "confidence": {
       "high": 247,
-      "medium": 318,
-      "low": 105
+      "medium": 317,
+      "low": 104
     },
     "unclassifiedCount": 39,
     "excludedCount": 37,
@@ -285,9 +285,14 @@
       "count": 3
     },
     {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_minamata",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_minamata",
-      "count": 5
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",

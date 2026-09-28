@@ -2,7 +2,7 @@
   "metadata": {
     "event": "令和8年熊本地震",
     "disasterDate": "2026-07-28",
-    "retrievedAt": "2026-09-28T14:08:24.457Z",
+    "retrievedAt": "2026-09-28T21:16:14.470Z",
     "scope": "各市町村の公式トップページ、確認済みの地震情報集約ページ、そのページに掲載された個別記事、および集約ページのページ送りを確認。令和8年7月28日以降の日付を公式ページ上で確認できた記事リンク",
     "caveat": "公式サイトの構造・公開方式・検索可否により網羅性は保証できません。未検出は情報が存在しないことを意味しません。内容と最新状況はリンク先の一次情報で確認してください。",
     "categoryNote": "分類は記事タイトルに基づく閲覧用の便宜的な分類です。"
@@ -11,7 +11,7 @@
     {
       "name": "熊本市",
       "officialUrl": "https://www.city.kumamoto.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -456,18 +456,18 @@
           "category": "その他"
         },
         {
-          "title": "熊本市災害ボランティアセンターによる支援開始のお知らせ",
-          "url": "https://www.city.kumamoto.jp/kiji00372117/index.html",
-          "date": "2026-09-15",
-          "time": "00:00",
-          "category": "支援・制度"
-        },
-        {
           "title": "令和8年熊本地震に係る賃貸型応急住宅（みなし仮設住宅）の供与について",
           "url": "https://www.city.kumamoto.jp/kiji00372264/index.html",
           "date": "2026-09-15",
           "time": "00:00",
           "category": "住まい・証明"
+        },
+        {
+          "title": "熊本市災害ボランティアセンターによる支援開始のお知らせ",
+          "url": "https://www.city.kumamoto.jp/kiji00372117/index.html",
+          "date": "2026-09-15",
+          "time": "00:00",
+          "category": "支援・制度"
         },
         {
           "title": "令和8年熊本地震により住宅用井戸が被災し、飲み水の確保ができない方へ",
@@ -571,7 +571,6 @@
         "https://www.city.kumamoto.jp/list04669.html",
         "https://www.city.kumamoto.jp/list04843.html",
         "https://www.city.kumamoto.jp/list04844.html",
-        "https://www.city.kumamoto.jp/kiji00372117/index.html",
         "https://www.city.kumamoto.jp/kiji00372403/index.html",
         "https://www.city.kumamoto.jp/list04668.html",
         "https://www.city.kumamoto.jp/list04203.html",
@@ -582,6 +581,7 @@
         "https://www.city.kumamoto.jp/list04215.html",
         "https://www.city.kumamoto.jp/kiji00372422/index.html",
         "https://www.city.kumamoto.jp/kiji00372154/index.html",
+        "https://www.city.kumamoto.jp/kiji00372117/index.html",
         "https://www.city.kumamoto.jp/kiji0032451/index.html",
         "https://www.city.kumamoto.jp/kiji00310012/index.html",
         "https://www.city.kumamoto.jp/kiji00316526/index.html",
@@ -617,7 +617,7 @@
     {
       "name": "八代市",
       "officialUrl": "https://www.city.yatsushiro.lg.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2119,13 +2119,6 @@
           "category": "ごみ・生活"
         },
         {
-          "title": "【10月5日、10月6日】令和8年熊本地震に係る「くまもと事業者再出発支援補助金」の事業者向け説明会",
-          "url": "https://www.city.yatsushiro.lg.jp/kiji00327141/index.html",
-          "date": "2026-09-28",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
           "title": "⚠️一部公園の10月分利用予約の受付開始について（球磨川河川緑地・北部中央公園・東片自然公園・緑公園・鏡ヶ池公園・新八代駅がめさん公園の一部 以外）",
           "url": "https://www.city.yatsushiro.lg.jp/kiji00326995/index.html",
           "date": "2026-09-28",
@@ -2417,7 +2410,7 @@
     {
       "name": "水俣市",
       "officialUrl": "https://localcms.city.minamata.lg.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2448,21 +2441,53 @@
         "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1186",
         "https://localcms.city.minamata.lg.jp/",
         "https://www.city.minamata.lg.jp/kiji0031914/index.html",
-        "https://www.city.minamata.lg.jp/kankyo/kiji0031913/index.html"
+        "https://www.city.minamata.lg.jp/kankyo/kiji0031913/index.html",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=306",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=344",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=351",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=308",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=358",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=310",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1019",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=361",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=363",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=311",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=364",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=365",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1129",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1143",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=373",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1193",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=314",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=377",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=730",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=731",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1334",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=387",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=391",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=320",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=392",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=393",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1255",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=324",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=329",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=398",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=401",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=405",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=407",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1247",
+        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1210",
+        "https://localcms.city.minamata.lg.jp/page4805.html?type=top"
       ],
-      "pagesFetched": 1,
+      "pagesFetched": 41,
       "errors": [
-        "https://localcms.city.minamata.lg.jp/page257.html?type=top: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://localcms.city.minamata.lg.jp/page257.html?type=top\ncurl: (28) Failed to connect to localcms.city.minamata.lg.jp port 443 after 15002 ms: Timeout was reached\n",
-        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1209: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1209\ncurl: (28) Failed to connect to localcms.city.minamata.lg.jp port 443 after 15000 ms: Timeout was reached\n",
-        "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1186: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1186\ncurl: (28) Failed to connect to localcms.city.minamata.lg.jp port 443 after 15002 ms: Timeout was reached\n",
-        "https://localcms.city.minamata.lg.jp/: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://localcms.city.minamata.lg.jp/\ncurl: (28) Failed to connect to localcms.city.minamata.lg.jp port 443 after 15002 ms: Timeout was reached\n",
-        "https://www.city.minamata.lg.jp/kiji0031914/index.html: Command failed: curl --fail --silent --show-error --location --connect-timeout 15 --max-time 30 --user-agent Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai) --header Accept: text/html,application/xhtml+xml https://www.city.minamata.lg.jp/kiji0031914/index.html\ncurl: (28) Operation timed out after 30002 milliseconds with 0 bytes received\n"
+        "https://localcms.city.minamata.lg.jp/page257.html?type=top: 404 Not Found"
       ]
     },
     {
       "name": "山鹿市",
       "officialUrl": "https://www.city.yamaga.kumamoto.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2663,7 +2688,7 @@
     {
       "name": "菊池市",
       "officialUrl": "https://www.city.kikuchi.lg.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2789,7 +2814,7 @@
     {
       "name": "宇土市",
       "officialUrl": "https://www.city.uto.lg.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3149,7 +3174,7 @@
     {
       "name": "上天草市",
       "officialUrl": "https://www.city.kamiamakusa.kumamoto.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3497,7 +3522,7 @@
     {
       "name": "宇城市",
       "officialUrl": "https://www.city.uki.kumamoto.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3534,6 +3559,13 @@
           "date": "2026-07-28",
           "time": null,
           "category": "施設・学校"
+        },
+        {
+          "title": "2026年8月1日 令和８年熊本地震によるパスポート手数料の減免申請ができます",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/2611693",
+          "date": "2026-08-01",
+          "time": null,
+          "category": "その他"
         },
         {
           "title": "炊き出し支援をご検討いただいている皆様",
@@ -3643,13 +3675,6 @@
         {
           "title": "ウイングまつばせでの物資配布を8月19日(水曜日)午後6時で終了します",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2620848",
-          "date": "2026-08-15",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
-          "title": "相談・アドバイス",
-          "url": "https://www.city.uki.kumamoto.jp/kosodate/sodan",
           "date": "2026-08-15",
           "time": null,
           "category": "支援・制度"
@@ -4089,13 +4114,6 @@
           "category": "支援・制度"
         },
         {
-          "title": "令和８年熊本地震によるパスポート手数料の減免申請ができます",
-          "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/2611693",
-          "date": "2026-09-18",
-          "time": null,
-          "category": "その他"
-        },
-        {
           "title": "17_報道資料（避難所巡回バスの運行を始めます：令和8年9月16日） (PDF 522KB)",
           "url": "https://www.city.uki.kumamoto.jp/resource.php?e=730113afda7abceb86f7e35fed0cafb48593e49e24dcdfd98b91d4e39b13916dfb84d383f13616d92fc007b5acd69d82",
           "date": "2026-09-18",
@@ -4441,7 +4459,7 @@
     {
       "name": "天草市",
       "officialUrl": "https://www.city.amakusa.kumamoto.jp/default.html?site=1",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4667,7 +4685,7 @@
     {
       "name": "合志市",
       "officialUrl": "https://www.city.koshi.lg.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4695,7 +4713,7 @@
     {
       "name": "美里町",
       "officialUrl": "https://www.town.kumamoto-misato.lg.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4907,7 +4925,7 @@
     {
       "name": "大津町",
       "officialUrl": "https://www.town.ozu.kumamoto.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4974,6 +4992,13 @@
           "category": "住まい・証明"
         },
         {
+          "title": "令和8年熊本地震災害関連情報（企業・事業者向け）",
+          "url": "https://www.town.ozu.kumamoto.jp/page/27432.html",
+          "date": "2026-08-26",
+          "time": null,
+          "category": "その他"
+        },
+        {
           "title": "災害による被害の証明書（罹災証明書と被災証明書）",
           "url": "https://www.town.ozu.kumamoto.jp/site/bousai/2564.html",
           "date": "2026-09-01",
@@ -4988,23 +5013,16 @@
           "category": "避難・安全"
         },
         {
-          "title": "令和8年熊本地震災害関連情報（企業・事業者向け）",
-          "url": "https://www.town.ozu.kumamoto.jp/page/27432.html",
-          "date": "2026-09-24",
+          "title": "（令和8年熊本地震）マイナ保険証、資格確認書がなくても医療機関等を受診できます",
+          "url": "https://www.town.ozu.kumamoto.jp/page/26664.html",
+          "date": "2026-09-27",
           "time": null,
           "category": "その他"
         },
         {
           "title": "令和８年熊本地震で被災した家屋等の解体・撤去について",
           "url": "https://www.town.ozu.kumamoto.jp/page/27479.html",
-          "date": "2026-09-25",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "（令和8年熊本地震）マイナ保険証、資格確認書がなくても医療機関等を受診できます",
-          "url": "https://www.town.ozu.kumamoto.jp/page/26664.html",
-          "date": "2026-09-27",
+          "date": "2026-09-28",
           "time": null,
           "category": "その他"
         }
@@ -5021,7 +5039,7 @@
     {
       "name": "菊陽町",
       "officialUrl": "https://www.town.kikuyo.lg.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5252,7 +5270,7 @@
     {
       "name": "西原村",
       "officialUrl": "https://www.vill.nishihara.kumamoto.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5388,7 +5406,7 @@
     {
       "name": "御船町",
       "officialUrl": "https://www.town.mifune.kumamoto.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5588,7 +5606,7 @@
     {
       "name": "嘉島町",
       "officialUrl": "https://www.town.kumamoto-kashima.lg.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5807,7 +5825,7 @@
     {
       "name": "益城町",
       "officialUrl": "https://www.town.mashiki.lg.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6203,7 +6221,7 @@
     {
       "name": "甲佐町",
       "officialUrl": "https://www.town.kosa.lg.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6547,7 +6565,7 @@
     {
       "name": "氷川町",
       "officialUrl": "https://www.town.hikawa.kumamoto.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -7139,7 +7157,7 @@
     {
       "name": "芦北町",
       "officialUrl": "https://www.town.ashikita.lg.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {
@@ -7203,7 +7221,7 @@
     {
       "name": "津奈木町",
       "officialUrl": "https://www.town.tsunagi.lg.jp/",
-      "checkedAt": "2026-09-28T14:08:24.457Z",
+      "checkedAt": "2026-09-28T21:16:14.470Z",
       "status": "confirmed",
       "updates": [
         {

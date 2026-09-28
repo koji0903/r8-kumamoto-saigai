@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-28T14:08:24.457Z",
+  "generatedAt": "2026-09-28T21:16:14.470Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 831,
-  "displayCandidateCount": 565,
-  "classifiedPageCount": 670,
+  "inputCount": 829,
+  "displayCandidateCount": 564,
+  "classifiedPageCount": 668,
   "categoryReport": {
     "home": {
       "total": 190,
@@ -13,10 +13,10 @@
       "low": 45
     },
     "money": {
-      "total": 216,
+      "total": 214,
       "high": 42,
       "medium": 54,
-      "low": 120
+      "low": 118
     },
     "documents": {
       "total": 172,
@@ -37,9 +37,9 @@
       "low": 39
     },
     "work_business": {
-      "total": 57,
+      "total": 56,
       "high": 14,
-      "medium": 43,
+      "medium": 42,
       "low": 0
     },
     "agriculture_fishery": {
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 136,
-      "displayCandidates": 112,
+      "classified": 135,
+      "displayCandidates": 111,
       "fallback": true
     },
     "municipality_minamata": {
@@ -92,7 +92,7 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 105,
+      "classified": 104,
       "displayCandidates": 89,
       "fallback": true
     },
@@ -164,8 +164,8 @@
   },
   "confidence": {
     "high": 247,
-    "medium": 318,
-    "low": 105
+    "medium": 317,
+    "low": 104
   },
   "unclassifiedCount": 39,
   "unclassifiedItems": [
@@ -980,7 +980,7 @@
     "duplicate_url": 36,
     "non_official_url": 1
   },
-  "warningCount": 20,
+  "warningCount": 21,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1003,9 +1003,14 @@
       "count": 3
     },
     {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_minamata",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_minamata",
-      "count": 5
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1084,5 +1089,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 668
+  "previousClassifiedPageCount": 670
 }
