@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-09-29T18:07:55.308Z",
+  "generatedAt": "2026-09-29T22:22:51.209Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 839,
-  "displayCandidateCount": 575,
-  "classifiedPageCount": 677,
+  "inputCount": 840,
+  "displayCandidateCount": 576,
+  "classifiedPageCount": 678,
   "categoryReport": {
     "home": {
-      "total": 193,
+      "total": 194,
       "high": 70,
-      "medium": 77,
+      "medium": 78,
       "low": 46
     },
     "money": {
-      "total": 217,
+      "total": 216,
       "high": 43,
       "medium": 58,
-      "low": 116
+      "low": 115
     },
     "documents": {
-      "total": 178,
+      "total": 179,
       "high": 41,
-      "medium": 32,
+      "medium": 33,
       "low": 105
     },
     "health_care": {
@@ -37,9 +37,9 @@
       "low": 39
     },
     "work_business": {
-      "total": 58,
+      "total": 57,
       "high": 14,
-      "medium": 44,
+      "medium": 43,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 209,
+      "total": 210,
       "high": 62,
-      "medium": 146,
+      "medium": 147,
       "low": 1
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 136,
-      "displayCandidates": 113,
+      "classified": 135,
+      "displayCandidates": 112,
       "fallback": true
     },
     "municipality_minamata": {
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 48,
-      "displayCandidates": 43,
+      "classified": 50,
+      "displayCandidates": 45,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 252,
-    "medium": 323,
+    "medium": 324,
     "low": 102
   },
   "unclassifiedCount": 39,

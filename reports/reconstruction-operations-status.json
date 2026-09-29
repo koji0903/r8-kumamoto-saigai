@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-29T18:25:44.616Z",
+  "generatedAt": "2026-09-29T22:38:34.973Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-29T18:07:55.308Z",
-    "inputCount": 839,
-    "classifiedPageCount": 677,
-    "displayCandidateCount": 575,
+    "generatedAt": "2026-09-29T22:22:51.209Z",
+    "inputCount": 840,
+    "classifiedPageCount": 678,
+    "displayCandidateCount": 576,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
+      "inputCount": 1,
+      "classifiedPageCount": 1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 109,
+      "ageHours": 113,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 136,
-        "displayCandidates": 113,
+        "classified": 135,
+        "displayCandidates": 112,
         "fallback": true
       },
       "municipality_minamata": {
@@ -56,8 +56,8 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 48,
-        "displayCandidates": 43,
+        "classified": 50,
+        "displayCandidates": 45,
         "fallback": true
       },
       "municipality_kamiamakusa": {
@@ -138,21 +138,21 @@
     },
     "categoryReport": {
       "home": {
-        "total": 193,
+        "total": 194,
         "high": 70,
-        "medium": 77,
+        "medium": 78,
         "low": 46
       },
       "money": {
-        "total": 217,
+        "total": 216,
         "high": 43,
         "medium": 58,
-        "low": 116
+        "low": 115
       },
       "documents": {
-        "total": 178,
+        "total": 179,
         "high": 41,
-        "medium": 32,
+        "medium": 33,
         "low": 105
       },
       "health_care": {
@@ -168,9 +168,9 @@
         "low": 39
       },
       "work_business": {
-        "total": 58,
+        "total": 57,
         "high": 14,
-        "medium": 44,
+        "medium": 43,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,15 +180,15 @@
         "low": 0
       },
       "daily_life": {
-        "total": 209,
+        "total": 210,
         "high": 62,
-        "medium": 146,
+        "medium": 147,
         "low": 1
       }
     },
     "confidence": {
       "high": 252,
-      "medium": 323,
+      "medium": 324,
       "low": 102
     },
     "unclassifiedCount": 39,

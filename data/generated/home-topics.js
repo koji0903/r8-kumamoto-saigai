@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-29T18:25:25.255Z",
-  "officialCheckedAt": "9/30 03:25",
+  "retrievedAt": "2026-09-29T22:38:18.113Z",
+  "officialCheckedAt": "9/30 07:38",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -104,6 +104,14 @@ window.HOME_TOPICS = {
       "municipality": "菊池市"
     },
     {
+      "title": "令和８年熊本地震に係る建設型応急住宅の入居者募集について",
+      "url": "https://www.city.uto.lg.jp/article/view/1244/16820.html",
+      "date": "2026-09-30",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "宇土市"
+    },
+    {
       "title": "井戸が被災し、水でお困りの方へ(井戸の不具合原因調査のお知らせ) ※9月30日まで",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/jogesuido/3968.html",
       "date": "2026-09-30",
@@ -134,14 +142,6 @@ window.HOME_TOPICS = {
       "time": "18:00",
       "category": "その他",
       "municipality": "宇城市"
-    },
-    {
-      "title": "避難所について（9/29 17:00更新）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
-      "date": "2026-09-29",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市"
     },
     {
       "title": "【令和8年熊本地震】被災者支援制度 （冊子）をご利用ください",
