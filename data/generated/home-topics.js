@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-29T10:15:21.755Z",
-  "officialCheckedAt": "9/29 19:15",
+  "retrievedAt": "2026-09-29T18:25:25.255Z",
+  "officialCheckedAt": "9/30 03:25",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -96,6 +96,38 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "熊本地震で被災し飲用できなくなった井戸の原因調査（洗浄等）の申し込みについて",
+      "url": "https://www.city.kikuchi.lg.jp/article/view/1350/19138.html",
+      "date": "2026-09-30",
+      "time": null,
+      "category": "その他",
+      "municipality": "菊池市"
+    },
+    {
+      "title": "井戸が被災し、水でお困りの方へ(井戸の不具合原因調査のお知らせ) ※9月30日まで",
+      "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/jogesuido/3968.html",
+      "date": "2026-09-30",
+      "time": null,
+      "category": "その他",
+      "municipality": "美里町"
+    },
+    {
+      "title": "甲佐町災害被災児童・生徒学用品給与申請書(PDF 約679KB)",
+      "url": "https://www.town.kosa.lg.jp/dl?q=256801_filelib_61a672e666df06626a857d61b5acfea4.pdf",
+      "date": "2026-09-30",
+      "time": null,
+      "category": "その他",
+      "municipality": "甲佐町"
+    },
+    {
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "date": "2026-09-29",
+      "time": "19:01",
+      "category": "その他",
+      "municipality": "八代市"
+    },
+    {
       "title": "2026年9月29日 令和8年熊本地震 関連情報 （9月29日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-09-29",
@@ -118,22 +150,6 @@ window.HOME_TOPICS = {
       "time": "16:00",
       "category": "支援・制度",
       "municipality": "熊本市"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-09-29",
-      "time": "14:51",
-      "category": "その他",
-      "municipality": "八代市"
-    },
-    {
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（9月29日11時更新）",
-      "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
-      "date": "2026-09-29",
-      "time": "11:00",
-      "category": "その他",
-      "municipality": "美里町"
     },
     {
       "title": "災害救助法「住家の緊急修理」制度のご案内 - 企画情報課",
@@ -160,28 +176,12 @@ window.HOME_TOPICS = {
       "municipality": "御船町"
     },
     {
-      "title": "令和8年熊本地震にかかる災害見舞金等の支給について",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23374.html",
-      "date": "2026-09-28",
-      "time": null,
-      "category": "その他",
-      "municipality": "上天草市"
-    },
-    {
       "title": "令和８年熊本地震で被災した家屋等の解体・撤去について",
       "url": "https://www.town.ozu.kumamoto.jp/page/27479.html",
       "date": "2026-09-28",
       "time": null,
       "category": "その他",
       "municipality": "大津町"
-    },
-    {
-      "title": "令和8年熊本地震災害支援情報まとめ(9/28更新)",
-      "url": "https://www.town.kosa.lg.jp/q/aview/55/13531.html",
-      "date": "2026-09-28",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "甲佐町"
     },
     {
       "title": "避難所開設について",
@@ -192,12 +192,12 @@ window.HOME_TOPICS = {
       "municipality": "山鹿市"
     },
     {
-      "title": "2026年09月25日 【令和８年熊本地震】セーフティネット保証４号の認定について",
-      "url": "https://www.city.kikuchi.lg.jp/article/view/1036/19143.html",
+      "title": "【令和8年熊本地震】地震により被災した住宅の応急修理について",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/545/23163.html",
       "date": "2026-09-25",
       "time": null,
-      "category": "その他",
-      "municipality": "菊池市"
+      "category": "住まい・証明",
+      "municipality": "上天草市"
     },
     {
       "title": "町立保育所給食調理業務委託に係る公募型プロポーザルの実施について",

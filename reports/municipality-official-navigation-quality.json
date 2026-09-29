@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-29T09:57:17.107Z",
+  "generatedAt": "2026-09-29T18:07:55.308Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 839,
-  "displayCandidateCount": 572,
+  "displayCandidateCount": 575,
   "classifiedPageCount": 677,
   "categoryReport": {
     "home": {
@@ -13,16 +13,16 @@
       "low": 46
     },
     "money": {
-      "total": 219,
+      "total": 217,
       "high": 43,
       "medium": 58,
-      "low": 118
+      "low": 116
     },
     "documents": {
-      "total": 176,
+      "total": 178,
       "high": 41,
-      "medium": 31,
-      "low": 104
+      "medium": 32,
+      "low": 105
     },
     "health_care": {
       "total": 51,
@@ -37,9 +37,9 @@
       "low": 39
     },
     "work_business": {
-      "total": 57,
+      "total": 58,
       "high": 14,
-      "medium": 43,
+      "medium": 44,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 207,
-      "high": 63,
-      "medium": 143,
+      "total": 209,
+      "high": 62,
+      "medium": 146,
       "low": 1
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 135,
-      "displayCandidates": 111,
+      "classified": 136,
+      "displayCandidates": 113,
       "fallback": true
     },
     "municipality_minamata": {
@@ -87,13 +87,13 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 36,
-      "displayCandidates": 28,
+      "classified": 32,
+      "displayCandidates": 26,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 104,
-      "displayCandidates": 88,
+      "classified": 105,
+      "displayCandidates": 89,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -107,8 +107,8 @@
       "fallback": true
     },
     "municipality_misato": {
-      "classified": 21,
-      "displayCandidates": 18,
+      "classified": 22,
+      "displayCandidates": 19,
       "fallback": true
     },
     "municipality_ozu": {
@@ -142,8 +142,8 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 31,
-      "displayCandidates": 27,
+      "classified": 32,
+      "displayCandidates": 28,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 253,
-    "medium": 319,
-    "low": 105
+    "high": 252,
+    "medium": 323,
+    "low": 102
   },
   "unclassifiedCount": 39,
   "unclassifiedItems": [
@@ -372,8 +372,8 @@
     "public_relations": 9,
     "disaster_preparedness": 5,
     "facility_notice": 4,
-    "mayor_message": 2,
     "index_page": 11,
+    "mayor_message": 2,
     "mutual_aid": 1,
     "overall_guide": 3,
     "press": 3
@@ -731,13 +731,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "第46回災害対策本部会議資料（令和８年９月２４日（木曜日）午後４時００分）（PDF：22.06メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_160219_up_xgoeycwm.pdf",
       "ruleId": "hq_meeting_material",
@@ -763,6 +756,13 @@
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "山鹿市",
@@ -1007,7 +1007,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 3
+      "count": 5
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1032,7 +1032,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 14
+      "count": 13
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1092,9 +1092,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 12
+      "count": 13
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 676
+  "previousClassifiedPageCount": 677
 }
