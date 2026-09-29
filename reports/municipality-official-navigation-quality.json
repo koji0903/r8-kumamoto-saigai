@@ -1,45 +1,45 @@
 {
-  "generatedAt": "2026-09-28T21:16:14.470Z",
+  "generatedAt": "2026-09-29T01:04:24.034Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 829,
-  "displayCandidateCount": 564,
-  "classifiedPageCount": 668,
+  "inputCount": 838,
+  "displayCandidateCount": 570,
+  "classifiedPageCount": 676,
   "categoryReport": {
     "home": {
-      "total": 190,
-      "high": 67,
-      "medium": 78,
-      "low": 45
+      "total": 192,
+      "high": 69,
+      "medium": 77,
+      "low": 46
     },
     "money": {
-      "total": 214,
-      "high": 42,
-      "medium": 54,
-      "low": 118
+      "total": 219,
+      "high": 43,
+      "medium": 56,
+      "low": 120
     },
     "documents": {
-      "total": 172,
-      "high": 40,
+      "total": 175,
+      "high": 41,
       "medium": 31,
-      "low": 101
+      "low": 103
     },
     "health_care": {
-      "total": 49,
-      "high": 18,
+      "total": 50,
+      "high": 19,
       "medium": 31,
       "low": 0
     },
     "family_education": {
-      "total": 73,
+      "total": 74,
       "high": 10,
-      "medium": 24,
+      "medium": 25,
       "low": 39
     },
     "work_business": {
-      "total": 56,
+      "total": 57,
       "high": 14,
-      "medium": 42,
+      "medium": 43,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,16 +49,16 @@
       "low": 0
     },
     "daily_life": {
-      "total": 203,
+      "total": 205,
       "high": 62,
-      "medium": 140,
+      "medium": 142,
       "low": 1
     }
   },
   "municipalityReport": {
     "municipality_kumamoto": {
-      "classified": 68,
-      "displayCandidates": 58,
+      "classified": 69,
+      "displayCandidates": 59,
       "fallback": true
     },
     "municipality_yatsushiro": {
@@ -77,23 +77,23 @@
       "fallback": true
     },
     "municipality_kikuchi": {
-      "classified": 11,
-      "displayCandidates": 9,
+      "classified": 12,
+      "displayCandidates": 10,
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 43,
-      "displayCandidates": 38,
+      "classified": 48,
+      "displayCandidates": 43,
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 35,
+      "classified": 36,
       "displayCandidates": 28,
       "fallback": true
     },
     "municipality_uki": {
       "classified": 104,
-      "displayCandidates": 89,
+      "displayCandidates": 88,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 247,
-    "medium": 317,
-    "low": 104
+    "high": 251,
+    "medium": 319,
+    "low": 106
   },
   "unclassifiedCount": 39,
   "unclassifiedItems": [
@@ -281,13 +281,13 @@
     },
     {
       "municipalityName": "宇土市",
-      "title": "洪水・大雨・高潮・土砂災害の危険性が高まっています！",
-      "url": "https://www.city.uto.lg.jp/article/view/1310/16857.html"
+      "title": "5 令和８年熊本地震に係るふるさと納税を受け付けます 2026年09月01日",
+      "url": "https://www.city.uto.lg.jp/article/view/1033/16630.html"
     },
     {
       "municipalityName": "宇土市",
-      "title": "令和８年熊本地震に係るふるさと納税を受け付けます",
-      "url": "https://www.city.uto.lg.jp/article/view/1307/16630.html"
+      "title": "洪水・大雨・高潮・土砂災害の危険性が高まっています！",
+      "url": "https://www.city.uto.lg.jp/article/view/1310/16857.html"
     },
     {
       "municipalityName": "上天草市",
@@ -301,11 +301,6 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "在宅避難者などへの食料の配布方法を変更します",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2624983"
-    },
-    {
-      "municipalityName": "宇城市",
       "title": "宇城市屋内多目的広場の利用を再開しました",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2634142"
     },
@@ -313,6 +308,11 @@
       "municipalityName": "宇城市",
       "title": "2026年09月25日 地震後の犬の逸走防止について",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/petto/2640761"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "在宅避難者などへの食料の配布方法を変更します",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2624983"
     },
     {
       "municipalityName": "宇城市",
@@ -365,10 +365,10 @@
       "url": "https://www.town.ashikita.lg.jp/bosai_site/hinan/2025278"
     }
   ],
-  "outOfScopeCount": 85,
+  "outOfScopeCount": 86,
   "outOfScopeByRule": {
     "donation_appeal": 2,
-    "hq_meeting_material": 45,
+    "hq_meeting_material": 46,
     "public_relations": 9,
     "disaster_preparedness": 5,
     "facility_notice": 4,
@@ -731,6 +731,13 @@
     },
     {
       "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
+    },
+    {
+      "municipalityName": "八代市",
       "title": "第46回災害対策本部会議資料（令和８年９月２４日（木曜日）午後４時００分）（PDF：22.06メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_160219_up_xgoeycwm.pdf",
       "ruleId": "hq_meeting_material",
@@ -738,22 +745,22 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
+      "title": "第47回災害対策本部会議資料（令和８年９月２８日（木曜日）午後５時００分）（PDF：37.7メガバイト）",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_160466_up_hm1dspq1.pdf",
+      "ruleId": "hq_meeting_material",
+      "ruleLabel": "災害対策本部会議の資料"
     },
     {
       "municipalityName": "八代市",
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -1025,7 +1032,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 14
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1045,7 +1052,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 4
+      "count": 5
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1089,5 +1096,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 670
+  "previousClassifiedPageCount": 668
 }
