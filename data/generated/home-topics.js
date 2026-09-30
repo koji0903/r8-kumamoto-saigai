@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-30T05:57:51.709Z",
-  "officialCheckedAt": "9/30 14:57",
+  "retrievedAt": "2026-09-30T13:00:55.978Z",
+  "officialCheckedAt": "9/30 22:00",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -96,28 +96,44 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "＜2026年7月熊本地震＞ 災害救助法 「住家の緊急の修理」制度の案内",
-      "url": "https://www.city.kumamoto.jp/kiji00372143/index.html",
+      "title": "避難所開設状況",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
       "date": "2026-09-30",
-      "time": "13:13",
-      "category": "住まい・証明",
-      "municipality": "熊本市"
+      "time": "20:02",
+      "category": "避難・安全",
+      "municipality": "八代市"
     },
     {
-      "title": "【令和8年9月30日受付終了】令和8年熊本地震に伴う罹災証明交付申請について",
+      "title": "【令和8年10月31日まで延長】令和8年熊本地震に伴う罹災証明交付申請について",
       "url": "https://www.town.mifune.kumamoto.jp/page9346.html",
       "date": "2026-09-30",
-      "time": "12:23",
+      "time": "19:00",
       "category": "住まい・証明",
       "municipality": "御船町"
     },
     {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "title": "令和8年熊本地震で被災した井戸の応急修理について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036836/index.html",
       "date": "2026-09-30",
-      "time": "11:39",
+      "time": "18:48",
+      "category": "住まい・証明",
+      "municipality": "氷川町"
+    },
+    {
+      "title": "2026年9月30日 令和8年熊本地震 関連情報 （9月30日18時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-09-30",
+      "time": "18:00",
       "category": "その他",
-      "municipality": "八代市"
+      "municipality": "宇城市"
+    },
+    {
+      "title": "住家の「り災証明書」について",
+      "url": "https://www.city.kumamoto.jp/kiji0032451/index.html",
+      "date": "2026-09-30",
+      "time": "15:26",
+      "category": "住まい・証明",
+      "municipality": "熊本市"
     },
     {
       "title": "【重要】スポーツ振興課が管理する体育施設等の臨時休館・利用再開について※10月1日より町民体育館を利用再開します。",
@@ -128,28 +144,20 @@ window.HOME_TOPICS = {
       "municipality": "菊陽町"
     },
     {
-      "title": "2026年9月30日 令和8年熊本地震 関連情報 （9月30日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-09-30",
-      "time": "08:00",
-      "category": "その他",
-      "municipality": "宇城市"
-    },
-    {
-      "title": "熊本地震で被災し飲用できなくなった井戸の原因調査（洗浄等）の申し込みについて",
-      "url": "https://www.city.kikuchi.lg.jp/article/view/1350/19138.html",
-      "date": "2026-09-30",
-      "time": null,
-      "category": "その他",
-      "municipality": "菊池市"
-    },
-    {
       "title": "令和８年熊本地震に係る建設型応急住宅の入居者募集について",
       "url": "https://www.city.uto.lg.jp/article/view/1244/16820.html",
       "date": "2026-09-30",
       "time": null,
       "category": "住まい・証明",
       "municipality": "宇土市"
+    },
+    {
+      "title": "【令和8年熊本地震】地震により被災した住宅の応急修理について",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23163.html",
+      "date": "2026-09-30",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "上天草市"
     },
     {
       "title": "井戸が被災し、水でお困りの方へ(井戸の不具合原因調査のお知らせ) ※9月30日まで",
@@ -168,14 +176,6 @@ window.HOME_TOPICS = {
       "municipality": "甲佐町"
     },
     {
-      "title": "熊本地震に伴う被災者を対象として市内温泉施設で無料入浴支援を実施します",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23205.html",
-      "date": "2026-09-29",
-      "time": null,
-      "category": "ごみ・生活",
-      "municipality": "上天草市"
-    },
-    {
       "title": "災害救助法「住家の緊急修理」制度のご案内 - 企画情報課",
       "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6040.html",
       "date": "2026-09-29",
@@ -184,12 +184,20 @@ window.HOME_TOPICS = {
       "municipality": "嘉島町"
     },
     {
-      "title": "令和8年熊本地震関連情報",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
+      "title": "【令和9年度】認可保育所等一斉申込「申込書請求フォーム」から請求した人へ",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038211/index.html",
+      "date": "2026-09-29",
+      "time": null,
+      "category": "施設・学校",
+      "municipality": "益城町"
+    },
+    {
+      "title": "【令和8年熊本地震】被災した井戸等の応急修理について",
+      "url": "https://www.city.kikuchi.lg.jp/article/view/1040/19405.html",
       "date": "2026-09-28",
-      "time": "17:00",
-      "category": "その他",
-      "municipality": "氷川町"
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "菊池市"
     },
     {
       "title": "令和８年熊本地震で被災した家屋等の解体・撤去について",
@@ -198,14 +206,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "その他",
       "municipality": "大津町"
-    },
-    {
-      "title": "町立保育所給食調理業務委託に係る公募型プロポーザルの実施について",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038169/index.html",
-      "date": "2026-09-25",
-      "time": null,
-      "category": "施設・学校",
-      "municipality": "益城町"
     },
     {
       "title": "令和８年熊本地震に関する支援等",

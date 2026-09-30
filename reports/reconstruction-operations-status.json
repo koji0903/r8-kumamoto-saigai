@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-30T05:58:12.556Z",
+  "generatedAt": "2026-09-30T13:01:11.371Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-09-30T05:41:06.678Z",
-    "inputCount": 836,
-    "classifiedPageCount": 674,
-    "displayCandidateCount": 573,
+    "generatedAt": "2026-09-30T12:45:05.200Z",
+    "inputCount": 839,
+    "classifiedPageCount": 678,
+    "displayCandidateCount": 576,
     "deltaFromPrevious": {
-      "inputCount": -4,
-      "classifiedPageCount": -4,
+      "inputCount": 3,
+      "classifiedPageCount": 4,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 121,
+      "ageHours": 128,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 135,
-        "displayCandidates": 112,
+        "classified": 136,
+        "displayCandidates": 113,
         "fallback": true
       },
       "municipality_minamata": {
@@ -61,13 +61,13 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 31,
-        "displayCandidates": 26,
+        "classified": 30,
+        "displayCandidates": 25,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 103,
-        "displayCandidates": 87,
+        "classified": 105,
+        "displayCandidates": 89,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -111,18 +111,18 @@
         "fallback": true
       },
       "municipality_mashiki": {
-        "classified": 40,
-        "displayCandidates": 37,
+        "classified": 41,
+        "displayCandidates": 38,
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 33,
-        "displayCandidates": 29,
+        "classified": 32,
+        "displayCandidates": 28,
         "fallback": true
       },
       "municipality_hikawa": {
-        "classified": 49,
-        "displayCandidates": 42,
+        "classified": 51,
+        "displayCandidates": 43,
         "fallback": true
       },
       "municipality_ashikita": {
@@ -138,21 +138,21 @@
     },
     "categoryReport": {
       "home": {
-        "total": 192,
-        "high": 70,
-        "medium": 76,
+        "total": 194,
+        "high": 71,
+        "medium": 77,
         "low": 46
       },
       "money": {
-        "total": 215,
+        "total": 217,
         "high": 43,
-        "medium": 60,
-        "low": 112
+        "medium": 61,
+        "low": 113
       },
       "documents": {
-        "total": 179,
+        "total": 178,
         "high": 41,
-        "medium": 33,
+        "medium": 32,
         "low": 105
       },
       "health_care": {
@@ -162,9 +162,9 @@
         "low": 0
       },
       "family_education": {
-        "total": 72,
+        "total": 73,
         "high": 10,
-        "medium": 23,
+        "medium": 24,
         "low": 39
       },
       "work_business": {
@@ -180,19 +180,19 @@
         "low": 0
       },
       "daily_life": {
-        "total": 208,
+        "total": 207,
         "high": 62,
-        "medium": 145,
+        "medium": 144,
         "low": 1
       }
     },
     "confidence": {
-      "high": 252,
-      "medium": 321,
-      "low": 101
+      "high": 253,
+      "medium": 323,
+      "low": 102
     },
     "unclassifiedCount": 39,
-    "excludedCount": 37,
+    "excludedCount": 36,
     "overrideCount": 2
   },
   "actions": [
@@ -282,7 +282,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 5
+      "count": 6
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -302,7 +302,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "count": 1
+      "count": 2
     },
     {
       "code": "RETRIEVAL_ISSUE",
@@ -367,7 +367,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 13
+      "count": 14
     },
     {
       "code": "HTTP_404_CANDIDATE",
