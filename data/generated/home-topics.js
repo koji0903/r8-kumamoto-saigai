@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-09-30T13:00:55.978Z",
-  "officialCheckedAt": "9/30 22:00",
+  "retrievedAt": "2026-09-30T20:21:37.170Z",
+  "officialCheckedAt": "10/1 05:21",
   "siteTopics": [
     {
       "date": "2026-09-24",
@@ -96,6 +96,30 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "指定給水装置工事事業者指定等及び給水装置新設等の申込",
+      "url": "https://www.city.yamaga.kumamoto.jp/kiji00324/index.html",
+      "date": "2026-10-01",
+      "time": null,
+      "category": "ライフライン",
+      "municipality": "山鹿市"
+    },
+    {
+      "title": "被災者支援のための無料相談会の開催（司法書士・弁護士・行政書士）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2622040",
+      "date": "2026-10-01",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "宇城市"
+    },
+    {
+      "title": "令和8年熊本地震で被災した井戸の応急修理について",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/283/6318.html",
+      "date": "2026-10-01",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "嘉島町"
+    },
+    {
       "title": "避難所開設状況",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
       "date": "2026-09-30",
@@ -118,14 +142,6 @@ window.HOME_TOPICS = {
       "time": "18:48",
       "category": "住まい・証明",
       "municipality": "氷川町"
-    },
-    {
-      "title": "2026年9月30日 令和8年熊本地震 関連情報 （9月30日18時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-09-30",
-      "time": "18:00",
-      "category": "その他",
-      "municipality": "宇城市"
     },
     {
       "title": "住家の「り災証明書」について",
@@ -176,14 +192,6 @@ window.HOME_TOPICS = {
       "municipality": "甲佐町"
     },
     {
-      "title": "災害救助法「住家の緊急修理」制度のご案内 - 企画情報課",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6040.html",
-      "date": "2026-09-29",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "嘉島町"
-    },
-    {
       "title": "【令和9年度】認可保育所等一斉申込「申込書請求フォーム」から請求した人へ",
       "url": "https://www.town.mashiki.lg.jp/kiji0038211/index.html",
       "date": "2026-09-29",
@@ -200,20 +208,12 @@ window.HOME_TOPICS = {
       "municipality": "菊池市"
     },
     {
-      "title": "令和８年熊本地震で被災した家屋等の解体・撤去について",
-      "url": "https://www.town.ozu.kumamoto.jp/page/27479.html",
-      "date": "2026-09-28",
+      "title": "（令和8年熊本地震）マイナ保険証、資格確認書がなくても医療機関等を受診できます",
+      "url": "https://www.town.ozu.kumamoto.jp/page/26664.html",
+      "date": "2026-09-27",
       "time": null,
       "category": "その他",
       "municipality": "大津町"
-    },
-    {
-      "title": "令和８年熊本地震に関する支援等",
-      "url": "https://localcms.city.minamata.lg.jp/page4805.html?type=top",
-      "date": "2026-09-24",
-      "time": "15:07",
-      "category": "支援・制度",
-      "municipality": "水俣市"
     }
   ],
   "prefectureUpdates": [
