@@ -1,17 +1,30 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-22T20:11:50+09:00",
+  "generatedAt": "2026-10-02T09:00:31+09:00",
   "municipalities": [
     {
       "id": "uto",
       "name": "宇土市",
       "page": "uto-support.html",
       "cardCount": 71,
-      "candidateCount": 72,
-      "listedCount": 38,
+      "candidateCount": 0,
+      "listedCount": 0,
       "siblingCount": 0,
-      "knownCount": 34,
-      "indexErrors": [],
+      "knownCount": 0,
+      "indexErrors": [
+        "https://www.city.uto.lg.jp/article/list/1206.html",
+        "https://www.city.uto.lg.jp/article/list/1114.html",
+        "https://www.city.uto.lg.jp/article/list/1193.html",
+        "https://www.city.uto.lg.jp/article/list/1056.html",
+        "https://www.city.uto.lg.jp/article/list/1018.html",
+        "https://www.city.uto.lg.jp/article/list/1048.html",
+        "https://www.city.uto.lg.jp/article/list/1235.html",
+        "https://www.city.uto.lg.jp/article/list/1212.html",
+        "https://www.city.uto.lg.jp/category/list/1083.html",
+        "https://www.city.uto.lg.jp/article/view/1309/16342.html",
+        "https://www.city.uto.lg.jp/article/view/1207/8235.html",
+        "https://www.city.uto.lg.jp/article/keyword/144.html"
+      ],
       "unlisted": [],
       "staleCandidates": []
     },
@@ -23,9 +36,16 @@
       "candidateCount": 39,
       "listedCount": 28,
       "siblingCount": 0,
-      "knownCount": 10,
+      "knownCount": 9,
       "indexErrors": [],
-      "unlisted": [],
+      "unlisted": [
+        {
+          "title": "令和8年熊本地震に係る【くまもと事業者再出発支援補助金】事業者向け補助制度説明会",
+          "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/shokogyo/2640358",
+          "coverage": "unlisted",
+          "reason": ""
+        }
+      ],
       "staleCandidates": []
     },
     {
@@ -36,9 +56,16 @@
       "candidateCount": 45,
       "listedCount": 34,
       "siblingCount": 0,
-      "knownCount": 11,
+      "knownCount": 10,
       "indexErrors": [],
-      "unlisted": [],
+      "unlisted": [
+        {
+          "title": "【熊本県】令和8年熊本地震に係る「くまもと事業者再出発支援補助金」の”事業者向け”説明会のご案内について",
+          "url": "https://www.town.hikawa.kumamoto.jp/kiji0036848/index.html",
+          "coverage": "unlisted",
+          "reason": ""
+        }
+      ],
       "staleCandidates": []
     },
     {
@@ -46,8 +73,8 @@
       "name": "八代市",
       "page": "yatsushiro-living-support.html",
       "cardCount": 46,
-      "candidateCount": 19,
-      "listedCount": 13,
+      "candidateCount": 16,
+      "listedCount": 10,
       "siblingCount": 1,
       "knownCount": 5,
       "indexErrors": [],
@@ -66,24 +93,447 @@
       "name": "熊本市",
       "page": "kumamoto-living-support.html",
       "cardCount": 104,
-      "candidateCount": 122,
-      "listedCount": 79,
+      "candidateCount": 126,
+      "listedCount": 80,
       "siblingCount": 0,
       "knownCount": 43,
       "indexErrors": [],
-      "unlisted": [],
+      "unlisted": [
+        {
+          "title": "【令和8年熊本地震】被災した住宅用井戸の応急修理を支援します",
+          "url": "https://www.city.kumamoto.jp/kiji00373033/index.html",
+          "coverage": "unlisted",
+          "reason": ""
+        },
+        {
+          "title": "店舗・事業所等の「り災証明書」の発行について",
+          "url": "https://www.city.kumamoto.jp/kiji00310012/index.html",
+          "coverage": "unlisted",
+          "reason": ""
+        },
+        {
+          "title": "令和8年熊本地震に伴う指定難病医療受給者証の取扱いについて",
+          "url": "https://www.city.kumamoto.jp/kiji00372791/index.html",
+          "coverage": "unlisted",
+          "reason": ""
+        }
+      ],
       "staleCandidates": []
     }
   ],
   "deadLinks": [],
-  "blockedLinks": [],
-  "indexErrorDetails": [],
+  "blockedLinks": [
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1006/247.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1007/12355.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1018/16668.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1032/14818.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1048/13132.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1048/2199.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1051/12172.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1056/1078.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1056/11861.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1056/9210.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1058/1042.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1058/2121.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1066/3465.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1068/11514.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1068/189.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1072/3363.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1072/7328.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1072/911.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1074/14659.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1081/958.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1084/1925.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1085/1895.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1085/1927.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1086/1898.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1086/1920.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1086/4133.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1087/1906.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1087/1923.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1087/1929.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1088/1928.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1089/16751.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1111/1250.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1145/16359.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1153/11859.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1153/2191.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1153/5248.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1153/6286.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1191/14796.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1201/8764.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1202/1032.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1202/1034.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1202/1035.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1206/1857.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1207/3403.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1207/8769.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1207/8835.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1212/16562.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1213/10297.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1235/1111.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1235/1142.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1235/15447.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1243/12407.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1243/15249.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1290/12157.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1309/16342.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1609/8235.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "page": "uto-support.html",
+      "url": "https://www.city.uto.lg.jp/article/view/1609/8791.html",
+      "status": 403,
+      "error": ""
+    }
+  ],
+  "indexErrorDetails": [
+    {
+      "url": "https://www.city.uto.lg.jp/article/keyword/144.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "url": "https://www.city.uto.lg.jp/article/list/1018.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "url": "https://www.city.uto.lg.jp/article/list/1048.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "url": "https://www.city.uto.lg.jp/article/list/1056.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "url": "https://www.city.uto.lg.jp/article/list/1114.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "url": "https://www.city.uto.lg.jp/article/list/1193.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "url": "https://www.city.uto.lg.jp/article/list/1206.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "url": "https://www.city.uto.lg.jp/article/list/1212.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "url": "https://www.city.uto.lg.jp/article/list/1235.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "url": "https://www.city.uto.lg.jp/article/view/1207/8235.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "url": "https://www.city.uto.lg.jp/article/view/1309/16342.html",
+      "status": 403,
+      "error": ""
+    },
+    {
+      "url": "https://www.city.uto.lg.jp/category/list/1083.html",
+      "status": 403,
+      "error": ""
+    }
+  ],
   "summary": {
     "cardCount": 320,
-    "unlistedCount": 1,
+    "unlistedCount": 6,
     "deadLinkCount": 0,
-    "blockedLinkCount": 0,
-    "indexErrorCount": 0,
+    "blockedLinkCount": 57,
+    "indexErrorCount": 12,
     "staleCandidateCount": 0
   }
 }
