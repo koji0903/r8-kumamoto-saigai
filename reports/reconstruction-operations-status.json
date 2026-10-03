@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T00:51:41.336Z",
+  "generatedAt": "2026-10-03T22:53:18.480Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
@@ -8,22 +8,22 @@
     "classifiedPageCount": 673,
     "displayCandidateCount": 571,
     "deltaFromPrevious": {
-      "inputCount": 7,
-      "classifiedPageCount": 6,
+      "inputCount": 0,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
   "freshness": {
     "officialNavigation": {
-      "state": "fresh",
-      "status": "OK",
-      "ageHours": 0,
+      "state": "stale",
+      "status": "WARNING",
+      "ageHours": 70,
       "limitHours": 6
     },
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 140,
+      "ageHours": 210,
       "limitHours": 336
     }
   },

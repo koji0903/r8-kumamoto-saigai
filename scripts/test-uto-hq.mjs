@@ -21,7 +21,7 @@ for(const summary of city.editorial.meetings){
   assert.ok(record && summary.page>=1 && summary.page<=record.pages);
   assert.ok(summary.title && summary.summary);
 }
-assert.equal(city.editorial.meetings.length,32);
+assert.equal(city.editorial.meetings.length,34);
 // 最新の公開回まで要約があること（無いと最新カードが「編集要約は未確認」になる）
 assert.equal(city.editorial.reviewedThrough,Math.max(...numbers),'編集要約が最新の公開回まで追いついていません');
 assert.ok(city.editorial.meetings.some(s=>s.meeting===Math.max(...numbers)),'最新の公開回の要約がありません');
@@ -71,8 +71,25 @@ assert.equal(m(37).figures.households,44);
 assert.equal(m(37).figures.utoHomesFull,34);
 assert.equal(m(37).figures.utoHomesUnclassified,646);
 assert.equal(m(37).figures.utoHomesTotal,6820);
+// 第38回（9月25日10:00）と第39回（9月29日・書面報告）。
+assert.equal(m(38).date,'2026-09-25');
+assert.equal(m(38).time,'10:00');
+assert.equal(m(38).writtenReport,false);
+assert.equal(m(38).figures.evacuees,72);
+assert.equal(m(38).figures.households,42);
+assert.equal(m(38).figures.utoHomesFull,39);
+assert.equal(m(38).figures.utoHomesUnclassified,1);
+assert.equal(m(38).figures.utoHomesTotal,6866);
+assert.equal(m(39).date,'2026-09-29');
+assert.equal(m(39).time,null);
+assert.equal(m(39).writtenReport,true);
+assert.equal(m(39).figures.evacuees,70);
+assert.equal(m(39).figures.households,41);
+assert.equal(m(39).figures.utoHomesFull,45);
+assert.equal(m(39).figures.utoHomesUnclassified,33);
+assert.equal(m(39).figures.utoHomesTotal,7001);
 // 区分の合計が計と一致すること（抽出の列ずれを検出する）
-for(const n of [34,35,36,37]){const f=m(n).figures;assert.equal(f.utoHomesFull+f.utoHomesLargeHalf+f.utoHomesHalf+f.utoHomesPartial+f.utoHomesUnclassified,f.utoHomesTotal,`第${n}回の住家被害の内訳と計が合いません`);}
+for(const n of [34,35,36,37,38,39]){const f=m(n).figures;assert.equal(f.utoHomesFull+f.utoHomesLargeHalf+f.utoHomesHalf+f.utoHomesPartial+f.utoHomesUnclassified,f.utoHomesTotal,`第${n}回の住家被害の内訳と計が合いません`);}
 // ページの説明文が古い回で止まっていないこと
 const page=fs.readFileSync('hq-uto.html','utf8');
 assert.ok(!page.includes('この節の内容は第35回まで'),'「次の支援につなぐ動き」が第35回のままです');

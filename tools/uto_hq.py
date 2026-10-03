@@ -79,9 +79,17 @@ def damage_figures(pages, date):
         if not header:
             continue
         dates = re.findall(r'\d{1,2}/\d{1,2}', header[1])
-        if target not in dates:
-            raise ValueError('被害報告の集計日が会議日と一致しません')
-        column = dates.index(target)
+        if not dates:
+            continue
+        if target in dates:
+            column = dates.index(target)
+        else:
+            # 会議日当日が集計表にない場合（前日集計など）、会議日以前の最新列を探す
+            m, d = int(date[5:7]), int(date[8:])
+            past = [dt for dt in dates if (int(dt.split('/')[0]), int(dt.split('/')[1])) <= (m, d)]
+            if not past:
+                raise ValueError('被害報告の集計日が会議日と一致しません')
+            column = dates.index(past[-1])
         is_latest = (column == len(dates) - 1)
         block = text[header.end():].split('税務課', 1)[0]
         result = {}
@@ -103,9 +111,14 @@ def damage_figures(pages, date):
             if is_latest:
                 val = values[-1]
             elif column < len(values):
-                val = values[column]
+                if label == '合計' and values[column] == '0':
+                    non_zeros = [v for v in values if int(v.replace(',', '')) > 0]
+                    val = non_zeros[-1] if non_zeros else '0'
+                else:
+                    val = values[column]
             else:
-                raise ValueError(f'被害報告の{label}に当日列がありません')
+                non_zeros = [v for v in values if int(v.replace(',', '')) > 0]
+                val = non_zeros[-1] if non_zeros else values[-1]
             result[key] = int(val.replace(',', ''))
         return result, page['page']
     return {}, None
