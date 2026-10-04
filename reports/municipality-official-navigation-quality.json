@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-04T06:01:53.728Z",
+  "generatedAt": "2026-10-04T12:30:40.557Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 882,
-  "displayCandidateCount": 624,
+  "displayCandidateCount": 625,
   "classifiedPageCount": 727,
   "categoryReport": {
     "home": {
@@ -25,9 +25,9 @@
       "low": 109
     },
     "health_care": {
-      "total": 81,
+      "total": 82,
       "high": 23,
-      "medium": 58,
+      "medium": 59,
       "low": 0
     },
     "family_education": {
@@ -143,7 +143,7 @@
     },
     "municipality_kosa": {
       "classified": 33,
-      "displayCandidates": 28,
+      "displayCandidates": 29,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -164,8 +164,8 @@
   },
   "confidence": {
     "high": 270,
-    "medium": 354,
-    "low": 103
+    "medium": 355,
+    "low": 102
   },
   "unclassifiedCount": 0,
   "unclassifiedItems": [],
@@ -1079,7 +1079,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1153,5 +1153,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 728
+  "previousClassifiedPageCount": 727
 }

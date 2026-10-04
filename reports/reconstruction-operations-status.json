@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-04T06:20:32.808Z",
+  "generatedAt": "2026-10-04T12:50:50.370Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-04T06:01:53.728Z",
+    "generatedAt": "2026-10-04T12:30:40.557Z",
     "inputCount": 882,
     "classifiedPageCount": 727,
-    "displayCandidateCount": 624,
+    "displayCandidateCount": 625,
     "deltaFromPrevious": {
-      "inputCount": -1,
-      "classifiedPageCount": -1,
+      "inputCount": 0,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 7,
       "limitHours": 336
     }
   },
@@ -117,7 +117,7 @@
       },
       "municipality_kosa": {
         "classified": 33,
-        "displayCandidates": 28,
+        "displayCandidates": 29,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -156,9 +156,9 @@
         "low": 109
       },
       "health_care": {
-        "total": 81,
+        "total": 82,
         "high": 23,
-        "medium": 58,
+        "medium": 59,
         "low": 0
       },
       "family_education": {
@@ -188,8 +188,8 @@
     },
     "confidence": {
       "high": 270,
-      "medium": 354,
-      "low": 103
+      "medium": 355,
+      "low": 102
     },
     "unclassifiedCount": 0,
     "excludedCount": 36,
@@ -312,7 +312,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 2
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
