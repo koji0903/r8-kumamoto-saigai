@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-04T12:50:50.370Z",
+  "generatedAt": "2026-10-04T19:00:33.647Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-04T12:30:40.557Z",
+    "generatedAt": "2026-10-04T18:40:14.438Z",
     "inputCount": 882,
-    "classifiedPageCount": 727,
-    "displayCandidateCount": 625,
+    "classifiedPageCount": 728,
+    "displayCandidateCount": 626,
     "deltaFromPrevious": {
       "inputCount": 0,
-      "classifiedPageCount": 0,
+      "classifiedPageCount": 1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 7,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -36,7 +36,7 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 143,
+        "classified": 144,
         "displayCandidates": 118,
         "fallback": true
       },
@@ -56,18 +56,18 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 63,
-        "displayCandidates": 55,
+        "classified": 62,
+        "displayCandidates": 54,
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 29,
-        "displayCandidates": 25,
+        "classified": 24,
+        "displayCandidates": 22,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 104,
-        "displayCandidates": 88,
+        "classified": 105,
+        "displayCandidates": 89,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -106,8 +106,8 @@
         "fallback": true
       },
       "municipality_kashima": {
-        "classified": 24,
-        "displayCandidates": 21,
+        "classified": 25,
+        "displayCandidates": 22,
         "fallback": true
       },
       "municipality_mashiki": {
@@ -116,8 +116,8 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 33,
-        "displayCandidates": 29,
+        "classified": 37,
+        "displayCandidates": 32,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -138,27 +138,27 @@
     },
     "categoryReport": {
       "home": {
-        "total": 197,
+        "total": 199,
         "high": 75,
-        "medium": 77,
-        "low": 45
+        "medium": 78,
+        "low": 46
       },
       "money": {
         "total": 235,
-        "high": 53,
-        "medium": 61,
+        "high": 54,
+        "medium": 60,
         "low": 121
       },
       "documents": {
-        "total": 180,
-        "high": 40,
-        "medium": 31,
-        "low": 109
+        "total": 183,
+        "high": 41,
+        "medium": 32,
+        "low": 110
       },
       "health_care": {
-        "total": 82,
+        "total": 81,
         "high": 23,
-        "medium": 59,
+        "medium": 58,
         "low": 0
       },
       "family_education": {
@@ -168,9 +168,9 @@
         "low": 38
       },
       "work_business": {
-        "total": 70,
+        "total": 71,
         "high": 16,
-        "medium": 54,
+        "medium": 55,
         "low": 0
       },
       "agriculture_fishery": {
@@ -187,7 +187,7 @@
       }
     },
     "confidence": {
-      "high": 270,
+      "high": 271,
       "medium": 355,
       "low": 102
     },
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:9d89b8b9b421083e1cf1eff3b99097be37205fff56f49c00643401f1f57539d5",
+        "currentHash": "sha256:7688de8bbf34638666ca771b60e8b0305d1cb8deb641d8f4952ae8ebbe88f6b7",
         "verificationStatus": "needs_review"
       }
     },
@@ -236,7 +236,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:eac296ff6b3fd99c37eb662a2722f19e1407e2b5f86698be6e83dd730206ed2b",
+        "currentHash": "sha256:f1653c21c5c0a75808a6afb378b40da5411d03fcbb3c5355c2468cf36910a93a",
         "verificationStatus": "needs_review"
       }
     },
@@ -247,7 +247,7 @@
         "title": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
         "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
         "previousHash": "sha256:83be58e3c56963e18140658412145c461d5542c4e79c399f4bb85f687ef7beab",
-        "currentHash": "sha256:af244c45b6613367b132ca05a97cfa204f8e42fc5485af8003ce9829409ac53f",
+        "currentHash": "sha256:ffa60663fe43ceab99ed0aacc644d262f650e468fcf9c2eb90bf8614d4c4bb35",
         "verificationStatus": "needs_review"
       }
     },
@@ -312,7 +312,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 3
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -410,7 +410,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:9d89b8b9b421083e1cf1eff3b99097be37205fff56f49c00643401f1f57539d5",
+        "currentHash": "sha256:7688de8bbf34638666ca771b60e8b0305d1cb8deb641d8f4952ae8ebbe88f6b7",
         "verificationStatus": "needs_review"
       },
       {
@@ -418,7 +418,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:eac296ff6b3fd99c37eb662a2722f19e1407e2b5f86698be6e83dd730206ed2b",
+        "currentHash": "sha256:f1653c21c5c0a75808a6afb378b40da5411d03fcbb3c5355c2468cf36910a93a",
         "verificationStatus": "needs_review"
       },
       {
@@ -426,7 +426,7 @@
         "title": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
         "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
         "previousHash": "sha256:83be58e3c56963e18140658412145c461d5542c4e79c399f4bb85f687ef7beab",
-        "currentHash": "sha256:af244c45b6613367b132ca05a97cfa204f8e42fc5485af8003ce9829409ac53f",
+        "currentHash": "sha256:ffa60663fe43ceab99ed0aacc644d262f650e468fcf9c2eb90bf8614d4c4bb35",
         "verificationStatus": "needs_review"
       },
       {

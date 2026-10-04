@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-10-04T12:30:40.557Z",
+  "generatedAt": "2026-10-04T18:40:14.438Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 882,
-  "displayCandidateCount": 625,
-  "classifiedPageCount": 727,
+  "displayCandidateCount": 626,
+  "classifiedPageCount": 728,
   "categoryReport": {
     "home": {
-      "total": 197,
+      "total": 199,
       "high": 75,
-      "medium": 77,
-      "low": 45
+      "medium": 78,
+      "low": 46
     },
     "money": {
       "total": 235,
-      "high": 53,
-      "medium": 61,
+      "high": 54,
+      "medium": 60,
       "low": 121
     },
     "documents": {
-      "total": 180,
-      "high": 40,
-      "medium": 31,
-      "low": 109
+      "total": 183,
+      "high": 41,
+      "medium": 32,
+      "low": 110
     },
     "health_care": {
-      "total": 82,
+      "total": 81,
       "high": 23,
-      "medium": 59,
+      "medium": 58,
       "low": 0
     },
     "family_education": {
@@ -37,9 +37,9 @@
       "low": 38
     },
     "work_business": {
-      "total": 70,
+      "total": 71,
       "high": 16,
-      "medium": 54,
+      "medium": 55,
       "low": 0
     },
     "agriculture_fishery": {
@@ -62,7 +62,7 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 143,
+      "classified": 144,
       "displayCandidates": 118,
       "fallback": true
     },
@@ -82,18 +82,18 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 63,
-      "displayCandidates": 55,
+      "classified": 62,
+      "displayCandidates": 54,
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 29,
-      "displayCandidates": 25,
+      "classified": 24,
+      "displayCandidates": 22,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 104,
-      "displayCandidates": 88,
+      "classified": 105,
+      "displayCandidates": 89,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -132,8 +132,8 @@
       "fallback": true
     },
     "municipality_kashima": {
-      "classified": 24,
-      "displayCandidates": 21,
+      "classified": 25,
+      "displayCandidates": 22,
       "fallback": true
     },
     "municipality_mashiki": {
@@ -142,8 +142,8 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 33,
-      "displayCandidates": 29,
+      "classified": 37,
+      "displayCandidates": 32,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -163,15 +163,15 @@
     }
   },
   "confidence": {
-    "high": 270,
+    "high": 271,
     "medium": 355,
     "low": 102
   },
   "unclassifiedCount": 0,
   "unclassifiedItems": [],
-  "outOfScopeCount": 119,
+  "outOfScopeCount": 118,
   "outOfScopeByRule": {
-    "donation_appeal": 3,
+    "donation_appeal": 2,
     "hq_meeting_material": 48,
     "public_relations": 10,
     "disaster_preparedness": 11,
@@ -674,7 +674,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -783,13 +783,6 @@
       "url": "https://www.city.uto.lg.jp/article/view/1304/17076.html",
       "ruleId": "facility_notice",
       "ruleLabel": "公共施設の休止・再開・紹介"
-    },
-    {
-      "municipalityName": "上天草市",
-      "title": "令和8年熊本地震からの復旧・復興のための「企業版ふるさと納税」を受け付けています",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/547/23317.html",
-      "ruleId": "donation_appeal",
-      "ruleLabel": "寄付・ふるさと納税の受付"
     },
     {
       "municipalityName": "上天草市",
@@ -1079,7 +1072,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 3
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
