@@ -1,44 +1,44 @@
 {
-  "generatedAt": "2026-10-04T23:59:25.067Z",
+  "generatedAt": "2026-10-05T05:51:42.445Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 882,
-  "displayCandidateCount": 626,
-  "classifiedPageCount": 728,
+  "inputCount": 879,
+  "displayCandidateCount": 627,
+  "classifiedPageCount": 727,
   "categoryReport": {
     "home": {
-      "total": 198,
+      "total": 199,
       "high": 75,
       "medium": 77,
-      "low": 46
+      "low": 47
     },
     "money": {
-      "total": 235,
-      "high": 54,
-      "medium": 60,
+      "total": 236,
+      "high": 53,
+      "medium": 62,
       "low": 121
     },
     "documents": {
-      "total": 183,
-      "high": 41,
-      "medium": 32,
-      "low": 110
+      "total": 182,
+      "high": 42,
+      "medium": 31,
+      "low": 109
     },
     "health_care": {
-      "total": 81,
+      "total": 82,
       "high": 23,
-      "medium": 58,
+      "medium": 59,
       "low": 0
     },
     "family_education": {
-      "total": 74,
+      "total": 72,
       "high": 9,
       "medium": 27,
-      "low": 38
+      "low": 36
     },
     "work_business": {
-      "total": 71,
-      "high": 16,
+      "total": 70,
+      "high": 15,
       "medium": 55,
       "low": 0
     },
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 216,
-      "high": 62,
-      "medium": 153,
+      "total": 215,
+      "high": 59,
+      "medium": 155,
       "low": 1
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 144,
-      "displayCandidates": 118,
+      "classified": 145,
+      "displayCandidates": 120,
       "fallback": true
     },
     "municipality_minamata": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 103,
-      "displayCandidates": 87,
+      "classified": 105,
+      "displayCandidates": 89,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -142,8 +142,8 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 37,
-      "displayCandidates": 32,
+      "classified": 33,
+      "displayCandidates": 29,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -163,24 +163,24 @@
     }
   },
   "confidence": {
-    "high": 271,
-    "medium": 355,
-    "low": 102
+    "high": 268,
+    "medium": 359,
+    "low": 100
   },
   "unclassifiedCount": 0,
   "unclassifiedItems": [],
-  "outOfScopeCount": 118,
+  "outOfScopeCount": 116,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "hq_meeting_material": 48,
     "public_relations": 10,
     "disaster_preparedness": 11,
-    "facility_notice": 13,
+    "facility_notice": 12,
     "budget_notice": 2,
-    "assembly_petition": 2,
+    "assembly_petition": 1,
     "overall_guide": 4,
-    "index_page": 14,
     "mayor_message": 2,
+    "index_page": 14,
     "mutual_aid": 1,
     "weather_warning": 3,
     "press": 3,
@@ -485,13 +485,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和８年９月定例会に伴う請願・陳情書の取扱いについて",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326999/index.html",
-      "ruleId": "assembly_petition",
-      "ruleLabel": "議会・請願・要望活動"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "第33回災害対策本部会議資料（令和８年８月２８日（金曜日）午後４時００分）（PDF：13.24メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_158858_up_0nki2c7g.pdf",
       "ruleId": "hq_meeting_material",
@@ -538,13 +531,6 @@
       "url": "https://www.city.yatsushiro.lg.jp/kiji00314856/index.html",
       "ruleId": "disaster_preparedness",
       "ruleLabel": "平時の防災・今後への備え"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "みらいろパーク（道の駅ウェルネスあらお敷地内）の無料開放",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00327038/index.html",
-      "ruleId": "facility_notice",
-      "ruleLabel": "公共施設の休止・再開・紹介"
     },
     {
       "municipalityName": "八代市",
@@ -667,17 +653,17 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "八代市",
@@ -835,13 +821,6 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月02日 【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
-      "ruleId": "press",
-      "ruleLabel": "報道機関向け"
-    },
-    {
-      "municipalityName": "宇城市",
       "title": "2026年10月4日 令和8年熊本地震 関連情報 （10月4日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
@@ -853,6 +832,13 @@
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "2026年10月05日 【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
+      "ruleId": "press",
+      "ruleLabel": "報道機関向け"
     },
     {
       "municipalityName": "宇城市",
@@ -1042,7 +1028,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 7
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",

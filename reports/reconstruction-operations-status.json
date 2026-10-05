@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-05T00:18:11.007Z",
+  "generatedAt": "2026-10-05T06:08:44.727Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-04T23:59:25.067Z",
-    "inputCount": 882,
-    "classifiedPageCount": 728,
-    "displayCandidateCount": 626,
+    "generatedAt": "2026-10-05T05:51:42.445Z",
+    "inputCount": 879,
+    "classifiedPageCount": 727,
+    "displayCandidateCount": 627,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
+      "inputCount": -3,
+      "classifiedPageCount": -1,
       "unclassifiedCount": 0
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 144,
-        "displayCandidates": 118,
+        "classified": 145,
+        "displayCandidates": 120,
         "fallback": true
       },
       "municipality_minamata": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 103,
-        "displayCandidates": 87,
+        "classified": 105,
+        "displayCandidates": 89,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -116,8 +116,8 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 37,
-        "displayCandidates": 32,
+        "classified": 33,
+        "displayCandidates": 29,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -138,38 +138,38 @@
     },
     "categoryReport": {
       "home": {
-        "total": 198,
+        "total": 199,
         "high": 75,
         "medium": 77,
-        "low": 46
+        "low": 47
       },
       "money": {
-        "total": 235,
-        "high": 54,
-        "medium": 60,
+        "total": 236,
+        "high": 53,
+        "medium": 62,
         "low": 121
       },
       "documents": {
-        "total": 183,
-        "high": 41,
-        "medium": 32,
-        "low": 110
+        "total": 182,
+        "high": 42,
+        "medium": 31,
+        "low": 109
       },
       "health_care": {
-        "total": 81,
+        "total": 82,
         "high": 23,
-        "medium": 58,
+        "medium": 59,
         "low": 0
       },
       "family_education": {
-        "total": 74,
+        "total": 72,
         "high": 9,
         "medium": 27,
-        "low": 38
+        "low": 36
       },
       "work_business": {
-        "total": 71,
-        "high": 16,
+        "total": 70,
+        "high": 15,
         "medium": 55,
         "low": 0
       },
@@ -180,16 +180,16 @@
         "low": 0
       },
       "daily_life": {
-        "total": 216,
-        "high": 62,
-        "medium": 153,
+        "total": 215,
+        "high": 59,
+        "medium": 155,
         "low": 1
       }
     },
     "confidence": {
-      "high": 271,
-      "medium": 355,
-      "low": 102
+      "high": 268,
+      "medium": 359,
+      "low": 100
     },
     "unclassifiedCount": 0,
     "excludedCount": 36,
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:c90447927d81886a1f5079889e73a3a984d354d969a1bc8d3c5287dcb94dcb57",
+        "currentHash": "sha256:876c94b6a9e9cceb5de23f94492dea7969739b8b6869aff8cdb5d00b725b8f7c",
         "verificationStatus": "needs_review"
       }
     },
@@ -236,7 +236,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:f1653c21c5c0a75808a6afb378b40da5411d03fcbb3c5355c2468cf36910a93a",
+        "currentHash": "sha256:e641328b6720b9dcc9d72e523ebe4b7d5cce395b92178359c867ae06489fc231",
         "verificationStatus": "needs_review"
       }
     },
@@ -247,7 +247,7 @@
         "title": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
         "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
         "previousHash": "sha256:83be58e3c56963e18140658412145c461d5542c4e79c399f4bb85f687ef7beab",
-        "currentHash": "sha256:ffa60663fe43ceab99ed0aacc644d262f650e468fcf9c2eb90bf8614d4c4bb35",
+        "currentHash": "sha256:e6e720c7523efdf702ee0dba1f9c2e16617250955201555c01869229d42364b2",
         "verificationStatus": "needs_review"
       }
     },
@@ -282,7 +282,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 7
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -410,7 +410,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:c90447927d81886a1f5079889e73a3a984d354d969a1bc8d3c5287dcb94dcb57",
+        "currentHash": "sha256:876c94b6a9e9cceb5de23f94492dea7969739b8b6869aff8cdb5d00b725b8f7c",
         "verificationStatus": "needs_review"
       },
       {
@@ -418,7 +418,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:f1653c21c5c0a75808a6afb378b40da5411d03fcbb3c5355c2468cf36910a93a",
+        "currentHash": "sha256:e641328b6720b9dcc9d72e523ebe4b7d5cce395b92178359c867ae06489fc231",
         "verificationStatus": "needs_review"
       },
       {
@@ -426,7 +426,7 @@
         "title": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
         "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
         "previousHash": "sha256:83be58e3c56963e18140658412145c461d5542c4e79c399f4bb85f687ef7beab",
-        "currentHash": "sha256:ffa60663fe43ceab99ed0aacc644d262f650e468fcf9c2eb90bf8614d4c4bb35",
+        "currentHash": "sha256:e6e720c7523efdf702ee0dba1f9c2e16617250955201555c01869229d42364b2",
         "verificationStatus": "needs_review"
       },
       {
