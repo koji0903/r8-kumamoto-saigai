@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-05T06:08:25.404Z",
-  "officialCheckedAt": "10/5 15:08",
+  "retrievedAt": "2026-10-05T15:12:48.853Z",
+  "officialCheckedAt": "10/6 00:12",
   "siteTopics": [
     {
       "date": "2026-10-04",
@@ -96,44 +96,36 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "date": "2026-10-05",
-      "time": "13:11",
+      "time": "20:16",
       "category": "その他",
       "municipality": "八代市"
+    },
+    {
+      "title": "【令和8年熊本地震】NPO法人バルビーによる巡回訪問について",
+      "url": "https://www.city.kumamoto.jp/kiji00373148/index.html",
+      "date": "2026-10-05",
+      "time": "17:00",
+      "category": "その他",
+      "municipality": "熊本市"
+    },
+    {
+      "title": "避難所について（10/5 17:00更新）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
+      "date": "2026-10-05",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市"
     },
     {
       "title": "令和8年熊本地震関連情報",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
       "date": "2026-10-05",
-      "time": "10:30",
+      "time": "16:00",
       "category": "その他",
       "municipality": "氷川町"
-    },
-    {
-      "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
-      "url": "https://www.city.kumamoto.jp/kiji00372210/index.html",
-      "date": "2026-10-05",
-      "time": "08:30",
-      "category": "住まい・証明",
-      "municipality": "熊本市"
-    },
-    {
-      "title": "【あじさいの湯】被災者への入浴支援事業について",
-      "url": "https://www.city.uto.lg.jp/article/view/1307/17115.html",
-      "date": "2026-10-05",
-      "time": null,
-      "category": "ごみ・生活",
-      "municipality": "宇土市"
-    },
-    {
-      "title": "【令和8年熊本地震】地震により被災した住宅の応急修理について",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23163.html",
-      "date": "2026-10-05",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "上天草市"
     },
     {
       "title": "2026年10月05日 避難者数",
@@ -184,6 +176,14 @@ window.HOME_TOPICS = {
       "municipality": "天草市"
     },
     {
+      "title": "令和8年熊本地震災害関連情報（企業・事業者向け）",
+      "url": "https://www.town.ozu.kumamoto.jp/page/27432.html",
+      "date": "2026-10-02",
+      "time": null,
+      "category": "その他",
+      "municipality": "大津町"
+    },
+    {
       "title": "【１０月３０日受付終了】罹災証明書の申請について（１次調査）【令和８年熊本地震】",
       "url": "https://www.town.mashiki.lg.jp/kiji0038063/index.html",
       "date": "2026-10-02",
@@ -208,12 +208,12 @@ window.HOME_TOPICS = {
       "municipality": "西原村"
     },
     {
-      "title": "令和8年熊本地震災害支援情報まとめ(10/1更新)",
-      "url": "https://www.town.kosa.lg.jp/q/aview/1/13531.html",
+      "title": "地域子育て支援拠点事業について",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/81/10418.html",
       "date": "2026-10-01",
       "time": null,
       "category": "支援・制度",
-      "municipality": "甲佐町"
+      "municipality": "上天草市"
     }
   ],
   "prefectureUpdates": [
