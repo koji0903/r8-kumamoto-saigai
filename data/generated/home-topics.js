@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-04T19:00:11.716Z",
-  "officialCheckedAt": "10/5 04:00",
+  "retrievedAt": "2026-10-05T00:17:48.905Z",
+  "officialCheckedAt": "10/5 09:17",
   "siteTopics": [
     {
       "date": "2026-10-04",
@@ -96,12 +96,36 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "被災者支援 特別行政相談所チラシ（PDF：681.6キロバイト）",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00327105/3_27105_160077_up_qq83e057.pdf",
+      "title": "避難所開設状況",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
+      "date": "2026-10-05",
+      "time": "08:40",
+      "category": "避難・安全",
+      "municipality": "八代市"
+    },
+    {
+      "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
+      "url": "https://www.city.kumamoto.jp/kiji00372210/index.html",
+      "date": "2026-10-05",
+      "time": "08:30",
+      "category": "住まい・証明",
+      "municipality": "熊本市"
+    },
+    {
+      "title": "【あじさいの湯】被災者への入浴支援事業について",
+      "url": "https://www.city.uto.lg.jp/article/view/1307/17115.html",
       "date": "2026-10-05",
       "time": null,
-      "category": "支援・制度",
-      "municipality": "八代市"
+      "category": "ごみ・生活",
+      "municipality": "宇土市"
+    },
+    {
+      "title": "2026年10月05日 避難者数",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
+      "date": "2026-10-05",
+      "time": null,
+      "category": "避難・安全",
+      "municipality": "宇城市"
     },
     {
       "title": "嘉島町指定給水装置工事事業者の指定の更新について(PDF 約80KB)",
@@ -128,14 +152,6 @@ window.HOME_TOPICS = {
       "municipality": "氷川町"
     },
     {
-      "title": "2026年10月4日 令和8年熊本地震 関連情報 （10月4日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-10-04",
-      "time": "08:00",
-      "category": "その他",
-      "municipality": "宇城市"
-    },
-    {
       "title": "御船町指定給水装置工事店一覧について",
       "url": "https://www.town.mifune.kumamoto.jp/page6621.html",
       "date": "2026-10-04",
@@ -144,28 +160,12 @@ window.HOME_TOPICS = {
       "municipality": "御船町"
     },
     {
-      "title": "令和８年熊本地震被害に関するすまいの相談窓口",
-      "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
-      "date": "2026-10-03",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "宇土市"
-    },
-    {
       "title": "避難行動支援システム更新業務の委託に係るプロポーザルの審査結果",
       "url": "https://www.city.yamaga.kumamoto.jp/kiji0033173/index.html",
       "date": "2026-10-02",
       "time": "16:35",
       "category": "避難・安全",
       "municipality": "山鹿市"
-    },
-    {
-      "title": "【介護サービス事業所等向け】令和8年熊本地震関連の通知について",
-      "url": "https://www.city.kumamoto.jp/kiji00373066/index.html",
-      "date": "2026-10-02",
-      "time": "16:10",
-      "category": "その他",
-      "municipality": "熊本市"
     },
     {
       "title": "令和８年熊本地震の被害に遭われた方へ（各種支援制度の紹介）",

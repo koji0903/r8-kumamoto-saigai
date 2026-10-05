@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T18:40:14.438Z",
+  "generatedAt": "2026-10-04T23:59:25.067Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 882,
@@ -7,9 +7,9 @@
   "classifiedPageCount": 728,
   "categoryReport": {
     "home": {
-      "total": 199,
+      "total": 198,
       "high": 75,
-      "medium": 78,
+      "medium": 77,
       "low": 46
     },
     "money": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 215,
+      "total": 216,
       "high": 62,
-      "medium": 152,
+      "medium": 153,
       "low": 1
     }
   },
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 62,
-      "displayCandidates": 54,
+      "classified": 64,
+      "displayCandidates": 56,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 105,
-      "displayCandidates": 89,
+      "classified": 103,
+      "displayCandidates": 87,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -674,7 +674,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -842,13 +842,6 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "宇城市屋内多目的広場の利用を再開しました",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2634142",
-      "ruleId": "facility_notice",
-      "ruleLabel": "公共施設の休止・再開・紹介"
-    },
-    {
-      "municipalityName": "宇城市",
       "title": "2026年10月4日 令和8年熊本地震 関連情報 （10月4日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
@@ -860,6 +853,13 @@
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "宇城市屋内多目的広場の利用を再開しました",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2634142",
+      "ruleId": "facility_notice",
+      "ruleLabel": "公共施設の休止・再開・紹介"
     },
     {
       "municipalityName": "天草市",
@@ -1146,5 +1146,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 727
+  "previousClassifiedPageCount": 728
 }
