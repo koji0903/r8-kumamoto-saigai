@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-05T22:22:00.789Z",
+  "generatedAt": "2026-10-06T06:50:02.379Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-05T22:03:58.414Z",
-    "inputCount": 885,
-    "classifiedPageCount": 731,
-    "displayCandidateCount": 628,
+    "generatedAt": "2026-10-06T06:30:30.491Z",
+    "inputCount": 901,
+    "classifiedPageCount": 745,
+    "displayCandidateCount": 643,
     "deltaFromPrevious": {
-      "inputCount": -2,
-      "classifiedPageCount": -2,
-      "unclassifiedCount": 0
+      "inputCount": 16,
+      "classifiedPageCount": 14,
+      "unclassifiedCount": 2
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 16,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 145,
-        "displayCandidates": 120,
+        "classified": 143,
+        "displayCandidates": 119,
         "fallback": true
       },
       "municipality_minamata": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 103,
-        "displayCandidates": 87,
+        "classified": 106,
+        "displayCandidates": 90,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -76,8 +76,8 @@
         "fallback": true
       },
       "municipality_koshi": {
-        "classified": 1,
-        "displayCandidates": 1,
+        "classified": 14,
+        "displayCandidates": 13,
         "fallback": true
       },
       "municipality_misato": {
@@ -97,7 +97,7 @@
       },
       "municipality_nishihara": {
         "classified": 7,
-        "displayCandidates": 6,
+        "displayCandidates": 7,
         "fallback": true
       },
       "municipality_mifune": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 199,
-        "high": 76,
-        "medium": 76,
+        "total": 205,
+        "high": 78,
+        "medium": 80,
         "low": 47
       },
       "money": {
-        "total": 238,
-        "high": 53,
-        "medium": 61,
+        "total": 241,
+        "high": 55,
+        "medium": 62,
         "low": 124
       },
       "documents": {
-        "total": 184,
+        "total": 188,
         "high": 42,
-        "medium": 31,
-        "low": 111
+        "medium": 33,
+        "low": 113
       },
       "health_care": {
         "total": 82,
@@ -163,35 +163,35 @@
       },
       "family_education": {
         "total": 73,
-        "high": 9,
+        "high": 10,
         "medium": 28,
-        "low": 36
+        "low": 35
       },
       "work_business": {
-        "total": 70,
+        "total": 73,
         "high": 15,
-        "medium": 55,
+        "medium": 58,
         "low": 0
       },
       "agriculture_fishery": {
-        "total": 17,
-        "high": 5,
+        "total": 18,
+        "high": 6,
         "medium": 12,
         "low": 0
       },
       "daily_life": {
-        "total": 216,
-        "high": 61,
-        "medium": 154,
+        "total": 221,
+        "high": 62,
+        "medium": 158,
         "low": 1
       }
     },
     "confidence": {
-      "high": 271,
-      "medium": 357,
-      "low": 103
+      "high": 278,
+      "medium": 365,
+      "low": 102
     },
-    "unclassifiedCount": 1,
+    "unclassifiedCount": 3,
     "excludedCount": 36,
     "overrideCount": 2
   },
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:876c94b6a9e9cceb5de23f94492dea7969739b8b6869aff8cdb5d00b725b8f7c",
+        "currentHash": "sha256:5e7fbd1fc0437d81e28ae95300a0115a92ae2c2eee065c1264e8d02b35a0c595",
         "verificationStatus": "needs_review"
       }
     },
@@ -346,6 +346,16 @@
     },
     {
       "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_koshi",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_koshi",
+      "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_ozu",
       "message": "継続回数を確認後に表示除外を判断してください"
     },
@@ -420,7 +430,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:876c94b6a9e9cceb5de23f94492dea7969739b8b6869aff8cdb5d00b725b8f7c",
+        "currentHash": "sha256:5e7fbd1fc0437d81e28ae95300a0115a92ae2c2eee065c1264e8d02b35a0c595",
         "verificationStatus": "needs_review"
       },
       {
