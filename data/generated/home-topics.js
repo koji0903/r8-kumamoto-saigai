@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-06T06:49:39.776Z",
-  "officialCheckedAt": "10/6 15:49",
+  "retrievedAt": "2026-10-06T16:19:55.921Z",
+  "officialCheckedAt": "10/7 01:19",
   "siteTopics": [
     {
       "date": "2026-10-04",
@@ -96,6 +96,30 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "date": "2026-10-06",
+      "time": "20:24",
+      "category": "その他",
+      "municipality": "八代市"
+    },
+    {
+      "title": "避難所について（10/6 17:00更新）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
+      "date": "2026-10-06",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市"
+    },
+    {
+      "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
+      "url": "https://www.city.kumamoto.jp/kiji00372210/index.html",
+      "date": "2026-10-06",
+      "time": "16:41",
+      "category": "住まい・証明",
+      "municipality": "熊本市"
+    },
+    {
       "title": "令和8年熊本地震に係る「義援金」「寄附金」「ふるさと納税」の受付について",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036758/index.html",
       "date": "2026-10-06",
@@ -110,22 +134,6 @@ window.HOME_TOPICS = {
       "time": "13:00",
       "category": "その他",
       "municipality": "宇城市"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-10-06",
-      "time": "11:58",
-      "category": "その他",
-      "municipality": "八代市"
-    },
-    {
-      "title": "令和8年熊本地震 熊本市震災復興計画（骨子案）に関するパブリックコメント（意見公募）について",
-      "url": "https://www.city.kumamoto.jp/kiji00373057/index.html",
-      "date": "2026-10-06",
-      "time": "10:44",
-      "category": "その他",
-      "municipality": "熊本市"
     },
     {
       "title": "セーフティネット保証の認定手続きについて（令和8年熊本地震に係る4号情報追記）",
@@ -144,20 +152,28 @@ window.HOME_TOPICS = {
       "municipality": "西原村"
     },
     {
-      "title": "避難所について（10/5 17:00更新）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
-      "date": "2026-10-05",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市"
+      "title": "【令和８年熊本地震】認可保育施設利用に係る利用者負担額（保育料）の減免について",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038225/index.html",
+      "date": "2026-10-06",
+      "time": null,
+      "category": "施設・学校",
+      "municipality": "益城町"
     },
     {
-      "title": "令和8年熊本地震で被災した井戸の応急修理について",
-      "url": "https://www.town.kumamoto-misato.lg.jp/soshiki/juminsekatsu/kankyou/3994.html",
+      "title": "令和8年熊本地震（7月28日発生）に関する情報（10月5日17時更新）",
+      "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
+      "date": "2026-10-05",
+      "time": "17:00",
+      "category": "その他",
+      "municipality": "美里町"
+    },
+    {
+      "title": "令和8年熊本地震災害関連情報（企業・事業者向け）",
+      "url": "https://www.town.ozu.kumamoto.jp/page/27432.html",
       "date": "2026-10-05",
       "time": null,
-      "category": "住まい・証明",
-      "municipality": "美里町"
+      "category": "その他",
+      "municipality": "大津町"
     },
     {
       "title": "令和8年熊本地震 くまもと事業者再出発支援補助金及び説明会の開...",
@@ -166,14 +182,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "支援・制度",
       "municipality": "嘉島町"
-    },
-    {
-      "title": "避難所を閉鎖しました【令和８年熊本地震】",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038078/index.html",
-      "date": "2026-10-05",
-      "time": null,
-      "category": "避難・安全",
-      "municipality": "益城町"
     },
     {
       "title": "御船町指定給水装置工事店一覧について",
@@ -198,14 +206,6 @@ window.HOME_TOPICS = {
       "time": "08:53",
       "category": "支援・制度",
       "municipality": "天草市"
-    },
-    {
-      "title": "令和8年熊本地震災害関連情報（企業・事業者向け）",
-      "url": "https://www.town.ozu.kumamoto.jp/page/27432.html",
-      "date": "2026-10-02",
-      "time": null,
-      "category": "その他",
-      "municipality": "大津町"
     },
     {
       "title": "令和８年熊本地震に関する支援等",

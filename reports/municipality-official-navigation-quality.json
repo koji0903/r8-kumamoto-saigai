@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T06:30:30.491Z",
+  "generatedAt": "2026-10-06T16:00:45.853Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 901,
@@ -7,22 +7,22 @@
   "classifiedPageCount": 745,
   "categoryReport": {
     "home": {
-      "total": 205,
+      "total": 204,
       "high": 78,
-      "medium": 80,
+      "medium": 79,
       "low": 47
     },
     "money": {
-      "total": 241,
+      "total": 242,
       "high": 55,
-      "medium": 62,
+      "medium": 63,
       "low": 124
     },
     "documents": {
-      "total": 188,
+      "total": 187,
       "high": 42,
       "medium": 33,
-      "low": 113
+      "low": 112
     },
     "health_care": {
       "total": 82,
@@ -31,9 +31,9 @@
       "low": 0
     },
     "family_education": {
-      "total": 73,
+      "total": 74,
       "high": 10,
-      "medium": 28,
+      "medium": 29,
       "low": 35
     },
     "work_business": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 221,
+      "total": 220,
       "high": 62,
-      "medium": 158,
+      "medium": 157,
       "low": 1
     }
   },
@@ -683,17 +683,17 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "山鹿市",
@@ -760,15 +760,15 @@
     },
     {
       "municipalityName": "宇土市",
-      "title": "キーワード「2026」の記事一覧",
-      "url": "https://www.city.uto.lg.jp/article/keyword/22145.html",
+      "title": "キーワード「補助金」の記事一覧",
+      "url": "https://www.city.uto.lg.jp/article/keyword/240.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "宇土市",
-      "title": "キーワード「補助金」の記事一覧",
-      "url": "https://www.city.uto.lg.jp/article/keyword/240.html",
+      "title": "キーワード「2026」の記事一覧",
+      "url": "https://www.city.uto.lg.jp/article/keyword/22145.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -907,7 +907,7 @@
     },
     {
       "municipalityName": "美里町",
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（9月29日11時更新）",
+      "title": "令和8年熊本地震（7月28日発生）に関する情報（10月5日17時更新）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -1175,5 +1175,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 731
+  "previousClassifiedPageCount": 745
 }
