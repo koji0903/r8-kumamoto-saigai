@@ -3,63 +3,72 @@
   if(!mapNode)return;
 
   const sites=[
-    {city:"八代市",name:"毘舎丸町",address:"八代市毘舎丸町337-1",units:18,lat:32.509651,lng:130.615097,precision:"area"},
+    {city:"八代市",name:"毘舎丸町",address:"八代市毘舎丸町337-1",units:18,lat:32.509651,lng:130.615097,precision:"area",complete:true},
     {city:"八代市",name:"鏡町",address:"八代市鏡町内田446-1",units:17,lat:32.563713,lng:130.647003,precision:"area"},
     {city:"八代市",name:"植柳上町",address:"八代市植柳上町1-1",units:34,lat:32.49255,lng:130.605927,precision:"address"},
     {city:"八代市",name:"海士江町",address:"八代市海士江町2596",units:35,lat:32.527103,lng:130.62674,precision:"address"},
     {city:"八代市",name:"鏡ヶ池公園",address:"八代市鏡町上鏡526",units:34,lat:32.569965,lng:130.667358,precision:"area"},
     {city:"八代市",name:"沖町",address:"八代市沖町4002-1",units:31,lat:32.524139,lng:130.58699,precision:"address"},
+    {city:"八代市",name:"古城町",address:"八代市古城町2861-1",units:29,lat:32.499146,lng:130.592468,precision:"address"},
+    {city:"八代市",name:"がめさん公園内",address:"八代市西片町1516",units:44,lat:32.517063,lng:130.640549,precision:"address"},
+    {city:"八代市",name:"鏡わかあゆ",address:"八代市鏡町鏡村937（県立鏡わかあゆ高等支援学校グラウンド内）",units:60,lat:32.571995,lng:130.656174,precision:"address"},
     {city:"宇土市",name:"浦田町",address:"宇土市浦田町1",units:17,lat:32.687138,lng:130.660309,precision:"address"},
     {city:"宇土市",name:"高柳町",address:"宇土市高柳町138",units:45,lat:32.688904,lng:130.648926,precision:"address"},
-    {city:"宇城市",name:"当尾",address:"宇城市松橋町曲野1624-22",units:58,lat:32.661015,lng:130.69577,precision:"area"},
-    {city:"宇城市",name:"小川",address:"宇城市小川町南新田564-8",units:36,lat:32.592335,lng:130.691406,precision:"area"},
-    {city:"宇城市",name:"豊野",address:"宇城市豊野町糸石2966",units:35,lat:32.635307,lng:130.761765,precision:"area"},
+    {city:"宇城市",name:"当尾",address:"宇城市松橋町曲野1624-22",units:58,lat:32.661015,lng:130.69577,precision:"area",complete:true},
+    {city:"宇城市",name:"小川",address:"宇城市小川町南新田564-8",units:36,lat:32.592335,lng:130.691406,precision:"area",complete:true},
+    {city:"宇城市",name:"豊野",address:"宇城市豊野町糸石2966",units:35,lat:32.635307,lng:130.761765,precision:"area",complete:true},
     {city:"宇城市",name:"小川駅西",address:"宇城市小川町314-2（JR小川駅西側空地）",units:20,lat:32.6007,lng:130.694,precision:"landmark"},
-    {city:"美里町",name:"中央庁舎復興団地",address:"下益城郡美里町馬場1110",units:12,lat:32.6401,lng:130.7901,precision:"area"},
-    {city:"美里町",name:"町営球技場",address:"下益城郡美里町馬場537-2",units:40,lat:32.6359,lng:130.7932,precision:"area"},
-    {city:"甲佐町",name:"乙女",address:"上益城郡甲佐町田口383-2",units:20,lat:32.697773,lng:130.770203,precision:"area"},
+    {city:"美里町",name:"中央庁舎復興団地",address:"下益城郡美里町馬場1110",units:34,lat:32.6401,lng:130.7901,precision:"area",complete:true},
+    {city:"美里町",name:"町営球技場",address:"下益城郡美里町馬場537-2",units:60,lat:32.6359,lng:130.7932,precision:"area",complete:true},
+    {city:"甲佐町",name:"乙女",address:"上益城郡甲佐町田口383-2",units:31,lat:32.697773,lng:130.770203,precision:"area",complete:true},
     {city:"氷川町",name:"吉本",address:"八代郡氷川町高塚895",units:27,lat:32.577747,lng:130.704376,precision:"area",complete:true},
-    {city:"氷川町",name:"宮原防災公園",address:"八代郡氷川町宮原82",units:24,lat:32.5529,lng:130.6829,precision:"area"},
-    {city:"氷川町",name:"鹿島",address:"八代郡氷川町鹿島1654-1",units:18,lat:32.582191,lng:130.665268,precision:"area"},
-    {city:"氷川町",name:"新村",address:"八代郡氷川町宮原334（町営久保団地内）",units:13,lat:32.5564,lng:130.6871,precision:"area"}
+    {city:"氷川町",name:"宮原防災公園",address:"八代郡氷川町宮原82",units:24,lat:32.5529,lng:130.6829,precision:"area",complete:true},
+    {city:"氷川町",name:"鹿島",address:"八代郡氷川町鹿島1654-1",units:18,lat:32.582191,lng:130.665268,precision:"area",complete:true},
+    {city:"氷川町",name:"新村",address:"八代郡氷川町宮原334（町営久保団地内）",units:13,lat:32.5564,lng:130.6871,precision:"area",complete:true},
+    {city:"氷川町",name:"栫",address:"八代郡氷川町栫423-1",units:12,lat:32.539368,lng:130.678284,precision:"address"}
   ];
 
   const schedule=[
-    {city:"八代市",name:"毘舎丸町",units:18,start:"2026-08-11",end:"2026-10-05",endLabel:"10月上旬"},
+    {city:"八代市",name:"毘舎丸町",units:18,start:"2026-08-11",end:"2026-10-02",endLabel:"10月2日完成",done:true,handover:"2026-10-05"},
     {city:"八代市",name:"鏡町",units:17,start:"2026-08-18",end:"2026-10-15",endLabel:"10月中旬"},
     {city:"八代市",name:"植柳上町",units:34,start:"2026-08-18",end:"2026-10-15",endLabel:"10月中旬"},
     {city:"八代市",name:"海士江町",units:35,start:"2026-08-22",end:"2026-10-25",endLabel:"10月下旬"},
     {city:"八代市",name:"鏡ヶ池公園",units:34,start:"2026-08-26",end:"2026-10-25",endLabel:"10月下旬"},
     {city:"八代市",name:"沖町",units:31,start:"2026-09-07",end:"2026-11-15",endLabel:"11月中旬"},
+    {city:"八代市",name:"古城町",units:29,start:"2026-09-18",end:"2026-12-15",endLabel:"12月中旬"},
+    {city:"八代市",name:"がめさん公園内",units:44,start:"2026-09-18",end:"2026-12-05",endLabel:"12月上旬"},
+    {city:"八代市",name:"鏡わかあゆ",units:60,start:"2026-10-01",end:"2026-12-25",endLabel:"12月下旬"},
     {city:"宇土市",name:"浦田町",units:17,start:"2026-08-22",end:"2026-10-25",endLabel:"10月下旬"},
     {city:"宇土市",name:"高柳町",units:45,start:"2026-08-29",end:"2026-11-05",endLabel:"11月上旬"},
-    {city:"宇城市",name:"当尾",units:58,phases:[{label:"第1期 10戸",start:"2026-08-03",end:"2026-09-25",endLabel:"9月下旬"},{label:"第2期 48戸",start:"2026-08-29",end:"2026-11-05",endLabel:"11月上旬"}]},
-    {city:"宇城市",name:"小川",units:36,phases:[{label:"第1期 30戸",start:"2026-08-03",end:"2026-09-25",endLabel:"9月下旬"},{label:"第2期 6戸",start:"2026-08-29",end:"2026-11-05",endLabel:"11月上旬"}]},
-    {city:"宇城市",name:"豊野",units:35,phases:[{label:"第1期 10戸",start:"2026-08-03",end:"2026-09-25",endLabel:"9月下旬"},{label:"第2期 25戸",start:"2026-08-29",end:"2026-11-05",endLabel:"11月上旬"}]},
-    {city:"宇城市",name:"小川駅西",units:20,start:"2026-08-29",end:"2026-11-15",endLabel:"11月中旬"},
-    {city:"美里町",name:"中央庁舎復興団地",units:12,start:"2026-08-09",end:"2026-10-05",endLabel:"10月上旬"},
-    {city:"美里町",name:"町営球技場",units:40,start:"2026-08-22",end:"2026-10-15",endLabel:"10月中旬"},
-    {city:"甲佐町",name:"乙女",units:20,start:"2026-08-18",end:"2026-10-05",endLabel:"10月上旬"},
+    {city:"宇城市",name:"当尾",units:58,phases:[{label:"第1期 10戸",start:"2026-08-03",end:"2026-09-20",endLabel:"9月20日完成",done:true,handover:"2026-09-23"},{label:"第2期 48戸",start:"2026-08-29",end:"2026-11-05",endLabel:"11月上旬"}]},
+    {city:"宇城市",name:"小川",units:36,phases:[{label:"第1期 30戸",start:"2026-08-03",end:"2026-09-26",endLabel:"9月26日完成",done:true,handover:"2026-09-29"},{label:"第2期 6戸",start:"2026-08-29",end:"2026-11-05",endLabel:"11月上旬"}]},
+    {city:"宇城市",name:"豊野",units:35,phases:[{label:"第1期 10戸",start:"2026-08-03",end:"2026-09-26",endLabel:"9月26日完成",done:true,handover:"2026-09-30"},{label:"第2期 25戸",start:"2026-08-29",end:"2026-11-05",endLabel:"11月上旬"}]},
+    {city:"宇城市",name:"小川駅西",units:20,start:"2026-08-29",end:"2026-11-05",endLabel:"11月上旬"},
+    {city:"美里町",name:"中央庁舎復興団地",units:34,phases:[{label:"第1期 12戸",start:"2026-08-09",end:"2026-10-07",endLabel:"10月7日完成",done:true,handover:"2026-10-10"},{label:"第2期 22戸",start:"2026-10-07",end:"2026-11-15",endLabel:"11月中旬"}]},
+    {city:"美里町",name:"町営球技場",units:60,phases:[{label:"第1期 40戸",start:"2026-08-22",end:"2026-09-29",endLabel:"9月29日完成",done:true,handover:"2026-10-03"},{label:"第2期 20戸",start:"2026-09-12",end:"2026-11-05",endLabel:"11月上旬"}]},
+    {city:"甲佐町",name:"乙女",units:31,phases:[{label:"第1期 20戸",start:"2026-08-18",end:"2026-09-26",endLabel:"9月26日完成",done:true,handover:"2026-09-28"},{label:"第2期 11戸",start:"2026-09-08",end:"2026-10-25",endLabel:"10月下旬"}]},
     {city:"氷川町",name:"吉本",units:27,phases:[{label:"第1期 20戸",start:"2026-08-03",end:"2026-08-29",endLabel:"8月29日完成",done:true,handover:"2026-09-05"},{label:"第2期 7戸",start:"2026-08-26",end:"2026-10-15",endLabel:"10月中旬"}]},
-    {city:"氷川町",name:"宮原防災公園",units:24,start:"2026-08-10",end:"2026-09-15",endLabel:"9月中旬"},
-    {city:"氷川町",name:"鹿島",units:18,start:"2026-08-10",end:"2026-09-15",endLabel:"9月中旬"},
-    {city:"氷川町",name:"新村",units:13,start:"2026-08-13",end:"2026-10-05",endLabel:"10月上旬"}
+    {city:"氷川町",name:"宮原防災公園",units:24,start:"2026-08-10",end:"2026-09-22",endLabel:"9月22日完成",done:true,handover:"2026-09-24"},
+    {city:"氷川町",name:"鹿島",units:18,start:"2026-08-10",end:"2026-09-08",endLabel:"9月8日完成",done:true,handover:"2026-09-10"},
+    {city:"氷川町",name:"新村",units:13,start:"2026-08-13",end:"2026-10-02",endLabel:"10月2日完成",done:true,handover:"2026-10-04"},
+    {city:"氷川町",name:"栫",units:12,start:"2026-09-18",end:"2026-11-25",endLabel:"11月下旬"}
   ];
 
   const scheduleNode=document.getElementById("temporaryHousingSchedule");
   if(scheduleNode){
     const rangeStart=new Date("2026-08-01T00:00:00+09:00");
-    const rangeEnd=new Date("2026-11-16T00:00:00+09:00");
+    const rangeEnd=new Date("2027-01-05T00:00:00+09:00");
     const total=rangeEnd-rangeStart;
     const pos=date=>Math.max(0,Math.min(100,(new Date(date+"T00:00:00+09:00")-rangeStart)/total*100));
     const ticks=[
       ["8/1","2026-08-01"],["8/15","2026-08-15"],["9/1","2026-09-01"],["9/15","2026-09-15"],
-      ["10/1","2026-10-01"],["10/15","2026-10-15"],["11/1","2026-11-01"],["11/15","2026-11-15"]
+      ["10/1","2026-10-01"],["10/15","2026-10-15"],["11/1","2026-11-01"],["11/15","2026-11-15"],
+      ["12/1","2026-12-01"],["12/15","2026-12-15"],["1/1","2027-01-01"]
     ];
     const bar=phase=>{
       const left=pos(phase.start),width=Math.max(1.2,pos(phase.end)-left);
       const label=phase.label?phase.label+"・":"";
-      const handover=phase.handover?`<i class="th-handover" style="left:${pos(phase.handover)}%" title="9月5日 鍵引渡し"><span>鍵引渡し</span></i>`:"";
+      const handover=phase.handover?`<i class="th-handover" style="left:${pos(phase.handover)}%" title="${phase.endLabel} 鍵引渡し"><span>鍵引渡し</span></i>`:"";
       return `<span class="th-schedule-bar ${phase.done?"done":"plan"}" style="left:${left}%;width:${width}%" title="${label}${phase.start.slice(5).replace("-","/")}着工 → ${phase.endLabel}"><b>${phase.label||phase.units+"戸"}</b></span>${handover}`;
     };
     let previous="";
