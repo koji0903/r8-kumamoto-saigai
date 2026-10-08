@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-10-08T10:43:54.389Z",
+  "generatedAt": "2026-10-08T18:54:11.457Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 908,
-  "displayCandidateCount": 643,
-  "classifiedPageCount": 747,
+  "inputCount": 912,
+  "displayCandidateCount": 649,
+  "classifiedPageCount": 751,
   "categoryReport": {
     "home": {
-      "total": 203,
+      "total": 205,
       "high": 78,
-      "medium": 78,
+      "medium": 80,
       "low": 47
     },
     "money": {
       "total": 246,
-      "high": 56,
-      "medium": 64,
-      "low": 126
+      "high": 57,
+      "medium": 65,
+      "low": 124
     },
     "documents": {
-      "total": 190,
+      "total": 192,
       "high": 44,
-      "medium": 35,
-      "low": 111
+      "medium": 36,
+      "low": 112
     },
     "health_care": {
       "total": 82,
@@ -37,9 +37,9 @@
       "low": 35
     },
     "work_business": {
-      "total": 71,
-      "high": 15,
-      "medium": 56,
+      "total": 73,
+      "high": 16,
+      "medium": 57,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 220,
+      "total": 221,
       "high": 63,
-      "medium": 156,
+      "medium": 157,
       "low": 1
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 142,
-      "displayCandidates": 119,
+      "classified": 141,
+      "displayCandidates": 120,
       "fallback": true
     },
     "municipality_minamata": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 109,
-      "displayCandidates": 93,
+      "classified": 110,
+      "displayCandidates": 94,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -142,8 +142,8 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 34,
-      "displayCandidates": 29,
+      "classified": 38,
+      "displayCandidates": 33,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 281,
-    "medium": 362,
-    "low": 104
+    "high": 282,
+    "medium": 367,
+    "low": 102
   },
   "unclassifiedCount": 5,
   "unclassifiedItems": [
@@ -1075,7 +1075,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 1
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1199,5 +1199,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 745
+  "previousClassifiedPageCount": 747
 }

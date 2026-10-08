@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-08T11:03:03.740Z",
-  "officialCheckedAt": "10/8 20:03",
+  "retrievedAt": "2026-10-08T19:12:48.502Z",
+  "officialCheckedAt": "10/9 04:12",
   "siteTopics": [
     {
       "date": "2026-10-07",
@@ -96,20 +96,36 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "【国補助事業】小規模事業者持続化補助金＜一般型 災害支援枠（令和8年熊本地震）＞",
+      "url": "https://www.city.uto.lg.jp/article/view/1321/16936.html",
+      "date": "2026-10-09",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "宇土市"
+    },
+    {
+      "title": "令和8年熊本地震に係る第2期建設型応急住宅の入居募集のお知らせ",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2628356",
+      "date": "2026-10-09",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "宇城市"
+    },
+    {
+      "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
+      "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
+      "date": "2026-10-09",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "甲佐町"
+    },
+    {
       "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "date": "2026-10-08",
       "time": "19:28",
       "category": "その他",
       "municipality": "八代市"
-    },
-    {
-      "title": "避難所について（10/8 17:00更新）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
-      "date": "2026-10-08",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市"
     },
     {
       "title": "益城町地域共生センターカタル利用再開のお知らせ【令和８年熊本地震】",
@@ -134,14 +150,6 @@ window.HOME_TOPICS = {
       "time": "10:55",
       "category": "支援・制度",
       "municipality": "御船町"
-    },
-    {
-      "title": "2026年10月8日 令和8年熊本地震 関連情報 （10月8日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-10-08",
-      "time": "08:00",
-      "category": "その他",
-      "municipality": "宇城市"
     },
     {
       "title": "令和8年熊本地震に伴う住宅の緊急修理について",
@@ -206,14 +214,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "支援・制度",
       "municipality": "嘉島町"
-    },
-    {
-      "title": "令和８年熊本地震の被害に遭われた方へ（各種支援制度の紹介）",
-      "url": "https://www.city.amakusa.kumamoto.jp/bousai/kiji00314592/index.html",
-      "date": "2026-10-02",
-      "time": "08:53",
-      "category": "支援・制度",
-      "municipality": "天草市"
     }
   ],
   "prefectureUpdates": [
