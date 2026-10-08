@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "retrievedAt": "2026-10-07T00:59:02.375Z",
+  "retrievedAt": "2026-10-08T06:10:00.231Z",
   "disasterDate": "2026-07-28",
   "municipalities": [
     {
@@ -762,7 +762,7 @@
       "department": "八代市",
       "documentKind": "会議資料",
       "note": "一覧ページはPDFのリンクだけ。数値は資料PDFの「現在の状況等」から読む。第1回は資料の公開がない。",
-      "latestMeeting": 50,
+      "latestMeeting": 51,
       "meetings": [
         {
           "meeting": 2,
@@ -1302,6 +1302,17 @@
           "file": "yatsushiro-050.pdf",
           "declaredBytes": 15948841,
           "bytes": null
+        },
+        {
+          "meeting": 51,
+          "part": null,
+          "label": "第51回災害対策本部会議資料（令和８年１０月７日（水曜日）午後４時００分）（PDF：26.11メガバイト）",
+          "date": "2026-10-07",
+          "time": "16:00",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00326750/3_26750_161027_up_5gy7bdys.pdf",
+          "file": "yatsushiro-051.pdf",
+          "declaredBytes": 27378319,
+          "bytes": 27382086
         }
       ]
     },
@@ -1315,7 +1326,7 @@
       "department": "宇土市 災害対策本部",
       "documentKind": "会議資料（書面報告を含む）",
       "note": "第1〜5回は公式ページで資料なしと明記。第6回以降の公開PDFを全ページ読み取っています。会議の日時はPDF表紙を優先し、表の集計日時とは区別します。第30回はリンク名が8月30日ですが本文は8月28日。第33回は一覧見出しが第32回・15時ですがPDFは第33回・16時。第32回はPDFに従い書面報告として扱います。",
-      "latestMeeting": 39,
+      "latestMeeting": 40,
       "meetings": [
         {
           "meeting": 6,
@@ -1690,6 +1701,17 @@
           "file": "uto-039.pdf",
           "declaredBytes": null,
           "bytes": 1120857
+        },
+        {
+          "meeting": 40,
+          "part": null,
+          "label": "第40回災対本部会議資料_2026年10月1日(PDF 約1MB)",
+          "date": null,
+          "time": null,
+          "url": "https://www.city.uto.lg.jp/d?q=a9923ed7904e2c82459bb893aad859d6.pdf",
+          "file": "uto-040.pdf",
+          "declaredBytes": null,
+          "bytes": 1449909
         }
       ]
     }

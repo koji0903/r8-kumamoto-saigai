@@ -301,7 +301,7 @@ for (const config of municipalities) {
       if (item.kind === "hub") fetchedHubs++;
       for (const update of inlineEmergencyRecords(html, finalUrl)) updates.set(update.url, update);
       const self = selfRecord(html, finalUrl, item.trustedByHub && item.kind === "detail", item.verifiedDetail, Boolean(config.trustAllHub && item.trustedByHub && item.kind === "detail"), config.name);
-      if (self) updates.set(self.url, self);
+      if (self && allowed(self.url, config.officialUrl, config.allowedDomains)) updates.set(self.url, self);
       const found = anchors(html, finalUrl, config);
       for (const link of found) {
         if (link.parsedDate && (relevant(link.title) || (item.kind === "hub" && (contextual(link.title) || config.trustAllHub)))) {
@@ -349,7 +349,7 @@ for (const config of municipalities) {
       const stated = parseLeadingDate(update.title) || (/更新|時点|現在|掲載|発表/u.test(update.title) ? parseDate(update.title) : null);
       return stated ? { ...update, ...stated } : update;
     })
-    .filter(update => !/^(スポーツ|行政サイト|トップページ|アクセス|くらし・手続き|>>>.*一覧へ|月\d+日更新）)$/u.test(update.title) && !/(?:\/q\/list\/|\/category\/list\/|\/list\d+\.html)/i.test(new URL(update.url).pathname))
+    .filter(update => allowed(update.url, config.officialUrl, config.allowedDomains) && !/^(スポーツ|行政サイト|トップページ|アクセス|くらし・手続き|>>>.*一覧へ|月\d+日更新）)$/u.test(update.title) && !/(?:\/q\/list\/|\/category\/list\/|\/list\d+\.html)/i.test(new URL(update.url).pathname))
     .sort((a, b) => `${a.date} ${a.time || ""}`.localeCompare(`${b.date} ${b.time || ""}`));
   const unique = [], keys = new Set();
   for (const update of sorted) {

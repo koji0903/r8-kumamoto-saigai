@@ -21,7 +21,7 @@ for(const summary of city.editorial.meetings){
   assert.ok(record && summary.page>=1 && summary.page<=record.pages);
   assert.ok(summary.title && summary.summary);
 }
-assert.equal(city.editorial.meetings.length,34);
+assert.equal(city.editorial.meetings.length,35);
 // 最新の公開回まで要約があること（無いと最新カードが「編集要約は未確認」になる）
 assert.equal(city.editorial.reviewedThrough,Math.max(...numbers),'編集要約が最新の公開回まで追いついていません');
 assert.ok(city.editorial.meetings.some(s=>s.meeting===Math.max(...numbers)),'最新の公開回の要約がありません');
@@ -88,8 +88,17 @@ assert.equal(m(39).figures.households,41);
 assert.equal(m(39).figures.utoHomesFull,45);
 assert.equal(m(39).figures.utoHomesUnclassified,33);
 assert.equal(m(39).figures.utoHomesTotal,7001);
+// 第40回（10月1日15:00）。
+assert.equal(m(40).date,'2026-10-01');
+assert.equal(m(40).time,'15:00');
+assert.equal(m(40).writtenReport,false);
+assert.equal(m(40).figures.evacuees,70);
+assert.equal(m(40).figures.households,41);
+assert.equal(m(40).figures.utoHomesFull,47);
+assert.equal(m(40).figures.utoHomesUnclassified,32);
+assert.equal(m(40).figures.utoHomesTotal,7062);
 // 区分の合計が計と一致すること（抽出の列ずれを検出する）
-for(const n of [34,35,36,37,38,39]){const f=m(n).figures;assert.equal(f.utoHomesFull+f.utoHomesLargeHalf+f.utoHomesHalf+f.utoHomesPartial+f.utoHomesUnclassified,f.utoHomesTotal,`第${n}回の住家被害の内訳と計が合いません`);}
+for(const n of [34,35,36,37,38,39,40]){const f=m(n).figures;assert.equal(f.utoHomesFull+f.utoHomesLargeHalf+f.utoHomesHalf+f.utoHomesPartial+f.utoHomesUnclassified,f.utoHomesTotal,`第${n}回の住家被害の内訳と計が合いません`);}
 // ページの説明文が古い回で止まっていないこと
 const page=fs.readFileSync('hq-uto.html','utf8');
 assert.ok(!page.includes('この節の内容は第35回まで'),'「次の支援につなぐ動き」が第35回のままです');
