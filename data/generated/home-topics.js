@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-08T06:24:08.302Z",
-  "officialCheckedAt": "10/8 15:24",
+  "retrievedAt": "2026-10-08T11:03:03.740Z",
+  "officialCheckedAt": "10/8 20:03",
   "siteTopics": [
     {
       "date": "2026-10-07",
@@ -96,6 +96,22 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "date": "2026-10-08",
+      "time": "19:28",
+      "category": "その他",
+      "municipality": "八代市"
+    },
+    {
+      "title": "避難所について（10/8 17:00更新）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
+      "date": "2026-10-08",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市"
+    },
+    {
       "title": "益城町地域共生センターカタル利用再開のお知らせ【令和８年熊本地震】",
       "url": "https://www.town.mashiki.lg.jp/kiji0038238/index.html",
       "date": "2026-10-08",
@@ -112,28 +128,20 @@ window.HOME_TOPICS = {
       "municipality": "氷川町"
     },
     {
-      "title": "2026年10月8日 令和8年熊本地震 関連情報 （10月8日14時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-10-08",
-      "time": "14:00",
-      "category": "その他",
-      "municipality": "宇城市"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-10-08",
-      "time": "11:18",
-      "category": "その他",
-      "municipality": "八代市"
-    },
-    {
       "title": "令和8年熊本地震に係る義援金の受付について",
       "url": "https://www.town.mifune.kumamoto.jp/page9404.html",
       "date": "2026-10-08",
       "time": "10:55",
       "category": "支援・制度",
       "municipality": "御船町"
+    },
+    {
+      "title": "2026年10月8日 令和8年熊本地震 関連情報 （10月8日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-10-08",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "宇城市"
     },
     {
       "title": "令和8年熊本地震に伴う住宅の緊急修理について",
@@ -174,14 +182,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "交通",
       "municipality": "津奈木町"
-    },
-    {
-      "title": "避難所について（10/6 17:00更新）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
-      "date": "2026-10-06",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市"
     },
     {
       "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
