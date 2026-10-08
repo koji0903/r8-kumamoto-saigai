@@ -1324,6 +1324,42 @@
   line-height: 1.4;
 }
 
+/* 商工業・事業者向け補助金カードの目立つボタンスタイル */
+.nav-link-card-biz {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%) !important;
+  border: 2px solid #d97706 !important;
+  border-left: 5px solid #b45309 !important;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.15);
+}
+
+.nav-link-card-biz:hover {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%) !important;
+  border-color: #b45309 !important;
+  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.25);
+  transform: translateY(-2px);
+}
+
+.nav-link-card-biz .nav-card-badge-biz {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 2px 8px;
+  background: #b45309;
+  color: #ffffff;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: .02em;
+}
+
+.nav-link-card-biz b {
+  color: #78350f !important;
+  font-weight: 900 !important;
+}
+
+.nav-link-card-biz span {
+  color: #92400e !important;
+}
+
 /* コンパクト一覧表 */
 .facility-table-container {
   background: #ffffff;
