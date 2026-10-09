@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-10-08T18:54:11.457Z",
+  "generatedAt": "2026-10-09T01:15:49.364Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 912,
-  "displayCandidateCount": 649,
-  "classifiedPageCount": 751,
+  "inputCount": 909,
+  "displayCandidateCount": 646,
+  "classifiedPageCount": 748,
   "categoryReport": {
     "home": {
-      "total": 205,
+      "total": 204,
       "high": 78,
-      "medium": 80,
+      "medium": 79,
       "low": 47
     },
     "money": {
-      "total": 246,
-      "high": 57,
-      "medium": 65,
-      "low": 124
+      "total": 244,
+      "high": 56,
+      "medium": 63,
+      "low": 125
     },
     "documents": {
-      "total": 192,
+      "total": 191,
       "high": 44,
       "medium": 36,
-      "low": 112
+      "low": 111
     },
     "health_care": {
       "total": 82,
@@ -32,14 +32,14 @@
     },
     "family_education": {
       "total": 75,
-      "high": 10,
-      "medium": 30,
+      "high": 9,
+      "medium": 31,
       "low": 35
     },
     "work_business": {
-      "total": 73,
+      "total": 74,
       "high": 16,
-      "medium": 57,
+      "medium": 58,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 221,
-      "high": 63,
-      "medium": 157,
+      "total": 218,
+      "high": 62,
+      "medium": 155,
       "low": 1
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 141,
-      "displayCandidates": 120,
+      "classified": 139,
+      "displayCandidates": 118,
       "fallback": true
     },
     "municipality_minamata": {
@@ -87,8 +87,8 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 27,
-      "displayCandidates": 23,
+      "classified": 28,
+      "displayCandidates": 24,
       "fallback": true
     },
     "municipality_uki": {
@@ -97,8 +97,8 @@
       "fallback": true
     },
     "municipality_amakusa": {
-      "classified": 24,
-      "displayCandidates": 22,
+      "classified": 21,
+      "displayCandidates": 19,
       "fallback": true
     },
     "municipality_koshi": {
@@ -137,8 +137,8 @@
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 41,
-      "displayCandidates": 39,
+      "classified": 42,
+      "displayCandidates": 40,
       "fallback": true
     },
     "municipality_kosa": {
@@ -163,7 +163,7 @@
     }
   },
   "confidence": {
-    "high": 282,
+    "high": 279,
     "medium": 367,
     "low": 102
   },
@@ -693,13 +693,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
@@ -711,6 +704,13 @@
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "山鹿市",
@@ -868,14 +868,14 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月8日 令和8年熊本地震 関連情報 （10月8日8時00分更新）",
+      "title": "2026年10月9日 令和8年熊本地震 関連情報 （10月9日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月08日 令和8年熊本地震 関連情報 （10月8日8時00分更新）",
+      "title": "2026年10月09日 令和8年熊本地震 関連情報 （10月9日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -1055,7 +1055,7 @@
     "non_official_url": 1,
     "past_disaster_excluded": 1
   },
-  "warningCount": 28,
+  "warningCount": 26,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1125,17 +1125,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 5
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_amakusa",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_amakusa",
-      "count": 3
+      "count": 6
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1199,5 +1189,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 747
+  "previousClassifiedPageCount": 751
 }
