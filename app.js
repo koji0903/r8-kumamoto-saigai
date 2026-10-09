@@ -312,13 +312,13 @@ if($("#municipalityDetail")){
             const isBiz=bizType==="biz"||href.includes("saishuppatsu")||href.includes("jizokuka")||href.includes("safetynet")||href.includes("einou");
             if(isBiz){
               const badgeText=href.includes("saishuppatsu")?"★ 重要・商工業補助金（最大15億円）":href.includes("jizokuka")?"★ 重要・事業者補助金（最大200万円）":href.includes("einou")?"★ 農業・営農再開補助金":"★ 資金繰り・融資支援";
-              return `<a href="${href}" class="municipality-hub-biz"${external?' target="_blank" rel="noopener"':''}${isTab?` data-tab-target="${isTab}"`:''}><span class="hub-biz-badge">${badgeText}</span><b>${label}</b><span>${description}</span><i>申請ガイド・詳細を見る →</i></a>`;
+              return `<a href="${href}" class="municipality-hub-biz"${external?' target="_blank" rel="noopener"':''}${isTab?` data-tab-target="${isTab}"`:''}><span class="hub-biz-badge">${badgeText}</span><b>${label}</b><span class="hub-card-desc">${description}</span><i>申請ガイド・詳細を見る →</i></a>`;
             }
             const isHandbook=bizType==="handbook"||href.includes("handbook")||href==="uto-handbook.html";
             if(isHandbook){
               const badgeText=href.includes("uto-handbook")?"★ 市公式・被災者支援 全69制度":href.includes("yatsushiro-support")?"★ 市公式・被災者応援 全54制度":"★ 市公式・被災者支援制度ガイド";
               const ctaText=href.includes("uto-handbook")?"ハンドブックを開く（全制度検索） →":"ガイドブックを開く →";
-              return `<a href="${href}" class="municipality-hub-handbook"${external?' target="_blank" rel="noopener"':''}${isTab?` data-tab-target="${isTab}"`:''}><span class="hub-handbook-badge">${badgeText}</span><b>${label}</b><span>${description}</span><i>${ctaText}</i></a>`;
+              return `<a href="${href}" class="municipality-hub-handbook"${external?' target="_blank" rel="noopener"':''}${isTab?` data-tab-target="${isTab}"`:''}><span class="hub-handbook-badge">${badgeText}</span><b>${label}</b><span class="hub-card-desc">${description}</span><i>${ctaText}</i></a>`;
             }
             return `<a href="${href}"${external?' target="_blank" rel="noopener"':''}${isTab?` data-tab-target="${isTab}"`:''}><b>${label}</b><span>${description}</span><i>開く ${external?'↗':'→'}</i></a>`;
           },
