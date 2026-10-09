@@ -34,6 +34,7 @@ assert.ok(html.includes('id="btnLocateUser"'), "現在地ボタンがありま�
 assert.ok(html.includes('id="btnToggleFullscreen"'), "全画面切り替えボタンがありません");
 assert.ok(html.includes('id="btnExitFullscreenFloating"'), "全画面解除フローティングボタンがありません");
 assert.ok(html.includes('id="mapGestureHint"'), "ジェスチャーヒント要素がありません");
+assert.ok(html.includes('id="btnScrollToFacilities"'), "施設一覧スクロールボタンがありません");
 assert.ok(html.includes("<noscript>"), "noscriptフォールバックがありません");
 
 // 2. CSSファイルの検証
@@ -42,6 +43,7 @@ assert.ok(fs.existsSync(cssPath), "uto-public-services.css が存在しません
 const css = fs.readFileSync(cssPath, "utf8");
 assert.ok(css.includes("#publicServicesMap"), "地図コンテナのスタイルがありません");
 assert.ok(css.includes(".uto-service-card"), "施設カードのスタイルがありません");
+assert.ok(css.includes(".btn-scroll-to-facilities"), "施設一覧スクロールボタンのスタイルがありません");
 assert.ok(css.includes(".uto-map-pin"), "カスタムピンのスタイルがありません");
 assert.ok(css.includes(".status-badge"), "開館状況バッジのスタイルがありません");
 assert.ok(css.includes(".btn-card-fav"), "お気に入りボタンのスタイルがありません");

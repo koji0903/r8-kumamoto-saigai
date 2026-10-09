@@ -1625,6 +1625,9 @@
   const cardsContainer = document.getElementById("facilityCardsContainer");
   const tableContainer = document.getElementById("facilityTableContainer");
   const countDisplay = document.getElementById("facilityResultCount");
+  const btnScrollToFacilities = document.getElementById("btnScrollToFacilities");
+  const scrollFacilityLabel = document.getElementById("scrollFacilityLabel");
+  const scrollFacilityCount = document.getElementById("scrollFacilityCount");
   const realtimeInfoDisplay = document.getElementById("realtimeStatusInfo");
   const searchInput = document.getElementById("serviceSearchInput");
   const catFilterContainer = document.getElementById("catFilterGroup");
@@ -1968,6 +1971,18 @@
 
     if (countDisplay) {
       countDisplay.textContent = `表示中：${filtered.length}施設 / 全${FACILITIES.length}施設`;
+    }
+
+    if (btnScrollToFacilities) {
+      const hasFilter = activeCat !== "all" || activeTarget !== "all" || activeArea !== "all" || activeQuickTag !== null || openNowOnly || (searchQuery && searchQuery.length > 0);
+      btnScrollToFacilities.hidden = filtered.length === 0;
+      if (hasFilter) {
+        btnScrollToFacilities.classList.add("has-filter");
+        if (scrollFacilityLabel) scrollFacilityLabel.innerHTML = `該当する施設を見る（<span id="scrollFacilityCount">${filtered.length}</span>施設）`;
+      } else {
+        btnScrollToFacilities.classList.remove("has-filter");
+        if (scrollFacilityLabel) scrollFacilityLabel.innerHTML = `施設一覧を見る（<span id="scrollFacilityCount">${filtered.length}</span>施設）`;
+      }
     }
 
     if (filtered.length === 0) {
@@ -2367,6 +2382,24 @@
     }
     if (btnViewTable) {
       btnViewTable.addEventListener("click", () => setViewMode("table"));
+    }
+
+    // 施設一覧へのスクロール誘導ボタン
+    if (btnScrollToFacilities) {
+      btnScrollToFacilities.addEventListener("click", () => {
+        const target = currentViewMode === "cards"
+          ? (cardsContainer?.querySelector(".uto-service-card") || cardsContainer)
+          : tableContainer;
+        if (!target) return;
+        const headerOffset = 85;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: reduceMotion ? "auto" : "smooth"
+        });
+      });
     }
 
     // リセットボタン
