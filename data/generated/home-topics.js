@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-09T01:34:45.056Z",
-  "officialCheckedAt": "10/9 10:34",
+  "retrievedAt": "2026-10-09T11:01:25.769Z",
+  "officialCheckedAt": "10/9 20:01",
   "siteTopics": [
     {
       "date": "2026-10-09",
@@ -96,12 +96,36 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "date": "2026-10-09",
-      "time": "09:35",
+      "time": "16:50",
       "category": "その他",
       "municipality": "八代市"
+    },
+    {
+      "title": "令和8年熊本地震による事業所の災害ごみ処分費の減免について",
+      "url": "https://www.city.kumamoto.jp/kiji00372073/index.html",
+      "date": "2026-10-09",
+      "time": "15:30",
+      "category": "ごみ・生活",
+      "municipality": "熊本市"
+    },
+    {
+      "title": "令和８年熊本地震における災害義援金の配分について",
+      "url": "https://localcms.city.minamata.lg.jp/page4894.html?type=top",
+      "date": "2026-10-09",
+      "time": "15:11",
+      "category": "支援・制度",
+      "municipality": "水俣市"
+    },
+    {
+      "title": "令和8年熊本地震（7月28日発生）に関する情報（10月9日11時更新）",
+      "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
+      "date": "2026-10-09",
+      "time": "11:00",
+      "category": "その他",
+      "municipality": "美里町"
     },
     {
       "title": "2026年10月9日 令和8年熊本地震 関連情報 （10月9日8時00分更新）",
@@ -112,12 +136,28 @@ window.HOME_TOPICS = {
       "municipality": "宇城市"
     },
     {
-      "title": "【国補助事業】小規模事業者持続化補助金＜一般型 災害支援枠（令和8年熊本地震）＞",
-      "url": "https://www.city.uto.lg.jp/article/view/1321/16936.html",
+      "title": "市営住宅の一時提供を行います",
+      "url": "https://www.city.uto.lg.jp/article/view/1307/16537.html",
       "date": "2026-10-09",
       "time": null,
-      "category": "支援・制度",
+      "category": "住まい・証明",
       "municipality": "宇土市"
+    },
+    {
+      "title": "令和8年熊本地震（7月28日発生）に関する情報（10月9日時点）",
+      "url": "https://www.town.ozu.kumamoto.jp/page/27698.html",
+      "date": "2026-10-09",
+      "time": null,
+      "category": "その他",
+      "municipality": "大津町"
+    },
+    {
+      "title": "令和8年熊本地震被災による国民健康保険税等の減免について",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6347.html",
+      "date": "2026-10-09",
+      "time": null,
+      "category": "その他",
+      "municipality": "嘉島町"
     },
     {
       "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
@@ -152,14 +192,6 @@ window.HOME_TOPICS = {
       "municipality": "御船町"
     },
     {
-      "title": "令和8年熊本地震に伴う住宅の緊急修理について",
-      "url": "https://www.town.kumamoto-misato.lg.jp/soshiki/fukushi/3914.html",
-      "date": "2026-10-08",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "美里町"
-    },
-    {
       "title": "セーフティネット保証の認定手続きについて（令和8年熊本地震に係る4号情報追記）",
       "url": "https://www.city.koshi.lg.jp/kiji00324042/index.html",
       "date": "2026-10-07",
@@ -176,44 +208,12 @@ window.HOME_TOPICS = {
       "municipality": "山鹿市"
     },
     {
-      "title": "【令和8年熊本地震】保険等の損害確認により期限内に処分できなかった災害ごみの追加対応について",
-      "url": "https://www.town.ozu.kumamoto.jp/page/27678.html",
-      "date": "2026-10-07",
-      "time": null,
-      "category": "ごみ・生活",
-      "municipality": "大津町"
-    },
-    {
       "title": "【肥薩おれんじ鉄道】熊本地震による運休区間の運行再開について",
       "url": "https://www.town.tsunagi.lg.jp/page4778.html?type=top",
       "date": "2026-10-07",
       "time": null,
       "category": "交通",
       "municipality": "津奈木町"
-    },
-    {
-      "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
-      "url": "https://www.city.kumamoto.jp/kiji00372210/index.html",
-      "date": "2026-10-06",
-      "time": "16:41",
-      "category": "住まい・証明",
-      "municipality": "熊本市"
-    },
-    {
-      "title": "西原村立保育所給食調理業務委託に係る公募型プロポーザルの実施について",
-      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032034/index.html",
-      "date": "2026-10-06",
-      "time": "09:30",
-      "category": "施設・学校",
-      "municipality": "西原村"
-    },
-    {
-      "title": "令和8年熊本地震 くまもと事業者再出発支援補助金及び説明会の開...",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6307.html",
-      "date": "2026-10-05",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "嘉島町"
     }
   ],
   "prefectureUpdates": [
