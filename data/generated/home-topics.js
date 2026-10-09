@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-09T11:01:25.769Z",
-  "officialCheckedAt": "10/9 20:01",
+  "retrievedAt": "2026-10-09T18:45:46.964Z",
+  "officialCheckedAt": "10/10 03:45",
   "siteTopics": [
     {
       "date": "2026-10-09",
@@ -96,20 +96,36 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "【熊本地震】10月9日（土）～12日（月・祝）の窓口業務について",
+      "url": "https://www.city.uto.lg.jp/article/view/1310/16528.html",
+      "date": "2026-10-10",
+      "time": null,
+      "category": "その他",
+      "municipality": "宇土市"
+    },
+    {
+      "title": "被災事業者支援チラシ(PDF 約471KB)",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/dl?q=124864_filelib_b40c91e9c6a5b40467ab5154b32bce67.pdf",
+      "date": "2026-10-10",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "上天草市"
+    },
+    {
+      "title": "令和8年熊本地震被災家屋等の解体費標準単価について",
+      "url": "https://www.city.kumamoto.jp/kiji00373278/index.html",
+      "date": "2026-10-09",
+      "time": "19:17",
+      "category": "その他",
+      "municipality": "熊本市"
+    },
+    {
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "date": "2026-10-09",
       "time": "16:50",
       "category": "その他",
       "municipality": "八代市"
-    },
-    {
-      "title": "令和8年熊本地震による事業所の災害ごみ処分費の減免について",
-      "url": "https://www.city.kumamoto.jp/kiji00372073/index.html",
-      "date": "2026-10-09",
-      "time": "15:30",
-      "category": "ごみ・生活",
-      "municipality": "熊本市"
     },
     {
       "title": "令和８年熊本地震における災害義援金の配分について",
@@ -136,19 +152,11 @@ window.HOME_TOPICS = {
       "municipality": "宇城市"
     },
     {
-      "title": "市営住宅の一時提供を行います",
-      "url": "https://www.city.uto.lg.jp/article/view/1307/16537.html",
+      "title": "昭和園の工事に伴う停電のお知らせ",
+      "url": "https://www.town.ozu.kumamoto.jp/page/27721.html",
       "date": "2026-10-09",
       "time": null,
-      "category": "住まい・証明",
-      "municipality": "宇土市"
-    },
-    {
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（10月9日時点）",
-      "url": "https://www.town.ozu.kumamoto.jp/page/27698.html",
-      "date": "2026-10-09",
-      "time": null,
-      "category": "その他",
+      "category": "ライフライン",
       "municipality": "大津町"
     },
     {
@@ -158,14 +166,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "その他",
       "municipality": "嘉島町"
-    },
-    {
-      "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
-      "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
-      "date": "2026-10-09",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "甲佐町"
     },
     {
       "title": "益城町地域共生センターカタル利用再開のお知らせ【令和８年熊本地震】",
