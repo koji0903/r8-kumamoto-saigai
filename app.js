@@ -340,7 +340,7 @@ if($("#municipalityDetail")){
 
   const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 
-  const renderDetail=()=>{
+  const renderDetail=(didSwitch=false)=>{
     const municipality=municipalities.find(m=>m.name===selectedMunicipality),
           municipalityId=municipalityReconstructionIds[selectedMunicipality],
           events=municipalEvents.filter(e=>e.areas.includes(selectedMunicipality)).sort((a,b)=>b.date.localeCompare(a.date)),
@@ -355,17 +355,34 @@ if($("#municipalityDetail")){
 
     const featured=selectedMunicipality==="熊本市"?`<div class="municipality-feature-list"><a class="municipality-feature" href="kumamoto-saishuppatsu.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 18h16M6 18v-7l6-4 6 4v7M10 14h4v4h-4z"/></svg></span><span><small>熊本県｜商工業再建</small><b>くまもと事業者再出発支援補助金</b><em>施設・設備・車両の復旧補助率3/4（多重被災定額5億円）、最大15億円</em></span><i>案内を見る →</i></a><a class="municipality-feature" href="kumamoto-support.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v5h4M9 12h6m-6 4h6"/></svg></span><span><small>熊本市｜被災された方へ</small><b>被災者支援制度ガイド</b><em>公式冊子145ページを、証明・お金・住まい・生活・減免・事業の困りごと別に整理</em></span><i>案内を見る →</i></a><a class="municipality-feature" href="hq-kumamoto.html"><span><small>熊本市｜災害対応の記録</small><b>災害対策本部会議のまとめ</b><em>市の対応と被害・避難の推移をたどる</em></span><i>記録を見る →</i></a></div>`:selectedMunicipality==="宇土市"?`<div class="municipality-feature-list"><a class="municipality-feature" href="kumamoto-saishuppatsu.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 18h16M6 18v-7l6-4 6 4v7M10 14h4v4h-4z"/></svg></span><span><small>宇土市・熊本県｜商工業再建</small><b>くまもと事業者再出発支援補助金</b><em>施設・設備・車両の復旧補助率3/4（多重被災定額5億円）、最大15億円。事前着手特例あり</em></span><i>案内を見る →</i></a><a class="municipality-feature" href="uto-jizokuka.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><span><small>宇土市｜事業者支援</small><b>持続化補助金＜災害支援枠＞</b><em>直接被害最大200万円（定額あり）・間接被害100万円。対象要件と申請手順</em></span><i>案内を見る →</i></a><a class="municipality-feature" href="hq-uto.html"><span><small>宇土市｜災害対応の記録</small><b>災害対策本部会議のまとめ</b><em>全公開資料から、被害・避難の推移と市の対応をたどる</em></span><i>記録を見る →</i></a><a class="municipality-feature" href="uto-housing.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 12 9-8 9 8v9H3Z"/><path d="M8 21v-6h8v6M15 8l4-4 2 2-4 4"/></svg></span><span><small>宇土市｜住まいの重要情報</small><b>住まいの相談・再建支援ガイド</b><em>応急修理・みなし仮設・相談窓口を、現在の状況から確認</em></span><i>案内を見る →</i></a><a class="municipality-feature" href="uto-bulletin.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h11l3 3v15H5Z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span><span><small>宇土市｜市の広報紙</small><b>広報うと 災害臨時号vol.1</b><em>り災証明書・災害ごみ・住まい・支援金・減免を、期限が近いものから確認</em></span><i>案内を見る →</i></a><a class="municipality-feature" href="uto-waste.html"><span class="municipality-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16v13H4zM8 7V4h8v3M9 11v5m6-5v5"/></svg></span><span><small>宇土市｜暮らしの重要情報</small><b>災害ごみの持ち込み案内</b><em>ごみの種類から持込先を探す・仮置場と入場券配布場所の地図を見る</em></span><i>案内を見る →</i></a></div>`:"";
 
+    const quickSelectOptions = orderedMunicipalities.map(m=>{
+      const cnt=(updatesData?.municipalities?.find(u=>u.name===m.name)?.updates?.length)||0;
+      return `<option value="${m.name}" ${m.name===selectedMunicipality?'selected':''}>${m.name}（発表${cnt}件）</option>`;
+    }).join('');
+
     $("#municipalityDetail").innerHTML=`
-      <header>
-        <div>
-          <p>自治体別 総合ダッシュボード</p>
-          <h3>${esc(selectedMunicipality)}</h3>
+      <header class="${didSwitch?'just-switched':''}">
+        <div class="municipality-detail-main-header">
+          <div class="municipality-detail-badge-row">
+            <span class="municipality-detail-kicker">自治体別 総合ダッシュボード</span>
+            <span class="municipality-detail-active-pill">● 表示中</span>
+          </div>
+          <div class="municipality-detail-title-group">
+            <h3>${esc(selectedMunicipality)}</h3>
+            <div class="municipality-quick-switcher">
+              <label for="quickMuniSelect">自治体を変更：</label>
+              <select id="quickMuniSelect" class="municipality-quick-select" aria-label="表示する自治体を変更">
+                ${quickSelectOptions}
+              </select>
+              <button type="button" class="btn-back-to-picker" id="btnBackToPicker">市町村一覧 ↑</button>
+            </div>
+          </div>
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:6px;font-size:13px;color:#d6e9e4;">
             <span>📢 公式発表 ${allUpdates.length}件${latestUpdate?`（最新: ${dateLabel(latestUpdate.date)}）`:''}</span>
             <span>📝 火の国会議の記録 ${events.length}件${latestMeetingDate?`（最新言及: ${dateLabel(latestMeetingDate)}）`:''}</span>
           </div>
         </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+        <div class="municipality-detail-header-actions" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
           <a href="${municipality.url}" target="_blank" rel="noopener">${esc(selectedMunicipality)}公式サイト ↗</a>
           <a href="reconstruction.html?municipality=${municipalityId}" style="display:inline-flex;align-items:center;min-height:52px;padding:11px 16px;border:2px solid #7fb0a6;border-radius:8px;background:#fff;color:#0d665b;font-size:15px;font-weight:900;text-decoration:none;">暮らしの再建ナビ →</a>
         </div>
@@ -563,16 +580,101 @@ if($("#municipalityDetail")){
         document.querySelector(`#tab${t.charAt(0).toUpperCase()+t.slice(1)}`)?.scrollIntoView({behavior:"smooth",block:"start"});
       };
     });
+
+    // クイックセレクター & 一覧へ戻るボタン
+    $("#quickMuniSelect")?.addEventListener("change",(e)=>{
+      selectedMunicipality=e.target.value;
+      history.replaceState(null,'',`?name=${encodeURIComponent(selectedMunicipality)}&tab=${currentTab}`);
+      renderPicker();
+      renderDetail(true);
+      scrollToDetail();
+    });
+    $("#btnBackToPicker")?.addEventListener("click", scrollToPicker);
+
+    if(didSwitch){
+      setTimeout(()=>{
+        document.querySelector("#municipalityDetail>header")?.classList.remove("just-switched");
+      }, 1200);
+    }
+  };
+
+  const scrollToDetail=()=>{
+    const detail=document.getElementById("municipalityDetail");
+    if(!detail)return;
+    const headerOffset=96;
+    const elementPosition=detail.getBoundingClientRect().top;
+    const offsetPosition=elementPosition+window.pageYOffset-headerOffset;
+    window.scrollTo({
+      top:Math.max(0,offsetPosition),
+      behavior:"smooth"
+    });
+  };
+
+  const scrollToPicker=()=>{
+    const picker=document.querySelector(".municipality-picker");
+    if(!picker)return;
+    const headerOffset=88;
+    const elementPosition=picker.getBoundingClientRect().top;
+    const offsetPosition=elementPosition+window.pageYOffset-headerOffset;
+    window.scrollTo({
+      top:Math.max(0,offsetPosition),
+      behavior:"smooth"
+    });
   };
 
   const renderPicker=()=>{
     const q=$("#municipalityDashboardSearch").value.trim(),matches=orderedMunicipalities.filter(m=>m.name.includes(q));
     $("#municipalityPickerList").innerHTML=matches.map(m=>`<button type="button" aria-pressed="${m.name===selectedMunicipality}" class="${m.name===selectedMunicipality?'active':''}" data-name="${m.name}"><span>${m.name}</span><b>${municipalEvents.filter(e=>e.areas.includes(m.name)).length}件</b></button>`).join('');
+
+    const updatesData=window.MUNICIPALITY_UPDATES;
+    const mData=updatesData?.municipalities?.find(m=>m.name===selectedMunicipality);
+    const mUpdatesCount=mData?.updates?.length||0;
+    const mEventsCount=municipalEvents.filter(e=>e.areas.includes(selectedMunicipality)).length;
+
+    const statusEl=$("#municipalityCurrentStatus");
+    if(statusEl){
+      statusEl.innerHTML=`
+        <div class="status-indicator">
+          <div class="status-indicator-badge">選択中</div>
+          <div class="status-indicator-body">
+            <div class="status-indicator-title">
+              <strong class="status-indicator-name">${esc(selectedMunicipality)}</strong>
+              <span class="status-indicator-meta">📢 公式発表 ${mUpdatesCount}件 ｜ 📝 火の国会議 ${mEventsCount}件</span>
+            </div>
+            <p class="status-indicator-hint">選んだ自治体のダッシュボードへスクロールして確認できます</p>
+          </div>
+          <button type="button" class="status-indicator-jump-btn" id="statusJumpBtn">
+            <span>ダッシュボードを見る</span>
+            <span class="status-jump-arrow" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      `;
+      $("#statusJumpBtn")?.addEventListener("click", scrollToDetail);
+    }
+
+    const footerEl=$("#municipalityPickerFooter");
+    if(footerEl){
+      footerEl.innerHTML=`
+        <div class="picker-footer-card">
+          <div class="picker-footer-text">
+            <span>表示中の自治体：</span>
+            <b>${esc(selectedMunicipality)}</b>
+            <small>（公式発表 ${mUpdatesCount}件 ／ 会議記録 ${mEventsCount}件）</small>
+          </div>
+          <button type="button" class="picker-footer-btn" id="pickerFooterJumpBtn">
+            【${esc(selectedMunicipality)}】のダッシュボードへ移動 ↓
+          </button>
+        </div>
+      `;
+      $("#pickerFooterJumpBtn")?.addEventListener("click", scrollToDetail);
+    }
+
     $$('#municipalityPickerList button').forEach(b=>b.onclick=()=>{
       selectedMunicipality=b.dataset.name;
       history.replaceState(null,'',`?name=${encodeURIComponent(selectedMunicipality)}&tab=${currentTab}`);
       renderPicker();
-      renderDetail();
+      renderDetail(true);
+      scrollToDetail();
     });
   };
 

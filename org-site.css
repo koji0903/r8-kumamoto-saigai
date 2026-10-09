@@ -521,6 +521,69 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
 .municipality-hub-group a.municipality-hub-handbook i{display:inline-flex!important;align-items:center!important;gap:4px!important;width:fit-content!important;margin-top:6px!important;padding:6px 14px!important;background:#0f766e!important;color:#fff!important;border-radius:6px!important;font-size:12px!important;font-weight:900!important;box-shadow:0 2px 6px rgba(15,118,110,.25)!important}
 .municipality-hub-group a.municipality-hub-handbook:hover i{background:#115e59!important}
 
+/* ==========================================================================
+   自治体選択・ダッシュボード表示切り替え UX強化スタイル
+   ========================================================================== */
+.page-municipalities .municipality-detail{scroll-margin-top:96px}
+.page-municipalities .municipality-picker{scroll-margin-top:90px}
+
+/* ピッカー上部：検索および選択中ステータス */
+.municipality-picker-head{display:flex;flex-direction:column;gap:16px;margin-bottom:20px}
+.municipality-current-status{padding:14px 18px;background:linear-gradient(135deg,#f0fdfa 0%,#e6fcf5 100%);border:2px solid #0d9488;border-left:6px solid #0f766e;border-radius:10px;box-shadow:0 4px 12px rgba(13,148,136,.12);transition:all .25s ease}
+.status-indicator{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.status-indicator-badge{display:inline-flex;align-items:center;padding:4px 10px;background:#0f766e;color:#fff;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.04em;flex-shrink:0}
+.status-indicator-body{flex:1 1 240px}
+.status-indicator-title{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.status-indicator-name{font-size:24px;font-weight:900;color:#134e4a;line-height:1.2}
+.status-indicator-meta{font-size:13px;font-weight:700;color:#0f766e}
+.status-indicator-hint{margin:4px 0 0;font-size:12px;color:#3d6761}
+.status-indicator-jump-btn{display:inline-flex;align-items:center;gap:6px;min-height:42px;padding:8px 16px;border:2px solid #0f766e;border-radius:8px;background:#0f766e;color:#fff;font-family:inherit;font-size:13.5px;font-weight:900;cursor:pointer;box-shadow:0 2px 6px rgba(15,118,110,.25);transition:all .2s ease;white-space:nowrap}
+.status-indicator-jump-btn:hover{background:#115e59;border-color:#115e59;transform:translateY(-1px);box-shadow:0 4px 10px rgba(15,118,110,.35)}
+.status-jump-arrow{font-size:15px;font-weight:900}
+
+/* 自治体ボタンの選択状態（active）の圧倒的強調 */
+.page-municipalities #municipalityPickerList button{position:relative;border-radius:8px!important;transition:all .18s ease!important}
+.page-municipalities #municipalityPickerList button:hover{border-color:#0d7b6e!important;background:#eef7f5!important;transform:translateY(-1px)}
+.page-municipalities #municipalityPickerList button.active{background:linear-gradient(135deg,#0d7b6e 0%,#064e46 100%)!important;color:#fff!important;border-color:#0d7b6e!important;box-shadow:0 4px 14px rgba(13,123,110,.38),inset 0 0 0 2px #34d399!important;transform:translateY(-2px);z-index:2}
+.page-municipalities #municipalityPickerList button.active span::before{content:"✓ ";font-weight:900;color:#a7f3d0;margin-right:4px}
+.page-municipalities #municipalityPickerList button.active b{background:rgba(255,255,255,.24)!important;color:#fff!important;padding:3px 8px;border-radius:999px;font-weight:900}
+
+/* ピッカー下部誘導フッター */
+.municipality-picker-footer{margin-top:18px;padding-top:16px;border-top:1.5px dashed #bfd5cf}
+.picker-footer-card{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:12px 18px;border-radius:8px;background:#f4f8f6;border:1.5px solid #c8dbd5}
+.picker-footer-text{font-size:14px;color:#274740}
+.picker-footer-text b{font-size:18px;color:#0d675c;margin:0 3px}
+.picker-footer-text small{font-size:12px;color:#5c746e}
+.picker-footer-btn{display:inline-flex;align-items:center;min-height:40px;padding:8px 16px;border:2px solid #0d7b6e;border-radius:8px;background:#fff;color:#0d7b6e;font-family:inherit;font-size:13.5px;font-weight:900;cursor:pointer;transition:all .2s ease}
+.picker-footer-btn:hover{background:#0d7b6e;color:#fff;transform:translateY(-1px)}
+
+/* 詳細ヘッダー内：タイトル・クイックセレクター */
+.municipality-detail-main-header{flex:1 1 auto}
+.municipality-detail-badge-row{display:flex;align-items:center;gap:8px}
+.municipality-detail-kicker{margin:0;color:#cce9e3;font-size:13px;font-weight:700}
+.municipality-detail-active-pill{display:inline-flex;align-items:center;padding:2px 8px;background:#34d399;color:#064e46;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.03em}
+.municipality-detail-title-group{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:6px 0}
+.municipality-detail-title-group h3{margin:0!important;color:#fff!important;font-size:40px!important;line-height:1.15!important}
+.municipality-quick-switcher{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:8px;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.3)}
+.municipality-quick-switcher label{font-size:12px;color:#e6f4f1;font-weight:700;white-space:nowrap}
+.municipality-quick-select{padding:6px 10px;border:1.5px solid #fff;border-radius:6px;background:#fff;color:#0d675c;font-family:inherit;font-size:13px;font-weight:900;cursor:pointer}
+.btn-back-to-picker{padding:6px 10px;border:1px solid rgba(255,255,255,.5);border-radius:6px;background:transparent;color:#fff;font-family:inherit;font-size:12px;font-weight:800;cursor:pointer;transition:all .2s ease;white-space:nowrap}
+.btn-back-to-picker:hover{background:rgba(255,255,255,.25)}
+
+/* ヘッダー切り替えアニメーション */
+@keyframes municipalityHeaderPulse{0%{transform:scale(0.988);box-shadow:0 0 0 6px rgba(52,211,153,.6)}50%{transform:scale(1.008);box-shadow:0 0 28px rgba(52,211,153,.7)}100%{transform:scale(1);box-shadow:8px 8px 0 #d9e7e3}}
+.page-municipalities .municipality-detail>header.just-switched{animation:municipalityHeaderPulse .7s cubic-bezier(0.16,1,0.3,1)}
+
+@media(max-width:800px){
+  .municipality-detail-title-group{flex-direction:column;align-items:flex-start;gap:10px}
+  .municipality-quick-switcher{width:100%;flex-wrap:wrap}
+  .municipality-quick-select{flex:1 1 160px}
+  .status-indicator{flex-direction:column;align-items:flex-start}
+  .status-indicator-jump-btn{width:100%;justify-content:center}
+  .picker-footer-card{flex-direction:column;align-items:flex-start}
+  .picker-footer-btn{width:100%;justify-content:center}
+}
+
 /* 建設型応急住宅：整備規模から団地・時系列・相談先へ読み進める */
 .temporary-housing-page{background:#f6f8f5;color:var(--org-deep)}
 .th-hero{padding:clamp(70px,9vw,120px) 24px;background:linear-gradient(135deg,#123f38 0%,#176d62 68%,#288c7e 100%);color:#fff}
