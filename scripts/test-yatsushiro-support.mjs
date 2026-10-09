@@ -9,30 +9,33 @@ const items = [...html.matchAll(/<li><b>/g)].length;
 const detailCards = [...html.matchAll(/<details(?: open)?>/g)].length;
 
 assert.equal(cards, 7, '7分野で整理してください');
-assert.equal(items, 54, '第7版の全54制度を掲載してください');
-assert.equal(detailCards, 13, '条件の多い主要制度を13カードで詳しく説明してください');
+assert.equal(items, 58, '第8版の全58制度を掲載してください');
+assert.equal(detailCards, 15, '条件の多い主要制度を15カードで詳しく説明してください');
 
-const sourcePageLinks = [...html.matchAll(/160146_up_l7vhrdbl\.pdf#page=(\d+)/g)].map(match => Number(match[1]));
-assert.equal(sourcePageLinks.length, 54, '全54制度からPDF該当ページへリンクしてください');
-assert.equal(new Set(sourcePageLinks).size, 51, 'PDF内の実ページ対応が不正です');
+const sourcePageLinks = [...html.matchAll(/161072_up_eh14ogek\.pdf#page=(\d+)/g)].map(match => Number(match[1]));
+assert.equal(sourcePageLinks.length, 58, '全58制度からPDF該当ページへリンクしてください');
+assert.equal(new Set(sourcePageLinks).size, 57, 'PDF内の実ページ対応が不正です');
 assert.deepEqual(sourcePageLinks.slice(0, 4), [7, 8, 9, 10], '先頭制度のPDFページが不正です');
-assert.deepEqual(sourcePageLinks.slice(-4), [59, 60, 61, 62], '末尾制度のPDFページが不正です');
+assert.deepEqual(sourcePageLinks.slice(-4), [68, 69, 70, 71], '末尾制度のPDFページが不正です');
 
 for (const value of [
-  '2026年9月21日現在',
-  '第7版',
+  '2026年10月9日現在',
+  '第8版',
+  '10月16日',
   '10月27日',
-  '9月25日 16時',
-  '10月8日',
-  '9月28日',
+  'くまもと事業者再出発支援補助金',
+  '小規模事業者持続化補助金',
+  '利子補給',
+  '就学援助',
+  '被災住宅相談会',
   '建物の解体・撤去',
   '公費解体',
-  '特別行政相談所',
   '営農再開ワンストップ窓口',
   '最大75万7千円',
   '最大36万7千円',
   '5万6,400円',
   '300万円',
+  '3億円',
   '単身 5.5万円',
   '5人以上 13万円',
   '2027年8月27日',
@@ -41,7 +44,7 @@ for (const value of [
   '33-4401',
   '33-4122',
   '37-7550',
-  '160146_up_l7vhrdbl.pdf',
+  '161072_up_eh14ogek.pdf',
   '活用できる方',
   '制度の内容',
   '注意事項',

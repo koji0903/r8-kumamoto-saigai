@@ -141,7 +141,7 @@ console.log('宇城市・氷川町・八代市・熊本市 暮らしの支援・
   assert.ok(html.includes('八代市出産祝金（市独自）'), '八代市：出産祝金がありません');
   assert.ok(html.includes('八代産材利用促進事業補助金'), '八代市：八代産材補助がありません');
   assert.ok(html.includes('八代市創業支援事業補助金'), '八代市：創業支援補助がありません');
-  assert.ok(html.includes('八代市 被災者応援ガイドブック（第7版連携）'), '八代市：被災者応援第7版連携がありません');
+  assert.ok(html.includes('八代市 被災者応援ガイドブック（第8版連携）'), '八代市：被災者応援第8版連携がありません');
   assert.ok(html.includes('セーフティネット保証4号（中小企業支援）'), '八代市：セーフティネット4号がありません');
 
   assert.ok(html.includes('class="uto-sup-hero-inner"'), '八代市：ヒーロー内の幅制限がありません');

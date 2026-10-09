@@ -626,11 +626,11 @@ SYSTEMS = [
     {
         "cat": "disaster",
         "catName": "熊本地震特別支援",
-        "badge": "被災者応援ガイド第7版・全54制度",
-        "title": "八代市 被災者応援ガイドブック（第7版連携）",
-        "amount": "全54制度の対象・金額・期限・条件・相談先を完全網羅",
-        "desc": "八代市が令和8年9月21日に発行した「被災者応援ガイドブック第7版」全62ページを読み解き、住家判定や困りごとから探せるよう整理した専用ガイドです。",
-        "extra": "緊急修理の期限延長（10/27まで）や公費解体受付（9/28〜）、特別行政相談所（10/8）などの最新情報を網羅しています。",
+        "badge": "被災者応援ガイド第8版・全58制度",
+        "title": "八代市 被災者応援ガイドブック（第8版連携）",
+        "amount": "全58制度の対象・金額・期限・条件・相談先を完全網羅",
+        "desc": "八代市が令和8年10月9日に発行した「被災者応援ガイドブック第8版」全65ページを読み解き、住家判定や困りごとから探せるよう整理した専用ガイドです。",
+        "extra": "緊急修理の期限延長（10/27まで）や公費解体受付（9/28〜）、再出発支援補助金（上限3億円）や持続化補助金（10/16締切）、利子補給事業、就学援助、税減免受付などの最新情報を網羅しています。",
         "dept": "生活援護課 支援給付係",
         "phone": "0965-33-8722",
         "url": "yatsushiro-support.html",
@@ -642,7 +642,7 @@ SYSTEMS = [
         "income": ["no_limit"],
         "disaster": ["damage_heavy", "damage_half", "damage_partial"],
         "work": ["all"],
-        "tags": ["#被災者応援ガイド", "#第7版", "#全54制度", "#総合まとめ"]
+        "tags": ["#被災者応援ガイド", "#第8版", "#全58制度", "#総合まとめ"]
     },
     {
         "cat": "disaster",
@@ -779,7 +779,7 @@ CATEGORIES = [
     {"id": "senior", "name": "シニア・障がい福祉", "icon": "🤝", "desc": "高齢者住宅改修費給付、福祉タクシー利用助成、配食見守り、介護保険住宅改修"},
     {"id": "migration", "name": "移住・新婚・地域", "icon": "🌸", "desc": "移住定住補助金（最大50万）、結婚新生活支援（最大60万）、移住支援金（100万）"},
     {"id": "business", "name": "産業・農業・創業", "icon": "💼", "desc": "創業支援補助金、中小企業融資・利子補給、新規就農定着支援"},
-    {"id": "disaster", "name": "熊本地震特別支援", "icon": "🆘", "desc": "第7版全54制度、公費解体、緊急修理、応急修理、支援金、災害援護資金、セーフティネット"}
+    {"id": "disaster", "name": "熊本地震特別支援", "icon": "🆘", "desc": "第7版全58制度、公費解体、緊急修理、応急修理、支援金、災害援護資金、セーフティネット"}
 ]
 
 def generate_html():
@@ -793,18 +793,18 @@ def generate_html():
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>八代市：暮らしの支援・補助金 総合ガイド（住まい・子育て・健康・福祉・産業）｜よか隊ネット熊本</title>
-  <meta name="description" content="八代市の公式制度・補助金を網羅した総合ガイド。住まい（八代産材利用・耐震）、子育て（高校生医療費・0〜5歳児保育料の完全無償化）、シニア福祉、移住新婚、創業から被災者応援ガイドブック第7版など令和8年熊本地震特別支援まで、条件シミュレーターで活用できる制度を即座に探せます。">
+  <meta name="description" content="八代市の公式制度・補助金を網羅した総合ガイド。住まい（八代産材利用・耐震）、子育て（高校生医療費・0〜5歳児保育料の完全無償化）、シニア福祉、移住新婚、創業から被災者応援ガイドブック第8版など令和8年熊本地震特別支援まで、条件シミュレーターで活用できる制度を即座に探せます。">
   <link rel="stylesheet" href="styles.css?v=20260907-2">
   <link rel="stylesheet" href="design-system.css?v=20260907-2">
   <link rel="stylesheet" href="org-site.css?v=20260918-1">
-  <link rel="stylesheet" href="yatsushiro-living-support.css?v=20260921-2">
+  <link rel="stylesheet" href="yatsushiro-living-support.css?v=20261009-1">
   <link rel="canonical" href="https://www.yokatainet.jp/yatsushiro-living-support.html">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="よか隊ネット熊本　災害・支援状況レポート">
   <meta property="og:title" content="八代市：暮らしの支援・補助金 総合ガイド（住まい・子育て・健康・福祉・産業）">
-  <meta property="og:description" content="八代市の公式制度・補助金を網羅した総合ガイド。住まい（八代産材利用・耐震）、子育て（高校生医療費・0〜5歳児保育料の完全無償化）、シニア福祉、移住新婚、創業から被災者応援ガイドブック第7版など令和8年熊本地震特別支援まで、条件シミュレーターで活用できる制度を即座に探せます。">
+  <meta property="og:description" content="八代市の公式制度・補助金を網羅した総合ガイド。住まい（八代産材利用・耐震）、子育て（高校生医療費・0〜5歳児保育料の完全無償化）、シニア福祉、移住新婚、創業から被災者応援ガイドブック第8版など令和8年熊本地震特別支援まで、条件シミュレーターで活用できる制度を即座に探せます。">
   <meta property="og:url" content="https://www.yokatainet.jp/yatsushiro-living-support.html">
   <meta property="og:image" content="https://www.yokatainet.jp/ogp-yatsushiro-living-support.png">
   <meta property="og:image:secure_url" content="https://www.yokatainet.jp/ogp-yatsushiro-living-support.png">
@@ -814,7 +814,7 @@ def generate_html():
   <meta property="og:image:alt" content="八代市：暮らしの支援・補助金 総合ガイド（住まい・子育て・健康・福祉・産業）｜よか隊ネット熊本　災害・支援状況レポート">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="八代市：暮らしの支援・補助金 総合ガイド（住まい・子育て・健康・福祉・産業）">
-  <meta name="twitter:description" content="八代市の公式制度・補助金を網羅した総合ガイド。住まい（八代産材利用・耐震）、子育て（高校生医療費・0〜5歳児保育料の完全無償化）、シニア福祉、移住新婚、創業から被災者応援ガイドブック第7版など令和8年熊本地震特別支援まで、条件シミュレーターで活用できる制度を即座に探せます。">
+  <meta name="twitter:description" content="八代市の公式制度・補助金を網羅した総合ガイド。住まい（八代産材利用・耐震）、子育て（高校生医療費・0〜5歳児保育料の完全無償化）、シニア福祉、移住新婚、創業から被災者応援ガイドブック第8版など令和8年熊本地震特別支援まで、条件シミュレーターで活用できる制度を即座に探せます。">
   <meta name="twitter:image" content="https://www.yokatainet.jp/ogp-yatsushiro-living-support.png">
 </head>
 <body class="organization-site yatsushiro-living-support-page">
@@ -840,7 +840,7 @@ def generate_html():
         <h1>八代市 暮らしの支援・補助金 総合ガイド</h1>
         <p class="uto-sup-hero-lead">
           八代市にお住まいの皆さまが活用できる、平時からの主要な支援制度・補助金と、令和8年熊本地震の特別支援を体系的に整理しました。<br>
-          「あなたの現在の状況」を選択して、活用できる制度をお探しいただけます。掲載制度には八代市公式情報へのリンクと担当窓口を記載しています。掲載内容は令和8年9月21日改定の八代市「被災者応援ガイドブック第7版」および最新公式案内を確認したものです。
+          「あなたの現在の状況」を選択して、活用できる制度をお探しいただけます。掲載制度には八代市公式情報へのリンクと担当窓口を記載しています。掲載内容は令和8年10月9日改定の八代市「被災者応援ガイドブック第8版」および最新公式案内を確認したものです。
         </p>
       </div>
     </header>
@@ -851,10 +851,10 @@ def generate_html():
       <!-- 被災者専用ガイドとの連携バナー -->
       <aside class="uto-sup-banner" aria-labelledby="yatsushiro-banner-title">
         <span class="uto-sup-banner-tag">熊本地震被災者支援連携</span>
-        <h2 id="yatsushiro-banner-title">令和8年熊本地震「被災者応援ガイドブック第7版」を詳しく見たい方へ</h2>
-        <p>八代市が令和8年9月21日に発行した第7版・全54制度の対象・金額・窓口や公費解体受付（9/28〜）、緊急修理期限延長（10/27まで）など、災害特化の解説は専用ページをご覧ください。</p>
+        <h2 id="yatsushiro-banner-title">令和8年熊本地震「被災者応援ガイドブック第8版」を詳しく見たい方へ</h2>
+        <p>八代市が令和8年10月9日に発行した第8版・全58制度の対象・金額・窓口や公費解体受付（9/28〜）、緊急修理期限延長（10/27まで）など、災害特化の解説は専用ページをご覧ください。</p>
         <ul class="uto-sup-banner-points">
-          <li><strong>被災者応援ガイドブック第7版：</strong>令和8年9月21日改定・全54制度の支援メニューを完全網羅</li>
+          <li><strong>被災者応援ガイドブック第8版：</strong>令和8年10月9日改定・全58制度の支援メニューを完全網羅</li>
           <li><strong>公費解体・自費解体受付：</strong>半壊以上の住家等を市が解体撤去（事前予約：0965-37-7550）</li>
           <li><strong>緊急修理・応急修理：</strong>ブルーシート展張等の完了報告は10月27日まで延長、応急修理最大75.7万円</li>
         </ul>
@@ -1103,7 +1103,7 @@ def generate_html():
             <span>自治体独自メリット・お得な制度連携</span>
           </div>
           <h2 id="yatsushiro-hl-title">知っておきたい！八代市の制度連携・独自メリット</h2>
-          <p class="uto-sup-hl-sub">全国屈指の手厚い子育て支援策や、豊富な森林資源を活かした独自助成、そして最新の被災者応援ガイド第7版との連携など、八代市独自の強みを活かせます。</p>
+          <p class="uto-sup-hl-sub">全国屈指の手厚い子育て支援策や、豊富な森林資源を活かした独自助成、そして最新の被災者応援ガイド第8版との連携など、八代市独自の強みを活かせます。</p>
         </div>
         <div class="uto-sup-hl-grid">
           <div class="uto-sup-hl-item">
@@ -1127,8 +1127,8 @@ def generate_html():
               <span class="hl-point-label">Point 03</span>
               <span class="hl-badge">最新被災者支援連携</span>
             </div>
-            <h3>被災者応援ガイドブック「第7版」全54制度との連携</h3>
-            <p>令和8年9月21日改定の「第7版」全54制度（住家の緊急修理期限延長、公費解体受付、生活再建支援金など）を網羅。平時の補助金と被災特別支援をひとつの画面でスムーズに見比べられます。</p>
+            <h3>被災者応援ガイドブック「第7版」全58制度との連携</h3>
+            <p>令和8年10月9日改定の「第7版」全58制度（住家の緊急修理期限延長、公費解体受付、生活再建支援金など）を網羅。平時の補助金と被災特別支援をひとつの画面でスムーズに見比べられます。</p>
           </div>
         </div>
       </section>
@@ -1152,7 +1152,7 @@ def generate_html():
       <!-- 検索結果件数表示 -->
       <div class="uto-sup-status">
         <span id="utoSupCount">表示中：{total_count}件 / 主要{total_count}制度</span>
-        <span class="uto-sup-status-source">確認日：2026年9月21日／情報源：八代市公式HP・応援ガイド第7版等</span>
+        <span class="uto-sup-status-source">確認日：2026年10月9日／情報源：八代市公式HP・応援ガイド第7版等</span>
       </div>
 
       <aside class="uto-sup-caution" role="note">
@@ -1264,7 +1264,7 @@ def generate_html():
           </div>
         </div>
         <p style="margin-top:20px; font-size:0.875rem; color:#64748b;">
-          関連リンク：<a href="https://www.city.yatsushiro.lg.jp/" target="_blank" rel="noopener">八代市公式ホームページ ↗</a> · <a href="yatsushiro-support.html">八代市 被災者応援ガイドブック第7版</a> · <a href="yatsushiro-rebuild.html">八代市 生活再建支援金ガイド</a> · <a href="yatsushiro-loan.html">八代市 災害援護資金貸付ガイド</a> · <a href="yatsushiro-safetynet4.html">八代市 セーフティネット保証4号ガイド</a> · <a href="municipalities.html">自治体別支援情報へ戻る</a>
+          関連リンク：<a href="https://www.city.yatsushiro.lg.jp/" target="_blank" rel="noopener">八代市公式ホームページ ↗</a> · <a href="yatsushiro-support.html">八代市 被災者応援ガイドブック第8版</a> · <a href="yatsushiro-rebuild.html">八代市 生活再建支援金ガイド</a> · <a href="yatsushiro-loan.html">八代市 災害援護資金貸付ガイド</a> · <a href="yatsushiro-safetynet4.html">八代市 セーフティネット保証4号ガイド</a> · <a href="municipalities.html">自治体別支援情報へ戻る</a>
         </p>
       </section>
 
@@ -1272,7 +1272,7 @@ def generate_html():
   </main>
   <footer class="site-footer"></footer>
   <script src="org-site.js?v=20260907-2"></script>
-  <script src="yatsushiro-living-support.js?v=20260921-2"></script>
+  <script src="yatsushiro-living-support.js?v=20261009-1"></script>
 </body>
 </html>
 ''')
