@@ -37,6 +37,10 @@
   const fCount = document.getElementById("fCount");
   const fActive = document.getElementById("fActive");
   const fEmpty = document.getElementById("fEmpty");
+  const fJumpToList = document.getElementById("fJumpToList");
+  const fJumpLabel = document.getElementById("fJumpLabel");
+  const fJumpCount = document.getElementById("fJumpCount");
+  const fResultBox = document.querySelector(".uh-finder-result");
   const quickButtons = [...document.querySelectorAll(".uh-quick")];
 
   // 原本の印刷ページとPDFビューア上のページを対応させる。
@@ -167,7 +171,34 @@
     if (onlyNoapply) chips.push("申請不要");
     if (fSearch.value.trim()) chips.push(`「${fSearch.value.trim()}」`);
     fActive.textContent = chips.length ? `（${chips.join(" / ")}）` : "";
+
+    if (fJumpToList) {
+      fJumpToList.hidden = shown === 0;
+      if (fResultBox) {
+        if (chips.length > 0) {
+          fResultBox.classList.add("has-filter");
+          if (fJumpLabel) fJumpLabel.innerHTML = `該当する制度を見る（<span id="fJumpCount">${shown}</span>件）`;
+        } else {
+          fResultBox.classList.remove("has-filter");
+          if (fJumpLabel) fJumpLabel.innerHTML = `全制度一覧を見る（<span id="fJumpCount">${shown}</span>件）`;
+        }
+      }
+    }
   };
+
+  if (fJumpToList) {
+    fJumpToList.addEventListener("click", () => {
+      const firstSection = sections.find(s => !s.hidden) || list;
+      const headerOffset = 90;
+      const elementPosition = firstSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({
+        top: Math.max(0, offsetPosition),
+        behavior: reduceMotion ? "auto" : "smooth"
+      });
+    });
+  }
 
   for (const el of [fDamage, fCat, fType, fWho, fDeadline, fNoapply]) {
     el.addEventListener("change", apply);

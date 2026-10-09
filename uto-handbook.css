@@ -382,9 +382,76 @@
 .uh-toggle input { width: 18px; height: 18px; accent-color: var(--uh-main); }
 .uh-toggle input:focus-visible { outline: 3px solid var(--uh-main); outline-offset: 2px; }
 
-.uh-finder-result { margin-top: 14px; font-size: 15px; color: var(--uh-slate); }
-.uh-finder-result b { font-size: 22px; font-weight: 900; color: var(--uh-main); }
-.uh-finder-result span { font-size: 13.5px; color: var(--uh-muted); }
+.uh-finder-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--uh-border);
+}
+.uh-finder-result-info p { margin: 0; font-size: 15px; color: var(--uh-slate); }
+.uh-finder-result-info b { font-size: 24px; font-weight: 900; color: var(--uh-main); }
+.uh-finder-result-info span { font-size: 13.5px; color: var(--uh-muted); }
+.uh-btn-jump-list {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 10px 22px;
+  border: 2px solid var(--uh-main);
+  border-radius: 999px;
+  background: var(--uh-main);
+  color: #fff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(13, 123, 110, 0.25);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.uh-btn-jump-list:hover {
+  background: var(--uh-dark);
+  border-color: var(--uh-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(13, 123, 110, 0.35);
+}
+.uh-btn-jump-list .uh-jump-arrow {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+.uh-btn-jump-list:hover .uh-jump-arrow {
+  transform: translateY(2px);
+}
+.uh-finder-result.has-filter .uh-btn-jump-list {
+  background: linear-gradient(135deg, #0d7b6e 0%, #064e46 100%);
+  border-color: #064e46;
+  box-shadow: 0 4px 14px rgba(13, 123, 110, 0.35);
+  animation: uhJumpBtnPulse 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes uhJumpBtnPulse {
+  0% { transform: scale(0.96); box-shadow: 0 0 0 4px rgba(13, 123, 110, 0.4); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+@media (max-width: 680px) {
+  .uh-finder-result {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .uh-btn-jump-list {
+    width: 100%;
+    min-height: 50px;
+    font-size: 16px;
+  }
+}
 
 .uh-empty {
   margin-top: 18px;
