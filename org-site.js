@@ -216,7 +216,7 @@
     const main=document.querySelector('main');
     if(!main)return;
     const candidates=[...main.querySelectorAll(':scope > section, :scope > .policy-content, :scope > nav.reading-set')].filter(section=>{
-      if(section.matches('[aria-live]'))return false;
+      if(section.matches('[aria-live]')||section.matches('.ys-catalog'))return false;
       return section.getBoundingClientRect().height>0;
     });
     document.documentElement.dataset.motion='enabled';
@@ -224,7 +224,7 @@
       if(!entry.isIntersecting)return;
       entry.target.classList.add('is-revealed');
       observer.unobserve(entry.target);
-    }),{rootMargin:'0px 0px -5% 0px',threshold:.04});
+    }),{rootMargin:'0px 0px -5% 0px',threshold:0});
     candidates.forEach((section,sectionIndex)=>{
       section.classList.add('site-reveal');
       if(motionPreset!=='subtle'){
@@ -233,6 +233,23 @@
       }
       if(sectionIndex===0&&section.getBoundingClientRect().top<innerHeight*.9)requestAnimationFrame(()=>requestAnimationFrame(()=>section.classList.add('is-revealed')));
       else observer.observe(section);
+    });
+    const revealTarget=(hash)=>{
+      if(!hash)return;
+      const target=document.querySelector(hash);
+      if(target){
+        const sec=target.closest('.site-reveal')||(target.classList.contains('site-reveal')?target:null);
+        if(sec){
+          sec.classList.add('is-revealed');
+          observer.unobserve(sec);
+        }
+      }
+    };
+    if(location.hash)revealTarget(location.hash);
+    window.addEventListener('hashchange',()=>revealTarget(location.hash));
+    document.addEventListener('click',e=>{
+      const a=e.target.closest('a[href^="#"]');
+      if(a)revealTarget(a.getAttribute('href'));
     });
   };
   setupSiteMotion();

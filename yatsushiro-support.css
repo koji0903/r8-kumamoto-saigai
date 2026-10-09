@@ -18,4 +18,5 @@
 .ys-card-val a{color:#0284c7;font-weight:800;text-decoration:none}
 .ys-card-val a:hover{text-decoration:underline}
 #catalog,#check,#deadlines,#key-support,#eligibility-details,#updates{scroll-margin-top:85px}
+.ys-catalog,[data-motion="enabled"] body:not([data-motion-preset="none"]) .ys-catalog.site-reveal{opacity:1!important;transform:none!important}
 @media(max-width:650px){.ys-card-row{flex-direction:column;gap:3px}.ys-card-label{align-self:flex-start;padding:2px 8px}#catalog,#check,#deadlines,#key-support,#eligibility-details,#updates{scroll-margin-top:72px}}
