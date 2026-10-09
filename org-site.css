@@ -512,6 +512,15 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
 .municipality-hub-group a.municipality-hub-biz i{display:inline-flex!important;align-items:center!important;gap:4px!important;width:fit-content!important;margin-top:6px!important;padding:6px 14px!important;background:#b45309!important;color:#fff!important;border-radius:6px!important;font-size:12px!important;font-weight:900!important;box-shadow:0 2px 6px rgba(180,83,9,.25)!important}
 .municipality-hub-group a.municipality-hub-biz:hover i{background:#92400e!important}
 
+/* 被災者支援制度ハンドブック・総合ガイド 目立つボタンスタイル */
+.municipality-hub-group a.municipality-hub-handbook{display:grid!important;gap:5px!important;padding:15px 16px!important;background:linear-gradient(135deg,#f0fdfa 0%,#ccfbf1 100%)!important;border:2px solid #0d9488!important;border-left:6px solid #0f766e!important;border-radius:10px!important;box-shadow:0 4px 14px rgba(13,148,136,.18)!important;color:#134e4a!important;text-decoration:none!important;transition:all .2s ease!important}
+.municipality-hub-group a.municipality-hub-handbook:hover{background:linear-gradient(135deg,#ccfbf1 0%,#99f6e4 100%)!important;border-color:#0f766e!important;border-left-color:#115e59!important;box-shadow:0 6px 20px rgba(13,148,136,.28)!important;transform:translateY(-2px)}
+.municipality-hub-group a.municipality-hub-handbook .hub-handbook-badge{display:inline-flex;align-items:center;gap:4px;width:fit-content;padding:3px 9px;background:#0f766e;color:#fff;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.02em}
+.municipality-hub-group a.municipality-hub-handbook b{color:#134e4a!important;font-size:16px!important;font-weight:900!important;line-height:1.4!important}
+.municipality-hub-group a.municipality-hub-handbook span{color:#0f766e!important;font-size:13px!important;line-height:1.55!important}
+.municipality-hub-group a.municipality-hub-handbook i{display:inline-flex!important;align-items:center!important;gap:4px!important;width:fit-content!important;margin-top:6px!important;padding:6px 14px!important;background:#0f766e!important;color:#fff!important;border-radius:6px!important;font-size:12px!important;font-weight:900!important;box-shadow:0 2px 6px rgba(15,118,110,.25)!important}
+.municipality-hub-group a.municipality-hub-handbook:hover i{background:#115e59!important}
+
 /* 建設型応急住宅：整備規模から団地・時系列・相談先へ読み進める */
 .temporary-housing-page{background:#f6f8f5;color:var(--org-deep)}
 .th-hero{padding:clamp(70px,9vw,120px) 24px;background:linear-gradient(135deg,#123f38 0%,#176d62 68%,#288c7e 100%);color:#fff}
