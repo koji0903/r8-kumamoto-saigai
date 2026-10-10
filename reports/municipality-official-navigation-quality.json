@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-10-10T00:57:54.481Z",
+  "generatedAt": "2026-10-10T17:23:03.991Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 904,
-  "displayCandidateCount": 639,
-  "classifiedPageCount": 740,
+  "inputCount": 907,
+  "displayCandidateCount": 643,
+  "classifiedPageCount": 744,
   "categoryReport": {
     "home": {
-      "total": 204,
-      "high": 78,
-      "medium": 79,
+      "total": 206,
+      "high": 79,
+      "medium": 80,
       "low": 47
     },
     "money": {
-      "total": 241,
+      "total": 243,
       "high": 56,
-      "medium": 62,
-      "low": 123
+      "medium": 63,
+      "low": 124
     },
     "documents": {
-      "total": 191,
+      "total": 192,
       "high": 44,
       "medium": 35,
-      "low": 112
+      "low": 113
     },
     "health_care": {
       "total": 81,
@@ -37,9 +37,9 @@
       "low": 35
     },
     "work_business": {
-      "total": 71,
-      "high": 16,
-      "medium": 55,
+      "total": 73,
+      "high": 17,
+      "medium": 56,
       "low": 0
     },
     "agriculture_fishery": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 110,
-      "displayCandidates": 94,
+      "classified": 112,
+      "displayCandidates": 96,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -117,8 +117,8 @@
       "fallback": true
     },
     "municipality_kikuyo": {
-      "classified": 17,
-      "displayCandidates": 11,
+      "classified": 18,
+      "displayCandidates": 12,
       "fallback": true
     },
     "municipality_nishihara": {
@@ -132,8 +132,8 @@
       "fallback": true
     },
     "municipality_kashima": {
-      "classified": 24,
-      "displayCandidates": 21,
+      "classified": 25,
+      "displayCandidates": 22,
       "fallback": true
     },
     "municipality_mashiki": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 279,
-    "medium": 360,
+    "high": 281,
+    "medium": 362,
     "low": 101
   },
   "unclassifiedCount": 5,
@@ -195,7 +195,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 121,
+  "outOfScopeCount": 120,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "hq_meeting_material": 51,
@@ -206,7 +206,7 @@
     "assembly_petition": 1,
     "mayor_message": 2,
     "overall_guide": 5,
-    "index_page": 15,
+    "index_page": 14,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 3,
@@ -875,15 +875,8 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月9日 令和8年熊本地震 関連情報 （10月9日8時00分更新）",
+      "title": "2026年10月10日 令和8年熊本地震 関連情報 （10月10日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "宇城市",
-      "title": "2026年10月09日 令和8年熊本地震 関連情報 （10月9日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -1129,7 +1122,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 7
+      "count": 8
     },
     {
       "code": "HTTP_404_CANDIDATE",
