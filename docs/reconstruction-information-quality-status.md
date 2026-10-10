@@ -1,6 +1,6 @@
 # 暮らしの再建 情報品質ステータス
 
-最終監査日時: 2026-08-12（データ生成: 2026-10-10T17:23:03.991Z）
+最終監査日時: 2026-08-12（データ生成: 2026-10-10T21:51:01.982Z）
 
 > 件数の少なさは支援の少なさを意味しません。自治体の発信方法・ページ構造・更新頻度の差として扱います。A/B/Cは品質状態であり自治体評価ではありません。
 
@@ -141,7 +141,7 @@ A=自治体個別公式情報あり、B=国・県等の広域情報のみ、C=�
 - LEVEL 2公式リンクの変更は正常。LEVEL 1 verified sourceのhash変更は`needs_review`へ送る。
 - verified source変更: 6件
 - needs_review entity: 0件
-- 未解決source変更: 75件（ACTION_REQUIRED 38件）
+- 未解決source変更: 76件（ACTION_REQUIRED 38件）
 - review queue: `docs/reconstruction-source-review-queue.md`（高リスク順）
 - refreshは自治体別errorsを保持し、空データ・fallback欠落・非公式URLをfailureにする。
 - 1自治体失敗時も既存データを空上書きしない設計を維持。生成は一時ファイルからrenameし、検証不合格時は公開しない。
