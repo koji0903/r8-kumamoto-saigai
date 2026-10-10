@@ -10,6 +10,11 @@ const excluded = new Set(["404.html"]);
 // ページ専用のOGP画像。python3 tools/build-ogp-images.py で作る。
 // ここに足したら画像も作ること（scripts/test-ogp.mjs が実体を確認する）。
 const specialImages = new Map([
+  ["demolition.html", "/ogp-demolition.png"],
+  ["yatsushiro-demolition.html", "/ogp-yatsushiro-demolition.png"],
+  ["uto-demolition.html", "/ogp-uto-demolition.png"],
+  ["uki-demolition.html", "/ogp-uki-demolition.png"],
+  ["kumamoto-demolition.html", "/ogp-kumamoto-demolition.png"],
   ["uto-public-services.html", "/ogp-uto-public-services.png"],
   ["uto-handbook.html", "/ogp-uto-handbook.png"],
   ["uki-einou-saikai.html", "/ogp-uki-einou-saikai.png"],
