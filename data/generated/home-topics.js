@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-09T18:45:46.964Z",
-  "officialCheckedAt": "10/10 03:45",
+  "retrievedAt": "2026-10-10T01:18:18.170Z",
+  "officialCheckedAt": "10/10 10:18",
   "siteTopics": [
     {
       "date": "2026-10-09",
@@ -96,6 +96,14 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-10-10",
+      "time": "08:30",
+      "category": "その他",
+      "municipality": "八代市"
+    },
+    {
       "title": "【熊本地震】10月9日（土）～12日（月・祝）の窓口業務について",
       "url": "https://www.city.uto.lg.jp/article/view/1310/16528.html",
       "date": "2026-10-10",
@@ -118,14 +126,6 @@ window.HOME_TOPICS = {
       "time": "19:17",
       "category": "その他",
       "municipality": "熊本市"
-    },
-    {
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
-      "date": "2026-10-09",
-      "time": "16:50",
-      "category": "その他",
-      "municipality": "八代市"
     },
     {
       "title": "令和８年熊本地震における災害義援金の配分について",
