@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-10-10T21:51:01.982Z",
+  "generatedAt": "2026-10-11T05:58:21.614Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 907,
+  "inputCount": 906,
   "displayCandidateCount": 643,
   "classifiedPageCount": 744,
   "categoryReport": {
     "home": {
-      "total": 206,
+      "total": 205,
       "high": 79,
-      "medium": 80,
+      "medium": 79,
       "low": 47
     },
     "money": {
-      "total": 243,
-      "high": 56,
+      "total": 244,
+      "high": 57,
       "medium": 63,
       "low": 124
     },
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 281,
-    "medium": 362,
+    "high": 282,
+    "medium": 361,
     "low": 101
   },
   "unclassifiedCount": 5,
@@ -195,7 +195,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 120,
+  "outOfScopeCount": 119,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "hq_meeting_material": 51,
@@ -206,7 +206,7 @@
     "assembly_petition": 1,
     "mayor_message": 2,
     "overall_guide": 5,
-    "index_page": 14,
+    "index_page": 13,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 3,
@@ -875,7 +875,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月10日 令和8年熊本地震 関連情報 （10月10日8時00分更新）",
+      "title": "2026年10月11日 令和8年熊本地震 関連情報 （10月11日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -926,13 +926,6 @@
       "municipalityName": "美里町",
       "title": "令和8年熊本地震（7月28日発生）に関する情報（10月9日11時更新）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "大津町",
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（10月9日時点）",
-      "url": "https://www.town.ozu.kumamoto.jp/page/27698.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -1062,7 +1055,7 @@
     "non_official_url": 2,
     "past_disaster_excluded": 1
   },
-  "warningCount": 24,
+  "warningCount": 22,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1085,19 +1078,9 @@
       "count": 1
     },
     {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_kikuchi",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
       "count": 2
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_uto",
-      "message": "継続回数を確認後に表示除外を判断してください"
     },
     {
       "code": "RETRIEVAL_ISSUE",

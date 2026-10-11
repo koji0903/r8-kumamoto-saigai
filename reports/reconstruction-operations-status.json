@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-10T22:12:24.849Z",
+  "generatedAt": "2026-10-11T06:16:29.125Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-10T21:51:01.982Z",
-    "inputCount": 907,
+    "generatedAt": "2026-10-11T05:58:21.614Z",
+    "inputCount": 906,
     "classifiedPageCount": 744,
     "displayCandidateCount": 643,
     "deltaFromPrevious": {
-      "inputCount": 0,
+      "inputCount": -1,
       "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 8,
       "limitHours": 336
     }
   },
@@ -138,14 +138,14 @@
     },
     "categoryReport": {
       "home": {
-        "total": 206,
+        "total": 205,
         "high": 79,
-        "medium": 80,
+        "medium": 79,
         "low": 47
       },
       "money": {
-        "total": 243,
-        "high": 56,
+        "total": 244,
+        "high": 57,
         "medium": 63,
         "low": 124
       },
@@ -187,8 +187,8 @@
       }
     },
     "confidence": {
-      "high": 281,
-      "medium": 362,
+      "high": 282,
+      "medium": 361,
       "low": 101
     },
     "unclassifiedCount": 5,
@@ -285,19 +285,9 @@
       "count": 1
     },
     {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_kikuchi",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
       "count": 2
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_uto",
-      "message": "継続回数を確認後に表示除外を判断してください"
     },
     {
       "code": "RETRIEVAL_ISSUE",
