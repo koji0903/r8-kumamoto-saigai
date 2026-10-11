@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T05:58:21.614Z",
+  "generatedAt": "2026-10-11T13:03:24.150Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 906,
@@ -7,22 +7,22 @@
   "classifiedPageCount": 744,
   "categoryReport": {
     "home": {
-      "total": 205,
+      "total": 206,
       "high": 79,
-      "medium": 79,
+      "medium": 80,
       "low": 47
     },
     "money": {
-      "total": 244,
-      "high": 57,
+      "total": 243,
+      "high": 56,
       "medium": 63,
       "low": 124
     },
     "documents": {
-      "total": 192,
+      "total": 193,
       "high": 44,
       "medium": 35,
-      "low": 113
+      "low": 114
     },
     "health_care": {
       "total": 81,
@@ -37,9 +37,9 @@
       "low": 35
     },
     "work_business": {
-      "total": 73,
+      "total": 74,
       "high": 17,
-      "medium": 56,
+      "medium": 57,
       "low": 0
     },
     "agriculture_fishery": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 282,
-    "medium": 361,
+    "high": 281,
+    "medium": 362,
     "low": 101
   },
   "unclassifiedCount": 5,
@@ -875,7 +875,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月11日 令和8年熊本地震 関連情報 （10月11日8時00分更新）",
+      "title": "2026年10月11日 令和8年熊本地震 関連情報 （10月11日15時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -1055,7 +1055,7 @@
     "non_official_url": 2,
     "past_disaster_excluded": 1
   },
-  "warningCount": 22,
+  "warningCount": 24,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1078,9 +1078,19 @@
       "count": 1
     },
     {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_kikuchi",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
       "count": 2
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_uto",
+      "message": "継続回数を確認後に表示除外を判断してください"
     },
     {
       "code": "RETRIEVAL_ISSUE",
@@ -1105,7 +1115,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 8
+      "count": 7
     },
     {
       "code": "HTTP_404_CANDIDATE",
