@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-12T11:21:49.303Z",
+  "generatedAt": "2026-10-12T21:35:48.308Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-12T11:02:48.099Z",
-    "inputCount": 904,
-    "classifiedPageCount": 741,
-    "displayCandidateCount": 640,
+    "generatedAt": "2026-10-12T21:18:56.531Z",
+    "inputCount": 893,
+    "classifiedPageCount": 731,
+    "displayCandidateCount": 631,
     "deltaFromPrevious": {
-      "inputCount": -1,
-      "classifiedPageCount": -2,
-      "unclassifiedCount": 0
+      "inputCount": -11,
+      "classifiedPageCount": -10,
+      "unclassifiedCount": -1
     }
   },
   "freshness": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 111,
-        "displayCandidates": 95,
+        "classified": 112,
+        "displayCandidates": 96,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -76,8 +76,8 @@
         "fallback": true
       },
       "municipality_koshi": {
-        "classified": 12,
-        "displayCandidates": 11,
+        "classified": 1,
+        "displayCandidates": 1,
         "fallback": true
       },
       "municipality_misato": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 203,
+        "total": 201,
         "high": 77,
-        "medium": 79,
+        "medium": 77,
         "low": 47
       },
       "money": {
-        "total": 243,
-        "high": 56,
-        "medium": 63,
-        "low": 124
+        "total": 239,
+        "high": 54,
+        "medium": 62,
+        "low": 123
       },
       "documents": {
-        "total": 191,
+        "total": 188,
         "high": 44,
-        "medium": 35,
-        "low": 112
+        "medium": 33,
+        "low": 111
       },
       "health_care": {
         "total": 81,
@@ -168,30 +168,30 @@
         "low": 35
       },
       "work_business": {
-        "total": 74,
+        "total": 72,
         "high": 17,
-        "medium": 57,
+        "medium": 55,
         "low": 0
       },
       "agriculture_fishery": {
-        "total": 19,
-        "high": 5,
-        "medium": 14,
+        "total": 17,
+        "high": 4,
+        "medium": 13,
         "low": 0
       },
       "daily_life": {
-        "total": 214,
-        "high": 61,
-        "medium": 152,
+        "total": 211,
+        "high": 60,
+        "medium": 150,
         "low": 1
       }
     },
     "confidence": {
-      "high": 279,
-      "medium": 361,
-      "low": 101
+      "high": 275,
+      "medium": 356,
+      "low": 100
     },
-    "unclassifiedCount": 5,
+    "unclassifiedCount": 4,
     "excludedCount": 38,
     "overrideCount": 2
   },
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:d423208f1ef71b81db555603f6041496171d2cc6ce44d66dbd950953bd49551e",
+        "currentHash": "sha256:d71ecb91e157afd2e8906e8be0338f2d8be5432025f35be404537886103cd77c",
         "verificationStatus": "needs_review"
       }
     },
@@ -322,17 +322,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 6
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_koshi",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_koshi",
-      "count": 1
+      "count": 7
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -410,7 +400,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:d423208f1ef71b81db555603f6041496171d2cc6ce44d66dbd950953bd49551e",
+        "currentHash": "sha256:d71ecb91e157afd2e8906e8be0338f2d8be5432025f35be404537886103cd77c",
         "verificationStatus": "needs_review"
       },
       {

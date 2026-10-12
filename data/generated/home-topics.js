@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-12T11:21:27.822Z",
-  "officialCheckedAt": "10/12 20:21",
+  "retrievedAt": "2026-10-12T21:35:30.889Z",
+  "officialCheckedAt": "10/13 06:35",
   "siteTopics": [
     {
       "date": "2026-10-10",
@@ -96,6 +96,14 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "【令和8年熊本地震】被災住宅相談会が開催されます。",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/2634401",
+      "date": "2026-10-13",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "宇城市"
+    },
+    {
       "title": "避難所について（10/12 17:00更新）",
       "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
       "date": "2026-10-12",
@@ -110,14 +118,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "支援・制度",
       "municipality": "熊本市"
-    },
-    {
-      "title": "2026年10月12日 避難者数",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
-      "date": "2026-10-12",
-      "time": null,
-      "category": "避難・安全",
-      "municipality": "宇城市"
     },
     {
       "title": "熊本県八代市",
@@ -192,14 +192,6 @@ window.HOME_TOPICS = {
       "municipality": "御船町"
     },
     {
-      "title": "セーフティネット保証の認定手続きについて（令和8年熊本地震に係る4号情報追記）",
-      "url": "https://www.city.koshi.lg.jp/kiji00324042/index.html",
-      "date": "2026-10-07",
-      "time": "17:22",
-      "category": "その他",
-      "municipality": "合志市"
-    },
-    {
       "title": "「令和８年熊本地震災害義援金」の受付",
       "url": "https://www.city.yamaga.kumamoto.jp/kiji0033145/index.html",
       "date": "2026-10-07",
@@ -214,6 +206,14 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "交通",
       "municipality": "津奈木町"
+    },
+    {
+      "title": "西原村立保育所給食調理業務委託に係る公募型プロポーザルの実施について",
+      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032034/index.html",
+      "date": "2026-10-06",
+      "time": "09:30",
+      "category": "施設・学校",
+      "municipality": "西原村"
     }
   ],
   "prefectureUpdates": [

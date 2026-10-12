@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-10-12T11:02:48.099Z",
+  "generatedAt": "2026-10-12T21:18:56.531Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 904,
-  "displayCandidateCount": 640,
-  "classifiedPageCount": 741,
+  "inputCount": 893,
+  "displayCandidateCount": 631,
+  "classifiedPageCount": 731,
   "categoryReport": {
     "home": {
-      "total": 203,
+      "total": 201,
       "high": 77,
-      "medium": 79,
+      "medium": 77,
       "low": 47
     },
     "money": {
-      "total": 243,
-      "high": 56,
-      "medium": 63,
-      "low": 124
+      "total": 239,
+      "high": 54,
+      "medium": 62,
+      "low": 123
     },
     "documents": {
-      "total": 191,
+      "total": 188,
       "high": 44,
-      "medium": 35,
-      "low": 112
+      "medium": 33,
+      "low": 111
     },
     "health_care": {
       "total": 81,
@@ -37,21 +37,21 @@
       "low": 35
     },
     "work_business": {
-      "total": 74,
+      "total": 72,
       "high": 17,
-      "medium": 57,
+      "medium": 55,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 19,
-      "high": 5,
-      "medium": 14,
+      "total": 17,
+      "high": 4,
+      "medium": 13,
       "low": 0
     },
     "daily_life": {
-      "total": 214,
-      "high": 61,
-      "medium": 152,
+      "total": 211,
+      "high": 60,
+      "medium": 150,
       "low": 1
     }
   },
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 111,
-      "displayCandidates": 95,
+      "classified": 112,
+      "displayCandidates": 96,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -102,8 +102,8 @@
       "fallback": true
     },
     "municipality_koshi": {
-      "classified": 12,
-      "displayCandidates": 11,
+      "classified": 1,
+      "displayCandidates": 1,
       "fallback": true
     },
     "municipality_misato": {
@@ -163,21 +163,16 @@
     }
   },
   "confidence": {
-    "high": 279,
-    "medium": 361,
-    "low": 101
+    "high": 275,
+    "medium": 356,
+    "low": 100
   },
-  "unclassifiedCount": 5,
+  "unclassifiedCount": 4,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
       "title": "【令和8年熊本地震】NPO法人バルビーによる巡回訪問について",
       "url": "https://www.city.kumamoto.jp/kiji00373148/index.html"
-    },
-    {
-      "municipalityName": "熊本市",
-      "title": "令和8年熊本地震 熊本市震災復興計画（骨子案）に関するパブリックコメント（意見公募）について",
-      "url": "https://www.city.kumamoto.jp/kiji00373057/index.html"
     },
     {
       "municipalityName": "宇土市",
@@ -1062,7 +1057,7 @@
     "non_official_url": 2,
     "past_disaster_excluded": 1
   },
-  "warningCount": 24,
+  "warningCount": 22,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1122,17 +1117,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 6
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_koshi",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_koshi",
-      "count": 1
+      "count": 7
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1186,5 +1171,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 743
+  "previousClassifiedPageCount": 741
 }
