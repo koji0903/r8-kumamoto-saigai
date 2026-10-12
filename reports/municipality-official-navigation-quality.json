@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-12T00:37:20.648Z",
+  "generatedAt": "2026-10-12T11:02:48.099Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 905,
-  "displayCandidateCount": 642,
-  "classifiedPageCount": 743,
+  "inputCount": 904,
+  "displayCandidateCount": 640,
+  "classifiedPageCount": 741,
   "categoryReport": {
     "home": {
-      "total": 205,
-      "high": 79,
+      "total": 203,
+      "high": 77,
       "medium": 79,
       "low": 47
     },
@@ -19,10 +19,10 @@
       "low": 124
     },
     "documents": {
-      "total": 193,
+      "total": 191,
       "high": 44,
       "medium": 35,
-      "low": 114
+      "low": 112
     },
     "health_care": {
       "total": 81,
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 65,
-      "displayCandidates": 57,
+      "classified": 63,
+      "displayCandidates": 55,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -163,7 +163,7 @@
     }
   },
   "confidence": {
-    "high": 281,
+    "high": 279,
     "medium": 361,
     "low": 101
   },
@@ -195,7 +195,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 119,
+  "outOfScopeCount": 120,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "hq_meeting_material": 51,
@@ -206,7 +206,7 @@
     "assembly_petition": 1,
     "mayor_message": 2,
     "overall_guide": 5,
-    "index_page": 13,
+    "index_page": 14,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 3,
@@ -868,6 +868,13 @@
     },
     {
       "municipalityName": "宇城市",
+      "title": "2026年10月11日 令和8年熊本地震 関連情報 （10月11日15時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "宇城市",
       "title": "宇城市屋内多目的広場の利用を再開しました",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2634142",
       "ruleId": "facility_notice",
@@ -875,8 +882,8 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月11日 令和8年熊本地震 関連情報 （10月11日15時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "title": "2026年10月12日 令和8年熊本地震 関連情報 （10月11日15時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -1115,7 +1122,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 7
+      "count": 6
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1179,5 +1186,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 744
+  "previousClassifiedPageCount": 743
 }

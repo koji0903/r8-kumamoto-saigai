@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-12T00:56:04.255Z",
-  "officialCheckedAt": "10/12 09:56",
+  "retrievedAt": "2026-10-12T11:21:27.822Z",
+  "officialCheckedAt": "10/12 20:21",
   "siteTopics": [
     {
       "date": "2026-10-10",
@@ -96,19 +96,27 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "避難所について（10/11 17:00更新）",
+      "title": "避難所について（10/12 17:00更新）",
       "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
-      "date": "2026-10-11",
+      "date": "2026-10-12",
       "time": "17:00",
       "category": "避難・安全",
       "municipality": "宇土市"
     },
     {
-      "title": "2026年10月11日 令和8年熊本地震 関連情報 （10月11日15時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-10-11",
-      "time": "15:00",
-      "category": "その他",
+      "title": "熊本市災害ボランティアセンター閉所のお知らせ",
+      "url": "https://www.city.kumamoto.jp/kiji00373157/index.html",
+      "date": "2026-10-12",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "熊本市"
+    },
+    {
+      "title": "2026年10月12日 避難者数",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
+      "date": "2026-10-12",
+      "time": null,
+      "category": "避難・安全",
       "municipality": "宇城市"
     },
     {
@@ -126,14 +134,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "支援・制度",
       "municipality": "上天草市"
-    },
-    {
-      "title": "令和8年熊本地震被災家屋等の解体費標準単価について",
-      "url": "https://www.city.kumamoto.jp/kiji00373278/index.html",
-      "date": "2026-10-09",
-      "time": "19:17",
-      "category": "その他",
-      "municipality": "熊本市"
     },
     {
       "title": "令和８年熊本地震における災害義援金の配分について",
