@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-13T17:19:52.332Z",
-  "officialCheckedAt": "10/14 02:19",
+  "retrievedAt": "2026-10-13T23:11:03.508Z",
+  "officialCheckedAt": "10/14 08:11",
   "siteTopics": [
     {
       "date": "2026-10-10",
@@ -112,6 +112,14 @@ window.HOME_TOPICS = {
       "municipality": "熊本市"
     },
     {
+      "title": "2026年10月14日 避難者数",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
+      "date": "2026-10-14",
+      "time": null,
+      "category": "避難・安全",
+      "municipality": "宇城市"
+    },
+    {
       "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
       "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
       "date": "2026-10-14",
@@ -134,14 +142,6 @@ window.HOME_TOPICS = {
       "time": "17:00",
       "category": "避難・安全",
       "municipality": "宇土市"
-    },
-    {
-      "title": "2026年10月13日 令和8年熊本地震 関連情報 （10月13日17時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-10-13",
-      "time": "17:00",
-      "category": "その他",
-      "municipality": "宇城市"
     },
     {
       "title": "【通行止め解除】令和8年熊本地震に伴う滝川橋全面通行止め解除のお知らせ",
