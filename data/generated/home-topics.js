@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-13T07:09:39.074Z",
-  "officialCheckedAt": "10/13 16:09",
+  "retrievedAt": "2026-10-13T17:19:52.332Z",
+  "officialCheckedAt": "10/14 02:19",
   "siteTopics": [
     {
       "date": "2026-10-10",
@@ -96,28 +96,60 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震に伴う中小企業資金繰り支援（利子補給）のご案内",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036853/index.html",
+      "date": "2026-10-14",
+      "time": "00:00",
+      "category": "支援・制度",
+      "municipality": "氷川町"
+    },
+    {
+      "title": "住家の「り災証明書」の発行について",
+      "url": "https://www.city.kumamoto.jp/kiji0032451/index.html",
+      "date": "2026-10-14",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "熊本市"
+    },
+    {
+      "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
+      "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
+      "date": "2026-10-14",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "甲佐町"
+    },
+    {
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "date": "2026-10-13",
+      "time": "20:27",
+      "category": "その他",
+      "municipality": "八代市"
+    },
+    {
+      "title": "避難所について（10/13 17:00更新）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
+      "date": "2026-10-13",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市"
+    },
+    {
+      "title": "2026年10月13日 令和8年熊本地震 関連情報 （10月13日17時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-10-13",
+      "time": "17:00",
+      "category": "その他",
+      "municipality": "宇城市"
+    },
+    {
       "title": "【通行止め解除】令和8年熊本地震に伴う滝川橋全面通行止め解除のお知らせ",
       "url": "https://www.town.mifune.kumamoto.jp/page9400.html",
       "date": "2026-10-13",
       "time": "15:00",
       "category": "避難・安全",
       "municipality": "御船町"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-10-13",
-      "time": "14:56",
-      "category": "その他",
-      "municipality": "八代市"
-    },
-    {
-      "title": "令和8年熊本地震関連情報",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
-      "date": "2026-10-13",
-      "time": "14:21",
-      "category": "その他",
-      "municipality": "氷川町"
     },
     {
       "title": "令和8年熊本地震による罹災証明等の申請期限について",
@@ -128,20 +160,12 @@ window.HOME_TOPICS = {
       "municipality": "菊陽町"
     },
     {
-      "title": "店舗・事業所等の「り災証明書」の発行について",
-      "url": "https://www.city.kumamoto.jp/kiji00310012/index.html",
+      "title": "令和８年熊本地震に伴う支援制度について",
+      "url": "https://www.city.kikuchi.lg.jp/article/view/1350/18889.html",
       "date": "2026-10-13",
-      "time": "12:33",
-      "category": "住まい・証明",
-      "municipality": "熊本市"
-    },
-    {
-      "title": "2026年10月13日 令和8年熊本地震 関連情報 （10月13日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-10-13",
-      "time": "08:00",
-      "category": "その他",
-      "municipality": "宇城市"
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "菊池市"
     },
     {
       "title": "令和８年熊本地震による被災農地の自力復旧補助金",
@@ -150,14 +174,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "その他",
       "municipality": "益城町"
-    },
-    {
-      "title": "避難所について（10/12 17:00更新）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
-      "date": "2026-10-12",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市"
     },
     {
       "title": "被災事業者支援チラシ(PDF 約471KB)",
@@ -198,22 +214,6 @@ window.HOME_TOPICS = {
       "time": "15:40",
       "category": "支援・制度",
       "municipality": "山鹿市"
-    },
-    {
-      "title": "【肥薩おれんじ鉄道】熊本地震による運休区間の運行再開について",
-      "url": "https://www.town.tsunagi.lg.jp/page4778.html?type=top",
-      "date": "2026-10-07",
-      "time": null,
-      "category": "交通",
-      "municipality": "津奈木町"
-    },
-    {
-      "title": "西原村立保育所給食調理業務委託に係る公募型プロポーザルの実施について",
-      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032034/index.html",
-      "date": "2026-10-06",
-      "time": "09:30",
-      "category": "施設・学校",
-      "municipality": "西原村"
     }
   ],
   "prefectureUpdates": [
