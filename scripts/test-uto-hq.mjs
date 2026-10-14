@@ -102,9 +102,9 @@ for(const n of [34,35,36,37,38,39,40]){const f=m(n).figures;assert.equal(f.utoHo
 // ページの説明文が古い回で止まっていないこと
 const page=fs.readFileSync('hq-uto.html','utf8');
 assert.ok(!page.includes('この節の内容は第35回まで'),'「次の支援につなぐ動き」が第35回のままです');
-assert.ok(page.includes('この節の内容は第37回まで'),'「次の支援につなぐ動き」を最新回まで確認した表示がありません');
-assert.ok(page.includes('1次調査済は3,898件'),'1次調査済件数（3,898件）が反映されていません');
-assert.ok(page.includes('申請601件に対し200件が調査済'),'2次調査の申請601件・調査済200件が反映されていません');
+assert.ok(page.includes('この節の内容は第40回まで'),'「次の支援につなぐ動き」を最新回まで確認した表示がありません');
+assert.ok(page.includes('1次調査済は4,409件'),'1次調査済件数（4,409件）が反映されていません');
+assert.ok(page.includes('申請1,115件に対し408件が調査済'),'2次調査の申請1,115件・調査済408件が反映されていません');
 assert.ok(!page.includes('2次調査申込は一部損壊を中心に3,898件'),'2次調査の件数誤りが残っています');
 assert.ok(!fs.readFileSync('uto-hq.js','utf8').includes("'08/22〜09/04'"),'最後の期間の終わりが固定のままです');
 assert.ok(fs.readFileSync('app.js','utf8').includes('href="hq-uto.html"'));
