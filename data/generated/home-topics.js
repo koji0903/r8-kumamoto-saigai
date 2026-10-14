@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-14T17:37:36.585Z",
-  "officialCheckedAt": "10/15 02:37",
+  "retrievedAt": "2026-10-14T22:04:57.848Z",
+  "officialCheckedAt": "10/15 07:04",
   "siteTopics": [
     {
       "date": "2026-10-14",

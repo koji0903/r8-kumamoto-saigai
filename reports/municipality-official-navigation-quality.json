@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-14T17:19:33.577Z",
+  "generatedAt": "2026-10-14T21:47:23.996Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 893,
-  "displayCandidateCount": 629,
-  "classifiedPageCount": 731,
+  "inputCount": 892,
+  "displayCandidateCount": 628,
+  "classifiedPageCount": 730,
   "categoryReport": {
     "home": {
-      "total": 194,
+      "total": 193,
       "high": 72,
-      "medium": 77,
+      "medium": 76,
       "low": 45
     },
     "money": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 113,
-      "displayCandidates": 95,
+      "classified": 112,
+      "displayCandidates": 94,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 271,
-    "medium": 358,
+    "medium": 357,
     "low": 102
   },
   "unclassifiedCount": 5,
@@ -686,7 +686,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -1176,5 +1176,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 735
+  "previousClassifiedPageCount": 731
 }
