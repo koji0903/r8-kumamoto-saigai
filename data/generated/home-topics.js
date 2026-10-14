@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-14T05:19:26.743Z",
-  "officialCheckedAt": "10/14 14:19",
+  "retrievedAt": "2026-10-14T12:21:33.733Z",
+  "officialCheckedAt": "10/14 21:21",
   "siteTopics": [
     {
       "date": "2026-10-14",
@@ -96,18 +96,26 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "令和8年熊本地震に伴う災害ごみ仮置場への受入れについて",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036755/index.html",
+      "title": "令和8年熊本地震で被災した井戸の応急修理について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036836/index.html",
       "date": "2026-10-14",
-      "time": "13:15",
-      "category": "ごみ・生活",
+      "time": "18:18",
+      "category": "住まい・証明",
       "municipality": "氷川町"
+    },
+    {
+      "title": "避難所について（10/14 17:00更新）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
+      "date": "2026-10-14",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市"
     },
     {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-10-14",
-      "time": "13:13",
+      "time": "16:50",
       "category": "その他",
       "municipality": "八代市"
     },
@@ -136,14 +144,6 @@ window.HOME_TOPICS = {
       "municipality": "熊本市"
     },
     {
-      "title": "【重要】災害ごみ仮置場の特別開場のお知らせ（10月14日時点）",
-      "url": "https://www.city.uto.lg.jp/article/view/1303/16352.html",
-      "date": "2026-10-14",
-      "time": null,
-      "category": "ごみ・生活",
-      "municipality": "宇土市"
-    },
-    {
       "title": "【事業者向け】セーフティネット保証4号の認定について(令和8年熊本地震) - 企画情報課",
       "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6187.html",
       "date": "2026-10-14",
@@ -152,8 +152,8 @@ window.HOME_TOPICS = {
       "municipality": "嘉島町"
     },
     {
-      "title": "国民健康保険自己負担額の還付手続きについて【令和８年熊本地震】",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038210/index.html",
+      "title": "令和８年度熊本地震の被災者への固定資産税の減免について",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038242/index.html",
       "date": "2026-10-14",
       "time": null,
       "category": "その他",
@@ -192,20 +192,20 @@ window.HOME_TOPICS = {
       "municipality": "上天草市"
     },
     {
-      "title": "昭和園の工事に伴う停電のお知らせ",
-      "url": "https://www.town.ozu.kumamoto.jp/page/27721.html",
-      "date": "2026-10-10",
-      "time": null,
-      "category": "ライフライン",
-      "municipality": "大津町"
-    },
-    {
       "title": "令和8年熊本地震（7月28日発生）に関する情報（10月9日11時更新）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
       "date": "2026-10-09",
       "time": "11:00",
       "category": "その他",
       "municipality": "美里町"
+    },
+    {
+      "title": "令和8年熊本地震（7月28日発生）に関する情報（10月9日時点）",
+      "url": "https://www.town.ozu.kumamoto.jp/page/27698.html",
+      "date": "2026-10-09",
+      "time": null,
+      "category": "その他",
+      "municipality": "大津町"
     },
     {
       "title": "「令和８年熊本地震災害義援金」の受付",

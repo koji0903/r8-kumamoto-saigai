@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-14T14:19:30+09:00",
+  "generatedAt": "2026-10-14T21:21:38+09:00",
   "summary": {
-    "unresolved": 81,
-    "actionRequired": 40,
+    "unresolved": 83,
+    "actionRequired": 41,
     "needsReviewEntities": 0
   },
   "items": [
@@ -1146,6 +1146,64 @@
           "entityId": "application_r8_kumamoto_emergency_repair",
           "sourceLinkId": "source_link_application_repair_uto_warning_candidate",
           "claimType": "warning",
+          "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+        }
+      ],
+      "impactedEntities": [],
+      "resolved": false,
+      "reviewedAt": null,
+      "reviewedBy": null,
+      "resolutionNotes": null
+    },
+    {
+      "id": "source_change_20261014212138_source_uto_housing_consultation_desk_r8_earthquake",
+      "fingerprint": "source_uto_housing_consultation_desk_r8_earthquake:content_changed:sha256:8dad0c179368353c6a7463c34de81d60b782024a9134716fc8142be0ddffff92",
+      "sourceId": "source_uto_housing_consultation_desk_r8_earthquake",
+      "sourceTitle": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
+      "sourceUrl": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
+      "eventType": "content_changed",
+      "detectedAt": "2026-10-14T21:21:38+09:00",
+      "previousHash": "sha256:f45bae8eb43ca4b7b2d9970e9d29b7c7f209eb2d4a443e123b3843a95b2b9c87",
+      "currentHash": "sha256:8dad0c179368353c6a7463c34de81d60b782024a9134716fc8142be0ddffff92",
+      "previousUrl": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
+      "currentUrl": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
+      "claimTypes": [
+        "application_office"
+      ],
+      "risk": "high",
+      "impactAssessment": "POTENTIALLY_RELEVANT",
+      "operationalStatus": "ACTION_REQUIRED",
+      "relatedProgramIds": [
+        "program_emergency_housing_repair"
+      ],
+      "municipalityIds": [
+        "municipality_yatsushiro",
+        "municipality_minamata",
+        "municipality_yamaga",
+        "municipality_kikuchi",
+        "municipality_uto",
+        "municipality_kamiamakusa",
+        "municipality_uki",
+        "municipality_amakusa",
+        "municipality_koshi",
+        "municipality_misato",
+        "municipality_ozu",
+        "municipality_kikuyo",
+        "municipality_nishihara",
+        "municipality_mifune",
+        "municipality_kashima",
+        "municipality_mashiki",
+        "municipality_kosa",
+        "municipality_hikawa",
+        "municipality_ashikita",
+        "municipality_tsunagi"
+      ],
+      "relatedEntities": [
+        {
+          "entityType": "application",
+          "entityId": "application_r8_kumamoto_emergency_repair",
+          "sourceLinkId": "source_link_application_repair_uto_office_candidate",
+          "claimType": "application_office",
           "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
         }
       ],
@@ -2797,6 +2855,64 @@
           "entityId": "application_r8_kumamoto_emergency_repair",
           "sourceLinkId": "source_link_application_repair_uto_office_candidate",
           "claimType": "application_office",
+          "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+        }
+      ],
+      "impactedEntities": [],
+      "resolved": false,
+      "reviewedAt": null,
+      "reviewedBy": null,
+      "resolutionNotes": null
+    },
+    {
+      "id": "source_change_20261014212138_source_uto_support_application_index_r8_earthquake",
+      "fingerprint": "source_uto_support_application_index_r8_earthquake:content_changed:sha256:92445d0974f8bc55b30ba8e57b96d4e0097e9115baba77ada02203923be47886",
+      "sourceId": "source_uto_support_application_index_r8_earthquake",
+      "sourceTitle": "支援・申請",
+      "sourceUrl": "https://www.city.uto.lg.jp/article/list/1307.html",
+      "eventType": "content_changed",
+      "detectedAt": "2026-10-14T21:21:38+09:00",
+      "previousHash": "sha256:e64aa054f79b32f2e9cb599e348870aaf770090300c12713196c0a0c54c3fbeb",
+      "currentHash": "sha256:92445d0974f8bc55b30ba8e57b96d4e0097e9115baba77ada02203923be47886",
+      "previousUrl": "https://www.city.uto.lg.jp/article/list/1307.html",
+      "currentUrl": "https://www.city.uto.lg.jp/article/list/1307.html",
+      "claimTypes": [
+        "other"
+      ],
+      "risk": "low",
+      "impactAssessment": "UNKNOWN",
+      "operationalStatus": "WARNING",
+      "relatedProgramIds": [
+        "program_emergency_housing_repair"
+      ],
+      "municipalityIds": [
+        "municipality_yatsushiro",
+        "municipality_minamata",
+        "municipality_yamaga",
+        "municipality_kikuchi",
+        "municipality_uto",
+        "municipality_kamiamakusa",
+        "municipality_uki",
+        "municipality_amakusa",
+        "municipality_koshi",
+        "municipality_misato",
+        "municipality_ozu",
+        "municipality_kikuyo",
+        "municipality_nishihara",
+        "municipality_mifune",
+        "municipality_kashima",
+        "municipality_mashiki",
+        "municipality_kosa",
+        "municipality_hikawa",
+        "municipality_ashikita",
+        "municipality_tsunagi"
+      ],
+      "relatedEntities": [
+        {
+          "entityType": "application",
+          "entityId": "application_r8_kumamoto_emergency_repair",
+          "sourceLinkId": "source_link_application_repair_uto_index_checked",
+          "claimType": "other",
           "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
         }
       ],
