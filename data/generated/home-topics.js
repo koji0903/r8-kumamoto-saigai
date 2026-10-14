@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-14T12:21:33.733Z",
-  "officialCheckedAt": "10/14 21:21",
+  "retrievedAt": "2026-10-14T17:37:36.585Z",
+  "officialCheckedAt": "10/15 02:37",
   "siteTopics": [
     {
       "date": "2026-10-14",
@@ -96,6 +96,22 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-10-15",
+      "time": "00:00",
+      "category": "その他",
+      "municipality": "八代市"
+    },
+    {
+      "title": "10月・11月保育所等入所申込書の受付について",
+      "url": "https://www.city.uki.kumamoto.jp/kosodate/hoikuen/2616674",
+      "date": "2026-10-15",
+      "time": null,
+      "category": "施設・学校",
+      "municipality": "宇城市"
+    },
+    {
       "title": "令和8年熊本地震で被災した井戸の応急修理について",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036836/index.html",
       "date": "2026-10-14",
@@ -112,26 +128,10 @@ window.HOME_TOPICS = {
       "municipality": "宇土市"
     },
     {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "title": "令和8年熊本地震に係る義援金の配分について",
+      "url": "https://www.town.mifune.kumamoto.jp/page9501.html",
       "date": "2026-10-14",
-      "time": "16:50",
-      "category": "その他",
-      "municipality": "八代市"
-    },
-    {
-      "title": "2026年10月14日 令和8年熊本地震 関連情報 （10月14日10時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-10-14",
-      "time": "10:00",
-      "category": "その他",
-      "municipality": "宇城市"
-    },
-    {
-      "title": "令和8年熊本地震に係る義援金の受付について【期間延長】",
-      "url": "https://www.town.mifune.kumamoto.jp/page9498.html",
-      "date": "2026-10-14",
-      "time": "08:10",
+      "time": "09:33",
       "category": "支援・制度",
       "municipality": "御船町"
     },
@@ -158,14 +158,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "その他",
       "municipality": "益城町"
-    },
-    {
-      "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
-      "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
-      "date": "2026-10-14",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "甲佐町"
     },
     {
       "title": "令和8年熊本地震による罹災証明等の申請期限について",
@@ -214,6 +206,14 @@ window.HOME_TOPICS = {
       "time": "15:40",
       "category": "支援・制度",
       "municipality": "山鹿市"
+    },
+    {
+      "title": "【肥薩おれんじ鉄道】熊本地震による運休区間の運行再開について",
+      "url": "https://www.town.tsunagi.lg.jp/page4778.html?type=top",
+      "date": "2026-10-07",
+      "time": null,
+      "category": "交通",
+      "municipality": "津奈木町"
     }
   ],
   "prefectureUpdates": [
