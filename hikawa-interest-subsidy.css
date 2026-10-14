@@ -55,46 +55,65 @@ body.interest-page {
 }
 
 .interest-keyfacts > div {
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #ffffff;
+  border: 2px solid #0f766e;
   border-radius: 12px;
-  padding: 16px;
-  color: #ffffff;
+  padding: 16px 18px;
+  color: #0f172a;
+  box-shadow: 0 4px 12px rgba(15, 61, 54, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .interest-keyfacts dt {
   font-size: 13px;
-  font-weight: 700;
-  color: #a7f3d0;
+  font-weight: 800;
+  color: #0f766e;
   margin-bottom: 6px;
 }
 
 .interest-keyfacts dd {
   font-size: 26px;
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.15;
   margin: 0;
-  color: #ffffff;
+  color: #0f172a;
 }
 
 .interest-keyfacts dd small {
   font-size: 14px;
   font-weight: 700;
+  color: #334155;
   margin-left: 2px;
 }
 
+.interest-keyfacts small.keyfact-sub {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  margin-top: 4px;
+}
+
 .interest-keyfacts .keyfact-highlight {
-  background: rgba(253, 224, 71, 0.2);
-  border-color: #fde047;
+  background: #fefce8;
+  border: 2px solid #d97706;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.12), 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .interest-keyfacts .keyfact-highlight dt {
-  color: #fde047;
+  color: #b45309;
 }
 
 .interest-keyfacts .keyfact-highlight dd {
-  color: #fef08a;
+  color: #92400e;
+}
+
+.interest-keyfacts .keyfact-highlight dd small {
+  color: #78350f;
+}
+
+.interest-keyfacts .keyfact-highlight small.keyfact-sub {
+  color: #b45309;
+  font-weight: 800;
 }
 
 /* 比較テーブル */
