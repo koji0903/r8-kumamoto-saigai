@@ -605,7 +605,14 @@ PAGES = [
          title="熊本市 被災家屋の公費解体・自費解体利用ガイド/全壊〜半壊対象",
          lead="城南まちづくりセンター・市役所本庁舎7階で事前電話予約受付中。自費解体は10月10日契約までが対象。必要書類と手続き。",
          chips=["事前電話予約制", "自費解体10/10契約まで", "城南・本庁舎7階"]),
+    dict(file="hikawa-interest-subsidy.html", out="ogp-hikawa-interest-subsidy.png", tone="hikawa", art="money",
+         label="氷川町", tag="事業者支援",
+         target="被災した氷川町内の中小企業・小規模事業者・個人事業主",
+         title="中小企業資金繰り支援ガイド/最長5年間利子全額補助・無利子化",
+         lead="熊本県金融円滑化特別資金・小規模おうえん資金・日本政策金融公庫の融資利子を全額補給。初回償還から最長5年間補助、実質負担ゼロで再建を支援。",
+         chips=["最長5年・全額補給", "実質無利子化支援", "県制度融資・公庫対応"]),
 ]
+
 
 
 def font(path: Path, size: int) -> "ImageFont.FreeTypeFont":

@@ -54,6 +54,7 @@ const specialImages = new Map([
   ["risai-certificate.html", "/ogp-risai-certificate.png"],
   ["hikawa-support.html", "/ogp-hikawa-support.png"],
   ["hikawa-demolition.html", "/ogp-hikawa-demolition.png"],
+  ["hikawa-interest-subsidy.html", "/ogp-hikawa-interest-subsidy.png"],
   ["uki-support.html", "/ogp-uki-support.png"],
   ["reconstruction.html", "/ogp-reconstruction.png"],
   ["temporary-housing.html", "/ogp-temporary-housing.png"],
@@ -296,7 +297,7 @@ function getSitemapMeta(file) {
     "uto-support.html", "uto-living-support.html", "uto-repair.html", "uto-housing.html", "uto-jizokuka.html",
     "kumamoto-saishuppatsu.html",
     "uki-support.html", "uki-living-support.html",
-    "hikawa-support.html", "hikawa-living-support.html", "hikawa-demolition.html",
+    "hikawa-support.html", "hikawa-living-support.html", "hikawa-demolition.html", "hikawa-interest-subsidy.html",
     "yatsushiro-support.html", "yatsushiro-living-support.html", "yatsushiro-rebuild.html",
     "kumamoto-support.html", "kumamoto-living-support.html",
     "risai-certificate.html", "temporary-housing.html", "shelters.html", "volunteer-centers.html"

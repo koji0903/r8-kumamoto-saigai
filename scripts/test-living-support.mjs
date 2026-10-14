@@ -62,7 +62,7 @@ console.log('宇城市・氷川町・八代市・熊本市 暮らしの支援・
 {
   console.log('--- 氷川町 (hikawa-living-support.html) ---');
   const html = fs.readFileSync('hikawa-living-support.html', 'utf8');
-  const expectedCount = 47;
+  const expectedCount = 48;
   assert.ok(html.includes('<title>氷川町：暮らしの支援・補助金 総合ガイド'), '氷川町：タイトルが正しくありません');
   assert.ok(html.includes('<meta name="description"'), '氷川町：descriptionがありません');
 
@@ -95,6 +95,7 @@ console.log('宇城市・氷川町・八代市・熊本市 暮らしの支援・
   assert.ok(html.includes('氷川町移住体験住宅（ひかわ暮らし体験）'), '氷川町：移住体験住宅がありません');
   assert.ok(html.includes('被災家屋等の公費解体・自費解体制度'), '氷川町：公費解体がありません');
   assert.ok(html.includes('住宅の応急修理制度（災害救助法）'), '氷川町：応急修理がありません');
+  assert.ok(html.includes('中小企業資金繰り支援（利子補給補助金）'), '氷川町：利子補給がありません');
 
   assert.ok(html.includes('class="uto-sup-hero-inner"'), '氷川町：ヒーロー内の幅制限がありません');
   assert.ok(html.includes('class="uto-sup-shell"'), '氷川町：本文エリアの幅制限（uto-sup-shell）がありません');
