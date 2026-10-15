@@ -116,10 +116,10 @@ for (const [name, key] of Object.entries(MUNI_KEYS)) {
   assert.equal(wellProg.data[key]?.status, "active", `well-septic の ${name} は受付中 (active) である必要があります`);
 }
 
-// 八代市の税減免は準備中（事前相談）であること
+// 八代市・宇土市の税減免は受付中であること
 const taxProg = matrixData.programs.find(p => p.id === "tax-reduction");
 assert.ok(taxProg, "tax-reduction が存在しません");
-assert.equal(taxProg.data["yatsushiro"]?.status, "pending", "八代市の税減免は準備中 (pending) である必要があります");
+assert.equal(taxProg.data["yatsushiro"]?.status, "active", "八代市の税減免は受付中 (active) である必要があります");
 assert.equal(taxProg.data["uto"]?.status, "active", "宇土市の税減免は受付中 (active) である必要があります");
 
 console.log("5市町 災害支援制度まとめ・比較ページ検査（5市町・全20制度・4ステータス・特設リンク・SEO・窓口・精査データ整合性）: すべて合格");
