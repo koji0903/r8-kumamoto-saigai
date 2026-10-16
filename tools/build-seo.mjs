@@ -58,6 +58,7 @@ const specialImages = new Map([
   ["uki-support.html", "/ogp-uki-support.png"],
   ["reconstruction.html", "/ogp-reconstruction.png"],
   ["temporary-housing.html", "/ogp-temporary-housing.png"],
+  ["disaster-laws.html", "/ogp-disaster-laws.png"],
   ["guide.html", "/ogp-guide.png"],
   ["municipalities.html", "/ogp-municipalities.png"],
   ["municipality-support-compare.html", "/ogp-support-compare.png"],

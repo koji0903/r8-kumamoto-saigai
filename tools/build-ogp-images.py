@@ -199,9 +199,13 @@ ART = {
                       '<rect fill="#93c5fd" stroke="#1d4ed8" x="18" y="46" width="38" height="24" rx="6"/>'
                       '<rect fill="#fde047" stroke="#a16207" x="64" y="46" width="38" height="24" rx="6"/>'
                       '<path d="M28 28h18M74 28h18M28 58h18M74 58h18"/>',
+    "scale": '<path stroke="#475569" stroke-width="3" d="M60 16v56M40 72h40M22 28h76"/>'
+             '<path fill="#93c5fd" stroke="#1d4ed8" d="m22 28-10 24h20z"/>'
+             '<path fill="#2dd4bf" stroke="#0f766e" d="m98 28-10 24h20z"/>'
+             '<circle fill="#fde047" stroke="#a16207" cx="60" cy="16" r="6"/>',
 }
 
-# 全59ページの定義（uto-waste.htmlは手動制作専用画像のため除外）
+# 全60ページの定義（uto-waste.htmlは手動制作専用画像のため除外）
 PAGES = [
     dict(file="uto-public-services.html", out="ogp-uto-public-services.png", tone="sky", art="support_fields",
          label="宇土市", tag="公的施設・市民サービス",
@@ -449,6 +453,12 @@ PAGES = [
          title="仮設住宅の整備・募集状況/建設型仮設・民間借上げ賃貸",
          lead="宇土市・宇城市・美里町・甲佐町・氷川町等の建設型応急住宅の戸数・完成入居予定と、民間賃貸借上げ（みなし仮設）の入居要件を案内。",
          chips=["建設型仮設の進捗", "みなし仮設の要件", "入居申込の手続き"]),
+    dict(file="disaster-laws.html", out="ogp-disaster-laws.png", tone="teal", art="scale",
+         label="災害法制", tag="法律と支援のしくみ",
+         target="被災者・自治体職員・議員・災害VC・支援関係者",
+         title="災害関連法と支援のしくみ早わかりガイド/災対法・救助法・生活再建",
+         lead="災害救助法・生活再建支援法・激甚災害法・災対法を徹底図解。現物と現金の違い、自治体の費用負担（国庫補助率）、災害VC運営費の仕組みを解説。",
+         chips=["救助法・生活再建支援法", "国庫負担・自治体費用", "災害VC運営費の仕組み"]),
     dict(file="guide.html", out="ogp-guide.png", tone="blue", art="guide_book",
          label="制度解説", tag="生活再建",
          target="公的支援の仕組みや手続きの基本を知りたい被災者",
