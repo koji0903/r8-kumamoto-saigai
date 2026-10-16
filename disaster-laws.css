@@ -1042,6 +1042,184 @@
   margin: 0;
 }
 
+/* DCM サブ見出し */
+.dcm-sub-head {
+  margin: 2.5rem 0 1.25rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.dcm-sub-head h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dcm-sub-head p {
+  font-size: 0.92rem;
+  color: #475569;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* DCM 5つの実践ステップ */
+.dcm-steps-flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.dcm-step-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--law-radius-md);
+  padding: 1.2rem 1rem;
+  box-shadow: var(--law-shadow-sm);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.dcm-step-num {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  background: #0d9488;
+  color: #ffffff;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+}
+
+.dcm-step-card h5 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.4rem;
+  line-height: 1.35;
+}
+
+.dcm-step-card p {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* 多職種チームグリッド */
+.dcm-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.dcm-team-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--law-radius-md);
+  padding: 1.1rem;
+}
+
+.dcm-team-item .role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #0f766e;
+  background: #ccfbf1;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.dcm-team-item h5 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.35rem;
+}
+
+.dcm-team-item p {
+  font-size: 0.84rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ケーススタディグリッド */
+.dcm-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.dcm-case-card {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--law-radius-md);
+  padding: 1.35rem;
+  box-shadow: var(--law-shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.dcm-case-badge {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #1e40af;
+  background: #dbeafe;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  width: fit-content;
+  margin-bottom: 0.5rem;
+}
+
+.dcm-case-card h5 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+
+.dcm-case-problem, .dcm-case-solution {
+  font-size: 0.86rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--law-radius-sm);
+}
+
+.dcm-case-problem {
+  background: #fef2f2;
+  border-left: 3px solid #ef4444;
+  color: #991b1b;
+}
+
+.dcm-case-solution {
+  background: #f0fdf4;
+  border-left: 3px solid #16a34a;
+  color: #166534;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+.dcm-case-problem strong, .dcm-case-solution strong {
+  display: block;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+}
+
 @media (max-width: 860px) {
   .dcm-transition-flow {
     grid-template-columns: 1fr;
