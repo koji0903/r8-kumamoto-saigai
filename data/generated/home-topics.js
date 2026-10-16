@@ -1,8 +1,17 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-14T22:04:57.848Z",
-  "officialCheckedAt": "10/15 07:04",
+  "retrievedAt": "2026-10-16T00:03:41.320Z",
+  "officialCheckedAt": "10/16 09:03",
   "siteTopics": [
+    {
+      "date": "2026-10-16",
+      "category": "応急住宅",
+      "badge": "26団地908戸・13団地269戸完成を反映",
+      "title": "建設型応急住宅（仮設住宅）・稼働避難所：整備状況マップ＆進捗一覧を最新化（6市町26団地908戸・13団地269戸が完成）",
+      "url": "temporary-housing.html",
+      "description": "熊本県が公表した最新の進捗状況（令和8年10月15日時点）および県防災ポータルの稼働避難所データを反映し、建設型応急住宅の整備状況マップ（temporary-housing.html）と稼働避難所マップ（shelters.html）を更新しました。県内6市町（八代市、宇土市、宇城市、美里町、甲佐町、氷川町）の整備規模は26団地・計908戸（木造713戸、軽量鉄骨195戸）へ拡大。新たに宇土市の南段原（28戸）、宇城市の小川北新田（30戸）および当尾・豊野・小川駅西の追加期（計58戸）、氷川町の下宮（60戸）が着工したほか、八代市の鏡町（17戸）、宇土市第1号となる浦田町（17戸・10月16日鍵引渡し）、美里町の町営球技場第2期（20戸）が完成し、計13団地・269戸が完成済みとなっています。あわせて熊本市の建設型応急住宅2次募集（計14戸・10月17日抽選・入居予定）や、八代市の個人住民税・固定資産税減免の受付開始も5市町横断比較表に反映しました。",
+      "targetPage": "temporary-housing.html"
+    },
     {
       "date": "2026-10-14",
       "category": "氷川町",
@@ -83,57 +92,72 @@ window.HOME_TOPICS = {
       "url": "uto-handbook.html",
       "description": "宇土市が令和8年9月24日に公開した「【令和8年熊本地震】被災者支援制度ハンドブック」原本PDF全75ページと、検索ガイドの全69制度について制度名・対象・金額・期限・注意事項・連絡先を照合しました。原本自体の「令和8年10月27日（木）」は暦上火曜日であるため、原本との差異を明示して火曜日に修正。被害写真がほとんどの制度で必要と誤認させる表現も、り災証明書・修理・解体等で必要になる場合があるという正確な案内へ改めました。さらに、証明書、住まい、生活費、税・保険料、医療・介護、事業再建、相談、期限の8つの困りごとからワンタップで絞り込める入口、支援者・家族が本人と確認する4項目、全69カードから原本掲載ページを直接開ける導線を追加しました。制度カードとカード内部はPCでも上下1列表示とし、「制度の要点」の直下に「申請前に確認すること」を配置して、支援内容・金額・対象者・期限を先に把握しながら大きな空白が生じないデザインへ改善しました。全69カードの見出しには、証明書・お金・住まい・生活・仕事・農業・税・医療など、分野を視覚的に判別できる色付きピクトグラムを追加しました。宇土市の「営農再開支援事業」カードに混在していた宇城市専用ガイドへのリンクは削除し、自治体をまたぐ誤誘導を解消しました。既存のり災判定・11分野・支援種類・対象者・キーワード検索、期限12件、申請不要2件、担当課直通番号も引き続き利用できます。",
       "targetPage": "uto-handbook.html"
-    },
-    {
-      "date": "2026-09-24",
-      "category": "宇城市",
-      "badge": "補助率9/10〜7/10・事前着工OK",
-      "title": "宇城市：営農再開支援事業（ハード事業）申請ガイドを公開（農業用機械・ハウス・畜舎の修繕／再取得・説明会10/6〜・必要書類チェックリスト）",
-      "url": "uki-einou-saikai.html",
-      "description": "令和8年熊本地震で被災した宇城市の農業者向けに、農業用機械・施設等の修繕または再取得を補助する「営農再開支援事業（ハード事業）」の申請ガイドを公開しました。園芸施設共済の加入対象外となる農業用機械・畜舎等（トラクター、コンバイン、畜舎、農業用倉庫、農業専用トラック等）は事業費の9/10以内、園芸施設共済の加入対象となる農業用ハウス等（ハウス、加温ボイラー、水耕栽培用ベンチ等）は7/10以内、営農施設の補強は7/10以内、被災施設の撤去は8/10以内。原形復旧が基本で、超える部分は自己負担です。被害を受けた日（令和8年7月28日）以降の着工であれば計画承認前の取組も対象になる事前着工の扱い、10月6日（小川町）・7日（豊野町）・10日（松橋町／不知火町・三角町）の事業説明会日程と事前申込フォーム、国の農地利用効率化等支援事業（被災農業者支援タイプ）の必要書類確認表にもとづく書類チェックリスト（被災証明の記載事項、機械／施設別の写真の撮り方、修繕不能証明の発行者、見積書の6つのチェック、実績報告時の書類）、補助額シミュレーター、農家向けワンストップ窓口（土日祝も開設）・ソフト事業・利子補給など関連制度への導線を掲載しています。",
-      "targetPage": "uki-einou-saikai.html"
     }
   ],
   "municipalityUpdates": [
     {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-10-15",
-      "time": "00:00",
+      "title": "災害の発生に伴う確認検査等手数料の免除について（お知らせ）",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00312881/index.html",
+      "date": "2026-10-16",
+      "time": "08:28",
       "category": "その他",
       "municipality": "八代市"
     },
     {
-      "title": "10月・11月保育所等入所申込書の受付について",
-      "url": "https://www.city.uki.kumamoto.jp/kosodate/hoikuen/2616674",
-      "date": "2026-10-15",
-      "time": null,
-      "category": "施設・学校",
+      "title": "2026年10月16日 令和8年熊本地震 関連情報 （10月16日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-10-16",
+      "time": "08:00",
+      "category": "その他",
       "municipality": "宇城市"
     },
     {
-      "title": "令和8年熊本地震で被災した井戸の応急修理について",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036836/index.html",
-      "date": "2026-10-14",
-      "time": "18:18",
-      "category": "住まい・証明",
-      "municipality": "氷川町"
-    },
-    {
-      "title": "避難所について（10/14 17:00更新）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/16888.html",
-      "date": "2026-10-14",
-      "time": "17:00",
-      "category": "避難・安全",
+      "title": "【重要】災害ごみ仮置場の特別開場のお知らせ（10月16日時点）",
+      "url": "https://www.city.uto.lg.jp/article/view/1303/16352.html",
+      "date": "2026-10-16",
+      "time": null,
+      "category": "ごみ・生活",
       "municipality": "宇土市"
     },
     {
-      "title": "令和8年熊本地震に係る義援金の配分について",
-      "url": "https://www.town.mifune.kumamoto.jp/page9501.html",
-      "date": "2026-10-14",
-      "time": "09:33",
-      "category": "支援・制度",
+      "title": "「令和8年熊本地震」に伴う被災宅地の調査について",
+      "url": "https://www.town.mifune.kumamoto.jp/page9397.html",
+      "date": "2026-10-15",
+      "time": "15:10",
+      "category": "その他",
       "municipality": "御船町"
+    },
+    {
+      "title": "令和8年熊本地震関連情報",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
+      "date": "2026-10-15",
+      "time": "14:09",
+      "category": "その他",
+      "municipality": "氷川町"
+    },
+    {
+      "title": "【令和8年熊本地震】（県補助事業）くまもと事業者再出発支援補助金",
+      "url": "https://www.city.koshi.lg.jp/kiji00325886/index.html",
+      "date": "2026-10-15",
+      "time": "08:31",
+      "category": "支援・制度",
+      "municipality": "合志市"
+    },
+    {
+      "title": "令和８年熊本地震に係る義援金のお願い",
+      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314565/index.html",
+      "date": "2026-10-15",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "天草市"
+    },
+    {
+      "title": "地震の影響で、住宅ローンなどの返済にお困りの人へ【令和８年熊本地震】",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038247/index.html",
+      "date": "2026-10-15",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "益城町"
     },
     {
       "title": "住家の「り災証明書」の発行について",
@@ -144,20 +168,12 @@ window.HOME_TOPICS = {
       "municipality": "熊本市"
     },
     {
-      "title": "【事業者向け】セーフティネット保証4号の認定について(令和8年熊本地震) - 企画情報課",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6187.html",
+      "title": "令和8年熊本地震（7月28日発生）に関する情報（10月14日時点）",
+      "url": "https://www.town.ozu.kumamoto.jp/page/27698.html",
       "date": "2026-10-14",
       "time": null,
       "category": "その他",
-      "municipality": "嘉島町"
-    },
-    {
-      "title": "令和８年度熊本地震の被災者への固定資産税の減免について",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038242/index.html",
-      "date": "2026-10-14",
-      "time": null,
-      "category": "その他",
-      "municipality": "益城町"
+      "municipality": "大津町"
     },
     {
       "title": "令和8年熊本地震による罹災証明等の申請期限について",
@@ -176,6 +192,14 @@ window.HOME_TOPICS = {
       "municipality": "菊池市"
     },
     {
+      "title": "被災家屋等の公費解体について",
+      "url": "https://www.town.kosa.lg.jp/q/aview/182/13632.html",
+      "date": "2026-10-11",
+      "time": null,
+      "category": "その他",
+      "municipality": "甲佐町"
+    },
+    {
       "title": "被災事業者支援チラシ(PDF 約471KB)",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/dl?q=124864_filelib_b40c91e9c6a5b40467ab5154b32bce67.pdf",
       "date": "2026-10-10",
@@ -190,30 +214,6 @@ window.HOME_TOPICS = {
       "time": "11:00",
       "category": "その他",
       "municipality": "美里町"
-    },
-    {
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（10月9日時点）",
-      "url": "https://www.town.ozu.kumamoto.jp/page/27698.html",
-      "date": "2026-10-09",
-      "time": null,
-      "category": "その他",
-      "municipality": "大津町"
-    },
-    {
-      "title": "「令和８年熊本地震災害義援金」の受付",
-      "url": "https://www.city.yamaga.kumamoto.jp/kiji0033145/index.html",
-      "date": "2026-10-07",
-      "time": "15:40",
-      "category": "支援・制度",
-      "municipality": "山鹿市"
-    },
-    {
-      "title": "【肥薩おれんじ鉄道】熊本地震による運休区間の運行再開について",
-      "url": "https://www.town.tsunagi.lg.jp/page4778.html?type=top",
-      "date": "2026-10-07",
-      "time": null,
-      "category": "交通",
-      "municipality": "津奈木町"
     }
   ],
   "prefectureUpdates": [
