@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // URLハッシュによるタブ選択（例: #resident, #municipality, #vc）
+  // URLハッシュによるタブ選択（例: #resident, #business, #municipality, #vc, #npo）
   const hash = window.location.hash.replace("#", "");
-  if (["resident", "municipality", "vc"].includes(hash)) {
+  if (["resident", "business", "municipality", "vc", "npo"].includes(hash)) {
     const btn = document.querySelector(`.p-tab-btn[data-target="${hash}"]`);
     if (btn) {
       btn.click();

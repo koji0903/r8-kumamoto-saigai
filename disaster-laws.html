@@ -70,12 +70,12 @@
         <h1>災害関連法と支援のしくみ<span>早わかりガイド</span></h1>
         <p class="laws-hero-lead">
           災害が起きると、<b>「災害救助法」「生活再建支援法」「激甚災害」「災対法」</b>など多くの法律がニュースで飛び交います。<br>
-          「被災者に何が届くのか」「自治体の費用負担はどうなるのか」「災害ボランティアセンター（社協）の運営はどう支えられているのか」を、3つの視点と図解で整理しました。
+          「被災者に何が届くのか」「事業者・農家は何を使えるのか」「自治体の費用負担はどうなるのか」「災害VCや民間NPOはどう動くのか」を、5つの立場と図解で整理しました。
         </p>
 
         <div class="laws-quick-nav">
           <a href="#overview">⏱ 3分でわかる全体像</a>
-          <a href="#perspective-section">👥 3つの立場から見る影響</a>
+          <a href="#perspective-section">👥 5つの立場から見る影響</a>
           <a href="#matrix">📊 法律比較マトリクス</a>
           <a href="#law-details">📖 各法律の徹底解説</a>
           <a href="#faq">❓ よくある疑問（Q&A）</a>
@@ -190,31 +190,37 @@
       </div>
     </section>
 
-    <!-- 3つの視点から見る法律の動きと影響 -->
+    <!-- 5つの視点から見る法律の動きと影響 -->
     <section class="laws-section" id="perspective-section">
       <div class="laws-section-head">
-        <span class="sub">3 PERSPECTIVES</span>
-        <h2>誰にとって何がどう変わるのか？ 3つの立場から整理</h2>
-        <p>同じ法律でも、「住民」「自治体」「ボランティアセンター（社協）」では関心事や影響が全く異なります。タブを切り替えてご確認ください。</p>
+        <span class="sub">5 PERSPECTIVES</span>
+        <h2>誰にとって何がどう変わるのか？ 5つの立場から整理</h2>
+        <p>同じ法律でも、「被災住民」「事業者・農家」「自治体」「災害ボラセン（社協）」「民間専門NPO」では関心事や直面する制度の壁が全く異なります。タブを切り替えてご確認ください。</p>
       </div>
 
       <div class="perspective-container">
         <div class="perspective-tabs" role="tablist">
           <button class="p-tab-btn active" role="tab" aria-selected="true" data-target="resident">
-            <span class="p-tab-icon">🏠</span> 被災された方（住民）の視点
+            <span class="p-tab-icon">🏠</span> 被災された方（個人・世帯）
+          </button>
+          <button class="p-tab-btn" role="tab" aria-selected="false" data-target="business">
+            <span class="p-tab-icon">🏢</span> 事業者・農家（なりわい再建）
           </button>
           <button class="p-tab-btn" role="tab" aria-selected="false" data-target="municipality">
-            <span class="p-tab-icon">🏛</span> 自治体（市町村・県）の視点
+            <span class="p-tab-icon">🏛</span> 自治体（市町村・県の実務）
           </button>
           <button class="p-tab-btn" role="tab" aria-selected="false" data-target="vc">
-            <span class="p-tab-icon">🤝</span> 災害ボラセン（社協）の視点
+            <span class="p-tab-icon">🤝</span> 災害ボラセン（社協・一般公募）
+          </button>
+          <button class="p-tab-btn" role="tab" aria-selected="false" data-target="npo">
+            <span class="p-tab-icon">🌐</span> 民間専門NPO・技術系（官民連携）
           </button>
         </div>
 
         <!-- パネル1: 被災者の視点 -->
         <div class="p-panel active" id="panel-resident" role="tabpanel">
           <div class="p-panel-header">
-            <h3>被災された方（住民）：支援の形は「現物」と「現金」に分かれる</h3>
+            <h3>被災された方（個人・世帯）：支援の形は「現物」と「現金」に分かれる</h3>
             <p>公的支援を受ける際、最も大切なのは「これは現物で提供されるのか（救助法）、後からお金が振り込まれるのか（生活再建支援法）」の違いと、すべてのカギとなる「り災証明書」です。</p>
           </div>
 
@@ -244,7 +250,40 @@
           </div>
         </div>
 
-        <!-- パネル2: 自治体の視点 -->
+        <!-- パネル2: 事業者・農林漁業者の視点 -->
+        <div class="p-panel" id="panel-business" role="tabpanel">
+          <div class="p-panel-header">
+            <h3>事業者・農家（なりわい再建）：最大の落とし穴は「住家支援法は事業設備に使えない」こと</h3>
+            <p>店舗、工場、事務所、倉庫、ビニールハウス、農機具などは、生活再建支援法や災害救助法の対象外です。事業者は「激甚災害法」「中小企業強靭化法」「なりわい再建補助金」という全く別の法体系で動く必要があります。</p>
+          </div>
+
+          <div class="p-points-grid">
+            <div class="p-point-card">
+              <h4>⚠️ 生活再建支援金は「事業設備」には使えない</h4>
+              <p>生活再建支援法や災害救助法は「個人の住まい」を守るための法律です。会社の工場や店舗、事務所の倒壊、商品の損害は<b>法律上完全に適用対象外</b>となります。</p>
+            </div>
+            <div class="p-point-card">
+              <h4>🛡 激甚災害法による「セーフティネット保証4号」</h4>
+              <p>売上高が急減した中小企業・個人事業主に対し、信用保証協会が一般保証とは<b>「別枠（100%保証）」</b>で融資を保証。民間金融機関からの運転資金・つなぎ資金調達を強力に後押しします。</p>
+            </div>
+            <div class="p-point-card">
+              <h4>🏭 なりわい再建支援事業・持続化補助金（災害枠）</h4>
+              <p>被災中小企業の施設・機械設備等の復旧を国・県が<b>最大3/4補助</b>する「なりわい再建支援事業」や、小規模事業者の販路開拓を支援する持続化補助金（上限200万円等）が発動されます。</p>
+            </div>
+          </div>
+
+          <div class="p-highlight-box p-highlight-biz">
+            <h4>💡 店舗兼住宅（自宅兼店舗）の重要な判定・按分ルール</h4>
+            <p>
+              1階が店舗・飲食店で2階が自宅という「店舗併用住宅」の場合、り災証明書の現地調査時に「居住部分」と「業務部分」の床面積割合が算出されます。
+            </p>
+            <p>
+              生活再建支援金や住宅の応急修理制度は<b>居住用部分の面積比率に応じて按分・適用</b>され、店舗部分の修繕には使えません。店舗部分は中小企業向け補助金（持続化補助金やなりわい再建補助金）を組み合わせる必要があります。
+            </p>
+          </div>
+        </div>
+
+        <!-- パネル3: 自治体の視点 -->
         <div class="p-panel" id="panel-municipality" role="tabpanel">
           <div class="p-panel-header">
             <h3>自治体（市町村・県）：最大の関心事は「財政負担（国庫負担率）」</h3>
@@ -277,7 +316,7 @@
           </div>
         </div>
 
-        <!-- パネル3: 災害VC（社協）の視点 -->
+        <!-- パネル4: 災害VC（社協）の視点 -->
         <div class="p-panel" id="panel-vc" role="tabpanel">
           <div class="p-panel-header">
             <h3>災害ボランティアセンター（社協）：運営費・資機材は「災害救助法」で公費補助</h3>
@@ -306,6 +345,39 @@
             </p>
             <p>
               ただし、危険度の高い倒壊家屋の解体や重機を使った大規模撤去は「公費解体（行政委託業務）」の領域となり、ボランティア活動の安全管理上、役割分担が明確に区別されています。
+            </p>
+          </div>
+        </div>
+
+        <!-- パネル5: 民間専門NPO・技術系団体の視点 -->
+        <div class="p-panel" id="panel-npo" role="tabpanel">
+          <div class="p-panel-header">
+            <h3>民間専門NPO・技術系団体：法律上の位置づけと「三者連携（官民連携）」の力</h3>
+            <p>災害対策基本法第8条等に基づき、公的行政や社協（公費ボラセン）だけでは手が届かない専門領域の課題を、民間専門NPOや技術系支援団体が「官民連携プラットフォーム」を通じて支えています。</p>
+          </div>
+
+          <div class="p-points-grid">
+            <div class="p-point-card">
+              <h4>📜 災対法第8条・第35条：官民協働の法的責務</h4>
+              <p>災害対策基本法では「地方公共団体はボランティア活動の環境整備に努める」「国及び地方公共団体は民間団体と相互に連携する」と規定されており、民間NPOは<b>公的防災体制の重要な協働パートナー</b>として法的に位置づけられています。</p>
+            </div>
+            <div class="p-point-card">
+              <h4>🚜 専門技術系支援（重機・床下・TKB避難所）</h4>
+              <p>社協VCの一般ボランティアでは危険な「重機による巨石・土砂撤去」「被災家屋の床下泥出し・温風乾燥・消毒」「避難所のTKB（トイレ・キッチン・ベッド）環境改善」など、高度な専門技能を持つNPOが直接現場を救います。</p>
+            </div>
+            <div class="p-point-card">
+              <h4>🔄 地域支え合いセンターへの移行と伴走支援</h4>
+              <p>応急期（災害救助法）から復旧期へ移行すると、孤立防止・在宅避難者支援を行う「地域支え合いセンター」が稼働。厚生労働省のセーフティネット交付金等の財源を活用し、行政・社協・NPOが協働で<b>災害ケースマネジメント</b>を担います。</p>
+            </div>
+          </div>
+
+          <div class="p-highlight-box p-highlight-npo">
+            <h4>💡 「火の国会議」に代表される三者連携（情報共有プラットフォーム）</h4>
+            <p>
+              熊本で培われた<b>「行政（県・市町村）」「社協（災害VC）」「民間NPO・支援団体」</b>が定期的に顔を合わせる情報共有プラットフォーム。
+            </p>
+            <p>
+              法制度の縦割りや管轄の壁を取り払い、「誰一人取り残さない」支援を現場で実現するために、公費制度の隙間を民間の柔軟な機動力で埋める最も実践的な仕組みとして機能しています。
             </p>
           </div>
         </div>
@@ -715,17 +787,51 @@
             </p>
           </div>
         </details>
+
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q-badge">Q6</span>
+            <span class="faq-title-text">店舗兼住宅（自宅とお店が一体の建物）の場合、生活再建支援金や応急修理は使えますか？</span>
+            <svg class="faq-icon-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+          </summary>
+          <div class="faq-content">
+            <p>
+              <b>居住用スペースの面積比率に応じて按分・適用されます（店舗部分は対象外）。</b>
+            </p>
+            <p>
+              生活再建支援法やり災証明書の被害認定は「個人の住まい」を救済する制度です。そのため、1棟の建物の中に店舗と居住部分がある場合、全体の床面積に占める居住部分の割合で判定や支給額が算出されます。店舗・工場部分の改修には、経済産業省や県の「小規模事業者持続化補助金（災害枠）」や「なりわい再建支援補助金」を活用して組み合わせます。
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q-badge">Q7</span>
+            <span class="faq-title-text">重機ボランティアや専門技術系NPOは、社会福祉協議会（社協）の災害ボランティアセンターと何が違うのですか？</span>
+            <svg class="faq-icon-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+          </summary>
+          <div class="faq-content">
+            <p>
+              <b>社協災害VCは公費で支えられた「一般ボランティアの受入拠点」、専門NPOは「高度技能による専門特化支援」として協働（三者連携）します。</b>
+            </p>
+            <p>
+              社協VCは安全管理上、重機の操縦や床下に潜っての防腐・消毒工事、崩落危険のある屋根上作業は原則として行えません。こうした危険度・専門性の高い作業は、重機・土砂専門NPOや建築系支援団体が行政・社協と連携して担います。「行政・社協・NPO」が連携会議（火の国会議等）で情報共有し、お互いの得意分野を活かして支援の隙間をなくしています。
+            </p>
+          </div>
+        </details>
       </div>
     </section>
 
     <!-- 関連ガイド・導線 -->
     <section class="laws-cross-nav">
       <h3>さらに詳しい制度・手続きを探す</h3>
-      <p>よか隊ネット熊本では、具体的な申請手順やり災証明書の判定ポイントをわかりやすく解説しています。</p>
+      <p>よか隊ネット熊本では、具体的な申請手順やり災証明書の判定ポイント、事業者向け支援をわかりやすく解説しています。</p>
       <div class="cross-nav-buttons">
         <a class="cross-nav-btn" href="guide.html">📘 公的支援の基本ルール（支援ガイド）</a>
         <a class="cross-nav-btn" href="risai-certificate.html">📄 り災証明書の写真の撮り方・被害認定</a>
         <a class="cross-nav-btn" href="temporary-housing.html">🏘 応急仮設住宅の募集・進捗状況</a>
+        <a class="cross-nav-btn" href="reconstruction-work-business.html">🏢 事業者・農家・生業再建ナビ</a>
+        <a class="cross-nav-btn" href="volunteer-centers.html">🤝 災害ボランティアセンター情報</a>
         <a class="cross-nav-btn" href="reconstruction.html">🌱 暮らしの再建・総合案内</a>
       </div>
     </section>
