@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-16T11:54:13.013Z",
-  "officialCheckedAt": "10/16 20:54",
+  "retrievedAt": "2026-10-16T17:05:52.591Z",
+  "officialCheckedAt": "10/17 02:05",
   "siteTopics": [
     {
       "date": "2026-10-16",
@@ -96,10 +96,34 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "熊本市災害ボランティアセンター閉所のお知らせ",
+      "url": "https://www.city.kumamoto.jp/kiji00373157/index.html",
+      "date": "2026-10-17",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "熊本市"
+    },
+    {
+      "title": "令和8年熊本地震により被災した家屋等の解体・撤去について",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2641256",
+      "date": "2026-10-17",
+      "time": null,
+      "category": "その他",
+      "municipality": "宇城市"
+    },
+    {
+      "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
+      "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
+      "date": "2026-10-17",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "甲佐町"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-10-16",
-      "time": "18:39",
+      "time": "22:48",
       "category": "その他",
       "municipality": "八代市"
     },
@@ -118,14 +142,6 @@ window.HOME_TOPICS = {
       "time": "17:00",
       "category": "避難・安全",
       "municipality": "宇土市"
-    },
-    {
-      "title": "2026年10月16日 令和8年熊本地震 関連情報 （10月16日16時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-10-16",
-      "time": "16:00",
-      "category": "その他",
-      "municipality": "宇城市"
     },
     {
       "title": "令和8年熊本地震で被災した家屋等の解体・撤去の申請について",
@@ -176,14 +192,6 @@ window.HOME_TOPICS = {
       "municipality": "天草市"
     },
     {
-      "title": "住家の「り災証明書」の発行について",
-      "url": "https://www.city.kumamoto.jp/kiji0032451/index.html",
-      "date": "2026-10-14",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "熊本市"
-    },
-    {
       "title": "令和8年熊本地震（7月28日発生）に関する情報（10月14日時点）",
       "url": "https://www.town.ozu.kumamoto.jp/page/27698.html",
       "date": "2026-10-14",
@@ -200,19 +208,11 @@ window.HOME_TOPICS = {
       "municipality": "菊池市"
     },
     {
-      "title": "被災家屋等の公費解体について",
-      "url": "https://www.town.kosa.lg.jp/q/aview/182/13632.html",
-      "date": "2026-10-11",
+      "title": "【令和8年熊本地震】地震により被災した住宅の応急修理について",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23163.html",
+      "date": "2026-10-13",
       "time": null,
-      "category": "その他",
-      "municipality": "甲佐町"
-    },
-    {
-      "title": "被災事業者支援チラシ(PDF 約471KB)",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/dl?q=124864_filelib_b40c91e9c6a5b40467ab5154b32bce67.pdf",
-      "date": "2026-10-10",
-      "time": null,
-      "category": "支援・制度",
+      "category": "住まい・証明",
       "municipality": "上天草市"
     }
   ],

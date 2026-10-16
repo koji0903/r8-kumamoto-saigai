@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-10-16T11:34:55.206Z",
+  "generatedAt": "2026-10-16T16:45:44.338Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 900,
-  "displayCandidateCount": 637,
-  "classifiedPageCount": 738,
+  "inputCount": 907,
+  "displayCandidateCount": 643,
+  "classifiedPageCount": 745,
   "categoryReport": {
     "home": {
-      "total": 198,
-      "high": 72,
-      "medium": 80,
+      "total": 202,
+      "high": 73,
+      "medium": 83,
       "low": 46
     },
     "money": {
-      "total": 252,
-      "high": 60,
-      "medium": 69,
-      "low": 123
+      "total": 255,
+      "high": 61,
+      "medium": 70,
+      "low": 124
     },
     "documents": {
-      "total": 185,
+      "total": 187,
       "high": 42,
       "medium": 35,
-      "low": 108
+      "low": 110
     },
     "health_care": {
-      "total": 85,
+      "total": 86,
       "high": 24,
-      "medium": 61,
+      "medium": 62,
       "low": 0
     },
     "family_education": {
@@ -37,8 +37,8 @@
       "low": 36
     },
     "work_business": {
-      "total": 68,
-      "high": 15,
+      "total": 69,
+      "high": 16,
       "medium": 53,
       "low": 0
     },
@@ -50,8 +50,8 @@
     },
     "daily_life": {
       "total": 209,
-      "high": 60,
-      "medium": 148,
+      "high": 59,
+      "medium": 149,
       "low": 1
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 140,
-      "displayCandidates": 119,
+      "classified": 141,
+      "displayCandidates": 120,
       "fallback": true
     },
     "municipality_minamata": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 112,
-      "displayCandidates": 94,
+      "classified": 115,
+      "displayCandidates": 97,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -137,13 +137,13 @@
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 53,
-      "displayCandidates": 50,
+      "classified": 52,
+      "displayCandidates": 49,
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 32,
-      "displayCandidates": 28,
+      "classified": 37,
+      "displayCandidates": 32,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -157,15 +157,15 @@
       "fallback": true
     },
     "municipality_tsunagi": {
-      "classified": 9,
-      "displayCandidates": 7,
+      "classified": 8,
+      "displayCandidates": 6,
       "fallback": true
     }
   },
   "confidence": {
-    "high": 274,
-    "medium": 363,
-    "low": 101
+    "high": 275,
+    "medium": 368,
+    "low": 102
   },
   "unclassifiedCount": 5,
   "unclassifiedItems": [
@@ -205,8 +205,8 @@
     "budget_notice": 2,
     "assembly_petition": 1,
     "overall_guide": 5,
-    "mayor_message": 2,
     "index_page": 14,
+    "mayor_message": 2,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 3,
@@ -686,13 +686,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "【鏡文化センター】夜間利用再開のお知らせ",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00327085/index.html",
       "ruleId": "facility_notice",
@@ -711,6 +704,13 @@
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "八代市",
@@ -1186,5 +1186,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 736
+  "previousClassifiedPageCount": 738
 }
