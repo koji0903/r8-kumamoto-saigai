@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-16T00:03:41.320Z",
-  "officialCheckedAt": "10/16 09:03",
+  "retrievedAt": "2026-10-16T04:59:28.110Z",
+  "officialCheckedAt": "10/16 13:59",
   "siteTopics": [
     {
       "date": "2026-10-16",
@@ -96,12 +96,28 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "災害の発生に伴う確認検査等手数料の免除について（お知らせ）",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00312881/index.html",
+      "title": "令和8年熊本地震で被災した家屋等の解体・撤去の申請について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036868/index.html",
       "date": "2026-10-16",
-      "time": "08:28",
+      "time": "13:51",
+      "category": "その他",
+      "municipality": "氷川町"
+    },
+    {
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-10-16",
+      "time": "12:12",
       "category": "その他",
       "municipality": "八代市"
+    },
+    {
+      "title": "令和8年熊本地震により被災された方々を支援する義援金を受け付けています",
+      "url": "https://www.town.kikuyo.lg.jp/bousai/kiji0035799/index.html",
+      "date": "2026-10-16",
+      "time": "09:32",
+      "category": "支援・制度",
+      "municipality": "菊陽町"
     },
     {
       "title": "2026年10月16日 令和8年熊本地震 関連情報 （10月16日8時00分更新）",
@@ -126,14 +142,6 @@ window.HOME_TOPICS = {
       "time": "15:10",
       "category": "その他",
       "municipality": "御船町"
-    },
-    {
-      "title": "令和8年熊本地震関連情報",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
-      "date": "2026-10-15",
-      "time": "14:09",
-      "category": "その他",
-      "municipality": "氷川町"
     },
     {
       "title": "【令和8年熊本地震】（県補助事業）くまもと事業者再出発支援補助金",
@@ -174,14 +182,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "その他",
       "municipality": "大津町"
-    },
-    {
-      "title": "令和8年熊本地震による罹災証明等の申請期限について",
-      "url": "https://www.town.kikuyo.lg.jp/kiji0035789/index.html",
-      "date": "2026-10-13",
-      "time": "13:00",
-      "category": "住まい・証明",
-      "municipality": "菊陽町"
     },
     {
       "title": "令和８年熊本地震に伴う支援制度について",
