@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-10-16T04:41:03.909Z",
+  "generatedAt": "2026-10-16T11:34:55.206Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 898,
-  "displayCandidateCount": 635,
-  "classifiedPageCount": 736,
+  "inputCount": 900,
+  "displayCandidateCount": 637,
+  "classifiedPageCount": 738,
   "categoryReport": {
     "home": {
-      "total": 199,
-      "high": 73,
+      "total": 198,
+      "high": 72,
       "medium": 80,
       "low": 46
     },
     "money": {
-      "total": 251,
+      "total": 252,
       "high": 60,
-      "medium": 68,
+      "medium": 69,
       "low": 123
     },
     "documents": {
       "total": 185,
       "high": 42,
-      "medium": 34,
-      "low": 109
+      "medium": 35,
+      "low": 108
     },
     "health_care": {
       "total": 85,
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 138,
-      "displayCandidates": 117,
+      "classified": 140,
+      "displayCandidates": 119,
       "fallback": true
     },
     "municipality_minamata": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 113,
-      "displayCandidates": 95,
+      "classified": 112,
+      "displayCandidates": 94,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -112,8 +112,8 @@
       "fallback": true
     },
     "municipality_ozu": {
-      "classified": 1,
-      "displayCandidates": 1,
+      "classified": 0,
+      "displayCandidates": 0,
       "fallback": true
     },
     "municipality_kikuyo": {
@@ -137,13 +137,13 @@
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 52,
-      "displayCandidates": 49,
+      "classified": 53,
+      "displayCandidates": 50,
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 31,
-      "displayCandidates": 27,
+      "classified": 32,
+      "displayCandidates": 28,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 275,
-    "medium": 360,
+    "high": 274,
+    "medium": 363,
     "low": 101
   },
   "unclassifiedCount": 5,
@@ -875,7 +875,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月16日 令和8年熊本地震 関連情報 （10月16日8時00分更新）",
+      "title": "2026年10月16日 令和8年熊本地震 関連情報 （10月16日16時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -987,17 +987,17 @@
     },
     {
       "municipalityName": "益城町",
-      "title": "益城町地域共生センターカタル利用再開のお知らせ【令和８年熊本地震】",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038238/index.html",
-      "ruleId": "facility_notice",
-      "ruleLabel": "公共施設の休止・再開・紹介"
-    },
-    {
-      "municipalityName": "益城町",
       "title": "木山仮設団地跡地公園（仮称）に係る基本設計業務委託の公募型プロポーザル実施について",
       "url": "https://www.town.mashiki.lg.jp/kiji0038223/index.html",
       "ruleId": "procurement",
       "ruleLabel": "入札・公募型プロポーザル"
+    },
+    {
+      "municipalityName": "益城町",
+      "title": "益城町地域共生センターカタル利用再開のお知らせ【令和８年熊本地震】",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038238/index.html",
+      "ruleId": "facility_notice",
+      "ruleLabel": "公共施設の休止・再開・紹介"
     },
     {
       "municipalityName": "甲佐町",
@@ -1072,7 +1072,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1122,7 +1122,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 8
+      "count": 7
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1186,5 +1186,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 738
+  "previousClassifiedPageCount": 736
 }
