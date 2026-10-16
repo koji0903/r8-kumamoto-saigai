@@ -828,26 +828,194 @@
   transform: translateY(-2px);
 }
 
+/* 災害ケースマネジメント & 地域支え合いセンター特設ブロック */
+.dcm-feature-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f0fdfa 100%);
+  border: 2px solid #0d9488;
+  border-radius: var(--law-radius-lg);
+  padding: 2.25rem 2rem;
+  box-shadow: var(--law-shadow-md);
+  margin-top: 2rem;
+}
+
+.dcm-feature-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #0d9488;
+  color: #ffffff;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.dcm-feature-card h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.75rem;
+  line-height: 1.35;
+}
+
+.dcm-feature-lead {
+  font-size: 1rem;
+  color: #334155;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+/* 移行タイムラインフロー */
+.dcm-transition-flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.dcm-phase-box {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--law-radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--law-shadow-sm);
+  position: relative;
+}
+
+.dcm-phase-box.phase-relief {
+  border-top: 5px solid #059669;
+}
+
+.dcm-phase-box.phase-rebuild {
+  border-top: 5px solid #2563eb;
+}
+
+.dcm-phase-tag {
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.tag-relief {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.tag-rebuild {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.dcm-phase-box h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.5rem;
+}
+
+.dcm-phase-box .law-source {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.dcm-phase-box ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.dcm-phase-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #0d9488;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+.dcm-phase-arrow svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #0d9488;
+}
+
+/* DCM 3つの柱グリッド */
+.dcm-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.dcm-pillar-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--law-radius-md);
+  padding: 1.35rem;
+  box-shadow: var(--law-shadow-sm);
+}
+
+.dcm-pillar-card h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dcm-pillar-card p {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .dcm-transition-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .dcm-phase-arrow {
+    transform: rotate(90deg);
+    padding: 0.5rem 0;
+  }
+}
+
 @media (max-width: 768px) {
   .laws-hero {
     padding: 2.5rem 1rem 3rem;
   }
-  
+
   .laws-section {
     margin: 2.5rem auto;
     padding: 0 1rem;
   }
-  
+
   .p-panel {
     padding: 1.5rem 1rem;
   }
-  
+
   .p-tab-btn {
     min-width: 160px;
     padding: 0.9rem 0.75rem;
     font-size: 0.9rem;
   }
-  
+
   .law-detail-card {
     padding: 1.35rem 1rem;
   }
