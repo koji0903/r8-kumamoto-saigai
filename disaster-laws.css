@@ -296,18 +296,30 @@
   background: #f1f5f9;
   border-bottom: 2px solid #e2e8f0;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
+  scroll-snap-type: x proximity;
+}
+
+.perspective-tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.perspective-tabs::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.perspective-tabs::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
 }
 
 .p-tab-btn {
-  flex: 1;
-  min-width: 175px;
-  padding: 1rem 1rem;
+  flex: 1 1 0;
+  min-width: 145px;
+  padding: 0.85rem 0.6rem;
   background: transparent;
   border: none;
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: #64748b;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -315,46 +327,91 @@
   gap: 0.5rem;
   border-bottom: 3px solid transparent;
   transition: all 0.2s ease;
-  white-space: nowrap;
-}
-
-.p-tab-btn:hover {
-  background: rgba(255, 255, 255, 0.6);
-  color: #1e293b;
-}
-
-.p-tab-btn.active[data-target="resident"] {
-  background: #ffffff;
-  color: var(--law-resident-color);
-  border-bottom-color: var(--law-resident-color);
-}
-
-.p-tab-btn.active[data-target="business"] {
-  background: #ffffff;
-  color: var(--law-biz-color);
-  border-bottom-color: var(--law-biz-color);
-}
-
-.p-tab-btn.active[data-target="municipality"] {
-  background: #ffffff;
-  color: var(--law-muni-color);
-  border-bottom-color: var(--law-muni-color);
-}
-
-.p-tab-btn.active[data-target="vc"] {
-  background: #ffffff;
-  color: var(--law-vc-color);
-  border-bottom-color: var(--law-vc-color);
-}
-
-.p-tab-btn.active[data-target="npo"] {
-  background: #ffffff;
-  color: var(--law-npo-color);
-  border-bottom-color: var(--law-npo-color);
+  scroll-snap-align: start;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .p-tab-icon {
   font-size: 1.25rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.p-tab-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  min-width: 0;
+}
+
+.p-tab-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #334155;
+  white-space: nowrap;
+  line-height: 1.25;
+}
+
+.p-tab-sub {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748b;
+  white-space: nowrap;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.p-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.p-tab-btn:hover .p-tab-title {
+  color: #0f172a;
+}
+
+.p-tab-btn.active {
+  background: #ffffff;
+}
+
+.p-tab-btn.active[data-target="resident"] {
+  border-bottom-color: var(--law-resident-color);
+}
+.p-tab-btn.active[data-target="resident"] .p-tab-title {
+  color: var(--law-resident-color);
+}
+
+.p-tab-btn.active[data-target="business"] {
+  border-bottom-color: var(--law-biz-color);
+}
+.p-tab-btn.active[data-target="business"] .p-tab-title {
+  color: var(--law-biz-color);
+}
+
+.p-tab-btn.active[data-target="municipality"] {
+  border-bottom-color: var(--law-muni-color);
+}
+.p-tab-btn.active[data-target="municipality"] .p-tab-title {
+  color: var(--law-muni-color);
+}
+
+.p-tab-btn.active[data-target="vc"] {
+  border-bottom-color: var(--law-vc-color);
+}
+.p-tab-btn.active[data-target="vc"] .p-tab-title {
+  color: var(--law-vc-color);
+}
+
+.p-tab-btn.active[data-target="npo"] {
+  border-bottom-color: var(--law-npo-color);
+}
+.p-tab-btn.active[data-target="npo"] .p-tab-title {
+  color: var(--law-npo-color);
+}
+
+.p-tab-btn.active .p-tab-sub {
+  color: #1e293b;
 }
 
 .p-panel {
@@ -1010,10 +1067,14 @@
     padding: 1.5rem 1rem;
   }
 
+  .perspective-tabs {
+    padding: 0 0.25rem;
+  }
+
   .p-tab-btn {
-    min-width: 160px;
-    padding: 0.9rem 0.75rem;
-    font-size: 0.9rem;
+    flex: 0 0 auto;
+    min-width: 135px;
+    padding: 0.75rem 0.5rem;
   }
 
   .law-detail-card {

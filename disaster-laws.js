@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (targetPanel) {
         targetPanel.classList.add("active");
       }
+
+      // 横スクロール時に選択したタブが見える位置に移動
+      btn.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
     });
   });
 
