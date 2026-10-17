@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-10-16T16:45:44.338Z",
+  "generatedAt": "2026-10-17T04:38:08.189Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 907,
-  "displayCandidateCount": 643,
-  "classifiedPageCount": 745,
+  "inputCount": 904,
+  "displayCandidateCount": 640,
+  "classifiedPageCount": 742,
   "categoryReport": {
     "home": {
-      "total": 202,
-      "high": 73,
-      "medium": 83,
-      "low": 46
+      "total": 199,
+      "high": 72,
+      "medium": 82,
+      "low": 45
     },
     "money": {
-      "total": 255,
-      "high": 61,
+      "total": 254,
+      "high": 60,
       "medium": 70,
       "low": 124
     },
     "documents": {
-      "total": 187,
-      "high": 42,
+      "total": 185,
+      "high": 41,
       "medium": 35,
-      "low": 110
+      "low": 109
     },
     "health_care": {
       "total": 86,
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 209,
+      "total": 210,
       "high": 59,
-      "medium": 149,
+      "medium": 150,
       "low": 1
     }
   },
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 115,
-      "displayCandidates": 97,
+      "classified": 113,
+      "displayCandidates": 95,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -147,8 +147,8 @@
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 54,
-      "displayCandidates": 48,
+      "classified": 53,
+      "displayCandidates": 47,
       "fallback": true
     },
     "municipality_ashikita": {
@@ -163,7 +163,7 @@
     }
   },
   "confidence": {
-    "high": 275,
+    "high": 272,
     "medium": 368,
     "low": 102
   },
@@ -875,7 +875,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月16日 令和8年熊本地震 関連情報 （10月16日16時00分更新）",
+      "title": "2026年10月17日 令和8年熊本地震 関連情報 （10月17日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -1122,7 +1122,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 7
+      "count": 8
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1182,9 +1182,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_hikawa",
-      "count": 1
+      "count": 3
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 738
+  "previousClassifiedPageCount": 745
 }
