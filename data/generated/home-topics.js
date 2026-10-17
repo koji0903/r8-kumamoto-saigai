@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-17T11:11:26.494Z",
-  "officialCheckedAt": "10/17 20:11",
+  "retrievedAt": "2026-10-17T15:59:25.241Z",
+  "officialCheckedAt": "10/18 00:59",
   "siteTopics": [
     {
       "date": "2026-10-16",
@@ -96,6 +96,14 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
+      "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
+      "date": "2026-10-18",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "甲佐町"
+    },
+    {
       "title": "物資を配布しています",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036776/index.html",
       "date": "2026-10-17",
@@ -134,14 +142,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "ごみ・生活",
       "municipality": "宇土市"
-    },
-    {
-      "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
-      "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
-      "date": "2026-10-17",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "甲佐町"
     },
     {
       "title": "令和８年熊本地震における支援の状況について",

@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-17T11:11:43.422Z",
+  "generatedAt": "2026-10-17T15:59:43.421Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-17T10:54:20.383Z",
-    "inputCount": 904,
-    "classifiedPageCount": 742,
-    "displayCandidateCount": 640,
+    "generatedAt": "2026-10-17T15:42:28.665Z",
+    "inputCount": 906,
+    "classifiedPageCount": 744,
+    "displayCandidateCount": 642,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
+      "inputCount": 2,
+      "classifiedPageCount": 2,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 5,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 112,
-        "displayCandidates": 94,
+        "classified": 114,
+        "displayCandidates": 96,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,9 +138,9 @@
     },
     "categoryReport": {
       "home": {
-        "total": 198,
+        "total": 199,
         "high": 72,
-        "medium": 81,
+        "medium": 82,
         "low": 45
       },
       "money": {
@@ -168,9 +168,9 @@
         "low": 36
       },
       "work_business": {
-        "total": 69,
+        "total": 70,
         "high": 16,
-        "medium": 53,
+        "medium": 54,
         "low": 0
       },
       "agriculture_fishery": {
@@ -188,7 +188,7 @@
     },
     "confidence": {
       "high": 272,
-      "medium": 368,
+      "medium": 370,
       "low": 102
     },
     "unclassifiedCount": 5,
@@ -322,7 +322,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 8
+      "count": 9
     },
     {
       "code": "HTTP_404_CANDIDATE",
