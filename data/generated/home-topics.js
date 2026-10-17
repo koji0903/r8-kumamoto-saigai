@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-17T21:00:19.430Z",
-  "officialCheckedAt": "10/18 06:00",
+  "retrievedAt": "2026-10-17T23:29:17.158Z",
+  "officialCheckedAt": "10/18 08:29",
   "siteTopics": [
     {
       "date": "2026-10-16",
@@ -96,20 +96,20 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震関連情報",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
+      "date": "2026-10-18",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "氷川町"
+    },
+    {
       "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
       "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
       "date": "2026-10-18",
       "time": null,
       "category": "住まい・証明",
       "municipality": "甲佐町"
-    },
-    {
-      "title": "物資を配布しています",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036776/index.html",
-      "date": "2026-10-17",
-      "time": "11:33",
-      "category": "その他",
-      "municipality": "氷川町"
     },
     {
       "title": "2026年10月17日 令和8年熊本地震 関連情報 （10月17日8時00分更新）",
