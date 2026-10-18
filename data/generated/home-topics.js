@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-18T11:38:43.900Z",
-  "officialCheckedAt": "10/18 20:38",
+  "retrievedAt": "2026-10-18T16:16:35.702Z",
+  "officialCheckedAt": "10/19 01:16",
   "siteTopics": [
     {
       "date": "2026-10-16",
@@ -96,6 +96,22 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "小・中学校",
+      "url": "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=562",
+      "date": "2026-10-19",
+      "time": null,
+      "category": "施設・学校",
+      "municipality": "津奈木町"
+    },
+    {
+      "title": "【修理業者の方向け】被災した井戸の応急修理に関する手続きについて",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00327121/index.html",
+      "date": "2026-10-18",
+      "time": "21:53",
+      "category": "住まい・証明",
+      "municipality": "八代市"
+    },
+    {
       "title": "令和8年熊本地震関連情報",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
       "date": "2026-10-18",
@@ -104,28 +120,12 @@ window.HOME_TOPICS = {
       "municipality": "氷川町"
     },
     {
-      "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
-      "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
-      "date": "2026-10-18",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "甲佐町"
-    },
-    {
       "title": "2026年10月17日 令和8年熊本地震 関連情報 （10月17日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-10-17",
       "time": "08:00",
       "category": "その他",
       "municipality": "宇城市"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-10-17",
-      "time": "07:30",
-      "category": "その他",
-      "municipality": "八代市"
     },
     {
       "title": "熊本市災害ボランティアセンター閉所のお知らせ",
