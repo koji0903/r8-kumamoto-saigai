@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-18T21:12:45.453Z",
+  "generatedAt": "2026-10-18T23:41:11.576Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-18T20:52:38.017Z",
-    "inputCount": 901,
-    "classifiedPageCount": 739,
-    "displayCandidateCount": 638,
+    "generatedAt": "2026-10-18T23:20:48.816Z",
+    "inputCount": 902,
+    "classifiedPageCount": 740,
+    "displayCandidateCount": 639,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
+      "inputCount": 1,
+      "classifiedPageCount": 1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 34,
+      "ageHours": 36,
       "limitHours": 336
     }
   },
@@ -116,8 +116,8 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 33,
-        "displayCandidates": 28,
+        "classified": 34,
+        "displayCandidates": 29,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -138,15 +138,15 @@
     },
     "categoryReport": {
       "home": {
-        "total": 197,
+        "total": 198,
         "high": 72,
-        "medium": 80,
+        "medium": 81,
         "low": 45
       },
       "money": {
         "total": 252,
-        "high": 60,
-        "medium": 69,
+        "high": 59,
+        "medium": 70,
         "low": 123
       },
       "documents": {
@@ -187,8 +187,8 @@
       }
     },
     "confidence": {
-      "high": 273,
-      "medium": 365,
+      "high": 272,
+      "medium": 367,
       "low": 101
     },
     "unclassifiedCount": 5,

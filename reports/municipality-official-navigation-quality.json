@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-10-18T20:52:38.017Z",
+  "generatedAt": "2026-10-18T23:20:48.816Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 901,
-  "displayCandidateCount": 638,
-  "classifiedPageCount": 739,
+  "inputCount": 902,
+  "displayCandidateCount": 639,
+  "classifiedPageCount": 740,
   "categoryReport": {
     "home": {
-      "total": 197,
+      "total": 198,
       "high": 72,
-      "medium": 80,
+      "medium": 81,
       "low": 45
     },
     "money": {
       "total": 252,
-      "high": 60,
-      "medium": 69,
+      "high": 59,
+      "medium": 70,
       "low": 123
     },
     "documents": {
@@ -142,8 +142,8 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 33,
-      "displayCandidates": 28,
+      "classified": 34,
+      "displayCandidates": 29,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 273,
-    "medium": 365,
+    "high": 272,
+    "medium": 367,
     "low": 101
   },
   "unclassifiedCount": 5,
@@ -707,7 +707,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"

@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-18T21:12:22.436Z",
-  "officialCheckedAt": "10/19 06:12",
+  "retrievedAt": "2026-10-18T23:40:48.179Z",
+  "officialCheckedAt": "10/19 08:40",
   "siteTopics": [
     {
       "date": "2026-10-16",
@@ -160,12 +160,20 @@ window.HOME_TOPICS = {
       "municipality": "菊陽町"
     },
     {
-      "title": "令和9年度 益城町認可保育施設 入所のご案内（令和8年10月16日受付開始）",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038035/index.html",
+      "title": "令和８年熊本地震義援金（県配分）の受け付けについて",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038243/index.html",
       "date": "2026-10-16",
       "time": null,
-      "category": "施設・学校",
+      "category": "支援・制度",
       "municipality": "益城町"
+    },
+    {
+      "title": "令和8年熊本地震における住宅の応急修理の申し込みについて",
+      "url": "https://www.town.kosa.lg.jp/q/aview/168/13564.html",
+      "date": "2026-10-16",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "甲佐町"
     },
     {
       "title": "「令和8年熊本地震」に伴う被災宅地の調査について",
@@ -206,14 +214,6 @@ window.HOME_TOPICS = {
       "time": null,
       "category": "支援・制度",
       "municipality": "菊池市"
-    },
-    {
-      "title": "【令和8年熊本地震】地震により被災した住宅の応急修理について",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23163.html",
-      "date": "2026-10-13",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "上天草市"
     }
   ],
   "prefectureUpdates": [
