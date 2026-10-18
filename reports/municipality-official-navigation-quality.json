@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T15:57:47.128Z",
+  "generatedAt": "2026-10-18T20:52:38.017Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 901,
@@ -9,8 +9,8 @@
     "home": {
       "total": 197,
       "high": 72,
-      "medium": 81,
-      "low": 44
+      "medium": 80,
+      "low": 45
     },
     "money": {
       "total": 252,
@@ -20,8 +20,8 @@
     },
     "documents": {
       "total": 183,
-      "high": 40,
-      "medium": 35,
+      "high": 41,
+      "medium": 34,
       "low": 108
     },
     "health_care": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 272,
-    "medium": 366,
+    "high": 273,
+    "medium": 365,
     "low": 101
   },
   "unclassifiedCount": 5,
@@ -707,7 +707,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -1186,5 +1186,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 744
+  "previousClassifiedPageCount": 739
 }

@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-18T16:16:54.354Z",
+  "generatedAt": "2026-10-18T21:12:45.453Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-18T15:57:47.128Z",
+    "generatedAt": "2026-10-18T20:52:38.017Z",
     "inputCount": 901,
     "classifiedPageCount": 739,
     "displayCandidateCount": 638,
     "deltaFromPrevious": {
-      "inputCount": -5,
-      "classifiedPageCount": -5,
+      "inputCount": 0,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 29,
+      "ageHours": 34,
       "limitHours": 336
     }
   },
@@ -140,8 +140,8 @@
       "home": {
         "total": 197,
         "high": 72,
-        "medium": 81,
-        "low": 44
+        "medium": 80,
+        "low": 45
       },
       "money": {
         "total": 252,
@@ -151,8 +151,8 @@
       },
       "documents": {
         "total": 183,
-        "high": 40,
-        "medium": 35,
+        "high": 41,
+        "medium": 34,
         "low": 108
       },
       "health_care": {
@@ -187,8 +187,8 @@
       }
     },
     "confidence": {
-      "high": 272,
-      "medium": 366,
+      "high": 273,
+      "medium": 365,
       "low": 101
     },
     "unclassifiedCount": 5,
