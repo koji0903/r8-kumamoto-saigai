@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-18T23:40:48.179Z",
-  "officialCheckedAt": "10/19 08:40",
+  "retrievedAt": "2026-10-19T05:09:22.734Z",
+  "officialCheckedAt": "10/19 14:09",
   "siteTopics": [
     {
       "date": "2026-10-16",
@@ -96,6 +96,54 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "date": "2026-10-19",
+      "time": "12:06",
+      "category": "その他",
+      "municipality": "八代市"
+    },
+    {
+      "title": "2026年10月19日 令和8年熊本地震 関連情報 （10月19日12時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-10-19",
+      "time": "12:00",
+      "category": "その他",
+      "municipality": "宇城市"
+    },
+    {
+      "title": "令和８年熊本地震に伴う水俣市利子補給金について",
+      "url": "https://localcms.city.minamata.lg.jp/page4895.html?type=top",
+      "date": "2026-10-19",
+      "time": "09:52",
+      "category": "その他",
+      "municipality": "水俣市"
+    },
+    {
+      "title": "令和8年熊本地震災害義援金の第1次配分について",
+      "url": "https://www.town.kikuyo.lg.jp/kiji0035802/index.html",
+      "date": "2026-10-19",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "菊陽町"
+    },
+    {
+      "title": "被災した住宅の「緊急修理」の支援について【令和８年熊本地震】",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038081/index.html",
+      "date": "2026-10-19",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "益城町"
+    },
+    {
+      "title": "令和8年熊本地震災害支援情報まとめ(10/19更新)",
+      "url": "https://www.town.kosa.lg.jp/q/aview/1/13531.html",
+      "date": "2026-10-19",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "甲佐町"
+    },
+    {
       "title": "小・中学校",
       "url": "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=562",
       "date": "2026-10-19",
@@ -104,28 +152,12 @@ window.HOME_TOPICS = {
       "municipality": "津奈木町"
     },
     {
-      "title": "【修理業者の方向け】被災した井戸の応急修理に関する手続きについて",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00327121/index.html",
-      "date": "2026-10-18",
-      "time": "21:53",
-      "category": "住まい・証明",
-      "municipality": "八代市"
-    },
-    {
       "title": "令和8年熊本地震関連情報",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
       "date": "2026-10-18",
       "time": "08:00",
       "category": "その他",
       "municipality": "氷川町"
-    },
-    {
-      "title": "2026年10月17日 令和8年熊本地震 関連情報 （10月17日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-10-17",
-      "time": "08:00",
-      "category": "その他",
-      "municipality": "宇城市"
     },
     {
       "title": "熊本市災害ボランティアセンター閉所のお知らせ",
@@ -152,44 +184,12 @@ window.HOME_TOPICS = {
       "municipality": "山鹿市"
     },
     {
-      "title": "令和8年熊本地震により被災された方々を支援する義援金を受け付けています",
-      "url": "https://www.town.kikuyo.lg.jp/bousai/kiji0035799/index.html",
-      "date": "2026-10-16",
-      "time": "09:32",
-      "category": "支援・制度",
-      "municipality": "菊陽町"
-    },
-    {
-      "title": "令和８年熊本地震義援金（県配分）の受け付けについて",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038243/index.html",
-      "date": "2026-10-16",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "益城町"
-    },
-    {
-      "title": "令和8年熊本地震における住宅の応急修理の申し込みについて",
-      "url": "https://www.town.kosa.lg.jp/q/aview/168/13564.html",
-      "date": "2026-10-16",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "甲佐町"
-    },
-    {
       "title": "「令和8年熊本地震」に伴う被災宅地の調査について",
       "url": "https://www.town.mifune.kumamoto.jp/page9397.html",
       "date": "2026-10-15",
       "time": "15:10",
       "category": "その他",
       "municipality": "御船町"
-    },
-    {
-      "title": "【令和8年熊本地震】（県補助事業）くまもと事業者再出発支援補助金",
-      "url": "https://www.city.koshi.lg.jp/kiji00325886/index.html",
-      "date": "2026-10-15",
-      "time": "08:31",
-      "category": "支援・制度",
-      "municipality": "合志市"
     },
     {
       "title": "令和８年熊本地震に係る義援金のお願い",
@@ -200,20 +200,20 @@ window.HOME_TOPICS = {
       "municipality": "天草市"
     },
     {
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（10月14日時点）",
-      "url": "https://www.town.ozu.kumamoto.jp/page/27698.html",
-      "date": "2026-10-14",
-      "time": null,
-      "category": "その他",
-      "municipality": "大津町"
-    },
-    {
       "title": "令和８年熊本地震に伴う支援制度について",
       "url": "https://www.city.kikuchi.lg.jp/article/view/1350/18889.html",
       "date": "2026-10-13",
       "time": null,
       "category": "支援・制度",
       "municipality": "菊池市"
+    },
+    {
+      "title": "【令和8年熊本地震】地震により被災した住宅の応急修理について",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23163.html",
+      "date": "2026-10-13",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "上天草市"
     }
   ],
   "prefectureUpdates": [
