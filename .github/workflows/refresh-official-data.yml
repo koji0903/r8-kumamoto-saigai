@@ -72,6 +72,9 @@ jobs:
       - name: トップページの公的最新トピックスを更新
         run: node tools/fetch-official-topics.mjs
 
+      - name: 自治体配信情報をサイト内記事としてアーカイブ
+        run: node tools/archive-official-articles.mjs
+
       - name: 開設中避難所を更新
         shell: bash
         run: |
@@ -125,6 +128,7 @@ jobs:
           node --check tools/fetch-municipality-hq.mjs
           node --check tools/fetch-municipality-updates.mjs
           node --check tools/fetch-official-topics.mjs
+          node --check tools/archive-official-articles.mjs
           node --check tools/fetch-volunteer-centers.mjs
           node --check tools/volunteer-center-history.mjs
           node --check tools/build-shelters.mjs
@@ -186,6 +190,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
             '*.html' \
+            'official-articles/*.html' \
+            'official-articles/index.html' \
+            'official-articles/official-article.css' \
             sitemap.xml \
             public-data/site-search-index.json \
             data/generated/hq-damage-data.js \
@@ -194,6 +201,8 @@ jobs:
             data/generated/municipality-hq-data.js \
             data/generated/municipality-updates.js \
             data/generated/official-topics.js \
+            data/generated/official-articles-index.js \
+            data/generated/home-topics.js \
             data/generated/volunteer-center-updates.js \
             data/generated/shelters-data.js \
             sources/priority-support-matrix.json \
@@ -203,6 +212,7 @@ jobs:
             sources/official/municipality-hq-text \
             sources/official/municipalities/municipality-updates.json \
             sources/official/topics/latest-topics.json \
+            sources/official/articles \
             sources/official/volunteer-centers/volunteer-center-updates.json \
             data/reconstruction/source-change-events.json \
             data/reconstruction/source-revisions.json \

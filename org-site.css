@@ -1339,6 +1339,11 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
 .home-official-title a{color:#173d36;font-weight:750;text-decoration:none}
 .home-official-title a:hover{color:#185f55;text-decoration:underline}
 .home-official-title .ext-arrow{color:#0d7468;font-size:12px}
+.home-official-title .int-arrow{color:#0d7468;font-size:13px;font-weight:900}
+.home-official-archive-badge{padding:2px 6px;border-radius:4px;background:#e1f5fe;color:#0277bd;font-size:11px;font-weight:800;border:1px solid #b3e5fc}
+.home-official-sublink{margin-top:6px;font-size:12px}
+.home-official-sublink a{color:#0277bd;text-decoration:none;display:inline-flex;align-items:center;gap:3px;font-weight:700}
+.home-official-sublink a:hover{text-decoration:underline;color:#01579b}
 .home-topics-more{margin-top:16px;padding-top:12px;border-top:1px solid #d9eae4;text-align:right}
 .home-topics-more a{display:inline-flex;align-items:center;gap:4px;color:#0d7468;font-size:13.5px;font-weight:850;text-decoration:none}
 .home-topics-more a:hover{text-decoration:underline}

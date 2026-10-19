@@ -1,0 +1,391 @@
+/**
+ * 自治体公式発表アーカイブ 共通スタイル (official-article.css)
+ */
+
+.official-article-page {
+  background-color: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-container {
+  max-width: 920px;
+  margin: 1.5rem auto 3.5rem;
+  padding: 0 1.25rem;
+  width: 100%;
+}
+
+/* パンくずリスト */
+.breadcrumb {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.breadcrumb a {
+  color: #0284c7;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span.current {
+  color: #334155;
+  font-weight: 600;
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* アーカイブ告知バナー */
+.archive-notice-banner {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-left: 5px solid #16a34a;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.archive-notice-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.archive-notice-text strong {
+  display: block;
+  font-size: 0.98rem;
+  color: #166534;
+  margin-bottom: 0.2rem;
+}
+
+.archive-notice-text p {
+  font-size: 0.88rem;
+  color: #374151;
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* メイン記事カード */
+.official-article-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* 記事ヘッダー */
+.article-header {
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.article-meta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.muni-badge {
+  background: #0f766e;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  letter-spacing: 0.03em;
+}
+
+.article-date {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.category-tag {
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.article-header h1 {
+  font-size: clamp(1.4rem, 3vw, 1.85rem);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.35;
+  margin: 0 0 1.25rem;
+}
+
+/* 公式一次情報ボックス */
+.official-source-box {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-size: 0.88rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.source-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.source-link {
+  color: #0284c7;
+  font-weight: 700;
+  text-decoration: none;
+  word-break: break-all;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+  color: #0369a1;
+}
+
+/* 記事本文エリア */
+.article-body {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #334155;
+  word-wrap: break-word;
+}
+
+.article-body h2, .article-body h3, .article-body h4 {
+  color: #0f172a;
+  font-weight: 800;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.article-body h2 {
+  font-size: 1.35rem;
+  border-left: 4px solid #0f766e;
+  padding-left: 0.75rem;
+}
+
+.article-body h3 {
+  font-size: 1.18rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.4rem;
+}
+
+.article-body p {
+  margin: 0.85rem 0;
+}
+
+.article-body ul, .article-body ol {
+  padding-left: 1.5rem;
+  margin: 0.85rem 0;
+}
+
+.article-body li {
+  margin-bottom: 0.4rem;
+}
+
+.article-body a {
+  color: #0284c7;
+  text-decoration: underline;
+}
+
+.article-body a:hover {
+  color: #0369a1;
+}
+
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.92rem;
+}
+
+.article-body th, .article-body td {
+  border: 1px solid #cbd5e1;
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+}
+
+.article-body th {
+  background: #f1f5f9;
+  font-weight: 700;
+}
+
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+/* 添付資料ボックス */
+.attachment-box {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.attachment-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0369a1;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.attachment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.attachment-list li {
+  margin-bottom: 0.5rem;
+}
+
+.attachment-list a {
+  font-weight: 700;
+  color: #0284c7;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+}
+
+.attachment-list a:hover {
+  text-decoration: underline;
+}
+
+/* 記事フッター */
+.article-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 2px solid #f1f5f9;
+}
+
+.official-action-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.action-desc {
+  font-size: 0.9rem;
+  color: #475569;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.btn-official-external {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #0f766e;
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 0.75rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-official-external:hover {
+  background: #115e59;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.archive-disclaimer {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.archive-disclaimer p {
+  margin: 0.25rem 0;
+}
+
+/* 下部ナビゲーション */
+.article-back-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 0 0.5rem;
+}
+
+.article-back-nav a {
+  color: #0284c7;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.article-back-nav a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .official-article-card {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .official-action-area {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .btn-official-external {
+    justify-content: center;
+  }
+}

@@ -10,7 +10,7 @@ def plain(text):
 
 def cover_date(text, meeting):
     source = plain(text)
-    match = re.search(rf'第\s*{meeting}\s*回\s+(?:令和\s*\d+\s*年\s*)?(\d+)\s*月\s*(\d+)\s*日[^\n]*?(?=第|\n|$)', source)
+    match = re.search(rf'第\s*{meeting}\s*回\s*(?:令和\s*\d+\s*年\s*)?(\d+)\s*月\s*(\d+)\s*日[^\n]*?(?=第|\n|$)', source)
     if not match:
         raise ValueError(f'宇土市 第{meeting}回: 表紙の日時が読めません')
     clock = re.search(r'(\d{1,2})\s*:\s*(\d{2})', match[0])

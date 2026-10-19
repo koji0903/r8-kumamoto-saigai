@@ -4,6 +4,15 @@ window.HOME_TOPICS = {
   "officialCheckedAt": "10/19 14:09",
   "siteTopics": [
     {
+      "date": "2026-10-20",
+      "category": "自治体アーカイブ",
+      "badge": "自治体最新情報の全文アーカイブ機能新設",
+      "title": "自治体からの最新収集情報をサイト内に全文アーカイブ保存する機能を新設（リンク切れ防止）",
+      "url": "official-articles/index.html",
+      "description": "市町村公式サイトから自動収集している最新公表情報について、時間の経過に伴う自治体側ページの削除やリンク切れを防ぐため、配信内容をサイト内に静的記事ページとして全文記録・保存するアーカイブ機能（official-articles/）を新設しました。トップページの「自治体からの最新収集情報」から保存された各記事を直接閲覧できるほか、記事内には自治体公式元ページへのリンクも常に明記。宇土市第42回災害対策本部会議資料などの最新公表も反映しています。",
+      "targetPage": "official-articles/index.html"
+    },
+    {
       "date": "2026-10-16",
       "category": "法制ガイド",
       "badge": "災害法制・支援のしくみ特設ガイド公開",
@@ -83,15 +92,6 @@ window.HOME_TOPICS = {
       "url": "hq-yatsushiro.html",
       "description": "八代市（第40回〜第50回）、宇土市（第39回）、熊本県（復旧・復興本部会議第5回）の最新本部会議資料を分析し、アーカイブを更新しました。八代市では第50回（10/5開催）において避難者数が発災後初めて700人を下回り693名（13か所）へ減少、り災証明交付は全壊1,052件を含む計18,362件に達し、公費解体受付（9/28〜）と生活再建支援金の申請が進展。宇土市では第39回（9/29書面報告）において市民体育館の避難者が40世帯68名となり、建設型仮設住宅（浦田17戸・高柳45戸）の申込が42件に拡大。熊本県では第5回復旧・復興本部会議（9/28開催）にて住家被害71,518棟、県内避難者1,514人、建設型仮設住宅772戸への拡大が報告され、被災市町村と連携した生活再建支援が本格化しています。",
       "targetPage": "hq-yatsushiro.html"
-    },
-    {
-      "date": "2026-10-04",
-      "category": "火の国会議",
-      "badge": "第530〜532回議事録を反映",
-      "title": "火の国会議：第530回〜第532回（9/25・9/29・10/2開催）の議事録と日々の記録を追加",
-      "url": "meetings.html",
-      "description": "令和8年熊本地震第39回〜第41回（火の国会議第530回〜第532回）の議事録を構造化して掲載しました。建設型仮設住宅772戸への拡大（八代市302戸、宇城市149戸、氷川町116戸など・自宅敷地内仮設工事着手）、避難者の1,514人への減少（甲佐町・芦北町の避難所閉鎖）、宇城市での炊き出し支援10月延長、災害ボランティア累計3.4万人突破と熊本市VCの土日型移行および10/18閉所予定、甲佐町VCの9月末閉所、公費解体での残置物取り出し合意ルールや八代市での外国人労働者向け相談会（10/18）など、生活再建と地域移行に向けた動向を整理しました。",
-      "targetPage": "meetings.html"
     }
   ],
   "municipalityUpdates": [
@@ -101,7 +101,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-19",
       "time": "12:06",
       "category": "その他",
-      "municipality": "八代市"
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261019-ad77f47a",
+      "archiveUrl": "official-articles/yatsushiro-20261019-ad77f47a.html"
     },
     {
       "title": "2026年10月19日 令和8年熊本地震 関連情報 （10月19日12時00分更新）",
@@ -109,7 +111,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-19",
       "time": "12:00",
       "category": "その他",
-      "municipality": "宇城市"
+      "municipality": "宇城市",
+      "archiveId": "uki-20261019-7d9d4e13",
+      "archiveUrl": "official-articles/uki-20261019-7d9d4e13.html"
     },
     {
       "title": "令和８年熊本地震に伴う水俣市利子補給金について",
@@ -117,7 +121,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-19",
       "time": "09:52",
       "category": "その他",
-      "municipality": "水俣市"
+      "municipality": "水俣市",
+      "archiveId": "minamata-20261019-81bdc420",
+      "archiveUrl": "official-articles/minamata-20261019-81bdc420.html"
     },
     {
       "title": "令和8年熊本地震災害義援金の第1次配分について",
@@ -125,7 +131,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-19",
       "time": null,
       "category": "支援・制度",
-      "municipality": "菊陽町"
+      "municipality": "菊陽町",
+      "archiveId": "kikuyo-20261019-3c7fb834",
+      "archiveUrl": "official-articles/kikuyo-20261019-3c7fb834.html"
     },
     {
       "title": "被災した住宅の「緊急修理」の支援について【令和８年熊本地震】",
@@ -133,7 +141,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-19",
       "time": null,
       "category": "住まい・証明",
-      "municipality": "益城町"
+      "municipality": "益城町",
+      "archiveId": "mashiki-20261019-4a0ab609",
+      "archiveUrl": "official-articles/mashiki-20261019-4a0ab609.html"
     },
     {
       "title": "令和8年熊本地震災害支援情報まとめ(10/19更新)",
@@ -141,7 +151,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-19",
       "time": null,
       "category": "支援・制度",
-      "municipality": "甲佐町"
+      "municipality": "甲佐町",
+      "archiveId": "kosa-20261019-d4265651",
+      "archiveUrl": "official-articles/kosa-20261019-d4265651.html"
     },
     {
       "title": "小・中学校",
@@ -149,7 +161,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-19",
       "time": null,
       "category": "施設・学校",
-      "municipality": "津奈木町"
+      "municipality": "津奈木町",
+      "archiveId": "tsunagi-20261019-58f61927",
+      "archiveUrl": "official-articles/tsunagi-20261019-58f61927.html"
     },
     {
       "title": "令和8年熊本地震関連情報",
@@ -157,7 +171,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-18",
       "time": "08:00",
       "category": "その他",
-      "municipality": "氷川町"
+      "municipality": "氷川町",
+      "archiveId": "hikawa-20261018-edaedf97",
+      "archiveUrl": "official-articles/hikawa-20261018-edaedf97.html"
     },
     {
       "title": "熊本市災害ボランティアセンター閉所のお知らせ",
@@ -165,7 +181,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-17",
       "time": null,
       "category": "支援・制度",
-      "municipality": "熊本市"
+      "municipality": "熊本市",
+      "archiveId": "kumamoto-20261017-6d24c9ba",
+      "archiveUrl": "official-articles/kumamoto-20261017-6d24c9ba.html"
     },
     {
       "title": "【重要】災害ごみ仮置場の特別開場のお知らせ（10月17日時点）",
@@ -173,7 +191,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-17",
       "time": null,
       "category": "ごみ・生活",
-      "municipality": "宇土市"
+      "municipality": "宇土市",
+      "archiveId": "uto-20261017-1f205c0b",
+      "archiveUrl": "official-articles/uto-20261017-1f205c0b.html"
     },
     {
       "title": "令和８年熊本地震における支援の状況について",
@@ -181,7 +201,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-16",
       "time": "17:21",
       "category": "支援・制度",
-      "municipality": "山鹿市"
+      "municipality": "山鹿市",
+      "archiveId": "yamaga-20261016-d9b95a4a",
+      "archiveUrl": "official-articles/yamaga-20261016-d9b95a4a.html"
     },
     {
       "title": "「令和8年熊本地震」に伴う被災宅地の調査について",
@@ -189,7 +211,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-15",
       "time": "15:10",
       "category": "その他",
-      "municipality": "御船町"
+      "municipality": "御船町",
+      "archiveId": "mifune-20261015-c1f8f16e",
+      "archiveUrl": "official-articles/mifune-20261015-c1f8f16e.html"
     },
     {
       "title": "令和８年熊本地震に係る義援金のお願い",
@@ -197,7 +221,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-15",
       "time": null,
       "category": "支援・制度",
-      "municipality": "天草市"
+      "municipality": "天草市",
+      "archiveId": "amakusa-20261015-3ad903c6",
+      "archiveUrl": "official-articles/amakusa-20261015-3ad903c6.html"
     },
     {
       "title": "令和８年熊本地震に伴う支援制度について",
@@ -205,7 +231,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-13",
       "time": null,
       "category": "支援・制度",
-      "municipality": "菊池市"
+      "municipality": "菊池市",
+      "archiveId": "kikuchi-20261013-fc4a8e7e",
+      "archiveUrl": "official-articles/kikuchi-20261013-fc4a8e7e.html"
     },
     {
       "title": "【令和8年熊本地震】地震により被災した住宅の応急修理について",
@@ -213,7 +241,9 @@ window.HOME_TOPICS = {
       "date": "2026-10-13",
       "time": null,
       "category": "住まい・証明",
-      "municipality": "上天草市"
+      "municipality": "上天草市",
+      "archiveId": "kamiamakusa-20261013-1dfcb800",
+      "archiveUrl": "official-articles/kamiamakusa-20261013-1dfcb800.html"
     }
   ],
   "prefectureUpdates": [

@@ -18,6 +18,8 @@ const OFFICIAL_TOPICS_PATH = join(ROOT, "sources/official/topics/latest-topics.j
 const GENERATED_JS_PATH = join(ROOT, "data/generated/home-topics.js");
 const INDEX_HTML_PATH = join(ROOT, "index.html");
 
+const ARCHIVE_INDEX_PATH = join(ROOT, "sources/official/articles/archive-index.json");
+
 const checkOnly = process.argv.includes("--check");
 
 const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
@@ -32,14 +34,16 @@ const formatDate = dateStr => {
 };
 
 async function main() {
-  const [siteTopicsRaw, officialTopicsRaw, indexHtml] = await Promise.all([
+  const [siteTopicsRaw, officialTopicsRaw, archiveIndexRaw, indexHtml] = await Promise.all([
     readFile(SITE_TOPICS_PATH, "utf8"),
     readFile(OFFICIAL_TOPICS_PATH, "utf8").catch(() => "{}"),
+    readFile(ARCHIVE_INDEX_PATH, "utf8").catch(() => "{}"),
     readFile(INDEX_HTML_PATH, "utf8")
   ]);
 
   const siteTopics = JSON.parse(siteTopicsRaw);
   const officialTopics = JSON.parse(officialTopicsRaw);
+  const archiveIndex = JSON.parse(archiveIndexRaw);
 
   const municipalities = officialTopics.municipalities || [];
   const national = officialTopics.national || [];
@@ -63,7 +67,14 @@ async function main() {
     retrievedAt,
     officialCheckedAt: checkedAt,
     siteTopics: siteTopics.slice(0, 10),
-    municipalityUpdates: municipalities.slice(0, 15),
+    municipalityUpdates: municipalities.slice(0, 15).map(item => {
+      const art = archiveIndex[item.url];
+      return {
+        ...item,
+        archiveId: art ? art.id : null,
+        archiveUrl: art ? art.htmlPath : null
+      };
+    }),
     prefectureUpdates: prefecture.slice(0, 3),
     nationalUpdates: national.slice(0, 3)
   };
@@ -88,16 +99,25 @@ async function main() {
             </article>`).join("\n");
 
   const officialItems = municipalities.slice(0, 15);
-  const officialTopicsHtml = officialItems.map(item => `            <article class="home-official-card">
+  const officialTopicsHtml = officialItems.map(item => {
+    const art = archiveIndex[item.url];
+    const targetUrl = art ? art.htmlPath : item.url;
+    const isArchived = Boolean(art);
+    return `            <article class="home-official-card">
               <div class="home-official-meta">
                 <time datetime="${esc(item.date)}">${formatDate(item.date)}</time>
                 <span class="home-official-muni">${esc(item.municipality)}</span>
                 <span class="home-official-tag">${esc(item.category || "公式発表")}</span>
+                ${isArchived ? '<span class="home-official-archive-badge" title="リンク切れ防止のためサイト内に全文保存済み">保存済</span>' : ""}
               </div>
               <h4 class="home-official-title">
-                <a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)} <span class="ext-arrow" aria-hidden="true">↗</span></a>
+                <a href="${esc(targetUrl)}"${isArchived ? "" : ' target="_blank" rel="noopener"'}>${esc(item.title)} <span class="${isArchived ? "int-arrow" : "ext-arrow"}" aria-hidden="true">${isArchived ? "→" : "↗"}</span></a>
               </h4>
-            </article>`).join("\n");
+              ${isArchived ? `              <div class="home-official-sublink">
+                <small><a href="${esc(item.url)}" target="_blank" rel="noopener" class="home-official-ext-link">自治体公式元 ↗</a></small>
+              </div>` : ""}
+            </article>`;
+  }).join("\n");
 
   const topicsSectionHtml = `<!-- TOPICS_START -->
     <section class="home-topics-v2" aria-labelledby="home-topics-title">
@@ -142,8 +162,9 @@ ${siteTopicsHtml}
             <div class="home-official-list">
 ${officialTopicsHtml}
             </div>
-            <div class="home-topics-more">
-              <a href="municipalities.html?tab=updates">市町村の公式発信一覧（21自治体）を見る <span aria-hidden="true">→</span></a>
+            <div class="home-topics-more" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+              <a href="official-articles/index.html">記事アーカイブ目録（保存済記事） <span aria-hidden="true">→</span></a>
+              <a href="municipalities.html?tab=updates">市町村公式発信（21自治体） <span aria-hidden="true">→</span></a>
             </div>
           </div>
         </div>
