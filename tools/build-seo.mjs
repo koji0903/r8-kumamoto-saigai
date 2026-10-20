@@ -79,7 +79,8 @@ const specialImages = new Map([
   ["affected.html", "/ogp-affected.png"],
   ["supporters.html", "/ogp-supporters.png"],
   ["official.html", "/ogp-official.png"],
-  ["support.html", "/ogp-support-fields.png"]
+  ["support.html", "/ogp-support-fields.png"],
+  ["sitemap.html", "/ogp-sitemap.png"]
 ]);
 const checkOnly = process.argv.includes("--check");
 const stale = [];
@@ -289,10 +290,13 @@ function getSitemapMeta(file) {
   const highPriority = [
     "disaster.html", "affected.html", "supporters.html", "municipalities.html",
     "municipality-updates.html", "reconstruction.html", "priority-support-summary.html",
-    "municipality-support-compare.html"
+    "municipality-support-compare.html", "disaster-laws.html", "demolition.html"
   ];
   if (highPriority.includes(file)) {
     return { priority: "0.9", changefreq: "daily" };
+  }
+  if (file === "sitemap.html") {
+    return { priority: "0.7", changefreq: "weekly" };
   }
   const livingSupportPages = [
     "uto-support.html", "uto-living-support.html", "uto-repair.html", "uto-housing.html", "uto-jizokuka.html",
@@ -358,7 +362,7 @@ function lastModified(file, html = "") {
 
   for (const item of [...scripts, ...links]) {
     if (globalAssets.has(item)) continue;
-    if (item.startsWith("http://") || item.startsWith("https://") || item.startsWith("//")) continue;
+    if (item.startsWith("http://") || item.startsWith("https://") || item.startsWith("//") || item.includes("..")) continue;
     const rel = item.startsWith("/") ? item.slice(1) : item;
     if (globalAssets.has(rel)) continue;
     deps.push(rel);
@@ -415,12 +419,23 @@ const urls = sitemapFiles.map(file => {
   const date = lastModified(file, htmlContents.get(file));
   const { priority, changefreq } = getSitemapMeta(file);
   return `  <url>\n    <loc>${canonicalFor(file)}</loc>${date ? `\n    <lastmod>${date}</lastmod>` : ""}\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
-}).join("\n");
+});
+
+// 自治体配信記事アーカイブ目録（official-articles/）をサイトマップに登録
+try {
+  const archiveIndexPath = path.join(root, "official-articles/index.html");
+  const archiveContent = await readFile(archiveIndexPath, "utf8").catch(() => "");
+  if (archiveContent) {
+    const archiveDate = lastModified("official-articles/index.html", archiveContent);
+    urls.push(`  <url>\n    <loc>${origin}/official-articles/</loc>${archiveDate ? `\n    <lastmod>${archiveDate}</lastmod>` : ""}\n    <changefreq>daily</changefreq>\n    <priority>0.7</priority>\n  </url>`);
+  }
+} catch {}
+
 const sitemapPath = path.join(root, "sitemap.xml");
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`;
 const currentSitemap = await readFile(sitemapPath, "utf8").catch(() => "");
 if (sitemap !== currentSitemap) stale.push("sitemap.xml");
 if (!checkOnly) await writeFile(sitemapPath, sitemap);
 if (checkOnly && stale.length) throw new Error(`SEO生成物が未更新です: ${stale.join(", ")}。node tools/build-seo.mjs を実行してください`);
-console.log(`SEOメタ情報 ${files.length}ページ / サイトマップ ${sitemapFiles.length}URL ${checkOnly ? "検査OK" : "を更新"}`);
+console.log(`SEOメタ情報 ${files.length}ページ / サイトマップ ${urls.length}URL ${checkOnly ? "検査OK" : "を更新"}`);
 execFileSync(process.execPath,["tools/build-site-search.mjs",...(checkOnly?["--check"]:[])],{cwd:root,stdio:"inherit"});

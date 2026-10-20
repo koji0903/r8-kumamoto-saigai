@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#185f55">
+  <title>サイトマップ（全ページ一覧・総合案内）｜よか隊ネット熊本</title>
+  <meta name="description" content="令和8年熊本地震 支援情報サイト（よか隊ネット熊本）のサイトマップ。被災者支援、生活再建ナビ、市町村別の支援制度・公費解体・仮設住宅ガイド、公式配信アーカイブ、被災地の記録など全70ページ以上の構成を一覧で案内します。">
+  <link rel="icon" href="favicon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css?v=20260817-4">
+  <link rel="stylesheet" href="design-system.css?v=20260810-1">
+  <link rel="stylesheet" href="org-site.css?v=20260907-2">
+  <style>
+    .sitemap-hero {
+      background: linear-gradient(135deg, #0d5f54 0%, #173d36 100%);
+      color: #fff;
+      padding: 48px 20px 40px;
+    }
+    .sitemap-hero-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .sitemap-hero h1 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      line-height: 1.35;
+      color: #fff;
+    }
+    .sitemap-hero p {
+      margin: 0;
+      color: #d1e7e2;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .sitemap-body {
+      max-width: 1040px;
+      margin: 32px auto 64px;
+      padding: 0 20px;
+    }
+    .sitemap-search-card {
+      background: #eef6f3;
+      border: 1px solid #c8e0d7;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 36px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .sitemap-search-card p {
+      margin: 0;
+      font-size: 14.5px;
+      color: #173d36;
+      line-height: 1.6;
+    }
+    .sitemap-search-card .search-trigger-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #185f55;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14.5px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+    .sitemap-search-card .search-trigger-btn:hover {
+      background: #0d463e;
+    }
+    .sitemap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .sitemap-block {
+      background: #fff;
+      border: 1px solid #dce8e4;
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .sitemap-block-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e2eee9;
+    }
+    .sitemap-block-icon {
+      font-size: 24px;
+      line-height: 1;
+    }
+    .sitemap-block-head h2 {
+      margin: 0;
+      font-size: 18px;
+      color: #173d36;
+      line-height: 1.35;
+    }
+    .sitemap-block-sub {
+      margin: 0 0 14px;
+      font-size: 13px;
+      color: #557069;
+      line-height: 1.5;
+    }
+    .sitemap-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-grow: 1;
+    }
+    .sitemap-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .sitemap-item a {
+      color: #0f6a5e;
+      font-weight: 750;
+      font-size: 14.5px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .sitemap-item a:hover {
+      color: #093c35;
+      text-decoration: underline;
+    }
+    .sitemap-item-desc {
+      font-size: 12.5px;
+      color: #607973;
+      line-height: 1.5;
+    }
+    .sitemap-badge {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: #e6f4f1;
+      color: #0f6a5e;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .sitemap-subhead {
+      margin: 16px 0 6px;
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #274b43;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sitemap-subhead::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 14px;
+      background: #185f55;
+      border-radius: 2px;
+    }
+    .sitemap-notes {
+      margin-top: 40px;
+      padding: 20px 24px;
+      border-radius: 10px;
+      background: #f7faf9;
+      border: 1px solid #dce8e4;
+      font-size: 13px;
+      color: #5a756f;
+      line-height: 1.7;
+    }
+    @media (max-width: 600px) {
+      .sitemap-hero { padding: 36px 16px 28px; }
+      .sitemap-hero h1 { font-size: 22px; }
+      .sitemap-grid { grid-template-columns: 1fr; gap: 18px; }
+      .sitemap-block { padding: 18px; }
+    }
+  </style>
+  <link rel="canonical" href="https://www.yokatainet.jp/sitemap.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="よか隊ネット熊本　災害・支援状況レポート">
+  <meta property="og:title" content="サイトマップ（全ページ一覧・総合案内）">
+  <meta property="og:description" content="令和8年熊本地震 支援情報サイト（よか隊ネット熊本）のサイトマップ。被災者支援、生活再建ナビ、市町村別の支援制度・公費解体・仮設住宅ガイド、公式配信アーカイブ、被災地の記録など全70ページ以上の構成を一覧で案内します。">
+  <meta property="og:url" content="https://www.yokatainet.jp/sitemap.html">
+  <meta property="og:image" content="https://www.yokatainet.jp/ogp-sitemap.png">
+  <meta property="og:image:secure_url" content="https://www.yokatainet.jp/ogp-sitemap.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="サイトマップ（全ページ一覧・総合案内）｜よか隊ネット熊本　災害・支援状況レポート">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="サイトマップ（全ページ一覧・総合案内）">
+  <meta name="twitter:description" content="令和8年熊本地震 支援情報サイト（よか隊ネット熊本）のサイトマップ。被災者支援、生活再建ナビ、市町村別の支援制度・公費解体・仮設住宅ガイド、公式配信アーカイブ、被災地の記録など全70ページ以上の構成を一覧で案内します。">
+  <meta name="twitter:image" content="https://www.yokatainet.jp/ogp-sitemap.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.yokatainet.jp/#organization","name":"一般社団法人よか隊ネット熊本","url":"https://www.yokatainet.jp/","logo":"https://www.yokatainet.jp/yokatai-logo.png","address":{"@type":"PostalAddress","postalCode":"869-0404","addressRegion":"熊本県","addressLocality":"宇土市","streetAddress":"走潟町2235"},"telephone":"090-2719-4037","email":"info.yokatai@gmail.com"},{"@type":"WebSite","@id":"https://www.yokatainet.jp/#website","url":"https://www.yokatainet.jp/","name":"一般社団法人よか隊ネット熊本","publisher":{"@id":"https://www.yokatainet.jp/#organization"},"inLanguage":"ja"},{"@type":"WebPage","@id":"https://www.yokatainet.jp/sitemap.html#webpage","url":"https://www.yokatainet.jp/sitemap.html","name":"サイトマップ（全ページ一覧・総合案内）","description":"令和8年熊本地震 支援情報サイト（よか隊ネット熊本）のサイトマップ。被災者支援、生活再建ナビ、市町村別の支援制度・公費解体・仮設住宅ガイド、公式配信アーカイブ、被災地の記録など全70ページ以上の構成を一覧で案内します。","isPartOf":{"@id":"https://www.yokatainet.jp/#website"},"inLanguage":"ja"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.yokatainet.jp/"},{"@type":"ListItem","position":2,"name":"令和8年熊本地震 支援情報","item":"https://www.yokatainet.jp/disaster.html"},{"@type":"ListItem","position":3,"name":"サイトマップ（全ページ一覧・総合案内）","item":"https://www.yokatainet.jp/sitemap.html"}]}]}</script>
+</head>
+<body class="organization-site org-page">
+  <a class="skip" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">一般社団法人よか隊ネット熊本</a>
+    <nav aria-label="メインメニュー">
+      <a href="disaster.html">支援情報トップ</a>
+      <a href="affected.html">被災された方</a>
+      <a href="supporters.html">支援する方</a>
+      <a href="municipalities.html">地域・避難所</a>
+      <a href="reconstruction.html">暮らしの再建</a>
+      <a href="timeline.html">日々の記録</a>
+      <a href="meetings.html">議事録</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="sitemap-hero">
+      <div class="sitemap-hero-inner">
+        <p class="kicker" style="color:#8be3d6;font-size:12px;font-weight:800;letter-spacing:.08em;margin-bottom:8px;">SITE NAVIGATION &amp; INDEX</p>
+        <h1>サイトマップ（全ページ一覧・総合案内）</h1>
+        <p>よか隊ネット熊本「令和8年熊本地震 支援情報ポータル」に掲載されている全70ページ以上の支援制度・自治体別ガイド・公的記録を体系的に整理しています。目的やお住まいの地域に合わせてご利用ください。</p>
+      </div>
+    </section>
+
+    <div class="sitemap-body">
+      <div class="sitemap-search-card">
+        <div>
+          <p><strong>知りたい制度やキーワードはお決まりですか？</strong></p>
+          <p>「り災証明」「公費解体」「見舞金」「仮設住宅」「固定資産税減免」などの語句でサイト内全70ページを横断検索できます。</p>
+        </div>
+        <div>
+          <button type="button" class="search-trigger-btn" data-site-search-open>
+            <span aria-hidden="true">🔍</span> サイト内をキーワード検索
+          </button>
+        </div>
+      </div>
+
+      <div class="sitemap-grid">
+        <!-- 1. 緊急・支援ポータル -->
+        <section class="sitemap-block">
+          <div class="sitemap-block-head">
+            <span class="sitemap-block-icon" aria-hidden="true">🚨</span>
+            <h2>支援情報・緊急ポータル</h2>
+          </div>
+          <p class="sitemap-block-sub">いま直面している困りごとや、発災直後から必要な緊急・総合案内</p>
+          <ul class="sitemap-list">
+            <li class="sitemap-item">
+              <a href="index.html">ホーム（トップページ）</a>
+              <span class="sitemap-item-desc">サイトの総合トップ。最新トピックス、重要支援動向、各分野への総合導線。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="disaster.html">支援情報トップポータル <span class="sitemap-badge">重要</span></a>
+              <span class="sitemap-item-desc">被災者・市民が必要な情報をワンストップで探せる総合ハブ。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="affected.html">被災された方・ご家族へ（困りごと検索）</a>
+              <span class="sitemap-item-desc">片付け・住まい・お金・生活など、直面する悩みから制度へ直結。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="shelters.html">開設中の避難所マップ</a>
+              <span class="sitemap-item-desc">熊本県防災ポータル連動。各市町村で現在開設されている避難所一覧と地図。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="alert-channels.html">お知らせの受け取り方</a>
+              <span class="sitemap-item-desc">公式LINE、防災メール、防災行政無線など自治体ごとの情報受信手段。</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 2. 住まい・解体・再建制度 -->
+        <section class="sitemap-block">
+          <div class="sitemap-block-head">
+            <span class="sitemap-block-icon" aria-hidden="true">🏠</span>
+            <h2>住まい・制度・生活再建</h2>
+          </div>
+          <p class="sitemap-block-sub">住家の復旧、公費解体、仮設住宅、各種法律・制度の総合比較</p>
+          <ul class="sitemap-list">
+            <li class="sitemap-item">
+              <a href="reconstruction.html">暮らしの再建ナビ <span class="sitemap-badge">総合</span></a>
+              <span class="sitemap-item-desc">住まい・生活費・手続きなど生活再建に向けた横断型ガイド。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="disaster-laws.html">災害関連法と支援のしくみ早わかり <span class="sitemap-badge">新設</span></a>
+              <span class="sitemap-item-desc">災害救助法・被災者生活再建支援法・激甚災害法・災対法の全体像と5つの視点解説。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="demolition.html">公費解体・自費解体 総合ダッシュボード <span class="sitemap-badge">注目</span></a>
+              <span class="sitemap-item-desc">全自治体の進捗比較、増築部判定基準、自費解体償還ルールの徹底解説。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="temporary-housing.html">建設型応急住宅（仮設住宅）整備進捗マップ</a>
+              <span class="sitemap-item-desc">6市町26団地908戸の着工・完成・入居状況を地図と一覧で更新。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="risai-certificate.html">り災証明書 完全ガイド</a>
+              <span class="sitemap-item-desc">被害認定調査の判定基準、再調査申請、必要書類と受領後の手続き。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="priority-support-summary.html">5市町 災害支援制度まとめ・比較</a>
+              <span class="sitemap-item-desc">八代市・宇土市・宇城市・熊本市・氷川町の支援制度横断比較。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="guide.html">制度・生活支援ガイド</a>
+              <span class="sitemap-item-desc">公的生活支援制度の概要、対象者、申請窓口の要点まとめ。</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 3. 暮らしの再建（分野別） -->
+        <section class="sitemap-block">
+          <div class="sitemap-block-head">
+            <span class="sitemap-block-icon" aria-hidden="true">📋</span>
+            <h2>暮らしの再建（分野別）</h2>
+          </div>
+          <p class="sitemap-block-sub">お金・健康・家族・事業・農林水産などの分野別制度と公式検索</p>
+          <ul class="sitemap-list">
+            <li class="sitemap-item">
+              <a href="reconstruction-money.html">お金・支払い・税金減免</a>
+              <span class="sitemap-item-desc">義援金、生活再建支援金、税・保険料の減免猶予、災害援護資金。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="reconstruction-documents.html">証明・手続き・申請</a>
+              <span class="sitemap-item-desc">被災証明、印鑑登録、マイナンバーカード再発行などの各種届出。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="reconstruction-health-care.html">健康・介護・医療支援</a>
+              <span class="sitemap-item-desc">医療費・介護保険の一部負担金免除、こころのケア、巡回相談。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="reconstruction-family.html">子ども・教育・家族支援</a>
+              <span class="sitemap-item-desc">就学援助、学用品支援、保育料減免、母子・父子家庭への緊急支援。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="reconstruction-work-business.html">仕事・雇用・事業者支援</a>
+              <span class="sitemap-item-desc">雇用調整助成金、持続化補助金災害枠、セーフティネット保証。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="reconstruction-agriculture-fishery.html">農業・漁業・林業支援</a>
+              <span class="sitemap-item-desc">営農再開、農地・農業用ハウス復旧、農機具補助金などの一次産業支援。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="reconstruction-search.html">暮らしの再建 公式情報検索</a>
+              <span class="sitemap-item-desc">自治体公式ページから抽出した再建制度の高速キーワード検索。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="reconstruction-official.html">自治体公式情報ナビ</a>
+              <span class="sitemap-item-desc">自治体公表の一次情報リンク集。信頼できる最新情報への直通窓口。</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 4. 自治体別ガイド・制度 -->
+        <section class="sitemap-block">
+          <div class="sitemap-block-head">
+            <span class="sitemap-block-icon" aria-hidden="true">🏛️</span>
+            <h2>市町村別の支援ガイド</h2>
+          </div>
+          <p class="sitemap-block-sub">21市町村の公式発信と、被災地域ごとの詳細支援ガイド</p>
+          <ul class="sitemap-list">
+            <li class="sitemap-item">
+              <a href="municipalities.html">自治体別情報ポータル（21市町村）</a>
+              <span class="sitemap-item-desc">県内21市町村ごとの被災状況、窓口、公的発表まとめ。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="municipality-updates.html">市町村からの公式発信タイムライン</a>
+              <span class="sitemap-item-desc">各自治体の最新発表を自動収集し時系列で一覧表示。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="official-articles/index.html">自治体配信記事アーカイブ目録 <span class="sitemap-badge">新設</span></a>
+              <span class="sitemap-item-desc">リンク切れ防止のためサイト内に全文保存した自治体公表記事一覧。</span>
+            </li>
+          </ul>
+
+          <div class="sitemap-subhead">宇土市</div>
+          <ul class="sitemap-list">
+            <li class="sitemap-item"><a href="uto-support.html">宇土市 暮らしの支援・補助金 総合ガイド</a></li>
+            <li class="sitemap-item"><a href="uto-handbook.html">宇土市 被災者支援制度ハンドブック（全69制度検索）</a></li>
+            <li class="sitemap-item"><a href="uto-public-services.html">宇土市 公的施設・市民サービス マップ＆総合ガイド</a></li>
+            <li class="sitemap-item"><a href="uto-demolition.html">宇土市 被災家屋の公費解体・自費解体ガイド</a></li>
+            <li class="sitemap-item"><a href="uto-repair.html">宇土市 住宅の応急修理ガイド</a></li>
+            <li class="sitemap-item"><a href="uto-housing.html">宇土市 住まいの相談・再建支援</a></li>
+            <li class="sitemap-item"><a href="uto-jizokuka.html">宇土市 小規模事業者持続化補助金＜災害支援枠＞</a></li>
+            <li class="sitemap-item"><a href="uto-bulletin.html">宇土市 広報うと 災害臨時号vol.1</a></li>
+            <li class="sitemap-item"><a href="uto-waste.html">宇土市 災害ごみ持ち込み案内</a></li>
+            <li class="sitemap-item"><a href="hq-uto.html">宇土市 災害対策本部会議資料</a></li>
+          </ul>
+
+          <div class="sitemap-subhead">八代市</div>
+          <ul class="sitemap-list">
+            <li class="sitemap-item"><a href="yatsushiro-support.html">八代市 被災者応援ガイド（全58制度）</a></li>
+            <li class="sitemap-item"><a href="yatsushiro-living-support.html">八代市 暮らしの支援・補助金ガイド</a></li>
+            <li class="sitemap-item"><a href="yatsushiro-demolition.html">八代市 公費解体・自費解体費用償還ガイド</a></li>
+            <li class="sitemap-item"><a href="yatsushiro-rebuild.html">八代市 被災者生活再建支援金</a></li>
+            <li class="sitemap-item"><a href="yatsushiro-loan.html">八代市 災害援護資金貸付ガイド</a></li>
+            <li class="sitemap-item"><a href="yatsushiro-safetynet4.html">八代市 セーフティネット保証4号認定ガイド</a></li>
+            <li class="sitemap-item"><a href="hq-yatsushiro.html">八代市 災害対策本部会議資料</a></li>
+          </ul>
+
+          <div class="sitemap-subhead">宇城市</div>
+          <ul class="sitemap-list">
+            <li class="sitemap-item"><a href="uki-living-support.html">宇城市 暮らしの支援・補助金 総合ガイド</a></li>
+            <li class="sitemap-item"><a href="uki-demolition.html">宇城市 公費解体・自費解体費用償還ガイド</a></li>
+            <li class="sitemap-item"><a href="uki-einou-saikai.html">宇城市 営農再開支援事業（ハード事業）ガイド</a></li>
+            <li class="sitemap-item"><a href="uki-consultation.html">宇城市 被災者支援のための無料相談会ガイド</a></li>
+          </ul>
+
+          <div class="sitemap-subhead">氷川町</div>
+          <ul class="sitemap-list">
+            <li class="sitemap-item"><a href="hikawa-living-support.html">氷川町 暮らしの支援・補助金 総合ガイド</a></li>
+            <li class="sitemap-item"><a href="hikawa-demolition.html">氷川町 公費解体・自費解体費用償還ガイド</a></li>
+            <li class="sitemap-item"><a href="hikawa-interest-subsidy.html">氷川町 中小企業資金繰り支援（利子補給）ガイド</a></li>
+          </ul>
+
+          <div class="sitemap-subhead">熊本市</div>
+          <ul class="sitemap-list">
+            <li class="sitemap-item"><a href="kumamoto-support.html">熊本市 被災者支援制度・暮らしの支援ガイド</a></li>
+            <li class="sitemap-item"><a href="kumamoto-demolition.html">熊本市 公費解体・自費解体費用償還ガイド</a></li>
+            <li class="sitemap-item"><a href="kumamoto-saishuppatsu.html">くまもと事業者再出発支援補助金ガイド</a></li>
+            <li class="sitemap-item"><a href="hq-kumamoto.html">熊本市 災害対策本部会議資料</a></li>
+          </ul>
+        </section>
+
+        <!-- 5. 記録・資料・分析 -->
+        <section class="sitemap-block">
+          <div class="sitemap-block-head">
+            <span class="sitemap-block-icon" aria-hidden="true">📜</span>
+            <h2>被災地の記録・会議資料</h2>
+          </div>
+          <p class="sitemap-block-sub">発災からの推移、災害対策本部や連携会議の一次資料と読み解き</p>
+          <ul class="sitemap-list">
+            <li class="sitemap-item">
+              <a href="timeline.html">日々の記録（状況推移タイムライン）</a>
+              <span class="sitemap-item-desc">発災当日から現在までの被害・支援・避難状況の推移。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="meetings.html">火の国会議 議事録・資料</a>
+              <span class="sitemap-item-desc">被災地支援団体・行政・社協の情報共有会議の議事概要と原本PDF。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="official.html">国・県の公的情報一覧</a>
+              <span class="sitemap-item-desc">熊本県災害対策本部、内閣府、関係省庁の公式発表資料。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="official-timeline.html">発信でたどる被災地の局面</a>
+              <span class="sitemap-item-desc">公的発表の推移から「いま何が焦点になっているか」を読み解く。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="official-response-tracks.html">5つの対応の流れ</a>
+              <span class="sitemap-item-desc">断水・り災証明・災害VC・ごみ・相談窓口の節目と進捗。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="official-water-recovery.html">水の復旧と、統計に表れない水の問題</a>
+              <span class="sitemap-item-desc">通水と飲用可否の乖離、受水槽・宅内配管の課題を記録。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="terms.html">災害用語集</a>
+              <span class="sitemap-item-desc">公費解体、みなし仮設、災害救助法など被災時に使われる用語解説。</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 6. 支援者・団体情報・方針 -->
+        <section class="sitemap-block">
+          <div class="sitemap-block-head">
+            <span class="sitemap-block-icon" aria-hidden="true">🤝</span>
+            <h2>支援する方へ・団体情報</h2>
+          </div>
+          <p class="sitemap-block-sub">支援活動の心得、ボランティアセンター、運営団体の情報と方針</p>
+          <ul class="sitemap-list">
+            <li class="sitemap-item">
+              <a href="supporters.html">支援する方へ（心得と活動前の確認）</a>
+              <span class="sitemap-item-desc">ボランティアや支援団体が現地入りする前の事前確認と配慮事項。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="support.html">支援分野別情報</a>
+              <span class="sitemap-item-desc">避難所支援、住まい、福祉、物資などの分野別活動状況。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="volunteer-centers.html">災害ボランティアセンター開設状況</a>
+              <span class="sitemap-item-desc">県内各市町村社協の災害VC開設・受付・ボランティア募集状況。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="about.html">私たちについて（よか隊ネット熊本）</a>
+              <span class="sitemap-item-desc">一般社団法人よか隊ネット熊本の設立理念、活動実績、団体概要。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="join.html">支援・協力する（寄付・連携）</a>
+              <span class="sitemap-item-desc">活動資金のご寄付口座情報、ボランティア参加、企業・団体協働。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="contact.html">お問い合わせ</a>
+              <span class="sitemap-item-desc">よか隊ネット熊本へのご相談、情報提供、連携に関する窓口。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="privacy.html">プライバシーポリシー</a>
+              <span class="sitemap-item-desc">個人情報の保護、アクセス解析、Cookie等の取扱い方針。</span>
+            </li>
+            <li class="sitemap-item">
+              <a href="accessibility.html">ウェブアクセシビリティ方針</a>
+              <span class="sitemap-item-desc">JIS X 8341-3準拠、多様な利用環境に配慮したサイト設計方針。</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="sitemap-notes">
+        <p><strong>掲載情報について：</strong>本サイトに掲載されている支援制度や公的情報は、行政機関および各自治体の公表資料に基づき定期的に収集・更新されています。各制度の要件や申請期限、必要書類は変更される場合がありますので、申請や手続きの際は必ずリンク先の自治体公式窓口で最新情報をご確認ください。</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"></footer>
+  <script src="org-site.js?v=20260907-2"></script>
+</body>
+</html>
