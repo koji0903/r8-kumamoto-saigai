@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-20T08:58:11.863Z",
-  "officialCheckedAt": "10/20 17:58",
+  "retrievedAt": "2026-10-20T14:39:26.889Z",
+  "officialCheckedAt": "10/20 23:39",
   "siteTopics": [
     {
       "date": "2026-10-20",
@@ -96,6 +96,16 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "【介護サービス事業所等向け】令和8年熊本地震関連の通知について",
+      "url": "https://www.city.kumamoto.jp/kiji00373066/index.html",
+      "date": "2026-10-20",
+      "time": "18:59",
+      "category": "その他",
+      "municipality": "熊本市",
+      "archiveId": "kumamoto-20261020-57b3442c",
+      "archiveUrl": "official-articles/kumamoto-20261020-57b3442c.html"
+    },
+    {
       "title": "2026年10月20日 令和8年熊本地震 関連情報 （10月20日17時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-10-20",
@@ -124,16 +134,6 @@ window.HOME_TOPICS = {
       "municipality": "西原村",
       "archiveId": "nishihara-20261020-3e933597",
       "archiveUrl": "official-articles/nishihara-20261020-3e933597.html"
-    },
-    {
-      "title": "熊本市災害ボランティアセンター閉所のお知らせ",
-      "url": "https://www.city.kumamoto.jp/kiji00373157/index.html",
-      "date": "2026-10-20",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "熊本市",
-      "archiveId": "kumamoto-20261020-6d24c9ba",
-      "archiveUrl": "official-articles/kumamoto-20261020-6d24c9ba.html"
     },
     {
       "title": "令和8年熊本地震で被災された農業者の皆様へ",

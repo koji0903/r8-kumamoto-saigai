@@ -223,5 +223,13 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "合志市",
     "date": "2026-08-01",
     "retrievedAt": "2026-10-20T08:58:31.852Z"
+  },
+  "https://www.city.kumamoto.jp/kiji00373066/index.html": {
+    "id": "kumamoto-20261020-57b3442c",
+    "htmlPath": "official-articles/kumamoto-20261020-57b3442c.html",
+    "title": "【介護サービス事業所等向け】令和8年熊本地震関連の通知について",
+    "municipality": "熊本市",
+    "date": "2026-10-20",
+    "retrievedAt": "2026-10-20T14:39:30.526Z"
   }
 };

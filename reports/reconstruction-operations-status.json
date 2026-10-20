@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-20T08:58:47.516Z",
+  "generatedAt": "2026-10-20T14:39:47.494Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-20T08:41:33.356Z",
-    "inputCount": 900,
-    "classifiedPageCount": 733,
-    "displayCandidateCount": 634,
+    "generatedAt": "2026-10-20T14:22:39.957Z",
+    "inputCount": 903,
+    "classifiedPageCount": 736,
+    "displayCandidateCount": 637,
     "deltaFromPrevious": {
-      "inputCount": -2,
-      "classifiedPageCount": -5,
-      "unclassifiedCount": 1
+      "inputCount": 3,
+      "classifiedPageCount": 3,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 28,
+      "ageHours": 34,
       "limitHours": 336
     }
   },
@@ -31,8 +31,8 @@
     "municipalityFallbackRate": "21/21",
     "municipalityReport": {
       "municipality_kumamoto": {
-        "classified": 97,
-        "displayCandidates": 88,
+        "classified": 100,
+        "displayCandidates": 91,
         "fallback": true
       },
       "municipality_yatsushiro": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 114,
-        "displayCandidates": 94,
+        "classified": 115,
+        "displayCandidates": 95,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -121,8 +121,8 @@
         "fallback": true
       },
       "municipality_hikawa": {
-        "classified": 53,
-        "displayCandidates": 47,
+        "classified": 52,
+        "displayCandidates": 46,
         "fallback": true
       },
       "municipality_ashikita": {
@@ -138,9 +138,9 @@
     },
     "categoryReport": {
       "home": {
-        "total": 197,
+        "total": 198,
         "high": 73,
-        "medium": 79,
+        "medium": 80,
         "low": 45
       },
       "money": {
@@ -156,9 +156,9 @@
         "low": 108
       },
       "health_care": {
-        "total": 86,
+        "total": 89,
         "high": 24,
-        "medium": 62,
+        "medium": 65,
         "low": 0
       },
       "family_education": {
@@ -168,9 +168,9 @@
         "low": 37
       },
       "work_business": {
-        "total": 67,
+        "total": 68,
         "high": 16,
-        "medium": 51,
+        "medium": 52,
         "low": 0
       },
       "agriculture_fishery": {
@@ -188,7 +188,7 @@
     },
     "confidence": {
       "high": 271,
-      "medium": 363,
+      "medium": 366,
       "low": 99
     },
     "unclassifiedCount": 6,
@@ -292,7 +292,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "count": 2
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -372,7 +372,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_hikawa",
-      "count": 3
+      "count": 4
     }
   ],
   "strictSources": {

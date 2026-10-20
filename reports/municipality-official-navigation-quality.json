@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-20T08:41:33.356Z",
+  "generatedAt": "2026-10-20T14:22:39.957Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 900,
-  "displayCandidateCount": 634,
-  "classifiedPageCount": 733,
+  "inputCount": 903,
+  "displayCandidateCount": 637,
+  "classifiedPageCount": 736,
   "categoryReport": {
     "home": {
-      "total": 197,
+      "total": 198,
       "high": 73,
-      "medium": 79,
+      "medium": 80,
       "low": 45
     },
     "money": {
@@ -25,9 +25,9 @@
       "low": 108
     },
     "health_care": {
-      "total": 86,
+      "total": 89,
       "high": 24,
-      "medium": 62,
+      "medium": 65,
       "low": 0
     },
     "family_education": {
@@ -37,9 +37,9 @@
       "low": 37
     },
     "work_business": {
-      "total": 67,
+      "total": 68,
       "high": 16,
-      "medium": 51,
+      "medium": 52,
       "low": 0
     },
     "agriculture_fishery": {
@@ -57,8 +57,8 @@
   },
   "municipalityReport": {
     "municipality_kumamoto": {
-      "classified": 97,
-      "displayCandidates": 88,
+      "classified": 100,
+      "displayCandidates": 91,
       "fallback": true
     },
     "municipality_yatsushiro": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 114,
-      "displayCandidates": 94,
+      "classified": 115,
+      "displayCandidates": 95,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -147,8 +147,8 @@
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 53,
-      "displayCandidates": 47,
+      "classified": 52,
+      "displayCandidates": 46,
       "fallback": true
     },
     "municipality_ashikita": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 271,
-    "medium": 363,
+    "medium": 366,
     "low": 99
   },
   "unclassifiedCount": 6,
@@ -1118,7 +1118,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "count": 2
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1198,9 +1198,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_hikawa",
-      "count": 3
+      "count": 4
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 738
+  "previousClassifiedPageCount": 733
 }
