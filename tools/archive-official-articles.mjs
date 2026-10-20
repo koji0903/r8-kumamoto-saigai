@@ -49,6 +49,12 @@ const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
+// テンプレートリテラル内のインデントが空行へ残ると git diff --check が
+// 新着記事の追加時だけ失敗するため、すべての生成テキストを保存前に正規化する。
+const normalizeGeneratedText = value => String(value)
+  .replace(/\r\n?/g, "\n")
+  .replace(/[\t ]+$/gm, "");
+
 const fileExists = async path => {
   try {
     await access(path);
@@ -508,12 +514,14 @@ async function main() {
       };
 
       await writeFile(jsonPath, JSON.stringify(articleRecord, null, 2) + "\n", "utf8");
-      const pageHtml = renderArticleHtml(articleRecord);
-      await writeFile(htmlPath, pageHtml, "utf8");
 
       // サーバー負荷軽減のウェイト
       await sleep(400);
     }
+
+    // キャッシュ済みの記事も現在のテンプレートと空白規則で再生成する。
+    const pageHtml = normalizeGeneratedText(renderArticleHtml(articleRecord));
+    await writeFile(htmlPath, pageHtml, "utf8");
 
     archivedArticles.push(articleRecord);
     existingIndex[item.url] = {
@@ -531,7 +539,7 @@ async function main() {
 
   // 日付順にソートして一覧ページを生成
   archivedArticles.sort((a, b) => `${b.date} ${b.time || ""}`.localeCompare(`${a.date} ${a.time || ""}`));
-  const indexHtml = renderArchiveIndexHtml(archivedArticles);
+  const indexHtml = normalizeGeneratedText(renderArchiveIndexHtml(archivedArticles));
   await writeFile(join(ARTICLES_HTML_DIR, "index.html"), indexHtml, "utf8");
 
   // JSインデックスの生成（フロントエンドやビルドツール用）

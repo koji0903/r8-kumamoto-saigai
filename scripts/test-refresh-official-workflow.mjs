@@ -25,7 +25,7 @@ assert.equal(/push[^\n]*--force|push[^\n]*-f\b/.test(yaml),false,"force push禁�
 assert.ok(yaml.includes("inputs.dry_run != true"),"dry-runではcommitしない");
 assert.ok(yaml.includes("git push origin HEAD:main")&&!yaml.includes("git push --force"),"通常pushのみ");
 assert.ok(yaml.includes("git rebase --abort")&&yaml.includes("force pushは行いません"),"競合時は安全に停止する");
-for(const text of ["git diff --name-only --diff-filter=U","generated_only=true","public-data/site-search-index.json|data/generated/home-topics.js","git checkout --ours","npm run preflight","git commit --amend --no-edit","一次情報または手書きページが競合したため"]) assert.ok(yaml.includes(text),`生成物の安全な競合解消に ${text} が必要`);
+for(const text of ["git diff --name-only --diff-filter=U","generated_only=true","official-articles/index.html","data/generated/*.js","public-data/reconstruction/*.json","reports/*.json","docs/reconstruction-*-status.md","git checkout --ours","npm run preflight","git commit --amend --no-edit","一次情報または手書きページが競合したため"]) assert.ok(yaml.includes(text),`生成物の安全な競合解消に ${text} が必要`);
 assert.ok(yaml.indexOf("git checkout --ours")<yaml.indexOf("git commit --amend --no-edit"),"最新main採用後に再生成コミットする");
 const coverage=fs.readFileSync("scripts/test-reconstruction-coverage.mjs","utf8");
 assert.match(coverage,/minInputCount\s*=\s*\d+/,"公式ページの収集量を検査する");

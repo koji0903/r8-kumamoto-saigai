@@ -266,7 +266,7 @@ jobs:
               generated_only=true
               while IFS= read -r conflict; do
                 case "${conflict}" in
-                  index.html|sitemap.xml|public-data/site-search-index.json|data/generated/home-topics.js|priority-support-summary.html|sources/priority-support-matrix.json)
+                  index.html|sitemap.xml|priority-support-summary.html|official-articles/index.html|public-data/site-search-index.json|data/generated/*.js|public-data/reconstruction/*.json|reports/*.json|docs/reconstruction-*-status.md|sources/priority-support-matrix.json)
                     ;;
                   *)
                     generated_only=false
