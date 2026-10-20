@@ -26,6 +26,12 @@ const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
 }[char]));
 
+// 未アーカイブの記事では条件付きHTMLが空になり、テンプレートの字下げだけが
+// 行に残る。収集内容に左右されず git diff --check を通せるよう正規化する。
+const normalizeGeneratedText = value => String(value)
+  .replace(/\r\n?/g, "\n")
+  .replace(/[\t ]+$/gm, "");
+
 const formatDate = dateStr => {
   if (!dateStr) return "";
   const m = dateStr.match(/(\d{4})-(\d{2})-(\d{2})/);
@@ -179,6 +185,7 @@ ${officialTopicsHtml}
     // home-current-v2 の直前に挿入
     newIndexHtml = newIndexHtml.replace(/(<section class="home-current-v2")/i, `${topicsSectionHtml}\n\n    $1`);
   }
+  newIndexHtml = normalizeGeneratedText(newIndexHtml);
 
   let htmlChanged = newIndexHtml !== indexHtml;
   if (!checkOnly && htmlChanged) {

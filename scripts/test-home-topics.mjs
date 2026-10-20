@@ -7,6 +7,7 @@ const exists = file => fs.existsSync(new URL(`../${file}`, import.meta.url));
 const indexHtml = read("index.html");
 const siteTopicsRaw = read("sources/site-topics.json");
 const homeTopicsJs = read("data/generated/home-topics.js");
+const generator = read("tools/build-home-topics.mjs");
 
 // 1. sources/site-topics.json の検査
 const siteTopics = JSON.parse(siteTopicsRaw);
@@ -26,6 +27,9 @@ assert.ok(indexHtml.includes('class="home-topics-v2"'), "index.html に home-top
 assert.ok(indexHtml.includes('id="home-topics-title"'), "home-topics-title がありません");
 assert.ok(indexHtml.includes('class="home-topic-card"'), "サイト更新カードがありません");
 assert.ok(indexHtml.includes('class="home-official-card"'), "自治体公式発表カードがありません");
+assert.equal(indexHtml.includes("\r"), false, "index.html にCR改行があります");
+assert.equal(indexHtml.split("\n").findIndex(line => /[\t ]+$/.test(line)), -1, "index.html に行末空白があります");
+assert.ok(generator.includes("normalizeGeneratedText"), "トピックス生成時の改行・行末空白の正規化がありません");
 
 const siteCards = indexHtml.match(/class="home-topic-card"/g) || [];
 assert.equal(siteCards.length, 10, `サイト更新カードは最新10件である必要があります（現在${siteCards.length}件）`);
