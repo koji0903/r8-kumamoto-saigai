@@ -9,12 +9,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-19T21:51:24.593Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699": {
-    "id": "uki-20261019-7d9d4e13",
-    "htmlPath": "official-articles/uki-20261019-7d9d4e13.html",
-    "title": "2026年10月19日 令和8年熊本地震 関連情報 （10月19日12時00分更新）",
+    "id": "uki-20261020-7d9d4e13",
+    "htmlPath": "official-articles/uki-20261020-7d9d4e13.html",
+    "title": "2026年10月20日 令和8年熊本地震 関連情報 （10月20日17時00分更新）",
     "municipality": "宇城市",
-    "date": "2026-10-19",
-    "retrievedAt": "2026-10-19T21:51:26.521Z"
+    "date": "2026-10-20",
+    "retrievedAt": "2026-10-20T08:58:14.751Z"
   },
   "https://localcms.city.minamata.lg.jp/page4895.html?type=top": {
     "id": "minamata-20261019-81bdc420",
@@ -41,12 +41,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-19T21:51:28.625Z"
   },
   "https://www.town.kosa.lg.jp/q/aview/1/13531.html": {
-    "id": "kosa-20261019-d4265651",
-    "htmlPath": "official-articles/kosa-20261019-d4265651.html",
-    "title": "令和8年熊本地震災害支援情報まとめ(10/19更新)",
+    "id": "kosa-20261020-d4265651",
+    "htmlPath": "official-articles/kosa-20261020-d4265651.html",
+    "title": "令和8年熊本地震災害支援情報まとめ(10/20更新)",
     "municipality": "甲佐町",
-    "date": "2026-10-19",
-    "retrievedAt": "2026-10-19T21:51:29.467Z"
+    "date": "2026-10-20",
+    "retrievedAt": "2026-10-20T08:58:24.374Z"
   },
   "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=562": {
     "id": "tsunagi-20261019-58f61927",
@@ -65,12 +65,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-19T21:51:31.021Z"
   },
   "https://www.city.kumamoto.jp/kiji00373157/index.html": {
-    "id": "kumamoto-20261017-6d24c9ba",
-    "htmlPath": "official-articles/kumamoto-20261017-6d24c9ba.html",
+    "id": "kumamoto-20261020-6d24c9ba",
+    "htmlPath": "official-articles/kumamoto-20261020-6d24c9ba.html",
     "title": "熊本市災害ボランティアセンター閉所のお知らせ",
     "municipality": "熊本市",
-    "date": "2026-10-17",
-    "retrievedAt": "2026-10-19T21:51:31.770Z"
+    "date": "2026-10-20",
+    "retrievedAt": "2026-10-20T08:58:19.925Z"
   },
   "https://www.city.uto.lg.jp/article/view/1303/16352.html": {
     "id": "uto-20261017-1f205c0b",
@@ -159,5 +159,69 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "芦北町",
     "date": "2026-08-31",
     "retrievedAt": "2026-10-19T21:51:40.835Z"
+  },
+  "https://www.city.yatsushiro.lg.jp/kiji00326803/index.html": {
+    "id": "yatsushiro-20261020-b09ac7b8",
+    "htmlPath": "official-articles/yatsushiro-20261020-b09ac7b8.html",
+    "title": "令和８年熊本地震によって被災された方の定期予防接種のお知らせ",
+    "municipality": "八代市",
+    "date": "2026-10-20",
+    "retrievedAt": "2026-10-20T08:58:15.921Z"
+  },
+  "https://www.vill.nishihara.kumamoto.jp/kiji0031495/index.html": {
+    "id": "nishihara-20261020-3e933597",
+    "htmlPath": "official-articles/nishihara-20261020-3e933597.html",
+    "title": "令和9年度 保育所等の一斉入所申込みについて",
+    "municipality": "西原村",
+    "date": "2026-10-20",
+    "retrievedAt": "2026-10-20T08:58:18.184Z"
+  },
+  "https://www.city.uto.lg.jp/article/view/1322/16865.html": {
+    "id": "uto-20261020-e9301bd5",
+    "htmlPath": "official-articles/uto-20261020-e9301bd5.html",
+    "title": "令和8年熊本地震で被災された農業者の皆様へ",
+    "municipality": "宇土市",
+    "date": "2026-10-20",
+    "retrievedAt": "2026-10-20T08:58:21.440Z"
+  },
+  "https://www.town.mashiki.lg.jp/kiji0038223/index.html": {
+    "id": "mashiki-20261020-6156d9a3",
+    "htmlPath": "official-articles/mashiki-20261020-6156d9a3.html",
+    "title": "木山仮設団地跡地公園（仮称）に係る基本設計業務委託の公募型プロポーザル実施について",
+    "municipality": "益城町",
+    "date": "2026-10-20",
+    "retrievedAt": "2026-10-20T08:58:22.718Z"
+  },
+  "https://www.town.hikawa.kumamoto.jp/kiji0036846/index.html": {
+    "id": "hikawa-20261019-425e281a",
+    "htmlPath": "official-articles/hikawa-20261019-425e281a.html",
+    "title": "令和8年熊本地震営農再開支援事業に伴う事業要望調査の受付について",
+    "municipality": "氷川町",
+    "date": "2026-10-19",
+    "retrievedAt": "2026-10-20T08:58:26.456Z"
+  },
+  "https://www.town.ozu.kumamoto.jp/page/27698.html": {
+    "id": "muni-20261014-279eab66",
+    "htmlPath": "official-articles/muni-20261014-279eab66.html",
+    "title": "令和8年熊本地震（7月28日発生）に関する情報（10月14日時点）",
+    "municipality": "大津町",
+    "date": "2026-10-14",
+    "retrievedAt": "2026-10-20T08:58:28.735Z"
+  },
+  "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6035.html": {
+    "id": "kashima-20261014-db33c7aa",
+    "htmlPath": "official-articles/kashima-20261014-db33c7aa.html",
+    "title": "令和8年熊本地震に関する情報",
+    "municipality": "嘉島町",
+    "date": "2026-10-14",
+    "retrievedAt": "2026-10-20T08:58:30.321Z"
+  },
+  "https://www.city.koshi.lg.jp/kinkyu.html": {
+    "id": "koshi-20260801-48e758e7",
+    "htmlPath": "official-articles/koshi-20260801-48e758e7.html",
+    "title": "「罹災証明書」「被災証明書」の申請を受け付けています",
+    "municipality": "合志市",
+    "date": "2026-08-01",
+    "retrievedAt": "2026-10-20T08:58:31.852Z"
   }
 };
