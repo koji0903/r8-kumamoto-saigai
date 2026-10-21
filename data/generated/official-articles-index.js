@@ -9,12 +9,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-19T21:51:24.593Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699": {
-    "id": "uki-20261020-7d9d4e13",
-    "htmlPath": "official-articles/uki-20261020-7d9d4e13.html",
-    "title": "2026年10月20日 令和8年熊本地震 関連情報 （10月20日17時00分更新）",
+    "id": "uki-20261021-7d9d4e13",
+    "htmlPath": "official-articles/uki-20261021-7d9d4e13.html",
+    "title": "2026年10月21日 令和8年熊本地震 関連情報 （10月21日8時00分更新）",
     "municipality": "宇城市",
-    "date": "2026-10-20",
-    "retrievedAt": "2026-10-20T08:58:14.751Z"
+    "date": "2026-10-21",
+    "retrievedAt": "2026-10-21T00:16:32.019Z"
   },
   "https://localcms.city.minamata.lg.jp/page4895.html?type=top": {
     "id": "minamata-20261019-81bdc420",
@@ -239,5 +239,21 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "甲佐町",
     "date": "2026-10-21",
     "retrievedAt": "2026-10-20T19:41:36.562Z"
+  },
+  "https://www.city.amakusa.kumamoto.jp/bousai/kiji00314592/index.html": {
+    "id": "amakusa-20261021-6f62fce2",
+    "htmlPath": "official-articles/amakusa-20261021-6f62fce2.html",
+    "title": "令和８年熊本地震の被害に遭われた方へ（各種支援制度の紹介）",
+    "municipality": "天草市",
+    "date": "2026-10-21",
+    "retrievedAt": "2026-10-21T00:16:29.936Z"
+  },
+  "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html": {
+    "id": "yatsushiro-20261021-c2d6b51f",
+    "htmlPath": "official-articles/yatsushiro-20261021-c2d6b51f.html",
+    "title": "避難所開設状況",
+    "municipality": "八代市",
+    "date": "2026-10-21",
+    "retrievedAt": "2026-10-21T00:16:31.403Z"
   }
 };

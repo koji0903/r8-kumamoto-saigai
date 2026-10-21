@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-20T19:41:34.131Z",
-  "officialCheckedAt": "10/21 04:41",
+  "retrievedAt": "2026-10-21T00:16:26.295Z",
+  "officialCheckedAt": "10/21 09:16",
   "siteTopics": [
     {
       "date": "2026-10-20",
@@ -96,6 +96,36 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和８年熊本地震の被害に遭われた方へ（各種支援制度の紹介）",
+      "url": "https://www.city.amakusa.kumamoto.jp/bousai/kiji00314592/index.html",
+      "date": "2026-10-21",
+      "time": "08:37",
+      "category": "支援・制度",
+      "municipality": "天草市",
+      "archiveId": "amakusa-20261021-6f62fce2",
+      "archiveUrl": "official-articles/amakusa-20261021-6f62fce2.html"
+    },
+    {
+      "title": "避難所開設状況",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
+      "date": "2026-10-21",
+      "time": "08:34",
+      "category": "避難・安全",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261021-c2d6b51f",
+      "archiveUrl": "official-articles/yatsushiro-20261021-c2d6b51f.html"
+    },
+    {
+      "title": "2026年10月21日 令和8年熊本地震 関連情報 （10月21日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-10-21",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261021-7d9d4e13",
+      "archiveUrl": "official-articles/uki-20261021-7d9d4e13.html"
+    },
+    {
       "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
       "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
       "date": "2026-10-21",
@@ -114,26 +144,6 @@ window.HOME_TOPICS = {
       "municipality": "熊本市",
       "archiveId": "kumamoto-20261020-57b3442c",
       "archiveUrl": "official-articles/kumamoto-20261020-57b3442c.html"
-    },
-    {
-      "title": "2026年10月20日 令和8年熊本地震 関連情報 （10月20日17時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-10-20",
-      "time": "17:00",
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261020-7d9d4e13",
-      "archiveUrl": "official-articles/uki-20261020-7d9d4e13.html"
-    },
-    {
-      "title": "令和８年熊本地震によって被災された方の定期予防接種のお知らせ",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326803/index.html",
-      "date": "2026-10-20",
-      "time": "16:34",
-      "category": "その他",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261020-b09ac7b8",
-      "archiveUrl": "official-articles/yatsushiro-20261020-b09ac7b8.html"
     },
     {
       "title": "令和9年度 保育所等の一斉入所申込みについて",
@@ -224,16 +234,6 @@ window.HOME_TOPICS = {
       "municipality": "御船町",
       "archiveId": "mifune-20261015-c1f8f16e",
       "archiveUrl": "official-articles/mifune-20261015-c1f8f16e.html"
-    },
-    {
-      "title": "令和８年熊本地震に係る義援金のお願い",
-      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314565/index.html",
-      "date": "2026-10-15",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "天草市",
-      "archiveId": "amakusa-20261015-3ad903c6",
-      "archiveUrl": "official-articles/amakusa-20261015-3ad903c6.html"
     },
     {
       "title": "令和8年熊本地震（7月28日発生）に関する情報（10月14日時点）",

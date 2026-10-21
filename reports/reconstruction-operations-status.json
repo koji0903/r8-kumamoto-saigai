@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-20T19:42:01.559Z",
+  "generatedAt": "2026-10-21T00:16:49.807Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-20T19:22:19.069Z",
-    "inputCount": 904,
-    "classifiedPageCount": 737,
-    "displayCandidateCount": 638,
+    "generatedAt": "2026-10-20T23:57:43.257Z",
+    "inputCount": 903,
+    "classifiedPageCount": 736,
+    "displayCandidateCount": 637,
     "deltaFromPrevious": {
-      "inputCount": 1,
-      "classifiedPageCount": 1,
+      "inputCount": -1,
+      "classifiedPageCount": -1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 39,
+      "ageHours": 43,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 116,
-        "displayCandidates": 96,
+        "classified": 115,
+        "displayCandidates": 95,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,9 +138,9 @@
     },
     "categoryReport": {
       "home": {
-        "total": 198,
+        "total": 197,
         "high": 73,
-        "medium": 80,
+        "medium": 79,
         "low": 45
       },
       "money": {
@@ -188,7 +188,7 @@
     },
     "confidence": {
       "high": 272,
-      "medium": 366,
+      "medium": 365,
       "low": 99
     },
     "unclassifiedCount": 6,
@@ -362,7 +362,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 15
+      "count": 16
     },
     {
       "code": "HTTP_404_CANDIDATE",

@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-20T19:22:19.069Z",
+  "generatedAt": "2026-10-20T23:57:43.257Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 904,
-  "displayCandidateCount": 638,
-  "classifiedPageCount": 737,
+  "inputCount": 903,
+  "displayCandidateCount": 637,
+  "classifiedPageCount": 736,
   "categoryReport": {
     "home": {
-      "total": 198,
+      "total": 197,
       "high": 73,
-      "medium": 80,
+      "medium": 79,
       "low": 45
     },
     "money": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 116,
-      "displayCandidates": 96,
+      "classified": 115,
+      "displayCandidates": 95,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 272,
-    "medium": 366,
+    "medium": 365,
     "low": 99
   },
   "unclassifiedCount": 6,
@@ -901,7 +901,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月20日 令和8年熊本地震 関連情報 （10月20日17時00分更新）",
+      "title": "2026年10月21日 令和8年熊本地震 関連情報 （10月21日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -915,8 +915,8 @@
     },
     {
       "municipalityName": "天草市",
-      "title": "(統合版)2026.10.1時点_令和８年熊本地震に遭われた方へ（PDF：970.4キロバイト）",
-      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314592/3_14592_81704_up_1ioe6pwd.pdf",
+      "title": "(統合版)2026.10.20時点_令和８年熊本地震に遭われた方へ（PDF：970.6キロバイト）",
+      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314592/3_14592_82112_up_hqk8w66g.pdf",
       "ruleId": "overall_guide",
       "ruleLabel": "被災者向けの総合案内"
     },
@@ -1188,7 +1188,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 15
+      "count": 16
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1202,5 +1202,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 736
+  "previousClassifiedPageCount": 737
 }
