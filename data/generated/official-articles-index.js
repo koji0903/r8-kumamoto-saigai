@@ -233,12 +233,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-20T14:39:30.526Z"
   },
   "https://www.town.kosa.lg.jp/q/aview/51/13583.html": {
-    "id": "kosa-20261021-b8cd69a7",
-    "htmlPath": "official-articles/kosa-20261021-b8cd69a7.html",
+    "id": "kosa-20261022-b8cd69a7",
+    "htmlPath": "official-articles/kosa-20261022-b8cd69a7.html",
     "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
     "municipality": "甲佐町",
-    "date": "2026-10-21",
-    "retrievedAt": "2026-10-20T19:41:36.562Z"
+    "date": "2026-10-22",
+    "retrievedAt": "2026-10-21T22:08:02.011Z"
   },
   "https://www.city.amakusa.kumamoto.jp/bousai/kiji00314592/index.html": {
     "id": "amakusa-20261021-6f62fce2",
@@ -279,5 +279,61 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "嘉島町",
     "date": "2026-10-20",
     "retrievedAt": "2026-10-21T05:17:00.737Z"
+  },
+  "https://www.town.kikuyo.lg.jp/bousai/kiji0035799/index.html": {
+    "id": "kikuyo-20261021-c0b88852",
+    "htmlPath": "official-articles/kikuyo-20261021-c0b88852.html",
+    "title": "【期間延長】令和8年熊本地震により被災された方々を支援する義援金を受け付けています",
+    "municipality": "菊陽町",
+    "date": "2026-10-21",
+    "retrievedAt": "2026-10-21T22:08:03.719Z"
+  },
+  "https://www.town.tsunagi.lg.jp/page4788.html?type=top": {
+    "id": "tsunagi-20261021-3c8d7008",
+    "htmlPath": "official-articles/tsunagi-20261021-3c8d7008.html",
+    "title": "令和8年熊本地震被災者生活再建相談会が実施されます",
+    "municipality": "津奈木町",
+    "date": "2026-10-21",
+    "retrievedAt": "2026-10-21T22:08:05.740Z"
+  },
+  "https://www.city.yatsushiro.lg.jp/default.html": {
+    "id": "yatsushiro-20261021-bad1de7e",
+    "htmlPath": "official-articles/yatsushiro-20261021-bad1de7e.html",
+    "title": "熊本県八代市",
+    "municipality": "八代市",
+    "date": "2026-10-21",
+    "retrievedAt": "2026-10-21T22:08:06.421Z"
+  },
+  "https://www.city.kikuchi.lg.jp/article/view/1040/19566.html": {
+    "id": "kikuchi-20261021-f5f1e2ae",
+    "htmlPath": "official-articles/kikuchi-20261021-f5f1e2ae.html",
+    "title": "2026年10月21日 令和８年熊本地震における災害義援金の配分について",
+    "municipality": "菊池市",
+    "date": "2026-10-21",
+    "retrievedAt": "2026-10-21T22:08:08.437Z"
+  },
+  "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6187.html": {
+    "id": "kashima-20261021-4505291e",
+    "htmlPath": "official-articles/kashima-20261021-4505291e.html",
+    "title": "【事業者向け】セーフティネット保証4号の認定について(令和8年熊本地震)",
+    "municipality": "嘉島町",
+    "date": "2026-10-21",
+    "retrievedAt": "2026-10-21T22:08:10.184Z"
+  },
+  "https://www.city.uto.lg.jp/article/view/1302/16888.html": {
+    "id": "uto-20261020-78d3f4f3",
+    "htmlPath": "official-articles/uto-20261020-78d3f4f3.html",
+    "title": "避難所について（10/20 17:00更新）",
+    "municipality": "宇土市",
+    "date": "2026-10-20",
+    "retrievedAt": "2026-10-21T22:08:12.097Z"
+  },
+  "https://www.city.kamiamakusa.kumamoto.jp/q/aview/29/23690.html": {
+    "id": "kamiamakusa-20261015-fa7de7d3",
+    "htmlPath": "official-articles/kamiamakusa-20261015-fa7de7d3.html",
+    "title": "船員の不在者投票(選挙人名簿登録証明書)",
+    "municipality": "上天草市",
+    "date": "2026-10-15",
+    "retrievedAt": "2026-10-21T22:08:14.009Z"
   }
 };
