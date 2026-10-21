@@ -6,6 +6,9 @@ const exists = file => fs.existsSync(new URL(`../${file}`, import.meta.url));
 
 const ARCHIVE_INDEX_PATH = "sources/official/articles/archive-index.json";
 const ARTICLES_INDEX_HTML = "official-articles/index.html";
+const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, char => ({
+  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+}[char]));
 const assertNoTrailingWhitespace = (content, file) => {
   assert.equal(content.includes("\r"), false, `${file} にCR改行があります`);
   const line = content.split("\n").findIndex(value => /[\t ]+$/.test(value));
@@ -28,9 +31,16 @@ for (const [url, item] of Object.entries(archiveIndex)) {
   assert.ok(item.htmlPath, `記事アイテムに htmlPath がありません: ${item.id}`);
   assert.ok(exists(item.htmlPath), `アーカイブHTML ${item.htmlPath} が存在しません`);
 
+  const articleDataPath = `sources/official/articles/${item.id}.json`;
+  assert.ok(exists(articleDataPath), `アーカイブデータ ${articleDataPath} が存在しません`);
+  const articleData = JSON.parse(read(articleDataPath));
+  assert.equal(item.title, articleData.title, `${item.id}: 目録と保存データのタイトルが一致しません`);
+  assert.equal(item.municipality, articleData.municipality, `${item.id}: 目録と保存データの自治体が一致しません`);
+  assert.equal(item.date, articleData.date, `${item.id}: 目録と保存データの日付が一致しません`);
+
   const html = read(item.htmlPath);
   assertNoTrailingWhitespace(html, item.htmlPath);
-  assert.ok(html.includes(item.title), `${item.htmlPath} にタイトルが含まれていません`);
+  assert.ok(html.includes(escapeHtml(item.title)), `${item.htmlPath} にタイトルが含まれていません`);
   assert.ok(html.includes(url), `${item.htmlPath} に自治体公式元URL（${url}）が含まれていません`);
   checkedCount++;
 }

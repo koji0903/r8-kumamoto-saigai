@@ -527,9 +527,11 @@ async function main() {
     existingIndex[item.url] = {
       id,
       htmlPath: `official-articles/${id}.html`,
-      title: item.title,
-      municipality: item.municipality,
-      date: item.date,
+      // 保存済みの記事は取得時点のスナップショットであるため、収集元の
+      // 表題だけが後から変わっても目録とHTMLを別々の状態にしない。
+      title: articleRecord.title,
+      municipality: articleRecord.municipality,
+      date: articleRecord.date,
       retrievedAt: articleRecord.retrievedAt
     };
   }
