@@ -21,7 +21,9 @@ concurrency:
 
 jobs:
   refresh:
-    runs-on: ubuntu-latest
+    # 外部サイト収集とPDF解析の再現性を保つ。ubuntu-latest のOS世代移行で
+    # 数日おきの定期実行結果が変わらないよう、検証済み環境へ固定する。
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
       - name: リポジトリを取得

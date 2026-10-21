@@ -12,6 +12,8 @@ assert.ok(index("暮らしの再建・自治体公式情報ナビを生成")<ind
 assert.ok(index("自治体公式情報ナビを検証・集計")<index("確認済みデータを反映"));
 assert.ok(index("自治体公式情報ナビを検証・集計")<index("自治体公式情報ナビの未分類を記録"));
 for(const text of ["workflow_dispatch:","dry_run:","concurrency:","cancel-in-progress: false","timeout-minutes: 30","contents: write","run-municipality-official-nav-pipeline.mjs","validate-municipality-official-nav.mjs","test-refresh-official-workflow.mjs","monitor-reconstruction-sources.mjs","build-reconstruction-public-data.js","reconstruction-source-state.json","reconstruction-source-review-queue.json","source-change-events.json","public-data/reconstruction/municipality-official-navigation.json","reports/municipality-official-navigation-quality.json","public-data/site-search-index.json","git diff --check","git add -u","git diff --cached --quiet","git diff --quiet","git fetch origin main","git rebase origin/main","for attempt in 1 2 3"])assert.ok(yaml.includes(text),`${text} が必要`);
+assert.match(yaml,/runs-on:\s*ubuntu-24\.04/,"定期更新は検証済みのUbuntu 24.04へ固定する");
+assert.doesNotMatch(yaml,/runs-on:\s*ubuntu-latest/,"定期更新で移行対象のubuntu-latestを使わない");
 assert.match(yaml,/自治体公式情報ナビの未分類を記録[\s\S]*if: \$\{\{ always\(\) \}\}[\s\S]*report-municipality-nav-quality\.mjs/,"検証失敗時も未分類一覧をWorkflow summaryへ残す");
 assert.match(qualitySummary,/GITHUB_STEP_SUMMARY/,"未分類一覧をGitHub ActionsのSummaryへ出力する");
 assert.match(yaml,/fetch-depth:\s*0/,"定期更新はSEO lastmod生成のため全履歴を取得する");
