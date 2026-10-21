@@ -18,6 +18,8 @@ assert.match(yaml,/自治体公式情報ナビの未分類を記録[\s\S]*if: \$
 assert.match(qualitySummary,/GITHUB_STEP_SUMMARY/,"未分類一覧をGitHub ActionsのSummaryへ出力する");
 assert.match(yaml,/fetch-depth:\s*0/,"定期更新はSEO lastmod生成のため全履歴を取得する");
 assert.match(validateYaml,/fetch-depth:\s*0/,"整合性チェックはSEO lastmod検査のため全履歴を取得する");
+assert.match(validateYaml,/runs-on:\s*ubuntu-24\.04/,"整合性チェックも検証済みのUbuntu 24.04へ固定する");
+assert.doesNotMatch(validateYaml,/runs-on:\s*ubuntu-latest/,"整合性チェックで移行対象のubuntu-latestを使わない");
 assert.match(validateYaml,/npm run check/,"GitHub Actionsはローカルと同じ統一検査を使う");
 assert.match(yaml,/docs\/reconstruction-operations-status\.md \\\n\s+docs\/reconstruction-information-quality-status\.md/,"品質ステータスを同じgit addへ含める");
 for(const file of ["docs/reconstruction-contact-document-status.md","docs/reconstruction-eligibility-status.md","docs/reconstruction-amount-benefit-status.md","data/reconstruction/amount-benefits.json"]) assert.ok(yaml.includes(file),`${file}を自動更新対象へ含める`);

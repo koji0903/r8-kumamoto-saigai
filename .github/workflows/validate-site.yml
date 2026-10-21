@@ -16,7 +16,8 @@ concurrency:
 jobs:
   validate:
     name: HTML・データ・JavaScriptを検査
-    runs-on: ubuntu-latest
+    # 定期更新と同じ検証済みOSを使い、latestの世代移行による差を防ぐ。
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - name: リポジトリを取得
