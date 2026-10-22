@@ -80,7 +80,8 @@ const specialImages = new Map([
   ["supporters.html", "/ogp-supporters.png"],
   ["official.html", "/ogp-official.png"],
   ["support.html", "/ogp-support-fields.png"],
-  ["sitemap.html", "/ogp-sitemap.png"]
+  ["sitemap.html", "/ogp-sitemap.png"],
+  ["yatsushiro-well-repair.html", "/ogp-yatsushiro-well-repair.png"]
 ]);
 const checkOnly = process.argv.includes("--check");
 const stale = [];
@@ -303,7 +304,7 @@ function getSitemapMeta(file) {
     "kumamoto-saishuppatsu.html",
     "uki-support.html", "uki-living-support.html",
     "hikawa-support.html", "hikawa-living-support.html", "hikawa-demolition.html", "hikawa-interest-subsidy.html",
-    "yatsushiro-support.html", "yatsushiro-living-support.html", "yatsushiro-rebuild.html",
+    "yatsushiro-support.html", "yatsushiro-living-support.html", "yatsushiro-rebuild.html", "yatsushiro-well-repair.html",
     "kumamoto-support.html", "kumamoto-living-support.html",
     "risai-certificate.html", "temporary-housing.html", "shelters.html", "volunteer-centers.html"
   ];
