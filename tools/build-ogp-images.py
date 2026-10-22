@@ -843,13 +843,19 @@ def main() -> None:
     for name, path in (("太字", BOLD), ("標準", REGULAR)):
         if not path.exists():
             sys.exit(f"{name}のフォントが見つかりません: {path}")
-    for page in PAGES:
+    targets = sys.argv[1:]
+    pages = PAGES
+    if targets:
+        pages = [p for p in PAGES if p["file"] in targets or p["out"] in targets]
+        if not pages:
+            sys.exit(f"該当するOGP定義がありません: {targets}")
+    for page in pages:
         if not (ROOT / page["file"]).exists():
             sys.exit(f"対象ページがありません: {page['file']}")
         path = build(page)
         size = os.path.getsize(path)
         print(f"{page['out']}  {W}x{H}  {size // 1024}KB  ← {page['file']}")
-    print(f"OGP画像 {len(PAGES)}枚を生成しました")
+    print(f"OGP画像 {len(pages)}枚を生成しました")
 
 
 if __name__ == "__main__":
