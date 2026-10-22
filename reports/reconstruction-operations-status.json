@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-22T12:23:49.088Z",
+  "generatedAt": "2026-10-22T17:36:32.037Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-22T12:03:56.081Z",
-    "inputCount": 908,
-    "classifiedPageCount": 743,
-    "displayCandidateCount": 637,
+    "generatedAt": "2026-10-22T17:18:25.513Z",
+    "inputCount": 911,
+    "classifiedPageCount": 746,
+    "displayCandidateCount": 640,
     "deltaFromPrevious": {
-      "inputCount": 1,
-      "classifiedPageCount": 1,
+      "inputCount": 3,
+      "classifiedPageCount": 3,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 5,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 142,
-        "displayCandidates": 116,
+        "classified": 143,
+        "displayCandidates": 117,
         "fallback": true
       },
       "municipality_minamata": {
@@ -56,8 +56,8 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 63,
-        "displayCandidates": 56,
+        "classified": 64,
+        "displayCandidates": 57,
         "fallback": true
       },
       "municipality_kamiamakusa": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 114,
-        "displayCandidates": 94,
+        "classified": 116,
+        "displayCandidates": 96,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -81,8 +81,8 @@
         "fallback": true
       },
       "municipality_misato": {
-        "classified": 25,
-        "displayCandidates": 20,
+        "classified": 24,
+        "displayCandidates": 19,
         "fallback": true
       },
       "municipality_ozu": {
@@ -138,21 +138,21 @@
     },
     "categoryReport": {
       "home": {
-        "total": 195,
+        "total": 197,
         "high": 72,
-        "medium": 79,
+        "medium": 81,
         "low": 44
       },
       "money": {
-        "total": 263,
-        "high": 57,
-        "medium": 77,
+        "total": 265,
+        "high": 58,
+        "medium": 78,
         "low": 129
       },
       "documents": {
-        "total": 177,
+        "total": 178,
         "high": 41,
-        "medium": 32,
+        "medium": 33,
         "low": 104
       },
       "health_care": {
@@ -180,15 +180,15 @@
         "low": 0
       },
       "daily_life": {
-        "total": 204,
+        "total": 203,
         "high": 57,
-        "medium": 145,
+        "medium": 144,
         "low": 2
       }
     },
     "confidence": {
-      "high": 267,
-      "medium": 370,
+      "high": 268,
+      "medium": 372,
       "low": 106
     },
     "unclassifiedCount": 8,

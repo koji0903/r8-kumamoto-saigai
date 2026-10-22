@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-22T12:23:20.280Z",
-  "officialCheckedAt": "10/22 21:23",
+  "retrievedAt": "2026-10-22T17:36:07.864Z",
+  "officialCheckedAt": "10/23 02:36",
   "siteTopics": [
     {
       "date": "2026-10-22",
@@ -96,6 +96,26 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和８年熊本地震に係る建設型応急住宅の入居者募集（第2回）について",
+      "url": "https://www.city.uto.lg.jp/article/view/1307/16820.html",
+      "date": "2026-10-23",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261023-9f0fd3fd",
+      "archiveUrl": "official-articles/uto-20261023-9f0fd3fd.html"
+    },
+    {
+      "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
+      "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
+      "date": "2026-10-23",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "甲佐町",
+      "archiveId": "kosa-20261023-b8cd69a7",
+      "archiveUrl": "official-articles/kosa-20261023-b8cd69a7.html"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-10-22",
@@ -134,16 +154,6 @@ window.HOME_TOPICS = {
       "municipality": "益城町",
       "archiveId": "mashiki-20261022-3d4ec45d",
       "archiveUrl": "official-articles/mashiki-20261022-3d4ec45d.html"
-    },
-    {
-      "title": "令和8年熊本地震における住宅の応急修理の申し込みについて",
-      "url": "https://www.town.kosa.lg.jp/q/aview/168/13564.html",
-      "date": "2026-10-22",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "甲佐町",
-      "archiveId": "kosa-20261022-db8a491d",
-      "archiveUrl": "official-articles/kosa-20261022-db8a491d.html"
     },
     {
       "title": "【期間延長】令和8年熊本地震により被災された方々を支援する義援金を受け付けています",
@@ -194,16 +204,6 @@ window.HOME_TOPICS = {
       "municipality": "菊池市",
       "archiveId": "kikuchi-20261021-f5f1e2ae",
       "archiveUrl": "official-articles/kikuchi-20261021-f5f1e2ae.html"
-    },
-    {
-      "title": "令和８年熊本地震被害に関するすまいの相談窓口",
-      "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
-      "date": "2026-10-21",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261021-f352e598",
-      "archiveUrl": "official-articles/uto-20261021-f352e598.html"
     },
     {
       "title": "【事業者向け】セーフティネット保証4号の認定について(令和8年熊本地震)",

@@ -233,12 +233,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-20T14:39:30.526Z"
   },
   "https://www.town.kosa.lg.jp/q/aview/51/13583.html": {
-    "id": "kosa-20261022-b8cd69a7",
-    "htmlPath": "official-articles/kosa-20261022-b8cd69a7.html",
+    "id": "kosa-20261023-b8cd69a7",
+    "htmlPath": "official-articles/kosa-20261023-b8cd69a7.html",
     "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
     "municipality": "甲佐町",
-    "date": "2026-10-22",
-    "retrievedAt": "2026-10-21T22:08:02.011Z"
+    "date": "2026-10-23",
+    "retrievedAt": "2026-10-22T17:36:13.088Z"
   },
   "https://www.city.amakusa.kumamoto.jp/bousai/kiji00314592/index.html": {
     "id": "amakusa-20261021-6f62fce2",
@@ -367,5 +367,13 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "益城町",
     "date": "2026-10-22",
     "retrievedAt": "2026-10-22T12:23:26.401Z"
+  },
+  "https://www.city.uto.lg.jp/article/view/1307/16820.html": {
+    "id": "uto-20261023-9f0fd3fd",
+    "htmlPath": "official-articles/uto-20261023-9f0fd3fd.html",
+    "title": "令和８年熊本地震に係る建設型応急住宅の入居者募集（第2回）について",
+    "municipality": "宇土市",
+    "date": "2026-10-23",
+    "retrievedAt": "2026-10-22T17:36:11.066Z"
   }
 };
