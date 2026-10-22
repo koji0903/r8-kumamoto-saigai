@@ -57,12 +57,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-19T21:51:30.294Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html": {
-    "id": "hikawa-20261018-edaedf97",
-    "htmlPath": "official-articles/hikawa-20261018-edaedf97.html",
+    "id": "hikawa-20261022-edaedf97",
+    "htmlPath": "official-articles/hikawa-20261022-edaedf97.html",
     "title": "令和8年熊本地震関連情報",
     "municipality": "氷川町",
-    "date": "2026-10-18",
-    "retrievedAt": "2026-10-19T21:51:31.021Z"
+    "date": "2026-10-22",
+    "retrievedAt": "2026-10-22T12:23:24.351Z"
   },
   "https://www.city.kumamoto.jp/kiji00373157/index.html": {
     "id": "kumamoto-20261020-6d24c9ba",
@@ -297,12 +297,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-21T22:08:05.740Z"
   },
   "https://www.city.yatsushiro.lg.jp/default.html": {
-    "id": "yatsushiro-20261021-bad1de7e",
-    "htmlPath": "official-articles/yatsushiro-20261021-bad1de7e.html",
+    "id": "yatsushiro-20261022-bad1de7e",
+    "htmlPath": "official-articles/yatsushiro-20261022-bad1de7e.html",
     "title": "熊本県八代市",
     "municipality": "八代市",
-    "date": "2026-10-21",
-    "retrievedAt": "2026-10-21T22:08:06.421Z"
+    "date": "2026-10-22",
+    "retrievedAt": "2026-10-22T12:23:22.774Z"
   },
   "https://www.city.kikuchi.lg.jp/article/view/1040/19566.html": {
     "id": "kikuchi-20261021-f5f1e2ae",
@@ -359,5 +359,13 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "水俣市",
     "date": "2026-10-01",
     "retrievedAt": "2026-10-22T05:18:20.001Z"
+  },
+  "https://www.town.mashiki.lg.jp/kiji0038210/index.html": {
+    "id": "mashiki-20261022-3d4ec45d",
+    "htmlPath": "official-articles/mashiki-20261022-3d4ec45d.html",
+    "title": "国民健康保険自己負担額の還付手続きについて【令和８年熊本地震】",
+    "municipality": "益城町",
+    "date": "2026-10-22",
+    "retrievedAt": "2026-10-22T12:23:26.401Z"
   }
 };

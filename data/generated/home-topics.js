@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-22T05:18:11.156Z",
-  "officialCheckedAt": "10/22 14:18",
+  "retrievedAt": "2026-10-22T12:23:20.280Z",
+  "officialCheckedAt": "10/22 21:23",
   "siteTopics": [
     {
       "date": "2026-10-22",
@@ -96,14 +96,24 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-10-22",
-      "time": "13:38",
+      "time": "19:57",
       "category": "その他",
       "municipality": "八代市",
-      "archiveId": "yatsushiro-20261022-ad77f47a",
-      "archiveUrl": "official-articles/yatsushiro-20261022-ad77f47a.html"
+      "archiveId": "yatsushiro-20261022-bad1de7e",
+      "archiveUrl": "official-articles/yatsushiro-20261022-bad1de7e.html"
+    },
+    {
+      "title": "令和8年熊本地震関連情報",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
+      "date": "2026-10-22",
+      "time": "17:12",
+      "category": "その他",
+      "municipality": "氷川町",
+      "archiveId": "hikawa-20261022-edaedf97",
+      "archiveUrl": "official-articles/hikawa-20261022-edaedf97.html"
     },
     {
       "title": "2026年10月22日 令和8年熊本地震 関連情報 （10月22日13時00分更新）",
@@ -114,6 +124,16 @@ window.HOME_TOPICS = {
       "municipality": "宇城市",
       "archiveId": "uki-20261022-7d9d4e13",
       "archiveUrl": "official-articles/uki-20261022-7d9d4e13.html"
+    },
+    {
+      "title": "国民健康保険自己負担額の還付手続きについて【令和８年熊本地震】",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038210/index.html",
+      "date": "2026-10-22",
+      "time": null,
+      "category": "その他",
+      "municipality": "益城町",
+      "archiveId": "mashiki-20261022-3d4ec45d",
+      "archiveUrl": "official-articles/mashiki-20261022-3d4ec45d.html"
     },
     {
       "title": "令和8年熊本地震における住宅の応急修理の申し込みについて",
@@ -154,16 +174,6 @@ window.HOME_TOPICS = {
       "municipality": "熊本市",
       "archiveId": "kumamoto-20261021-2d71cce8",
       "archiveUrl": "official-articles/kumamoto-20261021-2d71cce8.html"
-    },
-    {
-      "title": "令和8年熊本地震の発生に伴う産業雇用安定助成金の特例の実施及び事業主向け助成金等説明会（第2弾）の開催について",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036870/index.html",
-      "date": "2026-10-21",
-      "time": "11:52",
-      "category": "その他",
-      "municipality": "氷川町",
-      "archiveId": "hikawa-20261021-52aa9d69",
-      "archiveUrl": "official-articles/hikawa-20261021-52aa9d69.html"
     },
     {
       "title": "令和８年熊本地震の被害に遭われた方へ（各種支援制度の紹介）",
@@ -214,16 +224,6 @@ window.HOME_TOPICS = {
       "municipality": "西原村",
       "archiveId": "nishihara-20261020-3e933597",
       "archiveUrl": "official-articles/nishihara-20261020-3e933597.html"
-    },
-    {
-      "title": "木山仮設団地跡地公園（仮称）に係る基本設計業務委託の公募型プロポーザル実施について",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038223/index.html",
-      "date": "2026-10-20",
-      "time": null,
-      "category": "その他",
-      "municipality": "益城町",
-      "archiveId": "mashiki-20261020-6156d9a3",
-      "archiveUrl": "official-articles/mashiki-20261020-6156d9a3.html"
     },
     {
       "title": "令和８年熊本地震における支援の状況について",

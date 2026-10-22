@@ -5873,5 +5873,63 @@
     "reviewedAt": null,
     "reviewedBy": null,
     "resolutionNotes": null
+  },
+  {
+    "id": "source_change_20261022212330_source_uto_support_application_index_r8_earthquake",
+    "fingerprint": "source_uto_support_application_index_r8_earthquake:content_changed:sha256:011766168acfe5fd8d3c3d6039a98d0410feb4312744d865d383c8a345ab5272",
+    "sourceId": "source_uto_support_application_index_r8_earthquake",
+    "sourceTitle": "支援・申請",
+    "sourceUrl": "https://www.city.uto.lg.jp/article/list/1307.html",
+    "eventType": "content_changed",
+    "detectedAt": "2026-10-22T21:23:30+09:00",
+    "previousHash": "sha256:c9edefcb82df5270ef95bfdfd2241ad9e79670cd7299ff3fa8c2a06071f99aa9",
+    "currentHash": "sha256:011766168acfe5fd8d3c3d6039a98d0410feb4312744d865d383c8a345ab5272",
+    "previousUrl": "https://www.city.uto.lg.jp/article/list/1307.html",
+    "currentUrl": "https://www.city.uto.lg.jp/article/list/1307.html",
+    "claimTypes": [
+      "other"
+    ],
+    "risk": "low",
+    "impactAssessment": "UNKNOWN",
+    "operationalStatus": "WARNING",
+    "relatedProgramIds": [
+      "program_emergency_housing_repair"
+    ],
+    "municipalityIds": [
+      "municipality_yatsushiro",
+      "municipality_minamata",
+      "municipality_yamaga",
+      "municipality_kikuchi",
+      "municipality_uto",
+      "municipality_kamiamakusa",
+      "municipality_uki",
+      "municipality_amakusa",
+      "municipality_koshi",
+      "municipality_misato",
+      "municipality_ozu",
+      "municipality_kikuyo",
+      "municipality_nishihara",
+      "municipality_mifune",
+      "municipality_kashima",
+      "municipality_mashiki",
+      "municipality_kosa",
+      "municipality_hikawa",
+      "municipality_ashikita",
+      "municipality_tsunagi"
+    ],
+    "relatedEntities": [
+      {
+        "entityType": "application",
+        "entityId": "application_r8_kumamoto_emergency_repair",
+        "sourceLinkId": "source_link_application_repair_uto_index_checked",
+        "claimType": "other",
+        "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+      }
+    ],
+    "impactedEntities": [],
+    "resolved": false,
+    "reviewedAt": null,
+    "reviewedBy": null,
+    "resolutionNotes": null
   }
 ]
