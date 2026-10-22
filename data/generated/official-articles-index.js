@@ -1,20 +1,20 @@
 // 生成物・直接編集しない。生成: node tools/archive-official-articles.mjs
 window.OFFICIAL_ARTICLES_INDEX = {
   "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html": {
-    "id": "yatsushiro-20261021-ad77f47a",
-    "htmlPath": "official-articles/yatsushiro-20261021-ad77f47a.html",
+    "id": "yatsushiro-20261022-ad77f47a",
+    "htmlPath": "official-articles/yatsushiro-20261022-ad77f47a.html",
     "title": "令和8年熊本地震 関連情報",
     "municipality": "八代市",
-    "date": "2026-10-21",
-    "retrievedAt": "2026-10-21T05:16:58.667Z"
+    "date": "2026-10-22",
+    "retrievedAt": "2026-10-22T05:18:12.675Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699": {
-    "id": "uki-20261021-7d9d4e13",
-    "htmlPath": "official-articles/uki-20261021-7d9d4e13.html",
-    "title": "2026年10月21日 令和8年熊本地震 関連情報 （10月21日8時00分更新）",
+    "id": "uki-20261022-7d9d4e13",
+    "htmlPath": "official-articles/uki-20261022-7d9d4e13.html",
+    "title": "2026年10月22日 令和8年熊本地震 関連情報 （10月22日13時00分更新）",
     "municipality": "宇城市",
-    "date": "2026-10-21",
-    "retrievedAt": "2026-10-21T00:16:32.019Z"
+    "date": "2026-10-22",
+    "retrievedAt": "2026-10-22T05:18:14.645Z"
   },
   "https://localcms.city.minamata.lg.jp/page4895.html?type=top": {
     "id": "minamata-20261019-81bdc420",
@@ -335,5 +335,29 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "上天草市",
     "date": "2026-10-15",
     "retrievedAt": "2026-10-21T22:08:14.009Z"
+  },
+  "https://www.town.kosa.lg.jp/q/aview/168/13564.html": {
+    "id": "kosa-20261022-db8a491d",
+    "htmlPath": "official-articles/kosa-20261022-db8a491d.html",
+    "title": "令和8年熊本地震における住宅の応急修理の申し込みについて",
+    "municipality": "甲佐町",
+    "date": "2026-10-22",
+    "retrievedAt": "2026-10-22T05:18:16.377Z"
+  },
+  "https://www.city.uto.lg.jp/article/view/1307/16522.html": {
+    "id": "uto-20261021-f352e598",
+    "htmlPath": "official-articles/uto-20261021-f352e598.html",
+    "title": "令和８年熊本地震被害に関するすまいの相談窓口",
+    "municipality": "宇土市",
+    "date": "2026-10-21",
+    "retrievedAt": "2026-10-22T05:18:18.375Z"
+  },
+  "https://localcms.city.minamata.lg.jp/page4805.html?type=top": {
+    "id": "minamata-20261001-9f50f0d5",
+    "htmlPath": "official-articles/minamata-20261001-9f50f0d5.html",
+    "title": "令和８年熊本地震に関する支援等",
+    "municipality": "水俣市",
+    "date": "2026-10-01",
+    "retrievedAt": "2026-10-22T05:18:20.001Z"
   }
 };

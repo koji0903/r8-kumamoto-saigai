@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-10-21T21:49:52.361Z",
+  "generatedAt": "2026-10-22T05:01:03.940Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 904,
-  "displayCandidateCount": 635,
-  "classifiedPageCount": 739,
+  "inputCount": 907,
+  "displayCandidateCount": 636,
+  "classifiedPageCount": 742,
   "categoryReport": {
     "home": {
-      "total": 196,
+      "total": 195,
       "high": 71,
-      "medium": 81,
+      "medium": 80,
       "low": 44
     },
     "money": {
-      "total": 257,
-      "high": 56,
-      "medium": 75,
-      "low": 126
+      "total": 261,
+      "high": 57,
+      "medium": 76,
+      "low": 128
     },
     "documents": {
       "total": 176,
       "high": 41,
-      "medium": 31,
-      "low": 104
+      "medium": 32,
+      "low": 103
     },
     "health_care": {
       "total": 87,
@@ -31,26 +31,26 @@
       "low": 0
     },
     "family_education": {
-      "total": 78,
+      "total": 80,
       "high": 11,
-      "medium": 29,
-      "low": 38
+      "medium": 30,
+      "low": 39
     },
     "work_business": {
       "total": 73,
-      "high": 17,
-      "medium": 56,
+      "high": 16,
+      "medium": 57,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 20,
+      "total": 19,
       "high": 4,
-      "medium": 16,
+      "medium": 15,
       "low": 0
     },
     "daily_life": {
-      "total": 204,
-      "high": 56,
+      "total": 205,
+      "high": 57,
       "medium": 146,
       "low": 2
     }
@@ -63,7 +63,7 @@
     },
     "municipality_yatsushiro": {
       "classified": 141,
-      "displayCandidates": 116,
+      "displayCandidates": 115,
       "fallback": true
     },
     "municipality_minamata": {
@@ -132,8 +132,8 @@
       "fallback": true
     },
     "municipality_kashima": {
-      "classified": 19,
-      "displayCandidates": 17,
+      "classified": 21,
+      "displayCandidates": 18,
       "fallback": true
     },
     "municipality_mashiki": {
@@ -142,8 +142,8 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 38,
-      "displayCandidates": 33,
+      "classified": 39,
+      "displayCandidates": 34,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -164,8 +164,8 @@
   },
   "confidence": {
     "high": 266,
-    "medium": 369,
-    "low": 104
+    "medium": 370,
+    "low": 106
   },
   "unclassifiedCount": 8,
   "unclassifiedItems": [
@@ -178,11 +178,6 @@
       "municipalityName": "八代市",
       "title": "スポーツ推進委員派遣事業の一時中断について",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326976/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "【参加企業募集】熊本市主催 「震災復興応援 合同企業説明会」",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00327064/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -205,18 +200,23 @@
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2645544"
     },
     {
+      "municipalityName": "天草市",
+      "title": "明治安田「私の地元応援募金」「熊本地震に対する寄付金」贈呈式",
+      "url": "https://www.city.amakusa.kumamoto.jp/kiji00313670/index.html"
+    },
+    {
       "municipalityName": "氷川町",
       "title": "令和8年熊本地震による「水田」の被害について（稲刈り後の被害確認）",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 119,
+  "outOfScopeCount": 120,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "hq_meeting_material": 54,
     "disaster_preparedness": 11,
     "facility_notice": 12,
-    "budget_notice": 2,
+    "budget_notice": 3,
     "assembly_petition": 1,
     "overall_guide": 5,
     "mayor_message": 2,
@@ -715,15 +715,22 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
+      "title": "令和８年度１０月補正予算（１０月２０日専決分）の概要について",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00327251/index.html",
+      "ruleId": "budget_notice",
+      "ruleLabel": "補正予算・財政情報"
     },
     {
       "municipalityName": "八代市",
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -883,7 +890,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月21日 令和8年熊本地震 関連情報 （10月21日18時00分更新）",
+      "title": "2026年10月22日 令和8年熊本地震 関連情報 （10月22日13時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -1064,13 +1071,13 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 38,
+  "excludedCount": 37,
   "excludedByType": {
     "duplicate_url": 35,
-    "non_official_url": 2,
+    "non_official_url": 1,
     "past_disaster_excluded": 1
   },
-  "warningCount": 24,
+  "warningCount": 22,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1084,16 +1091,6 @@
     },
     {
       "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_yatsushiro",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_yatsushiro",
-      "count": 1
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_minamata",
       "message": "継続回数を確認後に表示除外を判断してください"
     },
@@ -1140,7 +1137,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 7
+      "count": 6
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1180,7 +1177,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 16
+      "count": 15
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1194,5 +1191,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 738
+  "previousClassifiedPageCount": 739
 }
