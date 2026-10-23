@@ -34,6 +34,7 @@ for (const [url, item] of Object.entries(archiveIndex)) {
   const articleDataPath = `sources/official/articles/${item.id}.json`;
   assert.ok(exists(articleDataPath), `アーカイブデータ ${articleDataPath} が存在しません`);
   const articleData = JSON.parse(read(articleDataPath));
+  assert.equal(url, articleData.url, `${item.id}: 目録と保存データの公式元URLが一致しません`);
   assert.equal(item.title, articleData.title, `${item.id}: 目録と保存データのタイトルが一致しません`);
   assert.equal(item.municipality, articleData.municipality, `${item.id}: 目録と保存データの自治体が一致しません`);
   assert.equal(item.date, articleData.date, `${item.id}: 目録と保存データの日付が一致しません`);
@@ -41,7 +42,7 @@ for (const [url, item] of Object.entries(archiveIndex)) {
   const html = read(item.htmlPath);
   assertNoTrailingWhitespace(html, item.htmlPath);
   assert.ok(html.includes(escapeHtml(item.title)), `${item.htmlPath} にタイトルが含まれていません`);
-  assert.ok(html.includes(url), `${item.htmlPath} に自治体公式元URL（${url}）が含まれていません`);
+  assert.ok(html.includes(escapeHtml(url)), `${item.htmlPath} に自治体公式元URL（${url}）が含まれていません`);
   checkedCount++;
 }
 
