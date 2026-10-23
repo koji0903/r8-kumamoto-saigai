@@ -121,12 +121,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-19T21:51:36.788Z"
   },
   "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html": {
-    "id": "misato-20261009-a8f621b2",
-    "htmlPath": "official-articles/misato-20261009-a8f621b2.html",
-    "title": "令和8年熊本地震（7月28日発生）に関する情報（10月9日11時更新）",
+    "id": "misato-20261023-a8f621b2",
+    "htmlPath": "official-articles/misato-20261023-a8f621b2.html",
+    "title": "令和8年熊本地震（7月28日発生）に関する情報（10月23日7時更新）",
     "municipality": "美里町",
-    "date": "2026-10-09",
-    "retrievedAt": "2026-10-19T21:51:37.492Z"
+    "date": "2026-10-23",
+    "retrievedAt": "2026-10-23T05:21:40.716Z"
   },
   "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6347.html": {
     "id": "kashima-20261009-42416a0a",
@@ -297,12 +297,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-21T22:08:05.740Z"
   },
   "https://www.city.yatsushiro.lg.jp/default.html": {
-    "id": "yatsushiro-20261022-bad1de7e",
-    "htmlPath": "official-articles/yatsushiro-20261022-bad1de7e.html",
+    "id": "yatsushiro-20261023-bad1de7e",
+    "htmlPath": "official-articles/yatsushiro-20261023-bad1de7e.html",
     "title": "熊本県八代市",
     "municipality": "八代市",
-    "date": "2026-10-22",
-    "retrievedAt": "2026-10-22T12:23:22.774Z"
+    "date": "2026-10-23",
+    "retrievedAt": "2026-10-23T05:21:34.643Z"
   },
   "https://www.city.kikuchi.lg.jp/article/view/1040/19566.html": {
     "id": "kikuchi-20261021-f5f1e2ae",
@@ -375,5 +375,45 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "宇土市",
     "date": "2026-10-23",
     "retrievedAt": "2026-10-22T17:36:11.066Z"
+  },
+  "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699": {
+    "id": "uki-20261023-7912efae",
+    "htmlPath": "official-articles/uki-20261023-7912efae.html",
+    "title": "2026年10月23日 令和8年熊本地震 関連情報 （10月23日8時00分更新）",
+    "municipality": "宇城市",
+    "date": "2026-10-23",
+    "retrievedAt": "2026-10-23T05:21:36.827Z"
+  },
+  "https://www.town.hikawa.kumamoto.jp/kiji0036849/index.html": {
+    "id": "hikawa-20261023-2e7c12ab",
+    "htmlPath": "official-articles/hikawa-20261023-2e7c12ab.html",
+    "title": "令和8年熊本地震による浄化槽被害調査について",
+    "municipality": "氷川町",
+    "date": "2026-10-23",
+    "retrievedAt": "2026-10-23T05:21:38.803Z"
+  },
+  "https://www.city.kamiamakusa.kumamoto.jp/q/aview/87/22205.html": {
+    "id": "kamiamakusa-20261023-f4eefd0e",
+    "htmlPath": "official-articles/kamiamakusa-20261023-f4eefd0e.html",
+    "title": "妊産婦等に対する遠方の分娩取扱施設等への交通費等を助成します",
+    "municipality": "上天草市",
+    "date": "2026-10-23",
+    "retrievedAt": "2026-10-23T05:21:42.502Z"
+  },
+  "https://www.town.kumamoto-kashima.lg.jp/q/aview/125/6347.html": {
+    "id": "kashima-20261023-276cc92d",
+    "htmlPath": "official-articles/kashima-20261023-276cc92d.html",
+    "title": "令和8年熊本地震被災による国民健康保険税等の減免について",
+    "municipality": "嘉島町",
+    "date": "2026-10-23",
+    "retrievedAt": "2026-10-23T05:21:44.607Z"
+  },
+  "https://www.town.mashiki.lg.jp/kiji0038209/index.html": {
+    "id": "mashiki-20261023-724cc6b2",
+    "htmlPath": "official-articles/mashiki-20261023-724cc6b2.html",
+    "title": "令和８年６月豪雨による被災農地の自力復旧補助金",
+    "municipality": "益城町",
+    "date": "2026-10-23",
+    "retrievedAt": "2026-10-23T05:21:46.634Z"
   }
 };
