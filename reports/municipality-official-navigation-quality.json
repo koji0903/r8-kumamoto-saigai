@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-10-23T05:02:11.069Z",
+  "generatedAt": "2026-10-23T11:49:31.937Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 917,
+  "inputCount": 919,
   "displayCandidateCount": 645,
   "classifiedPageCount": 751,
   "categoryReport": {
     "home": {
-      "total": 200,
+      "total": 198,
       "high": 74,
-      "medium": 81,
+      "medium": 79,
       "low": 45
     },
     "money": {
       "total": 263,
       "high": 58,
-      "medium": 76,
-      "low": 129
+      "medium": 77,
+      "low": 128
     },
     "documents": {
-      "total": 182,
+      "total": 180,
       "high": 42,
-      "medium": 34,
-      "low": 106
+      "medium": 33,
+      "low": 105
     },
     "health_care": {
       "total": 86,
@@ -31,15 +31,15 @@
       "low": 0
     },
     "family_education": {
-      "total": 80,
+      "total": 81,
       "high": 11,
-      "medium": 30,
+      "medium": 31,
       "low": 39
     },
     "work_business": {
-      "total": 74,
+      "total": 73,
       "high": 16,
-      "medium": 58,
+      "medium": 57,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 206,
-      "high": 57,
-      "medium": 147,
+      "total": 208,
+      "high": 58,
+      "medium": 148,
       "low": 2
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 143,
-      "displayCandidates": 117,
+      "classified": 142,
+      "displayCandidates": 116,
       "fallback": true
     },
     "municipality_minamata": {
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 65,
-      "displayCandidates": 58,
+      "classified": 64,
+      "displayCandidates": 57,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -132,13 +132,13 @@
       "fallback": true
     },
     "municipality_kashima": {
-      "classified": 22,
-      "displayCandidates": 19,
+      "classified": 23,
+      "displayCandidates": 20,
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 54,
-      "displayCandidates": 51,
+      "classified": 55,
+      "displayCandidates": 52,
       "fallback": true
     },
     "municipality_kosa": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 271,
-    "medium": 374,
+    "high": 272,
+    "medium": 373,
     "low": 106
   },
   "unclassifiedCount": 8,
@@ -210,10 +210,10 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 121,
+  "outOfScopeCount": 122,
   "outOfScopeByRule": {
     "donation_appeal": 3,
-    "hq_meeting_material": 54,
+    "hq_meeting_material": 55,
     "disaster_preparedness": 11,
     "facility_notice": 12,
     "budget_notice": 3,
@@ -694,7 +694,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -708,6 +708,13 @@
     },
     {
       "municipalityName": "八代市",
+      "title": "令和８年度１０月補正予算（１０月２０日専決分）の概要について",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00327251/index.html",
+      "ruleId": "budget_notice",
+      "ruleLabel": "補正予算・財政情報"
+    },
+    {
+      "municipalityName": "八代市",
       "title": "第55回災害対策本部会議資料（令和８年１０月１９日（月曜日）午後４時００分）（PDF：14.74メガバイト）",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_161488_up_a16ely6n.pdf",
       "ruleId": "hq_meeting_material",
@@ -715,10 +722,10 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和８年度１０月補正予算（１０月２０日専決分）の概要について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00327251/index.html",
-      "ruleId": "budget_notice",
-      "ruleLabel": "補正予算・財政情報"
+      "title": "第56回災害対策本部会議資料（令和８年１０月２３日（金曜日）午後４時００分）（PDF：19.01メガバイト）",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/3_26750_161632_up_4ynr7xib.pdf",
+      "ruleId": "hq_meeting_material",
+      "ruleLabel": "災害対策本部会議の資料"
     },
     {
       "municipalityName": "八代市",
@@ -883,7 +890,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月22日 令和8年熊本地震 関連情報 （10月23日8時00分更新）",
+      "title": "2026年10月22日 令和8年熊本地震 関連情報 （10月23日12時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -897,7 +904,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月23日 令和8年熊本地震 関連情報 （10月23日8時00分更新）",
+      "title": "2026年10月23日 令和8年熊本地震 関連情報 （10月23日12時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -1078,9 +1085,9 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 37,
+  "excludedCount": 38,
   "excludedByType": {
-    "duplicate_url": 35,
+    "duplicate_url": 36,
     "non_official_url": 1,
     "past_disaster_excluded": 1
   },
@@ -1198,5 +1205,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 746
+  "previousClassifiedPageCount": 751
 }

@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-23T05:21:32.169Z",
-  "officialCheckedAt": "10/23 14:21",
+  "retrievedAt": "2026-10-23T12:10:41.442Z",
+  "officialCheckedAt": "10/23 21:10",
   "siteTopics": [
     {
       "date": "2026-10-23",
@@ -99,31 +99,31 @@ window.HOME_TOPICS = {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-10-23",
-      "time": "13:20",
+      "time": "19:10",
       "category": "その他",
       "municipality": "八代市",
       "archiveId": "yatsushiro-20261023-bad1de7e",
       "archiveUrl": "official-articles/yatsushiro-20261023-bad1de7e.html"
     },
     {
-      "title": "2026年10月23日 令和8年熊本地震 関連情報 （10月23日8時00分更新）",
+      "title": "11月の災害窓口開設日について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kinkyu.html#kid75",
+      "date": "2026-10-23",
+      "time": "14:58",
+      "category": "その他",
+      "municipality": "氷川町",
+      "archiveId": "hikawa-20261023-594083cd",
+      "archiveUrl": "official-articles/hikawa-20261023-594083cd.html"
+    },
+    {
+      "title": "2026年10月23日 令和8年熊本地震 関連情報 （10月23日12時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
       "date": "2026-10-23",
-      "time": "08:00",
+      "time": "12:00",
       "category": "その他",
       "municipality": "宇城市",
       "archiveId": "uki-20261023-7912efae",
       "archiveUrl": "official-articles/uki-20261023-7912efae.html"
-    },
-    {
-      "title": "令和8年熊本地震による浄化槽被害調査について",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036849/index.html",
-      "date": "2026-10-23",
-      "time": "07:49",
-      "category": "その他",
-      "municipality": "氷川町",
-      "archiveId": "hikawa-20261023-2e7c12ab",
-      "archiveUrl": "official-articles/hikawa-20261023-2e7c12ab.html"
     },
     {
       "title": "令和8年熊本地震（7月28日発生）に関する情報（10月23日7時更新）",
@@ -136,14 +136,14 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/misato-20261023-a8f621b2.html"
     },
     {
-      "title": "令和８年熊本地震に係る建設型応急住宅の入居者募集（第2回）について",
-      "url": "https://www.city.uto.lg.jp/article/view/1307/16820.html",
+      "title": "3 【熊本地震】10月24日（土）～25日（日）の窓口業務について 2026年10月23日",
+      "url": "https://www.city.uto.lg.jp/article/view/1014/16528.html",
       "date": "2026-10-23",
       "time": null,
-      "category": "住まい・証明",
+      "category": "その他",
       "municipality": "宇土市",
-      "archiveId": "uto-20261023-9f0fd3fd",
-      "archiveUrl": "official-articles/uto-20261023-9f0fd3fd.html"
+      "archiveId": "uto-20261023-18869617",
+      "archiveUrl": "official-articles/uto-20261023-18869617.html"
     },
     {
       "title": "妊産婦等に対する遠方の分娩取扱施設等への交通費等を助成します",
@@ -156,24 +156,24 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/kamiamakusa-20261023-f4eefd0e.html"
     },
     {
-      "title": "令和8年熊本地震被災による国民健康保険税等の減免について",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/125/6347.html",
+      "title": "【令和8年11月30日受付終了】令和8年熊本地震に伴う「り災証明書」「被災証明書」の発行について",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/113/6030.html",
       "date": "2026-10-23",
       "time": null,
-      "category": "その他",
+      "category": "住まい・証明",
       "municipality": "嘉島町",
-      "archiveId": "kashima-20261023-276cc92d",
-      "archiveUrl": "official-articles/kashima-20261023-276cc92d.html"
+      "archiveId": "kashima-20261023-752592fc",
+      "archiveUrl": "official-articles/kashima-20261023-752592fc.html"
     },
     {
-      "title": "令和８年６月豪雨による被災農地の自力復旧補助金",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038209/index.html",
+      "title": "【公費解体用仮置き場】災害ごみ仮置き場への搬入には搬入許可証が必要です",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038194/index.html",
       "date": "2026-10-23",
       "time": null,
-      "category": "その他",
+      "category": "ごみ・生活",
       "municipality": "益城町",
-      "archiveId": "mashiki-20261023-724cc6b2",
-      "archiveUrl": "official-articles/mashiki-20261023-724cc6b2.html"
+      "archiveId": "mashiki-20261023-d598eebb",
+      "archiveUrl": "official-articles/mashiki-20261023-d598eebb.html"
     },
     {
       "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",

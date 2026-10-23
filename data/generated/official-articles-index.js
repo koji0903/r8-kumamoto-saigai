@@ -415,5 +415,37 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "益城町",
     "date": "2026-10-23",
     "retrievedAt": "2026-10-23T05:21:46.634Z"
+  },
+  "https://www.town.hikawa.kumamoto.jp/kinkyu.html#kid75": {
+    "id": "hikawa-20261023-594083cd",
+    "htmlPath": "official-articles/hikawa-20261023-594083cd.html",
+    "title": "11月の災害窓口開設日について",
+    "municipality": "氷川町",
+    "date": "2026-10-23",
+    "retrievedAt": "2026-10-23T12:10:44.924Z"
+  },
+  "https://www.city.uto.lg.jp/article/view/1014/16528.html": {
+    "id": "uto-20261023-18869617",
+    "htmlPath": "official-articles/uto-20261023-18869617.html",
+    "title": "3 【熊本地震】10月24日（土）～25日（日）の窓口業務について 2026年10月23日",
+    "municipality": "宇土市",
+    "date": "2026-10-23",
+    "retrievedAt": "2026-10-23T12:10:46.351Z"
+  },
+  "https://www.town.kumamoto-kashima.lg.jp/q/aview/113/6030.html": {
+    "id": "kashima-20261023-752592fc",
+    "htmlPath": "official-articles/kashima-20261023-752592fc.html",
+    "title": "【令和8年11月30日受付終了】令和8年熊本地震に伴う「り災証明書」「被災証明書」の発行について",
+    "municipality": "嘉島町",
+    "date": "2026-10-23",
+    "retrievedAt": "2026-10-23T12:10:48.572Z"
+  },
+  "https://www.town.mashiki.lg.jp/kiji0038194/index.html": {
+    "id": "mashiki-20261023-d598eebb",
+    "htmlPath": "official-articles/mashiki-20261023-d598eebb.html",
+    "title": "【公費解体用仮置き場】災害ごみ仮置き場への搬入には搬入許可証が必要です",
+    "municipality": "益城町",
+    "date": "2026-10-23",
+    "retrievedAt": "2026-10-23T12:10:50.378Z"
   }
 };
