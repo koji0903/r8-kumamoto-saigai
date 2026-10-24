@@ -1,6 +1,6 @@
 # 暮らしの再建 情報品質ステータス
 
-最終監査日時: 2026-08-12（データ生成: 2026-10-24T04:46:54.451Z）
+最終監査日時: 2026-08-12（データ生成: 2026-10-24T11:14:39.318Z）
 
 > 件数の少なさは支援の少なさを意味しません。自治体の発信方法・ページ構造・更新頻度の差として扱います。A/B/Cは品質状態であり自治体評価ではありません。
 
@@ -9,10 +9,10 @@
 - 未解決source変更 ACTION_REQUIRED 48件
 
 ## WARNING（上位）
-- 熊本市: confirmed / 取得エラー 2件
+- 熊本市: confirmed / 取得エラー 1件
 - 水俣市: confirmed / 取得エラー 1件
 - 菊池市: confirmed / 取得エラー 2件
-- 宇土市: confirmed / 取得エラー 1件
+- 宇土市: confirmed / 取得エラー 2件
 - 上天草市: confirmed / 取得エラー 2件
 - 宇城市: confirmed / 取得エラー 6件
 - 大津町: confirmed / 取得エラー 1件
@@ -22,7 +22,7 @@
 - 氷川町: confirmed / 取得エラー 3件
 - 未分類 8件。重要語の取りこぼしを週次確認
 - 収集巡回中の404候補 31件。連続失敗回数をまだ永続保持していない
-- 表示候補のうち機械的freshness判定でstale 531件。自動削除せず公式原文を確認
+- 表示候補のうち機械的freshness判定でstale 530件。自動削除せず公式原文を確認
 
 ## 現在の公式情報件数
 - collector入力: 915件
@@ -134,7 +134,7 @@ A=自治体個別公式情報あり、B=国・県等の広域情報のみ、C=�
 - low confidenceは検索index・通常表示から除外済み。mediumは表示対象のため週次サンプル監査を続ける。
 
 ## source・freshness・障害耐性
-- freshness（生成時点の機械判定）: fresh 111 / stale 531 / unknown 0
+- freshness（生成時点の機械判定）: fresh 112 / stale 530 / unknown 0
 - staleは自動削除しない。速報は公式ページで最新状況を確認する前提を維持する。
 - `publishedAt`を`retrievedAt`より優先。日付なしはエラーにしない。
 - LEVEL 2公式リンクの変更は正常。LEVEL 1 verified sourceのhash変更は`needs_review`へ送る。

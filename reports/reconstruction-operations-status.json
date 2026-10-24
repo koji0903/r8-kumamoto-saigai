@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-24T05:03:45.045Z",
+  "generatedAt": "2026-10-24T11:34:10.057Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-24T04:46:54.451Z",
+    "generatedAt": "2026-10-24T11:14:39.318Z",
     "inputCount": 915,
     "classifiedPageCount": 747,
     "displayCandidateCount": 642,
     "deltaFromPrevious": {
-      "inputCount": -4,
-      "classifiedPageCount": -4,
+      "inputCount": 0,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 17,
+      "ageHours": 23,
       "limitHours": 336
     }
   },
@@ -272,7 +272,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kumamoto",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -302,7 +302,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uto",
-      "count": 1
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",

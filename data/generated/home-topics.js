@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-24T05:03:20.153Z",
-  "officialCheckedAt": "10/24 14:03",
+  "retrievedAt": "2026-10-24T11:33:46.573Z",
+  "officialCheckedAt": "10/24 20:33",
   "siteTopics": [
     {
       "date": "2026-10-24",
@@ -96,6 +96,16 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-10-24",
+      "time": "16:35",
+      "category": "その他",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261024-bad1de7e",
+      "archiveUrl": "official-articles/yatsushiro-20261024-bad1de7e.html"
+    },
+    {
       "title": "令和8年熊本地震営農再開支援事業に伴う事業要望調査の受付について",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036846/index.html",
       "date": "2026-10-24",
@@ -104,16 +114,6 @@ window.HOME_TOPICS = {
       "municipality": "氷川町",
       "archiveId": "hikawa-20261024-425e281a",
       "archiveUrl": "official-articles/hikawa-20261024-425e281a.html"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-10-24",
-      "time": "10:05",
-      "category": "その他",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261024-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261024-bad1de7e.html"
     },
     {
       "title": "【熊本地震】10月24日（土）～25日（日）の窓口業務について",
