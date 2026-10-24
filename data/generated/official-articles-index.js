@@ -233,12 +233,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-20T14:39:30.526Z"
   },
   "https://www.town.kosa.lg.jp/q/aview/51/13583.html": {
-    "id": "kosa-20261023-b8cd69a7",
-    "htmlPath": "official-articles/kosa-20261023-b8cd69a7.html",
+    "id": "kosa-20261025-b8cd69a7",
+    "htmlPath": "official-articles/kosa-20261025-b8cd69a7.html",
     "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
     "municipality": "甲佐町",
-    "date": "2026-10-23",
-    "retrievedAt": "2026-10-22T17:36:13.088Z"
+    "date": "2026-10-25",
+    "retrievedAt": "2026-10-24T16:21:45.861Z"
   },
   "https://www.city.amakusa.kumamoto.jp/bousai/kiji00314592/index.html": {
     "id": "amakusa-20261021-6f62fce2",
@@ -479,5 +479,13 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "菊陽町",
     "date": "2026-10-19",
     "retrievedAt": "2026-10-24T05:03:27.774Z"
+  },
+  "https://www.town.mifune.kumamoto.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=6024": {
+    "id": "mifune-20261025-2922d2d8",
+    "htmlPath": "official-articles/mifune-20261025-2922d2d8.html",
+    "title": "運動部活動の社会体育移行",
+    "municipality": "御船町",
+    "date": "2026-10-25",
+    "retrievedAt": "2026-10-24T16:21:44.168Z"
   }
 };

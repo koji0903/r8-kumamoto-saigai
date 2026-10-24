@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-24T11:33:46.573Z",
-  "officialCheckedAt": "10/24 20:33",
+  "retrievedAt": "2026-10-24T16:21:40.378Z",
+  "officialCheckedAt": "10/25 01:21",
   "siteTopics": [
     {
       "date": "2026-10-24",
@@ -96,6 +96,26 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "運動部活動の社会体育移行",
+      "url": "https://www.town.mifune.kumamoto.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=6024",
+      "date": "2026-10-25",
+      "time": null,
+      "category": "その他",
+      "municipality": "御船町",
+      "archiveId": "mifune-20261025-2922d2d8",
+      "archiveUrl": "official-articles/mifune-20261025-2922d2d8.html"
+    },
+    {
+      "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
+      "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
+      "date": "2026-10-25",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "甲佐町",
+      "archiveId": "kosa-20261025-b8cd69a7",
+      "archiveUrl": "official-articles/kosa-20261025-b8cd69a7.html"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-10-24",
@@ -186,16 +206,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/mashiki-20261023-d598eebb.html"
     },
     {
-      "title": "令和8年熊本地震における住宅の応急修理の申し込みについて",
-      "url": "https://www.town.kosa.lg.jp/q/aview/168/13564.html",
-      "date": "2026-10-22",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "甲佐町",
-      "archiveId": "kosa-20261022-db8a491d",
-      "archiveUrl": "official-articles/kosa-20261022-db8a491d.html"
-    },
-    {
       "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
       "url": "https://www.city.kumamoto.jp/kiji00372210/index.html",
       "date": "2026-10-21",
@@ -234,16 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "西原村",
       "archiveId": "nishihara-20261020-3e933597",
       "archiveUrl": "official-articles/nishihara-20261020-3e933597.html"
-    },
-    {
-      "title": "令和8年熊本地震災害義援金の第1次配分について",
-      "url": "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html",
-      "date": "2026-10-19",
-      "time": "12:25",
-      "category": "支援・制度",
-      "municipality": "菊陽町",
-      "archiveId": "kikuyo-20261019-8c2e5a67",
-      "archiveUrl": "official-articles/kikuyo-20261019-8c2e5a67.html"
     }
   ],
   "prefectureUpdates": [

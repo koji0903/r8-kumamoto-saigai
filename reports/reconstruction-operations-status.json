@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-24T11:34:10.057Z",
+  "generatedAt": "2026-10-24T16:22:04.656Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-24T11:14:39.318Z",
-    "inputCount": 915,
-    "classifiedPageCount": 747,
-    "displayCandidateCount": 642,
+    "generatedAt": "2026-10-24T16:04:20.031Z",
+    "inputCount": 913,
+    "classifiedPageCount": 745,
+    "displayCandidateCount": 640,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
-      "unclassifiedCount": 0
+      "inputCount": -2,
+      "classifiedPageCount": -2,
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 23,
+      "ageHours": 28,
       "limitHours": 336
     }
   },
@@ -61,13 +61,13 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 23,
-        "displayCandidates": 22,
+        "classified": 14,
+        "displayCandidates": 13,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 117,
-        "displayCandidates": 97,
+        "classified": 119,
+        "displayCandidates": 99,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -116,8 +116,8 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 34,
-        "displayCandidates": 29,
+        "classified": 39,
+        "displayCandidates": 34,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -138,16 +138,16 @@
     },
     "categoryReport": {
       "home": {
-        "total": 196,
-        "high": 74,
+        "total": 195,
+        "high": 73,
         "medium": 77,
         "low": 45
       },
       "money": {
-        "total": 259,
+        "total": 257,
         "high": 57,
         "medium": 75,
-        "low": 127
+        "low": 125
       },
       "documents": {
         "total": 178,
@@ -156,9 +156,9 @@
         "low": 104
       },
       "health_care": {
-        "total": 85,
+        "total": 86,
         "high": 22,
-        "medium": 63,
+        "medium": 64,
         "low": 0
       },
       "family_education": {
@@ -168,9 +168,9 @@
         "low": 39
       },
       "work_business": {
-        "total": 71,
+        "total": 72,
         "high": 15,
-        "medium": 56,
+        "medium": 57,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,18 +180,18 @@
         "low": 0
       },
       "daily_life": {
-        "total": 211,
+        "total": 209,
         "high": 60,
-        "medium": 149,
+        "medium": 147,
         "low": 2
       }
     },
     "confidence": {
-      "high": 273,
+      "high": 271,
       "medium": 369,
       "low": 105
     },
-    "unclassifiedCount": 8,
+    "unclassifiedCount": 9,
     "excludedCount": 38,
     "overrideCount": 2
   },
@@ -322,7 +322,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 6
+      "count": 7
     },
     {
       "code": "HTTP_404_CANDIDATE",

@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-10-24T11:14:39.318Z",
+  "generatedAt": "2026-10-24T16:04:20.031Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 915,
-  "displayCandidateCount": 642,
-  "classifiedPageCount": 747,
+  "inputCount": 913,
+  "displayCandidateCount": 640,
+  "classifiedPageCount": 745,
   "categoryReport": {
     "home": {
-      "total": 196,
-      "high": 74,
+      "total": 195,
+      "high": 73,
       "medium": 77,
       "low": 45
     },
     "money": {
-      "total": 259,
+      "total": 257,
       "high": 57,
       "medium": 75,
-      "low": 127
+      "low": 125
     },
     "documents": {
       "total": 178,
@@ -25,9 +25,9 @@
       "low": 104
     },
     "health_care": {
-      "total": 85,
+      "total": 86,
       "high": 22,
-      "medium": 63,
+      "medium": 64,
       "low": 0
     },
     "family_education": {
@@ -37,9 +37,9 @@
       "low": 39
     },
     "work_business": {
-      "total": 71,
+      "total": 72,
       "high": 15,
-      "medium": 56,
+      "medium": 57,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 211,
+      "total": 209,
       "high": 60,
-      "medium": 149,
+      "medium": 147,
       "low": 2
     }
   },
@@ -87,13 +87,13 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 23,
-      "displayCandidates": 22,
+      "classified": 14,
+      "displayCandidates": 13,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 117,
-      "displayCandidates": 97,
+      "classified": 119,
+      "displayCandidates": 99,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -142,8 +142,8 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 34,
-      "displayCandidates": 29,
+      "classified": 39,
+      "displayCandidates": 34,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 273,
+    "high": 271,
     "medium": 369,
     "low": 105
   },
-  "unclassifiedCount": 8,
+  "unclassifiedCount": 9,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -196,7 +196,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "【職員募集】令和8年熊本地震に伴う宇城市任期付職員（事務職）を募集します",
+      "title": "2026年10月6日 【職員募集】令和8年熊本地震に伴う宇城市任期付職員（事務職）を募集します",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2645544"
     },
     {
@@ -205,12 +205,17 @@
       "url": "https://www.city.amakusa.kumamoto.jp/kiji00313670/index.html"
     },
     {
+      "municipalityName": "御船町",
+      "title": "運動部活動の社会体育移行",
+      "url": "https://www.town.mifune.kumamoto.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=6024"
+    },
+    {
       "municipalityName": "氷川町",
       "title": "令和8年熊本地震による「水田」の被害について（稲刈り後の被害確認）",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 122,
+  "outOfScopeCount": 121,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "hq_meeting_material": 55,
@@ -218,7 +223,7 @@
     "facility_notice": 12,
     "budget_notice": 3,
     "assembly_petition": 1,
-    "overall_guide": 5,
+    "overall_guide": 4,
     "mayor_message": 2,
     "index_page": 15,
     "mutual_aid": 1,
@@ -694,7 +699,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -838,13 +843,6 @@
       "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/290/23317.html",
       "ruleId": "donation_appeal",
       "ruleLabel": "寄付・ふるさと納税の受付"
-    },
-    {
-      "municipalityName": "上天草市",
-      "title": "被災者の方へ(案内チラシ)(PDF 約267KB)",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/dl?q=122798_filelib_91e49fb52542af54c1c571bf0f9da108.pdf",
-      "ruleId": "overall_guide",
-      "ruleLabel": "被災者向けの総合案内"
     },
     {
       "municipalityName": "宇城市",
@@ -1151,7 +1149,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 6
+      "count": 7
     },
     {
       "code": "HTTP_404_CANDIDATE",
