@@ -193,12 +193,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-20T08:58:22.718Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036846/index.html": {
-    "id": "hikawa-20261019-425e281a",
-    "htmlPath": "official-articles/hikawa-20261019-425e281a.html",
+    "id": "hikawa-20261024-425e281a",
+    "htmlPath": "official-articles/hikawa-20261024-425e281a.html",
     "title": "令和8年熊本地震営農再開支援事業に伴う事業要望調査の受付について",
     "municipality": "氷川町",
-    "date": "2026-10-19",
-    "retrievedAt": "2026-10-20T08:58:26.456Z"
+    "date": "2026-10-24",
+    "retrievedAt": "2026-10-24T05:03:22.629Z"
   },
   "https://www.town.ozu.kumamoto.jp/page/27698.html": {
     "id": "muni-20261014-279eab66",
@@ -297,12 +297,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-21T22:08:05.740Z"
   },
   "https://www.city.yatsushiro.lg.jp/default.html": {
-    "id": "yatsushiro-20261023-bad1de7e",
-    "htmlPath": "official-articles/yatsushiro-20261023-bad1de7e.html",
+    "id": "yatsushiro-20261024-bad1de7e",
+    "htmlPath": "official-articles/yatsushiro-20261024-bad1de7e.html",
     "title": "熊本県八代市",
     "municipality": "八代市",
-    "date": "2026-10-23",
-    "retrievedAt": "2026-10-23T05:21:34.643Z"
+    "date": "2026-10-24",
+    "retrievedAt": "2026-10-24T05:03:23.483Z"
   },
   "https://www.city.kikuchi.lg.jp/article/view/1040/19566.html": {
     "id": "kikuchi-20261021-f5f1e2ae",
@@ -447,5 +447,37 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "益城町",
     "date": "2026-10-23",
     "retrievedAt": "2026-10-23T12:10:50.378Z"
+  },
+  "https://www.city.uto.lg.jp/article/view/1310/16528.html": {
+    "id": "uto-20261024-b7babf72",
+    "htmlPath": "official-articles/uto-20261024-b7babf72.html",
+    "title": "【熊本地震】10月24日（土）～25日（日）の窓口業務について",
+    "municipality": "宇土市",
+    "date": "2026-10-24",
+    "retrievedAt": "2026-10-24T05:03:24.859Z"
+  },
+  "https://www.city.uki.kumamoto.jp/toppage/important/2610320": {
+    "id": "uki-20261024-69c958e4",
+    "htmlPath": "official-articles/uki-20261024-69c958e4.html",
+    "title": "2026年10月24日 避難者数",
+    "municipality": "宇城市",
+    "date": "2026-10-24",
+    "retrievedAt": "2026-10-24T05:03:25.382Z"
+  },
+  "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=533": {
+    "id": "tsunagi-20261024-8968f58d",
+    "htmlPath": "official-articles/tsunagi-20261024-8968f58d.html",
+    "title": "ごみ・生活・環境・ペット",
+    "municipality": "津奈木町",
+    "date": "2026-10-24",
+    "retrievedAt": "2026-10-24T05:03:26.796Z"
+  },
+  "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
+    "id": "kikuyo-20261019-8c2e5a67",
+    "htmlPath": "official-articles/kikuyo-20261019-8c2e5a67.html",
+    "title": "令和8年熊本地震災害義援金の第1次配分について",
+    "municipality": "菊陽町",
+    "date": "2026-10-19",
+    "retrievedAt": "2026-10-24T05:03:27.774Z"
   }
 };

@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-23T12:10:41.442Z",
-  "officialCheckedAt": "10/23 21:10",
+  "retrievedAt": "2026-10-24T05:03:20.153Z",
+  "officialCheckedAt": "10/24 14:03",
   "siteTopics": [
     {
       "date": "2026-10-24",
@@ -96,34 +96,54 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震営農再開支援事業に伴う事業要望調査の受付について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036846/index.html",
+      "date": "2026-10-24",
+      "time": "10:09",
+      "category": "支援・制度",
+      "municipality": "氷川町",
+      "archiveId": "hikawa-20261024-425e281a",
+      "archiveUrl": "official-articles/hikawa-20261024-425e281a.html"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-10-23",
-      "time": "19:10",
+      "date": "2026-10-24",
+      "time": "10:05",
       "category": "その他",
       "municipality": "八代市",
-      "archiveId": "yatsushiro-20261023-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261023-bad1de7e.html"
+      "archiveId": "yatsushiro-20261024-bad1de7e",
+      "archiveUrl": "official-articles/yatsushiro-20261024-bad1de7e.html"
     },
     {
-      "title": "11月の災害窓口開設日について",
-      "url": "https://www.town.hikawa.kumamoto.jp/kinkyu.html#kid75",
-      "date": "2026-10-23",
-      "time": "14:58",
+      "title": "【熊本地震】10月24日（土）～25日（日）の窓口業務について",
+      "url": "https://www.city.uto.lg.jp/article/view/1310/16528.html",
+      "date": "2026-10-24",
+      "time": null,
       "category": "その他",
-      "municipality": "氷川町",
-      "archiveId": "hikawa-20261023-594083cd",
-      "archiveUrl": "official-articles/hikawa-20261023-594083cd.html"
+      "municipality": "宇土市",
+      "archiveId": "uto-20261024-b7babf72",
+      "archiveUrl": "official-articles/uto-20261024-b7babf72.html"
     },
     {
-      "title": "2026年10月23日 令和8年熊本地震 関連情報 （10月23日12時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
-      "date": "2026-10-23",
-      "time": "12:00",
-      "category": "その他",
+      "title": "2026年10月24日 避難者数",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
+      "date": "2026-10-24",
+      "time": null,
+      "category": "避難・安全",
       "municipality": "宇城市",
-      "archiveId": "uki-20261023-7912efae",
-      "archiveUrl": "official-articles/uki-20261023-7912efae.html"
+      "archiveId": "uki-20261024-69c958e4",
+      "archiveUrl": "official-articles/uki-20261024-69c958e4.html"
+    },
+    {
+      "title": "ごみ・生活・環境・ペット",
+      "url": "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=533",
+      "date": "2026-10-24",
+      "time": null,
+      "category": "ごみ・生活",
+      "municipality": "津奈木町",
+      "archiveId": "tsunagi-20261024-8968f58d",
+      "archiveUrl": "official-articles/tsunagi-20261024-8968f58d.html"
     },
     {
       "title": "令和8年熊本地震（7月28日発生）に関する情報（10月23日7時更新）",
@@ -134,16 +154,6 @@ window.HOME_TOPICS = {
       "municipality": "美里町",
       "archiveId": "misato-20261023-a8f621b2",
       "archiveUrl": "official-articles/misato-20261023-a8f621b2.html"
-    },
-    {
-      "title": "3 【熊本地震】10月24日（土）～25日（日）の窓口業務について 2026年10月23日",
-      "url": "https://www.city.uto.lg.jp/article/view/1014/16528.html",
-      "date": "2026-10-23",
-      "time": null,
-      "category": "その他",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261023-18869617",
-      "archiveUrl": "official-articles/uto-20261023-18869617.html"
     },
     {
       "title": "妊産婦等に対する遠方の分娩取扱施設等への交通費等を助成します",
@@ -176,34 +186,14 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/mashiki-20261023-d598eebb.html"
     },
     {
-      "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
-      "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
-      "date": "2026-10-23",
+      "title": "令和8年熊本地震における住宅の応急修理の申し込みについて",
+      "url": "https://www.town.kosa.lg.jp/q/aview/168/13564.html",
+      "date": "2026-10-22",
       "time": null,
       "category": "住まい・証明",
       "municipality": "甲佐町",
-      "archiveId": "kosa-20261023-b8cd69a7",
-      "archiveUrl": "official-articles/kosa-20261023-b8cd69a7.html"
-    },
-    {
-      "title": "【期間延長】令和8年熊本地震により被災された方々を支援する義援金を受け付けています",
-      "url": "https://www.town.kikuyo.lg.jp/bousai/kiji0035799/index.html",
-      "date": "2026-10-21",
-      "time": "16:20",
-      "category": "支援・制度",
-      "municipality": "菊陽町",
-      "archiveId": "kikuyo-20261021-c0b88852",
-      "archiveUrl": "official-articles/kikuyo-20261021-c0b88852.html"
-    },
-    {
-      "title": "令和8年熊本地震被災者生活再建相談会が実施されます",
-      "url": "https://www.town.tsunagi.lg.jp/page4788.html?type=top",
-      "date": "2026-10-21",
-      "time": "15:31",
-      "category": "支援・制度",
-      "municipality": "津奈木町",
-      "archiveId": "tsunagi-20261021-3c8d7008",
-      "archiveUrl": "official-articles/tsunagi-20261021-3c8d7008.html"
+      "archiveId": "kosa-20261022-db8a491d",
+      "archiveUrl": "official-articles/kosa-20261022-db8a491d.html"
     },
     {
       "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
@@ -244,6 +234,16 @@ window.HOME_TOPICS = {
       "municipality": "西原村",
       "archiveId": "nishihara-20261020-3e933597",
       "archiveUrl": "official-articles/nishihara-20261020-3e933597.html"
+    },
+    {
+      "title": "令和8年熊本地震災害義援金の第1次配分について",
+      "url": "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html",
+      "date": "2026-10-19",
+      "time": "12:25",
+      "category": "支援・制度",
+      "municipality": "菊陽町",
+      "archiveId": "kikuyo-20261019-8c2e5a67",
+      "archiveUrl": "official-articles/kikuyo-20261019-8c2e5a67.html"
     }
   ],
   "prefectureUpdates": [
