@@ -134,7 +134,10 @@ for (const municipality of config.municipalities) {
     // 自治体側がGitHub Runnerを一時的に拒否しても、確認済みの会議資料を消さない。
     // 前回値がない初回取得だけは失敗させ、空データを正常扱いしない。
     if (!before?.meetings?.length) throw error;
-    result.push(before);
+    result.push({
+      ...before,
+      meetings: before.meetings.map(item => ({ ...item, bytes: null }))
+    });
     console.warn(`${municipality.name}: 一覧を取得できないため前回確認済み${before.meetings.length}件を保持（${error.message}）`);
     continue;
   }
@@ -196,7 +199,9 @@ for (const municipality of config.municipalities) {
     if (municipality.source === "html") { item.bytes = null; continue; }
     const path = join(PDF_DIR, item.file);
     const have = await stat(path).then(stats => stats.size, () => 0);
-    item.bytes = have || null;
+    // PDFはキャッシュでありリポジトリには保存しない。runnerごとのキャッシュ
+    // 有無でカタログに不要な差分が出ないよう、実ファイルサイズは記録しない。
+    item.bytes = null;
     if (mode === "list") continue;
     if (have && mode !== "all") continue;
     // 取り出した文字がもうあるなら、PDFは要らない。これがないと、PDFを
@@ -207,7 +212,6 @@ for (const municipality of config.municipalities) {
     process.stdout.write(`  取得 ${municipality.name} 第${item.meeting}回${item.part ? `(${item.part})` : ""} …`);
     const pdf = await get(item.url, "buffer");
     await writeFile(path, pdf);
-    item.bytes = pdf.length;
     downloaded += 1;
     console.log(` ${(pdf.length / 1024 / 1024).toFixed(1)}MB`);
     await sleep(1500); // 市のサーバに連続で当てない

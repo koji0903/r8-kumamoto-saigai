@@ -5,6 +5,8 @@ const validateYaml=fs.readFileSync(".github/workflows/validate-site.yml","utf8")
 const qualitySummary=fs.readFileSync("scripts/report-municipality-nav-quality.mjs","utf8");
 const index=label=>{const value=yaml.indexOf(label);assert.ok(value>=0,`${label} が必要`);return value};
 assert.ok(index("市町村公式発信を更新")<index("データ整合性を検査"));
+assert.ok(index("市町村の災害対策本部会議資料を更新")<index("災害対策本部資料の編集要約状況を記録"));
+assert.ok(index("災害対策本部資料の編集要約状況を記録")<index("データ整合性を検査"));
 assert.ok(index("開設中避難所を更新")<index("データ整合性を検査"));
 assert.ok(index("厳密制度の公式根拠を変更監視")<index("データ整合性を検査"));
 assert.ok(index("データ整合性を検査")<index("暮らしの再建・自治体公式情報ナビを生成"));
@@ -12,6 +14,7 @@ assert.ok(index("暮らしの再建・自治体公式情報ナビを生成")<ind
 assert.ok(index("自治体公式情報ナビを検証・集計")<index("確認済みデータを反映"));
 assert.ok(index("自治体公式情報ナビを検証・集計")<index("自治体公式情報ナビの未分類を記録"));
 for(const text of ["workflow_dispatch:","dry_run:","concurrency:","cancel-in-progress: false","timeout-minutes: 30","contents: write","run-municipality-official-nav-pipeline.mjs","validate-municipality-official-nav.mjs","test-refresh-official-workflow.mjs","monitor-reconstruction-sources.mjs","build-reconstruction-public-data.js","reconstruction-source-state.json","reconstruction-source-review-queue.json","source-change-events.json","public-data/reconstruction/municipality-official-navigation.json","reports/municipality-official-navigation-quality.json","public-data/site-search-index.json","git diff --check","git add -u","git diff --cached --quiet","git diff --quiet","git fetch origin main","git rebase origin/main","for attempt in 1 2 3"])assert.ok(yaml.includes(text),`${text} が必要`);
+assert.ok(yaml.includes("report-municipality-hq-editorial.mjs"),"未要約回を失敗ではなくWorkflow summaryへ記録する");
 assert.match(yaml,/runs-on:\s*ubuntu-24\.04/,"定期更新は検証済みのUbuntu 24.04へ固定する");
 assert.doesNotMatch(yaml,/runs-on:\s*ubuntu-latest/,"定期更新で移行対象のubuntu-latestを使わない");
 assert.match(yaml,/自治体公式情報ナビの未分類を記録[\s\S]*if: \$\{\{ always\(\) \}\}[\s\S]*report-municipality-nav-quality\.mjs/,"検証失敗時も未分類一覧をWorkflow summaryへ残す");

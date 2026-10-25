@@ -12,6 +12,7 @@
   const latest = meetings.at(-1);
   const reviewed = city.editorial.reviewedThrough;
   const summaries = new Map(city.editorial.meetings.map(m=>[m.meeting,m]));
+  const pending = city.editorial.pendingMeetings || meetings.filter(m=>!summaries.has(m.meeting)).map(m=>m.meeting);
   const totalPages = meetings.reduce((n,m)=>n+m.pages,0);
   $('#utoCoverage').innerHTML = `<span><b>${meetings.length}</b>本のPDF</span><span><b>${totalPages}</b>ページ</span><span>第${meetings[0].meeting}〜${latest.meeting}回<br>${fmt(meetings[0].date)}〜${fmt(latest.date)}</span>`;
   $('#utoLatestTitle').textContent = `第${latest.meeting}回・${fmt(latest.date)}${latest.writtenReport?'（書面報告）':` ${latest.time||''}`}`;
@@ -28,7 +29,7 @@
   $('#hqPhases').innerHTML = `<div class="uto-origin"><b>7月28日 発災</b><span>ここから市の対応をたどる</span></div><ol class="uto-phase-list">${phases.map(([date,title,body,a,b],i)=>{
     const entries = meetings.filter(m=>m.date >= phaseStarts[i] && (!phaseStarts[i+1] || m.date < phaseStarts[i+1]) && summaries.has(m.meeting)).sort((a,b)=>a.date.localeCompare(b.date)||a.meeting-b.meeting);
     return `<li class="uto-phase-step"><div class="uto-phase-time"><span class="uto-phase-num">0${i+1}</span><b>${date}</b><span>${i===0?'発災当日':`発災から${elapsed(phaseStarts[i])}日後〜`}</span></div><div class="uto-phase-body"><h3>${title}</h3><p>${body}</p><details${i===0?' open':''}><summary>この期間の動きを日付順に見る（${entries.length}回）</summary><ol class="uto-phase-events">${entries.map(m=>{const item=summaries.get(m.meeting);return `<li><div><time datetime="${m.date}">${fmt(m.date)}</time><span>${m.writtenReport?'書面報告':esc(m.time||'')} · 第${m.meeting}回</span></div><h4>${esc(item.title)}</h4><p>${esc(item.summary)}</p>${link(m,item.page||1,'会議資料を確認')}</li>`;}).join('')}</ol></details><p class="uto-note">期間の参考資料：${[a,b].map(n=>link(meetings.find(m=>m.meeting===n),1,`第${n}回`)).join(' · ')}</p></div></li>`;
-  }).join('')}</ol><p class="uto-timeline-end">編集要約は第${reviewed}回まで。以降の公開資料は「全会議の記録」で確認できます。</p>`;
+  }).join('')}</ol><p class="uto-timeline-end">編集要約は第${reviewed}回まで。${pending.length ? `未要約の${pending.length}回（第${pending.join('・')}回）も` : 'すべての回を'}「全会議の記録」で確認できます。</p>`;
 
   const points=meetings.filter(m=>Number.isFinite(m.figures.evacuees));
   const start=Date.parse(meetings[0].date), end=Date.parse(latest.date), ymax=Math.ceil(Math.max(...points.map(m=>m.figures.evacuees))/100)*100;
@@ -68,9 +69,9 @@
     const query=$('#utoSearch').value.trim().normalize('NFKC').toLowerCase();
     const filtered=meetings.filter(m=>!query||JSON.stringify([summaries.get(m.meeting),m.sections]).normalize('NFKC').toLowerCase().includes(query));
     if($('#utoOrder').value==='desc')filtered.reverse();
-    $('#utoResultCount').textContent=`${filtered.length}回 / 全${meetings.length}回（編集要約は第${reviewed}回まで確認）`;
+    $('#utoResultCount').textContent=`${filtered.length}回 / 全${meetings.length}回（編集要約は第${reviewed}回まで確認${pending.length?`・未要約${pending.length}回`:''}）`;
     $('#utoMeetings').innerHTML=filtered.map(m=>{const s=summaries.get(m.meeting);return `<article class="uto-meeting" id="meeting-${m.meeting}"><div class="uto-meeting-date"><b>第${m.meeting}回</b><time datetime="${m.date}">${fmt(m.date)}</time><span>${m.writtenReport?'書面報告':esc(m.time)}</span></div><div><h3>${esc(s?.title||'編集要約は未確認')}</h3><p>${esc(s?.summary||'公開資料の本文とPDFを確認できます。')}</p><p>${link(m,s?.page||1,`第${m.meeting}回のPDF（全${m.pages}ページ）`)} · <a href="#meeting-${m.meeting}">この回へのリンク</a></p><details class="uto-full"><summary>全部署・全${m.pages}ページの抽出本文を確認する</summary><p class="uto-note">表の列・赤字はPDFを確認してください。以下はPDFから抽出した本文です。</p>${m.sections.map(p=>`<details><summary>${esc(p.title)}</summary>${link(m,p.page,`PDF p.${p.page}`)}<pre>${esc(p.text)}</pre></details>`).join('')}</details></div></article>`;}).join('')||'<p>一致する記録がありません。別の言葉で検索してください。</p>';
   };
   $('#utoOrder').addEventListener('change',render);$('#utoSearch').addEventListener('input',render);render();
-  $('#utoRetrieved').textContent=`資料一覧の取得：${new Date(data.retrievedAt).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})}（日本時間）。編集要約：第${reviewed}回まで。`;
+  $('#utoRetrieved').textContent=`資料一覧の取得：${new Date(data.retrievedAt).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})}（日本時間）。編集要約：第${reviewed}回まで${pending.length?`（未要約${pending.length}回）`:''}。`;
 })();

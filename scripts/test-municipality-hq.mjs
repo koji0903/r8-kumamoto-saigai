@@ -62,6 +62,9 @@ for (const municipality of data.municipalities) {
   // ---- 書かれていない回を埋めていないこと ------------------------------------
   // 資料に載っていない回まで値が入っていたら、それは補完している証拠。
   const source = index.municipalities.find(item => item.key === municipality.key);
+  for (const item of source.meetings) {
+    assert.equal(item.bytes, null, `${where} 第${item.meeting}回: PDFキャッシュの有無を一覧へ記録しない`);
+  }
   const withText = municipality.meetings.filter(meeting => meeting.sections?.length).length;
   assert.ok(withText < municipality.meetings.length || municipality.withoutText.length === 0,
     `${where}: 本文の数が合いません`);

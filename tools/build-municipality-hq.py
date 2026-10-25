@@ -207,6 +207,23 @@ def hint_of(*texts):
     return None
 
 
+def editorial_with_status(editorial, meetings):
+    """編集要約の確認状況を、公開資料の更新とは分けて記録する。
+
+    自治体が新しい会議資料を公開した直後は、PDF本文の取得が先に成功し、
+    人が内容を確認して書く編集要約は後から追いつく。この時間差をエラーに
+    すると、確認済みの公式資料まで更新できなくなるため、未要約回を明示した
+    状態で公開できるようにする。
+    """
+    result = dict(editorial)
+    published = [meeting["meeting"] for meeting in meetings]
+    summarized = {summary["meeting"] for summary in result.get("meetings", [])}
+    result["publishedThrough"] = max(published) if published else None
+    result["pendingMeetings"] = [number for number in published if number not in summarized]
+    result["status"] = "pending" if result["pendingMeetings"] else "current"
+    return result
+
+
 def main():
     if not INDEX.exists():
         sys.exit("先に node tools/fetch-municipality-hq.mjs を実行してください")
@@ -273,6 +290,10 @@ def main():
             record["blocks"] = blocks
             meetings.append(record)
 
+        editorial_path = ROOT / f"config/{municipality['key']}-hq-summary.json"
+        editorial = editorial_with_status(
+            json.loads(editorial_path.read_text(encoding="utf-8")), meetings
+        ) if editorial_path.exists() else None
         output.append({
             "key": municipality["key"], "name": municipality["name"], "page": municipality["page"],
             "source": municipality["source"],
@@ -281,7 +302,7 @@ def main():
             "note": municipality["note"],
             "meetings": meetings,
             "withoutText": missing,
-            **({"editorial": json.loads((ROOT / f"config/{municipality['key']}-hq-summary.json").read_text(encoding="utf-8"))} if (ROOT / f"config/{municipality['key']}-hq-summary.json").exists() else {}),
+            **({"editorial": editorial} if editorial else {}),
         })
         filled = sum(1 for m in meetings if m["figures"])
         print(f"{municipality['name']}: {len(meetings)}回（数値を取れた回 {filled} / 本文なし {len(missing)}）")

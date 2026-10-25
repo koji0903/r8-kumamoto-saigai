@@ -65,6 +65,9 @@ jobs:
           node tools/fetch-municipality-hq.mjs
           python tools/build-municipality-hq.py
 
+      - name: 災害対策本部資料の編集要約状況を記録
+        run: node scripts/report-municipality-hq-editorial.mjs
+
       - name: 市町村公式発信を更新
         run: node tools/fetch-municipality-updates.mjs
 
