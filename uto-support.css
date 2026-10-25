@@ -1180,3 +1180,234 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ==========================================================================
+   市民目線 検索強化・クイックタグ・公的施設マップ連携スタイル
+   ========================================================================== */
+
+/* 公的施設マップ連携バナー */
+.uto-sup-map-banner {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin: 24px 0 32px;
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.22);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.uto-sup-map-banner .map-banner-content {
+  flex: 1 1 520px;
+}
+
+.uto-sup-map-banner .map-banner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+}
+
+.uto-sup-map-banner h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px;
+  line-height: 1.4;
+}
+
+.uto-sup-map-banner p {
+  font-size: 0.925rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.uto-sup-map-banner .map-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #0369a1;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.uto-sup-map-banner .map-banner-btn:hover {
+  background: #f0f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 検索入力欄の強化 */
+.uto-sup-search-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.uto-sup-search-input {
+  width: 100%;
+  padding-right: 40px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.uto-sup-search-input:focus {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+  outline: none;
+}
+
+.uto-sup-search-clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #cbd5e1;
+  color: #475569;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  transition: background 0.2s, color 0.2s;
+}
+
+.uto-sup-search-clear:hover {
+  background: #94a3b8;
+  color: #ffffff;
+}
+
+/* クイックタグ（お困りごとワンタップ検索） */
+.uto-sup-quick-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.quick-tags-label {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-right: 4px;
+}
+
+.quick-tag-chip {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.quick-tag-chip:hover {
+  background: #e0f2fe;
+  color: #0369a1;
+  border-color: #7dd3fc;
+  transform: translateY(-1px);
+}
+
+.quick-tag-chip.active {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3);
+}
+
+/* 分野別カテゴリボタン内の件数バッジ */
+.cat-btn-count {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.08);
+  font-size: 0.75rem;
+  padding: 1px 6px;
+  border-radius: 999px;
+  margin-left: 4px;
+  font-weight: 700;
+}
+
+.uto-sup-cat-btn.active .cat-btn-count {
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+/* カードの視認性向上 */
+.uto-card-amount {
+  background: #f8fafc;
+  border-left: 4px solid #0284c7;
+  padding: 10px 14px;
+  border-radius: 0 8px 8px 0;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 10px 0 14px;
+  line-height: 1.5;
+}
+
+.uto-card-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #f1f5f9;
+  color: #0369a1;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.uto-card-phone:hover {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+/* 印刷スタイル最適化 */
+@media print {
+  .site-header,
+  .site-footer,
+  .uto-sim-card,
+  .uto-sup-toolbar,
+  .uto-sup-map-banner,
+  .breadcrumb-nav {
+    display: none !important;
+  }
+  .uto-sup-shell {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  .uto-card {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+    margin-bottom: 16px !important;
+  }
+}

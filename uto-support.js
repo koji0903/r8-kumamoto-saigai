@@ -5,6 +5,8 @@
   document.addEventListener('DOMContentLoaded', () => {
     // 要素参照
     const searchInput = document.getElementById('utoSupSearch');
+    const searchClearBtn = document.getElementById('utoSupSearchClear');
+    const quickTagChips = document.querySelectorAll('.quick-tag-chip');
     const catButtons = document.querySelectorAll('.uto-sup-cat-btn');
     const presetButtons = document.querySelectorAll('.uto-sim-preset-btn');
     const resetBtn = document.getElementById('utoSimResetBtn');
@@ -24,6 +26,26 @@
 
     let activeCategory = 'all';
     let currentPreset = null;
+
+    // 市民目線の同義語・ひらがな検索辞書
+    const SYNONYMS = {
+      'やね': ['屋根', '応急修理', 'リフォーム', '住まい'],
+      'あまもり': ['屋根', '応急修理', 'リフォーム'],
+      'かいたい': ['解体', '公費解体', '自費解体', '空家', '空き家'],
+      'こども': ['子ども', '児童', '就学', '保育', '乳幼児', '小中高'],
+      'いりょうひ': ['医療費', '助成', '給付'],
+      'ほいく': ['保育', '認定こども園', '幼稚園', '副食費'],
+      'かいご': ['介護', '在宅', '高齢者', '緊急通報', '配食'],
+      'ほじょきん': ['補助金', '助成', '支援金'],
+      'めんじょ': ['減免', '猶予', '免除'],
+      'げんめん': ['減免', '猶予', '免除'],
+      'きゅうふ': ['給付', '手当', '支援金'],
+      'じぎょう': ['事業者', '商工', '小規模', '創業', '農業', '持続化'],
+      'かせつ': ['仮設', '応急住宅', 'みなし仮設', '住まい'],
+      'すいどう': ['水道', '下水道', '給水', '浄化槽'],
+      'たいしん': ['耐震', '木造', '改修', 'シェルター'],
+      'しょうひんけん': ['商品券', 'リフォーム', '助成']
+    };
 
     // フィルタ定義名マッピング（適用中タグ表示用）
     const labelMap = {
@@ -117,9 +139,41 @@
       return selectedValues.some(val => attrs.includes(val));
     }
 
+    // カードの検索一致判定（通常一致＋同義語・ひらがな柔軟検索）
+    function matchesQuery(cardText, query) {
+      if (!query) return true;
+      const q = query.trim().toLowerCase();
+      if (!q) return true;
+
+      // 複数語スペース区切り（AND検索）対応
+      const terms = q.split(/\s+/).filter(Boolean);
+      return terms.every(term => {
+        if (cardText.includes(term)) return true;
+        // 同義語チェック
+        for (const [key, synonyms] of Object.entries(SYNONYMS)) {
+          if (term.includes(key) || key.includes(term)) {
+            if (synonyms.some(s => cardText.includes(s.toLowerCase()))) return true;
+          }
+        }
+        return false;
+      });
+    }
+
     // カードフィルタリング実行
     function filterCards() {
       const query = (searchInput ? searchInput.value : '').trim().toLowerCase();
+
+      // クリアボタンの表示切り替え
+      if (searchClearBtn) {
+        searchClearBtn.style.display = query ? 'flex' : 'none';
+      }
+
+      // クイックタグのアクティブ状態更新
+      quickTagChips.forEach(chip => {
+        const chipQuery = chip.getAttribute('data-query');
+        chip.classList.toggle('active', !!(query && query === chipQuery.toLowerCase()));
+      });
+
       const filters = getActiveFilters();
       const hasActiveFilters = Object.values(filters).some(arr => arr.length > 0);
 
@@ -134,7 +188,7 @@
 
         secCards.forEach(card => {
           const cardText = card.textContent.toLowerCase();
-          const textMatch = (!query || cardText.includes(query));
+          const textMatch = matchesQuery(cardText, query);
 
           // 各ファセットの合致判定
           const lifeMatch = checkFacetMatch(card.getAttribute('data-life'), filters.life);
@@ -337,6 +391,37 @@
     if (searchInput) {
       searchInput.addEventListener('input', filterCards);
     }
+
+    // 検索クリアボタン
+    if (searchClearBtn && searchInput) {
+      searchClearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchInput.focus();
+        filterCards();
+      });
+    }
+
+    // クイックタグ（お困りごとワンタップ検索）
+    quickTagChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const query = chip.getAttribute('data-query');
+        if (!searchInput) return;
+
+        if (searchInput.value === query) {
+          // すでに同じタグが選ばれている場合は解除
+          searchInput.value = '';
+        } else {
+          searchInput.value = query;
+        }
+        filterCards();
+
+        // 該当結果位置へスムーズスクロール
+        const firstVisibleCard = document.querySelector('.uto-card:not([style*="display: none"])');
+        if (firstVisibleCard) {
+          firstVisibleCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    });
 
     // 初期実行
     filterCards();

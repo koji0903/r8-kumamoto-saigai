@@ -95,4 +95,13 @@ assert.ok(html.includes('href="uto-support.css'), 'uto-support.cssが読み込�
 assert.ok(fs.existsSync('uto-support.css'), 'uto-support.cssが存在しません');
 assert.ok(fs.existsSync('uto-support.js'), 'uto-support.jsが存在しません');
 
-console.log(`宇土市 暮らしの支援・補助金総合ガイドテスト OK（主要${cardMatches.length}制度・シミュレーター・SVGイラスト・幅制限検証完了）`);
+// 市民目線改善UI要素・最新情報の検証
+assert.ok(html.includes('id="utoSupQuickTags"'), 'クイックタグコンテナがありません');
+assert.ok(html.includes('class="quick-tag-chip"'), 'クイックタグチップがありません');
+assert.ok(html.includes('id="utoSupSearchClear"'), '検索クリアボタンがありません');
+assert.ok(html.includes('class="uto-sup-map-banner"'), '公的施設マップ連携バナーがありません');
+assert.ok(html.includes('uto-public-services.html'), '公的施設マップへのリンクがありません');
+assert.ok(html.includes('宇土市地域支え合いセンター'), '地域支え合いセンターの記載がありません');
+assert.ok(html.includes('2026年10月25日'), '最新確認日が反映されていません');
+
+console.log(`宇土市 暮らしの支援・補助金総合ガイドテスト OK（主要${cardMatches.length}制度・シミュレーター・クイックタグ・公的施設マップ連携・最新化検証完了）`);
