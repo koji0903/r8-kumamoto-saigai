@@ -24,6 +24,84 @@
   margin: 0 auto;
 }
 
+/* 自治体切り替えナビゲーション */
+.public-services-city-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  flex-wrap: wrap;
+}
+
+.city-nav-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.city-nav-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.city-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.city-tab:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: #ffffff;
+}
+
+.city-tab.is-active {
+  background: #ffffff;
+  color: #0f4c81;
+  border-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 各自治体別テーマカラー */
+.theme-uki .uto-services-hero {
+  background: linear-gradient(135deg, #065f46 0%, #047857 60%, #064e3b 100%);
+  border-bottom-color: #34d399;
+}
+.theme-uki .city-tab.is-active {
+  color: #065f46;
+}
+
+.theme-yatsushiro .uto-services-hero {
+  background: linear-gradient(135deg, #0c4a6e 0%, #0284c7 60%, #075985 100%);
+  border-bottom-color: #38bdf8;
+}
+.theme-yatsushiro .city-tab.is-active {
+  color: #0c4a6e;
+}
+
+.theme-hikawa .uto-services-hero {
+  background: linear-gradient(135deg, #78350f 0%, #92400e 60%, #713f12 100%);
+  border-bottom-color: #fbbf24;
+}
+.theme-hikawa .city-tab.is-active {
+  color: #78350f;
+}
+
 .uto-services-hero-badge {
   display: inline-flex;
   align-items: center;

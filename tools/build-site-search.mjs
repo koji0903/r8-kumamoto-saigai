@@ -52,7 +52,7 @@ const detectArea = (file, title) => {
 const detectPriority = (file) => {
   if (["affected.html", "disaster.html", "reconstruction.html", "municipality-support-compare.html"].includes(file)) return 100;
   if (["shelters.html", "timeline.html", "meetings.html", "volunteer-centers.html"].includes(file)) return 90;
-  if (/living-support|well-repair|uto-repair|demolition/.test(file)) return 80;
+  if (/living-support|well-repair|uto-repair|demolition|public-services/.test(file)) return 80;
   if (/yatsushiro-loan|yatsushiro-rebuild|uto-handbook|saishuppatsu/.test(file)) return 75;
   if (["sitemap.html", "official.html", "alert-channels.html"].includes(file)) return 70;
   return 50;
