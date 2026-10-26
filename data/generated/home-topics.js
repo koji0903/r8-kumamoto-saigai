@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-26T13:34:06.762Z",
-  "officialCheckedAt": "10/26 22:34",
+  "retrievedAt": "2026-10-26T20:54:22.678Z",
+  "officialCheckedAt": "10/27 05:54",
   "siteTopics": [
     {
       "date": "2026-10-25",
@@ -96,6 +96,46 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "国民保護法で規定された避難施設について",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326422/index.html",
+      "date": "2026-10-27",
+      "time": null,
+      "category": "避難・安全",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261027-0efcd828",
+      "archiveUrl": "official-articles/yatsushiro-20261027-0efcd828.html"
+    },
+    {
+      "title": "船員の不在者投票(選挙人名簿登録証明書)",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/29/23690.html",
+      "date": "2026-10-27",
+      "time": null,
+      "category": "その他",
+      "municipality": "上天草市",
+      "archiveId": "kamiamakusa-20261027-fa7de7d3",
+      "archiveUrl": "official-articles/kamiamakusa-20261027-fa7de7d3.html"
+    },
+    {
+      "title": "災害救助法に基づく学用品の支給について",
+      "url": "https://www.town.kumamoto-misato.lg.jp/soshiki/gakkokyoiku/1/1/3983.html",
+      "date": "2026-10-27",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "美里町",
+      "archiveId": "misato-20261027-87a44654",
+      "archiveUrl": "official-articles/misato-20261027-87a44654.html"
+    },
+    {
+      "title": "震度速報 10月26日 23時35分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "date": "2026-10-26",
+      "time": "23:35",
+      "category": "避難・安全",
+      "municipality": "山鹿市",
+      "archiveId": "yamaga-20261026-ed5178f4",
+      "archiveUrl": "official-articles/yamaga-20261026-ed5178f4.html"
+    },
+    {
       "title": "＜2026年7月熊本地震＞ 災害救助法 「住家の緊急の修理」制度の案内",
       "url": "https://www.city.kumamoto.jp/kiji00372143/index.html",
       "date": "2026-10-26",
@@ -104,16 +144,6 @@ window.HOME_TOPICS = {
       "municipality": "熊本市",
       "archiveId": "kumamoto-20261026-0f9bc22b",
       "archiveUrl": "official-articles/kumamoto-20261026-0f9bc22b.html"
-    },
-    {
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "date": "2026-10-26",
-      "time": "19:04",
-      "category": "その他",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261026-95d8bc9e",
-      "archiveUrl": "official-articles/yatsushiro-20261026-95d8bc9e.html"
     },
     {
       "title": "【令和8年熊本地震】被災家屋の解体・撤去に伴う浄化槽の手続きについて",
@@ -206,26 +236,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/tsunagi-20261024-8968f58d.html"
     },
     {
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（10月23日7時更新）",
-      "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
-      "date": "2026-10-23",
-      "time": "07:00",
-      "category": "その他",
-      "municipality": "美里町",
-      "archiveId": "misato-20261023-a8f621b2",
-      "archiveUrl": "official-articles/misato-20261023-a8f621b2.html"
-    },
-    {
-      "title": "妊産婦等に対する遠方の分娩取扱施設等への交通費等を助成します",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/87/22205.html",
-      "date": "2026-10-23",
-      "time": null,
-      "category": "交通",
-      "municipality": "上天草市",
-      "archiveId": "kamiamakusa-20261023-f4eefd0e",
-      "archiveUrl": "official-articles/kamiamakusa-20261023-f4eefd0e.html"
-    },
-    {
       "title": "2026年10月23日 令和8年熊本地震における罹災証明書の申請期限について",
       "url": "https://www.town.ashikita.lg.jp/bosai_site/oshirase_bosai/2124308",
       "date": "2026-10-23",
@@ -234,16 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "芦北町",
       "archiveId": "ashikita-20261023-8fc107ab",
       "archiveUrl": "official-articles/ashikita-20261023-8fc107ab.html"
-    },
-    {
-      "title": "令和8年熊本地震における住宅の応急修理の申し込みについて",
-      "url": "https://www.town.kosa.lg.jp/q/aview/168/13564.html",
-      "date": "2026-10-22",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "甲佐町",
-      "archiveId": "kosa-20261022-db8a491d",
-      "archiveUrl": "official-articles/kosa-20261022-db8a491d.html"
     }
   ],
   "prefectureUpdates": [

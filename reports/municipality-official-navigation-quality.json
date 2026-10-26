@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-10-26T13:17:15.503Z",
+  "generatedAt": "2026-10-26T20:35:56.855Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 922,
-  "displayCandidateCount": 647,
-  "classifiedPageCount": 750,
+  "inputCount": 925,
+  "displayCandidateCount": 649,
+  "classifiedPageCount": 751,
   "categoryReport": {
     "home": {
-      "total": 198,
-      "high": 76,
+      "total": 197,
+      "high": 75,
       "medium": 76,
       "low": 46
     },
     "money": {
-      "total": 248,
-      "high": 55,
-      "medium": 71,
+      "total": 250,
+      "high": 56,
+      "medium": 72,
       "low": 122
     },
     "documents": {
-      "total": 180,
+      "total": 179,
       "high": 43,
       "medium": 32,
-      "low": 105
+      "low": 104
     },
     "health_care": {
       "total": 86,
@@ -31,14 +31,14 @@
       "low": 0
     },
     "family_education": {
-      "total": 81,
+      "total": 82,
       "high": 11,
-      "medium": 31,
+      "medium": 32,
       "low": 39
     },
     "work_business": {
-      "total": 65,
-      "high": 12,
+      "total": 66,
+      "high": 13,
       "medium": 53,
       "low": 0
     },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 142,
-      "displayCandidates": 116,
+      "classified": 143,
+      "displayCandidates": 117,
       "fallback": true
     },
     "municipality_minamata": {
@@ -107,8 +107,8 @@
       "fallback": true
     },
     "municipality_misato": {
-      "classified": 25,
-      "displayCandidates": 20,
+      "classified": 26,
+      "displayCandidates": 21,
       "fallback": true
     },
     "municipality_ozu": {
@@ -142,7 +142,7 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 33,
+      "classified": 32,
       "displayCandidates": 28,
       "fallback": true
     },
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 274,
-    "medium": 373,
-    "low": 103
+    "high": 275,
+    "medium": 374,
+    "low": 102
   },
-  "unclassifiedCount": 11,
+  "unclassifiedCount": 12,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -183,6 +183,11 @@
       "municipalityName": "八代市",
       "title": "【令和８年熊本地震】「八代市地域支え合いセンター」を開設しました",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00327252/index.html"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "国民保護法で規定された避難施設について",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326422/index.html"
     },
     {
       "municipalityName": "宇土市",
@@ -225,7 +230,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 122,
+  "outOfScopeCount": 123,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "hq_meeting_material": 56,
@@ -234,7 +239,7 @@
     "budget_notice": 3,
     "assembly_petition": 1,
     "overall_guide": 4,
-    "index_page": 14,
+    "index_page": 15,
     "mayor_message": 2,
     "mutual_aid": 1,
     "weather_warning": 2,
@@ -785,6 +790,13 @@
       "ruleLabel": "平時の防災・今後への備え"
     },
     {
+      "municipalityName": "山鹿市",
+      "title": "震度速報 10月26日 23時35分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
       "municipalityName": "菊池市",
       "title": "地震関連情報",
       "url": "https://www.city.kikuchi.lg.jp/article/list/1350.html",
@@ -1106,7 +1118,7 @@
     "non_official_url": 1,
     "past_disaster_excluded": 1
   },
-  "warningCount": 22,
+  "warningCount": 24,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1120,6 +1132,16 @@
     },
     {
       "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_yatsushiro",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_yatsushiro",
+      "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_minamata",
       "message": "継続回数を確認後に表示除外を判断してください"
     },
@@ -1166,7 +1188,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 7
+      "count": 8
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -1220,5 +1242,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 749
+  "previousClassifiedPageCount": 750
 }

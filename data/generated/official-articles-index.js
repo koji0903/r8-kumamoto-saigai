@@ -329,12 +329,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-21T22:08:12.097Z"
   },
   "https://www.city.kamiamakusa.kumamoto.jp/q/aview/29/23690.html": {
-    "id": "kamiamakusa-20261015-fa7de7d3",
-    "htmlPath": "official-articles/kamiamakusa-20261015-fa7de7d3.html",
+    "id": "kamiamakusa-20261027-fa7de7d3",
+    "htmlPath": "official-articles/kamiamakusa-20261027-fa7de7d3.html",
     "title": "船員の不在者投票(選挙人名簿登録証明書)",
     "municipality": "上天草市",
-    "date": "2026-10-15",
-    "retrievedAt": "2026-10-21T22:08:14.009Z"
+    "date": "2026-10-27",
+    "retrievedAt": "2026-10-26T20:54:26.436Z"
   },
   "https://www.town.kosa.lg.jp/q/aview/168/13564.html": {
     "id": "kosa-20261022-db8a491d",
@@ -583,5 +583,29 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "芦北町",
     "date": "2026-10-23",
     "retrievedAt": "2026-10-26T13:34:15.538Z"
+  },
+  "https://www.city.yatsushiro.lg.jp/bousai/kiji00326422/index.html": {
+    "id": "yatsushiro-20261027-0efcd828",
+    "htmlPath": "official-articles/yatsushiro-20261027-0efcd828.html",
+    "title": "国民保護法で規定された避難施設について",
+    "municipality": "八代市",
+    "date": "2026-10-27",
+    "retrievedAt": "2026-10-26T20:54:25.336Z"
+  },
+  "https://www.town.kumamoto-misato.lg.jp/soshiki/gakkokyoiku/1/1/3983.html": {
+    "id": "misato-20261027-87a44654",
+    "htmlPath": "official-articles/misato-20261027-87a44654.html",
+    "title": "災害救助法に基づく学用品の支給について",
+    "municipality": "美里町",
+    "date": "2026-10-27",
+    "retrievedAt": "2026-10-26T20:54:28.221Z"
+  },
+  "https://www.city.yamaga.kumamoto.jp/kinkyu.html": {
+    "id": "yamaga-20261026-ed5178f4",
+    "htmlPath": "official-articles/yamaga-20261026-ed5178f4.html",
+    "title": "震度速報 10月26日 23時35分",
+    "municipality": "山鹿市",
+    "date": "2026-10-26",
+    "retrievedAt": "2026-10-26T20:54:31.227Z"
   }
 };
