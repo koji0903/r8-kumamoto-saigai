@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-26T05:15:58.864Z",
+  "generatedAt": "2026-10-26T13:34:32.825Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-26T04:58:00.742Z",
-    "inputCount": 919,
-    "classifiedPageCount": 749,
-    "displayCandidateCount": 645,
+    "generatedAt": "2026-10-26T13:17:15.503Z",
+    "inputCount": 922,
+    "classifiedPageCount": 750,
+    "displayCandidateCount": 647,
     "deltaFromPrevious": {
       "inputCount": 3,
-      "classifiedPageCount": 3,
-      "unclassifiedCount": -1
+      "classifiedPageCount": 1,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 5,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -56,7 +56,7 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 64,
+        "classified": 63,
         "displayCandidates": 57,
         "fallback": true
       },
@@ -71,8 +71,8 @@
         "fallback": true
       },
       "municipality_amakusa": {
-        "classified": 21,
-        "displayCandidates": 19,
+        "classified": 22,
+        "displayCandidates": 20,
         "fallback": true
       },
       "municipality_koshi": {
@@ -126,8 +126,8 @@
         "fallback": true
       },
       "municipality_ashikita": {
-        "classified": 4,
-        "displayCandidates": 4,
+        "classified": 5,
+        "displayCandidates": 5,
         "fallback": true
       },
       "municipality_tsunagi": {
@@ -138,21 +138,21 @@
     },
     "categoryReport": {
       "home": {
-        "total": 197,
-        "high": 75,
+        "total": 198,
+        "high": 76,
         "medium": 76,
         "low": 46
       },
       "money": {
-        "total": 246,
-        "high": 54,
-        "medium": 69,
-        "low": 123
+        "total": 248,
+        "high": 55,
+        "medium": 71,
+        "low": 122
       },
       "documents": {
-        "total": 179,
+        "total": 180,
         "high": 43,
-        "medium": 31,
+        "medium": 32,
         "low": 105
       },
       "health_care": {
@@ -169,8 +169,8 @@
       },
       "work_business": {
         "total": 65,
-        "high": 11,
-        "medium": 54,
+        "high": 12,
+        "medium": 53,
         "low": 0
       },
       "agriculture_fishery": {
@@ -181,18 +181,18 @@
       },
       "daily_life": {
         "total": 223,
-        "high": 64,
-        "medium": 157,
+        "high": 63,
+        "medium": 158,
         "low": 2
       }
     },
     "confidence": {
-      "high": 272,
+      "high": 274,
       "medium": 373,
-      "low": 104
+      "low": 103
     },
     "unclassifiedCount": 11,
-    "excludedCount": 38,
+    "excludedCount": 39,
     "overrideCount": 2
   },
   "actions": [
@@ -247,7 +247,7 @@
         "title": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
         "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
         "previousHash": "sha256:83be58e3c56963e18140658412145c461d5542c4e79c399f4bb85f687ef7beab",
-        "currentHash": "sha256:2a05a03d4830a258d3405fa915c0f26c62452b1d2ef459628f1ec19e321bebf2",
+        "currentHash": "sha256:b7840e7bff4af4316ffa64ab05ce9f44dc295ff31afb63bcc5d9f45bd00cd459",
         "verificationStatus": "needs_review"
       }
     },
@@ -416,7 +416,7 @@
         "title": "令和8年熊本地震被害に関する「すまいの相談窓口」の開設について",
         "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
         "previousHash": "sha256:83be58e3c56963e18140658412145c461d5542c4e79c399f4bb85f687ef7beab",
-        "currentHash": "sha256:2a05a03d4830a258d3405fa915c0f26c62452b1d2ef459628f1ec19e321bebf2",
+        "currentHash": "sha256:b7840e7bff4af4316ffa64ab05ce9f44dc295ff31afb63bcc5d9f45bd00cd459",
         "verificationStatus": "needs_review"
       },
       {
