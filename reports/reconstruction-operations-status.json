@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-26T00:27:12.958Z",
+  "generatedAt": "2026-10-26T05:15:58.864Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-26T00:13:24.014Z",
-    "inputCount": 916,
-    "classifiedPageCount": 746,
-    "displayCandidateCount": 642,
+    "generatedAt": "2026-10-26T04:58:00.742Z",
+    "inputCount": 919,
+    "classifiedPageCount": 749,
+    "displayCandidateCount": 645,
     "deltaFromPrevious": {
       "inputCount": 3,
-      "classifiedPageCount": 1,
-      "unclassifiedCount": 3
+      "classifiedPageCount": 3,
+      "unclassifiedCount": -1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 5,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 121,
-        "displayCandidates": 101,
+        "classified": 124,
+        "displayCandidates": 104,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,20 +138,20 @@
     },
     "categoryReport": {
       "home": {
-        "total": 196,
+        "total": 197,
         "high": 75,
         "medium": 76,
-        "low": 45
+        "low": 46
       },
       "money": {
-        "total": 247,
+        "total": 246,
         "high": 54,
         "medium": 69,
-        "low": 124
+        "low": 123
       },
       "documents": {
-        "total": 178,
-        "high": 42,
+        "total": 179,
+        "high": 43,
         "medium": 31,
         "low": 105
       },
@@ -168,9 +168,9 @@
         "low": 39
       },
       "work_business": {
-        "total": 68,
-        "high": 13,
-        "medium": 55,
+        "total": 65,
+        "high": 11,
+        "medium": 54,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,18 +180,18 @@
         "low": 0
       },
       "daily_life": {
-        "total": 219,
+        "total": 223,
         "high": 64,
-        "medium": 153,
+        "medium": 157,
         "low": 2
       }
     },
     "confidence": {
-      "high": 273,
-      "medium": 369,
+      "high": 272,
+      "medium": 373,
       "low": 104
     },
-    "unclassifiedCount": 12,
+    "unclassifiedCount": 11,
     "excludedCount": 38,
     "overrideCount": 2
   },

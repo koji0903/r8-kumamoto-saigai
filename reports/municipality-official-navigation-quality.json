@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-10-26T00:13:24.014Z",
+  "generatedAt": "2026-10-26T04:58:00.742Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 916,
-  "displayCandidateCount": 642,
-  "classifiedPageCount": 746,
+  "inputCount": 919,
+  "displayCandidateCount": 645,
+  "classifiedPageCount": 749,
   "categoryReport": {
     "home": {
-      "total": 196,
+      "total": 197,
       "high": 75,
       "medium": 76,
-      "low": 45
+      "low": 46
     },
     "money": {
-      "total": 247,
+      "total": 246,
       "high": 54,
       "medium": 69,
-      "low": 124
+      "low": 123
     },
     "documents": {
-      "total": 178,
-      "high": 42,
+      "total": 179,
+      "high": 43,
       "medium": 31,
       "low": 105
     },
@@ -37,9 +37,9 @@
       "low": 39
     },
     "work_business": {
-      "total": 68,
-      "high": 13,
-      "medium": 55,
+      "total": 65,
+      "high": 11,
+      "medium": 54,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 219,
+      "total": 223,
       "high": 64,
-      "medium": 153,
+      "medium": 157,
       "low": 2
     }
   },
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 121,
-      "displayCandidates": 101,
+      "classified": 124,
+      "displayCandidates": 104,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,17 +163,12 @@
     }
   },
   "confidence": {
-    "high": 273,
-    "medium": 369,
+    "high": 272,
+    "medium": 373,
     "low": 104
   },
-  "unclassifiedCount": 12,
+  "unclassifiedCount": 11,
   "unclassifiedItems": [
-    {
-      "municipalityName": "熊本市",
-      "title": "【避難情報】情報を更新しました。",
-      "url": "https://www.city.kumamoto.jp/kinkyu.html"
-    },
     {
       "municipalityName": "熊本市",
       "title": "【令和8年熊本地震】NPO法人バルビーによる巡回訪問について",
@@ -230,7 +225,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 120,
+  "outOfScopeCount": 121,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "hq_meeting_material": 55,
@@ -243,7 +238,7 @@
     "index_page": 14,
     "mutual_aid": 1,
     "weather_warning": 2,
-    "press": 3,
+    "press": 4,
     "public_relations": 6,
     "cultural_property": 1,
     "town_meeting": 1,
@@ -714,7 +709,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -749,15 +744,15 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "八代市",
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -903,14 +898,21 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月23日 【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
+      "title": "2026年10月26日 【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
       "ruleId": "press",
       "ruleLabel": "報道機関向け"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月25日 令和8年熊本地震 関連情報 （10月25日8時00分更新）",
+      "title": "30_報道資料（令和8年熊本地震の発災から3カ月を受けて：令和8年10月26日） (PDF 258KB)",
+      "url": "https://www.city.uki.kumamoto.jp/resource.php?e=b4d9321b0b69a39413f45aad1205bfdc26b89556beb68211d7856d282b0f3c2543aa823014c7f1a8804955be9911ec55",
+      "ruleId": "press",
+      "ruleLabel": "報道機関向け"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "2026年10月26日 令和8年熊本地震 関連情報 （10月26日10時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -1211,5 +1213,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 745
+  "previousClassifiedPageCount": 746
 }

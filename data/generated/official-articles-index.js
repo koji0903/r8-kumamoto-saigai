@@ -1,20 +1,20 @@
 // 生成物・直接編集しない。生成: node tools/archive-official-articles.mjs
 window.OFFICIAL_ARTICLES_INDEX = {
   "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html": {
-    "id": "yatsushiro-20261022-ad77f47a",
-    "htmlPath": "official-articles/yatsushiro-20261022-ad77f47a.html",
+    "id": "yatsushiro-20261026-ad77f47a",
+    "htmlPath": "official-articles/yatsushiro-20261026-ad77f47a.html",
     "title": "令和8年熊本地震 関連情報",
     "municipality": "八代市",
-    "date": "2026-10-22",
-    "retrievedAt": "2026-10-22T05:18:12.675Z"
+    "date": "2026-10-26",
+    "retrievedAt": "2026-10-26T05:15:39.834Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699": {
-    "id": "uki-20261022-7d9d4e13",
-    "htmlPath": "official-articles/uki-20261022-7d9d4e13.html",
-    "title": "2026年10月22日 令和8年熊本地震 関連情報 （10月22日13時00分更新）",
+    "id": "uki-20261026-7d9d4e13",
+    "htmlPath": "official-articles/uki-20261026-7d9d4e13.html",
+    "title": "2026年10月26日 令和8年熊本地震 関連情報 （10月26日10時00分更新）",
     "municipality": "宇城市",
-    "date": "2026-10-22",
-    "retrievedAt": "2026-10-22T05:18:14.645Z"
+    "date": "2026-10-26",
+    "retrievedAt": "2026-10-26T05:15:40.424Z"
   },
   "https://localcms.city.minamata.lg.jp/page4895.html?type=top": {
     "id": "minamata-20261019-81bdc420",
@@ -543,5 +543,13 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "益城町",
     "date": "2026-10-25",
     "retrievedAt": "2026-10-26T00:26:44.580Z"
+  },
+  "https://www.town.ashikita.lg.jp/article.php?id=2124308": {
+    "id": "ashikita-20261023-ebc113ec",
+    "htmlPath": "official-articles/ashikita-20261023-ebc113ec.html",
+    "title": "2026年10月23日 令和8年熊本地震における罹災証明書の申請期限について",
+    "municipality": "芦北町",
+    "date": "2026-10-23",
+    "retrievedAt": "2026-10-26T05:15:41.938Z"
   }
 };
