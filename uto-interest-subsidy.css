@@ -6,86 +6,167 @@
   --theme-accent: #f59e0b;
 }
 
-.interest-hero {
+/* ヒーローセクション 配色修正（暗い青緑背景に対する高視認性スタイル） */
+.organization-site .interest-hero,
+.interest-page .interest-hero {
   background: linear-gradient(135deg, #042f2e 0%, #0f766e 60%, #115e59 100%) !important;
-  color: #ffffff;
+  color: #ffffff !important;
+  border-bottom: 0 !important;
 }
 
-.interest-hero .waste-hero-inner {
+.interest-page .interest-hero .waste-hero-inner {
   max-width: 1040px;
 }
 
-.interest-hero .waste-eyebrow span {
-  background: rgba(204, 251, 241, 0.2);
-  color: #5eead4;
-  border: 1px solid rgba(94, 234, 212, 0.4);
+/* 眉テキスト */
+.organization-site .interest-hero .waste-eyebrow,
+.interest-page .interest-hero .waste-eyebrow {
+  color: #ccfbf1 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
 }
 
-.interest-hero h1 small {
-  display: block;
-  font-size: 16px;
-  font-weight: 700;
-  color: #99f6e4;
-  margin-bottom: 6px;
-  letter-spacing: 0.05em;
+.organization-site .interest-hero .waste-eyebrow span,
+.interest-page .interest-hero .waste-eyebrow span {
+  background: rgba(204, 251, 241, 0.25) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(94, 234, 212, 0.6) !important;
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  display: inline-block !important;
+  font-weight: 800 !important;
 }
 
-.interest-hero h1 span {
-  color: #fef08a;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+/* メインタイトル h1 */
+.organization-site .interest-hero h1,
+.interest-page .interest-hero h1 {
+  color: #ffffff !important;
+  font-size: clamp(28px, 4.5vw, 42px) !important;
+  font-weight: 900 !important;
+  line-height: 1.3 !important;
+  margin: 14px 0 16px !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
 }
 
-.interest-keyfacts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 14px;
-  margin-top: 28px;
+.organization-site .interest-hero h1 small,
+.interest-page .interest-hero h1 small {
+  display: block !important;
+  font-size: clamp(14px, 2.2vw, 18px) !important;
+  font-weight: 800 !important;
+  color: #a7f3d0 !important;
+  margin-bottom: 8px !important;
+  letter-spacing: 0.04em !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
-.interest-keyfacts > div {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 16px;
-  text-align: center;
+.organization-site .interest-hero h1 span,
+.interest-page .interest-hero h1 span {
+  display: inline-block !important;
+  background: none !important;
+  color: #fef08a !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+  padding: 0 !important;
 }
 
-.interest-keyfacts .keyfact-highlight {
-  background: rgba(245, 158, 11, 0.2);
-  border-color: rgba(245, 158, 11, 0.5);
+/* リード文 */
+.organization-site .interest-hero .waste-lead,
+.interest-page .interest-hero .waste-lead {
+  color: #f0fdfa !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  max-width: 860px !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
 }
 
-.interest-keyfacts dt {
-  font-size: 13px;
-  color: #ccfbf1;
-  margin-bottom: 6px;
-  font-weight: 700;
+.organization-site .interest-hero .waste-lead b,
+.interest-page .interest-hero .waste-lead b {
+  color: #ffffff !important;
+  background: rgba(204, 251, 241, 0.25) !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
 }
 
-.interest-keyfacts .keyfact-highlight dt {
-  color: #fef08a;
+/* アクションボタン */
+.interest-page .interest-hero .hero-actions .waste-button.primary {
+  background: #f59e0b !important;
+  color: #0f172a !important;
+  font-weight: 900 !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35) !important;
 }
 
-.interest-keyfacts dd {
-  font-size: 26px;
-  font-weight: 900;
-  color: #ffffff;
-  margin: 0;
-  line-height: 1.2;
+.interest-page .interest-hero .hero-actions .waste-button.primary:hover {
+  background: #fbbf24 !important;
+  transform: translateY(-2px);
 }
 
-.interest-keyfacts dd small {
-  font-size: 14px;
-  font-weight: 700;
-  margin-left: 4px;
+.interest-page .interest-hero .hero-actions .waste-button.secondary {
+  background: #ffffff !important;
+  color: #0f766e !important;
+  font-weight: 800 !important;
+  border: 1px solid #cbd5e1 !important;
 }
 
-.interest-keyfacts .keyfact-sub {
-  display: block;
-  font-size: 11px;
-  color: #99f6e4;
-  margin-top: 6px;
+.interest-page .interest-hero .hero-actions .waste-button.secondary:hover {
+  background: #f0fdfa !important;
+  border-color: #0f766e !important;
+}
+
+/* 4つの主要スペックカード */
+.interest-page .interest-hero .interest-keyfacts {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: 14px !important;
+  margin-top: 28px !important;
+}
+
+.interest-page .interest-hero .interest-keyfacts > div {
+  background: rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  text-align: center !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+.interest-page .interest-hero .interest-keyfacts .keyfact-highlight {
+  background: rgba(245, 158, 11, 0.22) !important;
+  border-color: rgba(251, 191, 36, 0.6) !important;
+}
+
+.interest-page .interest-hero .interest-keyfacts dt {
+  font-size: 13px !important;
+  color: #ccfbf1 !important;
+  margin-bottom: 6px !important;
+  font-weight: 800 !important;
+}
+
+.interest-page .interest-hero .interest-keyfacts .keyfact-highlight dt {
+  color: #fef08a !important;
+}
+
+.interest-page .interest-hero .interest-keyfacts dd {
+  font-size: 26px !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+.interest-page .interest-hero .interest-keyfacts dd small {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #e0f2fe !important;
+}
+
+.interest-page .interest-hero .interest-keyfacts .keyfact-sub {
+  display: block !important;
+  font-size: 11px !important;
+  color: #99f6e4 !important;
+  margin-top: 6px !important;
+  font-weight: 600 !important;
 }
 
 /* 局激指定外と独自カバーの解説バナー */

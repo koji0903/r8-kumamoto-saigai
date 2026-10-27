@@ -20,13 +20,16 @@ body.interest-page {
 }
 
 /* ヒーロー拡張 */
+.organization-site .interest-hero,
 .interest-hero {
-  background: linear-gradient(135deg, #0f3d36 0%, #185f55 50%, #23786c 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, #0f3d36 0%, #185f55 50%, #23786c 100%) !important;
+  color: #ffffff !important;
   padding: 44px 20px 48px;
 }
 
+.organization-site .interest-hero h1,
 .interest-hero h1 {
+  color: #ffffff !important;
   font-size: clamp(24px, 4.5vw, 36px);
   font-weight: 900;
   line-height: 1.3;
@@ -35,16 +38,23 @@ body.interest-page {
   overflow-wrap: anywhere;
 }
 
+.organization-site .interest-hero h1 small,
 .interest-hero h1 small {
   display: block;
   font-size: clamp(14px, 2.5vw, 18px);
   font-weight: 700;
-  color: #a7f3d0;
+  color: #a7f3d0 !important;
   margin-bottom: 6px;
 }
 
+.organization-site .interest-hero h1 span,
 .interest-hero h1 span {
-  color: #fde047;
+  color: #fde047 !important;
+}
+
+.organization-site .interest-hero .waste-lead,
+.interest-hero .waste-lead {
+  color: #f0fdfa !important;
 }
 
 .interest-keyfacts {
