@@ -177,10 +177,127 @@ const specialFaqs = new Map([
         a: "1件当たりの工事・購入費が税込100万円以上の場合は、原則として2者以上からの相見積もりが必要です。すでに発注済みで複数取得が困難な場合などは、「見積書が不足している理由書」を提出することで1者見積もりが例外的に認められます。"
       }
     ]
+  ],
+  [
+    "demolition.html",
+    [
+      {
+        q: "公費解体と自費解体（費用償還）の違いは何ですか？",
+        a: "公費解体は自治体が所有者に代わって被災家屋の解体・運搬・処分を直接発注し、費用を全額公費（自己負担0円）で実施する制度です。自費解体（費用償還）は所有者が自ら解体業者と契約して費用を立替払いし、後日自治体が適正算定基準に基づき費用を償還（返金）する制度です。自費解体の場合も着工前の届出・写真やマニフェスト等の書類保全が必須となります。"
+      },
+      {
+        q: "罹災証明書が「準半壊」や「一部損壊」でも公費解体の対象になりますか？",
+        a: "国の災害廃棄物処理指針では原則として「全壊」「大規模半壊」「中規模半壊」が対象となります。ただし、半壊であっても倒壊や崩落のおそれが著しくそのままでは危険な場合や、自治体独自の危険家屋判定基準を満たす場合は対象となるケースがあります。各自治体の解体相談窓口へご確認ください。"
+      },
+      {
+        q: "増築部分や物置・倉庫だけを部分的に解体することはできますか？",
+        a: "環境省の災害廃棄物処理指針に基づき、住家としての一体性や構造上切り離しが可能な場合に限り、罹災判定を受けた危険な増築部分・別棟のみを公費解体の対象として申請できる場合があります。事前の現地立会確認が必要です。"
+      }
+    ]
+  ],
+  [
+    "uto-support.html",
+    [
+      {
+        q: "宇土市の住宅リフォーム助成事業は地震の応急修理と併用できますか？",
+        a: "併用可能です。災害救助法に基づく住宅の応急修理制度（最大75.7万円）の完了後、市内施工業者によって追加のリフォームや改修工事を行う場合、宇土市独自の住宅リフォーム助成事業として最大25万円分の商品券交付を受けることができます。"
+      },
+      {
+        q: "宇土市の子ども医療費助成の対象年齢と自己負担はどうなっていますか？",
+        a: "宇土市では0歳から高校生年代（18歳到達後の最初の3月31日）までの通院・入院にかかる医療費（保険適用分）を全額助成しています。窓口で受給資格者証を提示することで現物給付（窓口無料）となります。"
+      },
+      {
+        q: "宇土市の被災家屋公費解体の申請期限と窓口はどこですか？",
+        a: "宇土市役所1階「すまい再建支援室」にて当日整理券制で申請を受け付けています。申請受付期限は令和8年12月28日までとなっています。"
+      }
+    ]
+  ],
+  [
+    "yatsushiro-well-repair.html",
+    [
+      {
+        q: "八代市で被災した井戸の公費修理（最大75.7万円）の対象条件は何ですか？",
+        a: "令和8年熊本地震により破損・出水不良等が生じた井戸で、り災証明書の判定が半壊以上（準半壊は最大36.7万円）の世帯において、日常生活に不可欠な生活用水・飲用水として使用していた井戸が対象となります。市による事前現地確認と業者委託により実施されます。"
+      },
+      {
+        q: "共同利用している井戸の場合、補助限度額はどうなりますか？",
+        a: "複数の被災世帯で共同利用している井戸の場合、利用世帯数に応じて限度額が合算され、最大4世帯で最大302.8万円（1世帯あたり最大75.7万円×世帯数）まで公費修理の対象となります。"
+      },
+      {
+        q: "井戸が復旧するまでの間の生活用水や給水支援はどうなっていますか？",
+        a: "八代市環境課にて生活用水用の給水タンク設置や、要配慮世帯（高齢者・障がい者・乳幼児のいる世帯等）への戸別給水配送、および生活用水用ホース等の無料貸出支援が実施されています。"
+      }
+    ]
+  ],
+  [
+    "yatsushiro-living-support.html",
+    [
+      {
+        q: "八代市の被災者生活再建支援金の支給額と申請方法は？",
+        a: "住家の全壊、大規模半壊、中規模半壊、半壊解体等の世帯に対し、基礎支援金（最大100万円）と住宅再建方法（建設・購入・補修・賃借）に応じた加算支援金（最大200万円）の合計最大300万円が支給されます。八代市役所本庁・各支所の特設窓口で申請できます。"
+      },
+      {
+        q: "八代市で保育料の無償化や子育て支援はありますか？",
+        a: "八代市では国制度の3〜5歳児無償化に加え、市独自事業として第2子以降の保育料無償化や0〜2歳児の児童発達支援無償化、高校生等までのこども医療費助成を実施しています。"
+      }
+    ]
+  ],
+  [
+    "uki-living-support.html",
+    [
+      {
+        q: "宇城市の高校生等医療費無償化の対象と申請方法は？",
+        a: "宇城市にお住まいの0歳から18歳（高校生相当）までのお子さまを対象に、通院・入院時の保険診療自己負担分を全額助成しています。ひまわりカード（受給資格証）を県内医療機関の窓口に提示することで窓口負担なく受診できます。"
+      },
+      {
+        q: "宇城市で木造住宅の耐震改修補助金はいくら受けられますか？",
+        a: "昭和56年5月31日以前に着工された木造住宅を対象に、耐震診断の補助（自己負担原則無料〜少額）および耐震改修工事費用の補助（最大100万円等の助成枠）を実施しています。着工前の事前申請が必要です。"
+      }
+    ]
+  ],
+  [
+    "hikawa-living-support.html",
+    [
+      {
+        q: "氷川町独自の畳表張替助成（最大10万円）の対象条件は何ですか？",
+        a: "氷川町内の特産であるい草・畳産業振興と定住支援のため、町内施工業者を利用して自宅の畳表張替・新調を行う町民に対し、費用の一部（最大10万円）を補助する町独自制度です。申請窓口は竜北庁舎産業振興課です。"
+      },
+      {
+        q: "氷川町での被災者支援窓口や公費解体の受付はどこですか？",
+        a: "福祉・義援金・り災証明関連の総合窓口は氷川町役場宮原庁舎、公費解体や上下水道・インフラ関連は竜北庁舎にて受け付けています。また竜翔センター内に地域支え合いセンターも開所しています。"
+      }
+    ]
+  ],
+  [
+    "yatsushiro-loan.html",
+    [
+      {
+        q: "災害援護資金貸付制度はどのような条件で無利子になりますか？",
+        a: "世帯主の負傷や住家・家財の損壊被害を受けた世帯に対し最大350万円を貸し付ける制度です。保証人を立てることで据置期間（原則5年）を含め全期間「無利子（0%）」となります。保証人を立てない場合も年利1%の低利で利用できます。"
+      },
+      {
+        q: "災害援護資金の所得制限の基準はどうなっていますか？",
+        a: "世帯人員に応じた前年総所得限度額（1人世帯220万円、2人世帯430万円、3人世帯620万円など）が定められていますが、住家が全壊した場合は特例により所得制限限度額が大幅に引き上げられ（1,270万円まで）対象が広がります。"
+      }
+    ]
+  ],
+  [
+    "uto-public-services.html",
+    [
+      {
+        q: "宇土市役所の窓口開庁時間と、休日・夜間に証明書を取得する方法は？",
+        a: "本庁舎の開庁時間は平日8:30〜17:15です。マイナンバーカードをお持ちの方は全国のコンビニエンスストアのマルチコピー機にて、土日祝日や夜間（6:30〜23:00）でも住民票の写しや印鑑登録証明書を取得できます。"
+      },
+      {
+        q: "10月17日開所の宇土市地域支え合いセンターではどのような相談ができますか？",
+        a: "宇土市福祉センター内に開設されており、仮設住宅（浦田町団地等）や在宅で避難生活を送る高齢者・被災世帯への戸別訪問、生活再建に向けた手続きの伴走支援、福祉・健康相談を社協と連携して実施しています。"
+      }
+    ]
   ]
 ]);
 
-function buildStructuredData(file, pageTitle, description, canonical) {
+function buildStructuredData(file, pageTitle, description, canonical, fileDate) {
+  const pageDate = fileDate || todayInJapan;
   const graph = [
     {
       "@type": "Organization",
@@ -204,7 +321,15 @@ function buildStructuredData(file, pageTitle, description, canonical) {
       url: `${origin}/`,
       name: "一般社団法人よか隊ネット熊本",
       publisher: { "@id": `${origin}/#organization` },
-      inLanguage: "ja"
+      inLanguage: "ja",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${origin}/sitemap.html?q={search_term_string}`
+        },
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       "@type": "WebPage",
@@ -213,7 +338,9 @@ function buildStructuredData(file, pageTitle, description, canonical) {
       name: pageTitle,
       description: description,
       isPartOf: { "@id": `${origin}/#website` },
-      inLanguage: "ja"
+      inLanguage: "ja",
+      datePublished: "2026-07-28",
+      dateModified: pageDate
     }
   ];
 
@@ -294,7 +421,9 @@ function getSitemapMeta(file) {
   const highPriority = [
     "disaster.html", "affected.html", "supporters.html", "municipalities.html",
     "municipality-updates.html", "reconstruction.html", "priority-support-summary.html",
-    "municipality-support-compare.html", "disaster-laws.html", "demolition.html"
+    "municipality-support-compare.html", "disaster-laws.html", "demolition.html",
+    "uto-support.html", "yatsushiro-living-support.html", "uki-living-support.html",
+    "hikawa-living-support.html", "kumamoto-living-support.html", "yatsushiro-well-repair.html"
   ];
   if (highPriority.includes(file)) {
     return { priority: "0.9", changefreq: "daily" };
@@ -303,12 +432,13 @@ function getSitemapMeta(file) {
     return { priority: "0.7", changefreq: "weekly" };
   }
   const livingSupportPages = [
-    "uto-support.html", "uto-living-support.html", "uto-repair.html", "uto-housing.html", "uto-jizokuka.html",
-    "kumamoto-saishuppatsu.html",
-    "uki-support.html", "uki-living-support.html",
-    "hikawa-support.html", "hikawa-living-support.html", "hikawa-demolition.html", "hikawa-interest-subsidy.html",
-    "yatsushiro-support.html", "yatsushiro-living-support.html", "yatsushiro-rebuild.html", "yatsushiro-well-repair.html",
-    "kumamoto-support.html", "kumamoto-living-support.html",
+    "uto-living-support.html", "uto-repair.html", "uto-housing.html", "uto-jizokuka.html",
+    "uto-demolition.html", "uto-public-services.html",
+    "kumamoto-saishuppatsu.html", "kumamoto-support.html", "kumamoto-demolition.html",
+    "uki-support.html", "uki-consultation.html", "uki-einou-saikai.html", "uki-demolition.html", "uki-public-services.html",
+    "hikawa-support.html", "hikawa-demolition.html", "hikawa-interest-subsidy.html", "hikawa-public-services.html",
+    "yatsushiro-support.html", "yatsushiro-rebuild.html", "yatsushiro-loan.html", "yatsushiro-safetynet4.html",
+    "yatsushiro-demolition.html", "yatsushiro-public-services.html",
     "risai-certificate.html", "temporary-housing.html", "shelters.html", "volunteer-centers.html"
   ];
   if (livingSupportPages.includes(file) || file.startsWith("reconstruction-")) {
@@ -397,7 +527,8 @@ for (const file of files) {
   const image = `${origin}${imagePath}`;
   const pageTitle = title.split("｜")[0];
   const robots = excluded.has(file) ? "noindex,follow" : "index,follow,max-image-preview:large";
-  const jsonLd = buildStructuredData(file, pageTitle, description, canonical);
+  const fileDate = lastModified(file, original);
+  const jsonLd = buildStructuredData(file, pageTitle, description, canonical, fileDate);
   const tags = [
     `<link rel="canonical" href="${canonical}">`,
     meta("robots", robots, true),
@@ -422,7 +553,9 @@ const sitemapFiles = files.filter(file => !excluded.has(file)).sort((a, b) => {
 const urls = sitemapFiles.map(file => {
   const date = lastModified(file, htmlContents.get(file));
   const { priority, changefreq } = getSitemapMeta(file);
-  return `  <url>\n    <loc>${canonicalFor(file)}</loc>${date ? `\n    <lastmod>${date}</lastmod>` : ""}\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+  const imagePath = specialImages.get(file);
+  const imageXml = imagePath ? `\n    <image:image>\n      <image:loc>${origin}${imagePath}</image:loc>\n    </image:image>` : "";
+  return `  <url>\n    <loc>${canonicalFor(file)}</loc>${date ? `\n    <lastmod>${date}</lastmod>` : ""}\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>${imageXml}\n  </url>`;
 });
 
 // 自治体配信記事アーカイブ目録（official-articles/）をサイトマップに登録
@@ -436,7 +569,7 @@ try {
 } catch {}
 
 const sitemapPath = path.join(root, "sitemap.xml");
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls.join("\n")}\n</urlset>\n`;
 const currentSitemap = await readFile(sitemapPath, "utf8").catch(() => "");
 if (sitemap !== currentSitemap) stale.push("sitemap.xml");
 if (!checkOnly) await writeFile(sitemapPath, sitemap);
