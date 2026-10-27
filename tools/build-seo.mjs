@@ -296,15 +296,19 @@ const specialFaqs = new Map([
   ]
 ]);
 
-function buildStructuredData(file, pageTitle, description, canonical, fileDate) {
-  const pageDate = fileDate || todayInJapan;
+function buildStructuredData(file, pageTitle, description, canonical, publishedDate, modifiedDate, image, visibleHtml) {
+  const pagePublished = publishedDate || modifiedDate || todayInJapan;
+  const pageModified = modifiedDate || pagePublished;
   const graph = [
     {
       "@type": "Organization",
       "@id": `${origin}/#organization`,
       name: "一般社団法人よか隊ネット熊本",
       url: `${origin}/`,
-      logo: `${origin}/yokatai-logo.png`,
+      logo: {
+        "@type": "ImageObject",
+        url: `${origin}/yokatai-logo.png`
+      },
       address: {
         "@type": "PostalAddress",
         postalCode: "869-0404",
@@ -319,17 +323,10 @@ function buildStructuredData(file, pageTitle, description, canonical, fileDate) 
       "@type": "WebSite",
       "@id": `${origin}/#website`,
       url: `${origin}/`,
-      name: "一般社団法人よか隊ネット熊本",
+      name: "よか隊ネット熊本",
+      alternateName: "よか隊ネット熊本 災害・支援状況レポート",
       publisher: { "@id": `${origin}/#organization` },
-      inLanguage: "ja",
-      potentialAction: {
-        "@type": "SearchAction",
-        target: {
-          "@type": "EntryPoint",
-          urlTemplate: `${origin}/sitemap.html?q={search_term_string}`
-        },
-        "query-input": "required name=search_term_string"
-      }
+      inLanguage: "ja"
     },
     {
       "@type": "WebPage",
@@ -338,9 +335,16 @@ function buildStructuredData(file, pageTitle, description, canonical, fileDate) 
       name: pageTitle,
       description: description,
       isPartOf: { "@id": `${origin}/#website` },
+      publisher: { "@id": `${origin}/#organization` },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: image,
+        width: 1200,
+        height: 630
+      },
       inLanguage: "ja",
-      datePublished: "2026-07-28",
-      dateModified: pageDate
+      datePublished: pagePublished,
+      dateModified: pageModified
     }
   ];
 
@@ -397,10 +401,17 @@ function buildStructuredData(file, pageTitle, description, canonical, fileDate) 
   }
 
   const faqs = specialFaqs.get(file);
-  if (faqs && faqs.length > 0) {
+  const visibleText = visibleHtml
+    .replace(/<script\b[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style\b[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const visibleFaqs = (faqs || []).filter(faq => visibleText.includes(faq.q) && visibleText.includes(faq.a));
+  if (visibleFaqs.length > 0) {
     graph.push({
       "@type": "FAQPage",
-      mainEntity: faqs.map(faq => ({
+      mainEntity: visibleFaqs.map(faq => ({
         "@type": "Question",
         name: faq.q,
         acceptedAnswer: {
@@ -412,43 +423,6 @@ function buildStructuredData(file, pageTitle, description, canonical, fileDate) 
   }
 
   return JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
-}
-
-function getSitemapMeta(file) {
-  if (file === "index.html") {
-    return { priority: "1.0", changefreq: "daily" };
-  }
-  const highPriority = [
-    "disaster.html", "affected.html", "supporters.html", "municipalities.html",
-    "municipality-updates.html", "reconstruction.html", "priority-support-summary.html",
-    "municipality-support-compare.html", "disaster-laws.html", "demolition.html",
-    "uto-support.html", "yatsushiro-living-support.html", "uki-living-support.html",
-    "hikawa-living-support.html", "kumamoto-living-support.html", "yatsushiro-well-repair.html"
-  ];
-  if (highPriority.includes(file)) {
-    return { priority: "0.9", changefreq: "daily" };
-  }
-  if (file === "sitemap.html") {
-    return { priority: "0.7", changefreq: "weekly" };
-  }
-  const livingSupportPages = [
-    "uto-living-support.html", "uto-repair.html", "uto-housing.html", "uto-jizokuka.html",
-    "uto-demolition.html", "uto-public-services.html",
-    "kumamoto-saishuppatsu.html", "kumamoto-support.html", "kumamoto-demolition.html",
-    "uki-support.html", "uki-consultation.html", "uki-einou-saikai.html", "uki-demolition.html", "uki-public-services.html",
-    "hikawa-support.html", "hikawa-demolition.html", "hikawa-interest-subsidy.html", "hikawa-public-services.html",
-    "yatsushiro-support.html", "yatsushiro-rebuild.html", "yatsushiro-loan.html", "yatsushiro-safetynet4.html",
-    "yatsushiro-demolition.html", "yatsushiro-public-services.html",
-    "risai-certificate.html", "temporary-housing.html", "shelters.html", "volunteer-centers.html"
-  ];
-  if (livingSupportPages.includes(file) || file.startsWith("reconstruction-")) {
-    return { priority: "0.8", changefreq: "weekly" };
-  }
-  const lowPriority = ["about.html", "join.html", "contact.html", "privacy.html", "accessibility.html"];
-  if (lowPriority.includes(file)) {
-    return { priority: "0.4", changefreq: "monthly" };
-  }
-  return { priority: "0.6", changefreq: "weekly" };
 }
 
 const globalAssets = new Set([
@@ -465,6 +439,7 @@ const globalAssets = new Set([
 ]);
 
 const gitDateCache = new Map();
+const gitFirstDateCache = new Map();
 
 function getFileDate(relPath) {
   if (gitDateCache.has(relPath)) return gitDateCache.get(relPath);
@@ -485,6 +460,23 @@ function getFileDate(relPath) {
     return d;
   } catch {
     gitDateCache.set(relPath, "");
+    return "";
+  }
+}
+
+function getFileFirstDate(relPath) {
+  if (gitFirstDateCache.has(relPath)) return gitFirstDateCache.get(relPath);
+  try {
+    const dates = execFileSync("git", ["log", "--follow", "--format=%cd", "--date=format-local:%Y-%m-%d", "--", relPath], {
+      cwd: root,
+      encoding: "utf8",
+      env: { ...process.env, TZ: "Asia/Tokyo" }
+    }).trim().split(/\r?\n/).filter(Boolean);
+    const firstDate = dates.at(-1) || "";
+    gitFirstDateCache.set(relPath, firstDate);
+    return firstDate;
+  } catch {
+    gitFirstDateCache.set(relPath, "");
     return "";
   }
 }
@@ -528,7 +520,8 @@ for (const file of files) {
   const pageTitle = title.split("｜")[0];
   const robots = excluded.has(file) ? "noindex,follow" : "index,follow,max-image-preview:large";
   const fileDate = lastModified(file, original);
-  const jsonLd = buildStructuredData(file, pageTitle, description, canonical, fileDate);
+  const publishedDate = getFileFirstDate(file) || fileDate;
+  const jsonLd = buildStructuredData(file, pageTitle, description, canonical, publishedDate, fileDate, image, stripSeo(original));
   const tags = [
     `<link rel="canonical" href="${canonical}">`,
     meta("robots", robots, true),
@@ -552,10 +545,9 @@ const sitemapFiles = files.filter(file => !excluded.has(file)).sort((a, b) => {
 });
 const urls = sitemapFiles.map(file => {
   const date = lastModified(file, htmlContents.get(file));
-  const { priority, changefreq } = getSitemapMeta(file);
   const imagePath = specialImages.get(file);
   const imageXml = imagePath ? `\n    <image:image>\n      <image:loc>${origin}${imagePath}</image:loc>\n    </image:image>` : "";
-  return `  <url>\n    <loc>${canonicalFor(file)}</loc>${date ? `\n    <lastmod>${date}</lastmod>` : ""}\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>${imageXml}\n  </url>`;
+  return `  <url>\n    <loc>${canonicalFor(file)}</loc>${date ? `\n    <lastmod>${date}</lastmod>` : ""}${imageXml}\n  </url>`;
 });
 
 // 自治体配信記事アーカイブ目録（official-articles/）をサイトマップに登録
@@ -564,7 +556,7 @@ try {
   const archiveContent = await readFile(archiveIndexPath, "utf8").catch(() => "");
   if (archiveContent) {
     const archiveDate = lastModified("official-articles/index.html", archiveContent);
-    urls.push(`  <url>\n    <loc>${origin}/official-articles/</loc>${archiveDate ? `\n    <lastmod>${archiveDate}</lastmod>` : ""}\n    <changefreq>daily</changefreq>\n    <priority>0.7</priority>\n  </url>`);
+    urls.push(`  <url>\n    <loc>${origin}/official-articles/</loc>${archiveDate ? `\n    <lastmod>${archiveDate}</lastmod>` : ""}\n  </url>`);
   }
 } catch {}
 

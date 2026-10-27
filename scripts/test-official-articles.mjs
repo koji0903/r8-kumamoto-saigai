@@ -22,6 +22,7 @@ assertNoTrailingWhitespace(read(ARTICLES_INDEX_HTML), ARTICLES_INDEX_HTML);
 const archiveIndex = JSON.parse(read(ARCHIVE_INDEX_PATH));
 const urls = Object.keys(archiveIndex);
 assert.ok(urls.length >= 10, `アーカイブ記事は最低10件以上必要です（現在: ${urls.length}件）`);
+const archiveHub = read(ARTICLES_INDEX_HTML);
 
 let checkedCount = 0;
 for (const [url, item] of Object.entries(archiveIndex)) {
@@ -43,6 +44,9 @@ for (const [url, item] of Object.entries(archiveIndex)) {
   assertNoTrailingWhitespace(html, item.htmlPath);
   assert.ok(html.includes(escapeHtml(item.title)), `${item.htmlPath} にタイトルが含まれていません`);
   assert.ok(html.includes(escapeHtml(url)), `${item.htmlPath} に自治体公式元URL（${url}）が含まれていません`);
+  assert.match(html, /<meta name="robots" content="noindex,follow,max-image-preview:large">/, `${item.htmlPath}: 自治体原文アーカイブは検索結果へ重複掲載させません`);
+  assert.ok(html.includes(`<link rel="canonical" href="${escapeHtml(url)}">`), `${item.htmlPath}: canonical が自治体公式元URLと一致しません`);
+  assert.ok(archiveHub.includes(`${item.id}.html`), `${item.htmlPath}: アーカイブ目録から到達できません`);
   checkedCount++;
 }
 

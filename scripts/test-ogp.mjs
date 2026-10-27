@@ -57,6 +57,36 @@ for (const page of pages) {
   const canonical = html.match(/rel="canonical" href="([^"]+)"/)?.[1];
   if (canonical) assert.equal(html.match(/property="og:url" content="([^"]+)"/)[1], canonical, `${page}: og:url と canonical が違います`);
 
+  // 構造化データは、検索結果で使われる現在の仕様と画面上の内容に合わせる。
+  const jsonLdText = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
+  assert.ok(jsonLdText, `${page}: JSON-LD がありません`);
+  const jsonLd = JSON.parse(jsonLdText);
+  const graph = jsonLd["@graph"] || [];
+  const website = graph.find(item => item["@type"] === "WebSite");
+  const webpage = graph.find(item => item["@type"] === "WebPage");
+  assert.equal(website?.name, "よか隊ネット熊本", `${page}: WebSite.name が推奨サイト名ではありません`);
+  assert.ok(website?.alternateName, `${page}: WebSite.alternateName がありません`);
+  assert.equal(website?.potentialAction, undefined, `${page}: 廃止済みのサイトリンク検索ボックス用 SearchAction が残っています`);
+  assert.equal(webpage?.url, canonical, `${page}: WebPage.url と canonical が一致しません`);
+  assert.match(webpage?.datePublished || "", /^\d{4}-\d{2}-\d{2}$/, `${page}: datePublished が正しい日付ではありません`);
+  assert.match(webpage?.dateModified || "", /^\d{4}-\d{2}-\d{2}$/, `${page}: dateModified が正しい日付ではありません`);
+  assert.ok(webpage.datePublished <= webpage.dateModified, `${page}: datePublished が dateModified より後です`);
+  assert.equal(webpage?.primaryImageOfPage?.url, image, `${page}: primaryImageOfPage と OGP画像が一致しません`);
+  assert.equal(webpage?.primaryImageOfPage?.width, 1200, `${page}: primaryImageOfPage.width が不正です`);
+  assert.equal(webpage?.primaryImageOfPage?.height, 630, `${page}: primaryImageOfPage.height が不正です`);
+
+  const visibleText = html
+    .replace(/<script\b[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style\b[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ");
+  for (const faqPage of graph.filter(item => item["@type"] === "FAQPage")) {
+    for (const question of faqPage.mainEntity || []) {
+      assert.ok(visibleText.includes(question.name), `${page}: 画面にない質問をFAQ構造化データへ載せています`);
+      assert.ok(visibleText.includes(question.acceptedAnswer?.text || ""), `${page}: 画面にない回答をFAQ構造化データへ載せています`);
+    }
+  }
+
   used.set(page, file);
 }
 
@@ -87,4 +117,8 @@ for (const page of DEDICATED) {
 
 const shared = [...used.values()].filter(file => ["ogp-disaster.png", "ogp-organization.png"].includes(file)).length;
 assert.equal(shared, 0, "共通OGP画像を使っているページがあります");
-console.log(`OGP: ${pages.length}ページ / 全ページ専用${new Set(dedicatedFiles).size}枚 / 画像内容も一意・実寸1200x630・宣言一致・canonical一致 OK`);
+const sitemap = read("sitemap.xml");
+assert.equal(sitemap.includes("<changefreq>"), false, "Googleが無視するchangefreqをサイトマップへ出力しています");
+assert.equal(sitemap.includes("<priority>"), false, "Googleが無視するpriorityをサイトマップへ出力しています");
+assert.match(sitemap, /<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/, "サイトマップに正確なlastmodがありません");
+console.log(`SEO/OGP: ${pages.length}ページ / 専用画像${new Set(dedicatedFiles).size}枚 / 公開・更新日 / サイト名 / canonical / FAQ可視性 / sitemap OK`);

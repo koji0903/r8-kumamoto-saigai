@@ -202,6 +202,8 @@ function renderArticleHtml(article) {
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>${esc(pageTitle)}｜よか隊ネット熊本</title>
   <meta name="description" content="${esc(desc)}">
+  <meta name="robots" content="noindex,follow,max-image-preview:large">
+  <link rel="canonical" href="${esc(url)}">
   <link rel="icon" href="../favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="stylesheet" href="../styles.css?v=20260817-4">
@@ -534,6 +536,25 @@ async function main() {
       date: articleRecord.date,
       retrievedAt: articleRecord.retrievedAt
     };
+  }
+
+  // 現在の収集候補から外れた過去記事も、保存済みアーカイブとして残し続ける。
+  // 候補だけで一覧を再生成すると、元データは存在するのに目録から消えるため、
+  // archive-index.json に記録済みの全記事をテンプレート更新と一覧生成の対象にする。
+  const activeIds = new Set(archivedArticles.map(article => article.id));
+  for (const item of Object.values(existingIndex)) {
+    if (!item?.id || activeIds.has(item.id)) continue;
+    const jsonPath = join(ARTICLES_DATA_DIR, `${item.id}.json`);
+    const htmlPath = join(ARTICLES_HTML_DIR, `${item.id}.html`);
+    if (!await fileExists(jsonPath)) continue;
+    try {
+      const articleRecord = JSON.parse(await readFile(jsonPath, "utf8"));
+      await writeFile(htmlPath, normalizeGeneratedText(renderArticleHtml(articleRecord)), "utf8");
+      archivedArticles.push(articleRecord);
+      activeIds.add(articleRecord.id);
+    } catch (error) {
+      console.warn(`[アーカイブ再生成スキップ] ${item.id}: ${error.message}`);
+    }
   }
 
   // インデックスの保存
