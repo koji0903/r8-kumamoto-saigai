@@ -4,7 +4,7 @@ import fs from 'node:fs';
 console.log('宇土市 暮らしの支援・補助金総合ガイドテスト開始');
 
 const html = fs.readFileSync('uto-support.html', 'utf8');
-const expectedCardCount = 71;
+const expectedCardCount = 72;
 assert.ok(html.includes('<title>宇土市：暮らしの支援・補助金 総合ガイド'), 'タイトルが正しくありません');
 assert.ok(html.includes('<meta name="description"'), 'descriptionがありません');
 
@@ -58,6 +58,7 @@ assert.ok(html.includes('宇土市在宅高齢者介護手当'), '在宅高齢�
 assert.ok(html.includes('宇土市重度心身障害者医療費助成'), '重度心身障害者医療費助成がありません');
 assert.ok(html.includes('住宅の応急修理制度（災害救助法）'), '応急修理制度がありません');
 assert.ok(html.includes('被災者生活再建支援金'), '被災者生活再建支援金がありません');
+assert.ok(html.includes('宇土市中小企業等利子補給金'), '中小企業等利子補給金がありません');
 
 // 連絡先・電話番号の確認
 assert.ok(html.includes('tel:0964273328'), '商工振興係の電話番号がありません');
@@ -102,6 +103,6 @@ assert.ok(html.includes('id="utoSupSearchClear"'), '検索クリアボタンが�
 assert.ok(html.includes('class="uto-sup-map-banner"'), '公的施設マップ連携バナーがありません');
 assert.ok(html.includes('uto-public-services.html'), '公的施設マップへのリンクがありません');
 assert.ok(html.includes('宇土市地域支え合いセンター'), '地域支え合いセンターの記載がありません');
-assert.ok(html.includes('2026年10月25日'), '最新確認日が反映されていません');
+assert.ok(html.includes('2026年10月27日'), '最新確認日が反映されていません');
 
 console.log(`宇土市 暮らしの支援・補助金総合ガイドテスト OK（主要${cardMatches.length}制度・シミュレーター・クイックタグ・公的施設マップ連携・最新化検証完了）`);

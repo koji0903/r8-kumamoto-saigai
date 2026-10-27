@@ -58,6 +58,7 @@ const specialImages = new Map([
   ["hikawa-support.html", "/ogp-hikawa-support.png"],
   ["hikawa-demolition.html", "/ogp-hikawa-demolition.png"],
   ["hikawa-interest-subsidy.html", "/ogp-hikawa-interest-subsidy.png"],
+  ["uto-interest-subsidy.html", "/ogp-uto-interest-subsidy.png"],
   ["uki-support.html", "/ogp-uki-support.png"],
   ["reconstruction.html", "/ogp-reconstruction.png"],
   ["temporary-housing.html", "/ogp-temporary-housing.png"],
@@ -291,6 +292,23 @@ const specialFaqs = new Map([
       {
         q: "10月17日開所の宇土市地域支え合いセンターではどのような相談ができますか？",
         a: "宇土市福祉センター内に開設されており、仮設住宅（浦田町団地等）や在宅で避難生活を送る高齢者・被災世帯への戸別訪問、生活再建に向けた手続きの伴走支援、福祉・健康相談を社協と連携して実施しています。"
+      }
+    ]
+  ],
+  [
+    "uto-interest-subsidy.html",
+    [
+      {
+        q: "宇土市が局地激甚災害指定から外れていたと聞きましたが、中小企業等利子補給金は利用できますか？",
+        a: "はい、まさにその地域間格差を解消し、市内事業者の再建を支えるために宇土市が独自予算で創設した制度です。国の局激特例を受けられなかった被災事業者をカバーするため、支払利子の全額（年最大100万円・最長3年間）を市が補給し、実質無利子化します。"
+      },
+      {
+        q: "利子補給の対象となる融資制度は何ですか？",
+        a: "熊本県金融円滑化特別資金（令和8年熊本地震枠・セーフティネット枠）、小規模事業者おうえん資金（令和8年熊本地震分）、日本政策金融公庫の災害貸付・災害復旧貸付の5大制度融資が対象です。"
+      },
+      {
+        q: "申請の期限と令和8年分の対象期間はどうなっていますか？",
+        a: "初年度（令和8年分）の提出期限は令和9年2月26日（金）17:15必着です。令和8年7月28日から令和8年12月31日までに金融機関へ支払った利子全額が補給対象となります。"
       }
     ]
   ]

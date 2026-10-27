@@ -1,0 +1,502 @@
+/* 宇土市 中小企業等利子補給金ガイド 専用スタイル */
+.interest-page {
+  --theme-primary: #0f766e;
+  --theme-primary-dark: #0d5f58;
+  --theme-primary-light: #ccfbf1;
+  --theme-accent: #f59e0b;
+}
+
+.interest-hero {
+  background: linear-gradient(135deg, #042f2e 0%, #0f766e 60%, #115e59 100%) !important;
+  color: #ffffff;
+}
+
+.interest-hero .waste-hero-inner {
+  max-width: 1040px;
+}
+
+.interest-hero .waste-eyebrow span {
+  background: rgba(204, 251, 241, 0.2);
+  color: #5eead4;
+  border: 1px solid rgba(94, 234, 212, 0.4);
+}
+
+.interest-hero h1 small {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #99f6e4;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+.interest-hero h1 span {
+  color: #fef08a;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.interest-keyfacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.interest-keyfacts > div {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.interest-keyfacts .keyfact-highlight {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+.interest-keyfacts dt {
+  font-size: 13px;
+  color: #ccfbf1;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.interest-keyfacts .keyfact-highlight dt {
+  color: #fef08a;
+}
+
+.interest-keyfacts dd {
+  font-size: 26px;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.interest-keyfacts dd small {
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.interest-keyfacts .keyfact-sub {
+  display: block;
+  font-size: 11px;
+  color: #99f6e4;
+  margin-top: 6px;
+}
+
+/* 局激指定外と独自カバーの解説バナー */
+.gekijin-context-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px 28px;
+  border: 2px solid #0f766e;
+  box-shadow: 0 8px 24px rgba(15, 118, 110, 0.08);
+  margin-bottom: 28px;
+}
+
+.gekijin-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.gekijin-tag {
+  background: #0f766e;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.gekijin-subtag {
+  background: #ccfbf1;
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.gekijin-context-box h3 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #042f2e;
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.gekijin-context-box p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #334155;
+  margin: 0 0 12px;
+}
+
+.gekijin-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+@media (max-width: 768px) {
+  .gekijin-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gekijin-card-gap {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.gekijin-card-gap h4 {
+  color: #c2410c;
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gekijin-card-solution {
+  background: #f0fdfa;
+  border: 1px solid #99f6e4;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.gekijin-card-solution h4 {
+  color: #0f766e;
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gekijin-card-gap p, .gekijin-card-solution p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+  color: #475569;
+}
+
+/* 比較表 */
+.comparison-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 640px;
+}
+
+.comparison-table th {
+  background: #f1f5f9;
+  color: #334155;
+  font-weight: 800;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 2px solid #cbd5e1;
+}
+
+.comparison-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+.comparison-table tr.highlight-row {
+  background: #f0fdfa;
+}
+
+.comparison-table tr.highlight-row td {
+  font-weight: 700;
+  color: #0f766e;
+}
+
+.badge-best {
+  display: inline-block;
+  background: #0f766e;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* 融資カードグリッド */
+.loan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.loan-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.loan-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.loan-card-badge {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.loan-card h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+
+.loan-card-meta {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 12px;
+}
+
+.loan-card-meta li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.loan-card-meta li:last-child {
+  margin-bottom: 0;
+}
+
+.loan-card-meta span {
+  color: #64748b;
+}
+
+.loan-card-meta strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* シミュレーター */
+.calc-box {
+  background: #ffffff;
+  border: 2px solid #0f766e;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(15, 118, 110, 0.08);
+}
+
+.calc-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #042f2e;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #ccfbf1;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.calc-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.calc-field input, .calc-field select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #0f172a;
+  box-sizing: border-box;
+  font-weight: 600;
+}
+
+.calc-field input:focus, .calc-field select:focus {
+  outline: none;
+  border-color: #0f766e;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+}
+
+.calc-result-area {
+  background: linear-gradient(135deg, #f0fdfa 0%, #e6fffa 100%);
+  border: 1px solid #99f6e4;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.calc-result-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: #0f766e;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.calc-result-val {
+  font-size: 32px;
+  font-weight: 900;
+  color: #042f2e;
+  line-height: 1.2;
+}
+
+.calc-result-val small {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f766e;
+}
+
+.calc-result-breakdown {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed #99f6e4;
+}
+
+.calc-breakdown-item {
+  background: #ffffff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccfbf1;
+}
+
+.calc-breakdown-item .label {
+  font-size: 11px;
+  color: #64748b;
+  display: block;
+}
+
+.calc-breakdown-item .val {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f766e;
+}
+
+.calc-result-note {
+  font-size: 12px;
+  color: #475569;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+/* スケジュール */
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  position: relative;
+}
+
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  background: #ccfbf1;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 54px;
+  margin-bottom: 24px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: 6px;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #0f766e;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 0 0 0 4px #ffffff;
+}
+
+.timeline-content {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.timeline-content h4 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 6px;
+}
+
+.timeline-content p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+}
