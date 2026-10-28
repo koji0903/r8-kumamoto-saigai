@@ -8,6 +8,7 @@
 // を見る。ここが崩れると、市の資料と違うことを書いたページになる。
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import { findMissingMeetingIdentities } from "../tools/municipality-hq-guard.mjs";
 
 const read = file => fs.readFileSync(new URL(`../${file}`, import.meta.url), "utf8");
 const exists = file => fs.existsSync(new URL(`../${file}`, import.meta.url));
@@ -104,6 +105,24 @@ const fetcher = read("tools/fetch-municipality-hq.mjs");
 assert.ok(fetcher.includes("TEXT_DIR"), "抽出済みの回を飛ばす仕組みがありません");
 assert.match(fetcher, /if \(!before\?\.meetings\?\.length\) throw error;/,
   "一覧が一時取得できないとき、前回確認済みの会議資料を保持する必要があります");
+assert.ok(fetcher.includes("findMissingMeetingIdentities"),
+  "一覧を取得できても過去回が欠けた場合に、前回確認済み資料を守る仕組みがありません");
+assert.deepEqual(
+  findMissingMeetingIdentities(
+    [{ meeting: 2, part: null }, { meeting: 3, part: 1 }, { meeting: 3, part: 2 }],
+    [{ meeting: 3, part: 1 }, { meeting: 3, part: 2 }, { meeting: 4, part: null }]
+  ),
+  ["2:0"],
+  "一時的に欠けた過去回を検出できません"
+);
+assert.deepEqual(
+  findMissingMeetingIdentities(
+    [{ meeting: 2, part: null, url: "https://example.jp/old.pdf" }],
+    [{ meeting: 2, part: null, url: "https://example.jp/new.pdf" }]
+  ),
+  [],
+  "同じ会議回のURL変更を欠落と誤判定しています"
+);
 
 // ---- 行政の書き方を読み替えても、資料の文は変えていないこと --------------------
 // このページの値打ちは「市が書いたとおりであること」なので、並べ替えや説明を

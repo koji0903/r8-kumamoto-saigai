@@ -28,6 +28,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
+import { findMissingMeetingIdentities } from "./municipality-hq-guard.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONFIG = join(ROOT, "config/municipality-hq-meetings.json");
@@ -189,8 +190,25 @@ for (const municipality of config.municipalities) {
     }
   }
   let meetings = [...meetingsMap.values()];
-  if (!meetings.length) throw new Error(`${municipality.name}: 資料リンクが1件も取れませんでした（ページの作りが変わった可能性）`);
   meetings.sort((a, b) => a.meeting - b.meeting || (a.part || 0) - (b.part || 0));
+
+  // 会議資料は原則として追記される。アーカイブページの一時的な取得失敗や
+  // 自治体側のページ切替途中で過去回が欠けた場合、不完全な一覧で確認済み
+  // データを上書きしない。URLの差ではなく「回・分冊」で比較するため、同じ
+  // 会議資料のURL変更は正常な更新として受け入れる。
+  if (before?.meetings?.length) {
+    const missing = findMissingMeetingIdentities(before.meetings, meetings);
+    if (missing.length) {
+      result.push({
+        ...before,
+        meetings: before.meetings.map(item => ({ ...item, bytes: null }))
+      });
+      console.warn(`::warning::${municipality.name}: 今回取得した一覧から前回確認済みの会議 ${missing.join("、")} が欠けたため、前回の${before.meetings.length}件を保持します。`);
+      continue;
+    }
+  } else if (!meetings.length) {
+    throw new Error(`${municipality.name}: 資料リンクが1件も取れませんでした（ページの作りが変わった可能性）`);
+  }
 
   // 一覧ページに会議ごとの本文がある市は、そこから読む（PDFは落とさない）
   if (municipality.source === "html") {
