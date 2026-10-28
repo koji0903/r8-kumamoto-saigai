@@ -72,15 +72,50 @@ function generateArticleId(muniName, dateStr, url) {
   return `${muniKey}-${cleanDate}-${hash}`;
 }
 
+// HTMLバイト列を適切な文字コード（UTF-8, EUC-JP, Shift_JIS）でデコード
+function decodeHtml(bytes, type = "", url = "") {
+  const declared = type.match(/charset=([^;\s]+)/i)?.[1];
+  const source = bytes instanceof Uint8Array ? bytes : new Uint8Array(bytes);
+  const head = new TextDecoder("latin1").decode(source.slice(0, 4000));
+  const meta = head.match(/charset=["']?([^"'\s/>;]+)/i)?.[1];
+
+  let primaryCharset = (declared || meta || "").replace(/shift[-_]?jis|x-sjis|windows-31j/i, "shift_jis");
+  if (!primaryCharset) {
+    if (/kamiamakusa|kosa\.lg\.jp|kumamoto-kashima/i.test(url)) {
+      primaryCharset = "euc-jp";
+    } else {
+      primaryCharset = "utf-8";
+    }
+  }
+
+  try {
+    const text = new TextDecoder(primaryCharset).decode(source);
+    // UTF-8と判定されたが文字化け（やEUC年文字ǯ）が検出された場合はEUC-JP / Shift_JISにフォールバック
+    if (primaryCharset.toLowerCase() === "utf-8" && (/\uFFFD{2,}/.test(text) || /ǯ/.test(text))) {
+      try {
+        const euc = new TextDecoder("euc-jp").decode(source);
+        if (!/\uFFFD{2,}/.test(euc)) return euc;
+      } catch {}
+      try {
+        const sjis = new TextDecoder("shift_jis").decode(source);
+        if (!/\uFFFD{2,}/.test(sjis)) return sjis;
+      } catch {}
+    }
+    return text;
+  } catch {
+    return new TextDecoder("utf-8").decode(source);
+  }
+}
+
 // curl による取得フォールバック（宇土市等の403対策）
 async function fetchWithCurl(url) {
   try {
     const { stdout } = await execFileAsync("curl", [
       "--fail", "--silent", "--show-error", "--location",
       "--connect-timeout", "15", "--max-time", "35",
-      "--user-agent", UA, url
+      "--user-agent", UA, "--header", "Accept: text/html,application/xhtml+xml", url
     ], { encoding: "buffer", maxBuffer: 32 * 1024 * 1024, timeout: 40000 });
-    return new TextDecoder("utf-8").decode(stdout);
+    return decodeHtml(stdout, "", url);
   } catch (error) {
     return null;
   }
@@ -105,7 +140,8 @@ async function fetchPage(url) {
     if (contentType.includes("application/pdf") || url.toLowerCase().endsWith(".pdf")) {
       return { type: "pdf", url, status: 200 };
     }
-    const content = await res.text();
+    const arrayBuffer = await res.arrayBuffer();
+    const content = decodeHtml(arrayBuffer, contentType, url);
     return { type: "html", content, status: 200 };
   } catch (error) {
     const curlHtml = await fetchWithCurl(url);
@@ -187,6 +223,12 @@ function extractArticleContent(rawHtml, baseUrl) {
   });
 
   return bodyHtml.trim();
+}
+
+// 明らかな文字化け（連続する置換文字やEUC化け字ǯ）を判定
+function isMojibake(text) {
+  if (!text) return false;
+  return /\uFFFD{2,}/.test(text) || /ǯ/.test(text);
 }
 
 // 記事ページHTMLテンプレート
@@ -482,10 +524,15 @@ async function main() {
 
     let articleRecord = null;
 
-    // キャッシュ確認: 既に保存済みであれば再取得しない
+    // キャッシュ確認: 既に保存済みであり、かつ文字化けしていなければ再取得しない
     if (await fileExists(htmlPath) && await fileExists(jsonPath)) {
       try {
-        articleRecord = JSON.parse(await readFile(jsonPath, "utf8"));
+        const loaded = JSON.parse(await readFile(jsonPath, "utf8"));
+        if (loaded && loaded.bodyHtml && !isMojibake(loaded.bodyHtml)) {
+          articleRecord = loaded;
+        } else {
+          console.log(`[文字化け検出・再取得対象] ${item.municipality}: ${item.title}`);
+        }
       } catch {}
     }
 
@@ -493,33 +540,42 @@ async function main() {
     if (!articleRecord) {
       console.log(`[アーカイブ取得] ${item.municipality}: ${item.title}`);
       const fetched = await fetchPage(item.url);
-      const retrievedAt = new Date().toISOString();
 
-      let bodyHtml = "";
-      let isPdf = fetched.type === "pdf";
+      if (fetched.type === "error" || (!fetched.content && fetched.type !== "pdf")) {
+        console.warn(`[アーカイブ取得スキップ: 接続不能] ${item.municipality}: ${item.title}`);
+        if (await fileExists(jsonPath)) {
+          try { articleRecord = JSON.parse(await readFile(jsonPath, "utf8")); } catch {}
+        }
+      } else {
+        const retrievedAt = new Date().toISOString();
+        let bodyHtml = "";
+        let isPdf = fetched.type === "pdf";
 
-      if (fetched.type === "html" && fetched.content) {
-        bodyHtml = extractArticleContent(fetched.content, item.url);
+        if (fetched.type === "html" && fetched.content) {
+          bodyHtml = extractArticleContent(fetched.content, item.url);
+        }
+
+        articleRecord = {
+          id,
+          url: item.url,
+          title: item.title,
+          municipality: item.municipality,
+          category: item.category || "その他",
+          date: item.date,
+          time: item.time || null,
+          retrievedAt,
+          bodyHtml,
+          isPdf
+        };
+
+        await writeFile(jsonPath, JSON.stringify(articleRecord, null, 2) + "\n", "utf8");
+
+        // サーバー負荷軽減のウェイト
+        await sleep(400);
       }
-
-      articleRecord = {
-        id,
-        url: item.url,
-        title: item.title,
-        municipality: item.municipality,
-        category: item.category || "その他",
-        date: item.date,
-        time: item.time || null,
-        retrievedAt,
-        bodyHtml,
-        isPdf
-      };
-
-      await writeFile(jsonPath, JSON.stringify(articleRecord, null, 2) + "\n", "utf8");
-
-      // サーバー負荷軽減のウェイト
-      await sleep(400);
     }
+
+    if (!articleRecord) continue;
 
     // キャッシュ済みの記事も現在のテンプレートと空白規則で再生成する。
     const pageHtml = normalizeGeneratedText(renderArticleHtml(articleRecord));
@@ -548,7 +604,18 @@ async function main() {
     const htmlPath = join(ARTICLES_HTML_DIR, `${item.id}.html`);
     if (!await fileExists(jsonPath)) continue;
     try {
-      const articleRecord = JSON.parse(await readFile(jsonPath, "utf8"));
+      let articleRecord = JSON.parse(await readFile(jsonPath, "utf8"));
+      // 過去記事の文字化け修復
+      if (articleRecord.bodyHtml && isMojibake(articleRecord.bodyHtml)) {
+        console.log(`[過去記事 文字化け修復・再取得] ${articleRecord.municipality}: ${articleRecord.title}`);
+        const fetched = await fetchPage(articleRecord.url);
+        if (fetched.type === "html" && fetched.content) {
+          articleRecord.bodyHtml = extractArticleContent(fetched.content, articleRecord.url);
+          articleRecord.retrievedAt = new Date().toISOString();
+          await writeFile(jsonPath, JSON.stringify(articleRecord, null, 2) + "\n", "utf8");
+          await sleep(400);
+        }
+      }
       await writeFile(htmlPath, normalizeGeneratedText(renderArticleHtml(articleRecord)), "utf8");
       archivedArticles.push(articleRecord);
       activeIds.add(articleRecord.id);

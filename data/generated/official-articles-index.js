@@ -342,7 +342,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "令和8年熊本地震における住宅の応急修理の申し込みについて",
     "municipality": "甲佐町",
     "date": "2026-10-27",
-    "retrievedAt": "2026-10-28T11:14:15.206Z"
+    "retrievedAt": "2026-10-28T22:47:02.754Z"
   },
   "https://www.city.uto.lg.jp/article/view/1307/16522.html": {
     "id": "uto-20261021-f352e598",
@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-10-24",
-    "retrievedAt": "2026-10-24T05:03:26.796Z"
+    "retrievedAt": "2026-10-28T22:47:04.237Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
@@ -518,7 +518,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "令和8年熊本地震に係る義援金の受付について",
     "municipality": "嘉島町",
     "date": "2026-10-26",
-    "retrievedAt": "2026-10-26T00:26:42.538Z"
+    "retrievedAt": "2026-10-28T22:47:03.439Z"
   },
   "https://www.town.mifune.kumamoto.jp/kinkyu/pub/default.aspx?c_id=8": {
     "id": "mifune-20261025-3fa2dbce",
@@ -654,7 +654,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "新たなバス共通定期サービス開始に伴う運賃設定に関する意見を募...",
     "municipality": "上天草市",
     "date": "2026-10-28",
-    "retrievedAt": "2026-10-28T11:14:11.888Z"
+    "retrievedAt": "2026-10-28T22:47:01.984Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/important/2645544": {
     "id": "uki-20261029-e3f9f52d",
