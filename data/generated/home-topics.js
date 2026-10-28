@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-26T20:54:22.678Z",
-  "officialCheckedAt": "10/27 05:54",
+  "retrievedAt": "2026-10-28T09:50:28.262Z",
+  "officialCheckedAt": "10/28 18:50",
   "siteTopics": [
     {
       "date": "2026-10-27",
@@ -249,22 +249,22 @@ window.HOME_TOPICS = {
   "prefectureUpdates": [
     {
       "title": "（参考）令和8年熊本地震による人的被害等の状況（10月6日14時00分時点）",
-      "url": "https://www.pref.kumamoto.jp/uploaded/life/282520_904089_misc.pdf",
+      "url": "https://www.pref.kumamoto.jp/uploaded/life/283199_908084_misc.pdf",
       "date": "2026-10-06",
       "time": "14:00",
       "kind": "県公式集計"
     },
     {
-      "title": "【第6回】令和8年熊本地震復旧・復興本部会議",
-      "url": "https://www.pref.kumamoto.jp/soshiki/222/274487.html",
-      "date": "2026-10-06",
-      "time": "14:00",
-      "kind": "災害対策本部"
+      "title": "【第7回】令和8年熊本地震復旧・復興本部会議",
+      "url": "https://www.pref.kumamoto.jp/soshiki/5/278881.html",
+      "date": "2026-10-27",
+      "time": "08:45",
+      "kind": "復旧・復興本部"
     },
     {
       "title": "令和8年熊本地震に関する情報",
       "url": "https://www.pref.kumamoto.jp/soshiki/1/274517.html",
-      "date": "2026-10-06",
+      "date": "2026-10-27",
       "time": null,
       "kind": "県の情報集約"
     }

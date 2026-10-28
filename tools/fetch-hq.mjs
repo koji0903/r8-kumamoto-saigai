@@ -31,6 +31,16 @@ const get = async (url, as = "text") => {
 const strip = s => s.replace(/<[^>]+>/g, "")
   .replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"')
   .trim();
+const ascii = v => v.replace(/[０-９：]/g, c => "0123456789:"["０１２３４５６７８９：".indexOf(c)] || c);
+const isoDate = value => {
+  const m = ascii(value).match(/(?:令和\s*8年(?:\s*[（(][^）)]*[)）])?|2026年?)\s*(\d{1,2})月\s*(\d{1,2})日/u);
+  return m ? `2026-${m[1].padStart(2, "0")}-${m[2].padStart(2, "0")}` : null;
+};
+const clock = value => {
+  const m = ascii(value).match(/([0-2]?\d)[:時]\s*([0-5]\d)?(?:分)?/u);
+  if (!m) return null;
+  return `${m[1].padStart(2, "0")}:${(m[2] || "00").padStart(2, "0")}`;
+};
 
 const meetings = [];
 
@@ -44,9 +54,13 @@ const parsePage = (html, sourceUrl, meetingType) => {
         ? Number(text.match(/第(\d+)回.*復旧・復興本部会議/)?.[1]) || null
         : Number(text.match(/第(\d+)回災害対策本部会議/)?.[1]) || null;
       if (number) {
+        const nextChunk = html.slice(token.lastIndex, token.lastIndex + 400);
+        const dateMatch = nextChunk.match(/(?:開催日時|〇日時)[\s\S]*?(?:<\/div>|<\/p>|<h[2-4]|$)/i);
+        const dateStr = dateMatch ? strip(dateMatch[0]) : "";
         current = {
           heading: text.replace(/^[〇○]/, "").trim(), meetingType, meeting: number,
           govMeeting: Number(text.match(/第(\d+)回政府非常災害現地対策本部会議/)?.[1]) || null,
+          heldDate: isoDate(dateStr), heldTime: clock(dateStr),
           sourceUrl, documents: []
         };
         meetings.push(current);

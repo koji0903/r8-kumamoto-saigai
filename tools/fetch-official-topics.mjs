@@ -12,7 +12,7 @@ const GENERATED=join(ROOT,"data/generated/official-topics.js");
 const UA="Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai)";
 const decode=value=>value.replace(/<[^>]+>/g," ").replace(/&nbsp;/gi," ").replace(/&amp;/gi,"&").replace(/&#(d+);/g,(_,n)=>String.fromCodePoint(Number(n))).replace(/\s+/g," ").trim();
 const ascii=value=>value.replace(/[０-９：]/g,char=>"０１２３４５６７８９：".includes(char)?"0123456789:"["０１２３４５６７８９：".indexOf(char)]:char);
-const isoDate=value=>{const m=ascii(value).match(/(?:令和\s*8年|2026年?)\s*(\d{1,2})月\s*(\d{1,2})日/u);return m?`2026-${m[1].padStart(2,"0")}-${m[2].padStart(2,"0")}`:null};
+const isoDate=value=>{const m=ascii(value).match(/(?:令和\s*8年(?:\s*[（(][^）)]*[)）])?|2026年?)\s*(\d{1,2})月\s*(\d{1,2})日/u);return m?`2026-${m[1].padStart(2,"0")}-${m[2].padStart(2,"0")}`:null};
 const isoDateWithCurrentYear=value=>isoDate(value)||(()=>{const m=ascii(value).match(/(\d{1,2})月\s*(\d{1,2})日/u);return m?`2026-${m[1].padStart(2,"0")}-${m[2].padStart(2,"0")}`:null})();
 const clock=value=>{const m=ascii(value).match(/([0-2]?\d)[:時]\s*([0-5]\d)(?:分)?/u);return m?`${m[1].padStart(2,"0")}:${m[2]}`:null};
 const absolute=(href,base)=>new URL(href,base).href;
@@ -40,13 +40,16 @@ try{
 
 const hq=JSON.parse(await readFile(join(ROOT,"sources/official/hq-index.json"),"utf8"));
 const latestMeeting=hq.meetings.at(-1);
-const damageDocument=latestMeeting.documents.find(document=>/人的被害等の状況/u.test(document.title));
-const prefectureDate=isoDateWithCurrentYear(damageDocument?.title||"");
-const prefectureTime=clock(damageDocument?.title||"");
+const damageDocument=latestMeeting?.documents.find(document=>/人的被害等の状況/u.test(document.title))
+  || hq.meetings.flatMap(m=>m.documents).filter(d=>/人的被害等の状況/u.test(d.title)).at(-1);
+const damageDate=isoDateWithCurrentYear(damageDocument?.title||"");
+const damageTime=clock(damageDocument?.title||"");
+const meetingDate=latestMeeting?.heldDate||damageDate;
+const meetingTime=latestMeeting?.heldTime||damageTime;
 const prefecture=[
-  damageDocument&&{title:damageDocument.title,url:damageDocument.url,date:prefectureDate,time:prefectureTime,kind:"県公式集計"},
-  {title:latestMeeting.heading,url:"https://www.pref.kumamoto.jp/soshiki/222/274487.html",date:prefectureDate,time:prefectureTime,kind:"災害対策本部"},
-  {title:"令和8年熊本地震に関する情報",url:"https://www.pref.kumamoto.jp/soshiki/1/274517.html",date:prefectureDate,time:null,kind:"県の情報集約"}
+  damageDocument&&{title:damageDocument.title,url:damageDocument.url,date:damageDate,time:damageTime,kind:"県公式集計"},
+  latestMeeting&&{title:latestMeeting.heading,url:latestMeeting.sourceUrl||"https://www.pref.kumamoto.jp/soshiki/222/274487.html",date:meetingDate,time:meetingTime,kind:latestMeeting.meetingType==="recovery"?"復旧・復興本部":"災害対策本部"},
+  {title:"令和8年熊本地震に関する情報",url:"https://www.pref.kumamoto.jp/soshiki/1/274517.html",date:meetingDate||damageDate,time:null,kind:"県の情報集約"}
 ].filter(Boolean);
 
 const municipalityData=JSON.parse(await readFile(join(ROOT,"sources/official/municipalities/municipality-updates.json"),"utf8"));
