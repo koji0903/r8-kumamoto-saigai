@@ -39,4 +39,13 @@ assert.match(serialized, /チラシ記載の先頭090は誤りで、第538回議
 const topics = JSON.parse(read("sources/site-topics.json"));
 assert.ok(topics.some(item => item.url === "meetings.html?meeting=538"), "第538回の更新情報がトップページ用データに必要です");
 
-console.log("火の国会議第538回・被災家屋対処説明会チラシ4件・氷川町電話番号訂正の検査 OK");
+const meeting539 = window.MINUTES_DATA.meetings.find(item => item.meeting === 539);
+assert.ok(meeting539, "火の国会議第539回が構造化議事録に必要です");
+assert.equal(meeting539.date, "2026-10-27");
+assert.equal(meeting539.series, 48);
+assert.equal(meeting539.pages, 20);
+assert.equal(meeting539.attendance.total, 37);
+assert.match(html, /第539回（10月27日）議事録PDF/, "JavaScript無効時にも第539回PDFを参照できる必要があります");
+assert.ok(topics.some(item => item.url === "meetings.html?meeting=539"), "第539回の更新情報がトップページ用データに必要です");
+
+console.log("火の国会議第538回・第539回・被災家屋対処説明会チラシ4件・氷川町電話番号訂正の検査 OK");
