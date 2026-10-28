@@ -13,7 +13,87 @@
   <link rel="stylesheet" href="design-system.css?v=20260810-1">
   <link rel="stylesheet" href="org-site.css?v=20260907-2">
   <link rel="stylesheet" href="uto-bulletin.css?v=20260817-12">
-  <link rel="stylesheet" href="uto-interest-subsidy.css?v=20261027-2">
+  <link rel="stylesheet" href="uto-interest-subsidy.css?v=20261029-1">
+  <style>
+    /* ヒーローセクション強制ハイコントラスト配色（キャッシュ・詳細度対策） */
+    .organization-site .interest-hero,
+    .interest-page .interest-hero {
+      background: linear-gradient(135deg, #042f2e 0%, #0f766e 60%, #115e59 100%) !important;
+      color: #ffffff !important;
+      border-bottom: 0 !important;
+    }
+    .organization-site .interest-hero .waste-eyebrow,
+    .interest-page .interest-hero .waste-eyebrow {
+      color: #ccfbf1 !important;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+    }
+    .organization-site .interest-hero .waste-eyebrow span,
+    .interest-page .interest-hero .waste-eyebrow span {
+      background: rgba(204, 251, 241, 0.25) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(94, 234, 212, 0.6) !important;
+      padding: 4px 12px !important;
+      border-radius: 999px !important;
+      display: inline-block !important;
+      font-weight: 800 !important;
+    }
+    .organization-site .interest-hero h1,
+    .interest-page .interest-hero h1 {
+      color: #ffffff !important;
+      font-size: clamp(28px, 4.5vw, 42px) !important;
+      font-weight: 900 !important;
+      line-height: 1.3 !important;
+      margin: 14px 0 16px !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+    }
+    .organization-site .interest-hero h1 small,
+    .interest-page .interest-hero h1 small {
+      display: block !important;
+      font-size: clamp(14px, 2.2vw, 18px) !important;
+      font-weight: 800 !important;
+      color: #a7f3d0 !important;
+      margin-bottom: 8px !important;
+      letter-spacing: 0.04em !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) !important;
+    }
+    .organization-site .interest-hero h1 span,
+    .interest-page .interest-hero h1 span {
+      display: inline-block !important;
+      background: none !important;
+      color: #fef08a !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+      padding: 0 !important;
+    }
+    .organization-site .interest-hero .waste-lead,
+    .interest-page .interest-hero .waste-lead {
+      color: #f0fdfa !important;
+      font-size: 16px !important;
+      line-height: 1.8 !important;
+      max-width: 860px !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+    }
+    .organization-site .interest-hero .waste-lead b,
+    .interest-page .interest-hero .waste-lead b {
+      color: #ffffff !important;
+      background: rgba(204, 251, 241, 0.25) !important;
+      padding: 2px 6px !important;
+      border-radius: 4px !important;
+    }
+    .interest-page .interest-hero .hero-actions .waste-button.primary {
+      background: #f59e0b !important;
+      color: #0f172a !important;
+      font-weight: 900 !important;
+      border: none !important;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35) !important;
+    }
+    .interest-page .interest-hero .hero-actions .waste-button.secondary {
+      background: #ffffff !important;
+      color: #0f766e !important;
+      font-weight: 800 !important;
+      border: 1px solid #cbd5e1 !important;
+    }
+  </style>
   <link rel="canonical" href="https://www.yokatainet.jp/uto-interest-subsidy.html">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
@@ -32,7 +112,7 @@
   <meta name="twitter:title" content="宇土市 中小企業等利子補給金（最長3年・全額利子補給）利用ガイド">
   <meta name="twitter:description" content="令和8年熊本地震に伴う宇土市中小企業等利子補給金ガイド。局地激甚災害指定外をカバーする市独自の手厚い支援。熊本県制度融資や日本公庫の支払利子を最長3年間・全額補助（年最大100万円・実質無利子化）。対象要件、申請手順、利子削減シミュレーターを徹底解説。">
   <meta name="twitter:image" content="https://www.yokatainet.jp/ogp-uto-interest-subsidy.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.yokatainet.jp/#organization","name":"一般社団法人よか隊ネット熊本","url":"https://www.yokatainet.jp/","logo":{"@type":"ImageObject","url":"https://www.yokatainet.jp/yokatai-logo.png"},"address":{"@type":"PostalAddress","postalCode":"869-0404","addressRegion":"熊本県","addressLocality":"宇土市","streetAddress":"走潟町2235"},"telephone":"090-2719-4037","email":"info.yokatai@gmail.com"},{"@type":"WebSite","@id":"https://www.yokatainet.jp/#website","url":"https://www.yokatainet.jp/","name":"よか隊ネット熊本","alternateName":"よか隊ネット熊本 災害・支援状況レポート","publisher":{"@id":"https://www.yokatainet.jp/#organization"},"inLanguage":"ja"},{"@type":"WebPage","@id":"https://www.yokatainet.jp/uto-interest-subsidy.html#webpage","url":"https://www.yokatainet.jp/uto-interest-subsidy.html","name":"宇土市 中小企業等利子補給金（最長3年・全額利子補給）利用ガイド","description":"令和8年熊本地震に伴う宇土市中小企業等利子補給金ガイド。局地激甚災害指定外をカバーする市独自の手厚い支援。熊本県制度融資や日本公庫の支払利子を最長3年間・全額補助（年最大100万円・実質無利子化）。対象要件、申請手順、利子削減シミュレーターを徹底解説。","isPartOf":{"@id":"https://www.yokatainet.jp/#website"},"publisher":{"@id":"https://www.yokatainet.jp/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.yokatainet.jp/ogp-uto-interest-subsidy.png","width":1200,"height":630},"inLanguage":"ja","datePublished":"2026-10-27","dateModified":"2026-10-27"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.yokatainet.jp/"},{"@type":"ListItem","position":2,"name":"宇土市の支援・情報","item":"https://www.yokatainet.jp/municipalities.html"},{"@type":"ListItem","position":3,"name":"宇土市 中小企業等利子補給金（最長3年・全額利子補給）利用ガイド","item":"https://www.yokatainet.jp/uto-interest-subsidy.html"}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.yokatainet.jp/#organization","name":"一般社団法人よか隊ネット熊本","url":"https://www.yokatainet.jp/","logo":{"@type":"ImageObject","url":"https://www.yokatainet.jp/yokatai-logo.png"},"address":{"@type":"PostalAddress","postalCode":"869-0404","addressRegion":"熊本県","addressLocality":"宇土市","streetAddress":"走潟町2235"},"telephone":"090-2719-4037","email":"info.yokatai@gmail.com"},{"@type":"WebSite","@id":"https://www.yokatainet.jp/#website","url":"https://www.yokatainet.jp/","name":"よか隊ネット熊本","alternateName":"よか隊ネット熊本 災害・支援状況レポート","publisher":{"@id":"https://www.yokatainet.jp/#organization"},"inLanguage":"ja"},{"@type":"WebPage","@id":"https://www.yokatainet.jp/uto-interest-subsidy.html#webpage","url":"https://www.yokatainet.jp/uto-interest-subsidy.html","name":"宇土市 中小企業等利子補給金（最長3年・全額利子補給）利用ガイド","description":"令和8年熊本地震に伴う宇土市中小企業等利子補給金ガイド。局地激甚災害指定外をカバーする市独自の手厚い支援。熊本県制度融資や日本公庫の支払利子を最長3年間・全額補助（年最大100万円・実質無利子化）。対象要件、申請手順、利子削減シミュレーターを徹底解説。","isPartOf":{"@id":"https://www.yokatainet.jp/#website"},"publisher":{"@id":"https://www.yokatainet.jp/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.yokatainet.jp/ogp-uto-interest-subsidy.png","width":1200,"height":630},"inLanguage":"ja","datePublished":"2026-10-27","dateModified":"2026-10-29"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.yokatainet.jp/"},{"@type":"ListItem","position":2,"name":"宇土市の支援・情報","item":"https://www.yokatainet.jp/municipalities.html"},{"@type":"ListItem","position":3,"name":"宇土市 中小企業等利子補給金（最長3年・全額利子補給）利用ガイド","item":"https://www.yokatainet.jp/uto-interest-subsidy.html"}]}]}</script>
 </head>
 <body class="organization-site waste-page interest-page">
   <a class="skip" href="#main">本文へ移動</a>
@@ -51,11 +131,11 @@
 
   <main id="main">
     <!-- ヒーローセクション -->
-    <section class="waste-hero interest-hero">
+    <section class="waste-hero interest-hero" style="background:linear-gradient(135deg, #042f2e 0%, #0f766e 60%, #115e59 100%) !important; color:#ffffff !important;">
       <div class="waste-hero-inner">
-        <p class="waste-eyebrow"><span>宇土市独自支援</span>｜令和8年熊本地震 中小企業・小規模事業者支援</p>
-        <h1><small>被災した市内事業者・お店の利息負担を市が肩代わり</small>中小企業等利子補給金 <span>＜最長3年・全額利子補給＞</span></h1>
-        <p class="waste-lead">令和8年熊本地震で影響を受けた宇土市内の法人・個人事業主の皆様へ。熊本県の災害制度融資や日本政策金融公庫の融資を利用した際、<b>取扱金融機関へ支払った利子の全額（年間最大100万円・最長3年間）を宇土市が全額補給（実質無利子化）</b>する手厚い独自制度が2026年10月26日に公表されました。</p>
+        <p class="waste-eyebrow" style="color:#ccfbf1 !important;"><span style="background:rgba(204, 251, 241, 0.25) !important; color:#ffffff !important; border:1px solid rgba(94, 234, 212, 0.6) !important; padding:4px 12px; border-radius:999px; display:inline-block; font-weight:800;">宇土市独自支援</span> ｜ 令和8年熊本地震 中小企業・小規模事業者支援</p>
+        <h1 style="color:#ffffff !important; text-shadow:0 2px 8px rgba(0,0,0,0.4) !important;"><small style="color:#a7f3d0 !important; text-shadow:0 1px 4px rgba(0,0,0,0.3) !important;">被災した市内事業者・お店の利息負担を市が肩代わり</small>中小企業等利子補給金 <span style="color:#fef08a !important; text-shadow:0 2px 10px rgba(0,0,0,0.4) !important;">＜最長3年・全額利子補給＞</span></h1>
+        <p class="waste-lead" style="color:#f0fdfa !important; text-shadow:0 1px 3px rgba(0,0,0,0.3) !important;">令和8年熊本地震で影響を受けた宇土市内の法人・個人事業主の皆様へ。熊本県の災害制度融資や日本政策金融公庫の融資を利用した際、<b style="color:#ffffff !important; background:rgba(204,251,241,0.25) !important;">取扱金融機関へ支払った利子の全額（年間最大100万円・最長3年間）を宇土市が全額補給（実質無利子化）</b>する手厚い独自制度が2026年10月26日に公表されました。</p>
         
         <div class="hero-actions">
           <a class="waste-button primary" href="#sim-section">3年間の利子削減効果を試算</a>
