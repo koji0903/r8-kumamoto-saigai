@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-28T13:10:25.899Z",
+  "generatedAt": "2026-10-28T20:21:47.009Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 861,
-  "displayCandidateCount": 638,
-  "classifiedPageCount": 741,
+  "inputCount": 859,
+  "displayCandidateCount": 636,
+  "classifiedPageCount": 739,
   "categoryReport": {
     "home": {
-      "total": 190,
+      "total": 188,
       "high": 73,
-      "medium": 76,
+      "medium": 74,
       "low": 41
     },
     "money": {
@@ -157,14 +157,14 @@
       "fallback": true
     },
     "municipality_tsunagi": {
-      "classified": 12,
-      "displayCandidates": 10,
+      "classified": 10,
+      "displayCandidates": 8,
       "fallback": true
     }
   },
   "confidence": {
     "high": 264,
-    "medium": 374,
+    "medium": 372,
     "low": 103
   },
   "unclassifiedCount": 13,
@@ -211,7 +211,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月6日 【職員募集】令和8年熊本地震に伴う宇城市任期付職員（事務職）を募集します",
+      "title": "【職員募集】令和8年熊本地震に伴う宇城市任期付職員（事務職）を募集します",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2645544"
     },
     {
@@ -862,5 +862,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 742
+  "previousClassifiedPageCount": 741
 }

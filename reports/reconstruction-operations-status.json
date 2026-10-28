@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-28T13:29:16.771Z",
+  "generatedAt": "2026-10-28T20:40:29.254Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-28T13:10:25.899Z",
-    "inputCount": 861,
-    "classifiedPageCount": 741,
-    "displayCandidateCount": 638,
+    "generatedAt": "2026-10-28T20:21:47.009Z",
+    "inputCount": 859,
+    "classifiedPageCount": 739,
+    "displayCandidateCount": 636,
     "deltaFromPrevious": {
-      "inputCount": -1,
-      "classifiedPageCount": -1,
+      "inputCount": -2,
+      "classifiedPageCount": -2,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 2,
+      "ageHours": 9,
       "limitHours": 336
     }
   },
@@ -131,16 +131,16 @@
         "fallback": true
       },
       "municipality_tsunagi": {
-        "classified": 12,
-        "displayCandidates": 10,
+        "classified": 10,
+        "displayCandidates": 8,
         "fallback": true
       }
     },
     "categoryReport": {
       "home": {
-        "total": 190,
+        "total": 188,
         "high": 73,
-        "medium": 76,
+        "medium": 74,
         "low": 41
       },
       "money": {
@@ -188,7 +188,7 @@
     },
     "confidence": {
       "high": 264,
-      "medium": 374,
+      "medium": 372,
       "low": 103
     },
     "unclassifiedCount": 13,
