@@ -127,12 +127,33 @@ const result = [];
 let downloaded = 0;
 for (const municipality of config.municipalities) {
   const before = previous.municipalities.find(entry => entry.key === municipality.key);
-  let html;
-  try {
-    html = await get(municipality.indexUrl);
-  } catch (error) {
+  const urlsToFetch = [municipality.indexUrl, ...(municipality.extraIndexUrls || [])];
+  const fetchedPages = [];
+  let lastError = null;
+  for (let i = 0; i < urlsToFetch.length; i++) {
+    const url = urlsToFetch[i];
+    try {
+      const pageHtml = await get(url);
+      fetchedPages.push({ url, html: pageHtml });
+      // ページ内に「これまでの災害対策本部会議資料」のようなアーカイブリンクがあれば追加探索
+      for (const linkMatch of pageHtml.matchAll(/<a[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
+        const linkText = strip(linkMatch[2]);
+        if (/(?:これまでの|過去の|前回の|以前の).*本部会議資料/.test(linkText) || /(?:本部会議資料|会議資料).*(?:アーカイブ|一覧|こちら)/.test(linkText)) {
+          const archiveUrl = new URL(linkMatch[1], url).toString();
+          if (!urlsToFetch.includes(archiveUrl)) {
+            urlsToFetch.push(archiveUrl);
+          }
+        }
+      }
+    } catch (error) {
+      lastError = error;
+      console.warn(`  ${municipality.name}: ${url} の取得失敗 (${error.message})`);
+    }
+  }
+  if (!fetchedPages.length) {
     // 自治体側がGitHub Runnerを一時的に拒否しても、確認済みの会議資料を消さない。
     // 前回値がない初回取得だけは失敗させ、空データを正常扱いしない。
+    const error = lastError || new Error(`${municipality.name}: 一覧ページを1件も取得できませんでした`);
     if (!before?.meetings?.length) throw error;
     result.push({
       ...before,
@@ -141,31 +162,39 @@ for (const municipality of config.municipalities) {
     console.warn(`${municipality.name}: 一覧を取得できないため前回確認済み${before.meetings.length}件を保持（${error.message}）`);
     continue;
   }
-  const meetings = [];
+  const primaryHtml = fetchedPages[0].html;
+  const meetingsMap = new Map();
   // 資料ページのPDFリンクを出現順に拾う。回数はリンク文言から読む
-  for (const match of html.matchAll(/<a[^>]+href="([^"]+\.pdf)"[^>]*>([\s\S]*?)<\/a>/g)) {
-    const label = strip(match[2]);
-    // 「災害」の誤記（熊本市 第15回は「第害対策本部会議」）でも落とさないよう、
-    // 両方に共通する「対策本部会議」で見る
-    if (!/(?:対策|災対)本部会議/.test(label)) continue;
-    const meeting = Number(toHalf(label).match(/第\s?(\d+)\s?回/)?.[1]);
-    if (!Number.isInteger(meeting)) continue;
-    // 熊本市の第7回のように1回が2ファイルに分かれることがある
-    const part = Number(toHalf(label).match(/資料\s?\((\d)\)/)?.[1]) || null;
-    const url = new URL(match[1], municipality.indexUrl).toString();
-    meetings.push({
-      meeting, part, label,
-      ...parseDateTime(label),
-      url,
-      file: `${municipality.key}-${String(meeting).padStart(3, "0")}${part ? `-${part}` : ""}.pdf`,
-      declaredBytes: parseSize(label)
-    });
+  for (const { url: sourceUrl, html: pageHtml } of fetchedPages) {
+    for (const match of pageHtml.matchAll(/<a[^>]+href="([^"]+\.pdf)"[^>]*>([\s\S]*?)<\/a>/g)) {
+      const label = strip(match[2]);
+      // 「災害」の誤記（熊本市 第15回は「第害対策本部会議」）でも落とさないよう、
+      // 両方に共通する「対策本部会議」で見る
+      if (!/(?:対策|災対)本部会議/.test(label)) continue;
+      const meeting = Number(toHalf(label).match(/第\s?(\d+)\s?回/)?.[1]);
+      if (!Number.isInteger(meeting)) continue;
+      // 熊本市の第7回のように1回が2ファイルに分かれることがある
+      const part = Number(toHalf(label).match(/資料\s?\((\d)\)/)?.[1]) || null;
+      const key = `${meeting}_${part || 0}`;
+      const url = new URL(match[1], sourceUrl).toString();
+      if (!meetingsMap.has(key)) {
+        meetingsMap.set(key, {
+          meeting, part, label,
+          ...parseDateTime(label),
+          url,
+          file: `${municipality.key}-${String(meeting).padStart(3, "0")}${part ? `-${part}` : ""}.pdf`,
+          declaredBytes: parseSize(label)
+        });
+      }
+    }
   }
+  let meetings = [...meetingsMap.values()];
   if (!meetings.length) throw new Error(`${municipality.name}: 資料リンクが1件も取れませんでした（ページの作りが変わった可能性）`);
   meetings.sort((a, b) => a.meeting - b.meeting || (a.part || 0) - (b.part || 0));
 
   // 一覧ページに会議ごとの本文がある市は、そこから読む（PDFは落とさない）
   if (municipality.source === "html") {
+    const html = primaryHtml;
     const heads = [...html.matchAll(/<(h[2-5])[^>]*>([\s\S]*?)<\/\1>/g)]
       .map(match => ({ start: match.index, end: match.index + match[0].length, title: strip(match[2]) }));
     // 「第22回熊本市災害対策本部会議」「熊本市第13回災害対策本部会議」の両方の並び
