@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-28T09:50:28.262Z",
-  "officialCheckedAt": "10/28 18:50",
+  "retrievedAt": "2026-10-28T11:13:53.982Z",
+  "officialCheckedAt": "10/28 20:13",
   "siteTopics": [
     {
       "date": "2026-10-27",
@@ -96,24 +96,94 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "国民保護法で規定された避難施設について",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326422/index.html",
-      "date": "2026-10-27",
-      "time": null,
-      "category": "避難・安全",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-10-28",
+      "time": "19:37",
+      "category": "その他",
       "municipality": "八代市",
-      "archiveId": "yatsushiro-20261027-0efcd828",
-      "archiveUrl": "official-articles/yatsushiro-20261027-0efcd828.html"
+      "archiveId": "yatsushiro-20261028-bad1de7e",
+      "archiveUrl": "official-articles/yatsushiro-20261028-bad1de7e.html"
     },
     {
-      "title": "船員の不在者投票(選挙人名簿登録証明書)",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/29/23690.html",
-      "date": "2026-10-27",
-      "time": null,
+      "title": "自ら解体を行った被災家屋等の解体・撤去（自費解体）について（申請期限を延長しました）",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036841/index.html",
+      "date": "2026-10-28",
+      "time": "18:40",
       "category": "その他",
+      "municipality": "氷川町",
+      "archiveId": "hikawa-20261028-f6d3a0a0",
+      "archiveUrl": "official-articles/hikawa-20261028-f6d3a0a0.html"
+    },
+    {
+      "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
+      "url": "https://www.city.kumamoto.jp/kiji00372210/index.html",
+      "date": "2026-10-28",
+      "time": "17:44",
+      "category": "住まい・証明",
+      "municipality": "熊本市",
+      "archiveId": "kumamoto-20261028-2d71cce8",
+      "archiveUrl": "official-articles/kumamoto-20261028-2d71cce8.html"
+    },
+    {
+      "title": "【令和8年10月30日受付終了】令和8年熊本地震に伴う罹災証明交付申請について",
+      "url": "https://www.town.mifune.kumamoto.jp/page9346.html",
+      "date": "2026-10-28",
+      "time": "15:36",
+      "category": "住まい・証明",
+      "municipality": "御船町",
+      "archiveId": "mifune-20261028-6e4c2048",
+      "archiveUrl": "official-articles/mifune-20261028-6e4c2048.html"
+    },
+    {
+      "title": "指定給水装置工事事業者指定等及び給水装置新設等の申込",
+      "url": "https://www.city.yamaga.kumamoto.jp/kiji00324/index.html",
+      "date": "2026-10-28",
+      "time": "15:21",
+      "category": "ライフライン",
+      "municipality": "山鹿市",
+      "archiveId": "yamaga-20261028-a98810ad",
+      "archiveUrl": "official-articles/yamaga-20261028-a98810ad.html"
+    },
+    {
+      "title": "【重要】スポーツ振興課が管理する全体育施設等の利用再開について※10月31日より菊陽北小学校体育館を利用再開します。",
+      "url": "https://www.town.kikuyo.lg.jp/bousai/kiji0035647/index.html",
+      "date": "2026-10-28",
+      "time": "14:29",
+      "category": "施設・学校",
+      "municipality": "菊陽町",
+      "archiveId": "kikuyo-20261028-600d71c4",
+      "archiveUrl": "official-articles/kikuyo-20261028-600d71c4.html"
+    },
+    {
+      "title": "2026年10月28日 令和8年熊本地震 関連情報 （10月28日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-10-28",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261028-7d9d4e13",
+      "archiveUrl": "official-articles/uki-20261028-7d9d4e13.html"
+    },
+    {
+      "title": "令和８年熊本地震被害に関するすまいの相談窓口",
+      "url": "https://www.city.uto.lg.jp/article/view/1018/16522.html",
+      "date": "2026-10-28",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261028-0b88860a",
+      "archiveUrl": "official-articles/uto-20261028-0b88860a.html"
+    },
+    {
+      "title": "新たなバス共通定期サービス開始に伴う運賃設定に関する意見を募...",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/498/23715.html",
+      "date": "2026-10-28",
+      "time": null,
+      "category": "交通",
       "municipality": "上天草市",
-      "archiveId": "kamiamakusa-20261027-fa7de7d3",
-      "archiveUrl": "official-articles/kamiamakusa-20261027-fa7de7d3.html"
+      "archiveId": "kamiamakusa-20261028-966415d4",
+      "archiveUrl": "official-articles/kamiamakusa-20261028-966415d4.html"
     },
     {
       "title": "災害救助法に基づく学用品の支給について",
@@ -126,84 +196,24 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/misato-20261027-87a44654.html"
     },
     {
-      "title": "震度速報 10月26日 23時35分",
-      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-      "date": "2026-10-26",
-      "time": "23:35",
-      "category": "避難・安全",
-      "municipality": "山鹿市",
-      "archiveId": "yamaga-20261026-ed5178f4",
-      "archiveUrl": "official-articles/yamaga-20261026-ed5178f4.html"
-    },
-    {
-      "title": "＜2026年7月熊本地震＞ 災害救助法 「住家の緊急の修理」制度の案内",
-      "url": "https://www.city.kumamoto.jp/kiji00372143/index.html",
-      "date": "2026-10-26",
-      "time": "20:13",
-      "category": "住まい・証明",
-      "municipality": "熊本市",
-      "archiveId": "kumamoto-20261026-0f9bc22b",
-      "archiveUrl": "official-articles/kumamoto-20261026-0f9bc22b.html"
-    },
-    {
-      "title": "【令和8年熊本地震】被災家屋の解体・撤去に伴う浄化槽の手続きについて",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036865/index.html",
-      "date": "2026-10-26",
-      "time": "17:40",
+      "title": "国民健康保険自己負担額の還付手続きについて【令和８年熊本地震】",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038210/index.html",
+      "date": "2026-10-27",
+      "time": null,
       "category": "その他",
-      "municipality": "氷川町",
-      "archiveId": "hikawa-20261026-cf66038b",
-      "archiveUrl": "official-articles/hikawa-20261026-cf66038b.html"
-    },
-    {
-      "title": "2026年10月26日 令和8年熊本地震 関連情報 （10月26日10時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-10-26",
-      "time": "10:00",
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261026-7d9d4e13",
-      "archiveUrl": "official-articles/uki-20261026-7d9d4e13.html"
-    },
-    {
-      "title": "避難所の閉鎖について",
-      "url": "https://www.town.mashiki.lg.jp/kinkyu.html",
-      "date": "2026-10-26",
-      "time": "10:00",
-      "category": "避難・安全",
       "municipality": "益城町",
-      "archiveId": "mashiki-20261026-d37a53b5",
-      "archiveUrl": "official-articles/mashiki-20261026-d37a53b5.html"
+      "archiveId": "mashiki-20261027-3d4ec45d",
+      "archiveUrl": "official-articles/mashiki-20261027-3d4ec45d.html"
     },
     {
-      "title": "自宅敷地内での建設型応急住宅の設置について",
-      "url": "https://www.town.kikuyo.lg.jp/kiji0035726/index.html",
-      "date": "2026-10-26",
-      "time": "09:11",
+      "title": "令和8年熊本地震における住宅の応急修理の申し込みについて",
+      "url": "https://www.town.kosa.lg.jp/q/aview/168/13564.html",
+      "date": "2026-10-27",
+      "time": null,
       "category": "住まい・証明",
-      "municipality": "菊陽町",
-      "archiveId": "kikuyo-20261026-8d870d59",
-      "archiveUrl": "official-articles/kikuyo-20261026-8d870d59.html"
-    },
-    {
-      "title": "避難所の閉鎖について",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/17272.html",
-      "date": "2026-10-26",
-      "time": null,
-      "category": "避難・安全",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261026-fef0f93e",
-      "archiveUrl": "official-articles/uto-20261026-fef0f93e.html"
-    },
-    {
-      "title": "令和８年熊本地震に伴う一部負担金の支払猶予・免除の期間延長【介護保険】",
-      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314634/index.html",
-      "date": "2026-10-26",
-      "time": null,
-      "category": "その他",
-      "municipality": "天草市",
-      "archiveId": "amakusa-20261026-b7f36533",
-      "archiveUrl": "official-articles/amakusa-20261026-b7f36533.html"
+      "municipality": "甲佐町",
+      "archiveId": "kosa-20261027-db8a491d",
+      "archiveUrl": "official-articles/kosa-20261027-db8a491d.html"
     },
     {
       "title": "令和8年熊本地震に係る義援金の受付について",
@@ -214,16 +224,6 @@ window.HOME_TOPICS = {
       "municipality": "嘉島町",
       "archiveId": "kashima-20261026-0879875a",
       "archiveUrl": "official-articles/kashima-20261026-0879875a.html"
-    },
-    {
-      "title": "台風３０号接近に伴う避難所開設",
-      "url": "https://www.town.mifune.kumamoto.jp/kinkyu/pub/default.aspx?c_id=8",
-      "date": "2026-10-25",
-      "time": "17:15",
-      "category": "避難・安全",
-      "municipality": "御船町",
-      "archiveId": "mifune-20261025-3fa2dbce",
-      "archiveUrl": "official-articles/mifune-20261025-3fa2dbce.html"
     },
     {
       "title": "ごみ・生活・環境・ペット",
