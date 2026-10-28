@@ -4,6 +4,16 @@
   const button = document.querySelector("[data-site-search-open]");
   if (!button) return;
 
+  const isSubdir =
+    location.pathname.includes("/official-articles/") ||
+    Boolean(
+      document.currentScript &&
+        document.currentScript.getAttribute("src")?.startsWith("../")
+    );
+  const root = isSubdir ? "../" : "";
+  const resolveUrl = (url) =>
+    !url || /^https?:\/\//i.test(url) || url.startsWith("/") ? url : root + url;
+
   // 類語・同義語辞書
   const synonymGroups = [
     // 目的・意図
@@ -183,7 +193,7 @@
   // インデックスの遅延ロード
   let indexPromise;
   const loadIndex = () =>
-    (indexPromise ||= fetch("public-data/site-search-index.json", { credentials: "same-origin" }).then((res) =>
+    (indexPromise ||= fetch(`${root}public-data/site-search-index.json`, { credentials: "same-origin" }).then((res) =>
       res.ok ? res.json() : Promise.reject(new Error("index load error"))
     ));
 
@@ -254,42 +264,42 @@
           <div class="site-search-intent-cards">
             <p class="site-search-section-title">目的から代表的なページを開く</p>
             <div class="site-search-cards-grid">
-              <a href="municipality-support-compare.html" class="site-search-card">
+              <a href="${root}municipality-support-compare.html" class="site-search-card">
                 <span class="site-search-card-cat cat-money">支援制度・お金</span>
                 <b>公的支援制度を自治体別に比較する</b>
                 <small>八代・宇土・宇城・氷川など21市町村の制度一覧と最大支給額・条件を一括比較</small>
               </a>
-              <a href="affected.html" class="site-search-card">
+              <a href="${root}affected.html" class="site-search-card">
                 <span class="site-search-card-cat cat-money">被災された方へ</span>
                 <b>困りごと別 生活再建ナビ</b>
                 <small>住まい、証明書、生活資金、健康・医療など、直面する困りごとから即座に確認</small>
               </a>
-              <a href="demolition.html" class="site-search-card">
+              <a href="${root}demolition.html" class="site-search-card">
                 <span class="site-search-card-cat cat-house">住まい・解体</span>
                 <b>公費解体・自費解体（費用償還）ガイド</b>
                 <small>倒壊家屋の公費撤去の要件、写真の撮り方、申請手順を市町村別に解説</small>
               </a>
-              <a href="shelters.html" class="site-search-card">
+              <a href="${root}shelters.html" class="site-search-card">
                 <span class="site-search-card-cat cat-shelter">被害・避難所</span>
                 <b>開設中の避難所と支援の現在状況</b>
                 <small>県内各市町村で開設されている避難所一覧、設備、ペット同行、集約状況</small>
               </a>
-              <a href="timeline.html" class="site-search-card">
+              <a href="${root}timeline.html" class="site-search-card">
                 <span class="site-search-card-cat cat-record">日々の記録</span>
                 <b>日々の記録（発災からの歩みと最新動向）</b>
                 <small>被害統計、ライフライン復旧推移、支援団体の動きを日次でたどる総合年表</small>
               </a>
-              <a href="meetings.html" class="site-search-card">
+              <a href="${root}meetings.html" class="site-search-card">
                 <span class="site-search-card-cat cat-record">火の国会議</span>
                 <b>火の国会議 構造化議事録</b>
                 <small>官民・支援団体による現地情報共有会議の全記録・課題・原本PDFアーカイブ</small>
               </a>
-              <a href="volunteer-centers.html" class="site-search-card">
+              <a href="${root}volunteer-centers.html" class="site-search-card">
                 <span class="site-search-card-cat cat-vc">支援する方</span>
                 <b>各地の災害ボランティアセンター稼働状況</b>
                 <small>募集要件、ボランティアバス、受付状況、地域支え合いセンターへの移行</small>
               </a>
-              <a href="sitemap.html" class="site-search-card">
+              <a href="${root}sitemap.html" class="site-search-card">
                 <span class="site-search-card-cat cat-guide">総合サイトマップ</span>
                 <b>全70ページ以上の支援情報一覧</b>
                 <small>サイト内に掲載されたすべての特設ガイド・公的資料・市町別ページを一覧</small>
@@ -427,7 +437,7 @@
 
               return `
                 <li>
-                  <a href="${clean(item.url)}" class="site-search-result-link">
+                  <a href="${clean(resolveUrl(item.url))}" class="site-search-result-link">
                     <div class="site-search-result-meta">
                       <span class="site-search-cat-badge ${catClass}">${clean(item.category)}</span>
                       ${areaBadge}
