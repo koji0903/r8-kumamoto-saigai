@@ -41,12 +41,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-19T21:51:28.625Z"
   },
   "https://www.town.kosa.lg.jp/q/aview/1/13531.html": {
-    "id": "kosa-20261020-d4265651",
-    "htmlPath": "official-articles/kosa-20261020-d4265651.html",
-    "title": "令和8年熊本地震災害支援情報まとめ(10/20更新)",
+    "id": "kosa-20261029-d4265651",
+    "htmlPath": "official-articles/kosa-20261029-d4265651.html",
+    "title": "令和8年熊本地震災害支援情報まとめ(10/29更新)",
     "municipality": "甲佐町",
-    "date": "2026-10-20",
-    "retrievedAt": "2026-10-20T08:58:24.374Z"
+    "date": "2026-10-29",
+    "retrievedAt": "2026-10-29T10:29:51.916Z"
   },
   "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=562": {
     "id": "tsunagi-20261019-58f61927",
@@ -57,12 +57,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-19T21:51:30.294Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html": {
-    "id": "hikawa-20261022-edaedf97",
-    "htmlPath": "official-articles/hikawa-20261022-edaedf97.html",
+    "id": "hikawa-20261029-edaedf97",
+    "htmlPath": "official-articles/hikawa-20261029-edaedf97.html",
     "title": "令和8年熊本地震関連情報",
     "municipality": "氷川町",
-    "date": "2026-10-22",
-    "retrievedAt": "2026-10-22T12:23:24.351Z"
+    "date": "2026-10-29",
+    "retrievedAt": "2026-10-29T10:29:44.503Z"
   },
   "https://www.city.kumamoto.jp/kiji00373157/index.html": {
     "id": "kumamoto-20261020-6d24c9ba",
@@ -353,12 +353,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-22T05:18:18.375Z"
   },
   "https://localcms.city.minamata.lg.jp/page4805.html?type=top": {
-    "id": "minamata-20261001-9f50f0d5",
-    "htmlPath": "official-articles/minamata-20261001-9f50f0d5.html",
+    "id": "minamata-20261029-9f50f0d5",
+    "htmlPath": "official-articles/minamata-20261029-9f50f0d5.html",
     "title": "令和８年熊本地震に関する支援等",
     "municipality": "水俣市",
-    "date": "2026-10-01",
-    "retrievedAt": "2026-10-22T05:18:20.001Z"
+    "date": "2026-10-29",
+    "retrievedAt": "2026-10-29T10:29:46.495Z"
   },
   "https://www.town.mashiki.lg.jp/kiji0038210/index.html": {
     "id": "mashiki-20261027-3d4ec45d",
@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-10-24",
-    "retrievedAt": "2026-10-29T01:23:15.213Z"
+    "retrievedAt": "2026-10-29T10:29:54.394Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
@@ -663,5 +663,13 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "宇城市",
     "date": "2026-10-29",
     "retrievedAt": "2026-10-28T20:40:07.640Z"
+  },
+  "https://www.city.kumamoto.jp/kiji00373033/index.html": {
+    "id": "kumamoto-20261029-9feaae2c",
+    "htmlPath": "official-articles/kumamoto-20261029-9feaae2c.html",
+    "title": "【令和8年熊本地震】被災した住宅用井戸の応急修理を支援します",
+    "municipality": "熊本市",
+    "date": "2026-10-29",
+    "retrievedAt": "2026-10-29T10:29:49.619Z"
   }
 };

@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-10-29T01:03:19.183Z",
+  "generatedAt": "2026-10-29T10:10:23.214Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 858,
-  "displayCandidateCount": 635,
+  "inputCount": 859,
+  "displayCandidateCount": 634,
   "classifiedPageCount": 738,
   "categoryReport": {
     "home": {
-      "total": 187,
-      "high": 73,
+      "total": 188,
+      "high": 74,
       "medium": 73,
       "low": 41
     },
     "money": {
-      "total": 257,
+      "total": 258,
       "high": 54,
       "medium": 74,
-      "low": 129
+      "low": 130
     },
     "documents": {
-      "total": 172,
+      "total": 173,
       "high": 39,
       "medium": 32,
-      "low": 101
+      "low": 102
     },
     "health_care": {
       "total": 85,
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 213,
-      "high": 59,
-      "medium": 152,
+      "total": 211,
+      "high": 56,
+      "medium": 153,
       "low": 2
     }
   },
@@ -63,7 +63,7 @@
     },
     "municipality_yatsushiro": {
       "classified": 142,
-      "displayCandidates": 116,
+      "displayCandidates": 115,
       "fallback": true
     },
     "municipality_minamata": {
@@ -83,7 +83,7 @@
     },
     "municipality_uto": {
       "classified": 63,
-      "displayCandidates": 57,
+      "displayCandidates": 58,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -148,7 +148,7 @@
     },
     "municipality_hikawa": {
       "classified": 54,
-      "displayCandidates": 48,
+      "displayCandidates": 47,
       "fallback": true
     },
     "municipality_ashikita": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 264,
-    "medium": 371,
-    "low": 103
+    "high": 262,
+    "medium": 372,
+    "low": 104
   },
   "unclassifiedCount": 13,
   "unclassifiedItems": [
@@ -235,7 +235,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 68,
+  "outOfScopeCount": 67,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "disaster_preparedness": 10,
@@ -244,7 +244,7 @@
     "budget_notice": 3,
     "hq_meeting_material": 3,
     "overall_guide": 4,
-    "index_page": 14,
+    "index_page": 13,
     "mayor_message": 2,
     "mutual_aid": 1,
     "weather_warning": 2,
@@ -383,7 +383,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -551,7 +551,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月29日 令和8年熊本地震 関連情報 （10月29日8時00分更新）",
+      "title": "2026年10月29日 令和8年熊本地震 関連情報 （10月29日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -602,13 +602,6 @@
       "municipalityName": "美里町",
       "title": "令和8年熊本地震（7月28日発生）に関する情報（10月23日7時更新）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "大津町",
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（10月14日時点）",
-      "url": "https://www.town.ozu.kumamoto.jp/page/27698.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -732,13 +725,13 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 39,
+  "excludedCount": 41,
   "excludedByType": {
     "duplicate_url": 37,
-    "non_official_url": 1,
+    "non_official_url": 3,
     "past_disaster_excluded": 1
   },
-  "warningCount": 24,
+  "warningCount": 26,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -748,6 +741,16 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kumamoto",
+      "count": 1
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_yatsushiro",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_yatsushiro",
       "count": 1
     },
     {
@@ -858,9 +861,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_hikawa",
-      "count": 3
+      "count": 1
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 739
+  "previousClassifiedPageCount": 738
 }
