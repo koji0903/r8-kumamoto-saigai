@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-10-29T10:10:23.214Z",
+  "generatedAt": "2026-10-29T18:33:08.744Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 859,
-  "displayCandidateCount": 634,
-  "classifiedPageCount": 738,
+  "inputCount": 858,
+  "displayCandidateCount": 633,
+  "classifiedPageCount": 737,
   "categoryReport": {
     "home": {
-      "total": 188,
-      "high": 74,
-      "medium": 73,
+      "total": 190,
+      "high": 75,
+      "medium": 74,
       "low": 41
     },
     "money": {
-      "total": 258,
+      "total": 256,
       "high": 54,
-      "medium": 74,
+      "medium": 72,
       "low": 130
     },
     "documents": {
-      "total": 173,
+      "total": 175,
       "high": 39,
-      "medium": 32,
-      "low": 102
+      "medium": 33,
+      "low": 103
     },
     "health_care": {
       "total": 85,
@@ -31,9 +31,9 @@
       "low": 0
     },
     "family_education": {
-      "total": 78,
+      "total": 77,
       "high": 11,
-      "medium": 30,
+      "medium": 29,
       "low": 37
     },
     "work_business": {
@@ -49,21 +49,21 @@
       "low": 0
     },
     "daily_life": {
-      "total": 211,
+      "total": 210,
       "high": 56,
-      "medium": 153,
+      "medium": 152,
       "low": 2
     }
   },
   "municipalityReport": {
     "municipality_kumamoto": {
-      "classified": 101,
-      "displayCandidates": 92,
+      "classified": 102,
+      "displayCandidates": 93,
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 142,
-      "displayCandidates": 115,
+      "classified": 141,
+      "displayCandidates": 114,
       "fallback": true
     },
     "municipality_minamata": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 122,
-      "displayCandidates": 102,
+      "classified": 123,
+      "displayCandidates": 103,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -127,8 +127,8 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 22,
-      "displayCandidates": 14,
+      "classified": 21,
+      "displayCandidates": 13,
       "fallback": true
     },
     "municipality_kashima": {
@@ -137,8 +137,8 @@
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 55,
-      "displayCandidates": 52,
+      "classified": 54,
+      "displayCandidates": 51,
       "fallback": true
     },
     "municipality_kosa": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 262,
-    "medium": 372,
+    "high": 263,
+    "medium": 370,
     "low": 104
   },
   "unclassifiedCount": 13,

@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-10-24",
-    "retrievedAt": "2026-10-29T10:29:54.394Z"
+    "retrievedAt": "2026-10-29T18:53:22.850Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
@@ -671,5 +671,21 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "熊本市",
     "date": "2026-10-29",
     "retrievedAt": "2026-10-29T10:29:49.619Z"
+  },
+  "https://www.city.kamiamakusa.kumamoto.jp/q/aview/44/23626.html": {
+    "id": "kamiamakusa-20261030-c3f6c3ca",
+    "htmlPath": "official-articles/kamiamakusa-20261030-c3f6c3ca.html",
+    "title": "令和8年熊本地震営農再開支援事業(ハード事業)について",
+    "municipality": "上天草市",
+    "date": "2026-10-30",
+    "retrievedAt": "2026-10-29T18:53:18.714Z"
+  },
+  "https://www.town.kosa.lg.jp/q/aview/180/13759.html": {
+    "id": "kosa-20261030-a35cb417",
+    "htmlPath": "official-articles/kosa-20261030-a35cb417.html",
+    "title": "令和8年熊本地震により被災された方の水道料金の免除・減額につ...",
+    "municipality": "甲佐町",
+    "date": "2026-10-30",
+    "retrievedAt": "2026-10-29T18:53:20.620Z"
   }
 };
