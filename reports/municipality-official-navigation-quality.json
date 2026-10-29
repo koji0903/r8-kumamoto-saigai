@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-28T20:21:47.009Z",
+  "generatedAt": "2026-10-29T01:03:19.183Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 859,
-  "displayCandidateCount": 636,
-  "classifiedPageCount": 739,
+  "inputCount": 858,
+  "displayCandidateCount": 635,
+  "classifiedPageCount": 738,
   "categoryReport": {
     "home": {
-      "total": 188,
+      "total": 187,
       "high": 73,
-      "medium": 74,
+      "medium": 73,
       "low": 41
     },
     "money": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 123,
-      "displayCandidates": 103,
+      "classified": 122,
+      "displayCandidates": 102,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 264,
-    "medium": 372,
+    "medium": 371,
     "low": 103
   },
   "unclassifiedCount": 13,
@@ -383,7 +383,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -551,15 +551,8 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月28日 令和8年熊本地震 関連情報 （10月28日8時00分更新）",
+      "title": "2026年10月29日 令和8年熊本地震 関連情報 （10月29日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "天草市",
-      "title": "令和８年熊本地震 関連情報",
-      "url": "https://www.city.amakusa.kumamoto.jp/bousai/kiji00313681/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -569,6 +562,13 @@
       "url": "https://www.city.amakusa.kumamoto.jp/kiji00314592/3_14592_82112_up_hqk8w66g.pdf",
       "ruleId": "overall_guide",
       "ruleLabel": "被災者向けの総合案内"
+    },
+    {
+      "municipalityName": "天草市",
+      "title": "令和８年熊本地震 関連情報",
+      "url": "https://www.city.amakusa.kumamoto.jp/bousai/kiji00313681/index.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "合志市",
@@ -862,5 +862,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 741
+  "previousClassifiedPageCount": 739
 }

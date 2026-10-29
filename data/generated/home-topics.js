@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-28T20:40:03.731Z",
-  "officialCheckedAt": "10/29 05:40",
+  "retrievedAt": "2026-10-29T01:23:09.037Z",
+  "officialCheckedAt": "10/29 10:23",
   "siteTopics": [
     {
       "date": "2026-10-27",
@@ -96,24 +96,24 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "【職員募集】令和8年熊本地震に伴う宇城市任期付職員（事務職）を募集します",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2645544",
-      "date": "2026-10-29",
-      "time": null,
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261029-e3f9f52d",
-      "archiveUrl": "official-articles/uki-20261029-e3f9f52d.html"
-    },
-    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-10-28",
-      "time": "19:37",
+      "date": "2026-10-29",
+      "time": "09:48",
       "category": "その他",
       "municipality": "八代市",
-      "archiveId": "yatsushiro-20261028-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261028-bad1de7e.html"
+      "archiveId": "yatsushiro-20261029-bad1de7e",
+      "archiveUrl": "official-articles/yatsushiro-20261029-bad1de7e.html"
+    },
+    {
+      "title": "2026年10月29日 令和8年熊本地震 関連情報 （10月29日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-10-29",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261029-7d9d4e13",
+      "archiveUrl": "official-articles/uki-20261029-7d9d4e13.html"
     },
     {
       "title": "自ら解体を行った被災家屋等の解体・撤去（自費解体）について（申請期限を延長しました）",
