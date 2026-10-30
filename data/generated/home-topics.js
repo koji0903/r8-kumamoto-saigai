@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-30T01:25:52.435Z",
-  "officialCheckedAt": "10/30 10:25",
+  "retrievedAt": "2026-10-30T10:29:30.814Z",
+  "officialCheckedAt": "10/30 19:29",
   "siteTopics": [
     {
       "date": "2026-10-30",
@@ -96,44 +96,74 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "被災者支援特別行政相談所を開催します",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036885/index.html",
+      "title": "2026年10月30日 令和8年熊本地震 関連情報 （10月30日19時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-10-30",
-      "time": "10:10",
-      "category": "支援・制度",
+      "time": "19:00",
+      "category": "その他",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261030-7d9d4e13",
+      "archiveUrl": "official-articles/uki-20261030-7d9d4e13.html"
+    },
+    {
+      "title": "【令和8年熊本地震】災害援護資金の貸付",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036833/index.html",
+      "date": "2026-10-30",
+      "time": "19:00",
+      "category": "その他",
       "municipality": "氷川町",
-      "archiveId": "hikawa-20261030-1de4489c",
-      "archiveUrl": "official-articles/hikawa-20261030-1de4489c.html"
+      "archiveId": "hikawa-20261030-4fed2863",
+      "archiveUrl": "official-articles/hikawa-20261030-4fed2863.html"
     },
     {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-10-30",
-      "time": "10:00",
+      "time": "17:24",
       "category": "その他",
       "municipality": "八代市",
       "archiveId": "yatsushiro-20261030-bad1de7e",
       "archiveUrl": "official-articles/yatsushiro-20261030-bad1de7e.html"
     },
     {
-      "title": "令和8年熊本地震で被災した家屋等の解体・撤去について（公費解体）",
-      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032036/index.html",
+      "title": "（受付終了しました）令和8年熊本地震で被害を受けた事業所の家電4品目（テレビ・エアコン・冷蔵庫・洗濯機）の処分について",
+      "url": "https://www.city.kumamoto.jp/kiji00372114/index.html",
       "date": "2026-10-30",
-      "time": "08:41",
+      "time": "17:15",
       "category": "その他",
-      "municipality": "西原村",
-      "archiveId": "nishihara-20261030-820ba7e1",
-      "archiveUrl": "official-articles/nishihara-20261030-820ba7e1.html"
+      "municipality": "熊本市",
+      "archiveId": "kumamoto-20261030-6fce7890",
+      "archiveUrl": "official-articles/kumamoto-20261030-6fce7890.html"
     },
     {
-      "title": "被災届出証明申請書（PDF：87.9キロバイト）",
-      "url": "https://www.city.kumamoto.jp/kiji0032451/5_2451_182365_up_l6kc5st3.pdf",
+      "title": "令和８年熊本地震に関する支援等",
+      "url": "https://localcms.city.minamata.lg.jp/page4805.html?type=top",
+      "date": "2026-10-30",
+      "time": "11:42",
+      "category": "支援・制度",
+      "municipality": "水俣市",
+      "archiveId": "minamata-20261030-9f50f0d5",
+      "archiveUrl": "official-articles/minamata-20261030-9f50f0d5.html"
+    },
+    {
+      "title": "令和8年熊本地震被災者支援制度Vol.2（臨時広報みふね）",
+      "url": "https://www.town.mifune.kumamoto.jp/page9523.html",
+      "date": "2026-10-30",
+      "time": "10:12",
+      "category": "支援・制度",
+      "municipality": "御船町",
+      "archiveId": "mifune-20261030-6587fc54",
+      "archiveUrl": "official-articles/mifune-20261030-6587fc54.html"
+    },
+    {
+      "title": "令和8年熊本地震の発生に伴う産業雇用安定助成金の特例の実施及び事業主向け助成金等説明会（第2弾）の開催について",
+      "url": "https://www.city.uto.lg.jp/article/view/1321/17311.html",
       "date": "2026-10-30",
       "time": null,
       "category": "その他",
-      "municipality": "熊本市",
-      "archiveId": null,
-      "archiveUrl": null
+      "municipality": "宇土市",
+      "archiveId": "uto-20261030-25bfd74e",
+      "archiveUrl": "official-articles/uto-20261030-25bfd74e.html"
     },
     {
       "title": "令和8年熊本地震営農再開支援事業(ハード事業)について",
@@ -146,14 +176,24 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/kamiamakusa-20261030-c3f6c3ca.html"
     },
     {
-      "title": "2026年10月30日 避難者数",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
+      "title": "【市長メッセージ】使用する水の圧力を弱める減圧給水のお願い",
+      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314887/index.html",
       "date": "2026-10-30",
       "time": null,
-      "category": "避難・安全",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261030-69c958e4",
-      "archiveUrl": "official-articles/uki-20261030-69c958e4.html"
+      "category": "ライフライン",
+      "municipality": "天草市",
+      "archiveId": "amakusa-20261030-22eb74e9",
+      "archiveUrl": "official-articles/amakusa-20261030-22eb74e9.html"
+    },
+    {
+      "title": "被災された方への入浴支援について（町・県事業）",
+      "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/sumai/3907.html",
+      "date": "2026-10-30",
+      "time": null,
+      "category": "ごみ・生活",
+      "municipality": "美里町",
+      "archiveId": "misato-20261030-ed424e1e",
+      "archiveUrl": "official-articles/misato-20261030-ed424e1e.html"
     },
     {
       "title": "令和8年熊本地震により被災された方の水道料金の免除・減額につ...",
@@ -164,26 +204,6 @@ window.HOME_TOPICS = {
       "municipality": "甲佐町",
       "archiveId": "kosa-20261030-a35cb417",
       "archiveUrl": "official-articles/kosa-20261030-a35cb417.html"
-    },
-    {
-      "title": "令和８年熊本地震に関する支援等",
-      "url": "https://localcms.city.minamata.lg.jp/page4805.html?type=top",
-      "date": "2026-10-29",
-      "time": "16:19",
-      "category": "支援・制度",
-      "municipality": "水俣市",
-      "archiveId": "minamata-20261029-9f50f0d5",
-      "archiveUrl": "official-articles/minamata-20261029-9f50f0d5.html"
-    },
-    {
-      "title": "【令和8年10月30日受付終了】令和8年熊本地震に伴う罹災証明交付申請について",
-      "url": "https://www.town.mifune.kumamoto.jp/page9346.html",
-      "date": "2026-10-28",
-      "time": "15:36",
-      "category": "住まい・証明",
-      "municipality": "御船町",
-      "archiveId": "mifune-20261028-6e4c2048",
-      "archiveUrl": "official-articles/mifune-20261028-6e4c2048.html"
     },
     {
       "title": "指定給水装置工事事業者指定等及び給水装置新設等の申込",
@@ -204,26 +224,6 @@ window.HOME_TOPICS = {
       "municipality": "菊陽町",
       "archiveId": "kikuyo-20261028-600d71c4",
       "archiveUrl": "official-articles/kikuyo-20261028-600d71c4.html"
-    },
-    {
-      "title": "令和８年熊本地震被害における住宅の修理などの申請窓口",
-      "url": "https://www.city.uto.lg.jp/article/view/1018/16522.html",
-      "date": "2026-10-28",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261028-0b88860a",
-      "archiveUrl": "official-articles/uto-20261028-0b88860a.html"
-    },
-    {
-      "title": "災害救助法に基づく学用品の支給について",
-      "url": "https://www.town.kumamoto-misato.lg.jp/soshiki/gakkokyoiku/1/1/3983.html",
-      "date": "2026-10-27",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "美里町",
-      "archiveId": "misato-20261027-87a44654",
-      "archiveUrl": "official-articles/misato-20261027-87a44654.html"
     },
     {
       "title": "国民健康保険自己負担額の還付手続きについて【令和８年熊本地震】",
