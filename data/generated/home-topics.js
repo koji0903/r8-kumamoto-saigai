@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-30T10:29:30.814Z",
-  "officialCheckedAt": "10/30 19:29",
+  "retrievedAt": "2026-10-30T18:24:08.557Z",
+  "officialCheckedAt": "10/31 03:24",
   "siteTopics": [
     {
       "date": "2026-10-30",
@@ -96,6 +96,36 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "上水道給水工事における本管穿孔工事立会申請様式について",
+      "url": "https://www.town.mifune.kumamoto.jp/page8660.html",
+      "date": "2026-10-31",
+      "time": "16:55",
+      "category": "ライフライン",
+      "municipality": "御船町",
+      "archiveId": "mifune-20261031-55b0e807",
+      "archiveUrl": "official-articles/mifune-20261031-55b0e807.html"
+    },
+    {
+      "title": "震度速報 10月31日 1時47分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "date": "2026-10-31",
+      "time": "01:47",
+      "category": "避難・安全",
+      "municipality": "山鹿市",
+      "archiveId": "yamaga-20261031-ed5178f4",
+      "archiveUrl": "official-articles/yamaga-20261031-ed5178f4.html"
+    },
+    {
+      "title": "瀬戸歩道橋（通称：赤橋）通行止め解除のお知らせ（10月31日）",
+      "url": "https://www.city.amakusa.kumamoto.jp/kiji00312383/index.html",
+      "date": "2026-10-31",
+      "time": null,
+      "category": "避難・安全",
+      "municipality": "天草市",
+      "archiveId": "amakusa-20261031-268ac6f3",
+      "archiveUrl": "official-articles/amakusa-20261031-268ac6f3.html"
+    },
+    {
       "title": "2026年10月30日 令和8年熊本地震 関連情報 （10月30日19時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-10-30",
@@ -146,16 +176,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/minamata-20261030-9f50f0d5.html"
     },
     {
-      "title": "令和8年熊本地震被災者支援制度Vol.2（臨時広報みふね）",
-      "url": "https://www.town.mifune.kumamoto.jp/page9523.html",
-      "date": "2026-10-30",
-      "time": "10:12",
-      "category": "支援・制度",
-      "municipality": "御船町",
-      "archiveId": "mifune-20261030-6587fc54",
-      "archiveUrl": "official-articles/mifune-20261030-6587fc54.html"
-    },
-    {
       "title": "令和8年熊本地震の発生に伴う産業雇用安定助成金の特例の実施及び事業主向け助成金等説明会（第2弾）の開催について",
       "url": "https://www.city.uto.lg.jp/article/view/1321/17311.html",
       "date": "2026-10-30",
@@ -176,16 +196,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/kamiamakusa-20261030-c3f6c3ca.html"
     },
     {
-      "title": "【市長メッセージ】使用する水の圧力を弱める減圧給水のお願い",
-      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314887/index.html",
-      "date": "2026-10-30",
-      "time": null,
-      "category": "ライフライン",
-      "municipality": "天草市",
-      "archiveId": "amakusa-20261030-22eb74e9",
-      "archiveUrl": "official-articles/amakusa-20261030-22eb74e9.html"
-    },
-    {
       "title": "被災された方への入浴支援について（町・県事業）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/sumai/3907.html",
       "date": "2026-10-30",
@@ -204,16 +214,6 @@ window.HOME_TOPICS = {
       "municipality": "甲佐町",
       "archiveId": "kosa-20261030-a35cb417",
       "archiveUrl": "official-articles/kosa-20261030-a35cb417.html"
-    },
-    {
-      "title": "指定給水装置工事事業者指定等及び給水装置新設等の申込",
-      "url": "https://www.city.yamaga.kumamoto.jp/kiji00324/index.html",
-      "date": "2026-10-28",
-      "time": "15:21",
-      "category": "ライフライン",
-      "municipality": "山鹿市",
-      "archiveId": "yamaga-20261028-a98810ad",
-      "archiveUrl": "official-articles/yamaga-20261028-a98810ad.html"
     },
     {
       "title": "【重要】スポーツ振興課が管理する全体育施設等の利用再開について※10月31日より菊陽北小学校体育館を利用再開します。",

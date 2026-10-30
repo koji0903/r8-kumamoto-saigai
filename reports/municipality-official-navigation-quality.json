@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-10-30T10:12:51.842Z",
+  "generatedAt": "2026-10-30T18:05:09.112Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 861,
-  "displayCandidateCount": 637,
-  "classifiedPageCount": 742,
+  "inputCount": 830,
+  "displayCandidateCount": 604,
+  "classifiedPageCount": 710,
   "categoryReport": {
     "home": {
-      "total": 191,
+      "total": 186,
       "high": 74,
-      "medium": 75,
-      "low": 42
+      "medium": 71,
+      "low": 41
     },
     "money": {
-      "total": 260,
-      "high": 55,
-      "medium": 74,
-      "low": 131
+      "total": 253,
+      "high": 53,
+      "medium": 71,
+      "low": 129
     },
     "documents": {
-      "total": 175,
-      "high": 40,
+      "total": 170,
+      "high": 39,
       "medium": 33,
-      "low": 102
+      "low": 98
     },
     "health_care": {
-      "total": 85,
-      "high": 21,
-      "medium": 64,
+      "total": 58,
+      "high": 19,
+      "medium": 39,
       "low": 0
     },
     "family_education": {
@@ -37,33 +37,33 @@
       "low": 35
     },
     "work_business": {
-      "total": 74,
+      "total": 72,
       "high": 16,
-      "medium": 58,
+      "medium": 56,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 21,
-      "high": 4,
-      "medium": 17,
+      "total": 19,
+      "high": 3,
+      "medium": 16,
       "low": 0
     },
     "daily_life": {
-      "total": 209,
-      "high": 56,
+      "total": 207,
+      "high": 54,
       "medium": 151,
       "low": 2
     }
   },
   "municipalityReport": {
     "municipality_kumamoto": {
-      "classified": 101,
-      "displayCandidates": 92,
+      "classified": 72,
+      "displayCandidates": 63,
       "fallback": true
     },
     "municipality_yatsushiro": {
       "classified": 140,
-      "displayCandidates": 115,
+      "displayCandidates": 114,
       "fallback": true
     },
     "municipality_minamata": {
@@ -72,18 +72,18 @@
       "fallback": true
     },
     "municipality_yamaga": {
-      "classified": 12,
-      "displayCandidates": 11,
+      "classified": 11,
+      "displayCandidates": 10,
       "fallback": true
     },
     "municipality_kikuchi": {
-      "classified": 13,
-      "displayCandidates": 11,
+      "classified": 12,
+      "displayCandidates": 10,
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 62,
-      "displayCandidates": 57,
+      "classified": 61,
+      "displayCandidates": 56,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -97,8 +97,8 @@
       "fallback": true
     },
     "municipality_amakusa": {
-      "classified": 22,
-      "displayCandidates": 20,
+      "classified": 23,
+      "displayCandidates": 21,
       "fallback": true
     },
     "municipality_koshi": {
@@ -127,8 +127,8 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 22,
-      "displayCandidates": 13,
+      "classified": 23,
+      "displayCandidates": 14,
       "fallback": true
     },
     "municipality_kashima": {
@@ -137,8 +137,8 @@
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 55,
-      "displayCandidates": 52,
+      "classified": 54,
+      "displayCandidates": 51,
       "fallback": true
     },
     "municipality_kosa": {
@@ -147,8 +147,8 @@
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 55,
-      "displayCandidates": 47,
+      "classified": 54,
+      "displayCandidates": 46,
       "fallback": true
     },
     "municipality_ashikita": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 266,
-    "medium": 371,
-    "low": 105
+    "high": 258,
+    "medium": 346,
+    "low": 106
   },
   "unclassifiedCount": 12,
   "unclassifiedItems": [
@@ -230,7 +230,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 68,
+  "outOfScopeCount": 67,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "disaster_preparedness": 10,
@@ -240,14 +240,12 @@
     "mayor_message": 2,
     "hq_meeting_material": 3,
     "overall_guide": 4,
-    "index_page": 14,
+    "index_page": 15,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 4,
     "public_relations": 6,
-    "cultural_property": 1,
-    "town_meeting": 1,
-    "procurement": 1
+    "cultural_property": 1
   },
   "outOfScopeItems": [
     {
@@ -410,6 +408,13 @@
       "url": "https://www.city.yamaga.kumamoto.jp/kiji0033173/index.html",
       "ruleId": "disaster_preparedness",
       "ruleLabel": "平時の防災・今後への備え"
+    },
+    {
+      "municipalityName": "山鹿市",
+      "title": "震度速報 10月31日 1時47分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "菊池市",
@@ -651,24 +656,10 @@
     },
     {
       "municipalityName": "益城町",
-      "title": "住民意見交換会を開催します【令和8年熊本地震・総合計画】",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038214/index.html",
-      "ruleId": "town_meeting",
-      "ruleLabel": "復興計画・住民意見交換会"
-    },
-    {
-      "municipalityName": "益城町",
       "title": "益城町地域共生センターカタル利用再開のお知らせ【令和８年熊本地震】",
       "url": "https://www.town.mashiki.lg.jp/kiji0038238/index.html",
       "ruleId": "facility_notice",
       "ruleLabel": "公共施設の休止・再開・紹介"
-    },
-    {
-      "municipalityName": "益城町",
-      "title": "木山仮設団地跡地公園（仮称）に係る基本設計業務委託の公募型プロポーザル実施について",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038223/index.html",
-      "ruleId": "procurement",
-      "ruleLabel": "入札・公募型プロポーザル"
     },
     {
       "municipalityName": "甲佐町",
@@ -727,10 +718,10 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 39,
+  "excludedCount": 41,
   "excludedByType": {
     "duplicate_url": 37,
-    "non_official_url": 1,
+    "non_official_url": 3,
     "past_disaster_excluded": 1
   },
   "warningCount": 26,
@@ -753,7 +744,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 2
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -773,7 +764,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yamaga",
-      "count": 1
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -833,7 +824,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kashima",
-      "count": 1
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -863,9 +854,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_hikawa",
-      "count": 1
+      "count": 2
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 738
+  "previousClassifiedPageCount": 742
 }

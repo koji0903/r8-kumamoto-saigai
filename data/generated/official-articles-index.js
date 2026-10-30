@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-10-24",
-    "retrievedAt": "2026-10-30T10:29:47.545Z"
+    "retrievedAt": "2026-10-30T18:24:21.414Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
@@ -601,12 +601,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T20:54:28.221Z"
   },
   "https://www.city.yamaga.kumamoto.jp/kinkyu.html": {
-    "id": "yamaga-20261026-ed5178f4",
-    "htmlPath": "official-articles/yamaga-20261026-ed5178f4.html",
-    "title": "震度速報 10月26日 23時35分",
+    "id": "yamaga-20261031-ed5178f4",
+    "htmlPath": "official-articles/yamaga-20261031-ed5178f4.html",
+    "title": "震度速報 10月31日 1時47分",
     "municipality": "山鹿市",
-    "date": "2026-10-26",
-    "retrievedAt": "2026-10-26T20:54:31.227Z"
+    "date": "2026-10-31",
+    "retrievedAt": "2026-10-30T18:24:15.707Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036841/index.html": {
     "id": "hikawa-20261028-f6d3a0a0",
@@ -743,5 +743,21 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "美里町",
     "date": "2026-10-30",
     "retrievedAt": "2026-10-30T10:29:45.251Z"
+  },
+  "https://www.town.mifune.kumamoto.jp/page8660.html": {
+    "id": "mifune-20261031-55b0e807",
+    "htmlPath": "official-articles/mifune-20261031-55b0e807.html",
+    "title": "上水道給水工事における本管穿孔工事立会申請様式について",
+    "municipality": "御船町",
+    "date": "2026-10-31",
+    "retrievedAt": "2026-10-30T18:24:13.713Z"
+  },
+  "https://www.city.amakusa.kumamoto.jp/kiji00312383/index.html": {
+    "id": "amakusa-20261031-268ac6f3",
+    "htmlPath": "official-articles/amakusa-20261031-268ac6f3.html",
+    "title": "瀬戸歩道橋（通称：赤橋）通行止め解除のお知らせ（10月31日）",
+    "municipality": "天草市",
+    "date": "2026-10-31",
+    "retrievedAt": "2026-10-30T18:24:18.575Z"
   }
 };
