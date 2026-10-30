@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-29T18:53:14.293Z",
-  "officialCheckedAt": "10/30 03:53",
+  "retrievedAt": "2026-10-30T01:25:52.435Z",
+  "officialCheckedAt": "10/30 10:25",
   "siteTopics": [
     {
       "date": "2026-10-27",
@@ -96,6 +96,36 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "被災者支援特別行政相談所を開催します",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036885/index.html",
+      "date": "2026-10-30",
+      "time": "10:10",
+      "category": "支援・制度",
+      "municipality": "氷川町",
+      "archiveId": "hikawa-20261030-1de4489c",
+      "archiveUrl": "official-articles/hikawa-20261030-1de4489c.html"
+    },
+    {
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-10-30",
+      "time": "10:00",
+      "category": "その他",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261030-bad1de7e",
+      "archiveUrl": "official-articles/yatsushiro-20261030-bad1de7e.html"
+    },
+    {
+      "title": "令和8年熊本地震で被災した家屋等の解体・撤去について（公費解体）",
+      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032036/index.html",
+      "date": "2026-10-30",
+      "time": "08:41",
+      "category": "その他",
+      "municipality": "西原村",
+      "archiveId": "nishihara-20261030-820ba7e1",
+      "archiveUrl": "official-articles/nishihara-20261030-820ba7e1.html"
+    },
+    {
       "title": "被災届出証明申請書（PDF：87.9キロバイト）",
       "url": "https://www.city.kumamoto.jp/kiji0032451/5_2451_182365_up_l6kc5st3.pdf",
       "date": "2026-10-30",
@@ -116,6 +146,16 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/kamiamakusa-20261030-c3f6c3ca.html"
     },
     {
+      "title": "2026年10月30日 避難者数",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
+      "date": "2026-10-30",
+      "time": null,
+      "category": "避難・安全",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261030-69c958e4",
+      "archiveUrl": "official-articles/uki-20261030-69c958e4.html"
+    },
+    {
       "title": "令和8年熊本地震により被災された方の水道料金の免除・減額につ...",
       "url": "https://www.town.kosa.lg.jp/q/aview/180/13759.html",
       "date": "2026-10-30",
@@ -124,36 +164,6 @@ window.HOME_TOPICS = {
       "municipality": "甲佐町",
       "archiveId": "kosa-20261030-a35cb417",
       "archiveUrl": "official-articles/kosa-20261030-a35cb417.html"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-10-29",
-      "time": "18:39",
-      "category": "その他",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261029-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261029-bad1de7e.html"
-    },
-    {
-      "title": "2026年10月29日 令和8年熊本地震 関連情報 （10月29日18時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-10-29",
-      "time": "18:00",
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261029-7d9d4e13",
-      "archiveUrl": "official-articles/uki-20261029-7d9d4e13.html"
-    },
-    {
-      "title": "令和8年熊本地震関連情報",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
-      "date": "2026-10-29",
-      "time": "17:03",
-      "category": "その他",
-      "municipality": "氷川町",
-      "archiveId": "hikawa-20261029-edaedf97",
-      "archiveUrl": "official-articles/hikawa-20261029-edaedf97.html"
     },
     {
       "title": "令和８年熊本地震に関する支援等",
@@ -234,16 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "嘉島町",
       "archiveId": "kashima-20261026-0879875a",
       "archiveUrl": "official-articles/kashima-20261026-0879875a.html"
-    },
-    {
-      "title": "ごみ・生活・環境・ペット",
-      "url": "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=533",
-      "date": "2026-10-24",
-      "time": null,
-      "category": "ごみ・生活",
-      "municipality": "津奈木町",
-      "archiveId": "tsunagi-20261024-8968f58d",
-      "archiveUrl": "official-articles/tsunagi-20261024-8968f58d.html"
     }
   ],
   "prefectureUpdates": [
