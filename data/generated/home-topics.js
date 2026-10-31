@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-31T13:03:55.755Z",
-  "officialCheckedAt": "10/31 22:03",
+  "retrievedAt": "2026-10-31T19:41:34.970Z",
+  "officialCheckedAt": "11/1 04:41",
   "siteTopics": [
     {
       "date": "2026-10-30",
@@ -96,6 +96,56 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-11-01",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261101-bad1de7e",
+      "archiveUrl": "official-articles/yatsushiro-20261101-bad1de7e.html"
+    },
+    {
+      "title": "令和8年熊本地震による事業所の災害ごみ処分費の減免について",
+      "url": "https://www.city.kumamoto.jp/kiji00372073/index.html",
+      "date": "2026-11-01",
+      "time": "00:00",
+      "category": "ごみ・生活",
+      "municipality": "熊本市",
+      "archiveId": "kumamoto-20261101-758e71aa",
+      "archiveUrl": "official-articles/kumamoto-20261101-758e71aa.html"
+    },
+    {
+      "title": "【令和8年11月30日受付終了】令和8年熊本地震に伴う「り災証明書...",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/125/6030.html",
+      "date": "2026-11-01",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "嘉島町",
+      "archiveId": "kashima-20261101-83ebb455",
+      "archiveUrl": "official-articles/kashima-20261101-83ebb455.html"
+    },
+    {
+      "title": "災害ごみの仮置き場への持ち込みについて(令和8年11月1日更新)",
+      "url": "https://www.town.kosa.lg.jp/q/aview/55/13515.html",
+      "date": "2026-11-01",
+      "time": null,
+      "category": "ごみ・生活",
+      "municipality": "甲佐町",
+      "archiveId": "kosa-20261101-765fece1",
+      "archiveUrl": "official-articles/kosa-20261101-765fece1.html"
+    },
+    {
+      "title": "11.1～令和8年熊本地震により発生したごみの出し方仮置場のご案内（PDF：907.8キロバイト）",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036755/3_6755_8644_up_s0ughx6c.pdf",
+      "date": "2026-11-01",
+      "time": null,
+      "category": "ごみ・生活",
+      "municipality": "氷川町",
+      "archiveId": null,
+      "archiveUrl": null
+    },
+    {
       "title": "上水道給水工事における本管穿孔工事立会申請様式について",
       "url": "https://www.town.mifune.kumamoto.jp/page8660.html",
       "date": "2026-10-31",
@@ -104,16 +154,6 @@ window.HOME_TOPICS = {
       "municipality": "御船町",
       "archiveId": "mifune-20261031-55b0e807",
       "archiveUrl": "official-articles/mifune-20261031-55b0e807.html"
-    },
-    {
-      "title": "震度速報 10月31日 1時47分",
-      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-      "date": "2026-10-31",
-      "time": "01:47",
-      "category": "避難・安全",
-      "municipality": "山鹿市",
-      "archiveId": "yamaga-20261031-ed5178f4",
-      "archiveUrl": "official-articles/yamaga-20261031-ed5178f4.html"
     },
     {
       "title": "瀬戸歩道橋（通称：赤橋）通行止め解除のお知らせ（10月31日）",
@@ -134,36 +174,6 @@ window.HOME_TOPICS = {
       "municipality": "宇城市",
       "archiveId": "uki-20261030-7d9d4e13",
       "archiveUrl": "official-articles/uki-20261030-7d9d4e13.html"
-    },
-    {
-      "title": "【令和8年熊本地震】災害援護資金の貸付",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036833/index.html",
-      "date": "2026-10-30",
-      "time": "19:00",
-      "category": "その他",
-      "municipality": "氷川町",
-      "archiveId": "hikawa-20261030-4fed2863",
-      "archiveUrl": "official-articles/hikawa-20261030-4fed2863.html"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-10-30",
-      "time": "17:24",
-      "category": "その他",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261030-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261030-bad1de7e.html"
-    },
-    {
-      "title": "（受付終了しました）令和8年熊本地震で被害を受けた事業所の家電4品目（テレビ・エアコン・冷蔵庫・洗濯機）の処分について",
-      "url": "https://www.city.kumamoto.jp/kiji00372114/index.html",
-      "date": "2026-10-30",
-      "time": "17:15",
-      "category": "その他",
-      "municipality": "熊本市",
-      "archiveId": "kumamoto-20261030-6fce7890",
-      "archiveUrl": "official-articles/kumamoto-20261030-6fce7890.html"
     },
     {
       "title": "令和８年熊本地震に関する支援等",
@@ -206,14 +216,14 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/misato-20261030-ed424e1e.html"
     },
     {
-      "title": "令和8年熊本地震により被災された方の水道料金の免除・減額につ...",
-      "url": "https://www.town.kosa.lg.jp/q/aview/180/13759.html",
-      "date": "2026-10-30",
-      "time": null,
+      "title": "指定給水装置工事事業者指定等及び給水装置新設等の申込",
+      "url": "https://www.city.yamaga.kumamoto.jp/kiji00324/index.html",
+      "date": "2026-10-28",
+      "time": "15:21",
       "category": "ライフライン",
-      "municipality": "甲佐町",
-      "archiveId": "kosa-20261030-a35cb417",
-      "archiveUrl": "official-articles/kosa-20261030-a35cb417.html"
+      "municipality": "山鹿市",
+      "archiveId": "yamaga-20261028-a98810ad",
+      "archiveUrl": "official-articles/yamaga-20261028-a98810ad.html"
     },
     {
       "title": "【重要】スポーツ振興課が管理する全体育施設等の利用再開について※10月31日より菊陽北小学校体育館を利用再開します。",
@@ -234,16 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "益城町",
       "archiveId": "mashiki-20261027-3d4ec45d",
       "archiveUrl": "official-articles/mashiki-20261027-3d4ec45d.html"
-    },
-    {
-      "title": "令和8年熊本地震に係る義援金の受付について",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/123/6142.html",
-      "date": "2026-10-26",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "嘉島町",
-      "archiveId": "kashima-20261026-0879875a",
-      "archiveUrl": "official-articles/kashima-20261026-0879875a.html"
     }
   ],
   "prefectureUpdates": [

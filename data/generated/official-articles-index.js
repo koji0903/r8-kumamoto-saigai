@@ -297,12 +297,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-21T22:08:05.740Z"
   },
   "https://www.city.yatsushiro.lg.jp/default.html": {
-    "id": "yatsushiro-20261030-bad1de7e",
-    "htmlPath": "official-articles/yatsushiro-20261030-bad1de7e.html",
+    "id": "yatsushiro-20261101-bad1de7e",
+    "htmlPath": "official-articles/yatsushiro-20261101-bad1de7e.html",
     "title": "熊本県八代市",
     "municipality": "八代市",
-    "date": "2026-10-30",
-    "retrievedAt": "2026-10-30T01:25:57.591Z"
+    "date": "2026-11-01",
+    "retrievedAt": "2026-10-31T19:41:37.242Z"
   },
   "https://www.city.kikuchi.lg.jp/article/view/1040/19566.html": {
     "id": "kikuchi-20261021-f5f1e2ae",
@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-10-24",
-    "retrievedAt": "2026-10-31T13:03:59.219Z"
+    "retrievedAt": "2026-10-31T19:41:48.191Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
@@ -759,5 +759,29 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "天草市",
     "date": "2026-10-31",
     "retrievedAt": "2026-10-30T18:24:18.575Z"
+  },
+  "https://www.city.kumamoto.jp/kiji00372073/index.html": {
+    "id": "kumamoto-20261101-758e71aa",
+    "htmlPath": "official-articles/kumamoto-20261101-758e71aa.html",
+    "title": "令和8年熊本地震による事業所の災害ごみ処分費の減免について",
+    "municipality": "熊本市",
+    "date": "2026-11-01",
+    "retrievedAt": "2026-10-31T19:41:40.458Z"
+  },
+  "https://www.town.kumamoto-kashima.lg.jp/q/aview/125/6030.html": {
+    "id": "kashima-20261101-83ebb455",
+    "htmlPath": "official-articles/kashima-20261101-83ebb455.html",
+    "title": "【令和8年11月30日受付終了】令和8年熊本地震に伴う「り災証明書...",
+    "municipality": "嘉島町",
+    "date": "2026-11-01",
+    "retrievedAt": "2026-10-31T19:41:42.098Z"
+  },
+  "https://www.town.kosa.lg.jp/q/aview/55/13515.html": {
+    "id": "kosa-20261101-765fece1",
+    "htmlPath": "official-articles/kosa-20261101-765fece1.html",
+    "title": "災害ごみの仮置き場への持ち込みについて(令和8年11月1日更新)",
+    "municipality": "甲佐町",
+    "date": "2026-11-01",
+    "retrievedAt": "2026-10-31T19:41:43.945Z"
   }
 };
