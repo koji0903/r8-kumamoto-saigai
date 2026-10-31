@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-10-24",
-    "retrievedAt": "2026-10-30T22:45:41.541Z"
+    "retrievedAt": "2026-10-31T06:12:25.190Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
