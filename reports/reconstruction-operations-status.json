@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-31T06:12:48.067Z",
+  "generatedAt": "2026-10-31T13:04:22.758Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-31T05:55:35.022Z",
-    "inputCount": 829,
-    "classifiedPageCount": 709,
-    "displayCandidateCount": 603,
+    "generatedAt": "2026-10-31T12:45:52.699Z",
+    "inputCount": 827,
+    "classifiedPageCount": 707,
+    "displayCandidateCount": 602,
     "deltaFromPrevious": {
-      "inputCount": -1,
-      "classifiedPageCount": -1,
+      "inputCount": -2,
+      "classifiedPageCount": -2,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 20,
+      "ageHours": 27,
       "limitHours": 336
     }
   },
@@ -66,7 +66,7 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 123,
+        "classified": 122,
         "displayCandidates": 103,
         "fallback": true
       },
@@ -111,8 +111,8 @@
         "fallback": true
       },
       "municipality_mashiki": {
-        "classified": 54,
-        "displayCandidates": 51,
+        "classified": 53,
+        "displayCandidates": 50,
         "fallback": true
       },
       "municipality_kosa": {
@@ -138,20 +138,20 @@
     },
     "categoryReport": {
       "home": {
-        "total": 186,
+        "total": 185,
         "high": 74,
         "medium": 71,
-        "low": 41
+        "low": 40
       },
       "money": {
-        "total": 252,
+        "total": 251,
         "high": 52,
         "medium": 71,
-        "low": 129
+        "low": 128
       },
       "documents": {
-        "total": 170,
-        "high": 39,
+        "total": 169,
+        "high": 38,
         "medium": 33,
         "low": 98
       },
@@ -187,9 +187,9 @@
       }
     },
     "confidence": {
-      "high": 257,
+      "high": 256,
       "medium": 346,
-      "low": 106
+      "low": 105
     },
     "unclassifiedCount": 12,
     "excludedCount": 41,
@@ -342,7 +342,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 8
+      "count": 10
     },
     {
       "code": "HTTP_404_CANDIDATE",
