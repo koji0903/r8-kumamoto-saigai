@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-10-31T19:41:34.970Z",
-  "officialCheckedAt": "11/1 04:41",
+  "retrievedAt": "2026-11-01T00:29:42.629Z",
+  "officialCheckedAt": "11/1 09:29",
   "siteTopics": [
     {
       "date": "2026-10-30",
@@ -99,11 +99,21 @@ window.HOME_TOPICS = {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-11-01",
-      "time": "08:00",
+      "time": "08:30",
       "category": "その他",
       "municipality": "八代市",
       "archiveId": "yatsushiro-20261101-bad1de7e",
       "archiveUrl": "official-articles/yatsushiro-20261101-bad1de7e.html"
+    },
+    {
+      "title": "令和8年熊本地震関連情報",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
+      "date": "2026-11-01",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "氷川町",
+      "archiveId": "hikawa-20261101-edaedf97",
+      "archiveUrl": "official-articles/hikawa-20261101-edaedf97.html"
     },
     {
       "title": "令和8年熊本地震による事業所の災害ごみ処分費の減免について",
@@ -134,16 +144,6 @@ window.HOME_TOPICS = {
       "municipality": "甲佐町",
       "archiveId": "kosa-20261101-765fece1",
       "archiveUrl": "official-articles/kosa-20261101-765fece1.html"
-    },
-    {
-      "title": "11.1～令和8年熊本地震により発生したごみの出し方仮置場のご案内（PDF：907.8キロバイト）",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036755/3_6755_8644_up_s0ughx6c.pdf",
-      "date": "2026-11-01",
-      "time": null,
-      "category": "ごみ・生活",
-      "municipality": "氷川町",
-      "archiveId": null,
-      "archiveUrl": null
     },
     {
       "title": "上水道給水工事における本管穿孔工事立会申請様式について",

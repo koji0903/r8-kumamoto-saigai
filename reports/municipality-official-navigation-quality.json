@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-10-31T19:22:35.731Z",
+  "generatedAt": "2026-11-01T00:11:38.928Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 819,
-  "displayCandidateCount": 596,
-  "classifiedPageCount": 702,
+  "inputCount": 820,
+  "displayCandidateCount": 598,
+  "classifiedPageCount": 703,
   "categoryReport": {
     "home": {
-      "total": 182,
+      "total": 184,
       "high": 74,
-      "medium": 69,
-      "low": 39
+      "medium": 70,
+      "low": 40
     },
     "money": {
-      "total": 253,
+      "total": 252,
       "high": 52,
       "medium": 71,
-      "low": 130
+      "low": 129
     },
     "documents": {
-      "total": 168,
+      "total": 169,
       "high": 38,
-      "medium": 32,
+      "medium": 33,
       "low": 98
     },
     "health_care": {
@@ -82,7 +82,7 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 63,
+      "classified": 62,
       "displayCandidates": 57,
       "fallback": true
     },
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 120,
-      "displayCandidates": 101,
+      "classified": 121,
+      "displayCandidates": 102,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -127,8 +127,8 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 21,
-      "displayCandidates": 12,
+      "classified": 22,
+      "displayCandidates": 13,
       "fallback": true
     },
     "municipality_kashima": {
@@ -164,8 +164,8 @@
   },
   "confidence": {
     "high": 256,
-    "medium": 340,
-    "low": 106
+    "medium": 342,
+    "low": 105
   },
   "unclassifiedCount": 11,
   "unclassifiedItems": [
@@ -343,7 +343,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -846,5 +846,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 707
+  "previousClassifiedPageCount": 702
 }

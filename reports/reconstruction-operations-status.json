@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-31T19:42:13.164Z",
+  "generatedAt": "2026-11-01T00:30:08.286Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-10-31T19:22:35.731Z",
-    "inputCount": 819,
-    "classifiedPageCount": 702,
-    "displayCandidateCount": 596,
+    "generatedAt": "2026-11-01T00:11:38.928Z",
+    "inputCount": 820,
+    "classifiedPageCount": 703,
+    "displayCandidateCount": 598,
     "deltaFromPrevious": {
-      "inputCount": -8,
-      "classifiedPageCount": -5,
-      "unclassifiedCount": -1
+      "inputCount": 1,
+      "classifiedPageCount": 1,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 33,
+      "ageHours": 38,
       "limitHours": 336
     }
   },
@@ -56,7 +56,7 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 63,
+        "classified": 62,
         "displayCandidates": 57,
         "fallback": true
       },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 120,
-        "displayCandidates": 101,
+        "classified": 121,
+        "displayCandidates": 102,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -101,8 +101,8 @@
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 21,
-        "displayCandidates": 12,
+        "classified": 22,
+        "displayCandidates": 13,
         "fallback": true
       },
       "municipality_kashima": {
@@ -138,21 +138,21 @@
     },
     "categoryReport": {
       "home": {
-        "total": 182,
+        "total": 184,
         "high": 74,
-        "medium": 69,
-        "low": 39
+        "medium": 70,
+        "low": 40
       },
       "money": {
-        "total": 253,
+        "total": 252,
         "high": 52,
         "medium": 71,
-        "low": 130
+        "low": 129
       },
       "documents": {
-        "total": 168,
+        "total": 169,
         "high": 38,
-        "medium": 32,
+        "medium": 33,
         "low": 98
       },
       "health_care": {
@@ -188,8 +188,8 @@
     },
     "confidence": {
       "high": 256,
-      "medium": 340,
-      "low": 106
+      "medium": 342,
+      "low": 105
     },
     "unclassifiedCount": 11,
     "excludedCount": 40,

@@ -57,12 +57,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-19T21:51:30.294Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html": {
-    "id": "hikawa-20261029-edaedf97",
-    "htmlPath": "official-articles/hikawa-20261029-edaedf97.html",
+    "id": "hikawa-20261101-edaedf97",
+    "htmlPath": "official-articles/hikawa-20261101-edaedf97.html",
     "title": "令和8年熊本地震関連情報",
     "municipality": "氷川町",
-    "date": "2026-10-29",
-    "retrievedAt": "2026-10-29T10:29:44.503Z"
+    "date": "2026-11-01",
+    "retrievedAt": "2026-11-01T00:29:45.491Z"
   },
   "https://www.city.kumamoto.jp/kiji00373157/index.html": {
     "id": "kumamoto-20261020-6d24c9ba",
@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-10-24",
-    "retrievedAt": "2026-10-31T19:41:48.191Z"
+    "retrievedAt": "2026-11-01T00:29:47.474Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
