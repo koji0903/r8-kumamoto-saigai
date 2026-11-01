@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-01T15:39:42+09:00",
+  "generatedAt": "2026-11-02T01:26:49+09:00",
   "summary": {
-    "unresolved": 107,
+    "unresolved": 108,
     "actionRequired": 53,
     "needsReviewEntities": 0
   },
@@ -3624,6 +3624,41 @@
           "sourceLinkId": "source_link_application_repair_uto_office_candidate",
           "claimType": "application_office",
           "lastVerifiedAt": "2026-08-09T07:20:05+09:00"
+        }
+      ],
+      "impactedEntities": [],
+      "resolved": false,
+      "reviewedAt": null,
+      "reviewedBy": null,
+      "resolutionNotes": null
+    },
+    {
+      "id": "source_change_20261102012649_source_cabinet_notifications_r8_kumamoto_earthquake",
+      "fingerprint": "source_cabinet_notifications_r8_kumamoto_earthquake:content_changed:sha256:b263e3a7896999a985ba63f0d84aecfe303a761ff4e7979f951619ac9bf0a8da",
+      "sourceId": "source_cabinet_notifications_r8_kumamoto_earthquake",
+      "sourceTitle": "内閣府防災担当からの各都道府県等への通知等",
+      "sourceUrl": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
+      "eventType": "content_changed",
+      "detectedAt": "2026-11-02T01:26:49+09:00",
+      "previousHash": "sha256:5785ced4d0c35fd2a7803ce6b850ea5782657b349428751beaa06b4868273435",
+      "currentHash": "sha256:b263e3a7896999a985ba63f0d84aecfe303a761ff4e7979f951619ac9bf0a8da",
+      "previousUrl": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
+      "currentUrl": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
+      "claimTypes": [
+        "other"
+      ],
+      "risk": "low",
+      "impactAssessment": "UNKNOWN",
+      "operationalStatus": "WARNING",
+      "relatedProgramIds": [],
+      "municipalityIds": [],
+      "relatedEntities": [
+        {
+          "entityType": "disaster",
+          "entityId": "disaster_2026_kumamoto_earthquake",
+          "sourceLinkId": "source_link_disaster_official_notifications_cabinet",
+          "claimType": "other",
+          "lastVerifiedAt": null
         }
       ],
       "impactedEntities": [],

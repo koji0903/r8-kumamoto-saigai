@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-01T06:39:58.134Z",
+  "generatedAt": "2026-11-01T16:27:11.428Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-01T06:21:22.230Z",
-    "inputCount": 819,
-    "classifiedPageCount": 702,
+    "generatedAt": "2026-11-01T16:07:16.345Z",
+    "inputCount": 818,
+    "classifiedPageCount": 701,
     "displayCandidateCount": 597,
     "deltaFromPrevious": {
       "inputCount": -1,
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 44,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -61,13 +61,13 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 16,
-        "displayCandidates": 14,
+        "classified": 14,
+        "displayCandidates": 13,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 121,
-        "displayCandidates": 102,
+        "classified": 120,
+        "displayCandidates": 101,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -101,8 +101,8 @@
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 22,
-        "displayCandidates": 13,
+        "classified": 21,
+        "displayCandidates": 12,
         "fallback": true
       },
       "municipality_kashima": {
@@ -116,8 +116,8 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 32,
-        "displayCandidates": 27,
+        "classified": 37,
+        "displayCandidates": 32,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -131,8 +131,8 @@
         "fallback": true
       },
       "municipality_tsunagi": {
-        "classified": 10,
-        "displayCandidates": 8,
+        "classified": 8,
+        "displayCandidates": 6,
         "fallback": true
       }
     },
@@ -144,52 +144,52 @@
         "low": 40
       },
       "money": {
-        "total": 251,
-        "high": 52,
-        "medium": 71,
-        "low": 128
+        "total": 250,
+        "high": 53,
+        "medium": 72,
+        "low": 125
       },
       "documents": {
-        "total": 169,
+        "total": 170,
         "high": 38,
-        "medium": 33,
+        "medium": 34,
         "low": 98
       },
       "health_care": {
-        "total": 57,
+        "total": 56,
         "high": 19,
-        "medium": 38,
+        "medium": 37,
         "low": 0
       },
       "family_education": {
-        "total": 73,
+        "total": 74,
         "high": 11,
-        "medium": 27,
+        "medium": 28,
         "low": 35
       },
       "work_business": {
-        "total": 73,
-        "high": 16,
+        "total": 74,
+        "high": 17,
         "medium": 57,
         "low": 0
       },
       "agriculture_fishery": {
-        "total": 19,
+        "total": 18,
         "high": 3,
-        "medium": 16,
+        "medium": 15,
         "low": 0
       },
       "daily_life": {
-        "total": 204,
-        "high": 55,
-        "medium": 147,
+        "total": 202,
+        "high": 54,
+        "medium": 146,
         "low": 2
       }
     },
     "confidence": {
       "high": 256,
       "medium": 341,
-      "low": 105
+      "low": 104
     },
     "unclassifiedCount": 11,
     "excludedCount": 40,
@@ -203,7 +203,7 @@
         "title": "内閣府防災担当からの各都道府県等への通知等",
         "url": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
         "previousHash": "sha256:f0a3a40563c1901508dd1173a2d42577ffcbbbf711ab728034f5079ce665d113",
-        "currentHash": "sha256:5785ced4d0c35fd2a7803ce6b850ea5782657b349428751beaa06b4868273435",
+        "currentHash": "sha256:b263e3a7896999a985ba63f0d84aecfe303a761ff4e7979f951619ac9bf0a8da",
         "verificationStatus": "needs_review"
       }
     },
@@ -393,11 +393,6 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_hikawa",
       "count": 2
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_ashikita",
-      "count": 3
     }
   ],
   "strictSources": {
@@ -409,7 +404,7 @@
         "title": "内閣府防災担当からの各都道府県等への通知等",
         "url": "https://www.bousai.go.jp/updates/r8kumamoto_jishin/tsuuchi.html",
         "previousHash": "sha256:f0a3a40563c1901508dd1173a2d42577ffcbbbf711ab728034f5079ce665d113",
-        "currentHash": "sha256:5785ced4d0c35fd2a7803ce6b850ea5782657b349428751beaa06b4868273435",
+        "currentHash": "sha256:b263e3a7896999a985ba63f0d84aecfe303a761ff4e7979f951619ac9bf0a8da",
         "verificationStatus": "needs_review"
       },
       {

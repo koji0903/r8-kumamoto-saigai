@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-01T06:39:35.261Z",
-  "officialCheckedAt": "11/1 15:39",
+  "retrievedAt": "2026-11-01T16:26:34.614Z",
+  "officialCheckedAt": "11/2 01:26",
   "siteTopics": [
     {
       "date": "2026-10-30",
@@ -96,6 +96,36 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "災害時の一時預かり保育について",
+      "url": "https://www.city.kumamoto.jp/kiji00372368/index.html",
+      "date": "2026-11-02",
+      "time": "08:30",
+      "category": "施設・学校",
+      "municipality": "熊本市",
+      "archiveId": "kumamoto-20261102-f3640958",
+      "archiveUrl": "official-articles/kumamoto-20261102-f3640958.html"
+    },
+    {
+      "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
+      "date": "2026-11-02",
+      "time": null,
+      "category": "ごみ・生活",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261102-77fb3760",
+      "archiveUrl": "official-articles/uki-20261102-77fb3760.html"
+    },
+    {
+      "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
+      "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
+      "date": "2026-11-02",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "甲佐町",
+      "archiveId": "kosa-20261102-b8cd69a7",
+      "archiveUrl": "official-articles/kosa-20261102-b8cd69a7.html"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-11-01",
@@ -116,16 +146,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/hikawa-20261101-edaedf97.html"
     },
     {
-      "title": "令和8年熊本地震による事業所の災害ごみ処分費の減免について",
-      "url": "https://www.city.kumamoto.jp/kiji00372073/index.html",
-      "date": "2026-11-01",
-      "time": "00:00",
-      "category": "ごみ・生活",
-      "municipality": "熊本市",
-      "archiveId": "kumamoto-20261101-758e71aa",
-      "archiveUrl": "official-articles/kumamoto-20261101-758e71aa.html"
-    },
-    {
       "title": "【令和8年11月30日受付終了】令和8年熊本地震に伴う「り災証明書...",
       "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/125/6030.html",
       "date": "2026-11-01",
@@ -134,16 +154,6 @@ window.HOME_TOPICS = {
       "municipality": "嘉島町",
       "archiveId": "kashima-20261101-83ebb455",
       "archiveUrl": "official-articles/kashima-20261101-83ebb455.html"
-    },
-    {
-      "title": "令和8年熊本地震災害支援情報まとめ(11/1更新)",
-      "url": "https://www.town.kosa.lg.jp/q/aview/55/13531.html",
-      "date": "2026-11-01",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "甲佐町",
-      "archiveId": "kosa-20261101-32aecc34",
-      "archiveUrl": "official-articles/kosa-20261101-32aecc34.html"
     },
     {
       "title": "上水道給水工事における本管穿孔工事立会申請様式について",
@@ -166,16 +176,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/amakusa-20261031-268ac6f3.html"
     },
     {
-      "title": "2026年10月30日 令和8年熊本地震 関連情報 （10月30日19時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-10-30",
-      "time": "19:00",
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261030-7d9d4e13",
-      "archiveUrl": "official-articles/uki-20261030-7d9d4e13.html"
-    },
-    {
       "title": "令和８年熊本地震に関する支援等",
       "url": "https://localcms.city.minamata.lg.jp/page4805.html?type=top",
       "date": "2026-10-30",
@@ -194,16 +194,6 @@ window.HOME_TOPICS = {
       "municipality": "宇土市",
       "archiveId": "uto-20261030-25bfd74e",
       "archiveUrl": "official-articles/uto-20261030-25bfd74e.html"
-    },
-    {
-      "title": "令和8年熊本地震営農再開支援事業(ハード事業)について",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/44/23626.html",
-      "date": "2026-10-30",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "上天草市",
-      "archiveId": "kamiamakusa-20261030-c3f6c3ca",
-      "archiveUrl": "official-articles/kamiamakusa-20261030-c3f6c3ca.html"
     },
     {
       "title": "被災された方への入浴支援について（町・県事業）",
@@ -234,6 +224,16 @@ window.HOME_TOPICS = {
       "municipality": "菊陽町",
       "archiveId": "kikuyo-20261028-600d71c4",
       "archiveUrl": "official-articles/kikuyo-20261028-600d71c4.html"
+    },
+    {
+      "title": "新たなバス共通定期サービス開始に伴う運賃設定に関する意見を募...",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/498/23715.html",
+      "date": "2026-10-28",
+      "time": null,
+      "category": "交通",
+      "municipality": "上天草市",
+      "archiveId": "kamiamakusa-20261028-966415d4",
+      "archiveUrl": "official-articles/kamiamakusa-20261028-966415d4.html"
     },
     {
       "title": "国民健康保険自己負担額の還付手続きについて【令和８年熊本地震】",

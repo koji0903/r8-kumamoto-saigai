@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-01T06:21:22.230Z",
+  "generatedAt": "2026-11-01T16:07:16.345Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 819,
+  "inputCount": 818,
   "displayCandidateCount": 597,
-  "classifiedPageCount": 702,
+  "classifiedPageCount": 701,
   "categoryReport": {
     "home": {
       "total": 184,
@@ -13,45 +13,45 @@
       "low": 40
     },
     "money": {
-      "total": 251,
-      "high": 52,
-      "medium": 71,
-      "low": 128
+      "total": 250,
+      "high": 53,
+      "medium": 72,
+      "low": 125
     },
     "documents": {
-      "total": 169,
+      "total": 170,
       "high": 38,
-      "medium": 33,
+      "medium": 34,
       "low": 98
     },
     "health_care": {
-      "total": 57,
+      "total": 56,
       "high": 19,
-      "medium": 38,
+      "medium": 37,
       "low": 0
     },
     "family_education": {
-      "total": 73,
+      "total": 74,
       "high": 11,
-      "medium": 27,
+      "medium": 28,
       "low": 35
     },
     "work_business": {
-      "total": 73,
-      "high": 16,
+      "total": 74,
+      "high": 17,
       "medium": 57,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 19,
+      "total": 18,
       "high": 3,
-      "medium": 16,
+      "medium": 15,
       "low": 0
     },
     "daily_life": {
-      "total": 204,
-      "high": 55,
-      "medium": 147,
+      "total": 202,
+      "high": 54,
+      "medium": 146,
       "low": 2
     }
   },
@@ -87,13 +87,13 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 16,
-      "displayCandidates": 14,
+      "classified": 14,
+      "displayCandidates": 13,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 121,
-      "displayCandidates": 102,
+      "classified": 120,
+      "displayCandidates": 101,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -127,8 +127,8 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 22,
-      "displayCandidates": 13,
+      "classified": 21,
+      "displayCandidates": 12,
       "fallback": true
     },
     "municipality_kashima": {
@@ -142,8 +142,8 @@
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 32,
-      "displayCandidates": 27,
+      "classified": 37,
+      "displayCandidates": 32,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -157,15 +157,15 @@
       "fallback": true
     },
     "municipality_tsunagi": {
-      "classified": 10,
-      "displayCandidates": 8,
+      "classified": 8,
+      "displayCandidates": 6,
       "fallback": true
     }
   },
   "confidence": {
     "high": 256,
     "medium": 341,
-    "low": 105
+    "low": 104
   },
   "unclassifiedCount": 11,
   "unclassifiedItems": [
@@ -712,7 +712,7 @@
     "non_official_url": 2,
     "past_disaster_excluded": 1
   },
-  "warningCount": 27,
+  "warningCount": 26,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -843,13 +843,8 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_hikawa",
       "count": 2
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_ashikita",
-      "count": 3
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 703
+  "previousClassifiedPageCount": 702
 }

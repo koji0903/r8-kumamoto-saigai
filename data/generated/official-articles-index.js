@@ -233,12 +233,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-20T14:39:30.526Z"
   },
   "https://www.town.kosa.lg.jp/q/aview/51/13583.html": {
-    "id": "kosa-20261025-b8cd69a7",
-    "htmlPath": "official-articles/kosa-20261025-b8cd69a7.html",
+    "id": "kosa-20261102-b8cd69a7",
+    "htmlPath": "official-articles/kosa-20261102-b8cd69a7.html",
     "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
     "municipality": "甲佐町",
-    "date": "2026-10-25",
-    "retrievedAt": "2026-10-24T16:21:45.861Z"
+    "date": "2026-11-02",
+    "retrievedAt": "2026-11-01T16:26:42.082Z"
   },
   "https://www.city.amakusa.kumamoto.jp/bousai/kiji00314592/index.html": {
     "id": "amakusa-20261021-6f62fce2",
@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-10-24",
-    "retrievedAt": "2026-11-01T06:39:39.673Z"
+    "retrievedAt": "2026-11-01T16:26:45.360Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
@@ -791,5 +791,21 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "甲佐町",
     "date": "2026-11-01",
     "retrievedAt": "2026-11-01T06:39:38.247Z"
+  },
+  "https://www.city.kumamoto.jp/kiji00372368/index.html": {
+    "id": "kumamoto-20261102-f3640958",
+    "htmlPath": "official-articles/kumamoto-20261102-f3640958.html",
+    "title": "災害時の一時預かり保育について",
+    "municipality": "熊本市",
+    "date": "2026-11-02",
+    "retrievedAt": "2026-11-01T16:26:38.056Z"
+  },
+  "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719": {
+    "id": "uki-20261102-77fb3760",
+    "htmlPath": "official-articles/uki-20261102-77fb3760.html",
+    "title": "令和8年熊本地震により各家庭から発生した災害ごみの搬入について",
+    "municipality": "宇城市",
+    "date": "2026-11-02",
+    "retrievedAt": "2026-11-01T16:26:39.993Z"
   }
 };
