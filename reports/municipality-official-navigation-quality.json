@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T16:07:16.345Z",
+  "generatedAt": "2026-11-01T22:10:24.968Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 818,
@@ -7,14 +7,14 @@
   "classifiedPageCount": 701,
   "categoryReport": {
     "home": {
-      "total": 184,
+      "total": 183,
       "high": 74,
-      "medium": 70,
+      "medium": 69,
       "low": 40
     },
     "money": {
-      "total": 250,
-      "high": 53,
+      "total": 251,
+      "high": 54,
       "medium": 72,
       "low": 125
     },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 140,
-      "displayCandidates": 114,
+      "classified": 141,
+      "displayCandidates": 115,
       "fallback": true
     },
     "municipality_minamata": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 120,
-      "displayCandidates": 101,
+      "classified": 119,
+      "displayCandidates": 100,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 256,
-    "medium": 341,
+    "high": 257,
+    "medium": 340,
     "low": 104
   },
   "unclassifiedCount": 11,
@@ -846,5 +846,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 702
+  "previousClassifiedPageCount": 701
 }
