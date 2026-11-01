@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-01T00:29:42.629Z",
-  "officialCheckedAt": "11/1 09:29",
+  "retrievedAt": "2026-11-01T06:39:35.261Z",
+  "officialCheckedAt": "11/1 15:39",
   "siteTopics": [
     {
       "date": "2026-10-30",
@@ -99,7 +99,7 @@ window.HOME_TOPICS = {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-11-01",
-      "time": "08:30",
+      "time": "12:00",
       "category": "その他",
       "municipality": "八代市",
       "archiveId": "yatsushiro-20261101-bad1de7e",
@@ -136,14 +136,14 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/kashima-20261101-83ebb455.html"
     },
     {
-      "title": "災害ごみの仮置き場への持ち込みについて(令和8年11月1日更新)",
-      "url": "https://www.town.kosa.lg.jp/q/aview/55/13515.html",
+      "title": "令和8年熊本地震災害支援情報まとめ(11/1更新)",
+      "url": "https://www.town.kosa.lg.jp/q/aview/55/13531.html",
       "date": "2026-11-01",
       "time": null,
-      "category": "ごみ・生活",
+      "category": "支援・制度",
       "municipality": "甲佐町",
-      "archiveId": "kosa-20261101-765fece1",
-      "archiveUrl": "official-articles/kosa-20261101-765fece1.html"
+      "archiveId": "kosa-20261101-32aecc34",
+      "archiveUrl": "official-articles/kosa-20261101-32aecc34.html"
     },
     {
       "title": "上水道給水工事における本管穿孔工事立会申請様式について",

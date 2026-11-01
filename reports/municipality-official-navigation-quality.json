@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-01T00:11:38.928Z",
+  "generatedAt": "2026-11-01T06:21:22.230Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 820,
-  "displayCandidateCount": 598,
-  "classifiedPageCount": 703,
+  "inputCount": 819,
+  "displayCandidateCount": 597,
+  "classifiedPageCount": 702,
   "categoryReport": {
     "home": {
       "total": 184,
@@ -13,10 +13,10 @@
       "low": 40
     },
     "money": {
-      "total": 252,
+      "total": 251,
       "high": 52,
       "medium": 71,
-      "low": 129
+      "low": 128
     },
     "documents": {
       "total": 169,
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 205,
+      "total": 204,
       "high": 55,
-      "medium": 148,
+      "medium": 147,
       "low": 2
     }
   },
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 62,
-      "displayCandidates": 57,
+      "classified": 61,
+      "displayCandidates": 56,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 256,
-    "medium": 342,
+    "medium": 341,
     "low": 105
   },
   "unclassifiedCount": 11,
@@ -343,7 +343,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -712,7 +712,7 @@
     "non_official_url": 2,
     "past_disaster_excluded": 1
   },
-  "warningCount": 26,
+  "warningCount": 27,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -843,8 +843,13 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_hikawa",
       "count": 2
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_ashikita",
+      "count": 3
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 702
+  "previousClassifiedPageCount": 703
 }

@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-01T00:30:08.286Z",
+  "generatedAt": "2026-11-01T06:39:58.134Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-01T00:11:38.928Z",
-    "inputCount": 820,
-    "classifiedPageCount": 703,
-    "displayCandidateCount": 598,
+    "generatedAt": "2026-11-01T06:21:22.230Z",
+    "inputCount": 819,
+    "classifiedPageCount": 702,
+    "displayCandidateCount": 597,
     "deltaFromPrevious": {
-      "inputCount": 1,
-      "classifiedPageCount": 1,
+      "inputCount": -1,
+      "classifiedPageCount": -1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 38,
+      "ageHours": 44,
       "limitHours": 336
     }
   },
@@ -56,8 +56,8 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 62,
-        "displayCandidates": 57,
+        "classified": 61,
+        "displayCandidates": 56,
         "fallback": true
       },
       "municipality_kamiamakusa": {
@@ -144,10 +144,10 @@
         "low": 40
       },
       "money": {
-        "total": 252,
+        "total": 251,
         "high": 52,
         "medium": 71,
-        "low": 129
+        "low": 128
       },
       "documents": {
         "total": 169,
@@ -180,15 +180,15 @@
         "low": 0
       },
       "daily_life": {
-        "total": 205,
+        "total": 204,
         "high": 55,
-        "medium": 148,
+        "medium": 147,
         "low": 2
       }
     },
     "confidence": {
       "high": 256,
-      "medium": 342,
+      "medium": 341,
       "low": 105
     },
     "unclassifiedCount": 11,
@@ -393,6 +393,11 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_hikawa",
       "count": 2
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_ashikita",
+      "count": 3
     }
   ],
   "strictSources": {
