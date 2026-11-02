@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-10-24",
-    "retrievedAt": "2026-11-02T06:41:20.441Z"
+    "retrievedAt": "2026-11-02T19:52:39.814Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
@@ -529,12 +529,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T00:26:43.381Z"
   },
   "https://www.city.kumamoto.jp/kiji00372143/index.html": {
-    "id": "kumamoto-20261026-0f9bc22b",
-    "htmlPath": "official-articles/kumamoto-20261026-0f9bc22b.html",
+    "id": "kumamoto-20261102-0f9bc22b",
+    "htmlPath": "official-articles/kumamoto-20261102-0f9bc22b.html",
     "title": "＜2026年7月熊本地震＞ 災害救助法 「住家の緊急の修理」制度の案内",
     "municipality": "熊本市",
-    "date": "2026-10-26",
-    "retrievedAt": "2026-10-26T13:34:09.413Z"
+    "date": "2026-11-02",
+    "retrievedAt": "2026-11-02T19:52:35.074Z"
   },
   "https://www.town.mashiki.lg.jp/kinkyu.html": {
     "id": "mashiki-20261026-d37a53b5",
@@ -870,6 +870,22 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "嘉島町指定給水装置工事事業者一覧(R8.11.1時点)(PDF 約156KB)",
     "municipality": "嘉島町",
     "date": "2026-11-01",
-    "retrievedAt": "2026-11-02T06:41:19.356Z"
+    "retrievedAt": "2026-11-02T19:52:38.132Z"
+  },
+  "https://www.town.hikawa.kumamoto.jp/kiji0036892/index.html": {
+    "id": "hikawa-20261102-a9ad6c43",
+    "htmlPath": "official-articles/hikawa-20261102-a9ad6c43.html",
+    "title": "令和8年熊本地震に伴う農地等災害復旧事業におけるコンクリート畦畔の取り扱い変更について",
+    "municipality": "氷川町",
+    "date": "2026-11-02",
+    "retrievedAt": "2026-11-02T19:52:32.612Z"
+  },
+  "https://www.town.mashiki.lg.jp/kiji0038243/index.html": {
+    "id": "mashiki-20261102-463614c6",
+    "htmlPath": "official-articles/mashiki-20261102-463614c6.html",
+    "title": "令和８年熊本地震義援金（県配分）の受け付けについて",
+    "municipality": "益城町",
+    "date": "2026-11-02",
+    "retrievedAt": "2026-11-02T19:52:37.159Z"
   }
 };

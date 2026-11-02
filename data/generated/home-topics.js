@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-02T06:41:00.630Z",
-  "officialCheckedAt": "11/2 15:41",
+  "retrievedAt": "2026-11-02T19:52:29.518Z",
+  "officialCheckedAt": "11/3 04:52",
   "siteTopics": [
     {
       "date": "2026-10-30",
@@ -96,14 +96,34 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震に伴う農地等災害復旧事業におけるコンクリート畦畔の取り扱い変更について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036892/index.html",
+      "date": "2026-11-02",
+      "time": "20:52",
+      "category": "その他",
+      "municipality": "氷川町",
+      "archiveId": "hikawa-20261102-a9ad6c43",
+      "archiveUrl": "official-articles/hikawa-20261102-a9ad6c43.html"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-11-02",
-      "time": "15:23",
+      "time": "17:14",
       "category": "その他",
       "municipality": "八代市",
       "archiveId": "yatsushiro-20261102-bad1de7e",
       "archiveUrl": "official-articles/yatsushiro-20261102-bad1de7e.html"
+    },
+    {
+      "title": "＜2026年7月熊本地震＞ 災害救助法 「住家の緊急の修理」制度の案内",
+      "url": "https://www.city.kumamoto.jp/kiji00372143/index.html",
+      "date": "2026-11-02",
+      "time": "15:31",
+      "category": "住まい・証明",
+      "municipality": "熊本市",
+      "archiveId": "kumamoto-20261102-0f9bc22b",
+      "archiveUrl": "official-articles/kumamoto-20261102-0f9bc22b.html"
     },
     {
       "title": "2026年11月2日 令和8年熊本地震 関連情報 （11月2日14時30分更新）",
@@ -116,16 +136,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/uki-20261102-7d9d4e13.html"
     },
     {
-      "title": "令和8年熊本地震関連情報",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
-      "date": "2026-11-02",
-      "time": "13:37",
-      "category": "その他",
-      "municipality": "氷川町",
-      "archiveId": "hikawa-20261102-edaedf97",
-      "archiveUrl": "official-articles/hikawa-20261102-edaedf97.html"
-    },
-    {
       "title": "【九州財務局】住宅再建無料相談会開催のお知らせ",
       "url": "https://www.town.mifune.kumamoto.jp/page9513.html",
       "date": "2026-11-02",
@@ -134,16 +144,6 @@ window.HOME_TOPICS = {
       "municipality": "御船町",
       "archiveId": "mifune-20261102-fdbe6619",
       "archiveUrl": "official-articles/mifune-20261102-fdbe6619.html"
-    },
-    {
-      "title": "【11月21日】停電作業に伴う救急外来診療について",
-      "url": "https://www.city.kumamoto.jp/kiji00373649/index.html",
-      "date": "2026-11-02",
-      "time": "11:30",
-      "category": "ライフライン",
-      "municipality": "熊本市",
-      "archiveId": "kumamoto-20261102-d0cda1ee",
-      "archiveUrl": "official-articles/kumamoto-20261102-d0cda1ee.html"
     },
     {
       "title": "【令和8年10月30日（金曜日）受付終了】り災証明書の申請について（令和8年熊本地震）",
@@ -166,7 +166,7 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/kikuchi-20261102-dc991ca9.html"
     },
     {
-      "title": "令和８年熊本地震に係る建設型応急住宅の入居者募集（第3回）について 2026年11月02日",
+      "title": "1 令和８年熊本地震に係る建設型応急住宅の入居者募集（第3回）について 2026年11月02日",
       "url": "https://www.city.uto.lg.jp/article/view/1007/16820.html",
       "date": "2026-11-02",
       "time": null,
@@ -186,14 +186,14 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/kamiamakusa-20261102-3b149b73.html"
     },
     {
-      "title": "【事業者向け】セーフティネット保証４号の認定について（令和８年熊本地震関連）",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038086/index.html",
+      "title": "令和８年熊本地震義援金（県配分）の受け付けについて",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038243/index.html",
       "date": "2026-11-02",
       "time": null,
-      "category": "その他",
+      "category": "支援・制度",
       "municipality": "益城町",
-      "archiveId": "mashiki-20261102-bc291ab9",
-      "archiveUrl": "official-articles/mashiki-20261102-bc291ab9.html"
+      "archiveId": "mashiki-20261102-463614c6",
+      "archiveUrl": "official-articles/mashiki-20261102-463614c6.html"
     },
     {
       "title": "令和8年熊本地震災害支援情報まとめ(11/2更新)",

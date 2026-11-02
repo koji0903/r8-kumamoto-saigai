@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-02T06:41:40.191Z",
+  "generatedAt": "2026-11-02T19:52:59.179Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-02T06:23:30.955Z",
-    "inputCount": 836,
-    "classifiedPageCount": 716,
-    "displayCandidateCount": 608,
+    "generatedAt": "2026-11-02T19:35:20.591Z",
+    "inputCount": 838,
+    "classifiedPageCount": 718,
+    "displayCandidateCount": 611,
     "deltaFromPrevious": {
-      "inputCount": 18,
-      "classifiedPageCount": 15,
-      "unclassifiedCount": 2
+      "inputCount": 2,
+      "classifiedPageCount": 2,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -31,13 +31,13 @@
     "municipalityFallbackRate": "21/21",
     "municipalityReport": {
       "municipality_kumamoto": {
-        "classified": 71,
-        "displayCandidates": 62,
+        "classified": 72,
+        "displayCandidates": 63,
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 141,
-        "displayCandidates": 115,
+        "classified": 140,
+        "displayCandidates": 114,
         "fallback": true
       },
       "municipality_minamata": {
@@ -116,13 +116,13 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 32,
-        "displayCandidates": 27,
+        "classified": 33,
+        "displayCandidates": 28,
         "fallback": true
       },
       "municipality_hikawa": {
-        "classified": 57,
-        "displayCandidates": 48,
+        "classified": 58,
+        "displayCandidates": 50,
         "fallback": true
       },
       "municipality_ashikita": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 188,
+        "total": 191,
         "high": 75,
-        "medium": 72,
-        "low": 41
+        "medium": 74,
+        "low": 42
       },
       "money": {
-        "total": 261,
-        "high": 57,
+        "total": 259,
+        "high": 56,
         "medium": 71,
-        "low": 133
+        "low": 132
       },
       "documents": {
-        "total": 172,
-        "high": 39,
+        "total": 175,
+        "high": 40,
         "medium": 34,
-        "low": 99
+        "low": 101
       },
       "health_care": {
         "total": 56,
@@ -174,9 +174,9 @@
         "low": 0
       },
       "agriculture_fishery": {
-        "total": 19,
+        "total": 20,
         "high": 3,
-        "medium": 16,
+        "medium": 17,
         "low": 0
       },
       "daily_life": {
@@ -188,8 +188,8 @@
     },
     "confidence": {
       "high": 265,
-      "medium": 343,
-      "low": 108
+      "medium": 346,
+      "low": 107
     },
     "unclassifiedCount": 13,
     "excludedCount": 39,
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:896b4341e7abc32fe6c3c154663d9b7a8b25bc86509b4d28e378caf7328d750b",
+        "currentHash": "sha256:e9851b99183cb3c9bc034e47265b057ab23e43e2db1f996040e2f8fd2f4a8c14",
         "verificationStatus": "needs_review"
       }
     },
@@ -236,7 +236,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:57e60f27761418967d21e995d69187c4a1e36cf5ef8cd1ec3cfc9da6afafa51c",
+        "currentHash": "sha256:7f367cfde383624843fd9e3ff0e4843bb9be144e611404a3b509675c7511595d",
         "verificationStatus": "needs_review"
       }
     },
@@ -272,7 +272,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kumamoto",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -382,7 +382,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 16
+      "count": 12
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -420,7 +420,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:896b4341e7abc32fe6c3c154663d9b7a8b25bc86509b4d28e378caf7328d750b",
+        "currentHash": "sha256:e9851b99183cb3c9bc034e47265b057ab23e43e2db1f996040e2f8fd2f4a8c14",
         "verificationStatus": "needs_review"
       },
       {
@@ -428,7 +428,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:57e60f27761418967d21e995d69187c4a1e36cf5ef8cd1ec3cfc9da6afafa51c",
+        "currentHash": "sha256:7f367cfde383624843fd9e3ff0e4843bb9be144e611404a3b509675c7511595d",
         "verificationStatus": "needs_review"
       },
       {
