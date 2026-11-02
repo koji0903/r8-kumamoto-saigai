@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-01T22:30:44.897Z",
+  "generatedAt": "2026-11-02T06:41:40.191Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-01T22:10:24.968Z",
-    "inputCount": 818,
-    "classifiedPageCount": 701,
-    "displayCandidateCount": 597,
+    "generatedAt": "2026-11-02T06:23:30.955Z",
+    "inputCount": 836,
+    "classifiedPageCount": 716,
+    "displayCandidateCount": 608,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
-      "unclassifiedCount": 0
+      "inputCount": 18,
+      "classifiedPageCount": 15,
+      "unclassifiedCount": 2
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 6,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -31,8 +31,8 @@
     "municipalityFallbackRate": "21/21",
     "municipalityReport": {
       "municipality_kumamoto": {
-        "classified": 69,
-        "displayCandidates": 60,
+        "classified": 71,
+        "displayCandidates": 62,
         "fallback": true
       },
       "municipality_yatsushiro": {
@@ -46,13 +46,13 @@
         "fallback": true
       },
       "municipality_yamaga": {
-        "classified": 11,
-        "displayCandidates": 10,
+        "classified": 12,
+        "displayCandidates": 11,
         "fallback": true
       },
       "municipality_kikuchi": {
-        "classified": 12,
-        "displayCandidates": 10,
+        "classified": 11,
+        "displayCandidates": 9,
         "fallback": true
       },
       "municipality_uto": {
@@ -61,18 +61,18 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 14,
-        "displayCandidates": 13,
+        "classified": 24,
+        "displayCandidates": 20,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 119,
-        "displayCandidates": 100,
+        "classified": 124,
+        "displayCandidates": 105,
         "fallback": true
       },
       "municipality_amakusa": {
-        "classified": 23,
-        "displayCandidates": 21,
+        "classified": 24,
+        "displayCandidates": 22,
         "fallback": true
       },
       "municipality_koshi": {
@@ -96,13 +96,13 @@
         "fallback": true
       },
       "municipality_nishihara": {
-        "classified": 6,
-        "displayCandidates": 6,
+        "classified": 5,
+        "displayCandidates": 5,
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 21,
-        "displayCandidates": 12,
+        "classified": 22,
+        "displayCandidates": 13,
         "fallback": true
       },
       "municipality_kashima": {
@@ -111,17 +111,17 @@
         "fallback": true
       },
       "municipality_mashiki": {
-        "classified": 50,
-        "displayCandidates": 47,
+        "classified": 51,
+        "displayCandidates": 48,
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 37,
-        "displayCandidates": 32,
+        "classified": 32,
+        "displayCandidates": 27,
         "fallback": true
       },
       "municipality_hikawa": {
-        "classified": 56,
+        "classified": 57,
         "displayCandidates": 48,
         "fallback": true
       },
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 183,
-        "high": 74,
-        "medium": 69,
-        "low": 40
+        "total": 188,
+        "high": 75,
+        "medium": 72,
+        "low": 41
       },
       "money": {
-        "total": 251,
-        "high": 54,
-        "medium": 72,
-        "low": 125
+        "total": 261,
+        "high": 57,
+        "medium": 71,
+        "low": 133
       },
       "documents": {
-        "total": 170,
-        "high": 38,
+        "total": 172,
+        "high": 39,
         "medium": 34,
-        "low": 98
+        "low": 99
       },
       "health_care": {
         "total": 56,
@@ -169,30 +169,30 @@
       },
       "work_business": {
         "total": 74,
-        "high": 17,
-        "medium": 57,
+        "high": 18,
+        "medium": 56,
         "low": 0
       },
       "agriculture_fishery": {
-        "total": 18,
+        "total": 19,
         "high": 3,
-        "medium": 15,
+        "medium": 16,
         "low": 0
       },
       "daily_life": {
-        "total": 202,
-        "high": 54,
-        "medium": 146,
+        "total": 206,
+        "high": 55,
+        "medium": 149,
         "low": 2
       }
     },
     "confidence": {
-      "high": 257,
-      "medium": 340,
-      "low": 104
+      "high": 265,
+      "medium": 343,
+      "low": 108
     },
-    "unclassifiedCount": 11,
-    "excludedCount": 40,
+    "unclassifiedCount": 13,
+    "excludedCount": 39,
     "overrideCount": 2
   },
   "actions": [
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:7552923fac4659c1b25cd1aa8236484d511a205694315d60f403542a1d9598eb",
+        "currentHash": "sha256:896b4341e7abc32fe6c3c154663d9b7a8b25bc86509b4d28e378caf7328d750b",
         "verificationStatus": "needs_review"
       }
     },
@@ -272,7 +272,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kumamoto",
-      "count": 1
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -332,7 +332,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -342,7 +342,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 12
+      "count": 11
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -420,7 +420,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:7552923fac4659c1b25cd1aa8236484d511a205694315d60f403542a1d9598eb",
+        "currentHash": "sha256:896b4341e7abc32fe6c3c154663d9b7a8b25bc86509b4d28e378caf7328d750b",
         "verificationStatus": "needs_review"
       },
       {

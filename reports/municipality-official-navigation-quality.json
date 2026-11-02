@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-11-01T22:10:24.968Z",
+  "generatedAt": "2026-11-02T06:23:30.955Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 818,
-  "displayCandidateCount": 597,
-  "classifiedPageCount": 701,
+  "inputCount": 836,
+  "displayCandidateCount": 608,
+  "classifiedPageCount": 716,
   "categoryReport": {
     "home": {
-      "total": 183,
-      "high": 74,
-      "medium": 69,
-      "low": 40
+      "total": 188,
+      "high": 75,
+      "medium": 72,
+      "low": 41
     },
     "money": {
-      "total": 251,
-      "high": 54,
-      "medium": 72,
-      "low": 125
+      "total": 261,
+      "high": 57,
+      "medium": 71,
+      "low": 133
     },
     "documents": {
-      "total": 170,
-      "high": 38,
+      "total": 172,
+      "high": 39,
       "medium": 34,
-      "low": 98
+      "low": 99
     },
     "health_care": {
       "total": 56,
@@ -38,27 +38,27 @@
     },
     "work_business": {
       "total": 74,
-      "high": 17,
-      "medium": 57,
+      "high": 18,
+      "medium": 56,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 18,
+      "total": 19,
       "high": 3,
-      "medium": 15,
+      "medium": 16,
       "low": 0
     },
     "daily_life": {
-      "total": 202,
-      "high": 54,
-      "medium": 146,
+      "total": 206,
+      "high": 55,
+      "medium": 149,
       "low": 2
     }
   },
   "municipalityReport": {
     "municipality_kumamoto": {
-      "classified": 69,
-      "displayCandidates": 60,
+      "classified": 71,
+      "displayCandidates": 62,
       "fallback": true
     },
     "municipality_yatsushiro": {
@@ -72,13 +72,13 @@
       "fallback": true
     },
     "municipality_yamaga": {
-      "classified": 11,
-      "displayCandidates": 10,
+      "classified": 12,
+      "displayCandidates": 11,
       "fallback": true
     },
     "municipality_kikuchi": {
-      "classified": 12,
-      "displayCandidates": 10,
+      "classified": 11,
+      "displayCandidates": 9,
       "fallback": true
     },
     "municipality_uto": {
@@ -87,18 +87,18 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 14,
-      "displayCandidates": 13,
+      "classified": 24,
+      "displayCandidates": 20,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 119,
-      "displayCandidates": 100,
+      "classified": 124,
+      "displayCandidates": 105,
       "fallback": true
     },
     "municipality_amakusa": {
-      "classified": 23,
-      "displayCandidates": 21,
+      "classified": 24,
+      "displayCandidates": 22,
       "fallback": true
     },
     "municipality_koshi": {
@@ -122,13 +122,13 @@
       "fallback": true
     },
     "municipality_nishihara": {
-      "classified": 6,
-      "displayCandidates": 6,
+      "classified": 5,
+      "displayCandidates": 5,
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 21,
-      "displayCandidates": 12,
+      "classified": 22,
+      "displayCandidates": 13,
       "fallback": true
     },
     "municipality_kashima": {
@@ -137,17 +137,17 @@
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 50,
-      "displayCandidates": 47,
+      "classified": 51,
+      "displayCandidates": 48,
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 37,
-      "displayCandidates": 32,
+      "classified": 32,
+      "displayCandidates": 27,
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 56,
+      "classified": 57,
       "displayCandidates": 48,
       "fallback": true
     },
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 257,
-    "medium": 340,
-    "low": 104
+    "high": 265,
+    "medium": 343,
+    "low": 108
   },
-  "unclassifiedCount": 11,
+  "unclassifiedCount": 13,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -190,6 +190,11 @@
       "url": "https://www.city.yatsushiro.lg.jp/kiji00327252/index.html"
     },
     {
+      "municipalityName": "菊池市",
+      "title": "2026年11月02日 令和８年熊本地震で延期した令和８年度菊池の歴史・文化調査研究成果報告会の開催",
+      "url": "https://www.city.kikuchi.lg.jp/article/view/1091/18877.html"
+    },
+    {
       "municipalityName": "宇土市",
       "title": "裁判によらず話し合いで解決へ～司法書士による震災調停（ＡＤＲ）～",
       "url": "https://www.city.uto.lg.jp/article/view/1310/17157.html"
@@ -198,6 +203,11 @@
       "municipalityName": "宇土市",
       "title": "【お知らせとお願い】不審なメールやメッセージにご注意ください！",
       "url": "https://www.city.uto.lg.jp/article/view/1310/17200.html"
+    },
+    {
+      "municipalityName": "宇土市",
+      "title": "買って応援！食べて応援！来て応援！「応援消費促進ロゴ」をぜひご活用ください",
+      "url": "https://www.city.uto.lg.jp/article/view/1310/17248.html"
     },
     {
       "municipalityName": "宇城市",
@@ -225,7 +235,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 66,
+  "outOfScopeCount": 68,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "disaster_preparedness": 10,
@@ -234,8 +244,8 @@
     "budget_notice": 3,
     "mayor_message": 2,
     "hq_meeting_material": 3,
-    "overall_guide": 4,
-    "index_page": 14,
+    "overall_guide": 5,
+    "index_page": 15,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 4,
@@ -482,6 +492,13 @@
       "ruleLabel": "寄付・ふるさと納税の受付"
     },
     {
+      "municipalityName": "上天草市",
+      "title": "被災者の方へ(案内チラシ)(PDF 約267KB)",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/dl?q=122798_filelib_91e49fb52542af54c1c571bf0f9da108.pdf",
+      "ruleId": "overall_guide",
+      "ruleLabel": "被災者向けの総合案内"
+    },
+    {
       "municipalityName": "宇城市",
       "title": "04_報道資料（令和8年熊本地震の発災から1週間を受けて：令和8年8月3日） (PDF 264KB)",
       "url": "https://www.city.uki.kumamoto.jp/resource.php?e=47f88b653c8282ff4e755b97eab14a07486b5d3f5594b37e551d7a8daaf856bedebab382912a44e233560d46f130c342",
@@ -539,8 +556,15 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月30日 令和8年熊本地震 関連情報 （10月30日19時00分更新）",
+      "title": "2026年11月2日 令和8年熊本地震 関連情報 （11月2日14時30分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "2026年11月02日 令和8年熊本地震 関連情報 （11月2日14時30分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -651,15 +675,15 @@
     },
     {
       "municipalityName": "甲佐町",
-      "title": "『広報こうさ』号外第2報(令和8年熊本地震関連情報)",
-      "url": "https://www.town.kosa.lg.jp/q/aview/255/13631.html",
+      "title": "『広報こうさ』号外第1報(令和8年熊本地震関連情報)",
+      "url": "https://www.town.kosa.lg.jp/q/aview/255/13555.html",
       "ruleId": "public_relations",
       "ruleLabel": "広報紙・その配布"
     },
     {
       "municipalityName": "甲佐町",
-      "title": "『広報こうさ』号外第1報(令和8年熊本地震関連情報)",
-      "url": "https://www.town.kosa.lg.jp/q/aview/255/13555.html",
+      "title": "『広報こうさ』号外第2報(令和8年熊本地震関連情報)",
+      "url": "https://www.town.kosa.lg.jp/q/aview/255/13631.html",
       "ruleId": "public_relations",
       "ruleLabel": "広報紙・その配布"
     },
@@ -706,10 +730,10 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 40,
+  "excludedCount": 39,
   "excludedByType": {
     "duplicate_url": 37,
-    "non_official_url": 2,
+    "non_official_url": 1,
     "past_disaster_excluded": 1
   },
   "warningCount": 26,
@@ -722,7 +746,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kumamoto",
-      "count": 1
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -782,7 +806,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kamiamakusa",
-      "count": 2
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -792,7 +816,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 12
+      "count": 11
     },
     {
       "code": "HTTP_404_CANDIDATE",
