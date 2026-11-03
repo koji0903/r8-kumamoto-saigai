@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-02T19:52:29.518Z",
-  "officialCheckedAt": "11/3 04:52",
+  "retrievedAt": "2026-11-03T03:15:01.711Z",
+  "officialCheckedAt": "11/3 12:15",
   "siteTopics": [
     {
       "date": "2026-10-30",
@@ -96,6 +96,16 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-11-03",
+      "time": "09:31",
+      "category": "その他",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261103-bad1de7e",
+      "archiveUrl": "official-articles/yatsushiro-20261103-bad1de7e.html"
+    },
+    {
       "title": "令和8年熊本地震に伴う農地等災害復旧事業におけるコンクリート畦畔の取り扱い変更について",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036892/index.html",
       "date": "2026-11-02",
@@ -104,16 +114,6 @@ window.HOME_TOPICS = {
       "municipality": "氷川町",
       "archiveId": "hikawa-20261102-a9ad6c43",
       "archiveUrl": "official-articles/hikawa-20261102-a9ad6c43.html"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-11-02",
-      "time": "17:14",
-      "category": "その他",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261102-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261102-bad1de7e.html"
     },
     {
       "title": "＜2026年7月熊本地震＞ 災害救助法 「住家の緊急の修理」制度の案内",

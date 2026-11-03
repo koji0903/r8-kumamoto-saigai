@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-02T19:35:20.591Z",
+  "generatedAt": "2026-11-03T02:57:47.850Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 838,
-  "displayCandidateCount": 611,
-  "classifiedPageCount": 718,
+  "inputCount": 836,
+  "displayCandidateCount": 609,
+  "classifiedPageCount": 716,
   "categoryReport": {
     "home": {
-      "total": 191,
+      "total": 190,
       "high": 75,
-      "medium": 74,
+      "medium": 73,
       "low": 42
     },
     "money": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 206,
+      "total": 205,
       "high": 55,
-      "medium": 149,
+      "medium": 148,
       "low": 2
     }
   },
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 124,
-      "displayCandidates": 105,
+      "classified": 122,
+      "displayCandidates": 103,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 265,
-    "medium": 346,
+    "medium": 344,
     "low": 107
   },
   "unclassifiedCount": 13,
@@ -870,5 +870,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 716
+  "previousClassifiedPageCount": 718
 }
