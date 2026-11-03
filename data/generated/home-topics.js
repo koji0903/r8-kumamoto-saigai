@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-03T11:21:35.617Z",
-  "officialCheckedAt": "11/3 20:21",
+  "retrievedAt": "2026-11-03T19:54:53.126Z",
+  "officialCheckedAt": "11/4 04:54",
   "siteTopics": [
     {
       "date": "2026-10-30",
@@ -156,6 +156,16 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/mifune-20261102-fdbe6619.html"
     },
     {
+      "title": "令和8年熊本地震に伴う「り災証明書」のオンライン申請（一部損壊・自己判定方式用）を開始しました。",
+      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032045/index.html",
+      "date": "2026-11-02",
+      "time": "11:45",
+      "category": "住まい・証明",
+      "municipality": "西原村",
+      "archiveId": "nishihara-20261102-16aeb359",
+      "archiveUrl": "official-articles/nishihara-20261102-16aeb359.html"
+    },
+    {
       "title": "【令和8年10月30日（金曜日）受付終了】り災証明書の申請について（令和8年熊本地震）",
       "url": "https://www.city.yamaga.kumamoto.jp/kiji0033308/index.html",
       "date": "2026-11-02",
@@ -234,16 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "水俣市",
       "archiveId": "minamata-20261030-9f50f0d5",
       "archiveUrl": "official-articles/minamata-20261030-9f50f0d5.html"
-    },
-    {
-      "title": "被災された方への入浴支援について（町・県事業）",
-      "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/sumai/3907.html",
-      "date": "2026-10-30",
-      "time": null,
-      "category": "ごみ・生活",
-      "municipality": "美里町",
-      "archiveId": "misato-20261030-ed424e1e",
-      "archiveUrl": "official-articles/misato-20261030-ed424e1e.html"
     }
   ],
   "prefectureUpdates": [

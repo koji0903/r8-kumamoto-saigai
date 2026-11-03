@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-03T11:22:05.492Z",
+  "generatedAt": "2026-11-03T19:55:20.903Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-03T11:01:13.858Z",
-    "inputCount": 838,
-    "classifiedPageCount": 718,
-    "displayCandidateCount": 611,
+    "generatedAt": "2026-11-03T19:35:52.528Z",
+    "inputCount": 836,
+    "classifiedPageCount": 715,
+    "displayCandidateCount": 609,
     "deltaFromPrevious": {
-      "inputCount": 2,
-      "classifiedPageCount": 2,
-      "unclassifiedCount": 0
+      "inputCount": -2,
+      "classifiedPageCount": -3,
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 15,
+      "ageHours": 24,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 124,
-        "displayCandidates": 105,
+        "classified": 122,
+        "displayCandidates": 103,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -96,8 +96,8 @@
         "fallback": true
       },
       "municipality_nishihara": {
-        "classified": 5,
-        "displayCandidates": 5,
+        "classified": 6,
+        "displayCandidates": 6,
         "fallback": true
       },
       "municipality_mifune": {
@@ -131,8 +131,8 @@
         "fallback": true
       },
       "municipality_tsunagi": {
-        "classified": 8,
-        "displayCandidates": 6,
+        "classified": 6,
+        "displayCandidates": 5,
         "fallback": true
       }
     },
@@ -140,18 +140,18 @@
       "home": {
         "total": 191,
         "high": 75,
-        "medium": 74,
-        "low": 42
+        "medium": 73,
+        "low": 43
       },
       "money": {
-        "total": 259,
+        "total": 257,
         "high": 56,
         "medium": 71,
-        "low": 132
+        "low": 130
       },
       "documents": {
-        "total": 175,
-        "high": 40,
+        "total": 176,
+        "high": 41,
         "medium": 34,
         "low": 101
       },
@@ -162,14 +162,14 @@
         "low": 0
       },
       "family_education": {
-        "total": 74,
+        "total": 73,
         "high": 11,
-        "medium": 28,
+        "medium": 27,
         "low": 35
       },
       "work_business": {
-        "total": 74,
-        "high": 18,
+        "total": 73,
+        "high": 17,
         "medium": 56,
         "low": 0
       },
@@ -188,10 +188,10 @@
     },
     "confidence": {
       "high": 265,
-      "medium": 346,
-      "low": 107
+      "medium": 344,
+      "low": 106
     },
-    "unclassifiedCount": 13,
+    "unclassifiedCount": 14,
     "excludedCount": 39,
     "overrideCount": 2
   },

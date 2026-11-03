@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-11-03T11:01:13.858Z",
+  "generatedAt": "2026-11-03T19:35:52.528Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 838,
-  "displayCandidateCount": 611,
-  "classifiedPageCount": 718,
+  "inputCount": 836,
+  "displayCandidateCount": 609,
+  "classifiedPageCount": 715,
   "categoryReport": {
     "home": {
       "total": 191,
       "high": 75,
-      "medium": 74,
-      "low": 42
+      "medium": 73,
+      "low": 43
     },
     "money": {
-      "total": 259,
+      "total": 257,
       "high": 56,
       "medium": 71,
-      "low": 132
+      "low": 130
     },
     "documents": {
-      "total": 175,
-      "high": 40,
+      "total": 176,
+      "high": 41,
       "medium": 34,
       "low": 101
     },
@@ -31,14 +31,14 @@
       "low": 0
     },
     "family_education": {
-      "total": 74,
+      "total": 73,
       "high": 11,
-      "medium": 28,
+      "medium": 27,
       "low": 35
     },
     "work_business": {
-      "total": 74,
-      "high": 18,
+      "total": 73,
+      "high": 17,
       "medium": 56,
       "low": 0
     },
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 124,
-      "displayCandidates": 105,
+      "classified": 122,
+      "displayCandidates": 103,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -122,8 +122,8 @@
       "fallback": true
     },
     "municipality_nishihara": {
-      "classified": 5,
-      "displayCandidates": 5,
+      "classified": 6,
+      "displayCandidates": 6,
       "fallback": true
     },
     "municipality_mifune": {
@@ -157,17 +157,17 @@
       "fallback": true
     },
     "municipality_tsunagi": {
-      "classified": 8,
-      "displayCandidates": 6,
+      "classified": 6,
+      "displayCandidates": 5,
       "fallback": true
     }
   },
   "confidence": {
     "high": 265,
-    "medium": 346,
-    "low": 107
+    "medium": 344,
+    "low": 106
   },
-  "unclassifiedCount": 13,
+  "unclassifiedCount": 14,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -213,6 +213,11 @@
       "municipalityName": "宇城市",
       "title": "【職員募集】令和8年熊本地震に伴う宇城市任期付職員（事務職）を募集します",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2645544"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "2026年11月02日 令和8年熊本地震被災求職者等向け企業説明会を開催します",
+      "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/shokogyo/2652986"
     },
     {
       "municipalityName": "天草市",
@@ -353,7 +358,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -870,5 +875,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 716
+  "previousClassifiedPageCount": 718
 }
