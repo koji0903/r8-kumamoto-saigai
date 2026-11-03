@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-03T03:15:01.711Z",
-  "officialCheckedAt": "11/3 12:15",
+  "retrievedAt": "2026-11-03T11:21:35.617Z",
+  "officialCheckedAt": "11/3 20:21",
   "siteTopics": [
     {
       "date": "2026-10-30",
@@ -96,10 +96,20 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "避難所について（11/3 17:00時点）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/17349.html",
+      "date": "2026-11-03",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261103-1d92d642",
+      "archiveUrl": "official-articles/uto-20261103-1d92d642.html"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-11-03",
-      "time": "09:31",
+      "time": "13:30",
       "category": "その他",
       "municipality": "八代市",
       "archiveId": "yatsushiro-20261103-bad1de7e",
@@ -164,16 +174,6 @@ window.HOME_TOPICS = {
       "municipality": "菊池市",
       "archiveId": "kikuchi-20261102-dc991ca9",
       "archiveUrl": "official-articles/kikuchi-20261102-dc991ca9.html"
-    },
-    {
-      "title": "1 令和８年熊本地震に係る建設型応急住宅の入居者募集（第3回）について 2026年11月02日",
-      "url": "https://www.city.uto.lg.jp/article/view/1007/16820.html",
-      "date": "2026-11-02",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261102-f78297f6",
-      "archiveUrl": "official-articles/uto-20261102-f78297f6.html"
     },
     {
       "title": "ふるさと納税返礼品カタログをご希望の方へ(申込書による寄附申...",
