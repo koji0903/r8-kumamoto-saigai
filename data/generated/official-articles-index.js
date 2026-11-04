@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-10-24",
-    "retrievedAt": "2026-11-04T01:47:51.570Z"
+    "retrievedAt": "2026-11-04T11:29:01.567Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
@@ -649,12 +649,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-28T11:14:10.341Z"
   },
   "https://www.city.kamiamakusa.kumamoto.jp/q/aview/498/23715.html": {
-    "id": "kamiamakusa-20261028-966415d4",
-    "htmlPath": "official-articles/kamiamakusa-20261028-966415d4.html",
-    "title": "新たなバス共通定期サービス開始に伴う運賃設定に関する意見を募...",
+    "id": "kamiamakusa-20261104-966415d4",
+    "htmlPath": "official-articles/kamiamakusa-20261104-966415d4.html",
+    "title": "新たなバス共通定期サービスおよびおでかけタッチ開始に伴う運賃...",
     "municipality": "上天草市",
-    "date": "2026-10-28",
-    "retrievedAt": "2026-10-28T22:47:01.984Z"
+    "date": "2026-11-04",
+    "retrievedAt": "2026-11-04T11:28:56.356Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/important/2645544": {
     "id": "uki-20261029-e3f9f52d",
@@ -873,12 +873,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-03T19:54:56.589Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036892/index.html": {
-    "id": "hikawa-20261102-a9ad6c43",
-    "htmlPath": "official-articles/hikawa-20261102-a9ad6c43.html",
+    "id": "hikawa-20261104-a9ad6c43",
+    "htmlPath": "official-articles/hikawa-20261104-a9ad6c43.html",
     "title": "令和8年熊本地震に伴う農地等災害復旧事業におけるコンクリート畦畔の取り扱い変更について",
     "municipality": "氷川町",
-    "date": "2026-11-02",
-    "retrievedAt": "2026-11-02T19:52:32.612Z"
+    "date": "2026-11-04",
+    "retrievedAt": "2026-11-04T11:28:51.999Z"
   },
   "https://www.town.mashiki.lg.jp/kiji0038243/index.html": {
     "id": "mashiki-20261102-463614c6",
@@ -919,5 +919,37 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "熊本市",
     "date": "2026-11-04",
     "retrievedAt": "2026-11-04T01:47:48.839Z"
+  },
+  "https://www.city.kumamoto.jp/kiji00372110/index.html": {
+    "id": "kumamoto-20261104-ff682d7b",
+    "htmlPath": "official-articles/kumamoto-20261104-ff682d7b.html",
+    "title": "【令和8年熊本地震】被災者支援制度 （冊子）をご利用ください",
+    "municipality": "熊本市",
+    "date": "2026-11-04",
+    "retrievedAt": "2026-11-04T11:28:48.958Z"
+  },
+  "https://www.vill.nishihara.kumamoto.jp/kiji0032048/index.html": {
+    "id": "nishihara-20261104-9b1b9993",
+    "htmlPath": "official-articles/nishihara-20261104-9b1b9993.html",
+    "title": "令和8年熊本地震 災害義援金の配分について",
+    "municipality": "西原村",
+    "date": "2026-11-04",
+    "retrievedAt": "2026-11-04T11:28:53.399Z"
+  },
+  "https://www.city.uto.lg.jp/article/view/1310/17355.html": {
+    "id": "uto-20261104-a3824680",
+    "htmlPath": "official-articles/uto-20261104-a3824680.html",
+    "title": "自宅敷地内への建設型応急住宅の相談受付期限について",
+    "municipality": "宇土市",
+    "date": "2026-11-04",
+    "retrievedAt": "2026-11-04T11:28:54.748Z"
+  },
+  "https://www.town.kikuyo.lg.jp/kiji0034715/index.html": {
+    "id": "kikuyo-20261104-dc9eb400",
+    "htmlPath": "official-articles/kikuyo-20261104-dc9eb400.html",
+    "title": "マイボトルが使える給水スポットがあります",
+    "municipality": "菊陽町",
+    "date": "2026-11-04",
+    "retrievedAt": "2026-11-04T11:28:59.364Z"
   }
 };
