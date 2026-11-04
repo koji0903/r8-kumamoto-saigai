@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-04T11:29:24.898Z",
+  "generatedAt": "2026-11-04T20:12:17.937Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-04T11:08:53.030Z",
+    "generatedAt": "2026-11-04T19:52:30.111Z",
     "inputCount": 840,
     "classifiedPageCount": 719,
-    "displayCandidateCount": 612,
+    "displayCandidateCount": 611,
     "deltaFromPrevious": {
-      "inputCount": 1,
-      "classifiedPageCount": 1,
-      "unclassifiedCount": 2
+      "inputCount": 0,
+      "classifiedPageCount": 0,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 40,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -37,7 +37,7 @@
       },
       "municipality_yatsushiro": {
         "classified": 140,
-        "displayCandidates": 113,
+        "displayCandidates": 112,
         "fallback": true
       },
       "municipality_minamata": {
@@ -144,9 +144,9 @@
         "low": 44
       },
       "money": {
-        "total": 256,
+        "total": 255,
         "high": 56,
-        "medium": 70,
+        "medium": 69,
         "low": 130
       },
       "documents": {
@@ -162,15 +162,15 @@
         "low": 0
       },
       "family_education": {
-        "total": 75,
+        "total": 76,
         "high": 11,
         "medium": 27,
-        "low": 37
+        "low": 38
       },
       "work_business": {
-        "total": 72,
+        "total": 71,
         "high": 17,
-        "medium": 55,
+        "medium": 54,
         "low": 0
       },
       "agriculture_fishery": {
@@ -188,8 +188,8 @@
     },
     "confidence": {
       "high": 267,
-      "medium": 345,
-      "low": 107
+      "medium": 344,
+      "low": 108
     },
     "unclassifiedCount": 16,
     "excludedCount": 38,
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:e9851b99183cb3c9bc034e47265b057ab23e43e2db1f996040e2f8fd2f4a8c14",
+        "currentHash": "sha256:e31414faa11893f095b12e45ddb58ff75e8da73df62b7f8a3aaae6eb058ff32d",
         "verificationStatus": "needs_review"
       }
     },
@@ -282,7 +282,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 4
+      "count": 5
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -420,7 +420,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:e9851b99183cb3c9bc034e47265b057ab23e43e2db1f996040e2f8fd2f4a8c14",
+        "currentHash": "sha256:e31414faa11893f095b12e45ddb58ff75e8da73df62b7f8a3aaae6eb058ff32d",
         "verificationStatus": "needs_review"
       },
       {

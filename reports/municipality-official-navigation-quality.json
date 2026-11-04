@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-04T11:08:53.030Z",
+  "generatedAt": "2026-11-04T19:52:30.111Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 840,
-  "displayCandidateCount": 612,
+  "displayCandidateCount": 611,
   "classifiedPageCount": 719,
   "categoryReport": {
     "home": {
@@ -13,9 +13,9 @@
       "low": 44
     },
     "money": {
-      "total": 256,
+      "total": 255,
       "high": 56,
-      "medium": 70,
+      "medium": 69,
       "low": 130
     },
     "documents": {
@@ -31,15 +31,15 @@
       "low": 0
     },
     "family_education": {
-      "total": 75,
+      "total": 76,
       "high": 11,
       "medium": 27,
-      "low": 37
+      "low": 38
     },
     "work_business": {
-      "total": 72,
+      "total": 71,
       "high": 17,
-      "medium": 55,
+      "medium": 54,
       "low": 0
     },
     "agriculture_fishery": {
@@ -63,7 +63,7 @@
     },
     "municipality_yatsushiro": {
       "classified": 140,
-      "displayCandidates": 113,
+      "displayCandidates": 112,
       "fallback": true
     },
     "municipality_minamata": {
@@ -164,8 +164,8 @@
   },
   "confidence": {
     "high": 267,
-    "medium": 345,
-    "low": 107
+    "medium": 344,
+    "low": 108
   },
   "unclassifiedCount": 16,
   "unclassifiedItems": [
@@ -361,7 +361,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -763,7 +763,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 4
+      "count": 5
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -877,5 +877,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 718
+  "previousClassifiedPageCount": 719
 }

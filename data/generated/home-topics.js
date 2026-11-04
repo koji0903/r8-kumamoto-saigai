@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-04T11:28:45.934Z",
-  "officialCheckedAt": "11/4 20:28",
+  "retrievedAt": "2026-11-04T20:11:50.081Z",
+  "officialCheckedAt": "11/5 05:11",
   "siteTopics": [
     {
       "date": "2026-11-04",
@@ -96,6 +96,16 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震に伴う「り災証明書」のオンライン申請（一部損壊・自己判定方式用）を開始しました。",
+      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032045/index.html",
+      "date": "2026-11-05",
+      "time": "00:00",
+      "category": "住まい・証明",
+      "municipality": "西原村",
+      "archiveId": "nishihara-20261105-16aeb359",
+      "archiveUrl": "official-articles/nishihara-20261105-16aeb359.html"
+    },
+    {
       "title": "2026年11月4日 令和8年熊本地震 関連情報 （11月4日18時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-11-04",
@@ -134,16 +144,6 @@ window.HOME_TOPICS = {
       "municipality": "氷川町",
       "archiveId": "hikawa-20261104-a9ad6c43",
       "archiveUrl": "official-articles/hikawa-20261104-a9ad6c43.html"
-    },
-    {
-      "title": "令和8年熊本地震 災害義援金の配分について",
-      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032048/index.html",
-      "date": "2026-11-04",
-      "time": "10:43",
-      "category": "支援・制度",
-      "municipality": "西原村",
-      "archiveId": "nishihara-20261104-9b1b9993",
-      "archiveUrl": "official-articles/nishihara-20261104-9b1b9993.html"
     },
     {
       "title": "自宅敷地内への建設型応急住宅の相談受付期限について",
