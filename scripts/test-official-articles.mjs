@@ -23,6 +23,10 @@ const archiveIndex = JSON.parse(read(ARCHIVE_INDEX_PATH));
 const urls = Object.keys(archiveIndex);
 assert.ok(urls.length >= 10, `アーカイブ記事は最低10件以上必要です（現在: ${urls.length}件）`);
 const archiveHub = read(ARTICLES_INDEX_HTML);
+assert.match(archiveHub, /<link rel="canonical" href="https:\/\/www\.yokatainet\.jp\/official-articles\/">/, "アーカイブ目録のcanonicalがありません");
+assert.match(archiveHub, /<meta name="robots" content="index,follow,max-image-preview:large">/, "アーカイブ目録を検索対象として明示してください");
+assert.match(archiveHub, /<meta property="og:image" content="https:\/\/www\.yokatainet\.jp\/ogp-official-articles\.png">/, "アーカイブ目録の専用OGP画像がありません");
+assert.match(archiveHub, /"@type":"CollectionPage"/, "アーカイブ目録のCollectionPage構造化データがありません");
 
 let checkedCount = 0;
 for (const [url, item] of Object.entries(archiveIndex)) {

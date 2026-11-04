@@ -62,18 +62,29 @@ for (const page of pages) {
   assert.ok(jsonLdText, `${page}: JSON-LD がありません`);
   const jsonLd = JSON.parse(jsonLdText);
   const graph = jsonLd["@graph"] || [];
+  const organization = graph.find(item => item["@type"] === "Organization");
   const website = graph.find(item => item["@type"] === "WebSite");
   const webpage = graph.find(item => item["@type"] === "WebPage");
+  assert.equal(organization?.legalName, "一般社団法人よか隊ネット熊本", `${page}: Organization.legalName がありません`);
+  assert.equal(organization?.logo?.width, 1538, `${page}: 組織ロゴの実寸幅がありません`);
+  assert.equal(organization?.logo?.height, 737, `${page}: 組織ロゴの実寸高さがありません`);
+  assert.equal(organization?.address?.addressCountry, "JP", `${page}: 所在国がありません`);
+  assert.equal(organization?.contactPoint?.availableLanguage, "ja", `${page}: 日本語の問い合わせ窓口がありません`);
   assert.equal(website?.name, "よか隊ネット熊本", `${page}: WebSite.name が推奨サイト名ではありません`);
   assert.ok(website?.alternateName, `${page}: WebSite.alternateName がありません`);
   assert.equal(website?.potentialAction, undefined, `${page}: 廃止済みのサイトリンク検索ボックス用 SearchAction が残っています`);
   assert.equal(webpage?.url, canonical, `${page}: WebPage.url と canonical が一致しません`);
+  assert.equal(webpage?.author?.["@id"], `${SITE}/#organization`, `${page}: WebPage.author が運営団体を参照していません`);
   assert.match(webpage?.datePublished || "", /^\d{4}-\d{2}-\d{2}$/, `${page}: datePublished が正しい日付ではありません`);
   assert.match(webpage?.dateModified || "", /^\d{4}-\d{2}-\d{2}$/, `${page}: dateModified が正しい日付ではありません`);
   assert.ok(webpage.datePublished <= webpage.dateModified, `${page}: datePublished が dateModified より後です`);
   assert.equal(webpage?.primaryImageOfPage?.url, image, `${page}: primaryImageOfPage と OGP画像が一致しません`);
   assert.equal(webpage?.primaryImageOfPage?.width, 1200, `${page}: primaryImageOfPage.width が不正です`);
   assert.equal(webpage?.primaryImageOfPage?.height, 630, `${page}: primaryImageOfPage.height が不正です`);
+  if (page !== "index.html") {
+    const breadcrumb = graph.find(item => item["@type"] === "BreadcrumbList");
+    assert.equal(breadcrumb?.["@id"], webpage?.breadcrumb?.["@id"], `${page}: WebPage とパンくず構造化データが関連付いていません`);
+  }
 
   const visibleText = html
     .replace(/<script\b[\s\S]*?<\/script>/gi, " ")
@@ -90,10 +101,25 @@ for (const page of pages) {
   used.set(page, file);
 }
 
+// サブディレクトリにある公開アーカイブ目録も、検索対象ページとして同水準を保つ。
+const archivePage = "official-articles/index.html";
+const archiveHtml = read(archivePage);
+const archiveCanonical = `${SITE}/official-articles/`;
+assert.match(archiveHtml, /name="robots" content="index,follow,max-image-preview:large"/, `${archivePage}: index指定がありません`);
+assert.ok(archiveHtml.includes(`rel="canonical" href="${archiveCanonical}"`), `${archivePage}: canonical がありません`);
+assert.ok(archiveHtml.includes(`property="og:url" content="${archiveCanonical}"`), `${archivePage}: og:url がcanonicalと一致しません`);
+assert.ok(archiveHtml.includes(`property="og:image" content="${SITE}/ogp-official-articles.png"`), `${archivePage}: 専用OGP画像がありません`);
+assert.deepEqual(pngSize("ogp-official-articles.png"), { width: 1200, height: 630 }, "公式記事アーカイブのOGP画像は1200x630にしてください");
+const archiveJsonLd = JSON.parse(archiveHtml.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1] || "{}");
+const archiveCollection = archiveJsonLd["@graph"]?.find(item => item["@type"] === "CollectionPage");
+assert.equal(archiveCollection?.url, archiveCanonical, `${archivePage}: CollectionPage.url がcanonicalと一致しません`);
+assert.equal(archiveCollection?.primaryImageOfPage?.url, `${SITE}/ogp-official-articles.png`, `${archivePage}: CollectionPageの画像がOGPと一致しません`);
+
 // ---- ページ専用の画像 --------------------------------------------------------
 // 力を入れたページが共通画像に戻ると、貼られたときに中身が伝わらない。
 const builder = read("tools/build-seo.mjs");
 const generator = read("tools/build-ogp-images.py");
+assert.ok(generator.includes('file="official-articles/index.html"'), "OGP生成器に公式記事アーカイブがありません");
 const DEDICATED = [...pages];
 for (const page of DEDICATED) {
   const file = used.get(page);

@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const origin = "https://www.yokatainet.jp";
 const siteName = "よか隊ネット熊本　災害・支援状況レポート";
-const excluded = new Set(["404.html"]);
+const excluded = new Set(["404.html", "municipality-updates.html"]);
 // ページ専用のOGP画像。python3 tools/build-ogp-images.py で作る。
 // ここに足したら画像も作ること（scripts/test-ogp.mjs が実体を確認する）。
 const specialImages = new Map([
@@ -102,6 +102,7 @@ function stripSeo(html) {
 }
 
 function canonicalFor(file) {
+  if (file === "municipality-updates.html") return `${origin}/municipalities.html`;
   return file === "index.html" ? `${origin}/` : `${origin}/${file}`;
 }
 
@@ -322,20 +323,31 @@ function buildStructuredData(file, pageTitle, description, canonical, publishedD
       "@type": "Organization",
       "@id": `${origin}/#organization`,
       name: "一般社団法人よか隊ネット熊本",
+      legalName: "一般社団法人よか隊ネット熊本",
       url: `${origin}/`,
       logo: {
         "@type": "ImageObject",
-        url: `${origin}/yokatai-logo.png`
+        url: `${origin}/yokatai-logo.png`,
+        width: 1538,
+        height: 737
       },
       address: {
         "@type": "PostalAddress",
         postalCode: "869-0404",
         addressRegion: "熊本県",
         addressLocality: "宇土市",
-        streetAddress: "走潟町2235"
+        streetAddress: "走潟町2235",
+        addressCountry: "JP"
       },
       telephone: "090-2719-4037",
-      email: "info.yokatai@gmail.com"
+      email: "info.yokatai@gmail.com",
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "お問い合わせ",
+        telephone: "+81-90-2719-4037",
+        email: "info.yokatai@gmail.com",
+        availableLanguage: "ja"
+      }
     },
     {
       "@type": "WebSite",
@@ -353,6 +365,7 @@ function buildStructuredData(file, pageTitle, description, canonical, publishedD
       name: pageTitle,
       description: description,
       isPartOf: { "@id": `${origin}/#website` },
+      author: { "@id": `${origin}/#organization` },
       publisher: { "@id": `${origin}/#organization` },
       primaryImageOfPage: {
         "@type": "ImageObject",
@@ -367,6 +380,7 @@ function buildStructuredData(file, pageTitle, description, canonical, publishedD
   ];
 
   if (file !== "index.html") {
+    graph[2].breadcrumb = { "@id": `${canonical}#breadcrumb` };
     const breadcrumbItems = [
       { "@type": "ListItem", position: 1, name: "ホーム", item: `${origin}/` }
     ];
@@ -414,8 +428,13 @@ function buildStructuredData(file, pageTitle, description, canonical, publishedD
 
     graph.push({
       "@type": "BreadcrumbList",
+      "@id": `${canonical}#breadcrumb`,
       itemListElement: breadcrumbItems
     });
+  }
+
+  if (file === "index.html" || file === "about.html") {
+    graph[2].mainEntity = { "@id": `${origin}/#organization` };
   }
 
   const faqs = specialFaqs.get(file);
@@ -574,7 +593,7 @@ try {
   const archiveContent = await readFile(archiveIndexPath, "utf8").catch(() => "");
   if (archiveContent) {
     const archiveDate = lastModified("official-articles/index.html", archiveContent);
-    urls.push(`  <url>\n    <loc>${origin}/official-articles/</loc>${archiveDate ? `\n    <lastmod>${archiveDate}</lastmod>` : ""}\n  </url>`);
+    urls.push(`  <url>\n    <loc>${origin}/official-articles/</loc>${archiveDate ? `\n    <lastmod>${archiveDate}</lastmod>` : ""}\n    <image:image>\n      <image:loc>${origin}/ogp-official-articles.png</image:loc>\n    </image:image>\n  </url>`);
   }
 } catch {}
 

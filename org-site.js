@@ -100,11 +100,13 @@
     const hero=document.querySelector('.org-hero');
     hero?.classList.add('about-hero');
     hero?.querySelector('div')?.insertAdjacentHTML('beforeend',`<div class="about-hero-signature"><span>2016</span><i aria-hidden="true"></i><span>2020</span><i aria-hidden="true"></i><span>2026</span><b>支援から、つながりへ。</b></div>`);
+    hero?.querySelector('div')?.insertAdjacentHTML('beforeend',`<p><a href="#information-policy">情報の収集・更新・訂正方針を見る →</a></p>`);
     const sections=document.querySelectorAll('.org-section');
+    const profile=document.querySelector('#profile');
     sections[0]?.classList.add('about-intro');
     sections[1]?.classList.add('about-history');
     sections[2]?.classList.add('about-values');
-    sections[3]?.classList.add('about-profile');
+    profile?.classList.add('about-profile');
     const intro=sections[0]?.querySelector('div');
     intro?.insertAdjacentHTML('afterbegin',`<div class="about-intro-heading"><p class="kicker">WHO WE ARE</p><span>災害の規模ではなく、<br>一人ひとりの暮らしを見る。</span></div>`);
     const cards=sections[2]?.querySelectorAll('.org-card');

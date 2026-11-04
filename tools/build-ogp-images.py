@@ -208,6 +208,12 @@ ART = {
 
 # 全60ページの定義（uto-waste.htmlは手動制作専用画像のため除外）
 PAGES = [
+    dict(file="official-articles/index.html", out="ogp-official-articles.png", tone="teal", art="docs",
+         label="熊本県内21市町村", tag="自治体公式発表アーカイブ",
+         target="被災された方・支援者・調査研究・記録を確認する方",
+         title="自治体公式発表アーカイブ/一次情報を市町村別に保存",
+         lead="被災自治体が配信した公式発表・支援情報・生活情報を市町村別に整理。元ページと保存記事の両方から発災時の記録を確認できます。",
+         chips=["自治体公式情報", "市町村別に一覧", "元ページも確認可能"]),
     dict(file="uto-public-services.html", out="ogp-uto-public-services.png", tone="sky", art="support_fields",
          label="宇土市", tag="公的施設・市民サービス",
          target="宇土市民・被災者・子育て世帯・シニア・転入者",

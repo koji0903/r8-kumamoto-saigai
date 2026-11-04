@@ -61,6 +61,8 @@ const detectPriority = (file) => {
 const items = [];
 for (const file of files) {
   const html = await readFile(path.join(root, file), "utf8");
+  const robots = html.match(/<meta\s+name="robots"\s+content="([^"]*)"/i)?.[1] || "";
+  if (/\bnoindex\b/i.test(robots)) continue;
   const title = match(html, /<title>([\s\S]*?)<\/title>/i).split("｜")[0].trim();
   const description = decode(html.match(/<meta\s+name="description"\s+content="([^"]*)"/i)?.[1] || "");
   const headings = [...html.matchAll(/<h[123]\b[^>]*>([\s\S]*?)<\/h[123]>/gi)]

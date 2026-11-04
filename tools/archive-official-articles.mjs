@@ -30,6 +30,10 @@ const ARTICLES_HTML_DIR = join(ROOT, "official-articles");
 const ARTICLES_DATA_DIR = join(ROOT, "sources/official/articles");
 const ARCHIVE_INDEX_JSON = join(ARTICLES_DATA_DIR, "archive-index.json");
 const GENERATED_INDEX_JS = join(ROOT, "data/generated/official-articles-index.js");
+const SITE_ORIGIN = "https://www.yokatainet.jp";
+const ARCHIVE_URL = `${SITE_ORIGIN}/official-articles/`;
+const ARCHIVE_TITLE = "自治体公式発表アーカイブ（一次情報保全）｜よか隊ネット熊本";
+const ARCHIVE_DESCRIPTION = "熊本県内の被災自治体から配信された公式発表・支援情報・生活関連情報のアーカイブ一覧。自治体サイトのリンク切れ防止および発災時記録として保存。";
 
 const UA = "Mozilla/5.0 (compatible; r8-kumamoto-saigai/1.1; +https://github.com/koji0903/r8-kumamoto-saigai)";
 
@@ -379,13 +383,70 @@ function renderArchiveIndexHtml(articles) {
     </section>
   `).join("");
 
+  const latestArticleDate = articles
+    .map(article => article.date)
+    .filter(date => /^\d{4}-\d{2}-\d{2}$/.test(date || ""))
+    .sort()
+    .at(-1);
+  const archiveGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${ARCHIVE_URL}#webpage`,
+        url: ARCHIVE_URL,
+        name: ARCHIVE_TITLE.split("｜")[0],
+        description: ARCHIVE_DESCRIPTION,
+        isPartOf: { "@id": `${SITE_ORIGIN}/#website` },
+        author: { "@id": `${SITE_ORIGIN}/#organization` },
+        publisher: { "@id": `${SITE_ORIGIN}/#organization` },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: `${SITE_ORIGIN}/ogp-official-articles.png`,
+          width: 1200,
+          height: 630
+        },
+        breadcrumb: { "@id": `${ARCHIVE_URL}#breadcrumb` },
+        inLanguage: "ja",
+        ...(latestArticleDate ? { dateModified: latestArticleDate } : {})
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${ARCHIVE_URL}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "ホーム", item: `${SITE_ORIGIN}/` },
+          { "@type": "ListItem", position: 2, name: "自治体公式発表アーカイブ", item: ARCHIVE_URL }
+        ]
+      }
+    ]
+  };
+
   return `<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>自治体公式発表アーカイブ（一次情報保全）｜よか隊ネット熊本</title>
-  <meta name="description" content="熊本県内の被災自治体から配信された公式発表・支援情報・生活関連情報のアーカイブ一覧。自治体サイトのリンク切れ防止および発災時記録として保存。">
+  <title>${ARCHIVE_TITLE}</title>
+  <meta name="description" content="${ARCHIVE_DESCRIPTION}">
+  <link rel="canonical" href="${ARCHIVE_URL}">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="よか隊ネット熊本　災害・支援状況レポート">
+  <meta property="og:title" content="${ARCHIVE_TITLE.split("｜")[0]}">
+  <meta property="og:description" content="${ARCHIVE_DESCRIPTION}">
+  <meta property="og:url" content="${ARCHIVE_URL}">
+  <meta property="og:image" content="${SITE_ORIGIN}/ogp-official-articles.png">
+  <meta property="og:image:secure_url" content="${SITE_ORIGIN}/ogp-official-articles.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="自治体公式発表アーカイブ（一次情報保全）｜よか隊ネット熊本">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${ARCHIVE_TITLE.split("｜")[0]}">
+  <meta name="twitter:description" content="${ARCHIVE_DESCRIPTION}">
+  <meta name="twitter:image" content="${SITE_ORIGIN}/ogp-official-articles.png">
+  <script type="application/ld+json">${JSON.stringify(archiveGraph)}</script>
   <link rel="icon" href="../favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="stylesheet" href="../styles.css?v=20260817-4">

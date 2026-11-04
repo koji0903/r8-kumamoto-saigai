@@ -138,12 +138,17 @@ for (const file of htmlFiles) {
   if (!/<script\s+src="org-site\.js(?:\?[^\"]*)?"/.test(html)) errors.push(`${file} で共通スクリプト org-site.js が読み込まれていません`);
   const siteName = html.match(/<meta\s+property="og:site_name"\s+content="([^"]+)"/i)?.[1];
   if (siteName !== canonicalSiteName) errors.push(`${file} のog:site_nameが新名称に統一されていません`);
-  const expectedCanonical = file === "index.html" ? "https://www.yokatainet.jp/" : `https://www.yokatainet.jp/${file}`;
+  const expectedCanonical = file === "index.html"
+    ? "https://www.yokatainet.jp/"
+    : file === "municipality-updates.html"
+      ? "https://www.yokatainet.jp/municipalities.html"
+      : `https://www.yokatainet.jp/${file}`;
   const canonical = html.match(/<link\s+rel="canonical"\s+href="([^"]+)"/i)?.[1];
   const ogUrl = html.match(/<meta\s+property="og:url"\s+content="([^"]+)"/i)?.[1];
   const ogImage = html.match(/<meta\s+property="og:image"\s+content="([^"]+)"/i)?.[1];
   if (canonical !== expectedCanonical) errors.push(`${file} のcanonical URLが不正です`);
   if (ogUrl !== expectedCanonical) errors.push(`${file} のog:urlがcanonical URLと一致しません`);
+  if (file === "municipality-updates.html" && !html.includes('<meta name="robots" content="noindex,follow">')) errors.push(`${file} は旧転送ページのためnoindexにしてください`);
   if (!html.match(/<meta\s+property="og:title"\s+content="[^"]+"/i)) errors.push(`${file} にog:titleがありません`);
   if (!html.match(/<meta\s+property="og:description"\s+content="[^"]+"/i)) errors.push(`${file} にog:descriptionがありません`);
   if (!html.includes('<meta name="twitter:card" content="summary_large_image">')) errors.push(`${file} のTwitterカード設定が不正です`);
