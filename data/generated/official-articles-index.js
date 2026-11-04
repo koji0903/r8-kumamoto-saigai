@@ -9,12 +9,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T05:15:39.834Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699": {
-    "id": "uki-20261102-7d9d4e13",
-    "htmlPath": "official-articles/uki-20261102-7d9d4e13.html",
-    "title": "2026年11月2日 令和8年熊本地震 関連情報 （11月2日14時30分更新）",
+    "id": "uki-20261104-7d9d4e13",
+    "htmlPath": "official-articles/uki-20261104-7d9d4e13.html",
+    "title": "2026年11月4日 令和8年熊本地震 関連情報 （11月4日8時00分更新）",
     "municipality": "宇城市",
-    "date": "2026-11-02",
-    "retrievedAt": "2026-11-02T06:41:03.980Z"
+    "date": "2026-11-04",
+    "retrievedAt": "2026-11-04T01:47:49.284Z"
   },
   "https://localcms.city.minamata.lg.jp/page4895.html?type=top": {
     "id": "minamata-20261019-81bdc420",
@@ -297,12 +297,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-21T22:08:05.740Z"
   },
   "https://www.city.yatsushiro.lg.jp/default.html": {
-    "id": "yatsushiro-20261103-bad1de7e",
-    "htmlPath": "official-articles/yatsushiro-20261103-bad1de7e.html",
+    "id": "yatsushiro-20261104-bad1de7e",
+    "htmlPath": "official-articles/yatsushiro-20261104-bad1de7e.html",
     "title": "熊本県八代市",
     "municipality": "八代市",
-    "date": "2026-11-03",
-    "retrievedAt": "2026-11-03T03:15:03.247Z"
+    "date": "2026-11-04",
+    "retrievedAt": "2026-11-04T01:47:46.013Z"
   },
   "https://www.city.kikuchi.lg.jp/article/view/1040/19566.html": {
     "id": "kikuchi-20261021-f5f1e2ae",
@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-10-24",
-    "retrievedAt": "2026-11-03T19:54:58.691Z"
+    "retrievedAt": "2026-11-04T01:47:51.570Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
@@ -903,5 +903,21 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "西原村",
     "date": "2026-11-02",
     "retrievedAt": "2026-11-03T19:54:55.686Z"
+  },
+  "https://www.town.hikawa.kumamoto.jp/kiji0036773/index.html": {
+    "id": "hikawa-20261104-1aa24e96",
+    "htmlPath": "official-articles/hikawa-20261104-1aa24e96.html",
+    "title": "氷川中学校で入浴支援を実施中です",
+    "municipality": "氷川町",
+    "date": "2026-11-04",
+    "retrievedAt": "2026-11-04T01:47:44.932Z"
+  },
+  "https://www.city.kumamoto.jp/kiji00373095/index.html": {
+    "id": "kumamoto-20261104-9db62a5f",
+    "htmlPath": "official-articles/kumamoto-20261104-9db62a5f.html",
+    "title": "令和8年熊本地震における災害義援金の配分について",
+    "municipality": "熊本市",
+    "date": "2026-11-04",
+    "retrievedAt": "2026-11-04T01:47:48.839Z"
   }
 };

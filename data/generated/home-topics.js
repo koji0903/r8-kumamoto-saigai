@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-03T19:54:53.126Z",
-  "officialCheckedAt": "11/4 04:54",
+  "retrievedAt": "2026-11-04T01:47:40.255Z",
+  "officialCheckedAt": "11/4 10:47",
   "siteTopics": [
     {
       "date": "2026-10-30",
@@ -96,6 +96,46 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "氷川中学校で入浴支援を実施中です",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036773/index.html",
+      "date": "2026-11-04",
+      "time": "09:31",
+      "category": "ごみ・生活",
+      "municipality": "氷川町",
+      "archiveId": "hikawa-20261104-1aa24e96",
+      "archiveUrl": "official-articles/hikawa-20261104-1aa24e96.html"
+    },
+    {
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-11-04",
+      "time": "09:14",
+      "category": "その他",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261104-bad1de7e",
+      "archiveUrl": "official-articles/yatsushiro-20261104-bad1de7e.html"
+    },
+    {
+      "title": "令和8年熊本地震における災害義援金の配分について",
+      "url": "https://www.city.kumamoto.jp/kiji00373095/index.html",
+      "date": "2026-11-04",
+      "time": "08:30",
+      "category": "支援・制度",
+      "municipality": "熊本市",
+      "archiveId": "kumamoto-20261104-9db62a5f",
+      "archiveUrl": "official-articles/kumamoto-20261104-9db62a5f.html"
+    },
+    {
+      "title": "2026年11月4日 令和8年熊本地震 関連情報 （11月4日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-11-04",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261104-7d9d4e13",
+      "archiveUrl": "official-articles/uki-20261104-7d9d4e13.html"
+    },
+    {
       "title": "避難所について（11/3 17:00時点）",
       "url": "https://www.city.uto.lg.jp/article/view/1302/17349.html",
       "date": "2026-11-03",
@@ -104,46 +144,6 @@ window.HOME_TOPICS = {
       "municipality": "宇土市",
       "archiveId": "uto-20261103-1d92d642",
       "archiveUrl": "official-articles/uto-20261103-1d92d642.html"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-11-03",
-      "time": "13:30",
-      "category": "その他",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261103-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261103-bad1de7e.html"
-    },
-    {
-      "title": "令和8年熊本地震に伴う農地等災害復旧事業におけるコンクリート畦畔の取り扱い変更について",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036892/index.html",
-      "date": "2026-11-02",
-      "time": "20:52",
-      "category": "その他",
-      "municipality": "氷川町",
-      "archiveId": "hikawa-20261102-a9ad6c43",
-      "archiveUrl": "official-articles/hikawa-20261102-a9ad6c43.html"
-    },
-    {
-      "title": "＜2026年7月熊本地震＞ 災害救助法 「住家の緊急の修理」制度の案内",
-      "url": "https://www.city.kumamoto.jp/kiji00372143/index.html",
-      "date": "2026-11-02",
-      "time": "15:31",
-      "category": "住まい・証明",
-      "municipality": "熊本市",
-      "archiveId": "kumamoto-20261102-0f9bc22b",
-      "archiveUrl": "official-articles/kumamoto-20261102-0f9bc22b.html"
-    },
-    {
-      "title": "2026年11月2日 令和8年熊本地震 関連情報 （11月2日14時30分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-11-02",
-      "time": "14:30",
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261102-7d9d4e13",
-      "archiveUrl": "official-articles/uki-20261102-7d9d4e13.html"
     },
     {
       "title": "【九州財務局】住宅再建無料相談会開催のお知らせ",
@@ -216,14 +216,14 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/kosa-20261102-32aecc34.html"
     },
     {
-      "title": "嘉島町指定給水装置工事事業者一覧(R8.11.1時点)(PDF 約156KB)",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/dl?q=47079_filelib_bd2d36bd617951daaa2edce42f8df359.pdf",
+      "title": "【令和8年11月30日受付終了】令和8年熊本地震に伴う「り災証明書...",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/125/6030.html",
       "date": "2026-11-01",
       "time": null,
-      "category": "ライフライン",
+      "category": "住まい・証明",
       "municipality": "嘉島町",
-      "archiveId": "kashima-20261101-0a0046b7",
-      "archiveUrl": "official-articles/kashima-20261101-0a0046b7.html"
+      "archiveId": "kashima-20261101-83ebb455",
+      "archiveUrl": "official-articles/kashima-20261101-83ebb455.html"
     },
     {
       "title": "瀬戸歩道橋（通称：赤橋）通行止め解除のお知らせ（10月31日）",

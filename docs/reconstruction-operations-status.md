@@ -1,9 +1,9 @@
 # 暮らしの再建 運用ステータス
 
 - 状態: **ACTION_REQUIRED**
-- 生成: 2026-11-03T19:55:20.903Z
+- 生成: 2026-11-04T01:48:14.483Z
 - sitePhase: **emergency**
-- 収集: 836件 / 分類 715件 / 表示候補 609件
+- 収集: 839件 / 分類 718件 / 表示候補 612件
 - fallback: 21/21
 - 未分類: 14件
 - low confidence: 106件
@@ -12,7 +12,7 @@
 - 鮮度（厳密制度）: fresh
 - 厳密制度source変更: 6件（変更時は needs_review）
 - ACTION_REQUIRED: 6件
-- WARNING: 26件
+- WARNING: 24件
 
 ## ACTION_REQUIRED
 - STRICT_SOURCE_CHANGED: 内閣府防災担当からの各都道府県等への通知等
@@ -31,9 +31,7 @@
 - RETRIEVAL_ISSUE
 - HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE
-- HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE
-- HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE
 - HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE
