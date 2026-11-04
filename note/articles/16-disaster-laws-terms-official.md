@@ -93,6 +93,6 @@ https://www.yokatainet.jp/
 **■ お問い合わせ・団体概要**  
 一般社団法人よか隊ネット熊本（代表理事：土黒 功司）  
 所在地：〒869-0404 熊本県宇土市走潟町2235  
-Mail：info.yokatai@gmail.com / TEL：090-2719-4037  
+お問い合わせ：https://www.yokatainet.jp/contact.html
 活動資金のご寄付口座：肥後銀行・ゆうちょ銀行（詳細はWebサイト内 `join.html` をご覧ください）  
 👉 https://www.yokatainet.jp/join.html

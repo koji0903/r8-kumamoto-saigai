@@ -38,6 +38,10 @@ const tests = readdirSync("scripts")
 for (const test of tests) run("node", [`scripts/${test}`], test);
 
 const syntaxTargets = [
+  "contact-form.js",
+  "api/contact.mjs",
+  "api/contact-token.mjs",
+  "lib/contact-form.mjs",
   "site-search.js",
   "priority-support-summary.js",
   "app.js",

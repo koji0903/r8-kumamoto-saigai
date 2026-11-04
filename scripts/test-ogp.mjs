@@ -69,7 +69,9 @@ for (const page of pages) {
   assert.equal(organization?.logo?.width, 1538, `${page}: 組織ロゴの実寸幅がありません`);
   assert.equal(organization?.logo?.height, 737, `${page}: 組織ロゴの実寸高さがありません`);
   assert.equal(organization?.address?.addressCountry, "JP", `${page}: 所在国がありません`);
-  assert.equal(organization?.contactPoint?.availableLanguage, "ja", `${page}: 日本語の問い合わせ窓口がありません`);
+  assert.equal(organization?.telephone, undefined, `${page}: 非公開の団体電話番号を構造化データへ載せないでください`);
+  assert.equal(organization?.email, undefined, `${page}: 非公開の団体メールアドレスを構造化データへ載せないでください`);
+  assert.equal(organization?.contactPoint, undefined, `${page}: 非公開の直接連絡先を構造化データへ載せないでください`);
   assert.equal(website?.name, "よか隊ネット熊本", `${page}: WebSite.name が推奨サイト名ではありません`);
   assert.ok(website?.alternateName, `${page}: WebSite.alternateName がありません`);
   assert.equal(website?.potentialAction, undefined, `${page}: 廃止済みのサイトリンク検索ボックス用 SearchAction が残っています`);

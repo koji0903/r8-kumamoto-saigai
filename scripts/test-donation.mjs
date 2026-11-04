@@ -24,9 +24,10 @@ assert.match(joinText, /718/, "join.html: ゆうちょ店番718の記載が必�
 assert.match(joinText, /3933933/, "join.html: ゆうちょ他行口座番号3933933の記載が必要です");
 assert.match(joinText, /シャ）ヨカタイネットクマモト/, "join.html: ゆうちょ通帳表記の記載が必要です");
 
-// メール連絡の注意書き
-assert.match(joinText, /info\.yokatai@gmail\.com/, "join.html: 連絡先メールアドレスの記載が必要です");
-assert.match(joinText, /振込.*ご連絡|連絡.*お願い/, "join.html: 寄付後メール連絡のお願いが必要です");
+// 寄付連絡フォームの注意書き
+assert.ok(joinHtml.includes("contact.html?type=donation"), "join.html: 寄付連絡フォームへの導線が必要です");
+assert.doesNotMatch(joinHtml, /info\.yokatai@gmail\.com|mailto:/i, "join.html: 直接連絡先を公開しないでください");
+assert.match(joinText, /振込.*フォーム|フォーム.*ご連絡/, "join.html: 寄付後のフォーム連絡案内が必要です");
 
 // ---- 2. supporters.html の検証 ----------------------------------------------
 const supportersHtml = read("supporters.html");
@@ -36,7 +37,8 @@ assert.match(supportersText, /肥後銀行/, "supporters.html: 肥後銀行の�
 assert.match(supportersText, /499035/, "supporters.html: 肥後銀行口座番号が必要です");
 assert.match(supportersText, /ゆうちょ銀行/, "supporters.html: ゆうちょ銀行の記載が必要です");
 assert.match(supportersText, /39339331|3933933/, "supporters.html: ゆうちょ口座番号が必要です");
-assert.match(supportersText, /info\.yokatai@gmail\.com/, "supporters.html: 連絡先メールが必要です");
+assert.ok(supportersHtml.includes("contact.html?type=donation"), "supporters.html: 寄付連絡フォームへの導線が必要です");
+assert.doesNotMatch(supportersHtml, /info\.yokatai@gmail\.com|mailto:/i, "supporters.html: 直接連絡先を公開しないでください");
 
 // ---- 3. 各ページからの導線検証 ----------------------------------------------
 const aboutHtml = read("about.html");
@@ -48,4 +50,4 @@ assert.ok(disasterHtml.includes("join.html#donation"), "disaster.html: 寄付へ
 const contactHtml = read("contact.html");
 assert.ok(contactHtml.includes("join.html#donation") || contactHtml.includes("寄付"), "contact.html: 寄付に関する記述が必要です");
 
-console.log("寄付口座情報テスト: 肥後銀行 / ゆうちょ銀行（2方式） / メール連絡注意書き / 導線 OK");
+console.log("寄付口座情報テスト: 肥後銀行 / ゆうちょ銀行（2方式） / フォーム連絡注意書き / 導線 OK");

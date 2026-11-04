@@ -338,15 +338,6 @@ function buildStructuredData(file, pageTitle, description, canonical, publishedD
         addressLocality: "宇土市",
         streetAddress: "走潟町2235",
         addressCountry: "JP"
-      },
-      telephone: "090-2719-4037",
-      email: "info.yokatai@gmail.com",
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "お問い合わせ",
-        telephone: "+81-90-2719-4037",
-        email: "info.yokatai@gmail.com",
-        availableLanguage: "ja"
       }
     },
     {
