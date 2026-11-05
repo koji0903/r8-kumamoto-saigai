@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-05T11:29:58.189Z",
+  "generatedAt": "2026-11-05T20:23:15.014Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-05T11:09:44.293Z",
+    "generatedAt": "2026-11-05T20:05:08.116Z",
     "inputCount": 840,
     "classifiedPageCount": 719,
     "displayCandidateCount": 615,
     "deltaFromPrevious": {
-      "inputCount": -6,
-      "classifiedPageCount": -6,
-      "unclassifiedCount": 1
+      "inputCount": 0,
+      "classifiedPageCount": 0,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 15,
+      "ageHours": 24,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 117,
-        "displayCandidates": 101,
+        "classified": 116,
+        "displayCandidates": 100,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -116,8 +116,8 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 33,
-        "displayCandidates": 28,
+        "classified": 34,
+        "displayCandidates": 29,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -168,9 +168,9 @@
         "low": 35
       },
       "work_business": {
-        "total": 73,
+        "total": 74,
         "high": 17,
-        "medium": 56,
+        "medium": 57,
         "low": 0
       },
       "agriculture_fishery": {
