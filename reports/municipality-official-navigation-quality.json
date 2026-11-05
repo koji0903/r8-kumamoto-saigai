@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-04T19:52:30.111Z",
+  "generatedAt": "2026-11-05T01:30:22.194Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 840,
-  "displayCandidateCount": 611,
-  "classifiedPageCount": 719,
+  "inputCount": 846,
+  "displayCandidateCount": 617,
+  "classifiedPageCount": 725,
   "categoryReport": {
     "home": {
       "total": 194,
@@ -13,10 +13,10 @@
       "low": 44
     },
     "money": {
-      "total": 255,
-      "high": 56,
-      "medium": 69,
-      "low": 130
+      "total": 256,
+      "high": 55,
+      "medium": 70,
+      "low": 131
     },
     "documents": {
       "total": 178,
@@ -31,27 +31,27 @@
       "low": 0
     },
     "family_education": {
-      "total": 76,
+      "total": 78,
       "high": 11,
-      "medium": 27,
+      "medium": 29,
       "low": 38
     },
     "work_business": {
-      "total": 71,
+      "total": 75,
       "high": 17,
-      "medium": 54,
+      "medium": 58,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 20,
+      "total": 21,
       "high": 4,
-      "medium": 16,
+      "medium": 17,
       "low": 0
     },
     "daily_life": {
-      "total": 206,
+      "total": 210,
       "high": 55,
-      "medium": 149,
+      "medium": 153,
       "low": 2
     }
   },
@@ -82,13 +82,13 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 60,
-      "displayCandidates": 55,
+      "classified": 61,
+      "displayCandidates": 56,
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 24,
-      "displayCandidates": 20,
+      "classified": 29,
+      "displayCandidates": 25,
       "fallback": true
     },
     "municipality_uki": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 267,
-    "medium": 344,
+    "high": 266,
+    "medium": 351,
     "low": 108
   },
   "unclassifiedCount": 16,
@@ -578,17 +578,17 @@
     },
     {
       "municipalityName": "天草市",
-      "title": "(統合版)2026.10.20時点_令和８年熊本地震に遭われた方へ（PDF：970.6キロバイト）",
-      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314592/3_14592_82112_up_hqk8w66g.pdf",
-      "ruleId": "overall_guide",
-      "ruleLabel": "被災者向けの総合案内"
-    },
-    {
-      "municipalityName": "天草市",
       "title": "令和８年熊本地震 関連情報",
       "url": "https://www.city.amakusa.kumamoto.jp/bousai/kiji00313681/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "天草市",
+      "title": "(統合版)2026.11.2時点_令和８年熊本地震に遭われた方へ（PDF：897.9キロバイト）",
+      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314592/3_14592_82462_up_k7evumrr.pdf",
+      "ruleId": "overall_guide",
+      "ruleLabel": "被災者向けの総合案内"
     },
     {
       "municipalityName": "合志市",
@@ -823,7 +823,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 11
+      "count": 12
     },
     {
       "code": "HTTP_404_CANDIDATE",

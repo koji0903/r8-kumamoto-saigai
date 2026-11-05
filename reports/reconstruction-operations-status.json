@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-04T20:12:17.937Z",
+  "generatedAt": "2026-11-05T01:49:38.694Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-04T19:52:30.111Z",
-    "inputCount": 840,
-    "classifiedPageCount": 719,
-    "displayCandidateCount": 611,
+    "generatedAt": "2026-11-05T01:30:22.194Z",
+    "inputCount": 846,
+    "classifiedPageCount": 725,
+    "displayCandidateCount": 617,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
+      "inputCount": 6,
+      "classifiedPageCount": 6,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 6,
       "limitHours": 336
     }
   },
@@ -56,13 +56,13 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 60,
-        "displayCandidates": 55,
+        "classified": 61,
+        "displayCandidates": 56,
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 24,
-        "displayCandidates": 20,
+        "classified": 29,
+        "displayCandidates": 25,
         "fallback": true
       },
       "municipality_uki": {
@@ -144,10 +144,10 @@
         "low": 44
       },
       "money": {
-        "total": 255,
-        "high": 56,
-        "medium": 69,
-        "low": 130
+        "total": 256,
+        "high": 55,
+        "medium": 70,
+        "low": 131
       },
       "documents": {
         "total": 178,
@@ -162,33 +162,33 @@
         "low": 0
       },
       "family_education": {
-        "total": 76,
+        "total": 78,
         "high": 11,
-        "medium": 27,
+        "medium": 29,
         "low": 38
       },
       "work_business": {
-        "total": 71,
+        "total": 75,
         "high": 17,
-        "medium": 54,
+        "medium": 58,
         "low": 0
       },
       "agriculture_fishery": {
-        "total": 20,
+        "total": 21,
         "high": 4,
-        "medium": 16,
+        "medium": 17,
         "low": 0
       },
       "daily_life": {
-        "total": 206,
+        "total": 210,
         "high": 55,
-        "medium": 149,
+        "medium": 153,
         "low": 2
       }
     },
     "confidence": {
-      "high": 267,
-      "medium": 344,
+      "high": 266,
+      "medium": 351,
       "low": 108
     },
     "unclassifiedCount": 16,
@@ -342,7 +342,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 11
+      "count": 12
     },
     {
       "code": "HTTP_404_CANDIDATE",
