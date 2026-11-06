@@ -982,6 +982,6 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "学校教育",
     "municipality": "御船町",
     "date": "2026-11-05",
-    "retrievedAt": "2026-11-06T11:25:57.604Z"
+    "retrievedAt": "2026-11-06T19:51:36.890Z"
   }
 };

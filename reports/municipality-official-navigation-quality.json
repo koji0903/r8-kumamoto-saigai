@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T11:06:59.766Z",
+  "generatedAt": "2026-11-06T19:31:04.938Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 851,
@@ -741,7 +741,7 @@
     "duplicate_url": 37,
     "past_disaster_excluded": 1
   },
-  "warningCount": 25,
+  "warningCount": 26,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -804,9 +804,14 @@
       "count": 1
     },
     {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_uki",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -870,5 +875,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 720
+  "previousClassifiedPageCount": 730
 }

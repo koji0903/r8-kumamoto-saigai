@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-06T11:26:22.332Z",
+  "generatedAt": "2026-11-06T19:52:01.300Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-06T11:06:59.766Z",
+    "generatedAt": "2026-11-06T19:31:04.938Z",
     "inputCount": 851,
     "classifiedPageCount": 730,
     "displayCandidateCount": 626,
     "deltaFromPrevious": {
-      "inputCount": 10,
-      "classifiedPageCount": 10,
+      "inputCount": 0,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 8,
       "limitHours": 336
     }
   },
@@ -325,9 +325,14 @@
       "count": 1
     },
     {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_uki",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
