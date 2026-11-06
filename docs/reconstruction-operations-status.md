@@ -1,9 +1,9 @@
 # 暮らしの再建 運用ステータス
 
 - 状態: **ACTION_REQUIRED**
-- 生成: 2026-11-06T01:56:32.583Z
+- 生成: 2026-11-06T11:26:22.332Z
 - sitePhase: **emergency**
-- 収集: 841件 / 分類 720件 / 表示候補 616件
+- 収集: 851件 / 分類 730件 / 表示候補 626件
 - fallback: 21/21
 - 未分類: 17件
 - low confidence: 104件
@@ -35,8 +35,8 @@
 - RETRIEVAL_ISSUE
 - HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE
-- HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE
+- HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE
 - HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE

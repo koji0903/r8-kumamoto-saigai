@@ -9,12 +9,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T05:15:39.834Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699": {
-    "id": "uki-20261104-7d9d4e13",
-    "htmlPath": "official-articles/uki-20261104-7d9d4e13.html",
-    "title": "2026年11月4日 令和8年熊本地震 関連情報 （11月4日8時00分更新）",
+    "id": "uki-20261106-7d9d4e13",
+    "htmlPath": "official-articles/uki-20261106-7d9d4e13.html",
+    "title": "2026年11月6日 令和8年熊本地震 関連情報 （11月6日18時00分更新）",
     "municipality": "宇城市",
-    "date": "2026-11-04",
-    "retrievedAt": "2026-11-04T01:47:49.284Z"
+    "date": "2026-11-06",
+    "retrievedAt": "2026-11-06T11:25:51.418Z"
   },
   "https://localcms.city.minamata.lg.jp/page4895.html?type=top": {
     "id": "minamata-20261019-81bdc420",
@@ -489,12 +489,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-24T16:21:44.168Z"
   },
   "https://www.town.kikuyo.lg.jp/kiji0035726/index.html": {
-    "id": "kikuyo-20261026-8d870d59",
-    "htmlPath": "official-articles/kikuyo-20261026-8d870d59.html",
+    "id": "kikuyo-20261106-8d870d59",
+    "htmlPath": "official-articles/kikuyo-20261106-8d870d59.html",
     "title": "自宅敷地内での建設型応急住宅の設置について",
     "municipality": "菊陽町",
-    "date": "2026-10-26",
-    "retrievedAt": "2026-10-26T00:26:38.957Z"
+    "date": "2026-11-06",
+    "retrievedAt": "2026-11-06T11:25:54.314Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036774/index.html": {
     "id": "hikawa-20261026-81afdc2a",
@@ -982,6 +982,6 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "学校教育",
     "municipality": "御船町",
     "date": "2026-11-05",
-    "retrievedAt": "2026-11-06T01:56:10.816Z"
+    "retrievedAt": "2026-11-06T11:25:57.604Z"
   }
 };

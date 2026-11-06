@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-06T01:56:01.060Z",
-  "officialCheckedAt": "11/6 10:56",
+  "retrievedAt": "2026-11-06T11:25:48.400Z",
+  "officialCheckedAt": "11/6 20:25",
   "siteTopics": [
     {
       "date": "2026-11-04",
@@ -99,11 +99,31 @@ window.HOME_TOPICS = {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-11-06",
-      "time": "10:27",
+      "time": "18:06",
       "category": "その他",
       "municipality": "八代市",
       "archiveId": "yatsushiro-20261106-bad1de7e",
       "archiveUrl": "official-articles/yatsushiro-20261106-bad1de7e.html"
+    },
+    {
+      "title": "2026年11月6日 令和8年熊本地震 関連情報 （11月6日18時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-11-06",
+      "time": "18:00",
+      "category": "その他",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261106-7d9d4e13",
+      "archiveUrl": "official-articles/uki-20261106-7d9d4e13.html"
+    },
+    {
+      "title": "自宅敷地内での建設型応急住宅の設置について",
+      "url": "https://www.town.kikuyo.lg.jp/kiji0035726/index.html",
+      "date": "2026-11-06",
+      "time": "13:37",
+      "category": "住まい・証明",
+      "municipality": "菊陽町",
+      "archiveId": "kikuyo-20261106-8d870d59",
+      "archiveUrl": "official-articles/kikuyo-20261106-8d870d59.html"
     },
     {
       "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
@@ -114,16 +134,6 @@ window.HOME_TOPICS = {
       "municipality": "熊本市",
       "archiveId": "kumamoto-20261106-2d71cce8",
       "archiveUrl": "official-articles/kumamoto-20261106-2d71cce8.html"
-    },
-    {
-      "title": "2026年11月06日 令和8年熊本地震 関連情報 （11月6日8時30分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
-      "date": "2026-11-06",
-      "time": "08:30",
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261106-7912efae",
-      "archiveUrl": "official-articles/uki-20261106-7912efae.html"
     },
     {
       "title": "避難所について（11/5 17:00時点）",
@@ -174,16 +184,6 @@ window.HOME_TOPICS = {
       "municipality": "上天草市",
       "archiveId": "kamiamakusa-20261105-7a566b1e",
       "archiveUrl": "official-articles/kamiamakusa-20261105-7a566b1e.html"
-    },
-    {
-      "title": "令和8年熊本地震災害義援金の第1次配分について",
-      "url": "https://www.town.kikuyo.lg.jp/kiji0035802/index.html",
-      "date": "2026-11-05",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "菊陽町",
-      "archiveId": "kikuyo-20261105-3c7fb834",
-      "archiveUrl": "official-articles/kikuyo-20261105-3c7fb834.html"
     },
     {
       "title": "学校教育",
