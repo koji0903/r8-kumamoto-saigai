@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-05T20:22:53.364Z",
-  "officialCheckedAt": "11/6 05:22",
+  "retrievedAt": "2026-11-06T01:56:01.060Z",
+  "officialCheckedAt": "11/6 10:56",
   "siteTopics": [
     {
       "date": "2026-11-04",
@@ -98,12 +98,32 @@ window.HOME_TOPICS = {
     {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-11-05",
-      "time": "17:10",
+      "date": "2026-11-06",
+      "time": "10:27",
       "category": "その他",
       "municipality": "八代市",
-      "archiveId": "yatsushiro-20261105-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261105-bad1de7e.html"
+      "archiveId": "yatsushiro-20261106-bad1de7e",
+      "archiveUrl": "official-articles/yatsushiro-20261106-bad1de7e.html"
+    },
+    {
+      "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
+      "url": "https://www.city.kumamoto.jp/kiji00372210/index.html",
+      "date": "2026-11-06",
+      "time": "09:54",
+      "category": "住まい・証明",
+      "municipality": "熊本市",
+      "archiveId": "kumamoto-20261106-2d71cce8",
+      "archiveUrl": "official-articles/kumamoto-20261106-2d71cce8.html"
+    },
+    {
+      "title": "2026年11月06日 令和8年熊本地震 関連情報 （11月6日8時30分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
+      "date": "2026-11-06",
+      "time": "08:30",
+      "category": "その他",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261106-7912efae",
+      "archiveUrl": "official-articles/uki-20261106-7912efae.html"
     },
     {
       "title": "避難所について（11/5 17:00時点）",
@@ -114,16 +134,6 @@ window.HOME_TOPICS = {
       "municipality": "宇土市",
       "archiveId": "uto-20261105-1d92d642",
       "archiveUrl": "official-articles/uto-20261105-1d92d642.html"
-    },
-    {
-      "title": "2026年11月05日 令和8年熊本地震 関連情報 （11月5日17時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
-      "date": "2026-11-05",
-      "time": "17:00",
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261105-7912efae",
-      "archiveUrl": "official-articles/uki-20261105-7912efae.html"
     },
     {
       "title": "令和8年熊本地震被災者生活再建相談会が実施されます",
@@ -176,6 +186,16 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/kikuyo-20261105-3c7fb834.html"
     },
     {
+      "title": "学校教育",
+      "url": "https://www.town.mifune.kumamoto.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1048",
+      "date": "2026-11-05",
+      "time": null,
+      "category": "施設・学校",
+      "municipality": "御船町",
+      "archiveId": "mifune-20261105-e2bb87f9",
+      "archiveUrl": "official-articles/mifune-20261105-e2bb87f9.html"
+    },
+    {
       "title": "被災した住宅の「応急修理」の支援について【令和8年熊本地震】",
       "url": "https://www.town.mashiki.lg.jp/kiji0038084/index.html",
       "date": "2026-11-05",
@@ -186,16 +206,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/mashiki-20261105-c81a1fa3.html"
     },
     {
-      "title": "【令和8年熊本地震】被災者支援制度 （冊子）をご利用ください",
-      "url": "https://www.city.kumamoto.jp/kiji00372110/index.html",
-      "date": "2026-11-04",
-      "time": "17:22",
-      "category": "支援・制度",
-      "municipality": "熊本市",
-      "archiveId": "kumamoto-20261104-ff682d7b",
-      "archiveUrl": "official-articles/kumamoto-20261104-ff682d7b.html"
-    },
-    {
       "title": "令和8年熊本地震に伴う農地等災害復旧事業におけるコンクリート畦畔の取り扱い変更について",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036892/index.html",
       "date": "2026-11-04",
@@ -204,16 +214,6 @@ window.HOME_TOPICS = {
       "municipality": "氷川町",
       "archiveId": "hikawa-20261104-a9ad6c43",
       "archiveUrl": "official-articles/hikawa-20261104-a9ad6c43.html"
-    },
-    {
-      "title": "【九州財務局】住宅再建無料相談会開催のお知らせ",
-      "url": "https://www.town.mifune.kumamoto.jp/page9513.html",
-      "date": "2026-11-02",
-      "time": "13:06",
-      "category": "住まい・証明",
-      "municipality": "御船町",
-      "archiveId": "mifune-20261102-fdbe6619",
-      "archiveUrl": "official-articles/mifune-20261102-fdbe6619.html"
     },
     {
       "title": "【令和8年10月30日（金曜日）受付終了】り災証明書の申請について（令和8年熊本地震）",

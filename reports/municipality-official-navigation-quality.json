@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-05T20:05:08.116Z",
+  "generatedAt": "2026-11-06T01:37:30.419Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 840,
-  "displayCandidateCount": 615,
-  "classifiedPageCount": 719,
+  "inputCount": 841,
+  "displayCandidateCount": 616,
+  "classifiedPageCount": 720,
   "categoryReport": {
     "home": {
       "total": 195,
@@ -25,15 +25,15 @@
       "low": 103
     },
     "health_care": {
-      "total": 56,
+      "total": 57,
       "high": 19,
-      "medium": 37,
+      "medium": 38,
       "low": 0
     },
     "family_education": {
-      "total": 75,
+      "total": 76,
       "high": 11,
-      "medium": 29,
+      "medium": 30,
       "low": 35
     },
     "work_business": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 209,
+      "total": 208,
       "high": 55,
-      "medium": 152,
+      "medium": 151,
       "low": 2
     }
   },
@@ -72,8 +72,8 @@
       "fallback": true
     },
     "municipality_yamaga": {
-      "classified": 13,
-      "displayCandidates": 12,
+      "classified": 12,
+      "displayCandidates": 11,
       "fallback": true
     },
     "municipality_kikuchi": {
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 60,
-      "displayCandidates": 55,
+      "classified": 61,
+      "displayCandidates": 56,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -127,8 +127,8 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 22,
-      "displayCandidates": 13,
+      "classified": 23,
+      "displayCandidates": 14,
       "fallback": true
     },
     "municipality_kashima": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 266,
-    "medium": 349,
+    "medium": 350,
     "low": 104
   },
   "unclassifiedCount": 17,
@@ -562,14 +562,14 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月4日 令和8年熊本地震 関連情報 （11月5日17時00分更新）",
+      "title": "2026年11月4日 令和8年熊本地震 関連情報 （11月6日8時30分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月05日 令和8年熊本地震 関連情報 （11月5日17時00分更新）",
+      "title": "2026年11月06日 令和8年熊本地震 関連情報 （11月6日8時30分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -856,7 +856,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 12
+      "count": 13
     },
     {
       "code": "HTTP_404_CANDIDATE",

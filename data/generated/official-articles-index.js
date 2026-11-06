@@ -257,12 +257,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-05T01:49:09.359Z"
   },
   "https://www.city.kumamoto.jp/kiji00372210/index.html": {
-    "id": "kumamoto-20261028-2d71cce8",
-    "htmlPath": "official-articles/kumamoto-20261028-2d71cce8.html",
+    "id": "kumamoto-20261106-2d71cce8",
+    "htmlPath": "official-articles/kumamoto-20261106-2d71cce8.html",
     "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
     "municipality": "熊本市",
-    "date": "2026-10-28",
-    "retrievedAt": "2026-10-28T11:14:01.249Z"
+    "date": "2026-11-06",
+    "retrievedAt": "2026-11-06T01:56:05.841Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036870/index.html": {
     "id": "hikawa-20261021-52aa9d69",
@@ -297,12 +297,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-05T11:29:29.079Z"
   },
   "https://www.city.yatsushiro.lg.jp/default.html": {
-    "id": "yatsushiro-20261105-bad1de7e",
-    "htmlPath": "official-articles/yatsushiro-20261105-bad1de7e.html",
+    "id": "yatsushiro-20261106-bad1de7e",
+    "htmlPath": "official-articles/yatsushiro-20261106-bad1de7e.html",
     "title": "熊本県八代市",
     "municipality": "八代市",
-    "date": "2026-11-05",
-    "retrievedAt": "2026-11-05T11:29:22.787Z"
+    "date": "2026-11-06",
+    "retrievedAt": "2026-11-06T01:56:03.177Z"
   },
   "https://www.city.kikuchi.lg.jp/article/view/1040/19566.html": {
     "id": "kikuchi-20261021-f5f1e2ae",
@@ -377,12 +377,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-22T17:36:11.066Z"
   },
   "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699": {
-    "id": "uki-20261105-7912efae",
-    "htmlPath": "official-articles/uki-20261105-7912efae.html",
-    "title": "2026年11月05日 令和8年熊本地震 関連情報 （11月5日17時00分更新）",
+    "id": "uki-20261106-7912efae",
+    "htmlPath": "official-articles/uki-20261106-7912efae.html",
+    "title": "2026年11月06日 令和8年熊本地震 関連情報 （11月6日8時30分更新）",
     "municipality": "宇城市",
-    "date": "2026-11-05",
-    "retrievedAt": "2026-11-05T11:29:26.929Z"
+    "date": "2026-11-06",
+    "retrievedAt": "2026-11-06T01:56:08.125Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036849/index.html": {
     "id": "hikawa-20261023-2e7c12ab",
@@ -975,5 +975,13 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "菊池市",
     "date": "2026-11-02",
     "retrievedAt": "2026-11-05T11:29:33.731Z"
+  },
+  "https://www.town.mifune.kumamoto.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1048": {
+    "id": "mifune-20261105-e2bb87f9",
+    "htmlPath": "official-articles/mifune-20261105-e2bb87f9.html",
+    "title": "学校教育",
+    "municipality": "御船町",
+    "date": "2026-11-05",
+    "retrievedAt": "2026-11-06T01:56:10.816Z"
   }
 };
