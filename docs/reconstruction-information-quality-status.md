@@ -1,12 +1,12 @@
 # 暮らしの再建 情報品質ステータス
 
-最終監査日時: 2026-08-12（データ生成: 2026-11-06T19:31:04.938Z）
+最終監査日時: 2026-08-12（データ生成: 2026-11-07T00:59:15.588Z）
 
 > 件数の少なさは支援の少なさを意味しません。自治体の発信方法・ページ構造・更新頻度の差として扱います。A/B/Cは品質状態であり自治体評価ではありません。
 
 ## ACTION_REQUIRED
 - 厳密情報source変更 6件
-- 未解決source変更 ACTION_REQUIRED 56件
+- 未解決source変更 ACTION_REQUIRED 58件
 
 ## WARNING（上位）
 - 熊本市: confirmed / 取得エラー 1件
@@ -27,13 +27,13 @@
 - 表示候補のうち機械的freshness判定でstale 507件。自動削除せず公式原文を確認
 
 ## 現在の公式情報件数
-- collector入力: 851件
-- classified: 730件
-- 通常表示候補: 626件
-- 検索index: 629件
+- collector入力: 852件
+- classified: 731件
+- 通常表示候補: 627件
+- 検索index: 630件
 - 未分類: 17件
 - 除外・重複: 38件
-- confidence: high 272 / medium 354 / low 104
+- confidence: high 273 / medium 354 / low 104
 - fallback: 21/21
 - manual override: 2件
 
@@ -46,7 +46,7 @@
 | 水俣市 | 0 | 0 | 0 | あり | not-found-by-collector |
 | 山鹿市 | 15 | 12 | 11 | あり | confirmed |
 | 菊池市 | 14 | 12 | 10 | あり | confirmed |
-| 宇土市 | 72 | 61 | 56 | あり | confirmed |
+| 宇土市 | 73 | 62 | 57 | あり | confirmed |
 | 上天草市 | 32 | 29 | 25 | あり | confirmed |
 | 宇城市 | 129 | 117 | 101 | あり | confirmed |
 | 天草市 | 26 | 23 | 21 | あり | confirmed |
@@ -67,9 +67,9 @@
 
 | カテゴリ | 全分類 | high | medium | low | 通常表示候補 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| 住まい | 199 | 75 | 78 | 46 | 153 |
+| 住まい | 200 | 76 | 78 | 46 | 154 |
 | お金・支払い | 259 | 57 | 71 | 131 | 128 |
-| 証明・申請 | 183 | 44 | 33 | 106 | 77 |
+| 証明・申請 | 184 | 44 | 33 | 107 | 77 |
 | 健康・介護 | 56 | 19 | 37 | 0 | 56 |
 | 子ども・家族 | 75 | 11 | 30 | 34 | 41 |
 | 仕事・事業 | 75 | 17 | 58 | 0 | 75 |
@@ -87,7 +87,7 @@ A=自治体個別公式情報あり、B=国・県等の広域情報のみ、C=�
 | 水俣市 | B | C | C | C | C | C | C | C |
 | 山鹿市 | A(5) | A(4) | A(2) | C | C | A(1) | C | A(3) |
 | 菊池市 | A(2) | A(3) | A(2) | C | C | C | C | A(5) |
-| 宇土市 | A(9) | A(6) | A(2) | A(4) | A(4) | A(14) | A(4) | A(21) |
+| 宇土市 | A(10) | A(6) | A(2) | A(4) | A(4) | A(14) | A(4) | A(21) |
 | 上天草市 | A(4) | A(6) | A(5) | C | A(2) | A(7) | C | A(8) |
 | 宇城市 | A(28) | A(13) | A(17) | A(4) | A(6) | A(12) | A(5) | A(43) |
 | 天草市 | A(10) | A(3) | A(3) | A(1) | C | A(1) | C | A(6) |
@@ -136,13 +136,13 @@ A=自治体個別公式情報あり、B=国・県等の広域情報のみ、C=�
 - low confidenceは検索index・通常表示から除外済み。mediumは表示対象のため週次サンプル監査を続ける。
 
 ## source・freshness・障害耐性
-- freshness（生成時点の機械判定）: fresh 119 / stale 507 / unknown 0
+- freshness（生成時点の機械判定）: fresh 120 / stale 507 / unknown 0
 - staleは自動削除しない。速報は公式ページで最新状況を確認する前提を維持する。
 - `publishedAt`を`retrievedAt`より優先。日付なしはエラーにしない。
 - LEVEL 2公式リンクの変更は正常。LEVEL 1 verified sourceのhash変更は`needs_review`へ送る。
 - verified source変更: 6件
 - needs_review entity: 0件
-- 未解決source変更: 116件（ACTION_REQUIRED 56件）
+- 未解決source変更: 119件（ACTION_REQUIRED 58件）
 - review queue: `docs/reconstruction-source-review-queue.md`（高リスク順）
 - refreshは自治体別errorsを保持し、空データ・fallback欠落・非公式URLをfailureにする。
 - 1自治体失敗時も既存データを空上書きしない設計を維持。生成は一時ファイルからrenameし、検証不合格時は公開しない。

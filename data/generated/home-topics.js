@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-06T19:51:32.818Z",
-  "officialCheckedAt": "11/7 04:51",
+  "retrievedAt": "2026-11-07T01:19:00.077Z",
+  "officialCheckedAt": "11/7 10:19",
   "siteTopics": [
     {
       "date": "2026-11-04",
@@ -98,12 +98,22 @@ window.HOME_TOPICS = {
     {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-11-06",
-      "time": "18:06",
+      "date": "2026-11-07",
+      "time": "07:45",
       "category": "その他",
       "municipality": "八代市",
-      "archiveId": "yatsushiro-20261106-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261106-bad1de7e.html"
+      "archiveId": "yatsushiro-20261107-bad1de7e",
+      "archiveUrl": "official-articles/yatsushiro-20261107-bad1de7e.html"
+    },
+    {
+      "title": "令和８年熊本地震に係る被災した住宅の応急修理制度について（サイト内リンク）",
+      "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
+      "date": "2026-11-07",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261107-47623aa5",
+      "archiveUrl": "official-articles/uto-20261107-47623aa5.html"
     },
     {
       "title": "2026年11月6日 令和8年熊本地震 関連情報 （11月6日18時00分更新）",
@@ -134,16 +144,6 @@ window.HOME_TOPICS = {
       "municipality": "熊本市",
       "archiveId": "kumamoto-20261106-2d71cce8",
       "archiveUrl": "official-articles/kumamoto-20261106-2d71cce8.html"
-    },
-    {
-      "title": "避難所について（11/5 17:00時点）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/17349.html",
-      "date": "2026-11-05",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261105-1d92d642",
-      "archiveUrl": "official-articles/uto-20261105-1d92d642.html"
     },
     {
       "title": "令和8年熊本地震被災者生活再建相談会が実施されます",
