@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-11-07T00:59:15.588Z",
+  "generatedAt": "2026-11-07T10:25:19.402Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 852,
-  "displayCandidateCount": 627,
-  "classifiedPageCount": 731,
+  "inputCount": 849,
+  "displayCandidateCount": 625,
+  "classifiedPageCount": 728,
   "categoryReport": {
     "home": {
-      "total": 200,
+      "total": 198,
       "high": 76,
-      "medium": 78,
+      "medium": 76,
       "low": 46
     },
     "money": {
-      "total": 259,
+      "total": 258,
       "high": 57,
       "medium": 71,
-      "low": 131
+      "low": 130
     },
     "documents": {
-      "total": 184,
+      "total": 183,
       "high": 44,
       "medium": 33,
-      "low": 107
+      "low": 106
     },
     "health_care": {
       "total": 56,
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 117,
-      "displayCandidates": 101,
+      "classified": 114,
+      "displayCandidates": 99,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -164,8 +164,8 @@
   },
   "confidence": {
     "high": 273,
-    "medium": 354,
-    "low": 104
+    "medium": 352,
+    "low": 103
   },
   "unclassifiedCount": 17,
   "unclassifiedItems": [
@@ -443,13 +443,6 @@
     },
     {
       "municipalityName": "宇土市",
-      "title": "令和8年熊本地震 災害対策本部会議",
-      "url": "https://www.city.uto.lg.jp/article/view/1310/16725.html",
-      "ruleId": "hq_meeting_material",
-      "ruleLabel": "災害対策本部会議の資料"
-    },
-    {
-      "municipalityName": "宇土市",
       "title": "市民の皆様へお願いです",
       "url": "https://www.city.uto.lg.jp/article/view/1308/16473.html",
       "ruleId": "mayor_message",
@@ -482,6 +475,13 @@
       "url": "https://www.city.uto.lg.jp/article/keyword/240.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "宇土市",
+      "title": "令和8年熊本地震 災害対策本部会議",
+      "url": "https://www.city.uto.lg.jp/article/view/1310/16725.html",
+      "ruleId": "hq_meeting_material",
+      "ruleLabel": "災害対策本部会議の資料"
     },
     {
       "municipalityName": "宇土市",
@@ -741,7 +741,7 @@
     "duplicate_url": 37,
     "past_disaster_excluded": 1
   },
-  "warningCount": 26,
+  "warningCount": 27,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -792,6 +792,11 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
       "count": 5
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_uto",
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -875,5 +880,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 730
+  "previousClassifiedPageCount": 731
 }

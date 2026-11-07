@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-07T01:19:30.350Z",
+  "generatedAt": "2026-11-07T10:43:15.377Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-07T00:59:15.588Z",
-    "inputCount": 852,
-    "classifiedPageCount": 731,
-    "displayCandidateCount": 627,
+    "generatedAt": "2026-11-07T10:25:19.402Z",
+    "inputCount": 849,
+    "classifiedPageCount": 728,
+    "displayCandidateCount": 625,
     "deltaFromPrevious": {
-      "inputCount": 1,
-      "classifiedPageCount": 1,
+      "inputCount": -3,
+      "classifiedPageCount": -3,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 9,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 117,
-        "displayCandidates": 101,
+        "classified": 114,
+        "displayCandidates": 99,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 200,
+        "total": 198,
         "high": 76,
-        "medium": 78,
+        "medium": 76,
         "low": 46
       },
       "money": {
-        "total": 259,
+        "total": 258,
         "high": 57,
         "medium": 71,
-        "low": 131
+        "low": 130
       },
       "documents": {
-        "total": 184,
+        "total": 183,
         "high": 44,
         "medium": 33,
-        "low": 107
+        "low": 106
       },
       "health_care": {
         "total": 56,
@@ -188,8 +188,8 @@
     },
     "confidence": {
       "high": 273,
-      "medium": 354,
-      "low": 104
+      "medium": 352,
+      "low": 103
     },
     "unclassifiedCount": 17,
     "excludedCount": 38,
@@ -313,6 +313,11 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
       "count": 5
+    },
+    {
+      "code": "RETRIEVAL_ISSUE",
+      "municipalityId": "municipality_uto",
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
