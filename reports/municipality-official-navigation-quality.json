@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T17:47:14.475Z",
+  "generatedAt": "2026-11-07T21:59:12.909Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 853,
@@ -366,7 +366,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -734,7 +734,7 @@
     "duplicate_url": 37,
     "past_disaster_excluded": 1
   },
-  "warningCount": 25,
+  "warningCount": 26,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -777,9 +777,14 @@
       "count": 2
     },
     {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_kikuchi",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "count": 1
+      "count": 5
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -863,5 +868,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 728
+  "previousClassifiedPageCount": 733
 }

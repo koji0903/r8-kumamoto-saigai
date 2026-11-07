@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-07T18:07:47.436Z",
+  "generatedAt": "2026-11-07T22:18:35.235Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-07T17:47:14.475Z",
+    "generatedAt": "2026-11-07T21:59:12.909Z",
     "inputCount": 853,
     "classifiedPageCount": 733,
     "displayCandidateCount": 629,
     "deltaFromPrevious": {
-      "inputCount": 4,
-      "classifiedPageCount": 5,
+      "inputCount": 0,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 17,
+      "ageHours": 21,
       "limitHours": 336
     }
   },
@@ -305,9 +305,14 @@
       "count": 2
     },
     {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_kikuchi",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "count": 1
+      "count": 5
     },
     {
       "code": "HTTP_404_CANDIDATE",
