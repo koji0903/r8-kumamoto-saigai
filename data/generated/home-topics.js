@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-07T10:42:54.169Z",
-  "officialCheckedAt": "11/7 19:42",
+  "retrievedAt": "2026-11-07T18:07:18.497Z",
+  "officialCheckedAt": "11/8 03:07",
   "siteTopics": [
     {
       "date": "2026-11-04",
@@ -96,6 +96,16 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "給水装置工事申請について",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/123/22496.html",
+      "date": "2026-11-08",
+      "time": null,
+      "category": "ライフライン",
+      "municipality": "上天草市",
+      "archiveId": "kamiamakusa-20261108-490a286c",
+      "archiveUrl": "official-articles/kamiamakusa-20261108-490a286c.html"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-11-07",
@@ -174,16 +184,6 @@ window.HOME_TOPICS = {
       "municipality": "西原村",
       "archiveId": "nishihara-20261105-16aeb359",
       "archiveUrl": "official-articles/nishihara-20261105-16aeb359.html"
-    },
-    {
-      "title": "プロバスケットボールの試合に上天草市民を無料招待します!!",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/99/18954.html",
-      "date": "2026-11-05",
-      "time": null,
-      "category": "交通",
-      "municipality": "上天草市",
-      "archiveId": "kamiamakusa-20261105-7a566b1e",
-      "archiveUrl": "official-articles/kamiamakusa-20261105-7a566b1e.html"
     },
     {
       "title": "学校教育",

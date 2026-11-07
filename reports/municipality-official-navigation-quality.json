@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-11-07T10:25:19.402Z",
+  "generatedAt": "2026-11-07T17:47:14.475Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 849,
-  "displayCandidateCount": 625,
-  "classifiedPageCount": 728,
+  "inputCount": 853,
+  "displayCandidateCount": 629,
+  "classifiedPageCount": 733,
   "categoryReport": {
     "home": {
-      "total": 198,
+      "total": 200,
       "high": 76,
-      "medium": 76,
+      "medium": 78,
       "low": 46
     },
     "money": {
-      "total": 258,
+      "total": 259,
       "high": 57,
       "medium": 71,
-      "low": 130
+      "low": 131
     },
     "documents": {
-      "total": 183,
+      "total": 184,
       "high": 44,
       "medium": 33,
-      "low": 106
+      "low": 107
     },
     "health_care": {
       "total": 56,
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 210,
-      "high": 57,
-      "medium": 151,
+      "total": 212,
+      "high": 58,
+      "medium": 152,
       "low": 2
     }
   },
@@ -87,13 +87,13 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 29,
-      "displayCandidates": 25,
+      "classified": 31,
+      "displayCandidates": 27,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 114,
-      "displayCandidates": 99,
+      "classified": 117,
+      "displayCandidates": 101,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 273,
-    "medium": 352,
-    "low": 103
+    "high": 274,
+    "medium": 355,
+    "low": 104
   },
   "unclassifiedCount": 17,
   "unclassifiedItems": [
@@ -255,7 +255,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 66,
+  "outOfScopeCount": 65,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "disaster_preparedness": 10,
@@ -265,7 +265,7 @@
     "mayor_message": 2,
     "overall_guide": 5,
     "hq_meeting_material": 3,
-    "index_page": 14,
+    "index_page": 13,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 4,
@@ -443,6 +443,13 @@
     },
     {
       "municipalityName": "宇土市",
+      "title": "令和8年熊本地震 災害対策本部会議",
+      "url": "https://www.city.uto.lg.jp/article/view/1310/16725.html",
+      "ruleId": "hq_meeting_material",
+      "ruleLabel": "災害対策本部会議の資料"
+    },
+    {
+      "municipalityName": "宇土市",
       "title": "市民の皆様へお願いです",
       "url": "https://www.city.uto.lg.jp/article/view/1308/16473.html",
       "ruleId": "mayor_message",
@@ -475,13 +482,6 @@
       "url": "https://www.city.uto.lg.jp/article/keyword/240.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "宇土市",
-      "title": "令和8年熊本地震 災害対策本部会議",
-      "url": "https://www.city.uto.lg.jp/article/view/1310/16725.html",
-      "ruleId": "hq_meeting_material",
-      "ruleLabel": "災害対策本部会議の資料"
     },
     {
       "municipalityName": "宇土市",
@@ -624,13 +624,6 @@
       "ruleLabel": "入口・一覧のページ"
     },
     {
-      "municipalityName": "大津町",
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（10月14日時点）",
-      "url": "https://www.town.ozu.kumamoto.jp/page/27698.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
       "municipalityName": "菊陽町",
       "title": "中央公民館及び各センターの利用再開について",
       "url": "https://www.town.kikuyo.lg.jp/bousai/kiji0035665/index.html",
@@ -741,7 +734,7 @@
     "duplicate_url": 37,
     "past_disaster_excluded": 1
   },
-  "warningCount": 27,
+  "warningCount": 25,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -784,18 +777,8 @@
       "count": 2
     },
     {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_kikuchi",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "count": 5
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_uto",
       "count": 1
     },
     {
@@ -880,5 +863,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 731
+  "previousClassifiedPageCount": 728
 }
