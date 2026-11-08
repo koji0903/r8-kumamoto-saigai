@@ -982,7 +982,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "学校教育",
     "municipality": "御船町",
     "date": "2026-11-05",
-    "retrievedAt": "2026-11-08T06:34:54.810Z"
+    "retrievedAt": "2026-11-08T13:59:53.035Z"
   },
   "https://www.city.uto.lg.jp/article/view/1243/16523.html": {
     "id": "uto-20261107-47623aa5",
