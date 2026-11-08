@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-07T21:59:12.909Z",
+  "generatedAt": "2026-11-08T06:17:17.270Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 853,
-  "displayCandidateCount": 629,
-  "classifiedPageCount": 733,
+  "displayCandidateCount": 627,
+  "classifiedPageCount": 731,
   "categoryReport": {
     "home": {
-      "total": 200,
+      "total": 198,
       "high": 76,
-      "medium": 78,
+      "medium": 76,
       "low": 46
     },
     "money": {
@@ -19,10 +19,10 @@
       "low": 131
     },
     "documents": {
-      "total": 184,
+      "total": 183,
       "high": 44,
       "medium": 33,
-      "low": 107
+      "low": 106
     },
     "health_care": {
       "total": 56,
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 117,
-      "displayCandidates": 101,
+      "classified": 115,
+      "displayCandidates": 99,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 274,
-    "medium": 355,
+    "medium": 353,
     "low": 104
   },
   "unclassifiedCount": 17,
@@ -255,7 +255,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 65,
+  "outOfScopeCount": 67,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "disaster_preparedness": 10,
@@ -265,7 +265,7 @@
     "mayor_message": 2,
     "overall_guide": 5,
     "hq_meeting_material": 3,
-    "index_page": 13,
+    "index_page": 15,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 4,
@@ -426,6 +426,13 @@
       "url": "https://www.city.yamaga.kumamoto.jp/kiji0033173/index.html",
       "ruleId": "disaster_preparedness",
       "ruleLabel": "平時の防災・今後への備え"
+    },
+    {
+      "municipalityName": "山鹿市",
+      "title": "震度速報 11月08日 10時54分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "菊池市",
@@ -671,6 +678,13 @@
       "url": "https://www.town.mashiki.lg.jp/kiji0038238/index.html",
       "ruleId": "facility_notice",
       "ruleLabel": "公共施設の休止・再開・紹介"
+    },
+    {
+      "municipalityName": "益城町",
+      "title": "地震情報",
+      "url": "https://www.town.mashiki.lg.jp/kinkyu.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "甲佐町",

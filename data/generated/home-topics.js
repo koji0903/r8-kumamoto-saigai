@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-07T22:18:05.734Z",
-  "officialCheckedAt": "11/8 07:18",
+  "retrievedAt": "2026-11-08T06:34:47.302Z",
+  "officialCheckedAt": "11/8 15:34",
   "siteTopics": [
     {
       "date": "2026-11-04",
@@ -95,6 +95,36 @@ window.HOME_TOPICS = {
     }
   ],
   "municipalityUpdates": [
+    {
+      "title": "令和8年熊本地震に係る住宅の応急修理のご案内",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036771/index.html",
+      "date": "2026-11-08",
+      "time": "11:32",
+      "category": "住まい・証明",
+      "municipality": "氷川町",
+      "archiveId": "hikawa-20261108-a6c44feb",
+      "archiveUrl": "official-articles/hikawa-20261108-a6c44feb.html"
+    },
+    {
+      "title": "震度速報 11月08日 10時54分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "date": "2026-11-08",
+      "time": "10:54",
+      "category": "避難・安全",
+      "municipality": "山鹿市",
+      "archiveId": "yamaga-20261108-ed5178f4",
+      "archiveUrl": "official-articles/yamaga-20261108-ed5178f4.html"
+    },
+    {
+      "title": "地震情報",
+      "url": "https://www.town.mashiki.lg.jp/kinkyu.html",
+      "date": "2026-11-08",
+      "time": "10:54",
+      "category": "その他",
+      "municipality": "益城町",
+      "archiveId": "mashiki-20261108-d37a53b5",
+      "archiveUrl": "official-articles/mashiki-20261108-d37a53b5.html"
+    },
     {
       "title": "給水装置工事申請について",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/123/22496.html",
@@ -194,36 +224,6 @@ window.HOME_TOPICS = {
       "municipality": "御船町",
       "archiveId": "mifune-20261105-e2bb87f9",
       "archiveUrl": "official-articles/mifune-20261105-e2bb87f9.html"
-    },
-    {
-      "title": "被災した住宅の「応急修理」の支援について【令和8年熊本地震】",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038084/index.html",
-      "date": "2026-11-05",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "益城町",
-      "archiveId": "mashiki-20261105-c81a1fa3",
-      "archiveUrl": "official-articles/mashiki-20261105-c81a1fa3.html"
-    },
-    {
-      "title": "令和8年熊本地震に伴う農地等災害復旧事業におけるコンクリート畦畔の取り扱い変更について",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036892/index.html",
-      "date": "2026-11-04",
-      "time": "13:04",
-      "category": "その他",
-      "municipality": "氷川町",
-      "archiveId": "hikawa-20261104-a9ad6c43",
-      "archiveUrl": "official-articles/hikawa-20261104-a9ad6c43.html"
-    },
-    {
-      "title": "【令和8年10月30日（金曜日）受付終了】り災証明書の申請について（令和8年熊本地震）",
-      "url": "https://www.city.yamaga.kumamoto.jp/kiji0033308/index.html",
-      "date": "2026-11-02",
-      "time": "08:36",
-      "category": "住まい・証明",
-      "municipality": "山鹿市",
-      "archiveId": "yamaga-20261102-cedcda44",
-      "archiveUrl": "official-articles/yamaga-20261102-cedcda44.html"
     },
     {
       "title": "「令和８年熊本地震」に対する義援金（募金箱の設置）について",

@@ -537,12 +537,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-02T19:52:35.074Z"
   },
   "https://www.town.mashiki.lg.jp/kinkyu.html": {
-    "id": "mashiki-20261026-d37a53b5",
-    "htmlPath": "official-articles/mashiki-20261026-d37a53b5.html",
-    "title": "避難所の閉鎖について",
+    "id": "mashiki-20261108-d37a53b5",
+    "htmlPath": "official-articles/mashiki-20261108-d37a53b5.html",
+    "title": "地震情報",
     "municipality": "益城町",
-    "date": "2026-10-26",
-    "retrievedAt": "2026-10-26T13:34:12.979Z"
+    "date": "2026-11-08",
+    "retrievedAt": "2026-11-08T06:34:51.990Z"
   },
   "https://www.town.ashikita.lg.jp/article.php?id=2124308": {
     "id": "ashikita-20261023-ebc113ec",
@@ -601,12 +601,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T20:54:28.221Z"
   },
   "https://www.city.yamaga.kumamoto.jp/kinkyu.html": {
-    "id": "yamaga-20261031-ed5178f4",
-    "htmlPath": "official-articles/yamaga-20261031-ed5178f4.html",
-    "title": "震度速報 10月31日 1時47分",
+    "id": "yamaga-20261108-ed5178f4",
+    "htmlPath": "official-articles/yamaga-20261108-ed5178f4.html",
+    "title": "震度速報 11月08日 10時54分",
     "municipality": "山鹿市",
-    "date": "2026-10-31",
-    "retrievedAt": "2026-10-30T18:24:15.707Z"
+    "date": "2026-11-08",
+    "retrievedAt": "2026-11-08T06:34:50.922Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036841/index.html": {
     "id": "hikawa-20261028-f6d3a0a0",
@@ -982,7 +982,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "学校教育",
     "municipality": "御船町",
     "date": "2026-11-05",
-    "retrievedAt": "2026-11-07T22:18:09.974Z"
+    "retrievedAt": "2026-11-08T06:34:54.810Z"
   },
   "https://www.city.uto.lg.jp/article/view/1243/16523.html": {
     "id": "uto-20261107-47623aa5",
@@ -999,5 +999,13 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "上天草市",
     "date": "2026-11-08",
     "retrievedAt": "2026-11-07T18:07:20.801Z"
+  },
+  "https://www.town.hikawa.kumamoto.jp/kiji0036771/index.html": {
+    "id": "hikawa-20261108-a6c44feb",
+    "htmlPath": "official-articles/hikawa-20261108-a6c44feb.html",
+    "title": "令和8年熊本地震に係る住宅の応急修理のご案内",
+    "municipality": "氷川町",
+    "date": "2026-11-08",
+    "retrievedAt": "2026-11-08T06:34:48.910Z"
   }
 };
