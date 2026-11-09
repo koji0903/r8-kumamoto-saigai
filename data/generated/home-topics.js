@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-08T20:06:02.688Z",
-  "officialCheckedAt": "11/9 05:06",
+  "retrievedAt": "2026-11-09T01:17:21.872Z",
+  "officialCheckedAt": "11/9 10:17",
   "siteTopics": [
     {
       "date": "2026-11-04",
@@ -96,6 +96,46 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "被災状況に応じて支援制度をご案内するサイト「八代市被災者支援ワンストップセンター」を開設しました",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326955/index.html",
+      "date": "2026-11-09",
+      "time": "08:49",
+      "category": "支援・制度",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261109-702d6cb4",
+      "archiveUrl": "official-articles/yatsushiro-20261109-702d6cb4.html"
+    },
+    {
+      "title": "2026年11月9日 令和8年熊本地震 関連情報 （11月9日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-11-09",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261109-7d9d4e13",
+      "archiveUrl": "official-articles/uki-20261109-7d9d4e13.html"
+    },
+    {
+      "title": "2026年11月09日 罹災証明書等の発行について",
+      "url": "https://www.city.kikuchi.lg.jp/article/view/1341/19286.html",
+      "date": "2026-11-09",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "菊池市",
+      "archiveId": "kikuchi-20261109-8b2f2419",
+      "archiveUrl": "official-articles/kikuchi-20261109-8b2f2419.html"
+    },
+    {
+      "title": "令和８年熊本地震被害における住宅の応急修理などの申請窓口",
+      "url": "https://www.city.uto.lg.jp/article/view/1018/16522.html",
+      "date": "2026-11-09",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261109-0b88860a",
+      "archiveUrl": "official-articles/uto-20261109-0b88860a.html"
+    },
+    {
       "title": "令和8年熊本地震に係る住宅の応急修理のご案内",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036771/index.html",
       "date": "2026-11-08",
@@ -134,36 +174,6 @@ window.HOME_TOPICS = {
       "municipality": "上天草市",
       "archiveId": "kamiamakusa-20261108-490a286c",
       "archiveUrl": "official-articles/kamiamakusa-20261108-490a286c.html"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-11-07",
-      "time": "07:45",
-      "category": "その他",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261107-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261107-bad1de7e.html"
-    },
-    {
-      "title": "令和８年熊本地震に係る被災した住宅の応急修理制度について（サイト内リンク）",
-      "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
-      "date": "2026-11-07",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261107-47623aa5",
-      "archiveUrl": "official-articles/uto-20261107-47623aa5.html"
-    },
-    {
-      "title": "2026年11月6日 令和8年熊本地震 関連情報 （11月6日18時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-11-06",
-      "time": "18:00",
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261106-7d9d4e13",
-      "archiveUrl": "official-articles/uki-20261106-7d9d4e13.html"
     },
     {
       "title": "自宅敷地内での建設型応急住宅の設置について",
@@ -216,6 +226,16 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/nishihara-20261105-16aeb359.html"
     },
     {
+      "title": "【令和8年熊本地震】被災した住宅の応急修理について",
+      "url": "https://www.city.koshi.lg.jp/kiji00325685/index.html",
+      "date": "2026-11-05",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "合志市",
+      "archiveId": "koshi-20261105-274a7ee8",
+      "archiveUrl": "official-articles/koshi-20261105-274a7ee8.html"
+    },
+    {
       "title": "学校教育",
       "url": "https://www.town.mifune.kumamoto.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1048",
       "date": "2026-11-05",
@@ -224,26 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "御船町",
       "archiveId": "mifune-20261105-e2bb87f9",
       "archiveUrl": "official-articles/mifune-20261105-e2bb87f9.html"
-    },
-    {
-      "title": "「令和８年熊本地震」に対する義援金（募金箱の設置）について",
-      "url": "https://www.city.kikuchi.lg.jp/article/view/1088/18921.html",
-      "date": "2026-11-02",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "菊池市",
-      "archiveId": "kikuchi-20261102-1f971cc0",
-      "archiveUrl": "official-articles/kikuchi-20261102-1f971cc0.html"
-    },
-    {
-      "title": "令和8年熊本地震災害支援情報まとめ(11/2更新)",
-      "url": "https://www.town.kosa.lg.jp/q/aview/55/13531.html",
-      "date": "2026-11-02",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "甲佐町",
-      "archiveId": "kosa-20261102-32aecc34",
-      "archiveUrl": "official-articles/kosa-20261102-32aecc34.html"
     }
   ],
   "prefectureUpdates": [

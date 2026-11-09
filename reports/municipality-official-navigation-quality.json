@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-08T19:45:49.449Z",
+  "generatedAt": "2026-11-09T00:59:54.417Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 855,
-  "displayCandidateCount": 629,
-  "classifiedPageCount": 733,
+  "inputCount": 854,
+  "displayCandidateCount": 628,
+  "classifiedPageCount": 732,
   "categoryReport": {
     "home": {
-      "total": 200,
-      "high": 76,
-      "medium": 78,
-      "low": 46
+      "total": 199,
+      "high": 77,
+      "medium": 77,
+      "low": 45
     },
     "money": {
       "total": 259,
@@ -20,9 +20,9 @@
     },
     "documents": {
       "total": 184,
-      "high": 44,
+      "high": 43,
       "medium": 33,
-      "low": 107
+      "low": 108
     },
     "health_care": {
       "total": 56,
@@ -77,8 +77,8 @@
       "fallback": true
     },
     "municipality_kikuchi": {
-      "classified": 12,
-      "displayCandidates": 10,
+      "classified": 11,
+      "displayCandidates": 9,
       "fallback": true
     },
     "municipality_uto": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 117,
-      "displayCandidates": 101,
+      "classified": 116,
+      "displayCandidates": 100,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -102,8 +102,8 @@
       "fallback": true
     },
     "municipality_koshi": {
-      "classified": 10,
-      "displayCandidates": 9,
+      "classified": 11,
+      "displayCandidates": 10,
       "fallback": true
     },
     "municipality_misato": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 274,
-    "medium": 355,
+    "medium": 354,
     "low": 104
   },
   "unclassifiedCount": 17,
@@ -366,7 +366,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -569,14 +569,14 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月6日 令和8年熊本地震 関連情報 （11月6日18時00分更新）",
+      "title": "2026年11月9日 令和8年熊本地震 関連情報 （11月9日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月06日 令和8年熊本地震 関連情報 （11月6日18時00分更新）",
+      "title": "2026年11月09日 令和8年熊本地震 関連情報 （11月9日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -748,7 +748,7 @@
     "duplicate_url": 37,
     "past_disaster_excluded": 1
   },
-  "warningCount": 26,
+  "warningCount": 25,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -798,7 +798,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "count": 5
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -811,14 +811,9 @@
       "count": 1
     },
     {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_uki",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 4
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -882,5 +877,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 732
+  "previousClassifiedPageCount": 733
 }
