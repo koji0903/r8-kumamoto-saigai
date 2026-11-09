@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-09T12:05:51.356Z",
-  "officialCheckedAt": "11/9 21:05",
+  "retrievedAt": "2026-11-09T22:45:36.678Z",
+  "officialCheckedAt": "11/10 07:45",
   "siteTopics": [
     {
       "date": "2026-11-04",
@@ -95,6 +95,26 @@ window.HOME_TOPICS = {
     }
   ],
   "municipalityUpdates": [
+    {
+      "title": "【重要】令和９年度町認可保育施設一斉申込の受付期限は11月10日（火曜日）までです",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038263/index.html",
+      "date": "2026-11-10",
+      "time": null,
+      "category": "施設・学校",
+      "municipality": "益城町",
+      "archiveId": "mashiki-20261110-aeb4710d",
+      "archiveUrl": "official-articles/mashiki-20261110-aeb4710d.html"
+    },
+    {
+      "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
+      "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
+      "date": "2026-11-10",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "甲佐町",
+      "archiveId": "kosa-20261110-b8cd69a7",
+      "archiveUrl": "official-articles/kosa-20261110-b8cd69a7.html"
+    },
     {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
@@ -224,26 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "嘉島町",
       "archiveId": "kashima-20261104-db33c7aa",
       "archiveUrl": "official-articles/kashima-20261104-db33c7aa.html"
-    },
-    {
-      "title": "【令和8年10月30日（金曜日）受付終了】り災証明書の申請について（令和8年熊本地震）",
-      "url": "https://www.city.yamaga.kumamoto.jp/kiji0033308/index.html",
-      "date": "2026-11-02",
-      "time": "08:36",
-      "category": "住まい・証明",
-      "municipality": "山鹿市",
-      "archiveId": "yamaga-20261102-cedcda44",
-      "archiveUrl": "official-articles/yamaga-20261102-cedcda44.html"
-    },
-    {
-      "title": "町営住宅の一時提供（２次募集）入居者決定について",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038259/index.html",
-      "date": "2026-11-02",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "益城町",
-      "archiveId": "mashiki-20261102-eb8b1e4a",
-      "archiveUrl": "official-articles/mashiki-20261102-eb8b1e4a.html"
     }
   ],
   "prefectureUpdates": [

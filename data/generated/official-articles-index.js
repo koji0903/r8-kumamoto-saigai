@@ -233,12 +233,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-20T14:39:30.526Z"
   },
   "https://www.town.kosa.lg.jp/q/aview/51/13583.html": {
-    "id": "kosa-20261102-b8cd69a7",
-    "htmlPath": "official-articles/kosa-20261102-b8cd69a7.html",
+    "id": "kosa-20261110-b8cd69a7",
+    "htmlPath": "official-articles/kosa-20261110-b8cd69a7.html",
     "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
     "municipality": "甲佐町",
-    "date": "2026-11-02",
-    "retrievedAt": "2026-11-01T16:26:42.082Z"
+    "date": "2026-11-10",
+    "retrievedAt": "2026-11-09T22:45:40.825Z"
   },
   "https://www.city.amakusa.kumamoto.jp/bousai/kiji00314592/index.html": {
     "id": "amakusa-20261105-6f62fce2",
@@ -982,7 +982,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "学校教育",
     "municipality": "御船町",
     "date": "2026-11-05",
-    "retrievedAt": "2026-11-09T12:06:03.508Z"
+    "retrievedAt": "2026-11-09T22:45:43.176Z"
   },
   "https://www.city.uto.lg.jp/article/view/1243/16523.html": {
     "id": "uto-20261109-47623aa5",
@@ -1055,5 +1055,13 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "益城町",
     "date": "2026-11-02",
     "retrievedAt": "2026-11-09T12:06:04.680Z"
+  },
+  "https://www.town.mashiki.lg.jp/kiji0038263/index.html": {
+    "id": "mashiki-20261110-aeb4710d",
+    "htmlPath": "official-articles/mashiki-20261110-aeb4710d.html",
+    "title": "【重要】令和９年度町認可保育施設一斉申込の受付期限は11月10日（火曜日）までです",
+    "municipality": "益城町",
+    "date": "2026-11-10",
+    "retrievedAt": "2026-11-09T22:45:39.002Z"
   }
 };
