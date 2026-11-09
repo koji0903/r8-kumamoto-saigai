@@ -70,7 +70,7 @@ assert.ok(html.includes('tel:0964221111'), '市役所代表の電話番号があ
 // 公式リンクの確認
 assert.ok(html.includes('https://www.city.uto.lg.jp/article/view/1007/12355.html'), 'リフォーム助成の公式URLがありません');
 assert.ok(html.includes('https://www.city.uto.lg.jp/article/view/1609/8791.html'), '結婚新生活の公式URLがありません');
-assert.ok(html.includes('https://www.city.uto.lg.jp/article/view/1032/14818.html'), 'まちづくりハンドブックの公式URLがありません');
+assert.ok(html.includes('https://www.city.uto.lg.jp/article/view/1032/16137.html'), 'まちづくりハンドブックの公式URLがありません');
 assert.ok(!html.includes('/article/view/1017/14818.html'), '旧健康情報URLが残っています');
 assert.ok(!html.includes('/article/view/1018/14818.html'), '旧子育て情報URLが残っています');
 assert.ok(!html.includes('/article/view/1005/11993.html'), '旧結婚支援URLが残っています');
