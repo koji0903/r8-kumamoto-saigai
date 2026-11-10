@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-10T17:27:26.823Z",
-  "officialCheckedAt": "11/11 02:27",
+  "retrievedAt": "2026-11-10T23:47:14.834Z",
+  "officialCheckedAt": "11/11 08:47",
   "siteTopics": [
     {
       "date": "2026-11-04",
@@ -96,6 +96,26 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "2026年11月11日 令和8年熊本地震 関連情報 （11月11日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-11-11",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261111-7d9d4e13",
+      "archiveUrl": "official-articles/uki-20261111-7d9d4e13.html"
+    },
+    {
+      "title": "令和8年熊本地震災害支援情報まとめ(11/11更新)",
+      "url": "https://www.town.kosa.lg.jp/q/aview/1/13531.html",
+      "date": "2026-11-11",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "甲佐町",
+      "archiveId": "kosa-20261111-d4265651",
+      "archiveUrl": "official-articles/kosa-20261111-d4265651.html"
+    },
+    {
       "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "date": "2026-11-10",
@@ -114,16 +134,6 @@ window.HOME_TOPICS = {
       "municipality": "熊本市",
       "archiveId": "kumamoto-20261110-44d41010",
       "archiveUrl": "official-articles/kumamoto-20261110-44d41010.html"
-    },
-    {
-      "title": "2026年11月10日 令和8年熊本地震 関連情報 （11月10日16時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-11-10",
-      "time": "16:00",
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261110-7d9d4e13",
-      "archiveUrl": "official-articles/uki-20261110-7d9d4e13.html"
     },
     {
       "title": "西原村立保育所給食調理業務委託に係る公募型プロポーザルの実施について（※終了しました）",
@@ -234,16 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "嘉島町",
       "archiveId": "kashima-20261105-40d2e7db",
       "archiveUrl": "official-articles/kashima-20261105-40d2e7db.html"
-    },
-    {
-      "title": "小規模事業者持続化補助金に係る証明書の発行について（令和８年熊本地震による影響を受けた事業者向け）",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038190/index.html",
-      "date": "2026-11-05",
-      "time": null,
-      "category": "その他",
-      "municipality": "益城町",
-      "archiveId": "mashiki-20261105-9a947f63",
-      "archiveUrl": "official-articles/mashiki-20261105-9a947f63.html"
     }
   ],
   "prefectureUpdates": [

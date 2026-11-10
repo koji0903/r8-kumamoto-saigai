@@ -9,12 +9,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T05:15:39.834Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699": {
-    "id": "uki-20261110-7d9d4e13",
-    "htmlPath": "official-articles/uki-20261110-7d9d4e13.html",
-    "title": "2026年11月10日 令和8年熊本地震 関連情報 （11月10日16時00分更新）",
+    "id": "uki-20261111-7d9d4e13",
+    "htmlPath": "official-articles/uki-20261111-7d9d4e13.html",
+    "title": "2026年11月11日 令和8年熊本地震 関連情報 （11月11日8時00分更新）",
     "municipality": "宇城市",
-    "date": "2026-11-10",
-    "retrievedAt": "2026-11-10T07:46:51.023Z"
+    "date": "2026-11-11",
+    "retrievedAt": "2026-11-10T23:47:17.184Z"
   },
   "https://localcms.city.minamata.lg.jp/page4895.html?type=top": {
     "id": "minamata-20261019-81bdc420",
@@ -41,12 +41,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-19T21:51:28.625Z"
   },
   "https://www.town.kosa.lg.jp/q/aview/1/13531.html": {
-    "id": "kosa-20261029-d4265651",
-    "htmlPath": "official-articles/kosa-20261029-d4265651.html",
-    "title": "令和8年熊本地震災害支援情報まとめ(10/29更新)",
+    "id": "kosa-20261111-d4265651",
+    "htmlPath": "official-articles/kosa-20261111-d4265651.html",
+    "title": "令和8年熊本地震災害支援情報まとめ(11/11更新)",
     "municipality": "甲佐町",
-    "date": "2026-10-29",
-    "retrievedAt": "2026-10-29T10:29:51.916Z"
+    "date": "2026-11-11",
+    "retrievedAt": "2026-11-10T23:47:18.676Z"
   },
   "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=562": {
     "id": "tsunagi-20261019-58f61927",
@@ -982,7 +982,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "学校教育",
     "municipality": "御船町",
     "date": "2026-11-05",
-    "retrievedAt": "2026-11-10T17:27:32.715Z"
+    "retrievedAt": "2026-11-10T23:47:20.671Z"
   },
   "https://www.city.uto.lg.jp/article/view/1243/16523.html": {
     "id": "uto-20261109-47623aa5",

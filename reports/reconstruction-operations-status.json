@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-10T17:27:55.038Z",
+  "generatedAt": "2026-11-10T23:47:39.420Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-10T17:08:06.327Z",
-    "inputCount": 854,
-    "classifiedPageCount": 733,
-    "displayCandidateCount": 629,
+    "generatedAt": "2026-11-10T23:30:32.847Z",
+    "inputCount": 853,
+    "classifiedPageCount": 732,
+    "displayCandidateCount": 628,
     "deltaFromPrevious": {
-      "inputCount": -10,
-      "classifiedPageCount": -11,
+      "inputCount": -1,
+      "classifiedPageCount": -1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 40,
+      "ageHours": 47,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 118,
-        "displayCandidates": 102,
+        "classified": 117,
+        "displayCandidates": 101,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,9 +138,9 @@
     },
     "categoryReport": {
       "home": {
-        "total": 199,
+        "total": 198,
         "high": 77,
-        "medium": 76,
+        "medium": 75,
         "low": 46
       },
       "money": {
@@ -188,7 +188,7 @@
     },
     "confidence": {
       "high": 274,
-      "medium": 355,
+      "medium": 354,
       "low": 104
     },
     "unclassifiedCount": 18,
@@ -305,14 +305,14 @@
       "count": 2
     },
     {
-      "code": "HTTP_404_CANDIDATE",
+      "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "message": "継続回数を確認後に表示除外を判断してください"
+      "count": 2
     },
     {
       "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kikuchi",
-      "count": 3
+      "municipalityId": "municipality_uto",
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
