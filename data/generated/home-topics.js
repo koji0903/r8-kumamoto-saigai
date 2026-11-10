@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-10T07:46:46.820Z",
-  "officialCheckedAt": "11/10 16:46",
+  "retrievedAt": "2026-11-10T17:27:26.823Z",
+  "officialCheckedAt": "11/11 02:27",
   "siteTopics": [
     {
       "date": "2026-11-04",
@@ -96,10 +96,20 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "date": "2026-11-10",
+      "time": "18:37",
+      "category": "その他",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261110-95d8bc9e",
+      "archiveUrl": "official-articles/yatsushiro-20261110-95d8bc9e.html"
+    },
+    {
       "title": "【令和8年熊本地震】自宅敷地内への建設型応急住宅について",
       "url": "https://www.city.kumamoto.jp/kiji00372700/index.html",
       "date": "2026-11-10",
-      "time": "16:09",
+      "time": "17:12",
       "category": "住まい・証明",
       "municipality": "熊本市",
       "archiveId": "kumamoto-20261110-44d41010",
@@ -114,16 +124,6 @@ window.HOME_TOPICS = {
       "municipality": "宇城市",
       "archiveId": "uki-20261110-7d9d4e13",
       "archiveUrl": "official-articles/uki-20261110-7d9d4e13.html"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-11-10",
-      "time": "15:41",
-      "category": "その他",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261110-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261110-bad1de7e.html"
     },
     {
       "title": "西原村立保育所給食調理業務委託に係る公募型プロポーザルの実施について（※終了しました）",
@@ -146,14 +146,14 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/hikawa-20261110-fe625f57.html"
     },
     {
-      "title": "令和8年熊本地震にかかる住家の被害に伴う住まい再建の意向調査",
-      "url": "https://www.town.kosa.lg.jp/q/aview/51/13583.html",
+      "title": "幸橋架替工事に伴い歩道橋が終日全面通行止めになります。",
+      "url": "https://localcms.city.minamata.lg.jp/page3904.html?type=top",
       "date": "2026-11-10",
       "time": null,
-      "category": "住まい・証明",
-      "municipality": "甲佐町",
-      "archiveId": "kosa-20261110-b8cd69a7",
-      "archiveUrl": "official-articles/kosa-20261110-b8cd69a7.html"
+      "category": "避難・安全",
+      "municipality": "水俣市",
+      "archiveId": "minamata-20261110-6ceba646",
+      "archiveUrl": "official-articles/minamata-20261110-6ceba646.html"
     },
     {
       "title": "避難所について（11/9 17:00時点）",

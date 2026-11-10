@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-11-10T07:28:50.003Z",
+  "generatedAt": "2026-11-10T17:08:06.327Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 864,
-  "displayCandidateCount": 638,
-  "classifiedPageCount": 744,
+  "inputCount": 854,
+  "displayCandidateCount": 629,
+  "classifiedPageCount": 733,
   "categoryReport": {
     "home": {
-      "total": 202,
+      "total": 199,
       "high": 77,
-      "medium": 79,
+      "medium": 76,
       "low": 46
     },
     "money": {
-      "total": 262,
-      "high": 57,
-      "medium": 73,
-      "low": 132
+      "total": 257,
+      "high": 56,
+      "medium": 71,
+      "low": 130
     },
     "documents": {
-      "total": 189,
+      "total": 186,
       "high": 44,
-      "medium": 36,
-      "low": 109
+      "medium": 35,
+      "low": 107
     },
     "health_care": {
-      "total": 56,
-      "high": 19,
-      "medium": 37,
+      "total": 54,
+      "high": 18,
+      "medium": 36,
       "low": 0
     },
     "family_education": {
@@ -37,9 +37,9 @@
       "low": 36
     },
     "work_business": {
-      "total": 79,
-      "high": 18,
-      "medium": 61,
+      "total": 76,
+      "high": 17,
+      "medium": 59,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 213,
+      "total": 212,
       "high": 58,
-      "medium": 153,
+      "medium": 152,
       "low": 2
     }
   },
@@ -62,7 +62,7 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 143,
+      "classified": 142,
       "displayCandidates": 114,
       "fallback": true
     },
@@ -87,8 +87,8 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 32,
-      "displayCandidates": 28,
+      "classified": 31,
+      "displayCandidates": 27,
       "fallback": true
     },
     "municipality_uki": {
@@ -117,8 +117,8 @@
       "fallback": true
     },
     "municipality_kikuyo": {
-      "classified": 22,
-      "displayCandidates": 17,
+      "classified": 21,
+      "displayCandidates": 16,
       "fallback": true
     },
     "municipality_nishihara": {
@@ -137,13 +137,13 @@
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 51,
-      "displayCandidates": 48,
+      "classified": 50,
+      "displayCandidates": 47,
       "fallback": true
     },
     "municipality_kosa": {
-      "classified": 39,
-      "displayCandidates": 34,
+      "classified": 32,
+      "displayCandidates": 28,
       "fallback": true
     },
     "municipality_hikawa": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 276,
-    "medium": 362,
-    "low": 106
+    "high": 274,
+    "medium": 355,
+    "low": 104
   },
   "unclassifiedCount": 18,
   "unclassifiedItems": [
@@ -206,8 +206,8 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "【11月10日更新：追加要望】令和８年熊本地震災害復旧関連事業に係る追加要望の受付について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00327362/index.html"
+      "title": "弾道ミサイルを想定した避難行動等の実施について（お願い）",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00327367/index.html"
     },
     {
       "municipalityName": "菊池市",
@@ -399,17 +399,17 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "山鹿市",
@@ -727,9 +727,10 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 38,
+  "excludedCount": 39,
   "excludedByType": {
     "duplicate_url": 37,
+    "non_official_url": 1,
     "past_disaster_excluded": 1
   },
   "warningCount": 25,
@@ -861,5 +862,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 738
+  "previousClassifiedPageCount": 744
 }

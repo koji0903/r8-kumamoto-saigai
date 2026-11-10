@@ -553,12 +553,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T05:15:41.938Z"
   },
   "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html": {
-    "id": "yatsushiro-20261026-95d8bc9e",
-    "htmlPath": "official-articles/yatsushiro-20261026-95d8bc9e.html",
+    "id": "yatsushiro-20261110-95d8bc9e",
+    "htmlPath": "official-articles/yatsushiro-20261110-95d8bc9e.html",
     "title": "小野市長から市民の皆さまへ",
     "municipality": "八代市",
-    "date": "2026-10-26",
-    "retrievedAt": "2026-10-26T13:34:10.300Z"
+    "date": "2026-11-10",
+    "retrievedAt": "2026-11-10T17:27:28.765Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036865/index.html": {
     "id": "hikawa-20261026-cf66038b",
@@ -982,7 +982,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "学校教育",
     "municipality": "御船町",
     "date": "2026-11-05",
-    "retrievedAt": "2026-11-10T07:47:00.389Z"
+    "retrievedAt": "2026-11-10T17:27:32.715Z"
   },
   "https://www.city.uto.lg.jp/article/view/1243/16523.html": {
     "id": "uto-20261109-47623aa5",
@@ -1103,5 +1103,13 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "益城町",
     "date": "2026-11-05",
     "retrievedAt": "2026-11-10T07:47:03.990Z"
+  },
+  "https://localcms.city.minamata.lg.jp/page3904.html?type=top": {
+    "id": "minamata-20261110-6ceba646",
+    "htmlPath": "official-articles/minamata-20261110-6ceba646.html",
+    "title": "幸橋架替工事に伴い歩道橋が終日全面通行止めになります。",
+    "municipality": "水俣市",
+    "date": "2026-11-10",
+    "retrievedAt": "2026-11-10T17:27:30.503Z"
   }
 };

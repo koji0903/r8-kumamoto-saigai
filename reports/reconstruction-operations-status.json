@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-10T07:47:25.278Z",
+  "generatedAt": "2026-11-10T17:27:55.038Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-10T07:28:50.003Z",
-    "inputCount": 864,
-    "classifiedPageCount": 744,
-    "displayCandidateCount": 638,
+    "generatedAt": "2026-11-10T17:08:06.327Z",
+    "inputCount": 854,
+    "classifiedPageCount": 733,
+    "displayCandidateCount": 629,
     "deltaFromPrevious": {
-      "inputCount": 6,
-      "classifiedPageCount": 6,
-      "unclassifiedCount": 1
+      "inputCount": -10,
+      "classifiedPageCount": -11,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 30,
+      "ageHours": 40,
       "limitHours": 336
     }
   },
@@ -36,7 +36,7 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 143,
+        "classified": 142,
         "displayCandidates": 114,
         "fallback": true
       },
@@ -61,8 +61,8 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 32,
-        "displayCandidates": 28,
+        "classified": 31,
+        "displayCandidates": 27,
         "fallback": true
       },
       "municipality_uki": {
@@ -91,8 +91,8 @@
         "fallback": true
       },
       "municipality_kikuyo": {
-        "classified": 22,
-        "displayCandidates": 17,
+        "classified": 21,
+        "displayCandidates": 16,
         "fallback": true
       },
       "municipality_nishihara": {
@@ -111,13 +111,13 @@
         "fallback": true
       },
       "municipality_mashiki": {
-        "classified": 51,
-        "displayCandidates": 48,
+        "classified": 50,
+        "displayCandidates": 47,
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 39,
-        "displayCandidates": 34,
+        "classified": 32,
+        "displayCandidates": 28,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -138,27 +138,27 @@
     },
     "categoryReport": {
       "home": {
-        "total": 202,
+        "total": 199,
         "high": 77,
-        "medium": 79,
+        "medium": 76,
         "low": 46
       },
       "money": {
-        "total": 262,
-        "high": 57,
-        "medium": 73,
-        "low": 132
+        "total": 257,
+        "high": 56,
+        "medium": 71,
+        "low": 130
       },
       "documents": {
-        "total": 189,
+        "total": 186,
         "high": 44,
-        "medium": 36,
-        "low": 109
+        "medium": 35,
+        "low": 107
       },
       "health_care": {
-        "total": 56,
-        "high": 19,
-        "medium": 37,
+        "total": 54,
+        "high": 18,
+        "medium": 36,
         "low": 0
       },
       "family_education": {
@@ -168,9 +168,9 @@
         "low": 36
       },
       "work_business": {
-        "total": 79,
-        "high": 18,
-        "medium": 61,
+        "total": 76,
+        "high": 17,
+        "medium": 59,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,19 +180,19 @@
         "low": 0
       },
       "daily_life": {
-        "total": 213,
+        "total": 212,
         "high": 58,
-        "medium": 153,
+        "medium": 152,
         "low": 2
       }
     },
     "confidence": {
-      "high": 276,
-      "medium": 362,
-      "low": 106
+      "high": 274,
+      "medium": 355,
+      "low": 104
     },
     "unclassifiedCount": 18,
-    "excludedCount": 38,
+    "excludedCount": 39,
     "overrideCount": 2
   },
   "actions": [
