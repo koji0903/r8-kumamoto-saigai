@@ -9,12 +9,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T05:15:39.834Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699": {
-    "id": "uki-20261109-7d9d4e13",
-    "htmlPath": "official-articles/uki-20261109-7d9d4e13.html",
-    "title": "2026年11月9日 令和8年熊本地震 関連情報 （11月9日8時00分更新）",
+    "id": "uki-20261110-7d9d4e13",
+    "htmlPath": "official-articles/uki-20261110-7d9d4e13.html",
+    "title": "2026年11月10日 令和8年熊本地震 関連情報 （11月10日16時00分更新）",
     "municipality": "宇城市",
-    "date": "2026-11-09",
-    "retrievedAt": "2026-11-09T01:17:25.707Z"
+    "date": "2026-11-10",
+    "retrievedAt": "2026-11-10T07:46:51.023Z"
   },
   "https://localcms.city.minamata.lg.jp/page4895.html?type=top": {
     "id": "minamata-20261019-81bdc420",
@@ -297,12 +297,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-05T11:29:29.079Z"
   },
   "https://www.city.yatsushiro.lg.jp/default.html": {
-    "id": "yatsushiro-20261109-bad1de7e",
-    "htmlPath": "official-articles/yatsushiro-20261109-bad1de7e.html",
+    "id": "yatsushiro-20261110-bad1de7e",
+    "htmlPath": "official-articles/yatsushiro-20261110-bad1de7e.html",
     "title": "熊本県八代市",
     "municipality": "八代市",
-    "date": "2026-11-09",
-    "retrievedAt": "2026-11-09T12:05:52.818Z"
+    "date": "2026-11-10",
+    "retrievedAt": "2026-11-10T07:46:52.265Z"
   },
   "https://www.city.kikuchi.lg.jp/article/view/1040/19566.html": {
     "id": "kikuchi-20261021-f5f1e2ae",
@@ -889,12 +889,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-02T19:52:37.159Z"
   },
   "https://www.city.uto.lg.jp/article/view/1302/17349.html": {
-    "id": "uto-20261105-1d92d642",
-    "htmlPath": "official-articles/uto-20261105-1d92d642.html",
-    "title": "避難所について（11/5 17:00時点）",
+    "id": "uto-20261109-1d92d642",
+    "htmlPath": "official-articles/uto-20261109-1d92d642.html",
+    "title": "避難所について（11/9 17:00時点）",
     "municipality": "宇土市",
-    "date": "2026-11-05",
-    "retrievedAt": "2026-11-05T11:29:24.746Z"
+    "date": "2026-11-09",
+    "retrievedAt": "2026-11-10T07:46:57.496Z"
   },
   "https://www.vill.nishihara.kumamoto.jp/kiji0032045/index.html": {
     "id": "nishihara-20261105-16aeb359",
@@ -982,7 +982,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "学校教育",
     "municipality": "御船町",
     "date": "2026-11-05",
-    "retrievedAt": "2026-11-09T22:45:43.176Z"
+    "retrievedAt": "2026-11-10T07:47:00.389Z"
   },
   "https://www.city.uto.lg.jp/article/view/1243/16523.html": {
     "id": "uto-20261109-47623aa5",
@@ -1063,5 +1063,45 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "益城町",
     "date": "2026-11-10",
     "retrievedAt": "2026-11-09T22:45:39.002Z"
+  },
+  "https://www.city.kumamoto.jp/kiji00372700/index.html": {
+    "id": "kumamoto-20261110-44d41010",
+    "htmlPath": "official-articles/kumamoto-20261110-44d41010.html",
+    "title": "【令和8年熊本地震】自宅敷地内への建設型応急住宅について",
+    "municipality": "熊本市",
+    "date": "2026-11-10",
+    "retrievedAt": "2026-11-10T07:46:50.396Z"
+  },
+  "https://www.vill.nishihara.kumamoto.jp/kiji0032055/index.html": {
+    "id": "nishihara-20261110-09d49e5f",
+    "htmlPath": "official-articles/nishihara-20261110-09d49e5f.html",
+    "title": "西原村立保育所給食調理業務委託に係る公募型プロポーザルの実施について（※終了しました）",
+    "municipality": "西原村",
+    "date": "2026-11-10",
+    "retrievedAt": "2026-11-10T07:46:53.974Z"
+  },
+  "https://www.town.hikawa.kumamoto.jp/kiji0036904/index.html": {
+    "id": "hikawa-20261110-fe625f57",
+    "htmlPath": "official-articles/hikawa-20261110-fe625f57.html",
+    "title": "栫・下宮・法道寺・南鹿野・北川仮設団地（建設型応急住宅）の入居者の募集について",
+    "municipality": "氷川町",
+    "date": "2026-11-10",
+    "retrievedAt": "2026-11-10T07:46:56.237Z"
+  },
+  "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6050.html": {
+    "id": "kashima-20261105-40d2e7db",
+    "htmlPath": "official-articles/kashima-20261105-40d2e7db.html",
+    "title": "災害救助法「住家の応急修理」制度のご案内",
+    "municipality": "嘉島町",
+    "date": "2026-11-05",
+    "retrievedAt": "2026-11-10T07:47:02.023Z"
+  },
+  "https://www.town.mashiki.lg.jp/kiji0038190/index.html": {
+    "id": "mashiki-20261105-9a947f63",
+    "htmlPath": "official-articles/mashiki-20261105-9a947f63.html",
+    "title": "小規模事業者持続化補助金に係る証明書の発行について（令和８年熊本地震による影響を受けた事業者向け）",
+    "municipality": "益城町",
+    "date": "2026-11-05",
+    "retrievedAt": "2026-11-10T07:47:03.990Z"
   }
 };

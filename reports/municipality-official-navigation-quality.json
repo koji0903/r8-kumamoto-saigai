@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-11-09T22:30:04.638Z",
+  "generatedAt": "2026-11-10T07:28:50.003Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 858,
-  "displayCandidateCount": 634,
-  "classifiedPageCount": 738,
+  "inputCount": 864,
+  "displayCandidateCount": 638,
+  "classifiedPageCount": 744,
   "categoryReport": {
     "home": {
-      "total": 199,
-      "high": 76,
-      "medium": 78,
-      "low": 45
+      "total": 202,
+      "high": 77,
+      "medium": 79,
+      "low": 46
     },
     "money": {
-      "total": 261,
-      "high": 58,
+      "total": 262,
+      "high": 57,
       "medium": 73,
-      "low": 130
+      "low": 132
     },
     "documents": {
-      "total": 185,
-      "high": 43,
-      "medium": 35,
-      "low": 107
+      "total": 189,
+      "high": 44,
+      "medium": 36,
+      "low": 109
     },
     "health_care": {
       "total": 56,
@@ -32,14 +32,14 @@
     },
     "family_education": {
       "total": 79,
-      "high": 11,
-      "medium": 32,
+      "high": 12,
+      "medium": 31,
       "low": 36
     },
     "work_business": {
-      "total": 78,
+      "total": 79,
       "high": 18,
-      "medium": 60,
+      "medium": 61,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 212,
+      "total": 213,
       "high": 58,
-      "medium": 152,
+      "medium": 153,
       "low": 2
     }
   },
@@ -62,7 +62,7 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 141,
+      "classified": 143,
       "displayCandidates": 114,
       "fallback": true
     },
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 117,
-      "displayCandidates": 101,
+      "classified": 118,
+      "displayCandidates": 102,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -122,8 +122,8 @@
       "fallback": true
     },
     "municipality_nishihara": {
-      "classified": 9,
-      "displayCandidates": 9,
+      "classified": 10,
+      "displayCandidates": 10,
       "fallback": true
     },
     "municipality_mifune": {
@@ -132,8 +132,8 @@
       "fallback": true
     },
     "municipality_kashima": {
-      "classified": 20,
-      "displayCandidates": 18,
+      "classified": 21,
+      "displayCandidates": 19,
       "fallback": true
     },
     "municipality_mashiki": {
@@ -147,8 +147,8 @@
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 60,
-      "displayCandidates": 52,
+      "classified": 61,
+      "displayCandidates": 53,
       "fallback": true
     },
     "municipality_ashikita": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 274,
-    "medium": 360,
-    "low": 104
+    "high": 276,
+    "medium": 362,
+    "low": 106
   },
-  "unclassifiedCount": 17,
+  "unclassifiedCount": 18,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -186,6 +186,11 @@
     },
     {
       "municipalityName": "八代市",
+      "title": "スポーツ推進委員派遣事業の一時中断について",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326976/index.html"
+    },
+    {
+      "municipalityName": "八代市",
       "title": "博物館カフェの営業再開のお知らせ",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00327160/index.html"
     },
@@ -198,6 +203,11 @@
       "municipalityName": "八代市",
       "title": "⚠️一部公園の利用予約について（球磨川河川緑地・北部中央公園・東片自然公園・緑公園・鏡ヶ池公園・新八代駅がめさん公園・龍峯やまびこ公園の一部 以外）",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326995/index.html"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "【11月10日更新：追加要望】令和８年熊本地震災害復旧関連事業に係る追加要望の受付について",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00327362/index.html"
     },
     {
       "municipalityName": "菊池市",
@@ -235,11 +245,6 @@
       "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/shokogyo/2652986"
     },
     {
-      "municipalityName": "天草市",
-      "title": "明治安田「私の地元応援募金」「熊本地震に対する寄付金」贈呈式",
-      "url": "https://www.city.amakusa.kumamoto.jp/kiji00313670/index.html"
-    },
-    {
       "municipalityName": "菊陽町",
       "title": "菊陽町熊本地震復旧・復興計画を策定しました",
       "url": "https://www.town.kikuyo.lg.jp/kiji0031204/index.html"
@@ -255,7 +260,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 65,
+  "outOfScopeCount": 64,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "disaster_preparedness": 10,
@@ -264,7 +269,7 @@
     "budget_notice": 3,
     "overall_guide": 5,
     "hq_meeting_material": 3,
-    "index_page": 13,
+    "index_page": 12,
     "mayor_message": 2,
     "mutual_aid": 1,
     "weather_warning": 2,
@@ -562,15 +567,8 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月9日 令和8年熊本地震 関連情報 （11月9日12時00分更新）",
+      "title": "2026年11月10日 令和8年熊本地震 関連情報 （11月10日16時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "宇城市",
-      "title": "2026年11月09日 令和8年熊本地震 関連情報 （11月9日12時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -754,7 +752,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 5
+      "count": 6
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -777,14 +775,14 @@
       "count": 2
     },
     {
-      "code": "RETRIEVAL_ISSUE",
+      "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_kikuchi",
-      "count": 2
+      "message": "継続回数を確認後に表示除外を判断してください"
     },
     {
       "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_uto",
-      "count": 2
+      "municipalityId": "municipality_kikuchi",
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -863,5 +861,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 730
+  "previousClassifiedPageCount": 738
 }
