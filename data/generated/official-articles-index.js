@@ -57,12 +57,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-19T21:51:30.294Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html": {
-    "id": "hikawa-20261102-edaedf97",
-    "htmlPath": "official-articles/hikawa-20261102-edaedf97.html",
+    "id": "hikawa-20261111-edaedf97",
+    "htmlPath": "official-articles/hikawa-20261111-edaedf97.html",
     "title": "令和8年熊本地震関連情報",
     "municipality": "氷川町",
-    "date": "2026-11-02",
-    "retrievedAt": "2026-11-02T06:41:05.204Z"
+    "date": "2026-11-11",
+    "retrievedAt": "2026-11-11T07:03:05.133Z"
   },
   "https://www.city.kumamoto.jp/kiji00373157/index.html": {
     "id": "kumamoto-20261020-6d24c9ba",
@@ -297,12 +297,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-05T11:29:29.079Z"
   },
   "https://www.city.yatsushiro.lg.jp/default.html": {
-    "id": "yatsushiro-20261110-bad1de7e",
-    "htmlPath": "official-articles/yatsushiro-20261110-bad1de7e.html",
+    "id": "yatsushiro-20261111-bad1de7e",
+    "htmlPath": "official-articles/yatsushiro-20261111-bad1de7e.html",
     "title": "熊本県八代市",
     "municipality": "八代市",
-    "date": "2026-11-10",
-    "retrievedAt": "2026-11-10T07:46:52.265Z"
+    "date": "2026-11-11",
+    "retrievedAt": "2026-11-11T07:03:03.139Z"
   },
   "https://www.city.kikuchi.lg.jp/article/view/1040/19566.html": {
     "id": "kikuchi-20261021-f5f1e2ae",
@@ -713,12 +713,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-30T10:29:37.608Z"
   },
   "https://www.town.mifune.kumamoto.jp/page9523.html": {
-    "id": "mifune-20261030-6587fc54",
-    "htmlPath": "official-articles/mifune-20261030-6587fc54.html",
-    "title": "令和8年熊本地震被災者支援制度Vol.2（臨時広報みふね）",
+    "id": "mifune-20261109-6587fc54",
+    "htmlPath": "official-articles/mifune-20261109-6587fc54.html",
+    "title": "【11月9日更新】令和8年熊本地震被災者支援制度Vol.2（臨時広報みふね）",
     "municipality": "御船町",
-    "date": "2026-10-30",
-    "retrievedAt": "2026-10-30T10:29:41.167Z"
+    "date": "2026-11-09",
+    "retrievedAt": "2026-11-11T07:03:12.167Z"
   },
   "https://www.city.uto.lg.jp/article/view/1321/17311.html": {
     "id": "uto-20261030-25bfd74e",
@@ -1111,5 +1111,21 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "水俣市",
     "date": "2026-11-10",
     "retrievedAt": "2026-11-10T17:27:30.503Z"
+  },
+  "https://www.town.tsunagi.lg.jp/kinkyu/pub/default.aspx?c_id=9": {
+    "id": "tsunagi-20261111-6c30f109",
+    "htmlPath": "official-articles/tsunagi-20261111-6c30f109.html",
+    "title": "令和8年熊本地震における罹災証明手続きについて",
+    "municipality": "津奈木町",
+    "date": "2026-11-11",
+    "retrievedAt": "2026-11-11T07:03:08.536Z"
+  },
+  "https://www.town.mashiki.lg.jp/kiji0038270/index.html": {
+    "id": "mashiki-20261109-fb003a76",
+    "htmlPath": "official-articles/mashiki-20261109-fb003a76.html",
+    "title": "不正アクセスなどからの個人情報漏えいについて不安に思ったら【消費者生活相談室】",
+    "municipality": "益城町",
+    "date": "2026-11-09",
+    "retrievedAt": "2026-11-11T07:03:14.149Z"
   }
 };

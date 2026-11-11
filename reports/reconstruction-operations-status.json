@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-10T23:47:39.420Z",
+  "generatedAt": "2026-11-11T07:03:38.300Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-10T23:30:32.847Z",
-    "inputCount": 853,
-    "classifiedPageCount": 732,
-    "displayCandidateCount": 628,
+    "generatedAt": "2026-11-11T06:42:30.829Z",
+    "inputCount": 857,
+    "classifiedPageCount": 737,
+    "displayCandidateCount": 634,
     "deltaFromPrevious": {
-      "inputCount": -1,
-      "classifiedPageCount": -1,
-      "unclassifiedCount": 0
+      "inputCount": 4,
+      "classifiedPageCount": 5,
+      "unclassifiedCount": -1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 47,
+      "ageHours": 54,
       "limitHours": 336
     }
   },
@@ -37,7 +37,7 @@
       },
       "municipality_yatsushiro": {
         "classified": 142,
-        "displayCandidates": 114,
+        "displayCandidates": 117,
         "fallback": true
       },
       "municipality_minamata": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 117,
-        "displayCandidates": 101,
+        "classified": 118,
+        "displayCandidates": 102,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -106,12 +106,12 @@
         "fallback": true
       },
       "municipality_kashima": {
-        "classified": 21,
+        "classified": 22,
         "displayCandidates": 19,
         "fallback": true
       },
       "municipality_mashiki": {
-        "classified": 50,
+        "classified": 51,
         "displayCandidates": 47,
         "fallback": true
       },
@@ -121,8 +121,8 @@
         "fallback": true
       },
       "municipality_hikawa": {
-        "classified": 61,
-        "displayCandidates": 53,
+        "classified": 62,
+        "displayCandidates": 54,
         "fallback": true
       },
       "municipality_ashikita": {
@@ -131,27 +131,27 @@
         "fallback": true
       },
       "municipality_tsunagi": {
-        "classified": 6,
-        "displayCandidates": 5,
+        "classified": 7,
+        "displayCandidates": 6,
         "fallback": true
       }
     },
     "categoryReport": {
       "home": {
-        "total": 198,
-        "high": 77,
-        "medium": 75,
-        "low": 46
+        "total": 200,
+        "high": 76,
+        "medium": 77,
+        "low": 47
       },
       "money": {
-        "total": 257,
-        "high": 56,
-        "medium": 71,
-        "low": 130
+        "total": 261,
+        "high": 57,
+        "medium": 72,
+        "low": 132
       },
       "documents": {
-        "total": 186,
-        "high": 44,
+        "total": 187,
+        "high": 45,
         "medium": 35,
         "low": 107
       },
@@ -162,14 +162,14 @@
         "low": 0
       },
       "family_education": {
-        "total": 79,
+        "total": 77,
         "high": 12,
         "medium": 31,
-        "low": 36
+        "low": 34
       },
       "work_business": {
-        "total": 76,
-        "high": 17,
+        "total": 79,
+        "high": 20,
         "medium": 59,
         "low": 0
       },
@@ -187,11 +187,11 @@
       }
     },
     "confidence": {
-      "high": 274,
-      "medium": 354,
-      "low": 104
+      "high": 278,
+      "medium": 356,
+      "low": 103
     },
-    "unclassifiedCount": 18,
+    "unclassifiedCount": 17,
     "excludedCount": 39,
     "overrideCount": 2
   },
@@ -282,7 +282,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 6
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -305,14 +305,14 @@
       "count": 2
     },
     {
-      "code": "RETRIEVAL_ISSUE",
+      "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_kikuchi",
-      "count": 2
+      "message": "継続回数を確認後に表示除外を判断してください"
     },
     {
       "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_uto",
-      "count": 2
+      "municipalityId": "municipality_kikuchi",
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
