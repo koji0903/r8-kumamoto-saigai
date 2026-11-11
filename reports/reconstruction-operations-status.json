@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-11T07:03:38.300Z",
+  "generatedAt": "2026-11-11T17:35:16.243Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-11T06:42:30.829Z",
+    "generatedAt": "2026-11-11T17:15:51.461Z",
     "inputCount": 857,
     "classifiedPageCount": 737,
     "displayCandidateCount": 634,
     "deltaFromPrevious": {
-      "inputCount": 4,
-      "classifiedPageCount": 5,
-      "unclassifiedCount": -1
+      "inputCount": 0,
+      "classifiedPageCount": 0,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 54,
+      "ageHours": 64,
       "limitHours": 336
     }
   },
@@ -305,14 +305,14 @@
       "count": 2
     },
     {
-      "code": "HTTP_404_CANDIDATE",
+      "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "message": "継続回数を確認後に表示除外を判断してください"
+      "count": 2
     },
     {
       "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_kikuchi",
-      "count": 3
+      "municipalityId": "municipality_uto",
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",

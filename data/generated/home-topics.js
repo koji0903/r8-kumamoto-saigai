@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-11T07:03:01.433Z",
-  "officialCheckedAt": "11/11 16:03",
+  "retrievedAt": "2026-11-11T17:34:47.541Z",
+  "officialCheckedAt": "11/12 02:34",
   "siteTopics": [
     {
       "date": "2026-11-10",
@@ -96,14 +96,24 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "date": "2026-11-11",
-      "time": "15:24",
+      "time": "18:22",
       "category": "その他",
       "municipality": "八代市",
-      "archiveId": "yatsushiro-20261111-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261111-bad1de7e.html"
+      "archiveId": "yatsushiro-20261111-95d8bc9e",
+      "archiveUrl": "official-articles/yatsushiro-20261111-95d8bc9e.html"
+    },
+    {
+      "title": "令和８年熊本地震における支援の状況について",
+      "url": "https://www.city.yamaga.kumamoto.jp/bousai/kiji0033160/index.html",
+      "date": "2026-11-11",
+      "time": "16:44",
+      "category": "支援・制度",
+      "municipality": "山鹿市",
+      "archiveId": "yamaga-20261111-d9b95a4a",
+      "archiveUrl": "official-articles/yamaga-20261111-d9b95a4a.html"
     },
     {
       "title": "令和8年熊本地震関連情報",
@@ -234,16 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "菊陽町",
       "archiveId": "kikuyo-20261106-8d870d59",
       "archiveUrl": "official-articles/kikuyo-20261106-8d870d59.html"
-    },
-    {
-      "title": "令和８年熊本地震の被害に遭われた方へ（各種支援制度の紹介）",
-      "url": "https://www.city.amakusa.kumamoto.jp/bousai/kiji00314592/index.html",
-      "date": "2026-11-05",
-      "time": "09:34",
-      "category": "支援・制度",
-      "municipality": "天草市",
-      "archiveId": "amakusa-20261105-6f62fce2",
-      "archiveUrl": "official-articles/amakusa-20261105-6f62fce2.html"
     }
   ],
   "prefectureUpdates": [
