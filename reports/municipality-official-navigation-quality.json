@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-11T17:15:51.461Z",
+  "generatedAt": "2026-11-12T00:50:16.910Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 857,
-  "displayCandidateCount": 634,
+  "displayCandidateCount": 633,
   "classifiedPageCount": 737,
   "categoryReport": {
     "home": {
@@ -13,10 +13,10 @@
       "low": 47
     },
     "money": {
-      "total": 261,
+      "total": 262,
       "high": 57,
       "medium": 72,
-      "low": 132
+      "low": 133
     },
     "documents": {
       "total": 187,
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 212,
+      "total": 211,
       "high": 58,
-      "medium": 152,
+      "medium": 151,
       "low": 2
     }
   },
@@ -108,7 +108,7 @@
     },
     "municipality_misato": {
       "classified": 26,
-      "displayCandidates": 21,
+      "displayCandidates": 20,
       "fallback": true
     },
     "municipality_ozu": {
@@ -164,8 +164,8 @@
   },
   "confidence": {
     "high": 278,
-    "medium": 356,
-    "low": 103
+    "medium": 355,
+    "low": 104
   },
   "unclassifiedCount": 17,
   "unclassifiedItems": [
@@ -394,17 +394,17 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "山鹿市",
@@ -611,7 +611,7 @@
     },
     {
       "municipalityName": "美里町",
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（10月23日7時更新）",
+      "title": "令和8年熊本地震（7月28日発生）に関する情報（11月12日9時更新）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -771,14 +771,14 @@
       "count": 2
     },
     {
-      "code": "RETRIEVAL_ISSUE",
+      "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_kikuchi",
-      "count": 2
+      "message": "継続回数を確認後に表示除外を判断してください"
     },
     {
       "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_uto",
-      "count": 2
+      "municipalityId": "municipality_kikuchi",
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-11T17:35:16.243Z",
+  "generatedAt": "2026-11-12T01:08:28.443Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-11T17:15:51.461Z",
+    "generatedAt": "2026-11-12T00:50:16.910Z",
     "inputCount": 857,
     "classifiedPageCount": 737,
-    "displayCandidateCount": 634,
+    "displayCandidateCount": 633,
     "deltaFromPrevious": {
       "inputCount": 0,
       "classifiedPageCount": 0,
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 64,
+      "ageHours": 72,
       "limitHours": 336
     }
   },
@@ -82,7 +82,7 @@
       },
       "municipality_misato": {
         "classified": 26,
-        "displayCandidates": 21,
+        "displayCandidates": 20,
         "fallback": true
       },
       "municipality_ozu": {
@@ -144,10 +144,10 @@
         "low": 47
       },
       "money": {
-        "total": 261,
+        "total": 262,
         "high": 57,
         "medium": 72,
-        "low": 132
+        "low": 133
       },
       "documents": {
         "total": 187,
@@ -180,16 +180,16 @@
         "low": 0
       },
       "daily_life": {
-        "total": 212,
+        "total": 211,
         "high": 58,
-        "medium": 152,
+        "medium": 151,
         "low": 2
       }
     },
     "confidence": {
       "high": 278,
-      "medium": 356,
-      "low": 103
+      "medium": 355,
+      "low": 104
     },
     "unclassifiedCount": 17,
     "excludedCount": 39,
@@ -305,14 +305,14 @@
       "count": 2
     },
     {
-      "code": "RETRIEVAL_ISSUE",
+      "code": "HTTP_404_CANDIDATE",
       "municipalityId": "municipality_kikuchi",
-      "count": 2
+      "message": "継続回数を確認後に表示除外を判断してください"
     },
     {
       "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_uto",
-      "count": 2
+      "municipalityId": "municipality_kikuchi",
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",

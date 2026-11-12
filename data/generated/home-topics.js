@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-11T17:34:47.541Z",
-  "officialCheckedAt": "11/12 02:34",
+  "retrievedAt": "2026-11-12T01:07:59.122Z",
+  "officialCheckedAt": "11/12 10:07",
   "siteTopics": [
     {
       "date": "2026-11-10",
@@ -96,14 +96,54 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "date": "2026-11-11",
-      "time": "18:22",
+      "title": "令和8年熊本地震（7月28日発生）に関する情報（11月12日9時更新）",
+      "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
+      "date": "2026-11-12",
+      "time": "09:00",
       "category": "その他",
+      "municipality": "美里町",
+      "archiveId": "misato-20261112-a8f621b2",
+      "archiveUrl": "official-articles/misato-20261112-a8f621b2.html"
+    },
+    {
+      "title": "避難所開設状況",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
+      "date": "2026-11-12",
+      "time": "08:38",
+      "category": "避難・安全",
       "municipality": "八代市",
-      "archiveId": "yatsushiro-20261111-95d8bc9e",
-      "archiveUrl": "official-articles/yatsushiro-20261111-95d8bc9e.html"
+      "archiveId": "yatsushiro-20261112-c2d6b51f",
+      "archiveUrl": "official-articles/yatsushiro-20261112-c2d6b51f.html"
+    },
+    {
+      "title": "2026年11月12日 避難者数",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
+      "date": "2026-11-12",
+      "time": null,
+      "category": "避難・安全",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261112-69c958e4",
+      "archiveUrl": "official-articles/uki-20261112-69c958e4.html"
+    },
+    {
+      "title": "【市長メッセージ】使用する水の圧力を弱める減圧給水のお願い",
+      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314887/index.html",
+      "date": "2026-11-12",
+      "time": null,
+      "category": "ライフライン",
+      "municipality": "天草市",
+      "archiveId": "amakusa-20261112-22eb74e9",
+      "archiveUrl": "official-articles/amakusa-20261112-22eb74e9.html"
+    },
+    {
+      "title": "避難所について（11/11 17:00時点）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/17349.html",
+      "date": "2026-11-11",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261111-1d92d642",
+      "archiveUrl": "official-articles/uto-20261111-1d92d642.html"
     },
     {
       "title": "令和８年熊本地震における支援の状況について",
@@ -134,16 +174,6 @@ window.HOME_TOPICS = {
       "municipality": "津奈木町",
       "archiveId": "tsunagi-20261111-6c30f109",
       "archiveUrl": "official-articles/tsunagi-20261111-6c30f109.html"
-    },
-    {
-      "title": "2026年11月11日 令和8年熊本地震 関連情報 （11月11日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-11-11",
-      "time": "08:00",
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261111-7d9d4e13",
-      "archiveUrl": "official-articles/uki-20261111-7d9d4e13.html"
     },
     {
       "title": "令和8年熊本地震災害支援情報まとめ(11/11更新)",
@@ -186,16 +216,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/minamata-20261110-6ceba646.html"
     },
     {
-      "title": "避難所について（11/9 17:00時点）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/17349.html",
-      "date": "2026-11-09",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261109-1d92d642",
-      "archiveUrl": "official-articles/uto-20261109-1d92d642.html"
-    },
-    {
       "title": "2026年11月09日 罹災証明書等の発行について",
       "url": "https://www.city.kikuchi.lg.jp/article/view/1341/19286.html",
       "date": "2026-11-09",
@@ -224,26 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "御船町",
       "archiveId": "mifune-20261109-6587fc54",
       "archiveUrl": "official-articles/mifune-20261109-6587fc54.html"
-    },
-    {
-      "title": "不正アクセスなどからの個人情報漏えいについて不安に思ったら【消費者生活相談室】",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038270/index.html",
-      "date": "2026-11-09",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "益城町",
-      "archiveId": "mashiki-20261109-fb003a76",
-      "archiveUrl": "official-articles/mashiki-20261109-fb003a76.html"
-    },
-    {
-      "title": "自宅敷地内での建設型応急住宅の設置について",
-      "url": "https://www.town.kikuyo.lg.jp/kiji0035726/index.html",
-      "date": "2026-11-06",
-      "time": "13:37",
-      "category": "住まい・証明",
-      "municipality": "菊陽町",
-      "archiveId": "kikuyo-20261106-8d870d59",
-      "archiveUrl": "official-articles/kikuyo-20261106-8d870d59.html"
     }
   ],
   "prefectureUpdates": [

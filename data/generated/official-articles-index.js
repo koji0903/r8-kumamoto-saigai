@@ -121,12 +121,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-19T21:51:36.788Z"
   },
   "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html": {
-    "id": "misato-20261023-a8f621b2",
-    "htmlPath": "official-articles/misato-20261023-a8f621b2.html",
-    "title": "令和8年熊本地震（7月28日発生）に関する情報（10月23日7時更新）",
+    "id": "misato-20261112-a8f621b2",
+    "htmlPath": "official-articles/misato-20261112-a8f621b2.html",
+    "title": "令和8年熊本地震（7月28日発生）に関する情報（11月12日9時更新）",
     "municipality": "美里町",
-    "date": "2026-10-23",
-    "retrievedAt": "2026-10-23T05:21:40.716Z"
+    "date": "2026-11-12",
+    "retrievedAt": "2026-11-12T01:08:01.570Z"
   },
   "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6347.html": {
     "id": "kashima-20261009-42416a0a",
@@ -249,12 +249,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-05T01:49:08.628Z"
   },
   "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html": {
-    "id": "yatsushiro-20261105-c2d6b51f",
-    "htmlPath": "official-articles/yatsushiro-20261105-c2d6b51f.html",
+    "id": "yatsushiro-20261112-c2d6b51f",
+    "htmlPath": "official-articles/yatsushiro-20261112-c2d6b51f.html",
     "title": "避難所開設状況",
     "municipality": "八代市",
-    "date": "2026-11-05",
-    "retrievedAt": "2026-11-05T01:49:09.359Z"
+    "date": "2026-11-12",
+    "retrievedAt": "2026-11-12T01:08:02.768Z"
   },
   "https://www.city.kumamoto.jp/kiji00372210/index.html": {
     "id": "kumamoto-20261109-2d71cce8",
@@ -457,12 +457,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-24T05:03:24.859Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/important/2610320": {
-    "id": "uki-20261105-69c958e4",
-    "htmlPath": "official-articles/uki-20261105-69c958e4.html",
-    "title": "2026年11月05日 避難者数",
+    "id": "uki-20261112-69c958e4",
+    "htmlPath": "official-articles/uki-20261112-69c958e4.html",
+    "title": "2026年11月12日 避難者数",
     "municipality": "宇城市",
-    "date": "2026-11-05",
-    "retrievedAt": "2026-11-05T01:49:12.600Z"
+    "date": "2026-11-12",
+    "retrievedAt": "2026-11-12T01:08:05.188Z"
   },
   "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=533": {
     "id": "tsunagi-20261024-8968f58d",
@@ -729,12 +729,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-30T10:29:42.343Z"
   },
   "https://www.city.amakusa.kumamoto.jp/kiji00314887/index.html": {
-    "id": "amakusa-20261030-22eb74e9",
-    "htmlPath": "official-articles/amakusa-20261030-22eb74e9.html",
+    "id": "amakusa-20261112-22eb74e9",
+    "htmlPath": "official-articles/amakusa-20261112-22eb74e9.html",
     "title": "【市長メッセージ】使用する水の圧力を弱める減圧給水のお願い",
     "municipality": "天草市",
-    "date": "2026-10-30",
-    "retrievedAt": "2026-10-30T10:29:43.503Z"
+    "date": "2026-11-12",
+    "retrievedAt": "2026-11-12T01:08:07.031Z"
   },
   "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/sumai/3907.html": {
     "id": "misato-20261030-ed424e1e",
@@ -889,12 +889,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-02T19:52:37.159Z"
   },
   "https://www.city.uto.lg.jp/article/view/1302/17349.html": {
-    "id": "uto-20261109-1d92d642",
-    "htmlPath": "official-articles/uto-20261109-1d92d642.html",
-    "title": "避難所について（11/9 17:00時点）",
+    "id": "uto-20261111-1d92d642",
+    "htmlPath": "official-articles/uto-20261111-1d92d642.html",
+    "title": "避難所について（11/11 17:00時点）",
     "municipality": "宇土市",
-    "date": "2026-11-09",
-    "retrievedAt": "2026-11-10T07:46:57.496Z"
+    "date": "2026-11-11",
+    "retrievedAt": "2026-11-12T01:08:09.077Z"
   },
   "https://www.vill.nishihara.kumamoto.jp/kiji0032045/index.html": {
     "id": "nishihara-20261105-16aeb359",
