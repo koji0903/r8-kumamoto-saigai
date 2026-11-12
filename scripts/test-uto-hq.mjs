@@ -134,7 +134,14 @@ assert.ok(page.includes('申請1,115件に対し408件が調査済'),'2次調査
 assert.ok(!page.includes('2次調査申込は一部損壊を中心に3,898件'),'2次調査の件数誤りが残っています');
 assert.ok(!fs.readFileSync('uto-hq.js','utf8').includes("'08/22〜09/04'"),'最後の期間の終わりが固定のままです');
 assert.ok(fs.readFileSync('app.js','utf8').includes('href="hq-uto.html"'));
-const result=spawnSync('python3',['-c',`
+const pyCmd = process.platform === 'win32'
+  ? (spawnSync('where.exe', ['python3']).status === 0 ? 'python3' : (spawnSync('where.exe', ['python']).status === 0 ? 'python' : 'py'))
+  : 'python3';
+const pyCheck = spawnSync(pyCmd, ['--version']);
+if (pyCheck.error || pyCheck.status !== 0) {
+  console.warn('警告: Pythonが未検出のため、uto_hqのパーサー単体テストをスキップしました');
+} else {
+  const result=spawnSync(pyCmd,['-c',`
 import sys,json,runpy
 from pathlib import Path
 sys.path.insert(0,'tools')
@@ -156,5 +163,6 @@ assert future['publishedThrough']==43
 assert future['pendingMeetings']==[43]
 assert future['status']=='pending'
 `],{encoding:'utf8',env:{...process.env,PYTHONDONTWRITEBYTECODE:'1'}});
-assert.equal(result.status,0,result.stderr);
+  assert.equal(result.status,0,result.stderr || result.error?.message || 'Python execution failed');
+}
 console.log(`宇土市: 全${city.meetings.length}資料（第${numbers[0]}〜${Math.max(...numbers)}回）・全ページ保持・表紙日時・書面報告・避難者数・被害当日列・要約は第${city.editorial.reviewedThrough}回まで・未要約${pending.length}回・出典の検査 OK`);

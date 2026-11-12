@@ -479,10 +479,12 @@ function getFileDate(relPath) {
     }
     // 未コミット時の todayInJapan と揃えるため、コミット日時も日本時間の日付で取る。
     // %cs（UTC基準）だと、日本時間の朝9時より前に作られたコミットが前日付になり検査が落ちる。
+    // Windows環境のGitではIANA名の"Asia/Tokyo"が解釈できずUTCフォールバックするためPOSIX標準の"JST-9"を使用する。
+    const jstTz = process.platform === "win32" ? "JST-9" : "Asia/Tokyo";
     const d = execFileSync("git", ["log", "-1", "--format=%cd", "--date=format-local:%Y-%m-%d", "--", relPath], {
       cwd: root,
       encoding: "utf8",
-      env: { ...process.env, TZ: "Asia/Tokyo" }
+      env: { ...process.env, TZ: jstTz }
     }).trim();
     gitDateCache.set(relPath, d);
     return d;
@@ -495,10 +497,11 @@ function getFileDate(relPath) {
 function getFileFirstDate(relPath) {
   if (gitFirstDateCache.has(relPath)) return gitFirstDateCache.get(relPath);
   try {
+    const jstTz = process.platform === "win32" ? "JST-9" : "Asia/Tokyo";
     const dates = execFileSync("git", ["log", "--follow", "--format=%cd", "--date=format-local:%Y-%m-%d", "--", relPath], {
       cwd: root,
       encoding: "utf8",
-      env: { ...process.env, TZ: "Asia/Tokyo" }
+      env: { ...process.env, TZ: jstTz }
     }).trim().split(/\r?\n/).filter(Boolean);
     const firstDate = dates.at(-1) || "";
     gitFirstDateCache.set(relPath, firstDate);
