@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-12T11:49:03.826Z",
-  "officialCheckedAt": "11/12 20:49",
+  "retrievedAt": "2026-11-12T20:27:03.787Z",
+  "officialCheckedAt": "11/13 05:27",
   "siteTopics": [
     {
       "date": "2026-11-10",
@@ -96,6 +96,46 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "自宅敷地内への建設型応急住宅の相談受付期限について",
+      "url": "https://www.city.uto.lg.jp/article/view/1310/17355.html",
+      "date": "2026-11-13",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261113-a3824680",
+      "archiveUrl": "official-articles/uto-20261113-a3824680.html"
+    },
+    {
+      "title": "令和8年熊本地震に係る第3期建設型応急住宅の入居募集のお知らせ",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2628356",
+      "date": "2026-11-13",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261113-f4efe5c5",
+      "archiveUrl": "official-articles/uki-20261113-f4efe5c5.html"
+    },
+    {
+      "title": "自宅敷地内への建設型応急住宅について",
+      "url": "https://www.town.kumamoto-misato.lg.jp/soshiki/fukushi/3971.html",
+      "date": "2026-11-13",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "美里町",
+      "archiveId": "misato-20261113-e8eafa8a",
+      "archiveUrl": "official-articles/misato-20261113-e8eafa8a.html"
+    },
+    {
+      "title": "熊本地震記録誌「未来へつなぐ記録」を刊行しました。",
+      "url": "https://www.town.kikuyo.lg.jp/kiji0031715/index.html",
+      "date": "2026-11-13",
+      "time": null,
+      "category": "その他",
+      "municipality": "菊陽町",
+      "archiveId": "kikuyo-20261113-9638bc0f",
+      "archiveUrl": "official-articles/kikuyo-20261113-9638bc0f.html"
+    },
+    {
       "title": "西原村地域包括支援センター外部委託にかかる公募について",
       "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032057/index.html",
       "date": "2026-11-12",
@@ -116,26 +156,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/yatsushiro-20261112-540016f8.html"
     },
     {
-      "title": "2026年11月12日 令和8年熊本地震 関連情報 （11月12日13時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
-      "date": "2026-11-12",
-      "time": "13:00",
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261112-7912efae",
-      "archiveUrl": "official-articles/uki-20261112-7912efae.html"
-    },
-    {
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（11月12日9時更新）",
-      "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
-      "date": "2026-11-12",
-      "time": "09:00",
-      "category": "その他",
-      "municipality": "美里町",
-      "archiveId": "misato-20261112-a8f621b2",
-      "archiveUrl": "official-articles/misato-20261112-a8f621b2.html"
-    },
-    {
       "title": "【市長メッセージ】使用する水の圧力を弱める減圧給水のお願い",
       "url": "https://www.city.amakusa.kumamoto.jp/kiji00314887/index.html",
       "date": "2026-11-12",
@@ -144,16 +164,6 @@ window.HOME_TOPICS = {
       "municipality": "天草市",
       "archiveId": "amakusa-20261112-22eb74e9",
       "archiveUrl": "official-articles/amakusa-20261112-22eb74e9.html"
-    },
-    {
-      "title": "避難所について（11/11 17:00時点）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/17349.html",
-      "date": "2026-11-11",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261111-1d92d642",
-      "archiveUrl": "official-articles/uto-20261111-1d92d642.html"
     },
     {
       "title": "令和８年熊本地震における支援の状況について",
@@ -234,16 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "上天草市",
       "archiveId": "kamiamakusa-20261109-1dfcb800",
       "archiveUrl": "official-articles/kamiamakusa-20261109-1dfcb800.html"
-    },
-    {
-      "title": "【11月9日更新】令和8年熊本地震被災者支援制度Vol.2（臨時広報みふね）",
-      "url": "https://www.town.mifune.kumamoto.jp/page9523.html",
-      "date": "2026-11-09",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "御船町",
-      "archiveId": "mifune-20261109-6587fc54",
-      "archiveUrl": "official-articles/mifune-20261109-6587fc54.html"
     }
   ],
   "prefectureUpdates": [

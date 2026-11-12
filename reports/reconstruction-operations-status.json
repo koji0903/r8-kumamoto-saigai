@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-12T11:49:39.052Z",
+  "generatedAt": "2026-11-12T20:27:32.982Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-12T11:29:33.286Z",
-    "inputCount": 850,
+    "generatedAt": "2026-11-12T20:05:21.367Z",
+    "inputCount": 851,
     "classifiedPageCount": 728,
     "displayCandidateCount": 624,
     "deltaFromPrevious": {
-      "inputCount": -7,
-      "classifiedPageCount": -9,
+      "inputCount": 1,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 1
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 83,
+      "ageHours": 91,
       "limitHours": 336
     }
   },
@@ -56,8 +56,8 @@
         "fallback": true
       },
       "municipality_uto": {
-        "classified": 60,
-        "displayCandidates": 56,
+        "classified": 61,
+        "displayCandidates": 57,
         "fallback": true
       },
       "municipality_kamiamakusa": {
@@ -106,8 +106,8 @@
         "fallback": true
       },
       "municipality_kashima": {
-        "classified": 22,
-        "displayCandidates": 19,
+        "classified": 21,
+        "displayCandidates": 18,
         "fallback": true
       },
       "municipality_mashiki": {
@@ -138,9 +138,9 @@
     },
     "categoryReport": {
       "home": {
-        "total": 196,
+        "total": 197,
         "high": 74,
-        "medium": 76,
+        "medium": 77,
         "low": 46
       },
       "money": {
@@ -150,10 +150,10 @@
         "low": 133
       },
       "documents": {
-        "total": 183,
+        "total": 184,
         "high": 44,
         "medium": 35,
-        "low": 104
+        "low": 105
       },
       "health_care": {
         "total": 54,
@@ -168,9 +168,9 @@
         "low": 34
       },
       "work_business": {
-        "total": 78,
+        "total": 77,
         "high": 20,
-        "medium": 58,
+        "medium": 57,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,9 +180,9 @@
         "low": 0
       },
       "daily_life": {
-        "total": 207,
+        "total": 206,
         "high": 57,
-        "medium": 148,
+        "medium": 147,
         "low": 2
       }
     },
@@ -191,7 +191,7 @@
       "medium": 351,
       "low": 104
     },
-    "unclassifiedCount": 18,
+    "unclassifiedCount": 19,
     "excludedCount": 39,
     "overrideCount": 2
   },

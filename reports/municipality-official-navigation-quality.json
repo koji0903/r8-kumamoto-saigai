@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-12T11:29:33.286Z",
+  "generatedAt": "2026-11-12T20:05:21.367Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 850,
+  "inputCount": 851,
   "displayCandidateCount": 624,
   "classifiedPageCount": 728,
   "categoryReport": {
     "home": {
-      "total": 196,
+      "total": 197,
       "high": 74,
-      "medium": 76,
+      "medium": 77,
       "low": 46
     },
     "money": {
@@ -19,10 +19,10 @@
       "low": 133
     },
     "documents": {
-      "total": 183,
+      "total": 184,
       "high": 44,
       "medium": 35,
-      "low": 104
+      "low": 105
     },
     "health_care": {
       "total": 54,
@@ -37,9 +37,9 @@
       "low": 34
     },
     "work_business": {
-      "total": 78,
+      "total": 77,
       "high": 20,
-      "medium": 58,
+      "medium": 57,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 207,
+      "total": 206,
       "high": 57,
-      "medium": 148,
+      "medium": 147,
       "low": 2
     }
   },
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 60,
-      "displayCandidates": 56,
+      "classified": 61,
+      "displayCandidates": 57,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -132,8 +132,8 @@
       "fallback": true
     },
     "municipality_kashima": {
-      "classified": 22,
-      "displayCandidates": 19,
+      "classified": 21,
+      "displayCandidates": 18,
       "fallback": true
     },
     "municipality_mashiki": {
@@ -167,7 +167,7 @@
     "medium": 351,
     "low": 104
   },
-  "unclassifiedCount": 18,
+  "unclassifiedCount": 19,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -248,6 +248,11 @@
       "municipalityName": "菊陽町",
       "title": "菊陽町熊本地震復旧・復興計画を策定しました",
       "url": "https://www.town.kikuyo.lg.jp/kiji0031204/index.html"
+    },
+    {
+      "municipalityName": "菊陽町",
+      "title": "熊本地震記録誌「未来へつなぐ記録」を刊行しました。",
+      "url": "https://www.town.kikuyo.lg.jp/kiji0031715/index.html"
     },
     {
       "municipalityName": "御船町",
@@ -859,5 +864,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 737
+  "previousClassifiedPageCount": 728
 }
