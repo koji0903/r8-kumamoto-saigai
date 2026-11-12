@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-12T01:07:59.122Z",
-  "officialCheckedAt": "11/12 10:07",
+  "retrievedAt": "2026-11-12T11:49:03.826Z",
+  "officialCheckedAt": "11/12 20:49",
   "siteTopics": [
     {
       "date": "2026-11-10",
@@ -96,6 +96,36 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "西原村地域包括支援センター外部委託にかかる公募について",
+      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032057/index.html",
+      "date": "2026-11-12",
+      "time": "17:46",
+      "category": "支援・制度",
+      "municipality": "西原村",
+      "archiveId": "nishihara-20261112-46f7e8f0",
+      "archiveUrl": "official-articles/nishihara-20261112-46f7e8f0.html"
+    },
+    {
+      "title": "令和8年熊本地震に伴う住宅の応急修理について(申請受付中)",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326747/index.html",
+      "date": "2026-11-12",
+      "time": "17:00",
+      "category": "住まい・証明",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261112-540016f8",
+      "archiveUrl": "official-articles/yatsushiro-20261112-540016f8.html"
+    },
+    {
+      "title": "2026年11月12日 令和8年熊本地震 関連情報 （11月12日13時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
+      "date": "2026-11-12",
+      "time": "13:00",
+      "category": "その他",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261112-7912efae",
+      "archiveUrl": "official-articles/uki-20261112-7912efae.html"
+    },
+    {
       "title": "令和8年熊本地震（7月28日発生）に関する情報（11月12日9時更新）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
       "date": "2026-11-12",
@@ -104,26 +134,6 @@ window.HOME_TOPICS = {
       "municipality": "美里町",
       "archiveId": "misato-20261112-a8f621b2",
       "archiveUrl": "official-articles/misato-20261112-a8f621b2.html"
-    },
-    {
-      "title": "避難所開設状況",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
-      "date": "2026-11-12",
-      "time": "08:38",
-      "category": "避難・安全",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261112-c2d6b51f",
-      "archiveUrl": "official-articles/yatsushiro-20261112-c2d6b51f.html"
-    },
-    {
-      "title": "2026年11月12日 避難者数",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2610320",
-      "date": "2026-11-12",
-      "time": null,
-      "category": "避難・安全",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261112-69c958e4",
-      "archiveUrl": "official-articles/uki-20261112-69c958e4.html"
     },
     {
       "title": "【市長メッセージ】使用する水の圧力を弱める減圧給水のお願い",
@@ -196,16 +206,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/kumamoto-20261110-44d41010.html"
     },
     {
-      "title": "西原村立保育所給食調理業務委託に係る公募型プロポーザルの実施について（※終了しました）",
-      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032055/index.html",
-      "date": "2026-11-10",
-      "time": "08:51",
-      "category": "施設・学校",
-      "municipality": "西原村",
-      "archiveId": "nishihara-20261110-09d49e5f",
-      "archiveUrl": "official-articles/nishihara-20261110-09d49e5f.html"
-    },
-    {
       "title": "幸橋架替工事に伴い歩道橋が終日全面通行止めになります。",
       "url": "https://localcms.city.minamata.lg.jp/page3904.html?type=top",
       "date": "2026-11-10",
@@ -226,14 +226,14 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/kikuchi-20261109-8b2f2419.html"
     },
     {
-      "title": "令和8年熊本地震にかかる災害見舞金等の支給について",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23374.html",
+      "title": "【令和8年熊本地震】地震により被災した住宅の応急修理について",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23163.html",
       "date": "2026-11-09",
       "time": null,
-      "category": "その他",
+      "category": "住まい・証明",
       "municipality": "上天草市",
-      "archiveId": "kamiamakusa-20261109-95a621df",
-      "archiveUrl": "official-articles/kamiamakusa-20261109-95a621df.html"
+      "archiveId": "kamiamakusa-20261109-1dfcb800",
+      "archiveUrl": "official-articles/kamiamakusa-20261109-1dfcb800.html"
     },
     {
       "title": "【11月9日更新】令和8年熊本地震被災者支援制度Vol.2（臨時広報みふね）",

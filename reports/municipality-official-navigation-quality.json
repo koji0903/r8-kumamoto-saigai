@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-11-12T00:50:16.910Z",
+  "generatedAt": "2026-11-12T11:29:33.286Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 857,
-  "displayCandidateCount": 633,
-  "classifiedPageCount": 737,
+  "inputCount": 850,
+  "displayCandidateCount": 624,
+  "classifiedPageCount": 728,
   "categoryReport": {
     "home": {
-      "total": 200,
-      "high": 76,
-      "medium": 77,
-      "low": 47
+      "total": 196,
+      "high": 74,
+      "medium": 76,
+      "low": 46
     },
     "money": {
-      "total": 262,
-      "high": 57,
+      "total": 261,
+      "high": 56,
       "medium": 72,
       "low": 133
     },
     "documents": {
-      "total": 187,
-      "high": 45,
+      "total": 183,
+      "high": 44,
       "medium": 35,
-      "low": 107
+      "low": 104
     },
     "health_care": {
       "total": 54,
@@ -37,21 +37,21 @@
       "low": 34
     },
     "work_business": {
-      "total": 79,
+      "total": 78,
       "high": 20,
-      "medium": 59,
+      "medium": 58,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 22,
+      "total": 21,
       "high": 4,
-      "medium": 18,
+      "medium": 17,
       "low": 0
     },
     "daily_life": {
-      "total": 211,
-      "high": 58,
-      "medium": 151,
+      "total": 207,
+      "high": 57,
+      "medium": 148,
       "low": 2
     }
   },
@@ -102,13 +102,13 @@
       "fallback": true
     },
     "municipality_koshi": {
-      "classified": 11,
-      "displayCandidates": 10,
+      "classified": 1,
+      "displayCandidates": 1,
       "fallback": true
     },
     "municipality_misato": {
-      "classified": 26,
-      "displayCandidates": 20,
+      "classified": 25,
+      "displayCandidates": 19,
       "fallback": true
     },
     "municipality_ozu": {
@@ -122,8 +122,8 @@
       "fallback": true
     },
     "municipality_nishihara": {
-      "classified": 10,
-      "displayCandidates": 10,
+      "classified": 12,
+      "displayCandidates": 11,
       "fallback": true
     },
     "municipality_mifune": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 278,
-    "medium": 355,
+    "high": 273,
+    "medium": 351,
     "low": 104
   },
-  "unclassifiedCount": 17,
+  "unclassifiedCount": 18,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -236,7 +236,12 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月05日 令和8年熊本地震被災求職者等向け企業説明会を開催します",
+      "title": "被災求職者等向け企業説明会を開催します（令和8年11月4日更新）",
+      "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/koyo/2652986"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "2026年11月12日 令和8年熊本地震被災求職者等向け企業説明会を開催します",
       "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/shokogyo/2652986"
     },
     {
@@ -255,7 +260,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 64,
+  "outOfScopeCount": 65,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "disaster_preparedness": 10,
@@ -264,7 +269,7 @@
     "budget_notice": 3,
     "overall_guide": 5,
     "hq_meeting_material": 3,
-    "index_page": 12,
+    "index_page": 13,
     "mayor_message": 2,
     "mutual_aid": 1,
     "weather_warning": 2,
@@ -562,8 +567,15 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月11日 令和8年熊本地震 関連情報 （11月11日8時00分更新）",
+      "title": "2026年11月11日 令和8年熊本地震 関連情報 （11月12日13時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "2026年11月12日 令和8年熊本地震 関連情報 （11月12日13時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -728,7 +740,7 @@
     "non_official_url": 1,
     "past_disaster_excluded": 1
   },
-  "warningCount": 25,
+  "warningCount": 23,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -794,16 +806,6 @@
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
       "count": 3
-    },
-    {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_koshi",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
-      "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_koshi",
-      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
