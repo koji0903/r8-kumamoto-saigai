@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-13T11:33:19.781Z",
-  "officialCheckedAt": "11/13 20:33",
+  "retrievedAt": "2026-11-13T20:15:17.716Z",
+  "officialCheckedAt": "11/14 05:15",
   "siteTopics": [
     {
       "date": "2026-11-10",
@@ -216,16 +216,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/nishihara-20261112-46f7e8f0.html"
     },
     {
-      "title": "【市長メッセージ】使用する水の圧力を弱める減圧給水のお願い",
-      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314887/index.html",
-      "date": "2026-11-12",
-      "time": null,
-      "category": "ライフライン",
-      "municipality": "天草市",
-      "archiveId": "amakusa-20261112-22eb74e9",
-      "archiveUrl": "official-articles/amakusa-20261112-22eb74e9.html"
-    },
-    {
       "title": "避難所について（11/11 17:00時点）",
       "url": "https://www.city.uto.lg.jp/article/view/1302/17349.html",
       "date": "2026-11-11",
@@ -244,6 +234,16 @@ window.HOME_TOPICS = {
       "municipality": "水俣市",
       "archiveId": "minamata-20261110-6ceba646",
       "archiveUrl": "official-articles/minamata-20261110-6ceba646.html"
+    },
+    {
+      "title": "【令和8年熊本地震】地震により被災した住宅の応急修理について",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23163.html",
+      "date": "2026-11-09",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "上天草市",
+      "archiveId": "kamiamakusa-20261109-1dfcb800",
+      "archiveUrl": "official-articles/kamiamakusa-20261109-1dfcb800.html"
     }
   ],
   "prefectureUpdates": [
