@@ -9,12 +9,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T05:15:39.834Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699": {
-    "id": "uki-20261111-7d9d4e13",
-    "htmlPath": "official-articles/uki-20261111-7d9d4e13.html",
-    "title": "2026年11月11日 令和8年熊本地震 関連情報 （11月11日8時00分更新）",
+    "id": "uki-20261113-7d9d4e13",
+    "htmlPath": "official-articles/uki-20261113-7d9d4e13.html",
+    "title": "2026年11月13日 令和8年熊本地震 関連情報 （11月13日8時00分更新）",
     "municipality": "宇城市",
-    "date": "2026-11-11",
-    "retrievedAt": "2026-11-10T23:47:17.184Z"
+    "date": "2026-11-13",
+    "retrievedAt": "2026-11-13T02:15:55.555Z"
   },
   "https://localcms.city.minamata.lg.jp/page4895.html?type=top": {
     "id": "minamata-20261019-81bdc420",
@@ -249,12 +249,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-05T01:49:08.628Z"
   },
   "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html": {
-    "id": "yatsushiro-20261112-c2d6b51f",
-    "htmlPath": "official-articles/yatsushiro-20261112-c2d6b51f.html",
+    "id": "yatsushiro-20261113-c2d6b51f",
+    "htmlPath": "official-articles/yatsushiro-20261113-c2d6b51f.html",
     "title": "避難所開設状況",
     "municipality": "八代市",
-    "date": "2026-11-12",
-    "retrievedAt": "2026-11-12T01:08:02.768Z"
+    "date": "2026-11-13",
+    "retrievedAt": "2026-11-13T02:15:54.936Z"
   },
   "https://www.city.kumamoto.jp/kiji00372210/index.html": {
     "id": "kumamoto-20261109-2d71cce8",
@@ -601,12 +601,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T20:54:28.221Z"
   },
   "https://www.city.yamaga.kumamoto.jp/kinkyu.html": {
-    "id": "yamaga-20261108-ed5178f4",
-    "htmlPath": "official-articles/yamaga-20261108-ed5178f4.html",
-    "title": "震度速報 11月08日 10時54分",
+    "id": "yamaga-20261113-ed5178f4",
+    "htmlPath": "official-articles/yamaga-20261113-ed5178f4.html",
+    "title": "震度速報 11月13日 10時53分",
     "municipality": "山鹿市",
-    "date": "2026-11-08",
-    "retrievedAt": "2026-11-08T06:34:50.922Z"
+    "date": "2026-11-13",
+    "retrievedAt": "2026-11-13T02:15:54.275Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036841/index.html": {
     "id": "hikawa-20261028-f6d3a0a0",
@@ -1167,5 +1167,13 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "菊陽町",
     "date": "2026-11-13",
     "retrievedAt": "2026-11-12T20:27:11.874Z"
+  },
+  "https://www.town.mashiki.lg.jp/kiji0038159/index.html": {
+    "id": "mashiki-20261113-344b8945",
+    "htmlPath": "official-articles/mashiki-20261113-344b8945.html",
+    "title": "【令和９年２月２８日まで延長】介護サービス利用料の自己負担額の支払い猶予・免除【令和８年熊本地震】",
+    "municipality": "益城町",
+    "date": "2026-11-13",
+    "retrievedAt": "2026-11-13T02:15:51.601Z"
   }
 };

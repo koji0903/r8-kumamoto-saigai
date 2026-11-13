@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-12T20:05:21.367Z",
+  "generatedAt": "2026-11-13T01:56:11.956Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 851,
+  "inputCount": 852,
   "displayCandidateCount": 624,
   "classifiedPageCount": 728,
   "categoryReport": {
     "home": {
       "total": 197,
-      "high": 74,
+      "high": 75,
       "medium": 77,
-      "low": 46
+      "low": 45
     },
     "money": {
       "total": 261,
@@ -19,8 +19,8 @@
       "low": 133
     },
     "documents": {
-      "total": 184,
-      "high": 44,
+      "total": 183,
+      "high": 43,
       "medium": 35,
       "low": 105
     },
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 118,
-      "displayCandidates": 102,
+      "classified": 119,
+      "displayCandidates": 103,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -157,8 +157,8 @@
       "fallback": true
     },
     "municipality_tsunagi": {
-      "classified": 7,
-      "displayCandidates": 6,
+      "classified": 6,
+      "displayCandidates": 5,
       "fallback": true
     }
   },
@@ -236,12 +236,12 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "被災求職者等向け企業説明会を開催します（令和8年11月4日更新）",
+      "title": "被災求職者等向け企業説明会を開催します（令和8年11月13日更新）",
       "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/koyo/2652986"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月12日 令和8年熊本地震被災求職者等向け企業説明会を開催します",
+      "title": "2026年11月13日 令和8年熊本地震被災求職者等向け企業説明会を開催します",
       "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/shokogyo/2652986"
     },
     {
@@ -265,7 +265,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036857/index.html"
     }
   ],
-  "outOfScopeCount": 65,
+  "outOfScopeCount": 66,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "disaster_preparedness": 10,
@@ -274,7 +274,7 @@
     "budget_notice": 3,
     "overall_guide": 5,
     "hq_meeting_material": 3,
-    "index_page": 13,
+    "index_page": 14,
     "mayor_message": 2,
     "mutual_aid": 1,
     "weather_warning": 2,
@@ -438,6 +438,13 @@
       "ruleLabel": "平時の防災・今後への備え"
     },
     {
+      "municipalityName": "山鹿市",
+      "title": "震度速報 11月13日 10時53分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
       "municipalityName": "菊池市",
       "title": "地震関連情報",
       "url": "https://www.city.kikuchi.lg.jp/article/list/1350.html",
@@ -523,13 +530,6 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
-      "ruleId": "press",
-      "ruleLabel": "報道機関向け"
-    },
-    {
-      "municipalityName": "宇城市",
       "title": "南海トラフ地震臨時情報（巨大地震注意）について",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2422985",
       "ruleId": "disaster_preparedness",
@@ -572,15 +572,22 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月11日 令和8年熊本地震 関連情報 （11月12日13時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "title": "2026年11月12日 令和8年熊本地震 関連情報 （11月13日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月12日 令和8年熊本地震 関連情報 （11月12日13時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
+      "title": "2026年11月13日 【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
+      "ruleId": "press",
+      "ruleLabel": "報道機関向け"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "2026年11月13日 令和8年熊本地震 関連情報 （11月13日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -745,7 +752,7 @@
     "non_official_url": 1,
     "past_disaster_excluded": 1
   },
-  "warningCount": 23,
+  "warningCount": 22,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -788,14 +795,9 @@
       "count": 2
     },
     {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_kikuchi",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "count": 3
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",

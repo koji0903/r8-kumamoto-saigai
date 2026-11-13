@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-12T20:27:03.787Z",
-  "officialCheckedAt": "11/13 05:27",
+  "retrievedAt": "2026-11-13T02:15:48.740Z",
+  "officialCheckedAt": "11/13 11:15",
   "siteTopics": [
     {
       "date": "2026-11-10",
@@ -96,6 +96,46 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "【令和９年２月２８日まで延長】介護サービス利用料の自己負担額の支払い猶予・免除【令和８年熊本地震】",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038159/index.html",
+      "date": "2026-11-13",
+      "time": "11:02",
+      "category": "その他",
+      "municipality": "益城町",
+      "archiveId": "mashiki-20261113-344b8945",
+      "archiveUrl": "official-articles/mashiki-20261113-344b8945.html"
+    },
+    {
+      "title": "震度速報 11月13日 10時53分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "date": "2026-11-13",
+      "time": "10:53",
+      "category": "避難・安全",
+      "municipality": "山鹿市",
+      "archiveId": "yamaga-20261113-ed5178f4",
+      "archiveUrl": "official-articles/yamaga-20261113-ed5178f4.html"
+    },
+    {
+      "title": "避難所開設状況",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00326798/index.html",
+      "date": "2026-11-13",
+      "time": "09:07",
+      "category": "避難・安全",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261113-c2d6b51f",
+      "archiveUrl": "official-articles/yatsushiro-20261113-c2d6b51f.html"
+    },
+    {
+      "title": "2026年11月13日 令和8年熊本地震 関連情報 （11月13日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-11-13",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261113-7d9d4e13",
+      "archiveUrl": "official-articles/uki-20261113-7d9d4e13.html"
+    },
+    {
       "title": "自宅敷地内への建設型応急住宅の相談受付期限について",
       "url": "https://www.city.uto.lg.jp/article/view/1310/17355.html",
       "date": "2026-11-13",
@@ -104,16 +144,6 @@ window.HOME_TOPICS = {
       "municipality": "宇土市",
       "archiveId": "uto-20261113-a3824680",
       "archiveUrl": "official-articles/uto-20261113-a3824680.html"
-    },
-    {
-      "title": "令和8年熊本地震に係る第3期建設型応急住宅の入居募集のお知らせ",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2628356",
-      "date": "2026-11-13",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261113-f4efe5c5",
-      "archiveUrl": "official-articles/uki-20261113-f4efe5c5.html"
     },
     {
       "title": "自宅敷地内への建設型応急住宅について",
@@ -146,16 +176,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/nishihara-20261112-46f7e8f0.html"
     },
     {
-      "title": "令和8年熊本地震に伴う住宅の応急修理について(申請受付中)",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326747/index.html",
-      "date": "2026-11-12",
-      "time": "17:00",
-      "category": "住まい・証明",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261112-540016f8",
-      "archiveUrl": "official-articles/yatsushiro-20261112-540016f8.html"
-    },
-    {
       "title": "【市長メッセージ】使用する水の圧力を弱める減圧給水のお願い",
       "url": "https://www.city.amakusa.kumamoto.jp/kiji00314887/index.html",
       "date": "2026-11-12",
@@ -166,16 +186,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/amakusa-20261112-22eb74e9.html"
     },
     {
-      "title": "令和８年熊本地震における支援の状況について",
-      "url": "https://www.city.yamaga.kumamoto.jp/bousai/kiji0033160/index.html",
-      "date": "2026-11-11",
-      "time": "16:44",
-      "category": "支援・制度",
-      "municipality": "山鹿市",
-      "archiveId": "yamaga-20261111-d9b95a4a",
-      "archiveUrl": "official-articles/yamaga-20261111-d9b95a4a.html"
-    },
-    {
       "title": "令和8年熊本地震関連情報",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
       "date": "2026-11-11",
@@ -184,16 +194,6 @@ window.HOME_TOPICS = {
       "municipality": "氷川町",
       "archiveId": "hikawa-20261111-edaedf97",
       "archiveUrl": "official-articles/hikawa-20261111-edaedf97.html"
-    },
-    {
-      "title": "令和8年熊本地震における罹災証明手続きについて",
-      "url": "https://www.town.tsunagi.lg.jp/kinkyu/pub/default.aspx?c_id=9",
-      "date": "2026-11-11",
-      "time": "11:00",
-      "category": "住まい・証明",
-      "municipality": "津奈木町",
-      "archiveId": "tsunagi-20261111-6c30f109",
-      "archiveUrl": "official-articles/tsunagi-20261111-6c30f109.html"
     },
     {
       "title": "令和8年熊本地震災害支援情報まとめ(11/11更新)",
