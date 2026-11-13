@@ -83,7 +83,7 @@ def kumamoto_figures(sections):
 # ---- 八代市：資料PDFの「現在の状況等」から読む -------------------------------
 def yatsushiro_summary(pdf_path):
     """総務企画対策部の被害状況報告ページを探して、その文字を返す。"""
-    import fitz
+    import pymupdf as fitz
 
     document = fitz.open(pdf_path)
     for page in document:

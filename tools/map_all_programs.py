@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """PDFの全ページから全制度の構造化データを厳密に抽出する"""
-import fitz
+import pymupdf as fitz
 import json
 import re
 

@@ -18,7 +18,7 @@ import json, re, sys, unicodedata
 from pathlib import Path
 
 try:
-    import fitz  # PyMuPDF
+    import pymupdf as fitz
 except ImportError:
     sys.exit("PyMuPDF が必要です:  pip install pymupdf")
 

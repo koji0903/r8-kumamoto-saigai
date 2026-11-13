@@ -41,7 +41,7 @@ def read_uto(meeting, items, pdf_dir, text_dir):
     cache = text_dir / f'uto-{meeting:03}.json'
     pdf = pdf_dir / items[0]['file']
     if pdf.exists():
-        import fitz
+        import pymupdf as fitz
         with fitz.open(pdf) as document:
             pages = [{'page': i+1, 'text': p.get_text(sort=True)} for i,p in enumerate(document)]
         if any(not page['text'].strip() for page in pages):

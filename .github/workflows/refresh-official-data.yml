@@ -27,25 +27,26 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: リポジトリを取得
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           ref: main
           # build-seo.mjs が各HTMLの最終コミット日を取得できるよう全履歴を使う。
           fetch-depth: 0
 
       - name: Node.jsを準備
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
-          node-version: "22"
+          node-version: "26"
           package-manager-cache: false
 
       - name: Pythonを準備
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
-          python-version: "3.12"
+          # PyMuPDF 2.1の必須依存onnxruntimeがLinux版Python 3.15を未提供。
+          python-version: "3.14"
 
       - name: 熊本県資料PDFのキャッシュを復元
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: sources/official/hq
           key: hq-pdfs-${{ runner.os }}-${{ github.run_id }}
@@ -53,7 +54,7 @@ jobs:
             hq-pdfs-${{ runner.os }}-
 
       - name: PDF抽出ライブラリを準備
-        run: python -m pip install --disable-pip-version-check pymupdf
+        run: python -m pip install --disable-pip-version-check --requirement requirements-hq.txt
 
       - name: 熊本県災害対策本部資料を更新
         run: |

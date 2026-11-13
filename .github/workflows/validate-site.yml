@@ -21,17 +21,42 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: リポジトリを取得
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           # sitemap.xml の lastmod は各HTMLの最終コミット日から生成する。
           # shallow cloneではHTML以外だけを更新したcommitで履歴を取得できない。
           fetch-depth: 0
 
       - name: Node.jsを準備
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 26
           package-manager-cache: false
+
+      - name: Pythonを準備
+        uses: actions/setup-python@v7
+        with:
+          # PyMuPDF 2.1の必須依存onnxruntimeがLinux版Python 3.15を未提供。
+          python-version: "3.14"
+
+      - name: PDF抽出コードの互換性を検査
+        run: |
+          python -m pip install --disable-pip-version-check --requirement requirements-hq.txt
+          python -m py_compile \
+            tools/build-hq-damage.py \
+            tools/build-municipality-hq.py \
+            tools/build-ogp-images.py \
+            tools/map_all_programs.py \
+            tools/uto_hq.py
+          python - <<'PY'
+          import pymupdf
+
+          svg = b'<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><rect width="10" height="10" fill="red"/></svg>'
+          document = pymupdf.open("svg", svg)
+          pixmap = document[0].get_pixmap(matrix=pymupdf.Matrix(2, 2), alpha=True)
+          assert (pixmap.width, pixmap.height) == (20, 20)
+          print(f"PyMuPDF {pymupdf.__version__}: SVG render OK")
+          PY
 
       - name: サイト全体を検査
         run: npm run check

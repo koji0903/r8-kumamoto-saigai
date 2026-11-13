@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 try:
-    import fitz  # PyMuPDF：SVGを高品質レンダリング
+    import pymupdf as fitz  # SVGを高品質レンダリング
     from PIL import Image, ImageDraw, ImageFont, ImageFilter
 except ImportError as error:  # pragma: no cover
     sys.exit(f"必要なライブラリがありません: {error}. pip install pymupdf pillow")
