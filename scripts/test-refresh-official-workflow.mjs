@@ -2,6 +2,9 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 const yaml=fs.readFileSync(".github/workflows/refresh-official-data.yml","utf8");
 const validateYaml=fs.readFileSync(".github/workflows/validate-site.yml","utf8");
+const coverageYaml=fs.readFileSync(".github/workflows/monitor-living-support-coverage.yml","utf8");
+const packageJson=JSON.parse(fs.readFileSync("package.json","utf8"));
+const hqRequirements=fs.readFileSync("requirements-hq.txt","utf8");
 const qualitySummary=fs.readFileSync("scripts/report-municipality-nav-quality.mjs","utf8");
 const index=label=>{const value=yaml.indexOf(label);assert.ok(value>=0,`${label} が必要`);return value};
 assert.ok(index("市町村公式発信を更新")<index("データ整合性を検査"));
@@ -24,6 +27,17 @@ assert.match(validateYaml,/fetch-depth:\s*0/,"整合性チェックはSEO lastmo
 assert.match(validateYaml,/runs-on:\s*ubuntu-24\.04/,"整合性チェックも検証済みのUbuntu 24.04へ固定する");
 assert.doesNotMatch(validateYaml,/runs-on:\s*ubuntu-latest/,"整合性チェックで移行対象のubuntu-latestを使わない");
 assert.match(validateYaml,/npm run check/,"GitHub Actionsはローカルと同じ統一検査を使う");
+assert.equal(packageJson.engines?.node,"26.x","VercelとローカルのNode.jsを26 LTSへ揃える");
+for(const [name,workflow] of [["定期更新",yaml],["整合性チェック",validateYaml],["掲載監視",coverageYaml]]) {
+  assert.match(workflow,/actions\/checkout@v7/,`${name}はcheckout v7を使う`);
+  assert.match(workflow,/actions\/setup-node@v7/,`${name}はsetup-node v7を使う`);
+  assert.match(workflow,/node-version:\s*["']?26["']?/,`${name}はNode.js 26 LTSを使う`);
+}
+assert.match(yaml,/actions\/setup-python@v7/,"定期更新はsetup-python v7を使う");
+assert.match(yaml,/python-version:\s*["']?3\.15["']?/,"定期更新はPython 3.15を使う");
+assert.match(yaml,/actions\/cache@v6/,"定期更新はcache v6を使う");
+assert.match(yaml,/--requirement requirements-hq\.txt/,"PDF抽出依存は固定したrequirementsから導入する");
+assert.equal(hqRequirements.trim(),"pymupdf==2.1","検証済みのPyMuPDF 2.1を固定する");
 assert.match(yaml,/docs\/reconstruction-operations-status\.md \\\n\s+docs\/reconstruction-information-quality-status\.md/,"品質ステータスを同じgit addへ含める");
 for(const file of ["docs/reconstruction-contact-document-status.md","docs/reconstruction-eligibility-status.md","docs/reconstruction-amount-benefit-status.md","data/reconstruction/amount-benefits.json"]) assert.ok(yaml.includes(file),`${file}を自動更新対象へ含める`);
 for(const text of ['cron: "17 */3 * * *"','portal.bousai.pref.kumamoto.jp/data/shelter/shelter.json','curl --fail --silent --show-error --location','tools/build-shelters.mjs','--retrieved-at=','data/generated/shelters-data.js','for attempt in 1 2 3','JSON.parse','Array.isArray(raw.items)','items.length===0','既存の検証済み避難所データを保持','::warning::'])assert.ok(yaml.includes(text),`避難所自動更新に ${text} が必要`);

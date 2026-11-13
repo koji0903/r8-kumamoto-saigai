@@ -27,12 +27,12 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: リポジトリを取得
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Node.jsを準備
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
-          node-version: "22"
+          node-version: "26"
           package-manager-cache: false
 
       - name: 掲載カバー率を監視
