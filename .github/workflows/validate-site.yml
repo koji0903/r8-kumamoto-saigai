@@ -36,7 +36,8 @@ jobs:
       - name: Pythonを準備
         uses: actions/setup-python@v7
         with:
-          python-version: "3.15"
+          # PyMuPDF 2.1の必須依存onnxruntimeがLinux版Python 3.15を未提供。
+          python-version: "3.14"
 
       - name: PDF抽出コードの互換性を検査
         run: |
