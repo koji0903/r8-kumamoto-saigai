@@ -37,6 +37,10 @@ assert.match(yaml,/actions\/setup-python@v7/,"定期更新はsetup-python v7を�
 assert.match(yaml,/python-version:\s*["']?3\.15["']?/,"定期更新はPython 3.15を使う");
 assert.match(yaml,/actions\/cache@v6/,"定期更新はcache v6を使う");
 assert.match(yaml,/--requirement requirements-hq\.txt/,"PDF抽出依存は固定したrequirementsから導入する");
+assert.match(validateYaml,/actions\/setup-python@v7/,"整合性チェックはsetup-python v7を使う");
+assert.match(validateYaml,/python-version:\s*["']?3\.15["']?/,"整合性チェックはPython 3.15を使う");
+assert.match(validateYaml,/python -m py_compile/,"整合性チェックでPDF抽出コードのPython構文を検査する");
+assert.match(validateYaml,/pymupdf\.open\("svg"/,"整合性チェックでPyMuPDFの描画互換性を検査する");
 assert.equal(hqRequirements.trim(),"pymupdf==2.1","検証済みのPyMuPDF 2.1を固定する");
 assert.match(yaml,/docs\/reconstruction-operations-status\.md \\\n\s+docs\/reconstruction-information-quality-status\.md/,"品質ステータスを同じgit addへ含める");
 for(const file of ["docs/reconstruction-contact-document-status.md","docs/reconstruction-eligibility-status.md","docs/reconstruction-amount-benefit-status.md","data/reconstruction/amount-benefits.json"]) assert.ok(yaml.includes(file),`${file}を自動更新対象へ含める`);
