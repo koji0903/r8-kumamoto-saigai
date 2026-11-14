@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-13T20:15:17.716Z",
-  "officialCheckedAt": "11/14 05:15",
+  "retrievedAt": "2026-11-14T01:46:45.115Z",
+  "officialCheckedAt": "11/14 10:46",
   "siteTopics": [
     {
       "date": "2026-11-10",
@@ -126,6 +126,16 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/hikawa-20261113-8293cb1b.html"
     },
     {
+      "title": "避難所について（11/13 17:00時点）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/17349.html",
+      "date": "2026-11-13",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261113-1d92d642",
+      "archiveUrl": "official-articles/uto-20261113-1d92d642.html"
+    },
+    {
       "title": "2026年11月13日 令和8年熊本地震 関連情報 （11月13日17時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-11-13",
@@ -216,16 +226,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/nishihara-20261112-46f7e8f0.html"
     },
     {
-      "title": "避難所について（11/11 17:00時点）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/17349.html",
-      "date": "2026-11-11",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261111-1d92d642",
-      "archiveUrl": "official-articles/uto-20261111-1d92d642.html"
-    },
-    {
       "title": "幸橋架替工事に伴い歩道橋が終日全面通行止めになります。",
       "url": "https://localcms.city.minamata.lg.jp/page3904.html?type=top",
       "date": "2026-11-10",
@@ -236,14 +236,14 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/minamata-20261110-6ceba646.html"
     },
     {
-      "title": "【令和8年熊本地震】地震により被災した住宅の応急修理について",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23163.html",
+      "title": "2026年11月09日 罹災証明書等の発行について",
+      "url": "https://www.city.kikuchi.lg.jp/article/view/1341/19286.html",
       "date": "2026-11-09",
       "time": null,
       "category": "住まい・証明",
-      "municipality": "上天草市",
-      "archiveId": "kamiamakusa-20261109-1dfcb800",
-      "archiveUrl": "official-articles/kamiamakusa-20261109-1dfcb800.html"
+      "municipality": "菊池市",
+      "archiveId": "kikuchi-20261109-8b2f2419",
+      "archiveUrl": "official-articles/kikuchi-20261109-8b2f2419.html"
     }
   ],
   "prefectureUpdates": [

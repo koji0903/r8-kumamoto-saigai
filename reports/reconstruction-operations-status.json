@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-13T20:15:42.281Z",
+  "generatedAt": "2026-11-14T01:47:05.942Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-13T19:51:50.976Z",
-    "inputCount": 852,
-    "classifiedPageCount": 725,
-    "displayCandidateCount": 618,
+    "generatedAt": "2026-11-14T01:29:55.074Z",
+    "inputCount": 853,
+    "classifiedPageCount": 726,
+    "displayCandidateCount": 619,
     "deltaFromPrevious": {
-      "inputCount": -1,
-      "classifiedPageCount": -1,
+      "inputCount": 1,
+      "classifiedPageCount": 1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 115,
+      "ageHours": 120,
       "limitHours": 336
     }
   },
@@ -51,8 +51,8 @@
         "fallback": true
       },
       "municipality_kikuchi": {
-        "classified": 10,
-        "displayCandidates": 8,
+        "classified": 11,
+        "displayCandidates": 9,
         "fallback": true
       },
       "municipality_uto": {
@@ -144,8 +144,8 @@
         "low": 45
       },
       "money": {
-        "total": 265,
-        "high": 55,
+        "total": 266,
+        "high": 56,
         "medium": 73,
         "low": 137
       },
@@ -180,14 +180,14 @@
         "low": 0
       },
       "daily_life": {
-        "total": 204,
-        "high": 56,
+        "total": 205,
+        "high": 57,
         "medium": 146,
         "low": 2
       }
     },
     "confidence": {
-      "high": 271,
+      "high": 272,
       "medium": 347,
       "low": 107
     },
@@ -312,7 +312,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "count": 6
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
