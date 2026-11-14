@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-14T18:15:58.649Z",
+  "generatedAt": "2026-11-14T22:35:58.324Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 851,
-  "displayCandidateCount": 616,
-  "classifiedPageCount": 723,
+  "inputCount": 852,
+  "displayCandidateCount": 617,
+  "classifiedPageCount": 724,
   "categoryReport": {
     "home": {
-      "total": 189,
+      "total": 190,
       "high": 74,
-      "medium": 70,
+      "medium": 71,
       "low": 45
     },
     "money": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 118,
-      "displayCandidates": 102,
+      "classified": 119,
+      "displayCandidates": 103,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 272,
-    "medium": 344,
+    "medium": 345,
     "low": 107
   },
   "unclassifiedCount": 23,
@@ -822,7 +822,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "count": 4
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -896,5 +896,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 724
+  "previousClassifiedPageCount": 723
 }
