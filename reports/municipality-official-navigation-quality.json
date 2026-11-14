@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-14T10:39:10.486Z",
+  "generatedAt": "2026-11-14T18:15:58.649Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 850,
-  "displayCandidateCount": 617,
-  "classifiedPageCount": 724,
+  "inputCount": 851,
+  "displayCandidateCount": 616,
+  "classifiedPageCount": 723,
   "categoryReport": {
     "home": {
-      "total": 190,
+      "total": 189,
       "high": 74,
-      "medium": 71,
+      "medium": 70,
       "low": 45
     },
     "money": {
@@ -19,9 +19,9 @@
       "low": 137
     },
     "documents": {
-      "total": 176,
+      "total": 175,
       "high": 43,
-      "medium": 35,
+      "medium": 34,
       "low": 98
     },
     "health_care": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 205,
+      "total": 206,
       "high": 57,
-      "medium": 146,
+      "medium": 147,
       "low": 2
     }
   },
@@ -87,13 +87,13 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 31,
-      "displayCandidates": 27,
+      "classified": 30,
+      "displayCandidates": 26,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 119,
-      "displayCandidates": 103,
+      "classified": 118,
+      "displayCandidates": 102,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -107,8 +107,8 @@
       "fallback": true
     },
     "municipality_misato": {
-      "classified": 25,
-      "displayCandidates": 19,
+      "classified": 26,
+      "displayCandidates": 20,
       "fallback": true
     },
     "municipality_ozu": {
@@ -164,10 +164,10 @@
   },
   "confidence": {
     "high": 272,
-    "medium": 345,
+    "medium": 344,
     "low": 107
   },
-  "unclassifiedCount": 22,
+  "unclassifiedCount": 23,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -213,6 +213,11 @@
       "municipalityName": "八代市",
       "title": "令和8年熊本地震復興祈願 鏡文化センター自主文化事業 新春初笑い！！三遊亭圓歌独演会",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00327379/index.html"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "国民保護法で規定された避難施設について",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326422/index.html"
     },
     {
       "municipalityName": "菊池市",
@@ -280,7 +285,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036908/index.html"
     }
   ],
-  "outOfScopeCount": 65,
+  "outOfScopeCount": 66,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "disaster_preparedness": 10,
@@ -289,7 +294,7 @@
     "budget_notice": 3,
     "overall_guide": 5,
     "hq_meeting_material": 3,
-    "index_page": 13,
+    "index_page": 14,
     "mayor_message": 2,
     "mutual_aid": 1,
     "weather_warning": 2,
@@ -451,6 +456,13 @@
       "url": "https://www.city.yamaga.kumamoto.jp/kiji0033173/index.html",
       "ruleId": "disaster_preparedness",
       "ruleLabel": "平時の防災・今後への備え"
+    },
+    {
+      "municipalityName": "山鹿市",
+      "title": "震度速報 11月15日 0時6分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "菊池市",
@@ -810,7 +822,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -884,5 +896,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 726
+  "previousClassifiedPageCount": 724
 }

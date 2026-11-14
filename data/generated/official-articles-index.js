@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-11-13",
-    "retrievedAt": "2026-11-14T10:56:55.326Z"
+    "retrievedAt": "2026-11-14T18:37:21.620Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
@@ -585,12 +585,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T13:34:15.538Z"
   },
   "https://www.city.yatsushiro.lg.jp/bousai/kiji00326422/index.html": {
-    "id": "yatsushiro-20261027-0efcd828",
-    "htmlPath": "official-articles/yatsushiro-20261027-0efcd828.html",
+    "id": "yatsushiro-20261115-0efcd828",
+    "htmlPath": "official-articles/yatsushiro-20261115-0efcd828.html",
     "title": "国民保護法で規定された避難施設について",
     "municipality": "八代市",
-    "date": "2026-10-27",
-    "retrievedAt": "2026-10-26T20:54:25.336Z"
+    "date": "2026-11-15",
+    "retrievedAt": "2026-11-14T18:37:17.462Z"
   },
   "https://www.town.kumamoto-misato.lg.jp/soshiki/gakkokyoiku/1/1/3983.html": {
     "id": "misato-20261027-87a44654",
@@ -601,12 +601,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T20:54:28.221Z"
   },
   "https://www.city.yamaga.kumamoto.jp/kinkyu.html": {
-    "id": "yamaga-20261113-ed5178f4",
-    "htmlPath": "official-articles/yamaga-20261113-ed5178f4.html",
-    "title": "震度速報 11月13日 10時53分",
+    "id": "yamaga-20261115-ed5178f4",
+    "htmlPath": "official-articles/yamaga-20261115-ed5178f4.html",
+    "title": "震度速報 11月15日 0時6分",
     "municipality": "山鹿市",
-    "date": "2026-11-13",
-    "retrievedAt": "2026-11-13T02:15:54.275Z"
+    "date": "2026-11-15",
+    "retrievedAt": "2026-11-14T18:37:16.460Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036841/index.html": {
     "id": "hikawa-20261028-f6d3a0a0",
@@ -737,12 +737,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-12T01:08:07.031Z"
   },
   "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/sumai/3907.html": {
-    "id": "misato-20261030-ed424e1e",
-    "htmlPath": "official-articles/misato-20261030-ed424e1e.html",
+    "id": "misato-20261115-ed424e1e",
+    "htmlPath": "official-articles/misato-20261115-ed424e1e.html",
     "title": "被災された方への入浴支援について（町・県事業）",
     "municipality": "美里町",
-    "date": "2026-10-30",
-    "retrievedAt": "2026-10-30T10:29:45.251Z"
+    "date": "2026-11-15",
+    "retrievedAt": "2026-11-14T18:37:19.410Z"
   },
   "https://www.town.mifune.kumamoto.jp/page8660.html": {
     "id": "mifune-20261031-55b0e807",
