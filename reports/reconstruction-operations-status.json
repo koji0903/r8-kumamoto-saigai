@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-14T01:47:05.942Z",
+  "generatedAt": "2026-11-14T10:57:12.988Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-14T01:29:55.074Z",
-    "inputCount": 853,
-    "classifiedPageCount": 726,
-    "displayCandidateCount": 619,
+    "generatedAt": "2026-11-14T10:39:10.486Z",
+    "inputCount": 850,
+    "classifiedPageCount": 724,
+    "displayCandidateCount": 617,
     "deltaFromPrevious": {
-      "inputCount": 1,
-      "classifiedPageCount": 1,
+      "inputCount": -3,
+      "classifiedPageCount": -2,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 120,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -101,8 +101,8 @@
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 23,
-        "displayCandidates": 14,
+        "classified": 22,
+        "displayCandidates": 13,
         "fallback": true
       },
       "municipality_kashima": {
@@ -121,8 +121,8 @@
         "fallback": true
       },
       "municipality_hikawa": {
-        "classified": 62,
-        "displayCandidates": 54,
+        "classified": 61,
+        "displayCandidates": 53,
         "fallback": true
       },
       "municipality_ashikita": {
@@ -138,9 +138,9 @@
     },
     "categoryReport": {
       "home": {
-        "total": 192,
+        "total": 190,
         "high": 74,
-        "medium": 73,
+        "medium": 71,
         "low": 45
       },
       "money": {
@@ -150,10 +150,10 @@
         "low": 137
       },
       "documents": {
-        "total": 178,
+        "total": 176,
         "high": 43,
         "medium": 35,
-        "low": 100
+        "low": 98
       },
       "health_care": {
         "total": 55,
@@ -188,7 +188,7 @@
     },
     "confidence": {
       "high": 272,
-      "medium": 347,
+      "medium": 345,
       "low": 107
     },
     "unclassifiedCount": 22,
@@ -225,7 +225,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:9ee1ae3b51bf8d1a06d254b0bce6c1528e288ce4fcf29c1578b96c219d45e2d6",
+        "currentHash": "sha256:b79743c2ff60742354bfa3abd59f2be1247b59448eda9d007cff124884885e9a",
         "verificationStatus": "needs_review"
       }
     },
@@ -236,7 +236,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:cdccc325ae84fb046e84af11eafc0a78daab0fa0aac6b3e71bc54ab729cceff9",
+        "currentHash": "sha256:2e220f711f11988776da592c74773b7c7f09ab0cf8626e598a3a9e1bde3a5d01",
         "verificationStatus": "needs_review"
       }
     },
@@ -410,7 +410,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:9ee1ae3b51bf8d1a06d254b0bce6c1528e288ce4fcf29c1578b96c219d45e2d6",
+        "currentHash": "sha256:b79743c2ff60742354bfa3abd59f2be1247b59448eda9d007cff124884885e9a",
         "verificationStatus": "needs_review"
       },
       {
@@ -418,7 +418,7 @@
         "title": "災害救助法に基づく被災住宅の応急修理制度について",
         "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
         "previousHash": "sha256:58bce5921a3eab92d30023394afda7b18b4401562def2809f9c0c51bce0e0050",
-        "currentHash": "sha256:cdccc325ae84fb046e84af11eafc0a78daab0fa0aac6b3e71bc54ab729cceff9",
+        "currentHash": "sha256:2e220f711f11988776da592c74773b7c7f09ab0cf8626e598a3a9e1bde3a5d01",
         "verificationStatus": "needs_review"
       },
       {

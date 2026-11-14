@@ -1,12 +1,12 @@
 # 暮らしの再建 情報品質ステータス
 
-最終監査日時: 2026-08-12（データ生成: 2026-11-14T01:29:55.074Z）
+最終監査日時: 2026-08-12（データ生成: 2026-11-14T10:39:10.486Z）
 
 > 件数の少なさは支援の少なさを意味しません。自治体の発信方法・ページ構造・更新頻度の差として扱います。A/B/Cは品質状態であり自治体評価ではありません。
 
 ## ACTION_REQUIRED
 - 厳密情報source変更 6件
-- 未解決source変更 ACTION_REQUIRED 62件
+- 未解決source変更 ACTION_REQUIRED 63件
 
 ## WARNING（上位）
 - 熊本市: confirmed / 取得エラー 1件
@@ -23,16 +23,16 @@
 - 氷川町: confirmed / 取得エラー 2件
 - 未分類 22件。重要語の取りこぼしを週次確認
 - 収集巡回中の404候補 31件。連続失敗回数をまだ永続保持していない
-- 表示候補のうち機械的freshness判定でstale 517件。自動削除せず公式原文を確認
+- 表示候補のうち機械的freshness判定でstale 518件。自動削除せず公式原文を確認
 
 ## 現在の公式情報件数
-- collector入力: 853件
-- classified: 726件
-- 通常表示候補: 619件
-- 検索index: 622件
+- collector入力: 850件
+- classified: 724件
+- 通常表示候補: 617件
+- 検索index: 620件
 - 未分類: 22件
 - 除外・重複: 39件
-- confidence: high 272 / medium 347 / low 107
+- confidence: high 272 / medium 345 / low 107
 - fallback: 21/21
 - manual override: 2件
 
@@ -43,7 +43,7 @@
 | 熊本市 | 76 | 71 | 62 | あり | confirmed |
 | 八代市 | 181 | 141 | 114 | あり | confirmed |
 | 水俣市 | 1 | 0 | 0 | あり | confirmed |
-| 山鹿市 | 16 | 12 | 11 | あり | confirmed |
+| 山鹿市 | 15 | 12 | 11 | あり | confirmed |
 | 菊池市 | 13 | 11 | 9 | あり | confirmed |
 | 宇土市 | 71 | 59 | 55 | あり | confirmed |
 | 上天草市 | 34 | 31 | 27 | あり | confirmed |
@@ -54,11 +54,11 @@
 | 大津町 | 0 | 0 | 0 | あり | not-found-by-collector |
 | 菊陽町 | 26 | 21 | 16 | あり | confirmed |
 | 西原村 | 12 | 12 | 11 | あり | confirmed |
-| 御船町 | 25 | 23 | 14 | あり | confirmed |
+| 御船町 | 24 | 22 | 13 | あり | confirmed |
 | 嘉島町 | 22 | 21 | 18 | あり | confirmed |
 | 益城町 | 55 | 52 | 48 | あり | confirmed |
 | 甲佐町 | 36 | 33 | 28 | あり | confirmed |
-| 氷川町 | 85 | 62 | 54 | あり | confirmed |
+| 氷川町 | 84 | 61 | 53 | あり | confirmed |
 | 芦北町 | 6 | 4 | 4 | あり | confirmed |
 | 津奈木町 | 8 | 6 | 5 | あり | confirmed |
 
@@ -66,9 +66,9 @@
 
 | カテゴリ | 全分類 | high | medium | low | 通常表示候補 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| 住まい | 192 | 74 | 73 | 45 | 147 |
+| 住まい | 190 | 74 | 71 | 45 | 145 |
 | お金・支払い | 266 | 56 | 73 | 137 | 129 |
-| 証明・申請 | 178 | 43 | 35 | 100 | 78 |
+| 証明・申請 | 176 | 43 | 35 | 98 | 78 |
 | 健康・介護 | 55 | 18 | 37 | 0 | 55 |
 | 子ども・家族 | 76 | 13 | 31 | 32 | 44 |
 | 仕事・事業 | 76 | 19 | 57 | 0 | 76 |
@@ -95,11 +95,11 @@ A=自治体個別公式情報あり、B=国・県等の広域情報のみ、C=�
 | 大津町 | B | C | C | C | C | C | C | C |
 | 菊陽町 | A(4) | A(4) | A(2) | A(2) | A(1) | C | A(1) | A(4) |
 | 西原村 | A(3) | A(1) | A(3) | C | A(3) | C | C | A(1) |
-| 御船町 | A(3) | A(4) | A(1) | A(1) | A(1) | C | C | A(5) |
+| 御船町 | A(2) | A(4) | A(1) | A(1) | A(1) | C | C | A(5) |
 | 嘉島町 | A(6) | A(3) | A(2) | C | C | A(5) | C | A(6) |
 | 益城町 | A(11) | A(20) | A(6) | A(9) | A(8) | A(2) | A(1) | A(8) |
 | 甲佐町 | A(6) | A(7) | A(6) | A(1) | C | A(4) | C | A(7) |
-| 氷川町 | A(17) | A(10) | A(4) | A(5) | A(2) | A(10) | A(4) | A(17) |
+| 氷川町 | A(16) | A(10) | A(4) | A(5) | A(2) | A(10) | A(4) | A(17) |
 | 芦北町 | B | A(1) | A(2) | C | C | C | C | A(1) |
 | 津奈木町 | B | C | C | A(1) | A(2) | C | C | A(1) |
 
@@ -135,13 +135,13 @@ A=自治体個別公式情報あり、B=国・県等の広域情報のみ、C=�
 - low confidenceは検索index・通常表示から除外済み。mediumは表示対象のため週次サンプル監査を続ける。
 
 ## source・freshness・障害耐性
-- freshness（生成時点の機械判定）: fresh 102 / stale 517 / unknown 0
+- freshness（生成時点の機械判定）: fresh 99 / stale 518 / unknown 0
 - staleは自動削除しない。速報は公式ページで最新状況を確認する前提を維持する。
 - `publishedAt`を`retrievedAt`より優先。日付なしはエラーにしない。
 - LEVEL 2公式リンクの変更は正常。LEVEL 1 verified sourceのhash変更は`needs_review`へ送る。
 - verified source変更: 6件
 - needs_review entity: 0件
-- 未解決source変更: 125件（ACTION_REQUIRED 62件）
+- 未解決source変更: 127件（ACTION_REQUIRED 63件）
 - review queue: `docs/reconstruction-source-review-queue.md`（高リスク順）
 - refreshは自治体別errorsを保持し、空データ・fallback欠落・非公式URLをfailureにする。
 - 1自治体失敗時も既存データを空上書きしない設計を維持。生成は一時ファイルからrenameし、検証不合格時は公開しない。
