@@ -51,7 +51,24 @@ for (const [url, item] of Object.entries(archiveIndex)) {
   assert.match(html, /<meta name="robots" content="noindex,follow,max-image-preview:large">/, `${item.htmlPath}: 自治体原文アーカイブは検索結果へ重複掲載させません`);
   assert.ok(html.includes(`<link rel="canonical" href="${escapeHtml(url)}">`), `${item.htmlPath}: canonical が自治体公式元URLと一致しません`);
   assert.ok(archiveHub.includes(`${item.id}.html`), `${item.htmlPath}: アーカイブ目録から到達できません`);
+
+  // SEO品質検査: title長（70文字未満）、h1タグ唯一、imgのalt属性
+  const titleMatch = html.match(/<title>([\s\S]*?)<\/title>/i);
+  assert.ok(titleMatch, `${item.htmlPath}: titleタグがありません`);
+  const pageTitle = titleMatch[1].trim();
+  assert.ok(pageTitle.length < 70, `${item.htmlPath}: titleが70文字以上です（${pageTitle.length}文字）: ${pageTitle}`);
+
+  const h1Count = (html.match(/<h1\b/gi) || []).length;
+  assert.equal(h1Count, 1, `${item.htmlPath}: h1タグは1個にしてください（現在: ${h1Count}個）`);
+
+  const imgMatches = html.match(/<img[^>]*>/gi) || [];
+  for (const img of imgMatches) {
+    const altMatch = img.match(/\balt\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i);
+    const altVal = altMatch ? (altMatch[1] || altMatch[2] || altMatch[3] || "").trim() : "";
+    assert.ok(altVal.length > 0, `${item.htmlPath}: imgに空でないalt属性がありません: ${img}`);
+  }
+
   checkedCount++;
 }
 
-console.log(`自治体公式記事アーカイブ検査: 全${checkedCount}件のHTML・元URLリンク・目録 OK`);
+console.log(`自治体公式記事アーカイブ検査: 全${checkedCount}件のHTML・元URLリンク・目録・SEO品質（タイトル長/単一h1/画像alt） OK`);

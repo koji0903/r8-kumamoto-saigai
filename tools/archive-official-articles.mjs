@@ -15,7 +15,7 @@
  * - data/generated/official-articles-index.js (フロントエンド用インデックス)
  */
 
-import { readFile, writeFile, mkdir, access } from "node:fs/promises";
+import { readFile, writeFile, mkdir, access, readdir } from "node:fs/promises";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { dirname, join } from "node:path";
@@ -229,6 +229,70 @@ function extractArticleContent(rawHtml, baseUrl) {
   return bodyHtml.trim();
 }
 
+// タイトルをSEOガイドライン（70文字未満）に収める
+function formatArchivePageTitle(municipality, title) {
+  const prefix = `【${municipality}】`;
+  const suffix = `（公式アーカイブ）｜よか隊ネット熊本`;
+  const maxTitleLen = 68 - prefix.length - suffix.length;
+  let cleanTitle = (title || "").trim();
+  if (cleanTitle.length > maxTitleLen) {
+    cleanTitle = cleanTitle.slice(0, maxTitleLen - 1) + "…";
+  }
+  return `${prefix}${cleanTitle}${suffix}`;
+}
+
+// 本文HTMLのサニタイズ（複数h1のh2変換、imgのalt属性補完）
+function sanitizeArchiveBodyHtml(bodyHtml, articleTitle = "") {
+  if (!bodyHtml) return "";
+
+  // 1. 本文内のh1タグをh2に降格（ページ全体のh1を唯一にする）
+  let sanitized = bodyHtml
+    .replace(/<h1(\b[^>]*)>/gi, "<h2$1>")
+    .replace(/<\/h1>/gi, "</h2>");
+
+  // 2. imgタグのalt属性の補完（欠落または空の場合）
+  sanitized = sanitized.replace(/<img\b([^>]*)>/gi, (match, attrs) => {
+    const altMatch = attrs.match(/\balt\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i);
+    const existingAlt = altMatch ? (altMatch[1] || altMatch[2] || altMatch[3] || "").trim() : null;
+
+    if (existingAlt) {
+      return match;
+    }
+
+    const srcMatch = attrs.match(/\bsrc\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i);
+    const src = srcMatch ? (srcMatch[1] || srcMatch[2] || srcMatch[3] || "") : "";
+    const titleMatch = attrs.match(/\btitle\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i);
+    const titleVal = titleMatch ? (titleMatch[1] || titleMatch[2] || titleMatch[3] || "").trim() : "";
+
+    let newAlt = titleVal;
+    if (!newAlt) {
+      if (/pdf(?:\.gif|\.png|\.jpe?g)?/i.test(src)) {
+        newAlt = "PDFファイル";
+      } else if (/excel|xls(?:\.gif|\.png|\.jpe?g)?/i.test(src)) {
+        newAlt = "Excelファイル";
+      } else if (/word|doc(?:\.gif|\.png|\.jpe?g)?/i.test(src)) {
+        newAlt = "Wordファイル";
+      } else if (/mail|email/i.test(src)) {
+        newAlt = "メール";
+      } else if (/kinkyu|urgency|alert|kinkyu_dai/i.test(src)) {
+        newAlt = "緊急情報";
+      } else if (articleTitle) {
+        newAlt = `${articleTitle}の関連画像`;
+      } else {
+        newAlt = "添付画像";
+      }
+    }
+
+    if (altMatch) {
+      return match.replace(/\balt\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)/i, `alt="${esc(newAlt)}"`);
+    } else {
+      return match.replace(/<img\b/i, `<img alt="${esc(newAlt)}" `);
+    }
+  });
+
+  return sanitized;
+}
+
 // 明らかな文字化け（連続する置換文字やEUC化け字ǯ）を判定
 function isMojibake(text) {
   if (!text) return false;
@@ -238,15 +302,16 @@ function isMojibake(text) {
 // 記事ページHTMLテンプレート
 function renderArticleHtml(article) {
   const { id, title, municipality, category, date, time, url, bodyHtml, retrievedAt, isPdf } = article;
-  const pageTitle = `【${municipality}】${title}（自治体公式情報アーカイブ）`;
+  const pageTitle = formatArchivePageTitle(municipality, title);
   const desc = `${municipality}公式発表「${title}」（${date}）。自治体公式サイトの配信情報を発災時の記録およびリンク切れ防止のために保存したアーカイブページです。`;
+  const sanitizedBody = sanitizeArchiveBodyHtml(bodyHtml, title);
 
   return `<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>${esc(pageTitle)}｜よか隊ネット熊本</title>
+  <title>${esc(pageTitle)}</title>
   <meta name="description" content="${esc(desc)}">
   <meta name="robots" content="noindex,follow,max-image-preview:large">
   <link rel="canonical" href="${esc(url)}">
@@ -316,7 +381,7 @@ function renderArticleHtml(article) {
               </li>
             </ul>
           </div>
-          ` : (bodyHtml || `
+          ` : (sanitizedBody || `
           <p>本文のテキスト抽出が完了していません。最新の内容については下記の自治体公式サイトよりご確認ください。</p>
           `)}
         </div>
@@ -509,6 +574,26 @@ function renderArchiveIndexHtml(articles) {
 async function main() {
   await mkdir(ARTICLES_HTML_DIR, { recursive: true });
   await mkdir(ARTICLES_DATA_DIR, { recursive: true });
+
+  const isRebuild = process.argv.includes("--rebuild");
+  if (isRebuild) {
+    console.log("既存の保存データから全HTMLページを再生成します...");
+    const files = (await readdir(ARTICLES_DATA_DIR)).filter(f => f.endsWith(".json") && f !== "archive-index.json");
+    const archivedArticles = [];
+    for (const f of files) {
+      const jsonPath = join(ARTICLES_DATA_DIR, f);
+      const articleRecord = JSON.parse(await readFile(jsonPath, "utf8"));
+      const htmlPath = join(ARTICLES_HTML_DIR, `${articleRecord.id}.html`);
+      const pageHtml = normalizeGeneratedText(renderArticleHtml(articleRecord));
+      await writeFile(htmlPath, pageHtml, "utf8");
+      archivedArticles.push(articleRecord);
+    }
+    archivedArticles.sort((a, b) => `${b.date} ${b.time || ""}`.localeCompare(`${a.date} ${a.time || ""}`));
+    const indexHtml = normalizeGeneratedText(renderArchiveIndexHtml(archivedArticles));
+    await writeFile(join(ARTICLES_HTML_DIR, "index.html"), indexHtml, "utf8");
+    console.log(`全 ${archivedArticles.length} 件のHTMLページ再生成が完了しました。`);
+    return;
+  }
 
   const [topicsRaw, muniUpdatesRaw] = await Promise.all([
     readFile(TOPICS_JSON, "utf8").catch(() => "{}"),
