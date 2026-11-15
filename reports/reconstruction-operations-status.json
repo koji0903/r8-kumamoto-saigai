@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-15T07:04:13.617Z",
+  "generatedAt": "2026-11-15T16:46:26.286Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-15T06:46:43.071Z",
-    "inputCount": 854,
-    "classifiedPageCount": 725,
-    "displayCandidateCount": 618,
+    "generatedAt": "2026-11-15T16:27:08.378Z",
+    "inputCount": 853,
+    "classifiedPageCount": 724,
+    "displayCandidateCount": 617,
     "deltaFromPrevious": {
-      "inputCount": 2,
-      "classifiedPageCount": 1,
+      "inputCount": -1,
+      "classifiedPageCount": -1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 20,
+      "ageHours": 30,
       "limitHours": 336
     }
   },
@@ -101,8 +101,8 @@
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 22,
-        "displayCandidates": 13,
+        "classified": 21,
+        "displayCandidates": 12,
         "fallback": true
       },
       "municipality_kashima": {
@@ -144,9 +144,9 @@
         "low": 45
       },
       "money": {
-        "total": 267,
+        "total": 266,
         "high": 56,
-        "medium": 73,
+        "medium": 72,
         "low": 138
       },
       "documents": {
@@ -188,7 +188,7 @@
     },
     "confidence": {
       "high": 272,
-      "medium": 346,
+      "medium": 345,
       "low": 107
     },
     "unclassifiedCount": 23,

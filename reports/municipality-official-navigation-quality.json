@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-15T06:46:43.071Z",
+  "generatedAt": "2026-11-15T16:27:08.378Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 854,
-  "displayCandidateCount": 618,
-  "classifiedPageCount": 725,
+  "inputCount": 853,
+  "displayCandidateCount": 617,
+  "classifiedPageCount": 724,
   "categoryReport": {
     "home": {
       "total": 190,
@@ -13,9 +13,9 @@
       "low": 45
     },
     "money": {
-      "total": 267,
+      "total": 266,
       "high": 56,
-      "medium": 73,
+      "medium": 72,
       "low": 138
     },
     "documents": {
@@ -127,8 +127,8 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 22,
-      "displayCandidates": 13,
+      "classified": 21,
+      "displayCandidates": 12,
       "fallback": true
     },
     "municipality_kashima": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 272,
-    "medium": 346,
+    "medium": 345,
     "low": 107
   },
   "unclassifiedCount": 23,
@@ -467,7 +467,7 @@
     },
     {
       "municipalityName": "山鹿市",
-      "title": "震度速報 11月15日 0時6分",
+      "title": "震度速報 11月15日 6時18分",
       "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -899,5 +899,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 724
+  "previousClassifiedPageCount": 725
 }

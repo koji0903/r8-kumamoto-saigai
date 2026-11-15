@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-15T07:03:50.303Z",
-  "officialCheckedAt": "11/15 16:03",
+  "retrievedAt": "2026-11-15T16:45:56.935Z",
+  "officialCheckedAt": "11/16 01:45",
   "siteTopics": [
     {
       "date": "2026-11-10",
@@ -96,20 +96,40 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "り災証明書・被災証明書の発行について - 税務課",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/125/3532.html",
+      "date": "2026-11-16",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "嘉島町",
+      "archiveId": "kashima-20261116-7b797b96",
+      "archiveUrl": "official-articles/kashima-20261116-7b797b96.html"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-11-15",
-      "time": "08:30",
+      "time": "20:00",
       "category": "その他",
       "municipality": "八代市",
       "archiveId": "yatsushiro-20261115-bad1de7e",
       "archiveUrl": "official-articles/yatsushiro-20261115-bad1de7e.html"
     },
     {
-      "title": "震度速報 11月15日 0時6分",
+      "title": "避難所について（11/15 17:00時点）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/17349.html",
+      "date": "2026-11-15",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261115-1d92d642",
+      "archiveUrl": "official-articles/uto-20261115-1d92d642.html"
+    },
+    {
+      "title": "震度速報 11月15日 6時18分",
       "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
       "date": "2026-11-15",
-      "time": "00:06",
+      "time": "06:18",
       "category": "避難・安全",
       "municipality": "山鹿市",
       "archiveId": "yamaga-20261115-ed5178f4",
@@ -146,16 +166,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/hikawa-20261113-8293cb1b.html"
     },
     {
-      "title": "避難所について（11/13 17:00時点）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/17349.html",
-      "date": "2026-11-13",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261113-1d92d642",
-      "archiveUrl": "official-articles/uto-20261113-1d92d642.html"
-    },
-    {
       "title": "2026年11月13日 令和8年熊本地震 関連情報 （11月13日17時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "date": "2026-11-13",
@@ -184,16 +194,6 @@ window.HOME_TOPICS = {
       "municipality": "菊陽町",
       "archiveId": "kikuyo-20261113-9638bc0f",
       "archiveUrl": "official-articles/kikuyo-20261113-9638bc0f.html"
-    },
-    {
-      "title": "令和8年熊本地震にかかる寄附金の受付について",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/1/6103.html",
-      "date": "2026-11-13",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "嘉島町",
-      "archiveId": "kashima-20261113-5c1ddd9e",
-      "archiveUrl": "official-articles/kashima-20261113-5c1ddd9e.html"
     },
     {
       "title": "令和8年熊本地震災害支援情報まとめ(11/13更新)",
