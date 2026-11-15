@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-15T16:45:56.935Z",
-  "officialCheckedAt": "11/16 01:45",
+  "retrievedAt": "2026-11-15T23:15:52.159Z",
+  "officialCheckedAt": "11/16 08:15",
   "siteTopics": [
     {
       "date": "2026-11-10",
@@ -126,16 +126,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/uto-20261115-1d92d642.html"
     },
     {
-      "title": "震度速報 11月15日 6時18分",
-      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-      "date": "2026-11-15",
-      "time": "06:18",
-      "category": "避難・安全",
-      "municipality": "山鹿市",
-      "archiveId": "yamaga-20261115-ed5178f4",
-      "archiveUrl": "official-articles/yamaga-20261115-ed5178f4.html"
-    },
-    {
       "title": "被災された方への入浴支援について（町・県事業）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/sumai/3907.html",
       "date": "2026-11-15",
@@ -224,6 +214,16 @@ window.HOME_TOPICS = {
       "municipality": "西原村",
       "archiveId": "nishihara-20261112-46f7e8f0",
       "archiveUrl": "official-articles/nishihara-20261112-46f7e8f0.html"
+    },
+    {
+      "title": "令和８年熊本地震における支援の状況について",
+      "url": "https://www.city.yamaga.kumamoto.jp/bousai/kiji0033160/index.html",
+      "date": "2026-11-11",
+      "time": "16:44",
+      "category": "支援・制度",
+      "municipality": "山鹿市",
+      "archiveId": "yamaga-20261111-d9b95a4a",
+      "archiveUrl": "official-articles/yamaga-20261111-d9b95a4a.html"
     },
     {
       "title": "幸橋架替工事に伴い歩道橋が終日全面通行止めになります。",

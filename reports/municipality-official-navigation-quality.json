@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-15T16:27:08.378Z",
+  "generatedAt": "2026-11-15T22:57:48.007Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 853,
+  "inputCount": 852,
   "displayCandidateCount": 617,
   "classifiedPageCount": 724,
   "categoryReport": {
@@ -285,7 +285,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036908/index.html"
     }
   ],
-  "outOfScopeCount": 67,
+  "outOfScopeCount": 66,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "disaster_preparedness": 10,
@@ -294,7 +294,7 @@
     "budget_notice": 3,
     "overall_guide": 5,
     "hq_meeting_material": 3,
-    "index_page": 14,
+    "index_page": 13,
     "mayor_message": 2,
     "event_notice": 1,
     "mutual_aid": 1,
@@ -425,7 +425,7 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
@@ -464,13 +464,6 @@
       "url": "https://www.city.yamaga.kumamoto.jp/kiji0033173/index.html",
       "ruleId": "disaster_preparedness",
       "ruleLabel": "平時の防災・今後への備え"
-    },
-    {
-      "municipalityName": "山鹿市",
-      "title": "震度速報 11月15日 6時18分",
-      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "菊池市",
@@ -899,5 +892,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 725
+  "previousClassifiedPageCount": 724
 }
