@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-14T22:35:58.324Z",
+  "generatedAt": "2026-11-15T06:46:43.071Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 852,
-  "displayCandidateCount": 617,
-  "classifiedPageCount": 724,
+  "inputCount": 854,
+  "displayCandidateCount": 618,
+  "classifiedPageCount": 725,
   "categoryReport": {
     "home": {
       "total": 190,
@@ -13,10 +13,10 @@
       "low": 45
     },
     "money": {
-      "total": 266,
+      "total": 267,
       "high": 56,
       "medium": 73,
-      "low": 137
+      "low": 138
     },
     "documents": {
       "total": 175,
@@ -25,9 +25,9 @@
       "low": 98
     },
     "health_care": {
-      "total": 55,
+      "total": 56,
       "high": 18,
-      "medium": 37,
+      "medium": 38,
       "low": 0
     },
     "family_education": {
@@ -87,8 +87,8 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 30,
-      "displayCandidates": 26,
+      "classified": 31,
+      "displayCandidates": 27,
       "fallback": true
     },
     "municipality_uki": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 272,
-    "medium": 345,
+    "medium": 346,
     "low": 107
   },
   "unclassifiedCount": 23,
@@ -285,7 +285,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036908/index.html"
     }
   ],
-  "outOfScopeCount": 66,
+  "outOfScopeCount": 67,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "disaster_preparedness": 10,
@@ -296,6 +296,7 @@
     "hq_meeting_material": 3,
     "index_page": 14,
     "mayor_message": 2,
+    "event_notice": 1,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 4,
@@ -417,13 +418,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
@@ -435,6 +429,20 @@
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "令和8年熊本地震復興祈願 鏡文化センター自主文化事業 秋川雅史～「千の風になって」20周年記念コンサート～",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00327382/index.html",
+      "ruleId": "event_notice",
+      "ruleLabel": "行事の開催・延期"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "山鹿市",
@@ -772,7 +780,7 @@
     "non_official_url": 1,
     "past_disaster_excluded": 1
   },
-  "warningCount": 24,
+  "warningCount": 23,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -835,14 +843,9 @@
       "count": 1
     },
     {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_uki",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 4
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -896,5 +899,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 723
+  "previousClassifiedPageCount": 724
 }

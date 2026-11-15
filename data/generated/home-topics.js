@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-14T22:55:50.499Z",
-  "officialCheckedAt": "11/15 07:55",
+  "retrievedAt": "2026-11-15T07:03:50.303Z",
+  "officialCheckedAt": "11/15 16:03",
   "siteTopics": [
     {
       "date": "2026-11-10",
@@ -96,6 +96,16 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-11-15",
+      "time": "08:30",
+      "category": "その他",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261115-bad1de7e",
+      "archiveUrl": "official-articles/yatsushiro-20261115-bad1de7e.html"
+    },
+    {
       "title": "震度速報 11月15日 0時6分",
       "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
       "date": "2026-11-15",
@@ -104,16 +114,6 @@ window.HOME_TOPICS = {
       "municipality": "山鹿市",
       "archiveId": "yamaga-20261115-ed5178f4",
       "archiveUrl": "official-articles/yamaga-20261115-ed5178f4.html"
-    },
-    {
-      "title": "国民保護法で規定された避難施設について",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326422/index.html",
-      "date": "2026-11-15",
-      "time": null,
-      "category": "避難・安全",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261115-0efcd828",
-      "archiveUrl": "official-articles/yatsushiro-20261115-0efcd828.html"
     },
     {
       "title": "被災された方への入浴支援について（町・県事業）",

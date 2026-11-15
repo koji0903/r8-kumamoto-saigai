@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-14T22:56:14.157Z",
+  "generatedAt": "2026-11-15T07:04:13.617Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-14T22:35:58.324Z",
-    "inputCount": 852,
-    "classifiedPageCount": 724,
-    "displayCandidateCount": 617,
+    "generatedAt": "2026-11-15T06:46:43.071Z",
+    "inputCount": 854,
+    "classifiedPageCount": 725,
+    "displayCandidateCount": 618,
     "deltaFromPrevious": {
-      "inputCount": 1,
+      "inputCount": 2,
       "classifiedPageCount": 1,
       "unclassifiedCount": 0
     }
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 12,
+      "ageHours": 20,
       "limitHours": 336
     }
   },
@@ -61,8 +61,8 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 30,
-        "displayCandidates": 26,
+        "classified": 31,
+        "displayCandidates": 27,
         "fallback": true
       },
       "municipality_uki": {
@@ -144,10 +144,10 @@
         "low": 45
       },
       "money": {
-        "total": 266,
+        "total": 267,
         "high": 56,
         "medium": 73,
-        "low": 137
+        "low": 138
       },
       "documents": {
         "total": 175,
@@ -156,9 +156,9 @@
         "low": 98
       },
       "health_care": {
-        "total": 55,
+        "total": 56,
         "high": 18,
-        "medium": 37,
+        "medium": 38,
         "low": 0
       },
       "family_education": {
@@ -188,7 +188,7 @@
     },
     "confidence": {
       "high": 272,
-      "medium": 345,
+      "medium": 346,
       "low": 107
     },
     "unclassifiedCount": 23,
@@ -325,14 +325,9 @@
       "count": 1
     },
     {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_uki",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 4
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
