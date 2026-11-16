@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T22:57:48.007Z",
+  "generatedAt": "2026-11-16T06:45:52.556Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 852,
@@ -37,9 +37,9 @@
       "low": 32
     },
     "work_business": {
-      "total": 76,
+      "total": 75,
       "high": 19,
-      "medium": 57,
+      "medium": 56,
       "low": 0
     },
     "agriculture_fishery": {
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 141,
-      "displayCandidates": 114,
+      "classified": 142,
+      "displayCandidates": 115,
       "fallback": true
     },
     "municipality_minamata": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 119,
-      "displayCandidates": 103,
+      "classified": 118,
+      "displayCandidates": 102,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -211,11 +211,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震復興祈願 鏡文化センター自主文化事業 新春初笑い！！三遊亭圓歌独演会",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00327379/index.html"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "国民保護法で規定された避難施設について",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326422/index.html"
     },
@@ -260,6 +255,11 @@
       "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/shokogyo/2652986"
     },
     {
+      "municipalityName": "宇城市",
+      "title": "2026年11月16日 【職員募集】被災市町任期付職員合同採用試験実施 宇城市（事務職）を募集します",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2655703"
+    },
+    {
       "municipalityName": "菊陽町",
       "title": "菊陽町熊本地震復旧・復興計画を策定しました",
       "url": "https://www.town.kikuyo.lg.jp/kiji0031204/index.html"
@@ -294,9 +294,9 @@
     "budget_notice": 3,
     "overall_guide": 5,
     "hq_meeting_material": 3,
+    "event_notice": 1,
     "index_page": 13,
     "mayor_message": 2,
-    "event_notice": 1,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 4,
@@ -418,6 +418,13 @@
     },
     {
       "municipalityName": "八代市",
+      "title": "令和8年熊本地震復興祈願 鏡文化センター自主文化事業 秋川雅史～「千の風になって」20周年記念コンサート～",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00327382/index.html",
+      "ruleId": "event_notice",
+      "ruleLabel": "行事の開催・延期"
+    },
+    {
+      "municipalityName": "八代市",
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
@@ -425,17 +432,10 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "令和8年熊本地震復興祈願 鏡文化センター自主文化事業 秋川雅史～「千の風になって」20周年記念コンサート～",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00327382/index.html",
-      "ruleId": "event_notice",
-      "ruleLabel": "行事の開催・延期"
     },
     {
       "municipalityName": "八代市",
@@ -516,13 +516,6 @@
     },
     {
       "municipalityName": "宇土市",
-      "title": "キーワード「補助金」の記事一覧",
-      "url": "https://www.city.uto.lg.jp/article/keyword/240.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "宇土市",
       "title": "キーワード「2026」の記事一覧",
       "url": "https://www.city.uto.lg.jp/article/keyword/29211.html",
       "ruleId": "index_page",
@@ -532,6 +525,13 @@
       "municipalityName": "宇土市",
       "title": "キーワード「2026」の記事一覧",
       "url": "https://www.city.uto.lg.jp/article/keyword/22145.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "宇土市",
+      "title": "キーワード「補助金」の記事一覧",
+      "url": "https://www.city.uto.lg.jp/article/keyword/240.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -600,14 +600,14 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月13日 【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
+      "title": "2026年11月16日 【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
       "ruleId": "press",
       "ruleLabel": "報道機関向け"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月13日 令和8年熊本地震 関連情報 （11月13日17時00分更新）",
+      "title": "2026年11月16日 令和8年熊本地震 関連情報 （11月16日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"

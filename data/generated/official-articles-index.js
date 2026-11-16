@@ -9,12 +9,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T05:15:39.834Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699": {
-    "id": "uki-20261113-7d9d4e13",
-    "htmlPath": "official-articles/uki-20261113-7d9d4e13.html",
-    "title": "2026年11月13日 令和8年熊本地震 関連情報 （11月13日8時00分更新）",
+    "id": "uki-20261116-7d9d4e13",
+    "htmlPath": "official-articles/uki-20261116-7d9d4e13.html",
+    "title": "2026年11月16日 令和8年熊本地震 関連情報 （11月16日8時00分更新）",
     "municipality": "宇城市",
-    "date": "2026-11-13",
-    "retrievedAt": "2026-11-13T02:15:55.555Z"
+    "date": "2026-11-16",
+    "retrievedAt": "2026-11-16T07:04:01.156Z"
   },
   "https://localcms.city.minamata.lg.jp/page4895.html?type=top": {
     "id": "minamata-20261019-81bdc420",
@@ -297,12 +297,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-05T11:29:29.079Z"
   },
   "https://www.city.yatsushiro.lg.jp/default.html": {
-    "id": "yatsushiro-20261115-bad1de7e",
-    "htmlPath": "official-articles/yatsushiro-20261115-bad1de7e.html",
+    "id": "yatsushiro-20261116-bad1de7e",
+    "htmlPath": "official-articles/yatsushiro-20261116-bad1de7e.html",
     "title": "熊本県八代市",
     "municipality": "八代市",
-    "date": "2026-11-15",
-    "retrievedAt": "2026-11-15T07:03:51.525Z"
+    "date": "2026-11-16",
+    "retrievedAt": "2026-11-16T07:03:57.568Z"
   },
   "https://www.city.kikuchi.lg.jp/article/view/1040/19566.html": {
     "id": "kikuchi-20261021-f5f1e2ae",
@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-11-13",
-    "retrievedAt": "2026-11-15T23:15:53.863Z"
+    "retrievedAt": "2026-11-16T07:04:04.398Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
@@ -1199,5 +1199,21 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "嘉島町",
     "date": "2026-11-16",
     "retrievedAt": "2026-11-15T16:45:59.278Z"
+  },
+  "https://www.city.amakusa.kumamoto.jp/bousai/kiji00314571/index.html": {
+    "id": "amakusa-20261116-e44860b4",
+    "htmlPath": "official-articles/amakusa-20261116-e44860b4.html",
+    "title": "令和８年熊本地震に伴う住宅の緊急修理支援制度",
+    "municipality": "天草市",
+    "date": "2026-11-16",
+    "retrievedAt": "2026-11-16T07:04:00.384Z"
+  },
+  "https://www.city.uto.lg.jp/d?q=f94ff591e8a39145ffa9ce98ad6a4751.pdf": {
+    "id": "uto-20261116-8f329943",
+    "htmlPath": "official-articles/uto-20261116-8f329943.html",
+    "title": "令和８年熊本地震 住家の緊急修理について(PDF 約773KB)",
+    "municipality": "宇土市",
+    "date": "2026-11-16",
+    "retrievedAt": "2026-11-16T07:04:02.483Z"
   }
 };

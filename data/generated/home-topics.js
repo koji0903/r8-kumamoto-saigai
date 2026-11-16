@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-15T23:15:52.159Z",
-  "officialCheckedAt": "11/16 08:15",
+  "retrievedAt": "2026-11-16T07:03:56.265Z",
+  "officialCheckedAt": "11/16 16:03",
   "siteTopics": [
     {
       "date": "2026-11-10",
@@ -96,6 +96,46 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-11-16",
+      "time": "15:00",
+      "category": "その他",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261116-bad1de7e",
+      "archiveUrl": "official-articles/yatsushiro-20261116-bad1de7e.html"
+    },
+    {
+      "title": "令和８年熊本地震に伴う住宅の緊急修理支援制度",
+      "url": "https://www.city.amakusa.kumamoto.jp/bousai/kiji00314571/index.html",
+      "date": "2026-11-16",
+      "time": "11:29",
+      "category": "住まい・証明",
+      "municipality": "天草市",
+      "archiveId": "amakusa-20261116-e44860b4",
+      "archiveUrl": "official-articles/amakusa-20261116-e44860b4.html"
+    },
+    {
+      "title": "2026年11月16日 令和8年熊本地震 関連情報 （11月16日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-11-16",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261116-7d9d4e13",
+      "archiveUrl": "official-articles/uki-20261116-7d9d4e13.html"
+    },
+    {
+      "title": "令和８年熊本地震 住家の緊急修理について(PDF 約773KB)",
+      "url": "https://www.city.uto.lg.jp/d?q=f94ff591e8a39145ffa9ce98ad6a4751.pdf",
+      "date": "2026-11-16",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261116-8f329943",
+      "archiveUrl": "official-articles/uto-20261116-8f329943.html"
+    },
+    {
       "title": "り災証明書・被災証明書の発行について - 税務課",
       "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/125/3532.html",
       "date": "2026-11-16",
@@ -104,26 +144,6 @@ window.HOME_TOPICS = {
       "municipality": "嘉島町",
       "archiveId": "kashima-20261116-7b797b96",
       "archiveUrl": "official-articles/kashima-20261116-7b797b96.html"
-    },
-    {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-11-15",
-      "time": "20:00",
-      "category": "その他",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261115-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261115-bad1de7e.html"
-    },
-    {
-      "title": "避難所について（11/15 17:00時点）",
-      "url": "https://www.city.uto.lg.jp/article/view/1302/17349.html",
-      "date": "2026-11-15",
-      "time": "17:00",
-      "category": "避難・安全",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261115-1d92d642",
-      "archiveUrl": "official-articles/uto-20261115-1d92d642.html"
     },
     {
       "title": "被災された方への入浴支援について（町・県事業）",
@@ -154,16 +174,6 @@ window.HOME_TOPICS = {
       "municipality": "氷川町",
       "archiveId": "hikawa-20261113-8293cb1b",
       "archiveUrl": "official-articles/hikawa-20261113-8293cb1b.html"
-    },
-    {
-      "title": "2026年11月13日 令和8年熊本地震 関連情報 （11月13日17時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-11-13",
-      "time": "17:00",
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261113-7d9d4e13",
-      "archiveUrl": "official-articles/uki-20261113-7d9d4e13.html"
     },
     {
       "title": "【令和９年２月２８日まで延長】介護サービス利用料の自己負担額の支払い猶予・免除【令和８年熊本地震】",
@@ -234,16 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "水俣市",
       "archiveId": "minamata-20261110-6ceba646",
       "archiveUrl": "official-articles/minamata-20261110-6ceba646.html"
-    },
-    {
-      "title": "2026年11月09日 罹災証明書等の発行について",
-      "url": "https://www.city.kikuchi.lg.jp/article/view/1341/19286.html",
-      "date": "2026-11-09",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "菊池市",
-      "archiveId": "kikuchi-20261109-8b2f2419",
-      "archiveUrl": "official-articles/kikuchi-20261109-8b2f2419.html"
     }
   ],
   "prefectureUpdates": [
