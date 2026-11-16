@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-16T07:04:21.406Z",
+  "generatedAt": "2026-11-16T20:01:14.858Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-16T06:45:52.556Z",
-    "inputCount": 852,
-    "classifiedPageCount": 724,
-    "displayCandidateCount": 617,
+    "generatedAt": "2026-11-16T19:42:01.251Z",
+    "inputCount": 855,
+    "classifiedPageCount": 725,
+    "displayCandidateCount": 618,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
-      "unclassifiedCount": 0
+      "inputCount": 3,
+      "classifiedPageCount": 1,
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 13,
       "limitHours": 336
     }
   },
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 118,
-        "displayCandidates": 102,
+        "classified": 119,
+        "displayCandidates": 103,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -86,8 +86,8 @@
         "fallback": true
       },
       "municipality_ozu": {
-        "classified": 0,
-        "displayCandidates": 0,
+        "classified": 1,
+        "displayCandidates": 1,
         "fallback": true
       },
       "municipality_kikuyo": {
@@ -111,13 +111,13 @@
         "fallback": true
       },
       "municipality_mashiki": {
-        "classified": 52,
-        "displayCandidates": 48,
+        "classified": 50,
+        "displayCandidates": 46,
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 33,
-        "displayCandidates": 28,
+        "classified": 34,
+        "displayCandidates": 29,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 190,
+        "total": 188,
         "high": 74,
-        "medium": 71,
+        "medium": 69,
         "low": 45
       },
       "money": {
-        "total": 266,
+        "total": 269,
         "high": 56,
-        "medium": 72,
-        "low": 138
+        "medium": 74,
+        "low": 139
       },
       "documents": {
-        "total": 175,
+        "total": 174,
         "high": 43,
         "medium": 34,
-        "low": 98
+        "low": 97
       },
       "health_care": {
         "total": 56,
@@ -187,12 +187,12 @@
       }
     },
     "confidence": {
-      "high": 272,
+      "high": 273,
       "medium": 345,
       "low": 107
     },
-    "unclassifiedCount": 23,
-    "excludedCount": 39,
+    "unclassifiedCount": 24,
+    "excludedCount": 40,
     "overrideCount": 2
   },
   "actions": [

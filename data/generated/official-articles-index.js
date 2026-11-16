@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-11-13",
-    "retrievedAt": "2026-11-16T07:04:04.398Z"
+    "retrievedAt": "2026-11-16T20:00:50.022Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
@@ -553,12 +553,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T05:15:41.938Z"
   },
   "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html": {
-    "id": "yatsushiro-20261113-95d8bc9e",
-    "htmlPath": "official-articles/yatsushiro-20261113-95d8bc9e.html",
+    "id": "yatsushiro-20261116-95d8bc9e",
+    "htmlPath": "official-articles/yatsushiro-20261116-95d8bc9e.html",
     "title": "小野市長から市民の皆さまへ",
     "municipality": "八代市",
-    "date": "2026-11-13",
-    "retrievedAt": "2026-11-13T11:33:21.942Z"
+    "date": "2026-11-16",
+    "retrievedAt": "2026-11-16T20:00:41.529Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036865/index.html": {
     "id": "hikawa-20261026-cf66038b",
@@ -1041,12 +1041,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-09T12:05:57.286Z"
   },
   "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23374.html": {
-    "id": "kamiamakusa-20261109-95a621df",
-    "htmlPath": "official-articles/kamiamakusa-20261109-95a621df.html",
+    "id": "kamiamakusa-20261116-95a621df",
+    "htmlPath": "official-articles/kamiamakusa-20261116-95a621df.html",
     "title": "令和8年熊本地震にかかる災害見舞金等の支給について",
     "municipality": "上天草市",
-    "date": "2026-11-09",
-    "retrievedAt": "2026-11-09T12:06:01.363Z"
+    "date": "2026-11-16",
+    "retrievedAt": "2026-11-16T20:00:46.611Z"
   },
   "https://www.town.mashiki.lg.jp/kiji0038259/index.html": {
     "id": "mashiki-20261102-eb8b1e4a",
@@ -1214,6 +1214,30 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "令和８年熊本地震 住家の緊急修理について(PDF 約773KB)",
     "municipality": "宇土市",
     "date": "2026-11-16",
-    "retrievedAt": "2026-11-16T07:04:02.483Z"
+    "retrievedAt": "2026-11-16T20:00:44.962Z"
+  },
+  "https://localcms.city.minamata.lg.jp/page4836.html?type=top": {
+    "id": "minamata-20261116-4e12ceba",
+    "htmlPath": "official-articles/minamata-20261116-4e12ceba.html",
+    "title": "令和８年熊本地震に伴う体育施設開館状況（武道館開館について 11/17～）",
+    "municipality": "水俣市",
+    "date": "2026-11-16",
+    "retrievedAt": "2026-11-16T20:00:43.288Z"
+  },
+  "https://www.town.mashiki.lg.jp/kiji0038129/index.html": {
+    "id": "mashiki-20261116-63690e84",
+    "htmlPath": "official-articles/mashiki-20261116-63690e84.html",
+    "title": "後期高齢者医療保険料の減免【令和８年熊本地震】",
+    "municipality": "益城町",
+    "date": "2026-11-16",
+    "retrievedAt": "2026-11-16T20:00:48.556Z"
+  },
+  "https://www.town.ozu.kumamoto.jp/page/28241.html": {
+    "id": "muni-20261110-ab22de24",
+    "htmlPath": "official-articles/muni-20261110-ab22de24.html",
+    "title": "令和8年熊本地震災害義援金の送金について",
+    "municipality": "大津町",
+    "date": "2026-11-10",
+    "retrievedAt": "2026-11-16T20:00:52.285Z"
   }
 };

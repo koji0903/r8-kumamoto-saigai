@@ -2,7 +2,7 @@
   "metadata": {
     "event": "令和8年熊本地震",
     "disasterDate": "2026-07-28",
-    "retrievedAt": "2026-11-16T06:45:52.556Z",
+    "retrievedAt": "2026-11-16T19:42:01.251Z",
     "scope": "各市町村の公式トップページ、確認済みの地震情報集約ページ、そのページに掲載された個別記事、および集約ページのページ送りを確認。令和8年7月28日以降の日付を公式ページ上で確認できた記事リンク",
     "caveat": "公式サイトの構造・公開方式・検索可否により網羅性は保証できません。未検出は情報が存在しないことを意味しません。内容と最新状況はリンク先の一次情報で確認してください。",
     "categoryNote": "分類は記事タイトルに基づく閲覧用の便宜的な分類です。"
@@ -11,7 +11,7 @@
     {
       "name": "熊本市",
       "officialUrl": "https://www.city.kumamoto.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -638,7 +638,7 @@
     {
       "name": "八代市",
       "officialUrl": "https://www.city.yatsushiro.lg.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -1853,13 +1853,6 @@
           "category": "その他"
         },
         {
-          "title": "令和8年熊本地震復興祈願 鏡文化センター自主文化事業 秋川雅史～「千の風になって」20周年記念コンサート～",
-          "url": "https://www.city.yatsushiro.lg.jp/kiji00327382/index.html",
-          "date": "2026-11-13",
-          "time": null,
-          "category": "その他"
-        },
-        {
           "title": "令和８年熊本地震で被災した井戸の応急修理について",
           "url": "https://www.city.yatsushiro.lg.jp/kiji00327047/index.html",
           "date": "2026-11-13",
@@ -1874,10 +1867,10 @@
           "category": "その他"
         },
         {
-          "title": "小野市長から市民の皆さまへ",
-          "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-          "date": "2026-11-13",
-          "time": "20:10",
+          "title": "令和8年熊本地震復興祈願 鏡文化センター自主文化事業 秋川雅史～「千の風になって」20周年記念コンサート～",
+          "url": "https://www.city.yatsushiro.lg.jp/kiji00327382/index.html",
+          "date": "2026-11-15",
+          "time": null,
           "category": "その他"
         },
         {
@@ -1919,7 +1912,14 @@
           "title": "熊本県八代市",
           "url": "https://www.city.yatsushiro.lg.jp/default.html",
           "date": "2026-11-16",
-          "time": "15:00",
+          "time": "13:40",
+          "category": "その他"
+        },
+        {
+          "title": "小野市長から市民の皆さまへ",
+          "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+          "date": "2026-11-16",
+          "time": "19:48",
           "category": "その他"
         }
       ],
@@ -2158,7 +2158,7 @@
     {
       "name": "水俣市",
       "officialUrl": "https://localcms.city.minamata.lg.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2167,6 +2167,13 @@
           "date": "2026-11-10",
           "time": null,
           "category": "避難・安全"
+        },
+        {
+          "title": "令和８年熊本地震に伴う体育施設開館状況（武道館開館について 11/17～）",
+          "url": "https://localcms.city.minamata.lg.jp/page4836.html?type=top",
+          "date": "2026-11-16",
+          "time": "16:27",
+          "category": "施設・学校"
         }
       ],
       "sourcesChecked": [
@@ -2211,9 +2218,10 @@
         "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=407",
         "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1247",
         "https://localcms.city.minamata.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=1210",
+        "https://localcms.city.minamata.lg.jp/page4836.html?type=top",
         "https://localcms.city.minamata.lg.jp/page3904.html?type=top"
       ],
-      "pagesFetched": 41,
+      "pagesFetched": 42,
       "errors": [
         "https://localcms.city.minamata.lg.jp/page257.html?type=top: 404 "
       ]
@@ -2221,7 +2229,7 @@
     {
       "name": "山鹿市",
       "officialUrl": "https://www.city.yamaga.kumamoto.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2418,7 +2426,7 @@
     {
       "name": "菊池市",
       "officialUrl": "https://www.city.kikuchi.lg.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -2552,7 +2560,7 @@
     {
       "name": "宇土市",
       "officialUrl": "https://www.city.uto.lg.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3177,7 +3185,7 @@
     {
       "name": "上天草市",
       "officialUrl": "https://www.city.kamiamakusa.kumamoto.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3414,7 +3422,7 @@
         {
           "title": "令和8年熊本地震にかかる災害見舞金等の支給について",
           "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23374.html",
-          "date": "2026-11-09",
+          "date": "2026-11-16",
           "time": null,
           "category": "その他"
         }
@@ -3481,7 +3489,7 @@
     {
       "name": "宇城市",
       "officialUrl": "https://www.city.uki.kumamoto.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -3595,6 +3603,13 @@
           "date": "2026-08-14",
           "time": null,
           "category": "住まい・証明"
+        },
+        {
+          "title": "保育園・認定こども園",
+          "url": "https://www.city.uki.kumamoto.jp/kosodate/hoikuen",
+          "date": "2026-08-14",
+          "time": null,
+          "category": "施設・学校"
         },
         {
           "title": "ウイングまつばせでの物資配布を8月19日(水曜日)午後6時で終了します",
@@ -3749,6 +3764,13 @@
           "date": "2026-08-31",
           "time": null,
           "category": "施設・学校"
+        },
+        {
+          "title": "災害による被災者のための無料入浴サービス提供事業を実施します",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2609706",
+          "date": "2026-09-05",
+          "time": null,
+          "category": "ごみ・生活"
         },
         {
           "title": "自衛隊による入浴支援を終了します",
@@ -3954,6 +3976,13 @@
           "category": "住まい・証明"
         },
         {
+          "title": "2026年10月07日 【職員募集】令和8年熊本地震に伴う宇城市任期付職員（事務職）を募集します",
+          "url": "https://www.city.uki.kumamoto.jp/gyousei/saiyo/2645544",
+          "date": "2026-10-07",
+          "time": null,
+          "category": "その他"
+        },
+        {
           "title": "2026年10月8日 熊本地震の影響によりマイナンバーカード関連手続きのLINE予約をしばらく休止いたします",
           "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/2646589",
           "date": "2026-10-08",
@@ -4038,6 +4067,13 @@
           "category": "支援・制度"
         },
         {
+          "title": "令和8年熊本地震義援金配分のお知らせ",
+          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2655239",
+          "date": "2026-10-21",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
           "title": "台風30号の接近に伴う避難所の開設について",
           "url": "https://www.city.uki.kumamoto.jp/toppage/important/2651637",
           "date": "2026-10-25",
@@ -4099,13 +4135,6 @@
           "date": "2026-10-27",
           "time": null,
           "category": "住まい・証明"
-        },
-        {
-          "title": "災害による被災者のための無料入浴サービス提供事業を実施します",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2609706",
-          "date": "2026-10-27",
-          "time": null,
-          "category": "ごみ・生活"
         },
         {
           "title": "宇城市地域支え合いセンターにご相談ください（令和8年熊本地震）",
@@ -4176,13 +4205,6 @@
           "date": "2026-11-02",
           "time": null,
           "category": "ごみ・生活"
-        },
-        {
-          "title": "保育園・認定こども園",
-          "url": "https://www.city.uki.kumamoto.jp/kosodate/hoikuen",
-          "date": "2026-11-02",
-          "time": null,
-          "category": "施設・学校"
         },
         {
           "title": "令和8年熊本地震に係る第2期建設型応急住宅の入居選定結果について",
@@ -4353,15 +4375,8 @@
           "category": "その他"
         },
         {
-          "title": "2026年11月16日 令和8年熊本地震義援金配分のお知らせ",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2655239",
-          "date": "2026-11-16",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
           "title": "2026年11月16日 【職員募集】被災市町任期付職員合同採用試験実施 宇城市（事務職）を募集します",
-          "url": "https://www.city.uki.kumamoto.jp/toppage/important/2655703",
+          "url": "https://www.city.uki.kumamoto.jp/gyousei/saiyo/2655703",
           "date": "2026-11-16",
           "time": null,
           "category": "その他"
@@ -4381,6 +4396,13 @@
           "category": "ごみ・生活"
         },
         {
+          "title": "2026年11月16日 令和8年熊本地震義援金配分のお知らせ",
+          "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/sonota_sumai/2655239",
+          "date": "2026-11-16",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
           "title": "2026年11月16日 令和8年熊本地震により被災した家屋等の解体・撤去について",
           "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2641256",
           "date": "2026-11-16",
@@ -4395,10 +4417,10 @@
           "category": "施設・学校"
         },
         {
-          "title": "2026年11月16日 令和8年熊本地震 関連情報 （11月16日8時00分更新）",
+          "title": "2026年11月16日 令和8年熊本地震 関連情報 （11月16日17時00分更新）",
           "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
           "date": "2026-11-16",
-          "time": "08:00",
+          "time": "17:00",
           "category": "その他"
         }
       ],
@@ -4447,6 +4469,7 @@
         "https://www.city.uki.kumamoto.jp/toppage/important/2612409",
         "https://www.city.uki.kumamoto.jp/kurashi/sumai/2634401",
         "https://www.city.uki.kumamoto.jp/toppage/important/2609744",
+        "https://www.city.uki.kumamoto.jp/gyousei/saiyo/2655703",
         "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/koyo/2652986",
         "https://www.city.uki.kumamoto.jp/kurashi/sumai/syouhi/2650579",
         "https://www.city.uki.kumamoto.jp/toppage/important/2620992",
@@ -4489,22 +4512,23 @@
         "https://www.city.uki.kumamoto.jp/toppage/important/2620169",
         "https://www.city.uki.kumamoto.jp/toppage/important/2655703",
         "https://www.city.uki.kumamoto.jp/toppage/furusato",
+        "https://www.city.uki.kumamoto.jp/toppage/important/2641041",
         "https://www.city.uki.kumamoto.jp/toppage/important/2635811",
         "https://www.city.uki.kumamoto.jp/toppage/important/2606682",
-        "https://www.city.uki.kumamoto.jp/toppage/important/2631028",
         "https://www.city.uki.kumamoto.jp/toppage/important/2620848",
         "https://www.city.uki.kumamoto.jp/toppage/important/2620459",
         "https://www.city.uki.kumamoto.jp/toppage/important/2609591",
         "https://www.city.uki.kumamoto.jp/toppage/important/2515854",
         "https://www.city.uki.kumamoto.jp/toppage/important/2609706",
-        "https://www.city.uki.kumamoto.jp/toppage/important/2616414",
+        "https://www.city.uki.kumamoto.jp/toppage/important/2578019",
         "https://www.city.uki.kumamoto.jp/toppage/important/2564357",
+        "https://www.city.uki.kumamoto.jp/toppage/important/2616414",
         "https://www.city.uki.kumamoto.jp/toppage/important/2614182",
         "https://www.city.uki.kumamoto.jp/toppage/important/2611655",
         "https://www.city.uki.kumamoto.jp/toppage/important/2611938",
         "https://www.city.uki.kumamoto.jp/toppage/important/2611778",
         "https://www.city.uki.kumamoto.jp/toppage/important/2610825",
-        "https://www.city.uki.kumamoto.jp/toppage/important/2578019",
+        "https://www.city.uki.kumamoto.jp/toppage/important/2631028",
         "https://www.city.uki.kumamoto.jp/toppage/important/2630892",
         "https://www.city.uki.kumamoto.jp/toppage/important/2630205",
         "https://www.city.uki.kumamoto.jp/toppage/important/2607719",
@@ -4514,10 +4538,9 @@
         "https://www.city.uki.kumamoto.jp/toppage/important/2651637",
         "https://www.city.uki.kumamoto.jp/toppage/important/2651507",
         "https://www.city.uki.kumamoto.jp/toppage/important/2647425",
-        "https://www.city.uki.kumamoto.jp/toppage/important/2645544",
-        "https://www.city.uki.kumamoto.jp/toppage/important/2641041"
+        "https://www.city.uki.kumamoto.jp/toppage/important/2645544"
       ],
-      "pagesFetched": 110,
+      "pagesFetched": 111,
       "errors": [
         "https://www.city.uki.kumamoto.jp/resource.php?e=7fa3b6f4efe074600e67be07dce09080e056c7d77f84c31c0f74824ca76ecd0fca2bdbc6c7f7757601134bade8ed13d2: HTMLではありません: application/pdf",
         "https://www.city.uki.kumamoto.jp/resource.php?e=b59cac1a91337a89d9596251e49815bd25660d8eb2268926b6b2067ce7488cd754f5b324860749b496c9cf380ff80a81: HTMLではありません: application/pdf",
@@ -4527,7 +4550,7 @@
     {
       "name": "天草市",
       "officialUrl": "https://www.city.amakusa.kumamoto.jp/default.html?site=1",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4735,7 +4758,7 @@
     {
       "name": "合志市",
       "officialUrl": "https://www.city.koshi.lg.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -4763,7 +4786,7 @@
     {
       "name": "美里町",
       "officialUrl": "https://www.town.kumamoto-misato.lg.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5019,9 +5042,17 @@
     {
       "name": "大津町",
       "officialUrl": "https://www.town.ozu.kumamoto.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
-      "status": "not-found-by-collector",
-      "updates": [],
+      "checkedAt": "2026-11-16T19:42:01.251Z",
+      "status": "confirmed",
+      "updates": [
+        {
+          "title": "令和8年熊本地震災害義援金の送金について",
+          "url": "https://www.town.ozu.kumamoto.jp/page/28241.html",
+          "date": "2026-11-10",
+          "time": null,
+          "category": "支援・制度"
+        }
+      ],
       "sourcesChecked": [
         "https://www.town.ozu.kumamoto.jp/",
         "https://www.town.ozu.kumamoto.jp/page/26598.html"
@@ -5034,7 +5065,7 @@
     {
       "name": "菊陽町",
       "officialUrl": "https://www.town.kikuyo.lg.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5308,7 +5339,7 @@
     {
       "name": "西原村",
       "officialUrl": "https://www.vill.nishihara.kumamoto.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5484,7 +5515,7 @@
     {
       "name": "御船町",
       "officialUrl": "https://www.town.mifune.kumamoto.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5702,7 +5733,7 @@
     {
       "name": "嘉島町",
       "officialUrl": "https://www.town.kumamoto-kashima.lg.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -5908,22 +5939,22 @@
     {
       "name": "益城町",
       "officialUrl": "https://www.town.mashiki.lg.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
-        {
-          "title": "潮井自然公園について",
-          "url": "https://www.town.mashiki.lg.jp/kiji0035566/index.html",
-          "date": "2026-07-30",
-          "time": null,
-          "category": "その他"
-        },
         {
           "title": "小中学校体育施設の貸出を停止しています",
           "url": "https://www.town.mashiki.lg.jp/kiji0038068/index.html",
           "date": "2026-07-30",
           "time": null,
           "category": "施設・学校"
+        },
+        {
+          "title": "潮井自然公園について",
+          "url": "https://www.town.mashiki.lg.jp/kiji0035566/index.html",
+          "date": "2026-08-03",
+          "time": null,
+          "category": "その他"
         },
         {
           "title": "令和８年熊本地震による漏水が発生した場合の上下水道料金減免",
@@ -5998,7 +6029,7 @@
         {
           "title": "令和８年熊本地震発生に伴う町児童福祉施設等の対応について（お知らせ）",
           "url": "https://www.town.mashiki.lg.jp/kiji0038062/index.html",
-          "date": "2026-08-17",
+          "date": "2026-08-14",
           "time": null,
           "category": "施設・学校"
         },
@@ -6101,6 +6132,13 @@
           "category": "その他"
         },
         {
+          "title": "特別児童扶養手当などの災害特例措置【令和８年熊本地震】",
+          "url": "https://www.town.mashiki.lg.jp/kiji0038189/index.html",
+          "date": "2026-10-02",
+          "time": null,
+          "category": "その他"
+        },
+        {
           "title": "自費解体・撤去に要する費用の償還について【令和８年熊本地震】",
           "url": "https://www.town.mashiki.lg.jp/kiji0038215/index.html",
           "date": "2026-10-02",
@@ -6115,17 +6153,10 @@
           "category": "避難・安全"
         },
         {
-          "title": "特別児童扶養手当などの災害特例措置【令和８年熊本地震】",
-          "url": "https://www.town.mashiki.lg.jp/kiji0038189/index.html",
-          "date": "2026-10-05",
-          "time": null,
-          "category": "その他"
-        },
-        {
           "title": "【令和８年熊本地震】認可保育施設利用に係る利用者負担額（保育料）の減免について",
           "url": "https://www.town.mashiki.lg.jp/kiji0038225/index.html",
           "date": "2026-10-06",
-          "time": "16:14",
+          "time": null,
           "category": "施設・学校"
         },
         {
@@ -6145,13 +6176,6 @@
         {
           "title": "令和８年度熊本地震の被災者への固定資産税の減免について",
           "url": "https://www.town.mashiki.lg.jp/kiji0038242/index.html",
-          "date": "2026-10-13",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "後期高齢者医療保険料の減免【令和８年熊本地震】",
-          "url": "https://www.town.mashiki.lg.jp/kiji0038129/index.html",
           "date": "2026-10-13",
           "time": null,
           "category": "その他"
@@ -6213,8 +6237,15 @@
           "category": "住まい・証明"
         },
         {
-          "title": "被災した家屋等の解体・撤去（公費解体）について【令和８年熊本地震】",
-          "url": "https://www.town.mashiki.lg.jp/kiji0038121/index.html",
+          "title": "令和８年熊本地震による被災農地の自力復旧補助金",
+          "url": "https://www.town.mashiki.lg.jp/kiji0038233/index.html",
+          "date": "2026-10-20",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "後期高齢者医療自己負担額の還付手続きについて【令和８年熊本地震】",
+          "url": "https://www.town.mashiki.lg.jp/kiji0038195/index.html",
           "date": "2026-10-23",
           "time": null,
           "category": "その他"
@@ -6227,29 +6258,8 @@
           "category": "ごみ・生活"
         },
         {
-          "title": "令和８年熊本地震による被災農地の自力復旧補助金",
-          "url": "https://www.town.mashiki.lg.jp/kiji0038233/index.html",
-          "date": "2026-10-23",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "後期高齢者医療自己負担額の還付手続きについて【令和８年熊本地震】",
-          "url": "https://www.town.mashiki.lg.jp/kiji0038195/index.html",
-          "date": "2026-10-26",
-          "time": null,
-          "category": "その他"
-        },
-        {
           "title": "【事業者向け】セーフティネット保証４号の認定について（令和８年熊本地震関連）",
           "url": "https://www.town.mashiki.lg.jp/kiji0038086/index.html",
-          "date": "2026-10-27",
-          "time": null,
-          "category": "その他"
-        },
-        {
-          "title": "国保・後期高齢者医療の自己負担額の支払い猶予・免除【令和８年熊本地震】",
-          "url": "https://www.town.mashiki.lg.jp/kiji0038122/index.html",
           "date": "2026-10-27",
           "time": null,
           "category": "その他"
@@ -6262,11 +6272,11 @@
           "category": "その他"
         },
         {
-          "title": "町営住宅の一時提供（２次募集）入居者決定について",
-          "url": "https://www.town.mashiki.lg.jp/kiji0038259/index.html",
+          "title": "小規模事業者持続化補助金に係る証明書の発行について（令和８年熊本地震による影響を受けた事業者向け）",
+          "url": "https://www.town.mashiki.lg.jp/kiji0038190/index.html",
           "date": "2026-11-02",
           "time": null,
-          "category": "住まい・証明"
+          "category": "その他"
         },
         {
           "title": "令和８年熊本地震義援金（県配分）の受け付けについて",
@@ -6274,13 +6284,6 @@
           "date": "2026-11-02",
           "time": null,
           "category": "支援・制度"
-        },
-        {
-          "title": "小規模事業者持続化補助金に係る証明書の発行について（令和８年熊本地震による影響を受けた事業者向け）",
-          "url": "https://www.town.mashiki.lg.jp/kiji0038190/index.html",
-          "date": "2026-11-05",
-          "time": null,
-          "category": "その他"
         },
         {
           "title": "不正アクセスなどからの個人情報漏えいについて不安に思ったら【消費者生活相談室】",
@@ -6294,6 +6297,20 @@
           "url": "https://www.town.mashiki.lg.jp/kiji0038159/index.html",
           "date": "2026-11-13",
           "time": "11:02",
+          "category": "その他"
+        },
+        {
+          "title": "後期高齢者医療保険料の減免【令和８年熊本地震】",
+          "url": "https://www.town.mashiki.lg.jp/kiji0038129/index.html",
+          "date": "2026-11-16",
+          "time": null,
+          "category": "その他"
+        },
+        {
+          "title": "国保・後期高齢者医療の自己負担額の支払い猶予・免除【令和８年熊本地震】",
+          "url": "https://www.town.mashiki.lg.jp/kiji0038122/index.html",
+          "date": "2026-11-16",
+          "time": null,
           "category": "その他"
         }
       ],
@@ -6352,9 +6369,8 @@
         "https://www.town.mashiki.lg.jp/kiji0038159/index.html",
         "https://www.town.mashiki.lg.jp/kiji0038190/index.html",
         "https://www.town.mashiki.lg.jp/kiji0038063/index.html",
-        "https://www.town.mashiki.lg.jp/kiji0038086/index.html",
+        "https://www.town.mashiki.lg.jp/kiji0038225/index.html",
         "https://www.town.mashiki.lg.jp/list01386.html",
-        "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/hpkijilistpagerhandler.ashx?c_id=3&class_id=1386&class_set_id=1&pg=2&kbn=newlist&top_id=0",
         "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/hpkijilistpagerhandler.ashx?c_id=3&class_id=1386&class_set_id=1&pg=2&kbn=kijilist&top_id=0",
         "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/HpKijiListPagerHandler.ashx?c_id=3&class_set_id=1&class_id=1386&kbn=kijilist&top_id=0&pg=3",
         "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/HpKijiListPagerHandler.ashx?c_id=3&class_set_id=1&class_id=1386&kbn=kijilist&top_id=0&pg=4",
@@ -6366,7 +6382,6 @@
         "https://www.town.mashiki.lg.jp/kiji0037475/index.html",
         "https://www.town.mashiki.lg.jp/bousai/list01014.html",
         "https://www.town.mashiki.lg.jp/list00305.html",
-        "https://www.town.mashiki.lg.jp/kiji0038225/index.html",
         "https://www.town.mashiki.lg.jp/kiji0038215/index.html",
         "https://www.town.mashiki.lg.jp/kiji0038273/index.html",
         "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=3&class_id=304",
@@ -6378,7 +6393,9 @@
         "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=557",
         "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=558",
         "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=559",
-        "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=560"
+        "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=560",
+        "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=561",
+        "https://www.town.mashiki.lg.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=571"
       ],
       "pagesFetched": 80,
       "errors": [
@@ -6388,7 +6405,7 @@
     {
       "name": "甲佐町",
       "officialUrl": "https://www.town.kosa.lg.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -6525,13 +6542,6 @@
           "category": "施設・学校"
         },
         {
-          "title": "令和8年熊本地震 営農再開支援事業要望調査の実施について",
-          "url": "https://www.town.kosa.lg.jp/q/aview/130/13824.html",
-          "date": "2026-10-02",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
           "title": "被災家屋等の公費解体について",
           "url": "https://www.town.kosa.lg.jp/q/aview/182/13632.html",
           "date": "2026-10-11",
@@ -6539,23 +6549,9 @@
           "category": "その他"
         },
         {
-          "title": "令和8年熊本地震にかかる各種相談について",
-          "url": "https://www.town.kosa.lg.jp/q/aview/51/13585.html",
-          "date": "2026-10-19",
-          "time": null,
-          "category": "支援・制度"
-        },
-        {
-          "title": "令和8年熊本地震に係る賃貸型応急住宅(みなし仮設住宅)のお知らせ",
-          "url": "https://www.town.kosa.lg.jp/q/aview/51/13559.html",
-          "date": "2026-10-19",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
-          "title": "被災者生活再建支援制度のご案内(令和8年熊本地震)",
-          "url": "https://www.town.kosa.lg.jp/q/aview/51/13627.html",
-          "date": "2026-10-19",
+          "title": "令和8年熊本地震 営農再開支援事業要望調査の実施について",
+          "url": "https://www.town.kosa.lg.jp/q/aview/130/13824.html",
+          "date": "2026-10-14",
           "time": null,
           "category": "支援・制度"
         },
@@ -6565,13 +6561,6 @@
           "date": "2026-10-22",
           "time": null,
           "category": "その他"
-        },
-        {
-          "title": "「令和8年熊本地震に伴う災害義援金」の配分のお知らせ",
-          "url": "https://www.town.kosa.lg.jp/q/aview/101/13894.html",
-          "date": "2026-10-22",
-          "time": null,
-          "category": "支援・制度"
         },
         {
           "title": "【甲佐町独自支援】緊急支援資金利子補給補助金について",
@@ -6588,13 +6577,6 @@
           "category": "その他"
         },
         {
-          "title": "り災証明書(2次調査)の発行申請受付について",
-          "url": "https://www.town.kosa.lg.jp/q/aview/101/13690.html",
-          "date": "2026-10-27",
-          "time": null,
-          "category": "住まい・証明"
-        },
-        {
           "title": "令和8年熊本地震により被災された方の水道料金の免除・減額につ...",
           "url": "https://www.town.kosa.lg.jp/q/aview/180/13759.html",
           "date": "2026-10-30",
@@ -6602,8 +6584,15 @@
           "category": "ライフライン"
         },
         {
+          "title": "り災証明書(2次調査)の発行申請受付について",
+          "url": "https://www.town.kosa.lg.jp/q/aview/51/13690.html",
+          "date": "2026-11-01",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
           "title": "災害ごみの仮置き場への持ち込みについて(令和8年11月1日更新)...",
-          "url": "https://www.town.kosa.lg.jp/q/aview/101/13515.html",
+          "url": "https://www.town.kosa.lg.jp/q/aview/51/13515.html",
           "date": "2026-11-01",
           "time": null,
           "category": "ごみ・生活"
@@ -6616,16 +6605,37 @@
           "category": "避難・安全"
         },
         {
-          "title": "災害ボランティアセンターの閉所と今後のお知らせ(甲佐町社会福...",
-          "url": "https://www.town.kosa.lg.jp/q/aview/51/13538.html",
-          "date": "2026-11-09",
+          "title": "「令和8年熊本地震に伴う災害義援金」の配分のお知らせ",
+          "url": "https://www.town.kosa.lg.jp/q/aview/51/13894.html",
+          "date": "2026-11-01",
           "time": null,
           "category": "支援・制度"
         },
         {
-          "title": "令和8年熊本地震義援金の受付について",
-          "url": "https://www.town.kosa.lg.jp/q/aview/168/13579.html",
-          "date": "2026-11-10",
+          "title": "令和8年熊本地震にかかる各種相談について",
+          "url": "https://www.town.kosa.lg.jp/q/aview/51/13585.html",
+          "date": "2026-11-01",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
+          "title": "令和8年熊本地震に係る賃貸型応急住宅(みなし仮設住宅)のお知らせ",
+          "url": "https://www.town.kosa.lg.jp/q/aview/51/13559.html",
+          "date": "2026-11-01",
+          "time": null,
+          "category": "住まい・証明"
+        },
+        {
+          "title": "被災者生活再建支援制度のご案内(令和8年熊本地震)",
+          "url": "https://www.town.kosa.lg.jp/q/aview/51/13627.html",
+          "date": "2026-11-01",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
+          "title": "災害ボランティアセンターの閉所と今後のお知らせ(甲佐町社会福...",
+          "url": "https://www.town.kosa.lg.jp/q/aview/51/13538.html",
+          "date": "2026-11-09",
           "time": null,
           "category": "支援・制度"
         },
@@ -6635,6 +6645,20 @@
           "date": "2026-11-10",
           "time": null,
           "category": "住まい・証明"
+        },
+        {
+          "title": "令和8年熊本地震義援金の受付について",
+          "url": "https://www.town.kosa.lg.jp/q/aview/168/13579.html",
+          "date": "2026-11-10",
+          "time": null,
+          "category": "支援・制度"
+        },
+        {
+          "title": "令和８年熊本地震関連 各種相談窓口について",
+          "url": "https://www.town.kosa.lg.jp/q/aview/51/14017.html",
+          "date": "2026-11-12",
+          "time": null,
+          "category": "支援・制度"
         },
         {
           "title": "令和8年熊本地震災害支援情報まとめ(11/13更新)",
@@ -6716,16 +6740,16 @@
         "https://www.town.kosa.lg.jp/q/aview/102/425.html",
         "https://www.town.kosa.lg.jp/q/aview/102/233.html",
         "https://www.town.kosa.lg.jp/q/aview/1/13531.html",
+        "https://www.town.kosa.lg.jp/q/aview/51/14017.html",
         "https://www.town.kosa.lg.jp/q/aview/51/13690.html",
         "https://www.town.kosa.lg.jp/q/aview/51/13515.html",
-        "https://www.town.kosa.lg.jp/q/aview/51/13894.html",
         "https://www.town.kosa.lg.jp/q/aview/180/404.html",
         "https://www.town.kosa.lg.jp/q/aview/101/13515.html",
         "https://www.town.kosa.lg.jp/q/aview/55/12433.html",
         "https://www.town.kosa.lg.jp/q/aview/55/13547.html",
         "https://www.town.kosa.lg.jp/q/aview/101/13894.html",
         "https://www.town.kosa.lg.jp/q/aview/182/13523.html",
-        "https://www.town.kosa.lg.jp/q/aview/51/13579.html",
+        "https://www.town.kosa.lg.jp/q/aview/51/13894.html",
         "https://www.town.kosa.lg.jp/q/aview/168/13564.html",
         "https://www.town.kosa.lg.jp/q/aview/129/13593.html",
         "https://www.town.kosa.lg.jp/q/aview/1/13894.html",
@@ -6751,7 +6775,7 @@
     {
       "name": "氷川町",
       "officialUrl": "https://www.town.hikawa.kumamoto.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -7467,7 +7491,7 @@
     {
       "name": "芦北町",
       "officialUrl": "https://www.town.ashikita.lg.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -7531,7 +7555,7 @@
     {
       "name": "津奈木町",
       "officialUrl": "https://www.town.tsunagi.lg.jp/",
-      "checkedAt": "2026-11-16T06:45:52.556Z",
+      "checkedAt": "2026-11-16T19:42:01.251Z",
       "status": "confirmed",
       "updates": [
         {
@@ -7563,18 +7587,18 @@
           "category": "その他"
         },
         {
-          "title": "広報つなぎ／公民館報",
-          "url": "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=615",
-          "date": "2026-10-01",
-          "time": null,
-          "category": "その他"
-        },
-        {
           "title": "小・中学校",
           "url": "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=562",
           "date": "2026-10-19",
           "time": null,
           "category": "施設・学校"
+        },
+        {
+          "title": "広報つなぎ／公民館報",
+          "url": "https://www.town.tsunagi.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=615",
+          "date": "2026-11-02",
+          "time": null,
+          "category": "その他"
         },
         {
           "title": "令和8年熊本地震被災者生活再建相談会が実施されます",
