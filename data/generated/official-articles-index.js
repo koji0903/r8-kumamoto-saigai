@@ -1,20 +1,20 @@
 // 生成物・直接編集しない。生成: node tools/archive-official-articles.mjs
 window.OFFICIAL_ARTICLES_INDEX = {
   "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html": {
-    "id": "yatsushiro-20261026-ad77f47a",
-    "htmlPath": "official-articles/yatsushiro-20261026-ad77f47a.html",
+    "id": "yatsushiro-20261117-ad77f47a",
+    "htmlPath": "official-articles/yatsushiro-20261117-ad77f47a.html",
     "title": "令和8年熊本地震 関連情報",
     "municipality": "八代市",
-    "date": "2026-10-26",
-    "retrievedAt": "2026-10-26T05:15:39.834Z"
+    "date": "2026-11-17",
+    "retrievedAt": "2026-11-17T04:17:27.993Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699": {
-    "id": "uki-20261116-7d9d4e13",
-    "htmlPath": "official-articles/uki-20261116-7d9d4e13.html",
-    "title": "2026年11月16日 令和8年熊本地震 関連情報 （11月16日8時00分更新）",
+    "id": "uki-20261117-7d9d4e13",
+    "htmlPath": "official-articles/uki-20261117-7d9d4e13.html",
+    "title": "2026年11月17日 令和8年熊本地震 関連情報 （11月17日11時00分更新）",
     "municipality": "宇城市",
-    "date": "2026-11-16",
-    "retrievedAt": "2026-11-16T07:04:01.156Z"
+    "date": "2026-11-17",
+    "retrievedAt": "2026-11-17T04:17:26.789Z"
   },
   "https://localcms.city.minamata.lg.jp/page4895.html?type=top": {
     "id": "minamata-20261019-81bdc420",
@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-11-13",
-    "retrievedAt": "2026-11-16T20:00:50.022Z"
+    "retrievedAt": "2026-11-17T04:17:35.092Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
@@ -889,12 +889,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-02T19:52:37.159Z"
   },
   "https://www.city.uto.lg.jp/article/view/1302/17349.html": {
-    "id": "uto-20261115-1d92d642",
-    "htmlPath": "official-articles/uto-20261115-1d92d642.html",
-    "title": "避難所について（11/15 17:00時点）",
+    "id": "uto-20261116-1d92d642",
+    "htmlPath": "official-articles/uto-20261116-1d92d642.html",
+    "title": "避難所について（11/16 17:00時点）",
     "municipality": "宇土市",
-    "date": "2026-11-15",
-    "retrievedAt": "2026-11-15T16:46:01.525Z"
+    "date": "2026-11-16",
+    "retrievedAt": "2026-11-17T04:17:31.638Z"
   },
   "https://www.vill.nishihara.kumamoto.jp/kiji0032045/index.html": {
     "id": "nishihara-20261105-16aeb359",
@@ -1233,11 +1233,19 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-16T20:00:48.556Z"
   },
   "https://www.town.ozu.kumamoto.jp/page/28241.html": {
-    "id": "muni-20261110-ab22de24",
-    "htmlPath": "official-articles/muni-20261110-ab22de24.html",
+    "id": "muni-20261116-ab22de24",
+    "htmlPath": "official-articles/muni-20261116-ab22de24.html",
     "title": "令和8年熊本地震災害義援金の送金について",
     "municipality": "大津町",
-    "date": "2026-11-10",
-    "retrievedAt": "2026-11-16T20:00:52.285Z"
+    "date": "2026-11-16",
+    "retrievedAt": "2026-11-17T04:17:33.596Z"
+  },
+  "https://www.town.mashiki.lg.jp/kiji0038065/index.html": {
+    "id": "mashiki-20261117-355a2c07",
+    "htmlPath": "official-articles/mashiki-20261117-355a2c07.html",
+    "title": "【１１月３０日受付終了】令和８年熊本地震に伴う被災証明書（住家以外）の発行について",
+    "municipality": "益城町",
+    "date": "2026-11-17",
+    "retrievedAt": "2026-11-17T04:17:29.937Z"
   }
 };

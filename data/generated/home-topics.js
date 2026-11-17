@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-16T20:00:38.891Z",
-  "officialCheckedAt": "11/17 05:00",
+  "retrievedAt": "2026-11-17T04:17:24.146Z",
+  "officialCheckedAt": "11/17 13:17",
   "siteTopics": [
     {
       "date": "2026-11-17",
@@ -96,24 +96,44 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "date": "2026-11-16",
-      "time": "19:48",
-      "category": "その他",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261116-95d8bc9e",
-      "archiveUrl": "official-articles/yatsushiro-20261116-95d8bc9e.html"
-    },
-    {
-      "title": "2026年11月16日 令和8年熊本地震 関連情報 （11月16日17時00分更新）",
+      "title": "2026年11月17日 令和8年熊本地震 関連情報 （11月17日11時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-11-16",
-      "time": "17:00",
+      "date": "2026-11-17",
+      "time": "11:00",
       "category": "その他",
       "municipality": "宇城市",
-      "archiveId": "uki-20261116-7d9d4e13",
-      "archiveUrl": "official-articles/uki-20261116-7d9d4e13.html"
+      "archiveId": "uki-20261117-7d9d4e13",
+      "archiveUrl": "official-articles/uki-20261117-7d9d4e13.html"
+    },
+    {
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "date": "2026-11-17",
+      "time": "10:56",
+      "category": "その他",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261117-ad77f47a",
+      "archiveUrl": "official-articles/yatsushiro-20261117-ad77f47a.html"
+    },
+    {
+      "title": "【１１月３０日受付終了】令和８年熊本地震に伴う被災証明書（住家以外）の発行について",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038065/index.html",
+      "date": "2026-11-17",
+      "time": "10:11",
+      "category": "住まい・証明",
+      "municipality": "益城町",
+      "archiveId": "mashiki-20261117-355a2c07",
+      "archiveUrl": "official-articles/mashiki-20261117-355a2c07.html"
+    },
+    {
+      "title": "避難所について（11/16 17:00時点）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/17349.html",
+      "date": "2026-11-16",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261116-1d92d642",
+      "archiveUrl": "official-articles/uto-20261116-1d92d642.html"
     },
     {
       "title": "令和８年熊本地震に伴う体育施設開館状況（武道館開館について 11/17～）",
@@ -136,16 +156,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/amakusa-20261116-e44860b4.html"
     },
     {
-      "title": "令和８年熊本地震 住家の緊急修理について(PDF 約773KB)",
-      "url": "https://www.city.uto.lg.jp/d?q=f94ff591e8a39145ffa9ce98ad6a4751.pdf",
-      "date": "2026-11-16",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261116-8f329943",
-      "archiveUrl": "official-articles/uto-20261116-8f329943.html"
-    },
-    {
       "title": "令和8年熊本地震にかかる災害見舞金等の支給について",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23374.html",
       "date": "2026-11-16",
@@ -156,6 +166,16 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/kamiamakusa-20261116-95a621df.html"
     },
     {
+      "title": "令和8年熊本地震災害義援金の送金について",
+      "url": "https://www.town.ozu.kumamoto.jp/page/28241.html",
+      "date": "2026-11-16",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "大津町",
+      "archiveId": "muni-20261116-ab22de24",
+      "archiveUrl": "official-articles/muni-20261116-ab22de24.html"
+    },
+    {
       "title": "り災証明書・被災証明書の発行について - 税務課",
       "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/125/3532.html",
       "date": "2026-11-16",
@@ -164,16 +184,6 @@ window.HOME_TOPICS = {
       "municipality": "嘉島町",
       "archiveId": "kashima-20261116-7b797b96",
       "archiveUrl": "official-articles/kashima-20261116-7b797b96.html"
-    },
-    {
-      "title": "後期高齢者医療保険料の減免【令和８年熊本地震】",
-      "url": "https://www.town.mashiki.lg.jp/kiji0038129/index.html",
-      "date": "2026-11-16",
-      "time": null,
-      "category": "その他",
-      "municipality": "益城町",
-      "archiveId": "mashiki-20261116-63690e84",
-      "archiveUrl": "official-articles/mashiki-20261116-63690e84.html"
     },
     {
       "title": "被災された方への入浴支援について（町・県事業）",
@@ -234,16 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "津奈木町",
       "archiveId": "tsunagi-20261113-8968f58d",
       "archiveUrl": "official-articles/tsunagi-20261113-8968f58d.html"
-    },
-    {
-      "title": "西原村地域包括支援センター外部委託にかかる公募について",
-      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032057/index.html",
-      "date": "2026-11-12",
-      "time": "17:46",
-      "category": "支援・制度",
-      "municipality": "西原村",
-      "archiveId": "nishihara-20261112-46f7e8f0",
-      "archiveUrl": "official-articles/nishihara-20261112-46f7e8f0.html"
     }
   ],
   "prefectureUpdates": [

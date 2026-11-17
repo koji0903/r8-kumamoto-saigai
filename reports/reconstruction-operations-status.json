@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-16T20:01:14.858Z",
+  "generatedAt": "2026-11-17T04:17:51.517Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-16T19:42:01.251Z",
-    "inputCount": 855,
-    "classifiedPageCount": 725,
-    "displayCandidateCount": 618,
+    "generatedAt": "2026-11-17T03:59:33.667Z",
+    "inputCount": 853,
+    "classifiedPageCount": 723,
+    "displayCandidateCount": 613,
     "deltaFromPrevious": {
-      "inputCount": 3,
-      "classifiedPageCount": 1,
-      "unclassifiedCount": 1
+      "inputCount": -2,
+      "classifiedPageCount": -2,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 13,
+      "ageHours": 21,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 142,
-        "displayCandidates": 115,
+        "classified": 140,
+        "displayCandidates": 110,
         "fallback": true
       },
       "municipality_minamata": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 119,
-        "displayCandidates": 103,
+        "classified": 118,
+        "displayCandidates": 102,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -111,8 +111,8 @@
         "fallback": true
       },
       "municipality_mashiki": {
-        "classified": 50,
-        "displayCandidates": 46,
+        "classified": 51,
+        "displayCandidates": 47,
         "fallback": true
       },
       "municipality_kosa": {
@@ -138,10 +138,10 @@
     },
     "categoryReport": {
       "home": {
-        "total": 188,
+        "total": 186,
         "high": 74,
-        "medium": 69,
-        "low": 45
+        "medium": 68,
+        "low": 44
       },
       "money": {
         "total": 269,
@@ -150,22 +150,22 @@
         "low": 139
       },
       "documents": {
-        "total": 174,
+        "total": 172,
         "high": 43,
-        "medium": 34,
-        "low": 97
+        "medium": 33,
+        "low": 96
       },
       "health_care": {
-        "total": 56,
+        "total": 55,
         "high": 18,
-        "medium": 38,
+        "medium": 37,
         "low": 0
       },
       "family_education": {
-        "total": 76,
-        "high": 13,
+        "total": 78,
+        "high": 12,
         "medium": 31,
-        "low": 32
+        "low": 35
       },
       "work_business": {
         "total": 75,
@@ -180,16 +180,16 @@
         "low": 0
       },
       "daily_life": {
-        "total": 206,
-        "high": 57,
+        "total": 205,
+        "high": 56,
         "medium": 147,
         "low": 2
       }
     },
     "confidence": {
-      "high": 273,
-      "medium": 345,
-      "low": 107
+      "high": 271,
+      "medium": 342,
+      "low": 110
     },
     "unclassifiedCount": 24,
     "excludedCount": 40,
@@ -282,7 +282,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 3
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
