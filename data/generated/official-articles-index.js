@@ -470,7 +470,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "ごみ・生活・環境・ペット",
     "municipality": "津奈木町",
     "date": "2026-11-13",
-    "retrievedAt": "2026-11-18T01:19:00.869Z"
+    "retrievedAt": "2026-11-18T12:13:53.287Z"
   },
   "https://www.town.kikuyo.lg.jp/bousai/kiji0035802/index.html": {
     "id": "kikuyo-20261019-8c2e5a67",
@@ -553,12 +553,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T05:15:41.938Z"
   },
   "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html": {
-    "id": "yatsushiro-20261116-95d8bc9e",
-    "htmlPath": "official-articles/yatsushiro-20261116-95d8bc9e.html",
+    "id": "yatsushiro-20261118-95d8bc9e",
+    "htmlPath": "official-articles/yatsushiro-20261118-95d8bc9e.html",
     "title": "小野市長から市民の皆さまへ",
     "municipality": "八代市",
-    "date": "2026-11-16",
-    "retrievedAt": "2026-11-16T20:00:41.529Z"
+    "date": "2026-11-18",
+    "retrievedAt": "2026-11-18T12:13:39.578Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036865/index.html": {
     "id": "hikawa-20261026-cf66038b",
@@ -1081,12 +1081,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-10T07:46:53.974Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036904/index.html": {
-    "id": "hikawa-20261110-fe625f57",
-    "htmlPath": "official-articles/hikawa-20261110-fe625f57.html",
-    "title": "栫・下宮・法道寺・南鹿野・北川仮設団地（建設型応急住宅）の入居者の募集について",
+    "id": "hikawa-20261118-fe625f57",
+    "htmlPath": "official-articles/hikawa-20261118-fe625f57.html",
+    "title": "【追加募集：鏡わかあゆ・立石・高野道北・高野道南・博物館ネットワークセンター】建設型応急住宅の入居者の募集について",
     "municipality": "氷川町",
-    "date": "2026-11-10",
-    "retrievedAt": "2026-11-10T07:46:56.237Z"
+    "date": "2026-11-18",
+    "retrievedAt": "2026-11-18T12:13:41.560Z"
   },
   "https://www.town.kumamoto-kashima.lg.jp/q/aview/124/6050.html": {
     "id": "kashima-20261105-40d2e7db",
@@ -1270,6 +1270,46 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "【R8.11.17時点】全面通行止め一覧(位置図、写真)(PDF 約8MB)",
     "municipality": "上天草市",
     "date": "2026-11-17",
-    "retrievedAt": "2026-11-18T01:18:59.328Z"
+    "retrievedAt": "2026-11-18T12:13:51.582Z"
+  },
+  "https://www.town.mifune.kumamoto.jp/page7562.html?type=top": {
+    "id": "mifune-20261118-835921c4",
+    "htmlPath": "official-articles/mifune-20261118-835921c4.html",
+    "title": "九州中央自動車道（小池高山IC～山都通潤橋IC）夜間通行止めのお知らせ",
+    "municipality": "御船町",
+    "date": "2026-11-18",
+    "retrievedAt": "2026-11-18T12:13:43.442Z"
+  },
+  "https://www.city.kumamoto.jp/kiji00373712/index.html": {
+    "id": "kumamoto-20261118-124a5c0d",
+    "htmlPath": "official-articles/kumamoto-20261118-124a5c0d.html",
+    "title": "令和8年熊本地震 心の復興事業",
+    "municipality": "熊本市",
+    "date": "2026-11-18",
+    "retrievedAt": "2026-11-18T12:13:45.326Z"
+  },
+  "https://www.city.uto.lg.jp/article/view/1018/17389.html": {
+    "id": "uto-20261118-49fe2ca9",
+    "htmlPath": "official-articles/uto-20261118-49fe2ca9.html",
+    "title": "令和８年熊本地震義援金の配分について",
+    "municipality": "宇土市",
+    "date": "2026-11-18",
+    "retrievedAt": "2026-11-18T12:13:47.165Z"
+  },
+  "https://www.city.amakusa.kumamoto.jp/kiji00314806/index.html": {
+    "id": "amakusa-20261118-273d750d",
+    "htmlPath": "official-articles/amakusa-20261118-273d750d.html",
+    "title": "断水を回避するため、さらなる節水にご協力を",
+    "municipality": "天草市",
+    "date": "2026-11-18",
+    "retrievedAt": "2026-11-18T12:13:48.753Z"
+  },
+  "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/3496.html": {
+    "id": "kashima-20261118-23992d32",
+    "htmlPath": "official-articles/kashima-20261118-23992d32.html",
+    "title": "令和8年熊本地震に伴う町の施設の開館情報について【11月18日現在】 - 重要なお知らせ",
+    "municipality": "嘉島町",
+    "date": "2026-11-18",
+    "retrievedAt": "2026-11-18T12:13:50.674Z"
   }
 };

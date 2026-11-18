@@ -1,12 +1,12 @@
 # 暮らしの再建 運用ステータス
 
 - 状態: **ACTION_REQUIRED**
-- 生成: 2026-11-18T01:19:20.338Z
+- 生成: 2026-11-18T12:14:10.081Z
 - sitePhase: **emergency**
-- 収集: 869件 / 分類 737件 / 表示候補 627件
+- 収集: 870件 / 分類 738件 / 表示候補 629件
 - fallback: 21/21
 - 未分類: 25件
-- low confidence: 110件
+- low confidence: 109件
 - manual override: 2件
 - 鮮度（公式ナビ）: fresh
 - 鮮度（厳密制度）: fresh
