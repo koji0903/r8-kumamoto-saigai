@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-11-18T20:41:04.494Z",
+  "generatedAt": "2026-11-19T02:39:41.950Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 878,
+  "inputCount": 881,
   "displayCandidateCount": 630,
-  "classifiedPageCount": 740,
+  "classifiedPageCount": 741,
   "categoryReport": {
     "home": {
-      "total": 189,
+      "total": 188,
       "high": 74,
-      "medium": 70,
+      "medium": 69,
       "low": 45
     },
     "money": {
-      "total": 273,
-      "high": 56,
+      "total": 274,
+      "high": 57,
       "medium": 76,
       "low": 141
     },
     "documents": {
-      "total": 173,
+      "total": 174,
       "high": 44,
-      "medium": 32,
+      "medium": 33,
       "low": 97
     },
     "health_care": {
@@ -31,9 +31,9 @@
       "low": 0
     },
     "family_education": {
-      "total": 77,
+      "total": 76,
       "high": 12,
-      "medium": 31,
+      "medium": 30,
       "low": 34
     },
     "work_business": {
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 218,
-      "high": 60,
+      "total": 219,
+      "high": 61,
       "medium": 156,
       "low": 2
     }
@@ -63,7 +63,7 @@
     },
     "municipality_yatsushiro": {
       "classified": 143,
-      "displayCandidates": 112,
+      "displayCandidates": 111,
       "fallback": true
     },
     "municipality_minamata": {
@@ -87,8 +87,8 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 35,
-      "displayCandidates": 31,
+      "classified": 36,
+      "displayCandidates": 32,
       "fallback": true
     },
     "municipality_uki": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 278,
-    "medium": 352,
-    "low": 110
+    "high": 280,
+    "medium": 350,
+    "low": 111
   },
   "unclassifiedCount": 26,
   "unclassifiedItems": [
@@ -309,8 +309,8 @@
     "budget_notice": 3,
     "hq_meeting_material": 3,
     "overall_guide": 5,
-    "index_page": 19,
     "mayor_message": 2,
+    "index_page": 19,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 4,
@@ -432,13 +432,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
@@ -448,6 +441,13 @@
       "municipalityName": "八代市",
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
     },
@@ -621,7 +621,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月18日 令和8年熊本地震 関連情報 （11月18日8時00分更新）",
+      "title": "2026年11月19日 令和8年熊本地震 関連情報 （11月19日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -823,10 +823,10 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 40,
+  "excludedCount": 42,
   "excludedByType": {
     "duplicate_url": 37,
-    "non_official_url": 2,
+    "non_official_url": 4,
     "past_disaster_excluded": 1
   },
   "warningCount": 23,
@@ -849,7 +849,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 5
+      "count": 6
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -934,7 +934,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 13
+      "count": 12
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -948,5 +948,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 738
+  "previousClassifiedPageCount": 740
 }

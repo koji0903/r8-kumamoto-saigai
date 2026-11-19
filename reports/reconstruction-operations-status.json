@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-18T21:00:45.045Z",
+  "generatedAt": "2026-11-19T03:05:59.101Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-18T20:41:04.494Z",
-    "inputCount": 878,
-    "classifiedPageCount": 740,
+    "generatedAt": "2026-11-19T02:39:41.950Z",
+    "inputCount": 881,
+    "classifiedPageCount": 741,
     "displayCandidateCount": 630,
     "deltaFromPrevious": {
-      "inputCount": 8,
-      "classifiedPageCount": 2,
-      "unclassifiedCount": 1
+      "inputCount": 3,
+      "classifiedPageCount": 1,
+      "unclassifiedCount": 0
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 9,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -37,7 +37,7 @@
       },
       "municipality_yatsushiro": {
         "classified": 143,
-        "displayCandidates": 112,
+        "displayCandidates": 111,
         "fallback": true
       },
       "municipality_minamata": {
@@ -61,8 +61,8 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 35,
-        "displayCandidates": 31,
+        "classified": 36,
+        "displayCandidates": 32,
         "fallback": true
       },
       "municipality_uki": {
@@ -138,21 +138,21 @@
     },
     "categoryReport": {
       "home": {
-        "total": 189,
+        "total": 188,
         "high": 74,
-        "medium": 70,
+        "medium": 69,
         "low": 45
       },
       "money": {
-        "total": 273,
-        "high": 56,
+        "total": 274,
+        "high": 57,
         "medium": 76,
         "low": 141
       },
       "documents": {
-        "total": 173,
+        "total": 174,
         "high": 44,
-        "medium": 32,
+        "medium": 33,
         "low": 97
       },
       "health_care": {
@@ -162,9 +162,9 @@
         "low": 0
       },
       "family_education": {
-        "total": 77,
+        "total": 76,
         "high": 12,
-        "medium": 31,
+        "medium": 30,
         "low": 34
       },
       "work_business": {
@@ -180,19 +180,19 @@
         "low": 0
       },
       "daily_life": {
-        "total": 218,
-        "high": 60,
+        "total": 219,
+        "high": 61,
         "medium": 156,
         "low": 2
       }
     },
     "confidence": {
-      "high": 278,
-      "medium": 352,
-      "low": 110
+      "high": 280,
+      "medium": 350,
+      "low": 111
     },
     "unclassifiedCount": 26,
-    "excludedCount": 40,
+    "excludedCount": 42,
     "overrideCount": 2
   },
   "actions": [
@@ -214,7 +214,7 @@
         "title": "【令和8年熊本地震】被災した住宅の応急修理について",
         "url": "https://www.pref.kumamoto.jp/soshiki/27/275109.html",
         "previousHash": "sha256:b35977e35e937bbd53b09f435851c2bef9b8d6003567ca2ef70ba188f1da13e8",
-        "currentHash": "sha256:c422d45ba38732eeeabed61f5f73ee5b2fd79b27313238ad8e448e13c2352ea7",
+        "currentHash": "sha256:93c6abdddfb77368f935f9df0ffd07266a035b2dec275e9b9b6f0046e56a1d8d",
         "verificationStatus": "needs_review"
       }
     },
@@ -282,7 +282,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 5
+      "count": 6
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -367,7 +367,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kosa",
-      "count": 13
+      "count": 12
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -397,7 +397,7 @@
         "title": "【令和8年熊本地震】被災した住宅の応急修理について",
         "url": "https://www.pref.kumamoto.jp/soshiki/27/275109.html",
         "previousHash": "sha256:b35977e35e937bbd53b09f435851c2bef9b8d6003567ca2ef70ba188f1da13e8",
-        "currentHash": "sha256:c422d45ba38732eeeabed61f5f73ee5b2fd79b27313238ad8e448e13c2352ea7",
+        "currentHash": "sha256:93c6abdddfb77368f935f9df0ffd07266a035b2dec275e9b9b6f0046e56a1d8d",
         "verificationStatus": "needs_review"
       },
       {

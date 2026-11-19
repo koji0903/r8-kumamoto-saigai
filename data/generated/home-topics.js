@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-18T21:00:04.669Z",
-  "officialCheckedAt": "11/19 06:00",
+  "retrievedAt": "2026-11-19T03:05:29.815Z",
+  "officialCheckedAt": "11/19 12:05",
   "siteTopics": [
     {
       "date": "2026-11-17",
@@ -96,6 +96,46 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "date": "2026-11-19",
+      "time": "11:06",
+      "category": "その他",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261119-ad77f47a",
+      "archiveUrl": "official-articles/yatsushiro-20261119-ad77f47a.html"
+    },
+    {
+      "title": "１１/１９地震に伴う体育施設開館状況(全館休止)",
+      "url": "https://localcms.city.minamata.lg.jp/page4836.html?type=top",
+      "date": "2026-11-19",
+      "time": "10:43",
+      "category": "施設・学校",
+      "municipality": "水俣市",
+      "archiveId": "minamata-20261119-4e12ceba",
+      "archiveUrl": "official-articles/minamata-20261119-4e12ceba.html"
+    },
+    {
+      "title": "【追加募集：鏡わかあゆ・立石・高野道北・高野道南・博物館ネットワークセンター】建設型応急住宅の入居者の募集について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036904/index.html",
+      "date": "2026-11-19",
+      "time": "08:46",
+      "category": "住まい・証明",
+      "municipality": "氷川町",
+      "archiveId": "hikawa-20261119-fe625f57",
+      "archiveUrl": "official-articles/hikawa-20261119-fe625f57.html"
+    },
+    {
+      "title": "2026年11月19日 令和8年熊本地震 関連情報 （11月19日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-11-19",
+      "time": "08:00",
+      "category": "その他",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261119-7d9d4e13",
+      "archiveUrl": "official-articles/uki-20261119-7d9d4e13.html"
+    },
+    {
       "title": "令和8年熊本地震における罹災証明手続きについて",
       "url": "https://www.town.tsunagi.lg.jp/kinkyu/pub/default.aspx?c_id=9",
       "date": "2026-11-19",
@@ -146,16 +186,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/amakusa-20261119-4f0d0b3b.html"
     },
     {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "date": "2026-11-19",
-      "time": "00:00",
-      "category": "その他",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261119-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261119-bad1de7e.html"
-    },
-    {
       "title": "緊急地震速報",
       "url": "https://www.town.ozu.kumamoto.jp/page/28258.html",
       "date": "2026-11-19",
@@ -166,16 +196,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/muni-20261119-0140f507.html"
     },
     {
-      "title": "【追加募集：鏡わかあゆ・立石・高野道北・高野道南・博物館ネットワークセンター】建設型応急住宅の入居者の募集について",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036904/index.html",
-      "date": "2026-11-18",
-      "time": "17:14",
-      "category": "住まい・証明",
-      "municipality": "氷川町",
-      "archiveId": "hikawa-20261118-fe625f57",
-      "archiveUrl": "official-articles/hikawa-20261118-fe625f57.html"
-    },
-    {
       "title": "令和8年熊本地震 心の復興事業",
       "url": "https://www.city.kumamoto.jp/kiji00373712/index.html",
       "date": "2026-11-18",
@@ -184,16 +204,6 @@ window.HOME_TOPICS = {
       "municipality": "熊本市",
       "archiveId": "kumamoto-20261118-124a5c0d",
       "archiveUrl": "official-articles/kumamoto-20261118-124a5c0d.html"
-    },
-    {
-      "title": "2026年11月18日 令和8年熊本地震 関連情報 （11月18日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-11-18",
-      "time": "08:00",
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261118-7d9d4e13",
-      "archiveUrl": "official-articles/uki-20261118-7d9d4e13.html"
     },
     {
       "title": "令和８年熊本地震義援金の配分について",
@@ -234,16 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "上天草市",
       "archiveId": "kamiamakusa-20261117-d4006af0",
       "archiveUrl": "official-articles/kamiamakusa-20261117-d4006af0.html"
-    },
-    {
-      "title": "令和８年熊本地震に伴う体育施設開館状況（武道館開館について 11/17～）",
-      "url": "https://localcms.city.minamata.lg.jp/page4836.html?type=top",
-      "date": "2026-11-16",
-      "time": "16:27",
-      "category": "施設・学校",
-      "municipality": "水俣市",
-      "archiveId": "minamata-20261116-4e12ceba",
-      "archiveUrl": "official-articles/minamata-20261116-4e12ceba.html"
     }
   ],
   "prefectureUpdates": [
