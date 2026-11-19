@@ -57,4 +57,13 @@ assert.equal(meeting541.attendance.total, 27);
 assert.match(html, /第541回（11月10日）議事録PDF/, "JavaScript無効時にも第541回PDFを参照できる必要があります");
 assert.ok(topics.some(item => item.url === "meetings.html?meeting=541"), "第541回の更新情報がトップページ用データに必要です");
 
-console.log("火の国会議第538回・第539回・第541回・被災家屋対処説明会チラシ4件・氷川町電話番号訂正の検査 OK");
+const meeting542 = window.MINUTES_DATA.meetings.find(item => item.meeting === 542);
+assert.ok(meeting542, "火の国会議第542回が構造化議事録に必要です");
+assert.equal(meeting542.date, "2026-11-17");
+assert.equal(meeting542.series, 51);
+assert.equal(meeting542.pages, 22);
+assert.equal(meeting542.attendance.total, 33);
+assert.match(html, /第542回（11月17日）議事録PDF/, "JavaScript無効時にも第542回PDFを参照できる必要があります");
+assert.ok(topics.some(item => item.url === "meetings.html?meeting=542"), "第542回の更新情報がトップページ用データに必要です");
+
+console.log("火の国会議第538回・第539回・第541回・第542回・被災家屋対処説明会チラシ4件・氷川町電話番号訂正の検査 OK");
