@@ -44,7 +44,7 @@ assert.match(validateYaml,/pymupdf\.open\("svg"/,"整合性チェックでPyMuPD
 assert.equal(hqRequirements.trim(),"pymupdf==2.1","検証済みのPyMuPDF 2.1を固定する");
 assert.match(yaml,/docs\/reconstruction-operations-status\.md \\\n\s+docs\/reconstruction-information-quality-status\.md/,"品質ステータスを同じgit addへ含める");
 for(const file of ["docs/reconstruction-contact-document-status.md","docs/reconstruction-eligibility-status.md","docs/reconstruction-amount-benefit-status.md","data/reconstruction/amount-benefits.json"]) assert.ok(yaml.includes(file),`${file}を自動更新対象へ含める`);
-for(const text of ['cron: "17 */3 * * *"','portal.bousai.pref.kumamoto.jp/data/shelter/shelter.json','curl --fail --silent --show-error --location','tools/build-shelters.mjs','--retrieved-at=','data/generated/shelters-data.js','for attempt in 1 2 3','JSON.parse','Array.isArray(raw.items)','items.length===0','既存の検証済み避難所データを保持','::warning::'])assert.ok(yaml.includes(text),`避難所自動更新に ${text} が必要`);
+for(const text of ['cron: "37 23 * * 0-4"','cron: "37 3 * * 1-5"','cron: "37 8 * * 1-5"','cron: "17 11 * * 1-5"','cron: "17 9 * * 6,0"','portal.bousai.pref.kumamoto.jp/data/shelter/shelter.json','curl --fail --silent --show-error --location','tools/build-shelters.mjs','--retrieved-at=','data/generated/shelters-data.js','for attempt in 1 2 3','JSON.parse','Array.isArray(raw.items)','items.length===0','既存の検証済み避難所データを保持','::warning::'])assert.ok(yaml.includes(text),`避難所自動更新に ${text} が必要`);
 assert.ok(yaml.indexOf('JSON.parse')<yaml.indexOf('tools/build-shelters.mjs'),"避難所JSONは生成前に検証する");
 assert.equal(/push[^\n]*--force|push[^\n]*-f\b/.test(yaml),false,"force push禁止");
 assert.ok(yaml.includes("inputs.dry_run != true"),"dry-runではcommitしない");

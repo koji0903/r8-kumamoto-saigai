@@ -2,8 +2,17 @@ name: 公式災害情報の定期更新
 
 on:
   schedule:
-    # 3時間ごと（UTC基準）。実行時刻はGitHub側の混雑で多少前後します。
-    - cron: "17 */3 * * *"
+    # 自治体の開庁・公式発表サイクルに連動した定期更新（JST基準）
+    # 平日朝（8:37 JST / 前日 UTC 23:37 Sun-Thu）
+    - cron: "37 23 * * 0-4"
+    # 平日昼（12:37 JST / 当日 UTC 3:37 Mon-Fri）
+    - cron: "37 3 * * 1-5"
+    # 平日夕（17:37 JST / 当日 UTC 8:37 Mon-Fri）
+    - cron: "37 8 * * 1-5"
+    # 平日夜（20:17 JST / 当日 UTC 11:17 Mon-Fri）
+    - cron: "17 11 * * 1-5"
+    # 休日夕（18:17 JST / 当日 UTC 9:17 Sat,Sun）
+    - cron: "17 9 * * 6,0"
   workflow_dispatch:
     inputs:
       dry_run:
