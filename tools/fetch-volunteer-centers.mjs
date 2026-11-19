@@ -93,11 +93,16 @@ const listLike = (url, title) =>
   && (/(?:news|topics|oshirase|whatsnew|information|blog|archive|category|page[\/=]\d+|p=\d+)/i.test(url)
     || /一覧|もっと見る|新着|お知らせ|バックナンバー|過去の|次へ|次の/u.test(title));
 
-// 災害VCの発信として拾う表題。ボランティア募集・活動状況・ニーズ受付が中心。
-const relevant = value => /災害ボランティア|災害VC|ボランティアセンター|ボランティア募集|ボランティア活動|活動報告|活動状況|ニーズ|支援活動|熊本地震|地震|被災|災害|第[0-9０-９一二三四五六七八九十]+期/u.test(value)
+// 災害VC・地域支え合い・被災者支援の発信として拾う表題。ボランティア募集・活動状況・ニーズ受付・地域支え合いセンターが中心。
+const isOtherDisaster = value =>
+  /平成28年|令和\s*[1-7]年|2025年|ベネズエラ|ミャンマー|トルコ|シリア|ウクライナ|能登|東日本|北海道|台湾|豪雨災害義援金/u.test(value);
+
+const relevant = (value, url = "") =>
+  !isOtherDisaster(value)
+  && (/災害ボランティア|災害VC|ボランティアセンター|ボランティア募集|ボランティア活動|活動報告|活動状況|ニーズ|支援活動|熊本地震|地震|被災|災害|第[0-9０-９一二三四五六七八九十]+期|地域支え合い|支え合いセンター|生活支援相談員/u.test(value)
+    || /volunteer|shien|jishin|saigai/i.test(url))
   // 社協サイトは他の災害の救援金募集も並べている。今回の地震の発信だけを拾う。
-  && !/平成28年|令和\s*[1-7]年|2025年|募集要項の見直し|職員採用|入札/u.test(value)
-  && !/ベネズエラ|ミャンマー|トルコ|シリア|ウクライナ|能登|東日本|北海道|台湾|豪雨災害義援金/u.test(value);
+  && !/募集要項の見直し|入札/u.test(value);
 
 const parseDate = (value, url) => {
   if (!value) return null;
@@ -142,7 +147,21 @@ for (const council of councils) {
       url.hash = "";
       if (!/^https?:$/.test(url.protocol)) continue;
       if (url.hostname !== origin && !url.hostname.endsWith(`.${origin}`)) continue;
-      if (!relevant(title)) {
+      if (isOtherDisaster(title)) continue;
+      let isRel = relevant(title, url.href);
+      let sasaeaiMatch = /地域支え合い|支え合いセンター|生活支援相談員/u.test(title);
+      // 職員採用系リンクの場合、地域支え合いセンター等の関連か個別ページを確認
+      if (!isRel && /職員|採用/u.test(title) && !/入札/u.test(title) && !detailLike(url.href)) {
+        try {
+          const detail = await get(url.href);
+          const detailText = text(detail.html);
+          if (!isOtherDisaster(detailText) && /地域支え合い|生活支援相談員|災害ボランティア/u.test(detailText)) {
+            isRel = true;
+            sasaeaiMatch = true;
+          }
+        } catch {}
+      }
+      if (!isRel) {
         // 表題が災害と無関係でも、一覧ページなら辿る（その先に発信がある）
         if (listLike(url.href, title) && !seen.has(url.href) && !queue.includes(url.href)) queue.push(url.href);
         continue;
@@ -156,8 +175,12 @@ for (const council of councils) {
         continue;
       }
       let cleaned = cleanTitle(title) || title;
+      cleaned = cleaned.replace(/を追加しました$/u, "").trim();
       if (/^第[0-9０-９一二三四五六七八九十]+期募集$/.test(cleaned)) {
         cleaned = `災害ボランティア ${cleaned}`;
+      }
+      if (sasaeaiMatch && !/地域支え合い|支え合い/u.test(cleaned)) {
+        cleaned = `地域支え合いセンター ${cleaned}`;
       }
       if (!updates.has(url.href) || date > updates.get(url.href).date) {
         updates.set(url.href, { title: cleaned, url: url.href, date });
@@ -167,7 +190,7 @@ for (const council of councils) {
   }
   const current = [...updates.values()];
   const previous = previousByMunicipality.get(council.municipality) || [];
-  const list = mergeVolunteerCenterHistory(previous, current);
+  const list = mergeVolunteerCenterHistory(previous, current).filter(update => !isOtherDisaster(update.title));
   const retainedCount = list.filter(update => !updates.has(update.url)).length;
   results.push({ ...council, checkedAt: new Date().toISOString(), pagesFetched: fetched, retrievalIssue: issue, retainedCount, updates: list });
   console.log(`${council.name}: ${list.length}件 (今回${current.length}件・履歴保持${retainedCount}件 / ${fetched}ページ取得)${issue ? ` ⚠ ${issue}` : ""}`);
