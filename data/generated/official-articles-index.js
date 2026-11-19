@@ -553,12 +553,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T05:15:41.938Z"
   },
   "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html": {
-    "id": "yatsushiro-20261118-95d8bc9e",
-    "htmlPath": "official-articles/yatsushiro-20261118-95d8bc9e.html",
+    "id": "yatsushiro-20261119-95d8bc9e",
+    "htmlPath": "official-articles/yatsushiro-20261119-95d8bc9e.html",
     "title": "小野市長から市民の皆さまへ",
     "municipality": "八代市",
-    "date": "2026-11-18",
-    "retrievedAt": "2026-11-18T12:13:39.578Z"
+    "date": "2026-11-19",
+    "retrievedAt": "2026-11-19T19:55:40.534Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036865/index.html": {
     "id": "hikawa-20261026-cf66038b",
@@ -1270,7 +1270,7 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "title": "【R8.11.17時点】全面通行止め一覧(位置図、写真)(PDF 約8MB)",
     "municipality": "上天草市",
     "date": "2026-11-17",
-    "retrievedAt": "2026-11-19T03:05:42.325Z"
+    "retrievedAt": "2026-11-19T19:55:43.278Z"
   },
   "https://www.town.mifune.kumamoto.jp/page7562.html?type=top": {
     "id": "mifune-20261118-835921c4",
@@ -1327,5 +1327,29 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "大津町",
     "date": "2026-11-19",
     "retrievedAt": "2026-11-18T21:00:21.552Z"
+  },
+  "https://www.city.uto.lg.jp/article/view/1307/17389.html": {
+    "id": "uto-20261120-fa77fd0d",
+    "htmlPath": "official-articles/uto-20261120-fa77fd0d.html",
+    "title": "令和８年熊本地震義援金の配分について",
+    "municipality": "宇土市",
+    "date": "2026-11-20",
+    "retrievedAt": "2026-11-19T19:55:36.491Z"
+  },
+  "https://www.city.uki.kumamoto.jp/toppage/important/2635811": {
+    "id": "uki-20261120-f36a6abd",
+    "htmlPath": "official-articles/uki-20261120-f36a6abd.html",
+    "title": "宇城市避難所巡回バスについて 11月20日以降のルートが変わります",
+    "municipality": "宇城市",
+    "date": "2026-11-20",
+    "retrievedAt": "2026-11-19T19:55:38.971Z"
+  },
+  "https://www.town.tsunagi.lg.jp/page4800.html?type=top": {
+    "id": "tsunagi-20261119-b1e802e9",
+    "htmlPath": "official-articles/tsunagi-20261119-b1e802e9.html",
+    "title": "地震により被害を受けた農林水産業用機械・施設等について",
+    "municipality": "津奈木町",
+    "date": "2026-11-19",
+    "retrievedAt": "2026-11-19T19:55:42.372Z"
   }
 };

@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-19T02:39:41.950Z",
+  "generatedAt": "2026-11-19T19:31:46.544Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 881,
-  "displayCandidateCount": 630,
-  "classifiedPageCount": 741,
+  "inputCount": 884,
+  "displayCandidateCount": 636,
+  "classifiedPageCount": 746,
   "categoryReport": {
     "home": {
-      "total": 188,
+      "total": 189,
       "high": 74,
-      "medium": 69,
-      "low": 45
+      "medium": 71,
+      "low": 44
     },
     "money": {
       "total": 274,
@@ -19,9 +19,9 @@
       "low": 141
     },
     "documents": {
-      "total": 174,
-      "high": 44,
-      "medium": 33,
+      "total": 175,
+      "high": 43,
+      "medium": 35,
       "low": 97
     },
     "health_care": {
@@ -43,27 +43,27 @@
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 20,
-      "high": 4,
+      "total": 21,
+      "high": 5,
       "medium": 16,
       "low": 0
     },
     "daily_life": {
-      "total": 219,
-      "high": 61,
-      "medium": 156,
+      "total": 222,
+      "high": 63,
+      "medium": 157,
       "low": 2
     }
   },
   "municipalityReport": {
     "municipality_kumamoto": {
-      "classified": 71,
-      "displayCandidates": 62,
+      "classified": 72,
+      "displayCandidates": 63,
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 143,
-      "displayCandidates": 111,
+      "classified": 144,
+      "displayCandidates": 113,
       "fallback": true
     },
     "municipality_minamata": {
@@ -82,18 +82,18 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 61,
-      "displayCandidates": 57,
+      "classified": 62,
+      "displayCandidates": 58,
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 36,
-      "displayCandidates": 32,
+      "classified": 37,
+      "displayCandidates": 33,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 118,
-      "displayCandidates": 102,
+      "classified": 119,
+      "displayCandidates": 103,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -152,20 +152,20 @@
       "fallback": true
     },
     "municipality_ashikita": {
-      "classified": 4,
-      "displayCandidates": 4,
+      "classified": 3,
+      "displayCandidates": 3,
       "fallback": true
     },
     "municipality_tsunagi": {
-      "classified": 7,
-      "displayCandidates": 6,
+      "classified": 8,
+      "displayCandidates": 7,
       "fallback": true
     }
   },
   "confidence": {
-    "high": 280,
-    "medium": 350,
-    "low": 111
+    "high": 282,
+    "medium": 354,
+    "low": 110
   },
   "unclassifiedCount": 26,
   "unclassifiedItems": [
@@ -241,7 +241,7 @@
     },
     {
       "municipalityName": "宇土市",
-      "title": "買って応援！食べて応援！来て応援！「応援消費促進ロゴ」をぜひご活用ください",
+      "title": "被災から復興へ。応援、ありがうと。「応援消費促進連携ロゴ」をぜひご活用ください",
       "url": "https://www.city.uto.lg.jp/article/view/1310/17248.html"
     },
     {
@@ -300,7 +300,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036908/index.html"
     }
   ],
-  "outOfScopeCount": 72,
+  "outOfScopeCount": 70,
   "outOfScopeByRule": {
     "donation_appeal": 3,
     "disaster_preparedness": 10,
@@ -309,8 +309,8 @@
     "budget_notice": 3,
     "hq_meeting_material": 3,
     "overall_guide": 5,
+    "index_page": 17,
     "mayor_message": 2,
-    "index_page": 19,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 4,
@@ -432,10 +432,10 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "八代市",
@@ -446,10 +446,10 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "山鹿市",
@@ -474,7 +474,7 @@
     },
     {
       "municipalityName": "山鹿市",
-      "title": "震度速報 11月19日 2時24分",
+      "title": "震度速報 11月19日 9時40分",
       "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -621,7 +621,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月19日 令和8年熊本地震 関連情報 （11月19日8時00分更新）",
+      "title": "2026年11月19日 令和8年熊本地震 関連情報 （11月19日12時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -753,13 +753,6 @@
       "ruleLabel": "公共施設の休止・再開・紹介"
     },
     {
-      "municipalityName": "益城町",
-      "title": "緊急地震速報 推定震度4",
-      "url": "https://www.town.mashiki.lg.jp/kinkyu.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
       "municipalityName": "甲佐町",
       "title": "『広報こうさ』号外第1報(令和8年熊本地震関連情報)",
       "url": "https://www.town.kosa.lg.jp/q/aview/255/13555.html",
@@ -779,13 +772,6 @@
       "url": "https://www.town.kosa.lg.jp/q/aview/102/425.html",
       "ruleId": "facility_notice",
       "ruleLabel": "公共施設の休止・再開・紹介"
-    },
-    {
-      "municipalityName": "甲佐町",
-      "title": "緊急地震速報",
-      "url": "https://www.town.kosa.lg.jp/q/aview/51/14031.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "氷川町",
@@ -849,7 +835,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 6
+      "count": 7
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -948,5 +934,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 740
+  "previousClassifiedPageCount": 741
 }

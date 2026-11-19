@@ -5,8 +5,8 @@ window.DEMOLITION_DATA = {
     "confirmedMunicipalitiesCount": 13,
     "acceptingCount": 13,
     "note": "令和8年熊本地震に伴う被災家屋の公費解体および自費解体費用償還の各自治体公式発表マスターデータ。",
-    "retrievedAt": "2026-11-19T03:05:29.815Z",
-    "officialCheckedAt": "11/19 12:05"
+    "retrievedAt": "2026-11-19T19:55:31.716Z",
+    "officialCheckedAt": "11/20 04:55"
   },
   "alerts": [
     {
@@ -65,6 +65,16 @@ window.DEMOLITION_DATA = {
     }
   ],
   "recentOfficialUpdates": [
+    {
+      "municipality": "宇城市",
+      "date": "2026-11-18",
+      "time": null,
+      "title": "2026年11月18日 令和8年熊本地震により被災した家屋等の解体・撤去について",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2641256",
+      "category": "その他",
+      "archiveId": null,
+      "archiveUrl": null
+    },
     {
       "municipality": "益城町",
       "date": "2026-11-17",
@@ -211,16 +221,6 @@ window.DEMOLITION_DATA = {
       "time": null,
       "title": "【令和8年熊本地震】被災家屋の解体等（公費解体）について",
       "url": "https://www.town.kumamoto-misato.lg.jp/soshiki/juminsekatsu/kankyou/2/3470.html",
-      "category": "その他",
-      "archiveId": null,
-      "archiveUrl": null
-    },
-    {
-      "municipality": "八代市",
-      "date": "2026-09-24",
-      "time": "15:43",
-      "title": "令和８年熊本地震で被災した家屋等の解体・撤去について（公費解体）",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00327083/index.html",
       "category": "その他",
       "archiveId": null,
       "archiveUrl": null
