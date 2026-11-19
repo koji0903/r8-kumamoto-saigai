@@ -903,3 +903,128 @@
     padding: 14px 16px;
   }
 }
+
+/* ==========================================================================
+   自治体公式 公費解体新着タイムライン（自動収集・同期セクション）
+   ========================================================================== */
+.demolition-updates-shell {
+  background: #fff;
+  border: 1px solid var(--r-line);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.demolition-updates-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--r-line);
+}
+
+.demolition-updates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+.demolition-update-card {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  background: var(--r-teal-light);
+  border: 1px solid var(--r-teal-border);
+  border-radius: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.demolition-update-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.08);
+}
+
+.demolition-update-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.demolition-update-meta time {
+  font-weight: 700;
+  color: var(--r-ink);
+}
+
+.demolition-update-muni {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--r-teal);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.demolition-update-tag {
+  display: inline-block;
+  padding: 2px 6px;
+  background: #fff;
+  border: 1px solid var(--r-line);
+  color: var(--r-muted);
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.demolition-update-archive-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  background: #059669;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.demolition-update-title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.demolition-update-title a {
+  color: var(--r-ink);
+  text-decoration: none;
+}
+
+.demolition-update-title a:hover {
+  color: var(--r-orange);
+  text-decoration: underline;
+}
+
+.demolition-update-sublink {
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 12px;
+}
+
+.demolition-update-sublink a {
+  color: var(--r-muted);
+  text-decoration: none;
+}
+
+.demolition-update-sublink a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .demolition-updates-grid {
+    grid-template-columns: 1fr;
+  }
+}

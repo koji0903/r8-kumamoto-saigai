@@ -65,3 +65,4 @@ await writeFile(OUT,JSON.stringify(dataset,null,2)+"\n");
 await writeFile(GENERATED,"// 生成物・直接編集しない。生成: node tools/fetch-official-topics.mjs\nwindow.OFFICIAL_TOPICS = "+JSON.stringify(dataset)+";\n");
 console.log(`国 ${national.length}件 / 県 ${prefecture.length}件 / 市町村 ${municipalities.length}件`);
 execFileSync(process.execPath, [join(ROOT, "tools/build-home-topics.mjs")], { cwd: ROOT, stdio: "inherit" });
+execFileSync(process.execPath, [join(ROOT, "tools/build-demolition.mjs")], { cwd: ROOT, stdio: "inherit" });

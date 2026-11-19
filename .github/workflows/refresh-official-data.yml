@@ -81,6 +81,9 @@ jobs:
       - name: 自治体配信情報をサイト内記事としてアーカイブ
         run: node tools/archive-official-articles.mjs
 
+      - name: 公費解体ダッシュボードを更新
+        run: node tools/build-demolition.mjs
+
       - name: 開設中避難所を更新
         shell: bash
         run: |
@@ -135,6 +138,7 @@ jobs:
           node --check tools/fetch-municipality-updates.mjs
           node --check tools/fetch-official-topics.mjs
           node --check tools/archive-official-articles.mjs
+          node --check tools/build-demolition.mjs
           node --check tools/fetch-volunteer-centers.mjs
           node --check tools/volunteer-center-history.mjs
           node --check tools/build-shelters.mjs
@@ -209,8 +213,10 @@ jobs:
             data/generated/official-topics.js \
             data/generated/official-articles-index.js \
             data/generated/home-topics.js \
+            data/generated/demolition-data.js \
             data/generated/volunteer-center-updates.js \
             data/generated/shelters-data.js \
+            sources/demolition-data.json \
             sources/priority-support-matrix.json \
             sources/official/hq-damage \
             sources/official/hq-index.json \

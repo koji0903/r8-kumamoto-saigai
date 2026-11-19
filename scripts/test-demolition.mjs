@@ -43,6 +43,24 @@ assert.ok(!html.includes('<td><b>南阿蘇村</b></td>'), '公式受付を確認
 
 assert.ok(css.includes('.demolition-current-alert'), '重要更新の注意喚起スタイルがありません');
 assert.ok(css.includes('.source-checked-note'), '公式確認日の注記スタイルがありません');
+assert.ok(css.includes('.demolition-updates-shell'), '公式発表タイムラインのスタイルがありません');
+assert.ok(css.includes('.demolition-update-card'), '公式発表カードのスタイルがありません');
+
+// 自動更新マーカーと生成物の検証
+assert.ok(html.includes('<!-- DEMOLITION_ALERT_START -->'), 'アラート自動更新マーカーがありません');
+assert.ok(html.includes('<!-- DEMOLITION_METRICS_START -->'), 'メトリクス自動更新マーカーがありません');
+assert.ok(html.includes('<!-- DEMOLITION_UPDATES_START -->'), '公式新着タイムライン自動更新マーカーがありません');
+assert.ok(html.includes('<!-- DEMOLITION_TABLE_START -->'), '比較表自動更新マーカーがありません');
+assert.ok(html.includes('<!-- DEMOLITION_DATE_START -->'), '確認日自動更新マーカーがありません');
+assert.ok(html.includes('自治体公式 公費解体・被災家屋撤去の最新発表タイムライン'), '新着タイムラインの見出しがありません');
+assert.ok(html.includes('自治体公式発表 連動更新中'), '自動収集連動バッジがありません');
+
+assert.ok(fs.existsSync('sources/demolition-data.json'), 'sources/demolition-data.json が存在しません');
+assert.ok(fs.existsSync('data/generated/demolition-data.js'), 'data/generated/demolition-data.js が存在しません');
+
+const generatedDataContent = fs.readFileSync('data/generated/demolition-data.js', 'utf8');
+assert.ok(generatedDataContent.includes('window.DEMOLITION_DATA ='), '生成されたJSのデータ構造が不正です');
+
 
 const topic = topics.find(item => item.date === '2026-10-30' && item.targetPage === 'demolition.html');
 assert.ok(topic, 'トップページ用の公費解体更新トピック（10/30）がありません');
