@@ -44,7 +44,7 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 const councils = [
   { municipality: "熊本市", name: "熊本市社会福祉協議会", url: "https://www.kumamoto-city-csw.or.jp/", hubs: [], confirmedAt: "2026-08-16" },
   { municipality: "八代市", name: "八代市社会福祉協議会", url: "https://www.yatsushiro-shakyo.jp/", hubs: [], confirmedAt: "2026-08-16" },
-  { municipality: "宇土市", name: "宇土市社会福祉協議会", url: "https://www.utoshakyou.jp/", hubs: [], confirmedAt: "2026-08-16" },
+  { municipality: "宇土市", name: "宇土市社会福祉協議会", url: "https://www.utoshakyou.jp/", hubs: ["https://www.utoshakyou.jp/volunteer2026.html"], confirmedAt: "2026-08-16" },
   { municipality: "宇城市", name: "宇城市社会福祉協議会", url: "https://www.shakyou-uki.jp/", hubs: [], confirmedAt: "2026-08-16" },
   { municipality: "益城町", name: "益城町社会福祉協議会", url: "https://www.mashiki-shakyo.or.jp/", hubs: [], confirmedAt: "2026-08-16" },
   { municipality: "氷川町", name: "氷川町社会福祉協議会", url: "https://hikawa-syakyo.jp/", hubs: [], confirmedAt: "2026-08-16" },
@@ -76,7 +76,7 @@ const decode = value => value
 // 一覧では「2026-08-14 災害ボラ 第2期…」のように表題の前に日付や区分が付く。
 // 日付は別に持つため、表題からは落として読みやすくする。
 const cleanTitle = value => value
-  .replace(/^\s*(?:20\d{2}[-/.年]\s*\d{1,2}[-/.月]\s*\d{1,2}日?)\s*/u, "")
+  .replace(/^\s*(?:(?:20\d{2}[-/.年]\s*)?\d{1,2}[-/.月]\s*\d{1,2}日?)\s*/u, "")
   // 「災害ボラ 第2期…」のような区分ラベルだけを落とす。直後に空白か区切りが
   // ないものは「災害ボランティア募集」等の本文なので削らない。
   .replace(/^\s*(?:災害ボラ|お知らせ|新着情報|NEW)(?=[\s:：])\s*[:：]?\s*/u, "")
@@ -94,22 +94,30 @@ const listLike = (url, title) =>
     || /一覧|もっと見る|新着|お知らせ|バックナンバー|過去の|次へ|次の/u.test(title));
 
 // 災害VCの発信として拾う表題。ボランティア募集・活動状況・ニーズ受付が中心。
-const relevant = value => /災害ボランティア|災害VC|ボランティアセンター|ボランティア募集|ボランティア活動|活動報告|活動状況|ニーズ|支援活動|熊本地震|地震|被災|災害/u.test(value)
+const relevant = value => /災害ボランティア|災害VC|ボランティアセンター|ボランティア募集|ボランティア活動|活動報告|活動状況|ニーズ|支援活動|熊本地震|地震|被災|災害|第[0-9０-９一二三四五六七八九十]+期/u.test(value)
   // 社協サイトは他の災害の救援金募集も並べている。今回の地震の発信だけを拾う。
   && !/平成28年|令和\s*[1-7]年|2025年|募集要項の見直し|職員採用|入札/u.test(value)
   && !/ベネズエラ|ミャンマー|トルコ|シリア|ウクライナ|能登|東日本|北海道|台湾|豪雨災害義援金/u.test(value);
 
-const parseDate = value => {
+const parseDate = (value, url) => {
+  if (!value) return null;
   const normalized = value.replace(/[０-９]/g, digit => "０１２３４５６７８９".indexOf(digit).toString());
   for (const pattern of [
     /(2026|令和\s*8)\s*[年./-]\s*(\d{1,2})\s*[月./-]\s*(\d{1,2})/u,
-    /(?:^|[^\d])(7|8)\s*[月/.]\s*(\d{1,2})\s*日?/u
+    /(?:^|[^\d])(0?[7-9]|1[0-2])\s*[月/.]\s*(\d{1,2})\s*日?/u
   ]) {
     const match = normalized.match(pattern);
     if (!match) continue;
     const [month, day] = match.length === 4 ? [match[2], match[3]] : [match[1], match[2]];
     const iso = `2026-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
-    if (/^2026-(07|08)-\d{2}$/.test(iso) && iso >= DISASTER_DATE && iso <= END_DATE) return iso;
+    if (iso >= DISASTER_DATE && iso <= END_DATE) return iso;
+  }
+  if (url) {
+    const urlMatch = url.match(/(?:2026|r8)(0[7-9]|1[0-2])(\d{2})/i);
+    if (urlMatch) {
+      const iso = `2026-${urlMatch[1]}-${urlMatch[2]}`;
+      if (iso >= DISASTER_DATE && iso <= END_DATE) return iso;
+    }
   }
   return null;
 };
@@ -140,14 +148,20 @@ for (const council of councils) {
         continue;
       }
       if (title.length < 4) continue;
-      // 表題の前後から日付を拾う（一覧に日付が併記されることが多い）
+      // 表題またはその前後・URLから日付を拾う（表題に日付があれば最優先）
       const around = text(page.html.slice(Math.max(0, match.index - 260), match.index + match[0].length + 260));
-      const date = parseDate(around) || parseDate(title);
+      const date = parseDate(title, url.href) || parseDate(around, url.href);
       if (!date) {
         if (listLike(url.href, title) && !seen.has(url.href) && !queue.includes(url.href)) queue.push(url.href);
         continue;
       }
-      updates.set(url.href, { title: cleanTitle(title) || title, url: url.href, date });
+      let cleaned = cleanTitle(title) || title;
+      if (/^第[0-9０-９一二三四五六七八九十]+期募集$/.test(cleaned)) {
+        cleaned = `災害ボランティア ${cleaned}`;
+      }
+      if (!updates.has(url.href) || date > updates.get(url.href).date) {
+        updates.set(url.href, { title: cleaned, url: url.href, date });
+      }
     }
     await wait(300);
   }
