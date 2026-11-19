@@ -84,6 +84,12 @@ jobs:
       - name: 公費解体ダッシュボードを更新
         run: node tools/build-demolition.mjs
 
+      - name: 仮設住宅ガイドを更新
+        run: node tools/build-temporary-housing.mjs
+
+      - name: り災証明書ガイドを更新
+        run: node tools/build-risai-certificate.mjs
+
       - name: 開設中避難所を更新
         shell: bash
         run: |
@@ -139,6 +145,8 @@ jobs:
           node --check tools/fetch-official-topics.mjs
           node --check tools/archive-official-articles.mjs
           node --check tools/build-demolition.mjs
+          node --check tools/build-temporary-housing.mjs
+          node --check tools/build-risai-certificate.mjs
           node --check tools/fetch-volunteer-centers.mjs
           node --check tools/volunteer-center-history.mjs
           node --check tools/build-shelters.mjs
@@ -217,6 +225,7 @@ jobs:
             data/generated/volunteer-center-updates.js \
             data/generated/shelters-data.js \
             sources/demolition-data.json \
+            sources/risai-certificate-data.json \
             sources/priority-support-matrix.json \
             sources/official/hq-damage \
             sources/official/hq-index.json \

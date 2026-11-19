@@ -66,3 +66,5 @@ await writeFile(GENERATED,"// 生成物・直接編集しない。生成: node t
 console.log(`国 ${national.length}件 / 県 ${prefecture.length}件 / 市町村 ${municipalities.length}件`);
 execFileSync(process.execPath, [join(ROOT, "tools/build-home-topics.mjs")], { cwd: ROOT, stdio: "inherit" });
 execFileSync(process.execPath, [join(ROOT, "tools/build-demolition.mjs")], { cwd: ROOT, stdio: "inherit" });
+execFileSync(process.execPath, [join(ROOT, "tools/build-temporary-housing.mjs")], { cwd: ROOT, stdio: "inherit" });
+execFileSync(process.execPath, [join(ROOT, "tools/build-risai-certificate.mjs")], { cwd: ROOT, stdio: "inherit" });

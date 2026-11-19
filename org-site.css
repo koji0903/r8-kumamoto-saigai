@@ -2270,3 +2270,128 @@ html[data-site-phase="reconstruction"] .home-current-actions a[href="disaster.ht
     padding: 14px 20px;
   }
 }
+
+/* ==========================================================================
+   公式発表・自治体新着タイムライン（自動連動コンポーネント）
+   ========================================================================== */
+.portal-updates-shell {
+  background: #fff;
+  border: 1px solid #c9ddd7;
+  border-radius: 12px;
+  padding: 22px;
+  margin: 24px 0 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.portal-updates-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #dbe7e4;
+}
+.portal-updates-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e6f4f1;
+  color: #176d62;
+  font-size: 12px;
+  font-weight: 800;
+}
+.portal-updates-status-time {
+  color: #627974;
+  font-size: 12px;
+}
+.portal-updates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+.portal-update-card {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 16px;
+  background: #f8faf9;
+  border: 1px solid #cfe0db;
+  border-radius: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.portal-update-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(20, 65, 56, 0.08);
+}
+.portal-update-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.portal-update-meta time {
+  font-weight: 700;
+  color: #1b3832;
+}
+.portal-update-muni {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #176d62;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+}
+.portal-update-tag {
+  display: inline-block;
+  padding: 2px 6px;
+  background: #fff;
+  border: 1px solid #d0deda;
+  color: #55726b;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.portal-update-archive-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  background: #059669;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+}
+.portal-update-title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.portal-update-title a {
+  color: #163e37;
+  text-decoration: none;
+}
+.portal-update-title a:hover {
+  color: #d8552f;
+  text-decoration: underline;
+}
+.portal-update-sublink {
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 12px;
+}
+.portal-update-sublink a {
+  color: #627974;
+  text-decoration: none;
+}
+.portal-update-sublink a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 640px) {
+  .portal-updates-grid {
+    grid-template-columns: 1fr;
+  }
+}

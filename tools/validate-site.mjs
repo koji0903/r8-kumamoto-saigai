@@ -24,11 +24,15 @@ if (fix) {
   run("node", ["tools/build-priority-support.mjs"], "5市町支援制度まとめの生成");
   run("node", ["tools/build-home-topics.mjs"], "トップページトピックスの生成");
   run("node", ["tools/build-demolition.mjs"], "公費解体ダッシュボードの生成");
+  run("node", ["tools/build-temporary-housing.mjs"], "仮設住宅ガイドの生成");
+  run("node", ["tools/build-risai-certificate.mjs"], "り災証明書ガイドの生成");
   run("node", ["tools/build-seo.mjs"], "SEO・サイト内検索の生成");
 }
 run("node", ["tools/build-priority-support.mjs", "--check"], "5市町支援制度まとめ生成物");
 run("node", ["tools/build-home-topics.mjs", "--check"], "トップページトピックス生成物");
 run("node", ["tools/build-demolition.mjs", "--check"], "公費解体ダッシュボード生成物");
+run("node", ["tools/build-temporary-housing.mjs", "--check"], "仮設住宅ガイド生成物");
+run("node", ["tools/build-risai-certificate.mjs", "--check"], "り災証明書ガイド生成物");
 run("node", ["tools/build-seo.mjs", "--check"], "SEO生成物");
 run("node", ["tools/check-data.mjs"], "HTML・災害データ");
 run("node", ["scripts/build-site-phase.mjs", "--check"], "サイト局面");
@@ -89,6 +93,8 @@ const syntaxTargets = [
   "tools/build-shelters.mjs",
   "tools/build-home-topics.mjs",
   "tools/build-demolition.mjs",
+  "tools/build-temporary-housing.mjs",
+  "tools/build-risai-certificate.mjs",
   "tools/build-priority-support.mjs"
 ];
 for (const target of syntaxTargets) run("node", ["--check", target], `構文: ${target}`);

@@ -30,6 +30,14 @@ const OFFICIAL_TOPICS_PATH = join(ROOT, "sources/official/topics/latest-topics.j
 const DEMOLITION_HTML_PATH = join(ROOT, "demolition.html");
 const GENERATED_JS_PATH = join(ROOT, "data/generated/demolition-data.js");
 
+const INDIVIDUAL_PAGES = [
+  { id: "uto", name: "宇土市", file: "uto-demolition.html" },
+  { id: "uki", name: "宇城市", file: "uki-demolition.html" },
+  { id: "yatsushiro", name: "八代市", file: "yatsushiro-demolition.html" },
+  { id: "hikawa", name: "氷川町", file: "hikawa-demolition.html" },
+  { id: "kumamoto", name: "熊本市", file: "kumamoto-demolition.html" }
+];
+
 const checkOnly = process.argv.includes("--check");
 
 const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
@@ -323,12 +331,88 @@ ${tableRowsHtml}
   const normalizedCurrentHtml = normalizeGeneratedText(demolitionHtml);
   const htmlChanged = normalizedNextHtml !== normalizedCurrentHtml;
 
+  // --- 5. 個別5市町ページの公式新着タイムライン自動生成・同期 ---
+  let individualChanged = false;
+  for (const page of INDIVIDUAL_PAGES) {
+    const pagePath = join(ROOT, page.file);
+    const content = await readFile(pagePath, "utf8").catch(() => null);
+    if (!content) continue;
+
+    const muniUpdatesFiltered = rawUpdates.filter(u => u.municipality === page.name);
+    let muniUpdatesHtml = "";
+    if (muniUpdatesFiltered.length > 0) {
+      const cards = muniUpdatesFiltered.map(item => {
+        const art = archiveIndex[item.url];
+        const targetUrl = art ? art.htmlPath : item.url;
+        const isArchived = Boolean(art);
+        return `        <article class="demolition-update-card">
+          <div class="demolition-update-meta">
+            <time datetime="${esc(item.date)}">${formatDate(item.date)}</time>
+            <span class="demolition-update-muni">${esc(item.municipality)}</span>
+            <span class="demolition-update-tag">${esc(item.category)}</span>
+            ${isArchived ? '<span class="demolition-update-archive-badge" title="リンク切れ防止のためサイト内に全文保存済み">保存済</span>' : ""}
+          </div>
+          <h3 class="demolition-update-title">
+            <a href="${esc(targetUrl)}"${isArchived ? "" : ' target="_blank" rel="noopener"'}>${esc(item.title)} <span aria-hidden="true">${isArchived ? "→" : "↗"}</span></a>
+          </h3>
+          ${isArchived ? `          <div class="demolition-update-sublink">
+            <small><a href="${esc(item.url)}" target="_blank" rel="noopener">自治体公式元 ↗</a></small>
+          </div>` : ""}
+        </article>`;
+      }).join("\n");
+
+      muniUpdatesHtml = `<!-- MUNI_DEMOLITION_UPDATES_START -->
+    <section class="waste-section" id="muni-demolition-updates" aria-labelledby="muni-updates-title" style="margin-top:20px;">
+      <header class="section-title">
+        <p>OFFICIAL UPDATES</p>
+        <h2 id="muni-updates-title">${esc(page.name)}公式 解体・被災家屋撤去の最新発表</h2>
+        <span>市町村公式サイトから自動収集された解体・撤去関連の公表情報です（自動連動）。</span>
+      </header>
+      <div class="demolition-updates-shell">
+        <div class="demolition-updates-status-bar">
+          <span class="topics-status-badge">${esc(page.name)}公式発表 連動更新中</span>
+          <small class="topics-status-time">${checkedAt ? `${page.name}発信 ${checkedAt} 自動確認` : "随時更新"}</small>
+        </div>
+        <div class="demolition-updates-grid">
+${cards}
+        </div>
+      </div>
+    </section>
+    <!-- MUNI_DEMOLITION_UPDATES_END -->`;
+    }
+
+    let nextContent = content;
+    if (muniUpdatesHtml) {
+      if (nextContent.includes("<!-- MUNI_DEMOLITION_UPDATES_START -->")) {
+        nextContent = nextContent.replace(
+          /<!-- MUNI_DEMOLITION_UPDATES_START -->[\s\S]*?<!-- MUNI_DEMOLITION_UPDATES_END -->/,
+          muniUpdatesHtml
+        );
+      } else {
+        nextContent = nextContent.replace(
+          /(<\/section>\s*)(<!-- [^>]*前の3つの約束)/,
+          `$1\n\n    ${muniUpdatesHtml}\n\n    $2`
+        );
+      }
+    }
+
+    const normNext = normalizeGeneratedText(nextContent);
+    const normCur = normalizeGeneratedText(content);
+    if (normNext !== normCur) {
+      individualChanged = true;
+      if (!checkOnly) {
+        await writeFile(pagePath, normNext);
+        console.log(`${page.file} を更新しました。`);
+      }
+    }
+  }
+
   if (checkOnly) {
-    if (jsChanged || htmlChanged) {
-      console.error("demolition.html または data/generated/demolition-data.js が未更新です。node tools/build-demolition.mjs を実行してください。");
+    if (jsChanged || htmlChanged || individualChanged) {
+      console.error("demolition.html、個別ガイドまたは data/generated/demolition-data.js が未更新です。node tools/build-demolition.mjs を実行してください。");
       process.exit(1);
     }
-    console.log("公費解体ダッシュボード生成物: データと一致しています OK");
+    console.log("公費解体ダッシュボード＆個別ガイド生成物: データと一致しています OK");
     return;
   }
 
