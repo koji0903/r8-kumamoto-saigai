@@ -73,7 +73,7 @@ assert.ok(html.includes('id="p-shizei"') && html.includes('id="p-kaigo-hokenryo"
 // ---- 期限のある制度 ---------------------------------------------------------
 const withDeadline = cards.filter(card => card.includes('data-deadline="1"')).length;
 assert.equal(withDeadline, 11, `期限があり受付中の制度は11件である必要があります（現在 ${withDeadline} 件。期限経過の1件を除く）`);
-for (const d of ["9月30日", "10月9日", "10月16日", "10月27日", "11月4日", "12月28日"]) {
+for (const d of ["9月30日", "10月27日", "12月8日", "12月15日", "12月17日", "12月28日"]) {
   assert.ok(text.includes(d), `期限「${d}」の記載が必要です`);
 }
 assert.match(text, /10月27日（火）/, "令和8年10月27日の曜日は暦どおり火曜日と表示する必要があります");

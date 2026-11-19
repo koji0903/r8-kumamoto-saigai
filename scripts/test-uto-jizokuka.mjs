@@ -32,8 +32,8 @@ assert.ok(html.includes("5人"), "商業・サービス業5人以下の記載が
 assert.ok(html.includes("20人"), "製造業等20人以下の記載が含まれること");
 
 // 4. スケジュール・締切日
-assert.ok(html.includes("10月9日"), "商工会確認書発行受付締切（10月9日）が含まれること");
-assert.ok(html.includes("10月16日"), "申請受付締切（10月16日）が含まれること");
+assert.ok(html.includes("12月8日"), "第2次公募 商工会確認書発行受付締切（12月8日）が含まれること");
+assert.ok(html.includes("12月15日"), "第2次公募 申請受付締切（12月15日）が含まれること");
 assert.ok(html.includes("令和9年10月31日"), "事業完了期限が含まれること");
 
 // 5. 窓口情報

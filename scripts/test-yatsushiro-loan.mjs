@@ -23,7 +23,7 @@ assert.ok(html.includes("無利子"), "無利子条件の記載が必要です")
 assert.ok(html.includes("1.0％") || html.includes("1%"), "通常年利1.0%の記載が必要です");
 assert.ok(html.includes("据置期間"), "据置期間（3年/5年）の記載が必要です");
 assert.ok(html.includes("10年"), "償還期間（10年）の記載が必要です");
-assert.ok(html.includes("令和8年11月2日"), "申請期限（令和8年11月2日）の記載が必要です");
+assert.ok(html.includes("令和9年2月1日"), "申請期限（令和9年2月1日）の記載が必要です");
 assert.ok(html.includes("0965-33-4003"), "健康福祉政策課の電話番号が必要です");
 assert.ok(html.includes("tel:0965334003"), "健康福祉政策課への発信リンクが必要です");
 
