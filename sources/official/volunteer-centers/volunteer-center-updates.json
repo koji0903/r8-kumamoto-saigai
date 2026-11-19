@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "retrievedAt": "2026-11-19T06:43:11.880Z",
+  "retrievedAt": "2026-11-19T08:33:01.775Z",
   "event": "令和8年熊本地震",
   "disasterDate": "2026-07-28",
   "note": "災害ボランティアセンターを運営する市町村社会福祉協議会の公式サイトから、表題・日付・URLのみを収集しています。本文の転載や要約は行っていません。",
@@ -9,9 +9,11 @@
       "municipality": "熊本市",
       "name": "熊本市社会福祉協議会",
       "url": "https://www.kumamoto-city-csw.or.jp/",
-      "hubs": [],
+      "hubs": [
+        "https://www.kumamoto-city-csw.or.jp/news/"
+      ],
       "confirmedAt": "2026-08-16",
-      "checkedAt": "2026-11-19T06:40:25.336Z",
+      "checkedAt": "2026-11-19T08:29:10.933Z",
       "pagesFetched": 40,
       "retrievalIssue": "404 https://www.kumamoto-city-csw.or.jp/news/akaihanenews/",
       "retainedCount": 7,
@@ -252,17 +254,89 @@
       "municipality": "八代市",
       "name": "八代市社会福祉協議会",
       "url": "https://www.yatsushiro-shakyo.jp/",
-      "hubs": [],
+      "hubs": [
+        "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_home.html"
+      ],
       "confirmedAt": "2026-08-16",
-      "checkedAt": "2026-11-19T06:40:28.176Z",
-      "pagesFetched": 3,
+      "checkedAt": "2026-11-19T08:29:14.441Z",
+      "pagesFetched": 4,
       "retrievalIssue": null,
       "retainedCount": 0,
       "updates": [
         {
+          "title": "【災害ボランティア（ 個人 ）申し込み（第１１弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#voboshuu11",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "【災害ボランティア（ 団体 ）申し込み（第９弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#dantai9",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "【災害ボランティア（ 個人 ）申し込み（第１０弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#voboshuu10",
+          "date": "2026-11-05"
+        },
+        {
           "title": "令和8年熊本地震による被災世帯に対する生活福祉資金（緊急小口資金）特例貸付について(受付期限10月30日(金)まで)",
           "url": "https://www.yatsushiro-shakyo.jp/oshirase_fukushishikin.html",
           "date": "2026-10-30"
+        },
+        {
+          "title": "【“緊急”〔 ニーズ（ご依頼）の受付〕ご依頼は早めに！！】",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_oshirase_needs.html",
+          "date": "2026-10-27"
+        },
+        {
+          "title": "【“重要”〔 支援活動日が１１月から金曜日、土曜日に集約されます 〕】",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_oshirase_volunteer.html",
+          "date": "2026-10-27"
+        },
+        {
+          "title": "【災害ボランティア（団体）申し込み（第８弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#dantai8",
+          "date": "2026-10-22"
+        },
+        {
+          "title": "【災害ボランティア（個人）申し込み（第９弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#voboshuu9",
+          "date": "2026-10-22"
+        },
+        {
+          "title": "【災害ボランティア関係「台風接近の対応（ボランティア活動中止）について",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_oshirase_typhoon30.html",
+          "date": "2026-10-21"
+        },
+        {
+          "title": "【災害ボランティア（団体）申し込み（第７弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#dantai7",
+          "date": "2026-10-08"
+        },
+        {
+          "title": "【災害ボランティア（個人）申し込み（第８弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#voboshuu8",
+          "date": "2026-10-08"
+        },
+        {
+          "title": "【災害ボランティア（団体）申し込み（第６弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#dantai6",
+          "date": "2026-09-24"
+        },
+        {
+          "title": "【災害ボランティア（個人）申し込み（第７弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#voboshuu7",
+          "date": "2026-09-24"
+        },
+        {
+          "title": "【災害ボランティア「ボランティアに関する問い合わせ先」】 2026.09.10【災害ボランティア（個人）申し込み（第6弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_oshirase2.html",
+          "date": "2026-09-14"
+        },
+        {
+          "title": "【災害ボランティア（団体）申し込み（第5弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#dantai5",
+          "date": "2026-09-10"
         },
         {
           "title": "災害ボランティア関係「9/7（月） ボランティア活動の再開」について",
@@ -270,9 +344,39 @@
           "date": "2026-09-07"
         },
         {
+          "title": "【9/7の災害ボランティアセンター活動の再開】について",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_oshirase_katudou_saikai.html",
+          "date": "2026-09-06"
+        },
+        {
           "title": "災害ボランティア関係「9/5（土）、9/6（日）ボランティア活動の中止」について",
           "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_oshirase_ame_katudou_chushi.html",
           "date": "2026-09-05"
+        },
+        {
+          "title": "【災害ボランティア（団体）申し込み（第4弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#dantai4",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "【災害ボランティア（個人）申し込み（第5弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#voboshuu5",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "【台風24号接近に伴う活動の中止（9/4、9/5）について】",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_oshirase_typhoon24.html",
+          "date": "2026-09-02"
+        },
+        {
+          "title": "【災害ボランティア（団体）申し込み（第3弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#dantai3",
+          "date": "2026-08-27"
+        },
+        {
+          "title": "【災害ボランティア（個人）申し込み（第4弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#voboshuu4",
+          "date": "2026-08-27"
         },
         {
           "title": "「令和8年8月27日からの大雨災害義援金」の受付が始まりました",
@@ -280,14 +384,24 @@
           "date": "2026-08-27"
         },
         {
+          "title": "【災害ボランティア（個人）申し込み（第3弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html",
+          "date": "2026-08-20"
+        },
+        {
+          "title": "【災害ボランティア（団体）申し込み（第2弾）】募集開始",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#dantai2",
+          "date": "2026-08-20"
+        },
+        {
+          "title": "【専用ダイヤル】へお願いいたします（重要）",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_oshirase.html",
+          "date": "2026-08-15"
+        },
+        {
           "title": "「令和8年熊本地震災害義援金」の受付期限が延長されました",
           "url": "https://www.yatsushiro-shakyo.jp/oshirase_nisseki_R08kumamotojishin2.html",
           "date": "2026-08-11"
-        },
-        {
-          "title": "災害ボランティア関係「台風接近の対応（ボランティア活動中止）について」",
-          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_oshirase_typhoon30.html",
-          "date": "2026-08-10"
         },
         {
           "title": "「令和 8 年台風１８号災害義援金」の受付が始まりました",
@@ -296,7 +410,7 @@
         },
         {
           "title": "災害ボランティア関係「団体活動申し込みが変わりました」",
-          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_volunteer.html#vodantai",
           "date": "2026-08-08"
         },
         {
@@ -308,6 +422,11 @@
           "title": "「令和8年熊本地震災害義援金」の受付が開始されました",
           "url": "https://www.yatsushiro-shakyo.jp/oshirase_nisseki_R08kumamotojishin.html",
           "date": "2026-08-08"
+        },
+        {
+          "title": "【被災された皆様へ】",
+          "url": "https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_hisai.html",
+          "date": "2026-08-05"
         }
       ]
     },
@@ -319,8 +438,8 @@
         "https://www.utoshakyou.jp/volunteer2026.html"
       ],
       "confirmedAt": "2026-08-16",
-      "checkedAt": "2026-11-19T06:40:30.094Z",
-      "pagesFetched": 5,
+      "checkedAt": "2026-11-19T08:29:18.004Z",
+      "pagesFetched": 8,
       "retrievalIssue": null,
       "retainedCount": 0,
       "updates": [
@@ -415,9 +534,11 @@
       "municipality": "宇城市",
       "name": "宇城市社会福祉協議会",
       "url": "https://www.shakyou-uki.jp/",
-      "hubs": [],
+      "hubs": [
+        "https://www.shakyou-uki.jp/category/oshirase/"
+      ],
       "confirmedAt": "2026-08-16",
-      "checkedAt": "2026-11-19T06:42:08.860Z",
+      "checkedAt": "2026-11-19T08:31:06.762Z",
       "pagesFetched": 40,
       "retrievalIssue": null,
       "retainedCount": 5,
@@ -488,9 +609,11 @@
       "municipality": "益城町",
       "name": "益城町社会福祉協議会",
       "url": "https://www.mashiki-shakyo.or.jp/",
-      "hubs": [],
+      "hubs": [
+        "https://www.mashiki-shakyo.or.jp/news"
+      ],
       "confirmedAt": "2026-08-16",
-      "checkedAt": "2026-11-19T06:42:26.926Z",
+      "checkedAt": "2026-11-19T08:31:29.812Z",
       "pagesFetched": 40,
       "retrievalIssue": null,
       "retainedCount": 1,
@@ -576,9 +699,11 @@
       "municipality": "氷川町",
       "name": "氷川町社会福祉協議会",
       "url": "https://hikawa-syakyo.jp/",
-      "hubs": [],
+      "hubs": [
+        "https://hikawa-syakyo.jp/news/"
+      ],
       "confirmedAt": "2026-08-16",
-      "checkedAt": "2026-11-19T06:42:48.334Z",
+      "checkedAt": "2026-11-19T08:31:56.787Z",
       "pagesFetched": 40,
       "retrievalIssue": null,
       "retainedCount": 1,
@@ -789,9 +914,11 @@
       "municipality": "芦北町",
       "name": "芦北町社会福祉協議会",
       "url": "https://www.ashikita-shakyo.com/",
-      "hubs": [],
+      "hubs": [
+        "https://www.ashikita-shakyo.com/news/"
+      ],
       "confirmedAt": "2026-08-16",
-      "checkedAt": "2026-11-19T06:43:06.642Z",
+      "checkedAt": "2026-11-19T08:32:17.131Z",
       "pagesFetched": 40,
       "retrievalIssue": null,
       "retainedCount": 0,
@@ -857,17 +984,49 @@
       "municipality": "美里町",
       "name": "美里町社会福祉協議会",
       "url": "http://misatoshakyo.or.jp/",
-      "hubs": [],
+      "hubs": [
+        "http://misatoshakyo.or.jp/pages/372/detail=1/b_id=889/view=list/block889_limit=20#block889"
+      ],
       "confirmedAt": "2026-08-16",
-      "checkedAt": "2026-11-19T06:43:08.904Z",
-      "pagesFetched": 2,
+      "checkedAt": "2026-11-19T08:32:38.116Z",
+      "pagesFetched": 14,
       "retrievalIssue": null,
-      "retainedCount": 2,
+      "retainedCount": 0,
       "updates": [
+        {
+          "title": "今後のボランティア活動についてのお知らせ（１１月７日）",
+          "url": "https://misatoshakyo.or.jp/pages/451/",
+          "date": "2026-11-07"
+        },
+        {
+          "title": "１１月中の災害ボランティア活動についてのお知らせ（１０月３1日更新）",
+          "url": "https://misatoshakyo.or.jp/pages/442/",
+          "date": "2026-10-31"
+        },
+        {
+          "title": "～10月9日の災害ボランティアを募集します！",
+          "url": "https://misatoshakyo.or.jp/pages/450/",
+          "date": "2026-10-07"
+        },
         {
           "title": "令和8年熊本地震による被災世帯に対する生活福祉資金（緊急小口資金）特例貸付について",
           "url": "https://misatoshakyo.or.jp/pages/474/",
           "date": "2026-10-06"
+        },
+        {
+          "title": "今後のボランティア活動の予定について（１０月３日更新）",
+          "url": "https://misatoshakyo.or.jp/pages/449/",
+          "date": "2026-10-03"
+        },
+        {
+          "title": "９月２０日（土）のボランティア活動について",
+          "url": "https://misatoshakyo.or.jp/pages/448/",
+          "date": "2026-09-20"
+        },
+        {
+          "title": "（木）の災害ボランティアセンターの活動の中止について",
+          "url": "https://misatoshakyo.or.jp/pages/447/",
+          "date": "2026-09-18"
         },
         {
           "title": "美里町災害ボランティアセンター閉所について",
@@ -875,9 +1034,19 @@
           "date": "2026-09-18"
         },
         {
+          "title": "９月１０日（水）のボランティア活動休止について",
+          "url": "https://misatoshakyo.or.jp/pages/446/",
+          "date": "2026-09-10"
+        },
+        {
           "title": "９月８日～９月１０日の災害ボランティアを募集します！",
           "url": "https://misatoshakyo.or.jp/pages/470/",
           "date": "2026-09-08"
+        },
+        {
+          "title": "（木）の災害ボランティアセンターの活動の中止について",
+          "url": "https://misatoshakyo.or.jp/pages/443/",
+          "date": "2026-09-04"
         },
         {
           "title": "【お知らせ】8月31日（月）～9月7日（月）におけるボランティアセンターの活動について",
@@ -892,12 +1061,37 @@
         {
           "title": "８月２２日～８月３０日の災害ボランティアを募集します！",
           "url": "https://misatoshakyo.or.jp/pages/467/",
-          "date": "2026-08-18"
+          "date": "2026-08-22"
         },
         {
           "title": "令和8年熊本地震による被災世帯に対する生活福祉資金（緊急小口資金）特例貸付について",
           "url": "https://misatoshakyo.or.jp/pages/466/",
           "date": "2026-08-17"
+        },
+        {
+          "title": "８月１５日～８月２１日の災害ボランティアを募集します！",
+          "url": "https://misatoshakyo.or.jp/pages/465/",
+          "date": "2026-08-15"
+        },
+        {
+          "title": "【重要】８月１２日・１３日・１４日の美里町災害ボランティアセンター混雑状況とお願いについて",
+          "url": "https://misatoshakyo.or.jp/pages/464/",
+          "date": "2026-08-12"
+        },
+        {
+          "title": "８月７日（金）～８月１４日（金）までのボランティア募集を締め切りました",
+          "url": "https://misatoshakyo.or.jp/pages/463/",
+          "date": "2026-08-07"
+        },
+        {
+          "title": "令和８年熊本地震に伴う美里町災害ボランティアセンターの受付について",
+          "url": "https://misatoshakyo.or.jp/pages/455/",
+          "date": "2026-08-01"
+        },
+        {
+          "title": "令和８年熊本地震に伴う災害ボランティアセンター開設準備中のお知らせ",
+          "url": "https://misatoshakyo.or.jp/pages/454/",
+          "date": "2026-07-30"
         }
       ]
     },
@@ -905,10 +1099,12 @@
       "municipality": "御船町",
       "name": "御船町社会福祉協議会",
       "url": "https://mifune-shakyo.jp/",
-      "hubs": [],
+      "hubs": [
+        "https://mifune-shakyo.jp/pages/51/detail=1/b_id=269/view=list/block269_limit=20#block269"
+      ],
       "confirmedAt": "2026-08-16",
-      "checkedAt": "2026-11-19T06:43:09.960Z",
-      "pagesFetched": 2,
+      "checkedAt": "2026-11-19T08:32:44.684Z",
+      "pagesFetched": 5,
       "retrievalIssue": null,
       "retainedCount": 0,
       "updates": [
@@ -916,6 +1112,11 @@
           "title": "令和８年熊本地震による生活福祉資金（緊急小口資金）特例貸付のご案内",
           "url": "https://mifune-shakyo.jp/files/libs/1049/202610061739362728.pdf",
           "date": "2026-10-06"
+        },
+        {
+          "title": "令和8年7月28日の地震で被害を受けられた皆さまへ",
+          "url": "https://mifune-shakyo.jp/pages/51/detail=1/b_id=269/r_id=52#block269-52",
+          "date": "2026-07-28"
         }
       ]
     },
@@ -923,16 +1124,23 @@
       "municipality": "嘉島町",
       "name": "嘉島町社会福祉協議会",
       "url": "http://kashima-shakyo.or.jp/",
-      "hubs": [],
+      "hubs": [
+        "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/view=list/block1_limit=20#block1"
+      ],
       "confirmedAt": "2026-08-16",
-      "checkedAt": "2026-11-19T06:43:11.047Z",
-      "pagesFetched": 3,
+      "checkedAt": "2026-11-19T08:32:47.557Z",
+      "pagesFetched": 6,
       "retrievalIssue": null,
-      "retainedCount": 0,
+      "retainedCount": 10,
       "updates": [
         {
           "title": "令和8年熊本地震による生活福祉資金貸付(緊急小口資金)特例貸付の受付終了について",
           "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=144",
+          "date": "2026-10-30"
+        },
+        {
+          "title": "令和8年熊本地震による生活福祉資金貸付(緊急小口資金)特例貸付の受付終了について",
+          "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=144#block1-144",
           "date": "2026-10-30"
         },
         {
@@ -941,8 +1149,18 @@
           "date": "2026-08-22"
         },
         {
+          "title": "嘉島町災害ボランティアセンター閉所について",
+          "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=137#block1-137",
+          "date": "2026-08-22"
+        },
+        {
           "title": "令和８年熊本地震による生活福祉資金（緊急小口資金）特例貸付のご案内",
           "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=132",
+          "date": "2026-08-17"
+        },
+        {
+          "title": "令和８年熊本地震による生活福祉資金（緊急小口資金）特例貸付のご案内",
+          "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=132#block1-132",
           "date": "2026-08-17"
         },
         {
@@ -951,8 +1169,18 @@
           "date": "2026-08-11"
         },
         {
+          "title": "嘉島町災害ボランティアセンターのお盆期間中（令和８年８月１１日（火）～令和８年８月１６日（日））のボランティア活動休止について",
+          "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=127#block1-127",
+          "date": "2026-08-11"
+        },
+        {
           "title": "嘉島町災害ボランティアセンターのボランティア事前受付（R8/8/8～8/10）について",
           "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=124",
+          "date": "2026-08-08"
+        },
+        {
+          "title": "嘉島町災害ボランティアセンターのボランティア事前受付（R8/8/8～8/10）について",
+          "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=124#block1-124",
           "date": "2026-08-08"
         },
         {
@@ -961,8 +1189,18 @@
           "date": "2026-08-08"
         },
         {
+          "title": "嘉島町災害ボランティアセンターのボランティア事前受付（R8/8/17～）について",
+          "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=129#block1-129",
+          "date": "2026-08-08"
+        },
+        {
           "title": "嘉島町災害ボランティアセンターのボランティア事前受付（R8/8/17～8/18）について",
           "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=130",
+          "date": "2026-08-08"
+        },
+        {
+          "title": "嘉島町災害ボランティアセンターのボランティア事前受付（R8/8/17～8/18）について",
+          "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=130#block1-130",
           "date": "2026-08-08"
         },
         {
@@ -971,13 +1209,28 @@
           "date": "2026-08-08"
         },
         {
+          "title": "嘉島町災害ボランティアセンターのボランティア事前受付（R8/8/21～8/22）について",
+          "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=135#block1-135",
+          "date": "2026-08-08"
+        },
+        {
           "title": "嘉島町災害ボランティアセンターのボランティア事前受付（R8/8/28）について",
           "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=138",
           "date": "2026-08-08"
         },
         {
+          "title": "嘉島町災害ボランティアセンターのボランティア事前受付（R8/8/28）について",
+          "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=138#block1-138",
+          "date": "2026-08-08"
+        },
+        {
           "title": "令和８年熊本地震に伴う「嘉島町ボランティアセンター」の開設について",
           "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=120",
+          "date": "2026-07-31"
+        },
+        {
+          "title": "令和８年熊本地震に伴う「嘉島町ボランティアセンター」の開設について",
+          "url": "http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/r_id=120#block1-120",
           "date": "2026-07-31"
         }
       ]
@@ -986,12 +1239,16 @@
       "municipality": "甲佐町",
       "name": "甲佐町社会福祉協議会",
       "url": "http://kosa-shakyo.or.jp/",
-      "hubs": [],
+      "hubs": [
+        "http://kosa-shakyo.or.jp/pages/50/",
+        "http://kosa-shakyo.or.jp/pages/53/",
+        "http://kosa-shakyo.or.jp/pages/61/detail=1/b_id=5/view=list/block5_limit=20#block5"
+      ],
       "confirmedAt": "2026-08-16",
-      "checkedAt": "2026-11-19T06:43:11.879Z",
-      "pagesFetched": 1,
+      "checkedAt": "2026-11-19T08:33:01.771Z",
+      "pagesFetched": 22,
       "retrievalIssue": null,
-      "retainedCount": 0,
+      "retainedCount": 2,
       "updates": [
         {
           "title": "地域支え合いセンター 令和９年度採用の職員採用試験を行います",
@@ -1002,6 +1259,51 @@
           "title": "甲佐町災害ボランティアセンター閉所・移行のお知らせ",
           "url": "https://kosa-shakyo.or.jp/pages/50/",
           "date": "2026-10-01"
+        },
+        {
+          "title": "甲佐町災害ボランティアセンター閉所・移行のお知らせ",
+          "url": "https://kosa-shakyo.or.jp/pages/50/#block523",
+          "date": "2026-10-01"
+        },
+        {
+          "title": "９月１６日以降の災害ボランティアセンター活動日について",
+          "url": "https://kosa-shakyo.or.jp/pages/50/#block473",
+          "date": "2026-09-16"
+        },
+        {
+          "title": "９月１２日までの災害ボランティアセンター活動日について（定員に達しましたので締め切らせていただきました）",
+          "url": "https://kosa-shakyo.or.jp/pages/50/#block517",
+          "date": "2026-09-12"
+        },
+        {
+          "title": "９月５日（土）災害ボランティア活動について",
+          "url": "https://kosa-shakyo.or.jp/pages/50/#block521",
+          "date": "2026-09-05"
+        },
+        {
+          "title": "９月４日（金）災害ボランティア活動について",
+          "url": "https://kosa-shakyo.or.jp/pages/50/#block518",
+          "date": "2026-09-04"
+        },
+        {
+          "title": "８月２２日から８月２９日の災害ボランティアセンター活動日について（定員に達しましたので締め切らせていただきました）",
+          "url": "https://kosa-shakyo.or.jp/pages/50/#block503",
+          "date": "2026-08-22"
+        },
+        {
+          "title": "８月２２日・８月２５日・８月２８日・８月２９日の災害ボランティアセンター活動日について",
+          "url": "https://kosa-shakyo.or.jp/pages/50/#block504",
+          "date": "2026-08-22"
+        },
+        {
+          "title": "８月１２日のボランティア募集について（定員になりましたので締め切らせていただきました）",
+          "url": "https://kosa-shakyo.or.jp/pages/50/#block501",
+          "date": "2026-08-12"
+        },
+        {
+          "title": "甲佐町災害ボランティアセンターを開所しました",
+          "url": "https://kosa-shakyo.or.jp/pages/50/#block460",
+          "date": "2026-07-31"
         }
       ]
     }

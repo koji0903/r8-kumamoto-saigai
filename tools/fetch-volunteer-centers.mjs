@@ -42,17 +42,17 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 // https://www.fukushi-kumamoto.or.jp/pages/53/ （氷川町・芦北町は一覧にURLの
 // 記載がないため、各社協サイトを個別に確認した）。
 const councils = [
-  { municipality: "熊本市", name: "熊本市社会福祉協議会", url: "https://www.kumamoto-city-csw.or.jp/", hubs: [], confirmedAt: "2026-08-16" },
-  { municipality: "八代市", name: "八代市社会福祉協議会", url: "https://www.yatsushiro-shakyo.jp/", hubs: [], confirmedAt: "2026-08-16" },
+  { municipality: "熊本市", name: "熊本市社会福祉協議会", url: "https://www.kumamoto-city-csw.or.jp/", hubs: ["https://www.kumamoto-city-csw.or.jp/news/"], confirmedAt: "2026-08-16" },
+  { municipality: "八代市", name: "八代市社会福祉協議会", url: "https://www.yatsushiro-shakyo.jp/", hubs: ["https://www.yatsushiro-shakyo.jp/homepage_new/R08_saigai_vc_home.html"], confirmedAt: "2026-08-16" },
   { municipality: "宇土市", name: "宇土市社会福祉協議会", url: "https://www.utoshakyou.jp/", hubs: ["https://www.utoshakyou.jp/volunteer2026.html"], confirmedAt: "2026-08-16" },
-  { municipality: "宇城市", name: "宇城市社会福祉協議会", url: "https://www.shakyou-uki.jp/", hubs: [], confirmedAt: "2026-08-16" },
-  { municipality: "益城町", name: "益城町社会福祉協議会", url: "https://www.mashiki-shakyo.or.jp/", hubs: [], confirmedAt: "2026-08-16" },
-  { municipality: "氷川町", name: "氷川町社会福祉協議会", url: "https://hikawa-syakyo.jp/", hubs: [], confirmedAt: "2026-08-16" },
-  { municipality: "芦北町", name: "芦北町社会福祉協議会", url: "https://www.ashikita-shakyo.com/", hubs: [], confirmedAt: "2026-08-16" },
-  { municipality: "美里町", name: "美里町社会福祉協議会", url: "http://misatoshakyo.or.jp/", hubs: [], confirmedAt: "2026-08-16" },
-  { municipality: "御船町", name: "御船町社会福祉協議会", url: "https://mifune-shakyo.jp/", hubs: [], confirmedAt: "2026-08-16" },
-  { municipality: "嘉島町", name: "嘉島町社会福祉協議会", url: "http://kashima-shakyo.or.jp/", hubs: [], confirmedAt: "2026-08-16" },
-  { municipality: "甲佐町", name: "甲佐町社会福祉協議会", url: "http://kosa-shakyo.or.jp/", hubs: [], confirmedAt: "2026-08-16" }
+  { municipality: "宇城市", name: "宇城市社会福祉協議会", url: "https://www.shakyou-uki.jp/", hubs: ["https://www.shakyou-uki.jp/category/oshirase/"], confirmedAt: "2026-08-16" },
+  { municipality: "益城町", name: "益城町社会福祉協議会", url: "https://www.mashiki-shakyo.or.jp/", hubs: ["https://www.mashiki-shakyo.or.jp/news"], confirmedAt: "2026-08-16" },
+  { municipality: "氷川町", name: "氷川町社会福祉協議会", url: "https://hikawa-syakyo.jp/", hubs: ["https://hikawa-syakyo.jp/news/"], confirmedAt: "2026-08-16" },
+  { municipality: "芦北町", name: "芦北町社会福祉協議会", url: "https://www.ashikita-shakyo.com/", hubs: ["https://www.ashikita-shakyo.com/news/"], confirmedAt: "2026-08-16" },
+  { municipality: "美里町", name: "美里町社会福祉協議会", url: "http://misatoshakyo.or.jp/", hubs: ["http://misatoshakyo.or.jp/pages/372/detail=1/b_id=889/view=list/block889_limit=20#block889"], confirmedAt: "2026-08-16" },
+  { municipality: "御船町", name: "御船町社会福祉協議会", url: "https://mifune-shakyo.jp/", hubs: ["https://mifune-shakyo.jp/pages/51/detail=1/b_id=269/view=list/block269_limit=20#block269"], confirmedAt: "2026-08-16" },
+  { municipality: "嘉島町", name: "嘉島町社会福祉協議会", url: "http://kashima-shakyo.or.jp/", hubs: ["http://kashima-shakyo.or.jp/publics/index/1/detail=1/b_id=1/view=list/block1_limit=20#block1"], confirmedAt: "2026-08-16" },
+  { municipality: "甲佐町", name: "甲佐町社会福祉協議会", url: "http://kosa-shakyo.or.jp/", hubs: ["http://kosa-shakyo.or.jp/pages/50/", "http://kosa-shakyo.or.jp/pages/53/", "http://kosa-shakyo.or.jp/pages/61/detail=1/b_id=5/view=list/block5_limit=20#block5"], confirmedAt: "2026-08-16" }
 ];
 
 const get = async url => {
@@ -87,19 +87,20 @@ const text = value => decode(value.replace(/<script[\s\S]*?<\/script>/gi, " ").r
 // トップページだけでは新着の数件しか見えない。「お知らせ一覧」「新着情報」
 // といった一覧ページとページ送りだけを辿る。個別記事は辿らない（表題・日付・
 // URLは一覧側で取れるうえ、たどると巡回が際限なく広がるため）。
-const detailLike = url => /detail=1|r_id=|\.pdf($|\?)/i.test(url);
+// ※ NetCommons等の view=list は一覧ページとして辿る。
+const detailLike = url => (!/view=list/i.test(url) && (/detail=1/i.test(url) || /r_id=/i.test(url))) || /\.pdf($|\?)/i.test(url);
 const listLike = (url, title) =>
   !detailLike(url)
-  && (/(?:news|topics|oshirase|whatsnew|information|blog|archive|category|page[\/=]\d+|p=\d+)/i.test(url)
+  && (/(?:news|topics|oshirase|whatsnew|information|blog|archive|category|page[\/=]\d+|p=\d+|view=list)/i.test(url)
     || /一覧|もっと見る|新着|お知らせ|バックナンバー|過去の|次へ|次の/u.test(title));
 
 // 災害VC・地域支え合い・被災者支援の発信として拾う表題。ボランティア募集・活動状況・ニーズ受付・地域支え合いセンターが中心。
 const isOtherDisaster = value =>
-  /平成28年|令和\s*[1-7]年|2025年|ベネズエラ|ミャンマー|トルコ|シリア|ウクライナ|能登|東日本|北海道|台湾|豪雨災害義援金/u.test(value);
+  /平成28年|令和\s*[1-79]年|令和\s*0?9年|202[0-57-9]年|ベネズエラ|ミャンマー|トルコ|シリア|ウクライナ|能登|東日本|北海道|台湾|豪雨災害義援金/u.test(value);
 
 const relevant = (value, url = "") =>
   !isOtherDisaster(value)
-  && (/災害ボランティア|災害VC|ボランティアセンター|ボランティア募集|ボランティア活動|活動報告|活動状況|ニーズ|支援活動|熊本地震|地震|被災|災害|第[0-9０-９一二三四五六七八九十]+期|地域支え合い|支え合いセンター|生活支援相談員/u.test(value)
+  && (/災害ボランティア|災害VC|ボランティアセンター|ボランティア募集|ボランティア活動|活動報告|活動状況|ニーズ|支援活動|熊本地震|地震|被災|災害|第[0-9０-９一二三四五六七八九十]+[期弾]|地域支え合い|支え合いセンター|生活支援相談員/u.test(value)
     || /volunteer|shien|jishin|saigai/i.test(url))
   // 社協サイトは他の災害の救援金募集も並べている。今回の地震の発信だけを拾う。
   && !/募集要項の見直し|入札/u.test(value);
@@ -144,7 +145,10 @@ for (const council of councils) {
       if (!title || title.length > 160) continue;
       let url;
       try { url = new URL(decode(match[1]), page.finalUrl); } catch { continue; }
-      url.hash = "";
+      // ページ内アンカーのうち、コンテンツ特定用（第○弾アンカーやブロックID）以外は削る
+      if (url.hash && !/(?:voboshuu|dantai|block\d+)/i.test(url.hash)) {
+        url.hash = "";
+      }
       if (!/^https?:$/.test(url.protocol)) continue;
       if (url.hostname !== origin && !url.hostname.endsWith(`.${origin}`)) continue;
       if (isOtherDisaster(title)) continue;
@@ -176,7 +180,7 @@ for (const council of councils) {
       }
       let cleaned = cleanTitle(title) || title;
       cleaned = cleaned.replace(/を追加しました$/u, "").trim();
-      if (/^第[0-9０-９一二三四五六七八九十]+期募集$/.test(cleaned)) {
+      if (/^第[0-9０-９一二三四五六七八九十]+[期弾]募集$/.test(cleaned)) {
         cleaned = `災害ボランティア ${cleaned}`;
       }
       if (sasaeaiMatch && !/地域支え合い|支え合い/u.test(cleaned)) {
