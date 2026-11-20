@@ -24,11 +24,9 @@ assert.ok(html.includes('R8.9.15〜R9.3.31'), '氷川町の延長後の申請期
 assert.ok(html.includes('契約期限を撤廃'), '氷川町の自費解体契約期限撤廃がありません');
 assert.ok(html.includes('050-6887-2407'), '氷川町の予約電話1がありません');
 assert.ok(html.includes('050-6887-3391'), '氷川町の予約電話2がありません');
-assert.ok(html.includes('原則 R8.10.30まで'), '益城町の原則申請期限がありません');
-assert.ok(html.includes('原則期限 10/30'), '益城町の期限表示がありません');
+assert.ok(html.includes('R8.9.10〜R8.12.28'), '益城町の最新申請期限（12月28日）がありません');
 assert.ok(!html.includes('本日が原則期限'), '日付経過後に誤解を招く相対日付が残っています');
-assert.ok(html.includes('特別事情は11月以降も個別相談'), '益城町の特別事情相談案内がありません');
-assert.ok(html.includes('11/30受付終了'), '益城町の被災証明書発行期限の案内がありません');
+assert.ok(html.includes('11/30まで'), '益城町のり災証明(2次調査)・被災証明の期限案内がありません');
 assert.ok(html.includes('https://www.vill.nishihara.kumamoto.jp/kiji0032036/index.html'), '西原村の公式URLがありません');
 assert.ok(html.includes('223件'), '宇土市の最新申請件数がありません');
 assert.ok(html.includes('265棟'), '宇土市の最新申請棟数がありません');

@@ -340,9 +340,9 @@ window.DEMOLITION_DATA = {
       "id": "mashiki",
       "name": "益城町",
       "damageCriteria": "全壊〜半壊",
-      "period": "<b>原則 R8.10.30まで</b><br><small>特別事情は11月以降も個別相談／被災証明書発行は11/30受付終了</small>",
-      "statusBadge": "closing-soon",
-      "statusLabel": "原則期限 10/30",
+      "period": "<b>R8.9.10〜R8.12.28</b><br><small>り災証明(2次調査)・被災証明(公費解体用)は11/30まで</small>",
+      "statusBadge": "accepting",
+      "statusLabel": "窓口受付",
       "statusSub": null,
       "desk": "益城町役場 住民課環境衛生係",
       "phones": [
@@ -394,7 +394,7 @@ window.DEMOLITION_DATA = {
         }
       ],
       "phoneNote": "（代表）",
-      "selfDemolition": "自費解体はR9.1.29まで<br><small>契約前に必ず事前相談</small>",
+      "selfDemolition": "自費解体はR9.2.26まで<br><small>契約前に必ず事前相談</small>",
       "detailUrl": "https://www.vill.nishihara.kumamoto.jp/kiji0032036/index.html",
       "detailLabel": "西原村公式 ↗",
       "isExternal": true
