@@ -1,0 +1,131 @@
+{
+  "description": "重要ガイドページが参照している自治体公式一次情報URLの監視台帳",
+  "targets": [
+    {
+      "id": "uto-demolition",
+      "municipality": "宇土市",
+      "title": "被災家屋等の解体・撤去（公費解体・自費解体）",
+      "url": "https://www.city.uto.lg.jp/article/view/1307/16892.html",
+      "guidePages": ["uto-demolition.html", "demolition.html", "uto-handbook.html"]
+    },
+    {
+      "id": "uto-waste",
+      "municipality": "宇土市",
+      "title": "災害ごみの搬入・仮置場運用",
+      "url": "https://www.city.uto.lg.jp/article/view/1303/16352.html",
+      "guidePages": ["uto-waste.html", "priority-support-summary.html", "uto-handbook.html"]
+    },
+    {
+      "id": "uto-repair",
+      "municipality": "宇土市",
+      "title": "被災した住宅の応急修理制度",
+      "url": "https://www.city.uto.lg.jp/article/view/1243/16523.html",
+      "guidePages": ["uto-repair.html", "uto-housing.html"]
+    },
+    {
+      "id": "uto-housing-desk",
+      "municipality": "宇土市",
+      "title": "住宅の応急修理などの申請窓口（すまいの相談窓口）",
+      "url": "https://www.city.uto.lg.jp/article/view/1307/16522.html",
+      "guidePages": ["uto-housing.html", "uto-handbook.html"]
+    },
+    {
+      "id": "uto-interest-subsidy",
+      "municipality": "宇土市",
+      "title": "中小企業等災害復旧資金利子補給金",
+      "url": "https://www.city.uto.lg.jp/article/view/1321/17233.html",
+      "guidePages": ["uto-interest-subsidy.html"]
+    },
+    {
+      "id": "uki-demolition",
+      "municipality": "宇城市",
+      "title": "被災した家屋等の解体・撤去について",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2641256",
+      "guidePages": ["uki-demolition.html", "demolition.html"]
+    },
+    {
+      "id": "uki-waste",
+      "municipality": "宇城市",
+      "title": "災害ごみの搬入・仮置場カレンダー",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2607719",
+      "guidePages": ["uki-support.html", "priority-support-summary.html"]
+    },
+    {
+      "id": "uki-temp-housing",
+      "municipality": "宇城市",
+      "title": "建設型応急住宅の入居募集",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2628356",
+      "guidePages": ["uki-support.html", "temporary-housing.html"]
+    },
+    {
+      "id": "uki-repair",
+      "municipality": "宇城市",
+      "title": "住宅の応急修理制度",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/sumai/sonota_sumai/2607269",
+      "guidePages": ["uki-support.html"]
+    },
+    {
+      "id": "uki-emergency-hub",
+      "municipality": "宇城市",
+      "title": "令和8年熊本地震 支援情報まとめ",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "guidePages": ["uki-support.html", "uki-consultation.html"]
+    },
+    {
+      "id": "kumamoto-risai",
+      "municipality": "熊本市",
+      "title": "り災証明書の申請受付・申請期間",
+      "url": "https://www.city.kumamoto.jp/kiji0032451/index.html",
+      "guidePages": ["kumamoto-support.html", "risai-certificate.html"]
+    },
+    {
+      "id": "kumamoto-demolition",
+      "municipality": "熊本市",
+      "title": "被災家屋等の公費解体・自費解体",
+      "url": "https://www.city.kumamoto.jp/kiji00372403/index.html",
+      "guidePages": ["kumamoto-demolition.html", "demolition.html", "kumamoto-support.html"]
+    },
+    {
+      "id": "kumamoto-support-book",
+      "municipality": "熊本市",
+      "title": "被災者支援情報まとめ",
+      "url": "https://www.city.kumamoto.jp/kiji00372110/index.html",
+      "guidePages": ["kumamoto-support.html"]
+    },
+    {
+      "id": "hikawa-demolition",
+      "municipality": "氷川町",
+      "title": "被災家屋等の解体・撤去について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036794/index.html",
+      "guidePages": ["hikawa-demolition.html", "demolition.html"]
+    },
+    {
+      "id": "hikawa-self-demolition",
+      "municipality": "氷川町",
+      "title": "自費解体・撤去費用の償還について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036841/index.html",
+      "guidePages": ["hikawa-demolition.html", "demolition.html"]
+    },
+    {
+      "id": "yatsushiro-demolition",
+      "municipality": "八代市",
+      "title": "公費解体・撤去について",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00327083/index.html",
+      "guidePages": ["yatsushiro-demolition.html", "demolition.html"]
+    },
+    {
+      "id": "mashiki-demolition",
+      "municipality": "益城町",
+      "title": "被災家屋等の公費解体・撤去について",
+      "url": "https://www.town.mashiki.lg.jp/kiji0038121/index.html",
+      "guidePages": ["demolition.html"]
+    },
+    {
+      "id": "nishihara-demolition",
+      "municipality": "西原村",
+      "title": "被災家屋等の解体・撤去について",
+      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032036/index.html",
+      "guidePages": ["demolition.html"]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+name: ガイド公式一次情報の変更監視
+
+on:
+  schedule:
+    # 毎日 9:15 JST / 17:15 JST（自治体の公式更新を当日中に検知）
+    - cron: "15 0 * * *"
+    - cron: "15 8 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "監視だけを実行し、レポートのcommit/pushとIssue作成を行わない"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: monitor-guide-official-sources
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    name: 公式一次情報の変更（期限・窓口・運用）を監視
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v7
+
+      - name: Node.jsを準備
+        uses: actions/setup-node@v7
+        with:
+          node-version: "26"
+          package-manager-cache: false
+
+      - name: 公式一次情報の変更を監視
+        id: monitor
+        shell: bash
+        env:
+          GUIDE_WATCH_CONCURRENCY: "2"
+        run: |
+          set +e
+          node scripts/monitor-guide-official-sources.mjs --check > monitor-output.txt 2>&1
+          status=$?
+          set -e
+          cat monitor-output.txt
+          if [ "$status" -gt 1 ]; then
+            echo "::error::公式一次情報監視スクリプトが異常終了しました（終了コード ${status}）"
+            exit "$status"
+          fi
+          echo "changed=${status}" >> "$GITHUB_OUTPUT"
+          {
+            echo "## ガイド公式一次情報の変更監視"
+            echo ""
+            echo '```'
+            cat monitor-output.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$status" -eq 1 ]; then
+            echo "::warning::自治体公式ページの期限・窓口・運用等に変更を検出しました。Issueを確認して該当ガイドを更新してください。"
+          fi
+
+      - name: 変更検出をIssueに登録
+        if: steps.monitor.outputs.changed == '1' && inputs.dry_run != true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          title="【要ガイド更新】自治体公式一次情報の変更を検出（$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST')）"
+          {
+            echo "\`scripts/monitor-guide-official-sources.mjs\` が、ガイドページが参照している自治体公式ページの更新日・期限・窓口・運用記載の変更を検出しました。"
+            echo ""
+            echo "対応手順"
+            echo "1. 下の監視ログに記載された「対応ガイドページ」および \`priority-support-summary.html\` / \`demolition.html\` / \`uto-handbook.html\` 等の横断ページを確認する"
+            echo "2. 変更内容に合わせてガイドページを修正し、\`scripts/test-guide-freshness-consistency.mjs\` のガード条件も最新化する"
+            echo "3. \`npm run preflight\` を実行して全テスト合格を確認する"
+            echo ""
+            echo "<details open><summary>検出された変更ログ</summary>"
+            echo ""
+            echo '```'
+            cat monitor-output.txt
+            echo '```'
+            echo ""
+            echo "</details>"
+          } > issue-body.md
+          gh issue create --title "$title" --body-file issue-body.md || true
+
+      - name: 監視レポートを反映
+        if: inputs.dry_run != true
+        shell: bash
+        run: |
+          rm -f monitor-output.txt issue-body.md
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/guide-official-watch.json
+          if git diff --cached --quiet; then
+            echo "監視レポートの差分はありません。"
+            exit 0
+          fi
+          checked_at="$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST')"
+          git commit -m "ガイド公式一次情報の監視スナップショットを更新（${checked_at}）"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main; then
+              if git push origin HEAD:main; then
+                echo "反映しました（${attempt}回目）"
+                exit 0
+              fi
+            else
+              git rebase --abort || true
+              echo "::warning::rebaseに失敗しました。force pushは行いません。"
+              exit 1
+            fi
+          done

@@ -8,6 +8,7 @@
     "build": "node tools/build-seo.mjs",
     "check": "node tools/validate-site.mjs",
     "preflight": "node tools/validate-site.mjs --fix",
-    "monitor:living-support": "node scripts/monitor-living-support-coverage.mjs"
+    "monitor:living-support": "node scripts/monitor-living-support-coverage.mjs",
+    "monitor:guides": "node scripts/monitor-guide-official-sources.mjs"
   }
 }

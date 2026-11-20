@@ -78,6 +78,7 @@ const syntaxTargets = [
   "scripts/build-reconstruction-operations-status.mjs",
   "scripts/report-municipality-nav-quality.mjs",
   "scripts/monitor-reconstruction-sources.mjs",
+  "scripts/monitor-guide-official-sources.mjs",
   "scripts/reconstruction-source-change.mjs",
   "scripts/reconstruction-contact-document-policy.mjs",
   "scripts/reconstruction-eligibility-policy.mjs",
