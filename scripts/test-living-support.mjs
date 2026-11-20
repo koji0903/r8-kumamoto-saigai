@@ -7,7 +7,7 @@ console.log('宇城市・氷川町・八代市・熊本市 暮らしの支援・
 {
   console.log('--- 宇城市 (uki-living-support.html) ---');
   const html = fs.readFileSync('uki-living-support.html', 'utf8');
-  const expectedCount = 54;
+  const expectedCount = 55;
   assert.ok(html.includes('<title>宇城市：暮らしの支援・補助金 総合ガイド'), '宇城市：タイトルが正しくありません');
   assert.ok(html.includes('<meta name="description"'), '宇城市：descriptionがありません');
 
@@ -48,6 +48,8 @@ console.log('宇城市・氷川町・八代市・熊本市 暮らしの支援・
   assert.ok(html.includes('宇城市の起業・創業支援（ビジネスサポートセンター）'), '宇城市：起業・創業支援がありません');
   assert.ok(html.includes('被災者支援のための無料相談会'), '宇城市：無料相談会がありません');
   assert.ok(html.includes('被災者生活再建支援金'), '宇城市：被災者生活再建支援金がありません');
+  assert.ok(html.includes('被災者向け車両の無償貸出'), '宇城市：被災者向け車両の無償貸出がありません');
+  assert.ok(html.includes('https://www.city.uki.kumamoto.jp/toppage/important/2655208'), '宇城市：車両無償貸出の公式リンクがありません');
 
   assert.ok(html.includes('class="uto-sup-hero-inner"'), '宇城市：ヒーロー内の幅制限がありません');
   assert.ok(html.includes('class="uto-sup-shell"'), '宇城市：本文エリアの幅制限（uto-sup-shell）がありません');
@@ -110,7 +112,7 @@ console.log('宇城市・氷川町・八代市・熊本市 暮らしの支援・
 {
   console.log('--- 八代市 (yatsushiro-living-support.html) ---');
   const html = fs.readFileSync('yatsushiro-living-support.html', 'utf8');
-  const expectedCount = 47;
+  const expectedCount = 48;
   assert.ok(html.includes('<title>八代市：暮らしの支援・補助金 総合ガイド'), '八代市：タイトルが正しくありません');
   assert.ok(html.includes('<meta name="description"'), '八代市：descriptionがありません');
 
@@ -142,7 +144,10 @@ console.log('宇城市・氷川町・八代市・熊本市 暮らしの支援・
   assert.ok(html.includes('八代市出産祝金（市独自）'), '八代市：出産祝金がありません');
   assert.ok(html.includes('八代産材利用促進事業補助金'), '八代市：八代産材補助がありません');
   assert.ok(html.includes('八代市創業支援事業補助金'), '八代市：創業支援補助がありません');
-  assert.ok(html.includes('八代市 被災者応援ガイドブック（第8版連携）'), '八代市：被災者応援第8版連携がありません');
+  assert.ok(html.includes('八代市 被災者応援ガイドブック（現行版案内）'), '八代市：被災者応援ガイド現行版案内がありません');
+  assert.ok(html.includes('住宅用太陽光発電システム・蓄電池設置補助金'), '八代市：太陽光・蓄電池設置補助金がありません');
+  assert.ok(html.includes('https://www.city.yatsushiro.lg.jp/kiji00325924/index.html'), '八代市：太陽光・蓄電池補助金の公式リンクがありません');
+  assert.ok(html.includes('令和8年10月28日時点の「被災者応援ガイドブック第9版」'), '八代市：被災者応援ガイド第9版の現行表記がありません');
   assert.ok(html.includes('セーフティネット保証4号（中小企業支援）'), '八代市：セーフティネット4号がありません');
 
   assert.ok(html.includes('class="uto-sup-hero-inner"'), '八代市：ヒーロー内の幅制限がありません');
