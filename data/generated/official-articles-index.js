@@ -1,20 +1,20 @@
 // 生成物・直接編集しない。生成: node tools/archive-official-articles.mjs
 window.OFFICIAL_ARTICLES_INDEX = {
   "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html": {
-    "id": "yatsushiro-20261119-ad77f47a",
-    "htmlPath": "official-articles/yatsushiro-20261119-ad77f47a.html",
+    "id": "yatsushiro-20261120-ad77f47a",
+    "htmlPath": "official-articles/yatsushiro-20261120-ad77f47a.html",
     "title": "令和8年熊本地震 関連情報",
     "municipality": "八代市",
-    "date": "2026-11-19",
-    "retrievedAt": "2026-11-19T03:05:31.905Z"
+    "date": "2026-11-20",
+    "retrievedAt": "2026-11-20T19:33:30.697Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699": {
-    "id": "uki-20261119-7d9d4e13",
-    "htmlPath": "official-articles/uki-20261119-7d9d4e13.html",
-    "title": "2026年11月19日 令和8年熊本地震 関連情報 （11月19日8時00分更新）",
+    "id": "uki-20261120-7d9d4e13",
+    "htmlPath": "official-articles/uki-20261120-7d9d4e13.html",
+    "title": "2026年11月20日 令和8年熊本地震 関連情報 （11月20日17時00分更新）",
     "municipality": "宇城市",
-    "date": "2026-11-19",
-    "retrievedAt": "2026-11-19T03:05:41.619Z"
+    "date": "2026-11-20",
+    "retrievedAt": "2026-11-20T19:33:29.756Z"
   },
   "https://localcms.city.minamata.lg.jp/page4895.html?type=top": {
     "id": "minamata-20261019-81bdc420",
@@ -601,12 +601,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-10-26T20:54:28.221Z"
   },
   "https://www.city.yamaga.kumamoto.jp/kinkyu.html": {
-    "id": "yamaga-20261119-ed5178f4",
-    "htmlPath": "official-articles/yamaga-20261119-ed5178f4.html",
-    "title": "震度速報 11月19日 2時24分",
+    "id": "yamaga-20261120-ed5178f4",
+    "htmlPath": "official-articles/yamaga-20261120-ed5178f4.html",
+    "title": "震度速報 11月20日 13時51分",
     "municipality": "山鹿市",
-    "date": "2026-11-19",
-    "retrievedAt": "2026-11-18T21:00:11.550Z"
+    "date": "2026-11-20",
+    "retrievedAt": "2026-11-20T19:33:34.152Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036841/index.html": {
     "id": "hikawa-20261028-f6d3a0a0",
@@ -1041,12 +1041,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-09T12:05:57.286Z"
   },
   "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23374.html": {
-    "id": "kamiamakusa-20261116-95a621df",
-    "htmlPath": "official-articles/kamiamakusa-20261116-95a621df.html",
+    "id": "kamiamakusa-20261119-95a621df",
+    "htmlPath": "official-articles/kamiamakusa-20261119-95a621df.html",
     "title": "令和8年熊本地震にかかる災害見舞金等の支給について",
     "municipality": "上天草市",
-    "date": "2026-11-16",
-    "retrievedAt": "2026-11-16T20:00:46.611Z"
+    "date": "2026-11-19",
+    "retrievedAt": "2026-11-20T19:33:38.588Z"
   },
   "https://www.town.mashiki.lg.jp/kiji0038259/index.html": {
     "id": "mashiki-20261102-eb8b1e4a",
@@ -1113,12 +1113,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-10T17:27:30.503Z"
   },
   "https://www.town.tsunagi.lg.jp/kinkyu/pub/default.aspx?c_id=9": {
-    "id": "tsunagi-20261119-6c30f109",
-    "htmlPath": "official-articles/tsunagi-20261119-6c30f109.html",
+    "id": "tsunagi-20261120-6c30f109",
+    "htmlPath": "official-articles/tsunagi-20261120-6c30f109.html",
     "title": "令和8年熊本地震における罹災証明手続きについて",
     "municipality": "津奈木町",
-    "date": "2026-11-19",
-    "retrievedAt": "2026-11-18T21:00:08.618Z"
+    "date": "2026-11-20",
+    "retrievedAt": "2026-11-20T19:33:35.618Z"
   },
   "https://www.town.mashiki.lg.jp/kiji0038270/index.html": {
     "id": "mashiki-20261109-fb003a76",
@@ -1351,5 +1351,45 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "津奈木町",
     "date": "2026-11-19",
     "retrievedAt": "2026-11-19T19:55:42.372Z"
+  },
+  "https://www.town.hikawa.kumamoto.jp/kiji0036915/index.html": {
+    "id": "hikawa-20261120-5e356447",
+    "htmlPath": "official-articles/hikawa-20261120-5e356447.html",
+    "title": "令和8年熊本地震における災害義援金の配分について",
+    "municipality": "氷川町",
+    "date": "2026-11-20",
+    "retrievedAt": "2026-11-20T19:33:27.786Z"
+  },
+  "https://localcms.city.minamata.lg.jp/page1924.html?type=top": {
+    "id": "minamata-20261120-46f204ea",
+    "htmlPath": "official-articles/minamata-20261120-46f204ea.html",
+    "title": "罹災（りさい）証明及び罹災届出証明の申請手続き",
+    "municipality": "水俣市",
+    "date": "2026-11-20",
+    "retrievedAt": "2026-11-20T19:33:32.715Z"
+  },
+  "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6103.html": {
+    "id": "kashima-20261120-28d62fb4",
+    "htmlPath": "official-articles/kashima-20261120-28d62fb4.html",
+    "title": "令和8年熊本地震にかかる寄附金の受付について",
+    "municipality": "嘉島町",
+    "date": "2026-11-20",
+    "retrievedAt": "2026-11-20T19:33:37.144Z"
+  },
+  "https://www.town.mashiki.lg.jp/kiji0038153/index.html": {
+    "id": "mashiki-20261117-0b7ea06a",
+    "htmlPath": "official-articles/mashiki-20261117-0b7ea06a.html",
+    "title": "【１１月３０日受付終了】公費解体等に要する被災証明書（被害判定記載）の発行について",
+    "municipality": "益城町",
+    "date": "2026-11-17",
+    "retrievedAt": "2026-11-20T19:33:40.503Z"
+  },
+  "https://www.town.kosa.lg.jp/q/aview/119/6336.html": {
+    "id": "kosa-20261117-994d2bcf",
+    "htmlPath": "official-articles/kosa-20261117-994d2bcf.html",
+    "title": "古民家交流拠点施設(「宿屋kugurido」・「trattoria San Vito」)",
+    "municipality": "甲佐町",
+    "date": "2026-11-17",
+    "retrievedAt": "2026-11-20T19:33:42.107Z"
   }
 };
