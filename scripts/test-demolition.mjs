@@ -4,6 +4,7 @@ import fs from 'node:fs';
 console.log('公費解体・自費解体 総合ガイドテスト開始');
 
 const html = fs.readFileSync('demolition.html', 'utf8');
+const ukiHtml = fs.readFileSync('uki-demolition.html', 'utf8');
 const css = fs.readFileSync('demolition.css', 'utf8');
 const topics = JSON.parse(fs.readFileSync('sources/site-topics.json', 'utf8'));
 
@@ -31,7 +32,8 @@ assert.ok(html.includes('11/30受付終了'), '益城町の被災証明書発行
 assert.ok(html.includes('https://www.vill.nishihara.kumamoto.jp/kiji0032036/index.html'), '西原村の公式URLがありません');
 assert.ok(html.includes('223件'), '宇土市の最新申請件数がありません');
 assert.ok(html.includes('265棟'), '宇土市の最新申請棟数がありません');
-assert.ok(html.includes('窓口受付'), '宇城市の現在の受付方式がありません');
+assert.ok(html.includes('電話 / Web・月〜土'), '宇城市の現在の受付方式がありません');
+assert.ok(html.includes('R8.9.24〜R9.3.31'), '宇城市の延長後の申請期間がありません');
 assert.ok(html.includes('https://www.town.kikuyo.lg.jp/kiji0035711/index.html'), '菊陽町の公式URLがありません');
 assert.ok(html.includes('R8.11.6〜'), '菊陽町の受付期間がありません');
 
@@ -39,7 +41,17 @@ assert.ok(!html.includes('電話予約（1日40枠・地区別日程）'), '宇�
 assert.ok(!html.includes('電話予約制（1日40枠・地区別）'), '宇城市の旧予約方式が残っています');
 assert.ok(!html.includes('事前届出必須'), '宇城市の未確認の必須表現が残っています');
 assert.ok(!html.includes('R8.11.30契約まで'), '宇城市の旧契約期限が残っています');
+assert.ok(!html.includes('1日40枠を想定'), '宇城市の未確認の受付枠数が残っています');
 assert.ok(!html.includes('<td><b>南阿蘇村</b></td>'), '公式受付を確認できない南阿蘇村が比較表に残っています');
+
+assert.ok(ukiHtml.includes('https://www.city.uki.kumamoto.jp/toppage/important/2641256'), '宇城市の正式な一次情報URLがありません');
+assert.ok(ukiHtml.includes('https://logoform.jp/f/6QI1j'), '宇城市のWeb予約フォームがありません');
+assert.ok(ukiHtml.includes('令和9年3月31日'), '宇城市の最新申請期限がありません');
+assert.ok(ukiHtml.includes('マニフェストD票またはE票'), '宇城市の自費解体チェックリストに沿ったマニフェスト表記がありません');
+assert.ok(ukiHtml.includes('顔写真付きの公的証明書は1点'), '宇城市の本人確認書類要件がありません');
+for (const obsolete of ['1日40枠', '地区別の優先受付', '令和8年11月30日までに契約', '事前届出が必須', 'A・B2・D・E票', 'kiji0037748', 'kiji_278851']) {
+  assert.ok(!ukiHtml.includes(obsolete), `宇城市ページに旧情報が残っています: ${obsolete}`);
+}
 
 assert.ok(css.includes('.demolition-current-alert'), '重要更新の注意喚起スタイルがありません');
 assert.ok(css.includes('.source-checked-note'), '公式確認日の注記スタイルがありません');

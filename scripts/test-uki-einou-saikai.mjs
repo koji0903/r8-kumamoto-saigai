@@ -28,12 +28,17 @@ assert.match(html, /<meta\s+name=["']description["']\s+content=["'][^"']+["']/, 
 // ---- 公式出典リンク ---------------------------------------------------------
 const officialPages = {
   "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/nogyo/2634814": "ハード事業の記事",
-  "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/nogyo/2632940": "ソフト事業の記事",
-  "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/nogyo/2637693": "農家向けワンストップ窓口の記事",
+  "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/nogyo": "農業の記事一覧",
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2621876": "被災農業者のための利子補給の記事"
 };
 for (const [url, label] of Object.entries(officialPages)) {
   assert.ok(html.includes(url), `${label}へのリンクが含まれていません`);
+}
+for (const removedUrl of [
+  "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/nogyo/2632940",
+  "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/nogyo/2637693"
+]) {
+  assert.ok(!html.includes(removedUrl), `公開終了した公式個別記事 ${removedUrl} を掲載しないでください`);
 }
 assert.ok(html.includes("https://logoform.jp/form/432130/1800554"), "説明会の申込フォームへのリンクが必要です");
 assert.match(text, /2026年11月確認/, "出典の確認日（2026年11月確認）の明記が必要です");
@@ -77,6 +82,8 @@ assert.match(text, /農機具共済|民間保険/, "復旧後の共済・保険�
 
 // ---- 関連制度・窓口 ---------------------------------------------------------
 assert.match(text, /ワンストップ窓口/, "農家向けワンストップ窓口の案内が必要です");
+assert.match(text, /現在の開設状況は要確認/, "ワンストップ窓口の現在の開設状況が未確認である旨が必要です");
+assert.match(text, /受付は令和8年10月16日[^。]*終了/, "ソフト事業が受付終了である旨が必要です");
 assert.match(text, /0964-32-1641/, "宇城市農政課の電話番号が必要です");
 assert.match(text, /0964-32-0351/, "県 宇城地域振興局 農業普及・振興課の電話番号が必要です");
 

@@ -27,8 +27,10 @@ assert.match(html, /<title>[^<]*被災者支援制度ハンドブック[^<]*<\/t
 assert.match(html, /<meta\s+name=["']description["']\s+content=["'][^"']+["']/, "descriptionメタタグが設定されていません");
 
 // ---- 出典 -------------------------------------------------------------------
-const pdf = "https://www.city.uto.lg.jp/d?q=64a2f70ed8565cbae8ab6cc0030be8e7.pdf";
-assert.ok(html.includes(pdf), "ハンドブック原本PDFへのリンクが必要です");
+const officialPage = "https://www.city.uto.lg.jp/article/view/1309/16342.html";
+const removedPdf = "https://www.city.uto.lg.jp/d?q=64a2f70ed8565cbae8ab6cc0030be8e7.pdf";
+assert.ok(html.includes(officialPage), "ハンドブックの現在有効な公式掲載ページへのリンクが必要です");
+assert.ok(!html.includes(removedPdf), "公開終了した旧PDF直リンクを掲載しないでください");
 assert.match(text, /令和8年9月24日現在/, "ハンドブックの基準日（令和8年9月24日現在）の明記が必要です");
 assert.match(text, /75ページ/, "原本のページ数の明記が必要です");
 assert.equal((sourceText.match(/制度の名称/g) || []).length, 69, "原本抽出テキストに69制度が必要です");

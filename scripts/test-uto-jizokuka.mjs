@@ -42,7 +42,7 @@ assert.ok(html.includes("0964-27-3328"), "宇土市商工観光課の電話番�
 
 // 6. 一次情報URL
 assert.ok(html.includes("https://www.city.uto.lg.jp/article/view/1321/16936.html"), "宇土市公式記事URLが含まれること");
-assert.ok(html.includes("b3ca3eab159685de8156a09dc8244fc9.pdf"), "宇土市公式PDFリンクが含まれること");
+assert.ok(!html.includes("b3ca3eab159685de8156a09dc8244fc9.pdf"), "公開終了した旧PDF直リンクを掲載しないこと");
 assert.ok(html.includes("https://www.jizokukanb.com/jizokuka_r6h/saigai/kumamoto/shinsei.html#kobo"), "全国商工会連合会公式URLが含まれること");
 
 // 7. 3大鉄則・重要ルール

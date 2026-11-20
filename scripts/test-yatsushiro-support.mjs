@@ -12,11 +12,13 @@ assert.equal(cards, 7, '7分野で整理してください');
 assert.equal(items, 58, '第8版の全58制度を掲載してください');
 assert.equal(detailCards, 15, '条件の多い主要制度を15カードで詳しく説明してください');
 
-const sourcePageLinks = [...html.matchAll(/161072_up_eh14ogek\.pdf#page=(\d+)/g)].map(match => Number(match[1]));
-assert.equal(sourcePageLinks.length, 58, '全58制度からPDF該当ページへリンクしてください');
-assert.equal(new Set(sourcePageLinks).size, 57, 'PDF内の実ページ対応が不正です');
-assert.deepEqual(sourcePageLinks.slice(0, 4), [7, 8, 9, 10], '先頭制度のPDFページが不正です');
-assert.deepEqual(sourcePageLinks.slice(-4), [68, 69, 70, 71], '末尾制度のPDFページが不正です');
+const currentOfficialUrl = 'https://www.city.yatsushiro.lg.jp/kiji00326858/';
+const sourcePageLinks = [...html.matchAll(/<li><b><a href="https:\/\/www\.city\.yatsushiro\.lg\.jp\/kiji00326858\/"/g)];
+assert.equal(sourcePageLinks.length, 58, '全58制度から現在有効な公式掲載ページへリンクしてください');
+assert.ok(!html.includes('161072_up_eh14ogek.pdf'), '公開終了した第8版PDF直リンクを掲載しないでください');
+assert.ok(html.includes(currentOfficialUrl), '八代市の現在有効な公式掲載ページが必要です');
+assert.ok(html.includes('第9版（2026年10月28日時点）'), '公式掲載ページが第9版へ更新済みである旨が必要です');
+assert.ok(html.includes('第8版アーカイブ'), '本ページが第8版アーカイブである旨が必要です');
 
 for (const value of [
   '2026年10月9日現在',
@@ -44,7 +46,6 @@ for (const value of [
   '33-4401',
   '33-4122',
   '37-7550',
-  '161072_up_eh14ogek.pdf',
   '活用できる方',
   '制度の内容',
   '注意事項',
