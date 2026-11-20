@@ -13,6 +13,7 @@ assert.ok(html.includes('<!-- RISAI_CONFIRMED_DATE_START -->'), '確認日マー
 assert.ok(html.includes('自治体公式発表 連動更新中'), '自動収集連動バッジがありません');
 assert.ok(html.includes('益城町'), '益城町の期限注意がありません');
 assert.ok(html.includes('八代市'), '八代市の申請終了注意がありません');
+assert.ok(html.includes('2026年12月から窓口受付は平日のみ'), '宇城市の11月20日更新の受付条件がありません');
 assert.ok(html.includes('href="#risai-official-updates"'), '最新発表へのジャンプリンクがありません');
 
 console.log('り災証明書ガイド テスト OK');

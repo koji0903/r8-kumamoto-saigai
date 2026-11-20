@@ -30,8 +30,7 @@ const HTML_PATH = join(ROOT, "risai-certificate.html");
 
 const checkOnly = process.argv.includes("--check");
 const OFFICIAL_URL_OVERRIDES = new Map([
-  ["https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/sonota_bousai/2515854", "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2624365"],
-  ["https://www.city.uki.kumamoto.jp/toppage/important/2515854", "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2624365"]
+  ["https://www.city.uki.kumamoto.jp/toppage/important/2515854", "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/sonota_bousai/2515854"]
 ]);
 
 const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
