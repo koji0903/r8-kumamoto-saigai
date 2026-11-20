@@ -3,12 +3,15 @@
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { officialEdition, publishedEditionProblems } from "./guide-published-edition.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const CONFIG_PATH = path.join(ROOT, "sources/guide-official-watch.json");
 const REPORT_PATH = path.join(ROOT, "reports/guide-official-watch.json");
 
 const checkMode = process.argv.includes("--check");
+const dryRun = process.argv.includes("--dry-run");
+const PUBLIC_SITE = "https://www.yokatainet.jp/";
 const CONCURRENCY = Math.max(1, Number(process.env.GUIDE_WATCH_CONCURRENCY || 2));
 const TIMEOUT_MS = 15000;
 
@@ -61,11 +64,11 @@ const extractSignals = (html) => {
   return { updatedLabel, keyLines, fingerprint };
 };
 
-const fetchTarget = async (target) => {
+const fetchHtml = async (url) => {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {
-    const res = await fetch(target.url, {
+    const res = await fetch(url, {
       signal: controller.signal,
       headers: {
         "User-Agent": "Mozilla/5.0 (compatible; YokataiNetKumamoto-OfficialMonitor/1.0; +https://www.yokatainet.jp/)",
@@ -76,18 +79,40 @@ const fetchTarget = async (target) => {
     if (!res.ok) {
       return { ok: false, status: res.status, reason: `HTTP ${res.status}` };
     }
-    const html = await res.text();
-    const signals = extractSignals(html);
-    if (signals.keyLines.length === 0) {
-      return { ok: false, status: res.status, reason: "本文の重要行を抽出できませんでした" };
-    }
-    return { ok: true, status: res.status, ...signals };
+    return { ok: true, url: res.url, html: await res.text() };
   } catch (err) {
     return { ok: false, status: 0, reason: err?.message || "fetch error" };
   } finally {
     clearTimeout(timer);
   }
 };
+
+async function fetchTarget(target) {
+  const source = await fetchHtml(target.url);
+  if (!source.ok) return source;
+  const signals = extractSignals(source.html);
+  if (!signals.keyLines.length) return { ok: false, reason: "本文の重要行を抽出できませんでした" };
+  const edition = target.publishedEdition
+    ? officialEdition(source.html, source.url, target.publishedEdition.officialLinkLabel)
+    : null;
+  return { ok: true, ...signals, edition };
+}
+
+async function checkPublishedEdition(target, result) {
+  if (!result.edition) {
+    return { status: "unavailable", reason: result.reason ?? "公式ページの版とPDFを特定できませんでした" };
+  }
+  const pages = await runPool(target.guidePages, async (page) => {
+    const url = new URL(page, PUBLIC_SITE).href;
+    const published = await fetchHtml(url);
+    if (!published.ok) return { url, status: "unavailable", problems: [published.reason] };
+    const problems = publishedEditionProblems(published.html, published.url, result.edition, page === target.publishedEdition.guideWithPdf);
+    return { url, status: problems.length ? "mismatch" : "ok", problems };
+  }, CONCURRENCY);
+  const status = pages.some(page => page.status === "mismatch") ? "mismatch"
+    : pages.some(page => page.status === "unavailable") ? "unavailable" : "ok";
+  return { status, official: result.edition, pages };
+}
 
 const runPool = async (items, worker, limit) => {
   const results = new Array(items.length);
@@ -113,11 +138,25 @@ const nowIso = new Date().toISOString();
 const nextTargets = {};
 const changed = [];
 const unavailable = [];
+const editionChecks = {};
+const editionAlerts = [];
 
 for (let i = 0; i < config.targets.length; i++) {
   const target = config.targets[i];
   const result = fetched[i];
   const prev = prevReport.targets?.[target.id];
+
+  if (target.publishedEdition) {
+    const audit = await checkPublishedEdition(target, result);
+    editionChecks[target.id] = audit;
+    if (audit.status !== "ok") {
+      // 公開ページの状態を毎回確認し、公式スナップショットの保存後も未反映を通知する。
+      const revision = audit.official
+        ? crypto.createHash("sha256").update(JSON.stringify(audit.official)).digest("hex").slice(0, 12)
+        : "source-unavailable";
+      editionAlerts.push({ id: target.id, revision, title: target.title, sourceUrl: target.url, ...audit });
+    }
+  }
 
   if (!result.ok) {
     unavailable.push({ id: target.id, municipality: target.municipality, url: target.url, reason: result.reason });
@@ -136,18 +175,20 @@ for (let i = 0; i < config.targets.length; i++) {
     continue;
   }
 
-  if (prev && prev.fingerprint && prev.fingerprint !== result.fingerprint) {
-    const prevSet = new Set(prev.keyLines || []);
+  const firstSnapshot = !prev?.fingerprint;
+  if (firstSnapshot || prev.fingerprint !== result.fingerprint) {
+    const prevSet = new Set(prev?.keyLines || []);
     const currSet = new Set(result.keyLines);
     const added = result.keyLines.filter((l) => !prevSet.has(l)).slice(0, 12);
-    const removed = (prev.keyLines || []).filter((l) => !currSet.has(l)).slice(0, 12);
+    const removed = (prev?.keyLines || []).filter((l) => !currSet.has(l)).slice(0, 12);
     changed.push({
       id: target.id,
       municipality: target.municipality,
       title: target.title,
       url: target.url,
       guidePages: target.guidePages,
-      prevUpdatedLabel: prev.updatedLabel || null,
+      firstSnapshot,
+      prevUpdatedLabel: prev?.updatedLabel || null,
       currUpdatedLabel: result.updatedLabel || null,
       added,
       removed
@@ -167,8 +208,7 @@ for (let i = 0; i < config.targets.length; i++) {
   };
 }
 
-fs.mkdirSync(path.dirname(REPORT_PATH), { recursive: true });
-fs.writeFileSync(
+if (!dryRun) fs.writeFileSync(
   REPORT_PATH,
   JSON.stringify(
     {
@@ -176,6 +216,8 @@ fs.writeFileSync(
       totalTargets: config.targets.length,
       changedCount: changed.length,
       unavailableCount: unavailable.length,
+      editionChecks,
+      editionAlerts,
       targets: nextTargets
     },
     null,
@@ -186,6 +228,14 @@ fs.writeFileSync(
 
 console.log(`公式一次情報監視完了: 対象${config.targets.length}件 / 変更検出${changed.length}件 / 取得不能${unavailable.length}件`);
 
+for (const [id, audit] of Object.entries(editionChecks)) {
+  console.log(`公開版照合: ${id} / ${audit.status}${audit.official ? ` / 公式第${audit.official.edition}版 ${audit.official.pdf}` : ""}`);
+  if (audit.reason) console.log(`  ${audit.reason}`);
+  for (const page of audit.pages ?? []) {
+    console.log(`  ${page.status}: ${page.url} ${page.problems.join(" / ")}`);
+  }
+}
+
 if (unavailable.length > 0) {
   console.log("\n[取得不能（WAF等によるスキップ・誤報防止のため変更なし扱い）]");
   for (const u of unavailable) {
@@ -194,9 +244,9 @@ if (unavailable.length > 0) {
 }
 
 if (changed.length > 0) {
-  console.log("\n[重要変更を検出した公式ページ]");
+  console.log("\n[初回取得または重要変更を検出した公式ページ]");
   for (const c of changed) {
-    console.log(`\n■ ${c.municipality} - ${c.title}`);
+    console.log(`\n■ ${c.municipality} - ${c.title}${c.firstSnapshot ? "（初回取得・ガイドとの突合が必要）" : ""}`);
     console.log(`  公式URL: ${c.url}`);
     console.log(`  対応ガイドページ: ${c.guidePages.join(", ")}`);
     console.log(`  更新日表示: ${c.prevUpdatedLabel || "(なし)"} -> ${c.currUpdatedLabel || "(なし)"}`);
@@ -209,5 +259,6 @@ if (changed.length > 0) {
       for (const line of c.removed) console.log(`    - ${line}`);
     }
   }
-  if (checkMode) process.exit(1);
 }
+
+if (checkMode && (changed.length || editionAlerts.length)) process.exitCode = 1;

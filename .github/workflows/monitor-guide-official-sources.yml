@@ -51,7 +51,8 @@ jobs:
             echo "::error::公式一次情報監視スクリプトが異常終了しました（終了コード ${status}）"
             exit "$status"
           fi
-          echo "changed=${status}" >> "$GITHUB_OUTPUT"
+          echo "changed=$(jq -r '.changedCount > 0' reports/guide-official-watch.json)" >> "$GITHUB_OUTPUT"
+          echo "edition_alert=$(jq -r '.editionAlerts | length > 0' reports/guide-official-watch.json)" >> "$GITHUB_OUTPUT"
           {
             echo "## ガイド公式一次情報の変更監視"
             echo ""
@@ -60,18 +61,18 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
           if [ "$status" -eq 1 ]; then
-            echo "::warning::自治体公式ページの期限・窓口・運用等に変更を検出しました。Issueを確認して該当ガイドを更新してください。"
+            echo "::warning::公式情報の変更または公開版照合の要確認項目があります。実行結果を確認してください。"
           fi
 
       - name: 変更検出をIssueに登録
-        if: steps.monitor.outputs.changed == '1' && inputs.dry_run != true
+        if: steps.monitor.outputs.changed == 'true' && inputs.dry_run != true
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          title="【要ガイド更新】自治体公式一次情報の変更を検出（$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST')）"
+          title="【要ガイド確認】自治体公式一次情報の初回取得・変更（$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST')）"
           {
-            echo "\`scripts/monitor-guide-official-sources.mjs\` が、ガイドページが参照している自治体公式ページの更新日・期限・窓口・運用記載の変更を検出しました。"
+            echo "自治体公式ページの初回取得、または更新日・期限・窓口・運用記載の変更がありました。公開済みのガイドと照合してください。"
             echo ""
             echo "対応手順"
             echo "1. 下の監視ログに記載された「対応ガイドページ」および \`priority-support-summary.html\` / \`demolition.html\` / \`uto-handbook.html\` 等の横断ページを確認する"
@@ -86,13 +87,35 @@ jobs:
             echo ""
             echo "</details>"
           } > issue-body.md
-          gh issue create --title "$title" --body-file issue-body.md || true
+          gh issue create --title "$title" --body-file issue-body.md
+
+      - name: 公開ガイドの不一致・判定不能をIssueに登録
+        if: steps.monitor.outputs.edition_alert == 'true' && inputs.dry_run != true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          jq -c '.editionAlerts[]' reports/guide-official-watch.json > edition-alerts.jsonl
+          while IFS= read -r alert; do
+            key=$(jq -r '"\(.id)-\(.revision)-\(.status)"' <<< "$alert")
+            title="【公開ガイド要確認】$(jq -r '.title' <<< "$alert") ($key)"
+            existing=$(gh issue list --state open --search "$key in:title" --json title --jq '.[].title')
+            if printf '%s\n' "$existing" | rg -Fxq -- "$title"; then
+              continue
+            fi
+            {
+              jq -r '"公式ページ: \(.sourceUrl)", (if .official then "公式版: 第\(.official.edition)版 \(.official.pdf)" else .reason end), (.pages[]? | select(.status != "ok") | "- \(.url) — \(.status): \(.problems | join(" / "))")' <<< "$alert"
+              echo ""
+              echo "公式資料を確認し、関連ガイド・トップページの更新情報を更新してください。公開後の再照合で一致を確認してからIssueを閉じてください。"
+            } > edition-issue.md
+            gh issue create --title "$title" --body-file edition-issue.md
+          done < edition-alerts.jsonl
 
       - name: 監視レポートを反映
         if: inputs.dry_run != true
         shell: bash
         run: |
-          rm -f monitor-output.txt issue-body.md
+          rm -f monitor-output.txt issue-body.md edition-alerts.jsonl edition-issue.md
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add reports/guide-official-watch.json
