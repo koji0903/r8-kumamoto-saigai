@@ -75,11 +75,11 @@ assert.ok(html.includes('id="p-shizei"') && html.includes('id="p-kaigo-hokenryo"
 // ---- 期限のある制度 ---------------------------------------------------------
 const withDeadline = cards.filter(card => card.includes('data-deadline="1"')).length;
 assert.equal(withDeadline, 11, `期限があり受付中の制度は11件である必要があります（現在 ${withDeadline} 件。期限経過の1件を除く）`);
-for (const d of ["9月30日", "10月27日", "12月8日", "12月15日", "12月17日", "12月28日"]) {
+for (const d of ["9月30日", "11月27日", "12月8日", "12月15日", "12月17日", "12月28日"]) {
   assert.ok(text.includes(d), `期限「${d}」の記載が必要です`);
 }
-assert.match(text, /10月27日（火）/, "令和8年10月27日の曜日は暦どおり火曜日と表示する必要があります");
-assert.match(text, /原本は[^。]*曜日[^。]*「木」/, "原本の曜日表記との差異を明示する必要があります");
+assert.match(text, /11月27日（金）/, "住家の緊急修理の延長期限は令和8年11月27日（金）と表示する必要があります");
+assert.ok(!text.includes("修理期間 令和8年10月27日"), "住家の緊急修理の旧期限を表示しないでください");
 
 // ---- 主要制度の金額（ハンドブック記載どおり） --------------------------------
 const amounts = [

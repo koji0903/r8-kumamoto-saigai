@@ -62,6 +62,8 @@ const utoHandbookHtml = stripTags(read("uto-handbook.html"));
 assert.ok(utoHandbookHtml.includes("土曜日のみ開庁"), "uto-handbook.html に11月以降の土曜のみ開庁注記がありません");
 assert.ok(utoHandbookHtml.includes("11月27日まで"), "uto-handbook.html に自費解体契約期限（11月27日）注記がありません");
 assert.ok(utoHandbookHtml.includes("環境再生センターKIREKA") && utoHandbookHtml.includes("10月20日で閉鎖"), "uto-handbook.html に災害ごみ仮置場閉鎖・KIREKA一本化の注記がありません");
+assert.ok(utoHandbookHtml.includes("修理完了・完了報告書等の提出 令和8年11月27日"), "uto-handbook.html に住家の緊急修理の延長期限（11月27日）がありません");
+assert.ok(!utoHandbookHtml.includes("修理期間 令和8年10月27日"), "uto-handbook.html に住家の緊急修理の旧期限（10月27日）が残っています");
 
 const utoInterestHtml = stripTags(read("uto-interest-subsidy.html"));
 assert.ok(!utoInterestHtml.includes("現在様式準備中"), "uto-interest-subsidy.html に「現在様式準備中」が残っています");
@@ -76,10 +78,23 @@ assert.ok(ukiSupportHtml.includes("10月31日（土）をもって終了"), "uki
 const ukiConsultHtml = stripTags(read("uki-consultation.html"));
 assert.ok(ukiConsultHtml.includes("11月23日"), "uki-consultation.html に11月23日祝日の休止注記がありません");
 
+const hikawaDemHtml = stripTags(read("hikawa-demolition.html"));
+assert.ok(hikawaDemHtml.includes("月〜土曜受付（日曜・祝日除く）"), "hikawa-demolition.html に11月以降の月〜土曜受付がありません");
+assert.ok(!hikawaDemHtml.includes("土日祝日も受付中"), "hikawa-demolition.html に11月以降と異なる土日祝受付表記が残っています");
+
+const yatsushiroLivingHtml = stripTags(read("yatsushiro-living-support.html"));
+assert.ok(yatsushiroLivingHtml.includes("被災者応援ガイドブック第9版"), "yatsushiro-living-support.html に公式現行版の第9版表記がありません");
+assert.ok(!yatsushiroLivingHtml.includes("全58制度の対象・金額・期限・条件・相談先を完全網羅"), "yatsushiro-living-support.html に第8版由来の完全網羅表現が残っています");
+
 // 5. 熊本市 支援ガイド
 const kumamotoSupportHtml = stripTags(read("kumamoto-support.html"));
 assert.ok(kumamotoSupportHtml.includes("令和9年（2027年）3月31日"), "kumamoto-support.html にり災証明書延長期限（令和9年3月31日）がありません");
 assert.ok(kumamotoSupportHtml.includes("令和9年（2027年）5月31日"), "kumamoto-support.html に災害援護資金延長期限（令和9年5月31日）がありません");
+
+const risaiHtml = read("risai-certificate.html");
+assert.ok(risaiHtml.includes("https://www.town.kumamoto-nishiki.lg.jp/"), "risai-certificate.html に錦町の現行公式ドメインがありません");
+assert.ok(risaiHtml.includes("https://www.town.kumamoto-takamori.lg.jp/"), "risai-certificate.html に高森町の現行公式ドメインがありません");
+assert.ok(!risaiHtml.includes("https://www.town.nishiki.lg.jp/") && !risaiHtml.includes("https://www.town.takamori.kumamoto.jp/"), "risai-certificate.html に旧公式ドメインが残っています");
 
 // 6. 監視台帳とレポートの存在検証
 assert.ok(fs.existsSync(new URL("../sources/guide-official-watch.json", import.meta.url)), "sources/guide-official-watch.json が存在しません");
