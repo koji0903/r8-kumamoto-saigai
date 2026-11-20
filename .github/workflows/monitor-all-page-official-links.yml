@@ -1,0 +1,103 @@
+name: 全公開ページの行政公式リンク監視
+
+on:
+  schedule:
+    # 毎週月曜 5:35 JST。全公開ページを自動発見し、行政公式リンクを総点検する。
+    - cron: "35 20 * * 0"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "監視だけを実行し、レポートのcommit/pushとIssue作成を行わない"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: monitor-all-page-official-links
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    name: 全公開ページの行政公式リンクを総点検
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v7
+
+      - name: Node.jsを準備
+        uses: actions/setup-node@v7
+        with:
+          node-version: "26"
+          package-manager-cache: false
+
+      - name: 全公開ページの公式リンクを監視
+        id: monitor
+        shell: bash
+        env:
+          ALL_PAGE_LINK_CONCURRENCY: "4"
+        run: |
+          set +e
+          node scripts/monitor-all-page-official-links.mjs --check > monitor-output.txt 2>&1
+          status=$?
+          set -e
+          cat monitor-output.txt
+          if [ "$status" -gt 1 ]; then
+            echo "::error::全ページ監視スクリプトが異常終了しました（終了コード ${status}）"
+            exit "$status"
+          fi
+          echo "findings=${status}" >> "$GITHUB_OUTPUT"
+          {
+            echo "## 全公開ページの行政公式リンク監視"
+            echo ""
+            echo '```'
+            cat monitor-output.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: 要確認リンクをIssueに登録
+        if: steps.monitor.outputs.findings == '1' && inputs.dry_run != true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          title="【要確認】公開ページの行政公式リンクに異常を検出（$(TZ=Asia/Tokyo date '+%Y-%m-%d')）"
+          {
+            echo "全公開HTMLを自動発見して行政公式リンクを総点検し、404/410、公式外への転送、または3回連続の通信不能を検出しました。403・429・5xxはリンク切れと断定せず判定不能として記録します。"
+            echo ""
+            echo '```'
+            cat monitor-output.txt
+            echo '```'
+          } > issue-body.md
+          gh issue create --title "$title" --body-file issue-body.md || true
+
+      - name: 監視レポートを反映
+        if: inputs.dry_run != true
+        shell: bash
+        run: |
+          rm -f monitor-output.txt issue-body.md
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/all-page-official-link-watch.json
+          if git diff --cached --quiet; then
+            echo "監視レポートの差分はありません。"
+            exit 0
+          fi
+          checked_at="$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST')"
+          git commit -m "全公開ページの公式リンク監視レポートを更新（${checked_at}）"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main; then
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+            else
+              git rebase --abort || true
+              exit 1
+            fi
+          done
+          exit 1

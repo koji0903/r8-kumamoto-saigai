@@ -29,6 +29,10 @@ const OFFICIAL_TOPICS_PATH = join(ROOT, "sources/official/topics/latest-topics.j
 const HTML_PATH = join(ROOT, "risai-certificate.html");
 
 const checkOnly = process.argv.includes("--check");
+const OFFICIAL_URL_OVERRIDES = new Map([
+  ["https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/sonota_bousai/2515854", "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2624365"],
+  ["https://www.city.uki.kumamoto.jp/toppage/important/2515854", "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2624365"]
+]);
 
 const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -118,7 +122,8 @@ ${risaiData.alerts.map(a => `            <li><b>${esc(a.muni)}：</b>${a.text}</
   // 3. タイムラインHTML
   const cardsHtml = sortedUpdates.map(item => {
     const art = archiveIndex[item.url];
-    const targetUrl = art ? art.htmlPath : item.url;
+    const currentOfficialUrl = OFFICIAL_URL_OVERRIDES.get(item.url) || item.url;
+    const targetUrl = art ? art.htmlPath : currentOfficialUrl;
     const isArchived = Boolean(art);
     return `        <article class="portal-update-card">
           <div class="portal-update-meta">
@@ -131,7 +136,7 @@ ${risaiData.alerts.map(a => `            <li><b>${esc(a.muni)}：</b>${a.text}</
             <a href="${esc(targetUrl)}"${isArchived ? "" : ' target="_blank" rel="noopener"'}>${esc(item.title)} <span aria-hidden="true">${isArchived ? "→" : "↗"}</span></a>
           </h3>
           ${isArchived ? `          <div class="portal-update-sublink">
-            <small><a href="${esc(item.url)}" target="_blank" rel="noopener">自治体公式元 ↗</a></small>
+            <small><a href="${esc(currentOfficialUrl)}" target="_blank" rel="noopener">自治体公式の現行案内 ↗</a></small>
           </div>` : ""}
         </article>`;
   }).join("\n");

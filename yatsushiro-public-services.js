@@ -151,7 +151,7 @@
       parking: "あり（鏡支所駐車場 無料）",
       phone: "0965-52-1111",
       phoneDept: "鏡支所 地域振興課",
-      url: "https://www.city.yatsushiro.lg.jp/soshiki/38/",
+      url: "https://www.city.yatsushiro.lg.jp/kiji00385/index.html",
       urlLabel: "八代市公式：鏡支所案内 ↗",
       desc: "北部（鏡・文政・有佐地域）の行政中核拠点。証明書発行や生活再建手続きに対応します。",
       services: [
@@ -290,8 +290,8 @@
       parking: "あり（市役所駐車場利用・無料）",
       phone: "0965-32-7200",
       phoneDept: "健康推進課",
-      url: "https://www.city.yatsushiro.lg.jp/soshiki/19/",
-      urlLabel: "八代市公式：健康推進案内 ↗",
+      url: "https://www.city.yatsushiro.lg.jp/kiji00384/index.html",
+      urlLabel: "八代市公式：市役所・健康推進課案内 ↗",
       desc: "市民の健康寿命延伸と母子保健・生活習慣病予防・予防接種を一元管理する中枢です。",
       services: [
         "乳幼児健診（4か月・10か月・1歳6か月・3歳児健診）",
@@ -398,8 +398,8 @@
       parking: "あり（約80台・無料）",
       phone: "0965-32-3385",
       phoneDept: "図書館事務室",
-      url: "https://www.city.yatsushiro.lg.jp/library/",
-      urlLabel: "八代市立図書館 公式 ↗",
+      url: "https://www.city.yatsushiro.lg.jp/kiji00320796/index.html",
+      urlLabel: "八代市公式：市立図書館案内 ↗",
       desc: "豊富な蔵書と落ち着いた学習環境を備えた中央図書館。八代城跡の緑豊かな環境に位置。",
       services: [
         "一般書・専門書・郷土資料・雑誌の閲覧・貸出・予約",
@@ -467,8 +467,8 @@
       parking: "あり（約300台・無料）",
       phone: "0965-35-0150",
       phoneDept: "体育館管理事務所",
-      url: "https://www.city.yatsushiro.lg.jp/kiji00325492/index.html",
-      urlLabel: "トヨオカ地建アリーナ案内 ↗",
+      url: "https://www.city.yatsushiro.lg.jp/list01322.html",
+      urlLabel: "八代市公式：スポーツ施設一覧 ↗",
       desc: "大アリーナ・中アリーナ・武道場・トレーニングジムを備える県南最大のスポーツ複合施設。",
       services: [
         "バスケット・バレー・バドミントン・卓球等の競技利用",
@@ -570,8 +570,8 @@
       parking: "あり（無料）",
       phone: "0965-32-4114",
       phoneDept: "お客様センター",
-      url: "https://www.city.yatsushiro.lg.jp/water/",
-      urlLabel: "八代市上下水道局 公式 ↗",
+      url: "https://www.city.yatsushiro.lg.jp/kiji00318633/index.html",
+      urlLabel: "八代市公式：上水道の開始・中止案内 ↗",
       desc: "上水道の給水管理および下水道処理を担当。井戸の公費修理相談窓口とも連携。",
       services: [
         "水道使用開始（開栓）・中止（閉栓）の手続き",
@@ -737,8 +737,8 @@
       parking: "あり（鏡支所・文化センター共用）",
       phone: "0965-52-1114",
       phoneDept: "鏡分館カウンター",
-      url: "https://www.city.yatsushiro.lg.jp/lib/",
-      urlLabel: "八代市立図書館 公式 ↗",
+      url: "https://www.city.yatsushiro.lg.jp/kiji00320796/index.html",
+      urlLabel: "八代市公式：市立図書館案内 ↗",
       desc: "鏡地区の文化交流拠点。児童書・一般図書の貸出、読書スペース、本館との連携取寄せを提供。",
       services: [
         "図書・雑誌・紙芝居の閲覧および貸出（1人10冊まで2週間）",

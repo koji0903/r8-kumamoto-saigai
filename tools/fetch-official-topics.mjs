@@ -18,6 +18,14 @@ const clock=value=>{const m=ascii(value).match(/([0-2]?\d)[:時]\s*([0-5]\d)(?:�
 const absolute=(href,base)=>new URL(href,base).href;
 async function html(url){const response=await fetch(url,{headers:{"user-agent":UA,accept:"text/html"},redirect:"follow",signal:AbortSignal.timeout(25000)});if(!response.ok)throw new Error(`${response.status} ${url}`);return response.text()}
 function links(source,base){return [...source.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)].map(match=>({url:absolute(match[1],base),title:decode(match[2])}));}
+async function isPublished(url){
+  try{
+    const response=await fetch(url,{headers:{"user-agent":UA,accept:"text/html,*/*;q=0.5",range:"bytes=0-1023"},redirect:"follow",signal:AbortSignal.timeout(15000)});
+    await response.body?.cancel();
+    // WAFの403・429や一時的な5xxは削除済みとは断定しない。404・410のみ除外する。
+    return response.status!==404&&response.status!==410;
+  }catch{return true;}
+}
 
 const checkedAt=new Date().toISOString();
 const nationalHub="https://www.bousai.go.jp/updates/r8kumamoto_jishin/index.html";
@@ -53,11 +61,15 @@ const prefecture=[
 ].filter(Boolean);
 
 const municipalityData=JSON.parse(await readFile(join(ROOT,"sources/official/municipalities/municipality-updates.json"),"utf8"));
-const municipalities=municipalityData.municipalities.map(municipality=>{
+const municipalities=(await Promise.all(municipalityData.municipalities.map(async municipality=>{
   const eligible=municipality.updates.filter(update=>!/^P\d+(?:-|～)/u.test(update.title)&&!/(?:概要／県内の主な被害|町内の被災状況)/u.test(update.title));
-  const update=[...eligible].sort((a,b)=>`${b.date} ${b.time||""}`.localeCompare(`${a.date} ${a.time||""}`))[0];
+  const candidates=[...eligible].sort((a,b)=>`${b.date} ${b.time||""}`.localeCompare(`${a.date} ${a.time||""}`));
+  let update=null;
+  for(const candidate of candidates.slice(0,5)){
+    if(await isPublished(candidate.url)){update=candidate;break;}
+  }
   return update?{...update,municipality:municipality.name}:null;
-}).filter(Boolean).sort((a,b)=>`${b.date} ${b.time||""}`.localeCompare(`${a.date} ${a.time||""}`));
+}))).filter(Boolean).sort((a,b)=>`${b.date} ${b.time||""}`.localeCompare(`${a.date} ${a.time||""}`));
 
 const dataset={metadata:{retrievedAt:checkedAt,note:"公式ページの表題・日時・URLを自動整理。緊急性や重要度の順位ではなく、新しい日時順。利用前にリンク先の更新時刻・対象地域・条件を再確認してください。"},national,prefecture,municipalities};
 await mkdir(dirname(OUT),{recursive:true});
