@@ -34,6 +34,8 @@ assert.equal((html.match(/<ol class="uki-all-menus">[\s\S]*?<\/ol>/)?.[0].match(
 for (const currentMenu of ["義援金の配分", "被災農業者向け利子補給補助金", "井戸等の応急修理", "水道料金・下水道使用料等の減免", "保育料の減免", "電気料金等の特別措置"]) {
   assert.ok(html.includes(currentMenu), `11月16日時点の公式メニューがありません: ${currentMenu}`);
 }
+assert.match(text, /12月から平日のみ/, "11月20日更新の罹災証明等受付条件を反映してください");
+assert.ok(html.includes("/kurashi/bosaiinfo/sonota_bousai/2515854"), "罹災証明等の現行公式ページへ直接リンクしてください");
 assert.ok(!html.includes('id="obstacle-removal"'), "現行公式目次から外れた障害物除去を受付中の独立制度として残さないでください");
 assert.ok((html.match(/href="tel:/g) || []).length >= 16, "電話リンクが不足しています");
 assert.ok((html.match(/city\.uki\.kumamoto\.jp/g) || []).length >= 13, "宇城市の個別制度ページと2つのPDFへのリンクが必要です");
