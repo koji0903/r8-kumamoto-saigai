@@ -70,7 +70,7 @@ window.DEMOLITION_DATA = {
       "date": "2026-11-18",
       "time": null,
       "title": "2026年11月18日 令和8年熊本地震により被災した家屋等の解体・撤去について",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2641256",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2641256",
       "category": "その他",
       "archiveId": null,
       "archiveUrl": null
