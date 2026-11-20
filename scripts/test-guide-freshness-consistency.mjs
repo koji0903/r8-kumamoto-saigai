@@ -83,7 +83,8 @@ assert.ok(hikawaDemHtml.includes("月〜土曜受付（日曜・祝日除く）"
 assert.ok(!hikawaDemHtml.includes("土日祝日も受付中"), "hikawa-demolition.html に11月以降と異なる土日祝受付表記が残っています");
 
 const yatsushiroLivingHtml = stripTags(read("yatsushiro-living-support.html"));
-assert.ok(yatsushiroLivingHtml.includes("被災者応援ガイドブック第9版"), "yatsushiro-living-support.html に公式現行版の第9版表記がありません");
+assert.ok(yatsushiroLivingHtml.includes("被災者応援ガイドブック第10版"), "yatsushiro-living-support.html に公式第10版表記がありません");
+assert.ok(yatsushiroLivingHtml.includes("全59制度"), "yatsushiro-living-support.html に第10版の制度数がありません");
 assert.ok(!yatsushiroLivingHtml.includes("全58制度の対象・金額・期限・条件・相談先を完全網羅"), "yatsushiro-living-support.html に第8版由来の完全網羅表現が残っています");
 
 // 5. 熊本市 支援ガイド

@@ -9,22 +9,25 @@ const items = [...html.matchAll(/<li><b>/g)].length;
 const detailCards = [...html.matchAll(/<details(?: open)?>/g)].length;
 
 assert.equal(cards, 7, '7分野で整理してください');
-assert.equal(items, 58, '第8版の全58制度を掲載してください');
+assert.equal(items, 59, '第10版の全59制度を掲載してください');
 assert.equal(detailCards, 15, '条件の多い主要制度を15カードで詳しく説明してください');
 
 const currentOfficialUrl = 'https://www.city.yatsushiro.lg.jp/kiji00326858/';
 const sourcePageLinks = [...html.matchAll(/<li><b><a href="https:\/\/www\.city\.yatsushiro\.lg\.jp\/kiji00326858\/"/g)];
-assert.equal(sourcePageLinks.length, 58, '全58制度から現在有効な公式掲載ページへリンクしてください');
+const currentPdfUrl = 'https://www.city.yatsushiro.lg.jp/kiji00326858/3_26858_162529_up_cabdrsb4.pdf';
+const pdfLinks = [...html.matchAll(/<li><b><a href="https:\/\/www\.city\.yatsushiro\.lg\.jp\/kiji00326858\/3_26858_162529_up_cabdrsb4\.pdf#page=/g)];
+assert.equal(pdfLinks.length, 59, '全59制度から公式第10版PDFの該当ページへリンクしてください');
 assert.ok(!html.includes('161072_up_eh14ogek.pdf'), '公開終了した第8版PDF直リンクを掲載しないでください');
 assert.ok(html.includes(currentOfficialUrl), '八代市の現在有効な公式掲載ページが必要です');
-assert.ok(html.includes('第9版（2026年10月28日時点）'), '公式掲載ページが第9版へ更新済みである旨が必要です');
-assert.ok(html.includes('第8版アーカイブ'), '本ページが第8版アーカイブである旨が必要です');
+assert.ok(html.includes(currentPdfUrl), '八代市公式第10版PDFが必要です');
+assert.ok(html.includes('第10版・全59制度'), '本ページが第10版全59制度である旨が必要です');
 
 for (const value of [
-  '2026年10月9日現在',
-  '第8版',
+  '2026年11月18日現在',
+  '第10版',
   '12月15日',
-  '10月27日',
+  '11月30日',
+  '12月27日',
   'くまもと事業者再出発支援補助金',
   '小規模事業者持続化補助金',
   '利子補給',
@@ -33,6 +36,10 @@ for (const value of [
   '建物の解体・撤去',
   '公費解体',
   '営農再開ワンストップ窓口',
+  '要配慮世帯への給水支援',
+  '令和8年熊本地震緊急支援資金制度',
+  '産業雇用安定助成金',
+  '商店街にぎわい創出事業',
   '最大75万7千円',
   '最大36万7千円',
   '5万6,400円',
@@ -49,7 +56,7 @@ for (const value of [
   '活用できる方',
   '制度の内容',
   '注意事項',
-  '現金給付ではありません',
+  '2027年2月利用分まで',
   '大家・所有者は対象外',
   '食費・居住費、差額ベッド代',
   '仲介手数料・保険料は遡及されません',

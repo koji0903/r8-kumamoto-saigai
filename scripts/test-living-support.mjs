@@ -147,7 +147,7 @@ console.log('宇城市・氷川町・八代市・熊本市 暮らしの支援・
   assert.ok(html.includes('八代市 被災者応援ガイドブック（現行版案内）'), '八代市：被災者応援ガイド現行版案内がありません');
   assert.ok(html.includes('住宅用太陽光発電システム・蓄電池設置補助金'), '八代市：太陽光・蓄電池設置補助金がありません');
   assert.ok(html.includes('https://www.city.yatsushiro.lg.jp/kiji00325924/index.html'), '八代市：太陽光・蓄電池補助金の公式リンクがありません');
-  assert.ok(html.includes('令和8年10月28日時点の「被災者応援ガイドブック第9版」'), '八代市：被災者応援ガイド第9版の現行表記がありません');
+  assert.ok(html.includes('令和8年11月18日時点の「被災者応援ガイドブック第10版」'), '八代市：被災者応援ガイド第10版の現行表記がありません');
   assert.ok(html.includes('セーフティネット保証4号（中小企業支援）'), '八代市：セーフティネット4号がありません');
 
   assert.ok(html.includes('class="uto-sup-hero-inner"'), '八代市：ヒーロー内の幅制限がありません');
