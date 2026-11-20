@@ -5,6 +5,15 @@ window.HOME_TOPICS = {
   "siteTopics": [
     {
       "date": "2026-11-20",
+      "category": "制度最新化",
+      "badge": "宇土市・宇城市ガイド最新化",
+      "title": "宇土市の公費解体（自費契約11/27）・災害ごみ（KIREKA一本化）・応急修理（1年延長）・利子補給・宇城市相談会を一次情報へ更新",
+      "url": "uto-demolition.html",
+      "description": "自治体公式ページとの厳密照合に基づき、重要ガイドを最新化しました。①宇土市自費解体の契約期限（令和8年11月27日まで）と土曜のみの休日窓口開庁を明記（uto-demolition.html、demolition.html）、②宇土市災害ごみ仮置場（10/20閉鎖）およびKIREKA（松原町386）での搬入許可証制・火木定休への一本化を反映（uto-waste.html）、③宇土市住宅応急修理の完了期限延長（令和10年1月27日まで）を反映（uto-repair.html等）、④宇土市利子補給金の申請様式公開と提出期限（令和9年2月26日）を反映（uto-interest-subsidy.html）、⑤宇城市役所番地訂正（大野85）と書類補完（uki-demolition.html）、宇城市無料相談会11月日程を最新化しました。",
+      "targetPage": "uto-demolition.html"
+    },
+    {
+      "date": "2026-11-20",
       "category": "一次情報監査",
       "badge": "全ガイド61ページを横断確認",
       "title": "ガイドページの一次情報リンクと宇城市公費解体案内を最新化",
@@ -83,15 +92,6 @@ window.HOME_TOPICS = {
       "url": "contact.html",
       "description": "団体のメールアドレスと電話番号のサイト公開を終了し、お問い合わせ窓口を専用フォームへ一本化しました。送信先をブラウザへ公開せず、署名済みトークン、ハニーポット、入力検証、送信回数・重複送信制限などの迷惑送信対策を導入しています。",
       "targetPage": "contact.html"
-    },
-    {
-      "date": "2026-11-04",
-      "category": "サイト改善",
-      "badge": "検索性・情報品質を強化",
-      "title": "サイト全体のSEO・情報品質基盤を強化",
-      "url": "about.html",
-      "description": "公式記事アーカイブの検索向け情報を整備し、旧ページの重複インデックスを防ぐ恒久リダイレクトとSEO回帰検査を追加しました。あわせて、一次情報の優先、確認日・更新内容、自動収集の限界、訂正受付に関する情報方針を明文化しました。",
-      "targetPage": "about.html"
     }
   ],
   "municipalityUpdates": [

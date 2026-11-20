@@ -73,7 +73,7 @@ for (const page of ["uto-housing.html", "uto-bulletin.html", "app.js"]) {
 }
 const housing = read("uto-housing.html");
 assert.ok(!housing.includes("2026年10月27日"), "uto-housing.html に延長前の期限が残っています");
-assert.ok(housing.includes("2027年1月27日"), "uto-housing.html に延長後の期限が必要です");
+assert.ok(housing.includes("2028年（令和10年）1月27日"), "uto-housing.html に再延長後の期限が必要です");
 const orgSite = read("org-site.js");
 assert.match(orgSite, /'uto-repair\.html':'[^']+'/, "パンくずのページ名がありません");
 

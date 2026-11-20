@@ -264,7 +264,7 @@ window.DEMOLITION_DATA = {
         }
       ],
       "phoneNote": null,
-      "selfDemolition": "申請はR8.12.28まで<br><small>不足書類はR9.2.26まで</small>",
+      "selfDemolition": "<b>R8.11.27までの契約</b><br><small>申請12/28・不足書類2/26まで</small>",
       "detailUrl": "uto-demolition.html",
       "detailLabel": "詳細ガイド",
       "isExternal": false
