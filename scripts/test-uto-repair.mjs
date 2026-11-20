@@ -24,7 +24,11 @@ assert.match(text, /2026年9月13日/, "確認日を示す必要があります"
 
 // 公開されたファイルは全部リンクし、全部保存してあること
 for (const file of data.files) {
-  assert.ok(html.includes(`href="${file.url}"`), `${file.name} へのリンクがありません`);
+  const currentUrl = file.currentUrl || file.url;
+  assert.ok(html.includes(`href="${currentUrl}"`), `${file.name} の現在有効な公式導線がありません`);
+  if (file.urlStatus === "retired") {
+    assert.ok(!html.includes(`href="${file.url}"`), `${file.name} の公開終了した旧直リンクが残っています`);
+  }
   assert.ok(fs.existsSync(new URL(`../${data.source.savedDir}/${file.saved}`, import.meta.url)), `${file.saved} が保存されていません`);
 }
 assert.equal(data.files.length, 16, "公式ページの資料・様式は16点です");
