@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// 暮らしの支援ガイド（4市町）の掲載漏れとリンク切れを監視する。
+// 暮らしの支援ガイド（5自治体）の掲載漏れとリンク切れを監視する。
 // 使い方:
 //   node scripts/monitor-living-support-coverage.mjs            レポートを更新して結果を表示
 //   node scripts/monitor-living-support-coverage.mjs --check     新規の未掲載制度・リンク切れがあれば終了コード1

@@ -12,7 +12,7 @@ const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
 
 assert.match(html, /<title>[^<]+<\/title>/);
 assert.match(html, /<meta name="description" content="[^"]+">/);
-assert.match(text, /令和8年8月19日現在/);
+assert.match(text, /令和8年11月16日時点/);
 assert.match(text, /内容は変更される場合/);
 assert.match(text, /宇城市公式PDFの内容を、要点が見つかる形に再構成/);
 assert.match(text, /支援制度等一覧/);
@@ -29,13 +29,17 @@ for (const title of ["罹災証明書", "被災者生活再建支援金", "被�
 for (const warning of ["工事契約・支払い・解体の前に相談してください", "準備中", "罹災証明書の提示は不要", "食費・居住費は対象外"]) {
   assert.ok(text.includes(warning), `重要な注意「${warning}」がありません`);
 }
-assert.equal((html.match(/<ol class="uki-all-menus">[\s\S]*?<\/ol>/)?.[0].match(/<li>/g) || []).length, 36, "全36制度を一覧に残す必要があります");
-assert.equal((html.match(/<ol class="uki-all-menus">[\s\S]*?<\/ol>/)?.[0].match(/<a href="#[^"]+">/g) || []).length, 36, "全36制度から関連する詳細・窓口へ移動できる必要があります");
+assert.equal((html.match(/<ol class="uki-all-menus">[\s\S]*?<\/ol>/)?.[0].match(/<li>/g) || []).length, 48, "11月16日時点の全48メニューを一覧に残す必要があります");
+assert.equal((html.match(/<ol class="uki-all-menus">[\s\S]*?<\/ol>/)?.[0].match(/<a href=/g) || []).length, 48, "全48メニューから詳細・関連ページ・窓口へ移動できる必要があります");
+for (const currentMenu of ["義援金の配分", "被災農業者向け利子補給補助金", "井戸等の応急修理", "水道料金・下水道使用料等の減免", "保育料の減免", "電気料金等の特別措置"]) {
+  assert.ok(html.includes(currentMenu), `11月16日時点の公式メニューがありません: ${currentMenu}`);
+}
+assert.ok(!html.includes('id="obstacle-removal"'), "現行公式目次から外れた障害物除去を受付中の独立制度として残さないでください");
 assert.ok((html.match(/href="tel:/g) || []).length >= 16, "電話リンクが不足しています");
 assert.ok((html.match(/city\.uki\.kumamoto\.jp/g) || []).length >= 13, "宇城市の個別制度ページと2つのPDFへのリンクが必要です");
 for (const damage of ["全壊", "大規模半壊", "中規模半壊", "半壊", "準半壊", "一部損壊"]) assert.ok(text.includes(damage), `${damage} の判定案内がありません`);
 for (const id of ["damage-full", "damage-large", "damage-middle", "damage-half", "damage-semi", "damage-minor"]) assert.ok(html.includes(`id="${id}"`), `${id} のスマホ向け判定カードがありません`);
-for (const amount of ["56,400円", "757,000円", "367,000円", "148,600円", "300万円", "13か月以内", "37か月以内"]) assert.ok(text.includes(amount), `${amount} の金額・期限情報がありません`);
+for (const amount of ["56,400円", "757,000円", "367,000円", "300万円", "令和9年8月27日", "令和11年8月27日", "令和9年2月1日"]) assert.ok(text.includes(amount), `${amount} の金額・期限情報がありません`);
 for (const document of ["施工前写真", "修理見積書", "マニフェスト", "罹災証明書の写し", "本人確認書類"]) assert.ok(text.includes(document), `${document} の必要書類案内がありません`);
 assert.equal((html.match(/class="uki-damage-table"/g) || []).length, 1, "被害判定別比較表が必要です");
 assert.ok((html.match(/class="uki-official-link"/g) || []).length >= 10, "制度別の公式リンクが不足しています");
@@ -56,4 +60,4 @@ const pages = fs.readdirSync(new URL("..", import.meta.url)).filter(file => file
 const inbound = pages.filter(page => page !== "uki-support.html" && read(page).includes('href="uki-support.html'));
 assert.ok(inbound.length >= 1, "別ページから宇城市支援ガイドへ到達できません");
 
-console.log(`宇城市 被災者支援制度ガイド: 36制度 / 6判定 / 個別公式リンク${(html.match(/class="uki-official-link"/g) || []).length}件 / 電話${(html.match(/href="tel:/g) || []).length}件 / 導線${inbound.length}ページ OK`);
+console.log(`宇城市 被災者支援制度ガイド: 48メニュー / 6判定 / 個別公式リンク${(html.match(/class="uki-official-link"/g) || []).length}件 / 電話${(html.match(/href="tel:/g) || []).length}件 / 導線${inbound.length}ページ OK`);

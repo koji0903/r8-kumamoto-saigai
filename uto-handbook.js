@@ -43,19 +43,17 @@
   const fResultBox = document.querySelector(".uh-finder-result");
   const quickButtons = [...document.querySelectorAll(".uh-quick")];
 
-  // 原本の印刷ページとPDFビューア上のページを対応させる。
-  // 制度61「持続的生産強化対策事業」のみ印刷ページ64～65の2ページ構成。
-  const sourcePdf = "https://www.city.uto.lg.jp/d?q=64a2f70ed8565cbae8ab6cc0030be8e7.pdf";
+  // PDFの直リンクは差し替えで失効するため、常に最新版を案内する市公式掲載ページへ誘導する。
+  const officialSourcePage = "https://www.city.uto.lg.jp/article/view/1309/16342.html";
   cards.forEach((card, index) => {
     const printedPage = index <= 60 ? index + 4 : index + 5;
     const printedLabel = index === 60 ? "64～65" : String(printedPage);
-    const pdfPage = printedPage + 2;
     const link = document.createElement("a");
     link.className = "uh-source-page";
-    link.href = `${sourcePdf}#page=${pdfPage}`;
+    link.href = officialSourcePage;
     link.target = "_blank";
     link.rel = "noopener";
-    link.textContent = `原本 p.${printedLabel} を確認 ↗`;
+    link.textContent = `原本 p.${printedLabel}（宇土市公式の最新版）↗`;
     link.setAttribute("aria-label", `${card.querySelector("h3")?.textContent?.trim() || "制度"}の原本掲載ページを開く`);
     card.insertBefore(link, card.querySelector(".uh-card-tags"));
   });

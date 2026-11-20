@@ -27,6 +27,11 @@ const OFFICIAL_TOPICS_PATH = join(ROOT, "sources/official/topics/latest-topics.j
 const HTML_PATH = join(ROOT, "temporary-housing.html");
 
 const checkOnly = process.argv.includes("--check");
+const OFFICIAL_URL_OVERRIDES = new Map([
+  ["https://www.city.uto.lg.jp/article/view/1307/16820.html", "https://www.city.uto.lg.jp/"],
+  ["https://www.city.uto.lg.jp/article/view/1007/16820.html", "https://www.city.uto.lg.jp/"],
+  ["https://www.city.uto.lg.jp/d?q=d48942a8dec649b6d65971ddb4dae5b4.docx", "https://www.city.uto.lg.jp/"]
+]);
 
 const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -97,7 +102,8 @@ async function main() {
   // 2. タイムラインHTMLの生成
   const cardsHtml = sortedUpdates.map(item => {
     const art = archiveIndex[item.url];
-    const targetUrl = art ? art.htmlPath : item.url;
+    const currentOfficialUrl = OFFICIAL_URL_OVERRIDES.get(item.url) || item.url;
+    const targetUrl = art ? art.htmlPath : currentOfficialUrl;
     const isArchived = Boolean(art);
     return `        <article class="portal-update-card">
           <div class="portal-update-meta">
@@ -110,7 +116,7 @@ async function main() {
             <a href="${esc(targetUrl)}"${isArchived ? "" : ' target="_blank" rel="noopener"'}>${esc(item.title)} <span aria-hidden="true">${isArchived ? "→" : "↗"}</span></a>
           </h3>
           ${isArchived ? `          <div class="portal-update-sublink">
-            <small><a href="${esc(item.url)}" target="_blank" rel="noopener">自治体公式元 ↗</a></small>
+            <small><a href="${esc(currentOfficialUrl)}" target="_blank" rel="noopener">自治体公式の現行案内 ↗</a></small>
           </div>` : ""}
         </article>`;
   }).join("\n");

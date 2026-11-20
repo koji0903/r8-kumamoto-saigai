@@ -99,6 +99,7 @@ assert.ok(!risaiHtml.includes("https://www.town.nishiki.lg.jp/") && !risaiHtml.i
 // 6. 監視台帳とレポートの存在検証
 assert.ok(fs.existsSync(new URL("../sources/guide-official-watch.json", import.meta.url)), "sources/guide-official-watch.json が存在しません");
 const watchConfig = JSON.parse(read("sources/guide-official-watch.json"));
-assert.ok(Array.isArray(watchConfig.targets) && watchConfig.targets.length >= 15, "公式監視対象が15件以上登録されている必要があります");
+assert.ok(Array.isArray(watchConfig.targets) && watchConfig.targets.length >= 27, "公式監視対象が27件以上登録されている必要があります");
+assert.ok(watchConfig.targets.some(target => target.id === "uki-support-overview" && target.guidePages.includes("uki-support.html")), "宇城市の支援制度概要を優先監視してください");
 
 console.log(`ガイドページ横断最新性・整合性テスト OK（監視台帳 ${watchConfig.targets.length}件・横断チェック完了）`);

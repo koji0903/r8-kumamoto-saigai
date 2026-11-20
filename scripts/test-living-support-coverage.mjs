@@ -140,7 +140,7 @@ console.log("リンク状態の分類 OK");
 // 7. 監視Workflow
 const workflow = fs.readFileSync(".github/workflows/monitor-living-support-coverage.yml", "utf8");
 for (const text of [
-  'cron: "5 20 1 * *"', "workflow_dispatch:", "dry_run:", "contents: write", "issues: write",
+  'cron: "5 20 * * *"', "5自治体", "workflow_dispatch:", "dry_run:", "contents: write", "issues: write",
   "concurrency:", "cancel-in-progress: false", "timeout-minutes: 30",
   "scripts/monitor-living-support-coverage.mjs --check", "reports/living-support-coverage.json",
   "GITHUB_STEP_SUMMARY", "gh issue create", "git fetch origin main", "git rebase origin/main",

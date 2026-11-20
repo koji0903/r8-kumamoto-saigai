@@ -2,8 +2,8 @@ name: 暮らしの支援ガイドの掲載監視
 
 on:
   schedule:
-    # 毎月2日 5:05 JST（UTC 20:05）。自治体の年度・月初の制度更新を拾う。
-    - cron: "5 20 1 * *"
+    # 毎日 5:05 JST（UTC 20:05）。制度の追加・終了を翌朝までに検知する。
+    - cron: "5 20 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -22,7 +22,7 @@ concurrency:
 
 jobs:
   monitor:
-    name: 4市町の掲載漏れとリンク切れを監視
+    name: 5自治体の掲載漏れとリンク切れを監視
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -72,7 +72,7 @@ jobs:
         run: |
           title="暮らしの支援ガイド：新しい未掲載制度・リンク切れを検出（$(TZ=Asia/Tokyo date '+%Y-%m-%d')）"
           {
-            echo "\`scripts/monitor-living-support-coverage.mjs\` が4市町の公式サイトと掲載内容を突き合わせ、前回レポートに無かった項目を検出しました。"
+            echo "\`scripts/monitor-living-support-coverage.mjs\` が5自治体の公式サイトと掲載内容を突き合わせ、前回レポートに無かった項目を検出しました。"
             echo ""
             echo "対応の目安"
             echo "- 未掲載制度：金額・対象・期限・担当窓口を公式ページから転記してカードを追加する"
