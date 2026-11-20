@@ -14,6 +14,7 @@ const removedSources = [
   'https://www.city.kumamoto.jp/kiji00372604/index.html',
   'https://www.city.uki.kumamoto.jp/jigyosha/sangyo/nogyo/2632940',
   'https://www.city.uki.kumamoto.jp/jigyosha/sangyo/nogyo/2637693',
+  'https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2641256',
   'https://www.city.uki.kumamoto.jp/kurashi/sonota_kurashi/2634890',
   'https://www.city.uki.kumamoto.jp/kurashi/sumai/2624303',
   'https://www.city.uto.lg.jp/article/view/1072/3363.html',
