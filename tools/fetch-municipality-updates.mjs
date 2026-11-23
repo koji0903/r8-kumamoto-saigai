@@ -154,11 +154,19 @@ function articleLike(url) {
 function hubLike(url) {
   return /(?:\/category\/list\/|\/list\d+\.html|\/new(?:_list)?\.html|\/q\/new\.html)/iu.test(new URL(url).pathname);
 }
+const OFFICIAL_URL_OVERRIDES = new Map([
+  ["https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2641256", "https://www.city.uki.kumamoto.jp/toppage/important/2641256"],
+  ["https://www.city.uki.kumamoto.jp/toppage/important/2515854", "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/sonota_bousai/2515854"]
+]);
+function canonicalizeOfficialUrl(url) {
+  return OFFICIAL_URL_OVERRIDES.get(url) || url;
+}
 function canonicalArticleKey(url) {
-  const parsed = new URL(url);
+  const parsed = new URL(canonicalizeOfficialUrl(url));
   const viewId = parsed.pathname.match(/\/q\/aview\/\d+\/(\d+)\.html$/i)?.[1];
   const articleId = parsed.pathname.match(/\/article\/view\/\d+\/(\d+)\.html$/i)?.[1];
-  return viewId ? `${parsed.hostname}/q/aview/${viewId}` : articleId ? `${parsed.hostname}/article/view/${articleId}` : url;
+  const ukiId = parsed.hostname === "www.city.uki.kumamoto.jp" ? parsed.pathname.match(/\/(\d{6,})\/?$/)?.[1] : null;
+  return viewId ? `${parsed.hostname}/q/aview/${viewId}` : articleId ? `${parsed.hostname}/article/view/${articleId}` : ukiId ? `${parsed.hostname}/article/${ukiId}` : parsed.href;
 }
 function decodeHtml(bytes, type = "") {
   const declared = type.match(/charset=([^;\s]+)/i)?.[1];
@@ -338,7 +346,9 @@ for (const config of municipalities) {
     console.warn(`  ${config.name}: 災害情報ハブを取得できないため前回確認済み${previousRecord.updates.length}件を保持`);
   }
   const canonicalUpdates = new Map();
-  for (const update of updates.values()) {
+  for (const rawUpdate of updates.values()) {
+    const normalizedUrl = canonicalizeOfficialUrl(rawUpdate.url);
+    const update = normalizedUrl === rawUpdate.url ? rawUpdate : { ...rawUpdate, url: normalizedUrl };
     const key = canonicalArticleKey(update.url), previous = canonicalUpdates.get(key);
     if (!previous || update.date > previous.date || (update.date === previous.date && update.title.length > previous.title.length)) canonicalUpdates.set(key, update);
   }

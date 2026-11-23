@@ -51,7 +51,15 @@ async function main() {
   const officialTopics = JSON.parse(officialTopicsRaw);
   const archiveIndex = JSON.parse(archiveIndexRaw);
 
-  const municipalities = officialTopics.municipalities || [];
+  const OFFICIAL_URL_OVERRIDES = new Map([
+    ["https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2641256", "https://www.city.uki.kumamoto.jp/toppage/important/2641256"],
+    ["https://www.city.uki.kumamoto.jp/toppage/important/2515854", "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/sonota_bousai/2515854"]
+  ]);
+  const normalizeTopicUrl = item => {
+    const url = OFFICIAL_URL_OVERRIDES.get(item.url) || item.url;
+    return url === item.url ? item : { ...item, url };
+  };
+  const municipalities = (officialTopics.municipalities || []).map(normalizeTopicUrl);
   const national = officialTopics.national || [];
   const prefecture = officialTopics.prefecture || [];
 

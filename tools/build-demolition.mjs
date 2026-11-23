@@ -39,6 +39,10 @@ const INDIVIDUAL_PAGES = [
 ];
 
 const checkOnly = process.argv.includes("--check");
+const OFFICIAL_URL_OVERRIDES = new Map([
+  ["https://www.city.uki.kumamoto.jp/kurashi/kankyo/gomi/2641256", "https://www.city.uki.kumamoto.jp/toppage/important/2641256"]
+]);
+const canonicalizeOfficialUrl = url => OFFICIAL_URL_OVERRIDES.get(url) || url;
 
 const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -101,7 +105,7 @@ async function main() {
           date: update.date,
           time: update.time || null,
           title: update.title,
-          url: update.url,
+          url: canonicalizeOfficialUrl(update.url),
           category: update.category || "公式発表"
         });
       }
