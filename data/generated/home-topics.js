@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-23T04:19:17.854Z",
-  "officialCheckedAt": "11/23 13:19",
+  "retrievedAt": "2026-11-23T22:19:55.587Z",
+  "officialCheckedAt": "11/24 07:19",
   "siteTopics": [
     {
       "date": "2026-11-21",
@@ -96,34 +96,24 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "震度速報 11月23日 2時47分",
+      "title": "震度速報 11月24日 1時13分",
       "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-      "date": "2026-11-23",
-      "time": "02:47",
+      "date": "2026-11-24",
+      "time": "01:13",
       "category": "避難・安全",
       "municipality": "山鹿市",
-      "archiveId": "yamaga-20261123-ed5178f4",
-      "archiveUrl": "official-articles/yamaga-20261123-ed5178f4.html"
+      "archiveId": "yamaga-20261124-ed5178f4",
+      "archiveUrl": "official-articles/yamaga-20261124-ed5178f4.html"
     },
     {
-      "title": "令和8年熊本地震被災者支援に関する各種制度の概要（R8.11.23時点） (PDF 2,248KB)",
-      "url": "https://www.city.uki.kumamoto.jp/resource.php?e=1ed5cd37af173bc818a1ced8204a87e778d2c46e8906474a89566d1e0c99832368394f0dd03bd97f3e8242a293a7cf47",
-      "date": "2026-11-23",
+      "title": "令和8年熊本地震に伴う教育委員会所管施設(体育施設)の利用一部再開について",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2629810",
+      "date": "2026-11-24",
       "time": null,
-      "category": "支援・制度",
+      "category": "施設・学校",
       "municipality": "宇城市",
-      "archiveId": "uki-20261123-9e02f1ba",
-      "archiveUrl": "official-articles/uki-20261123-9e02f1ba.html"
-    },
-    {
-      "title": "令和8年熊本地震義援金の配分について - 総務課",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/123/6422.html",
-      "date": "2026-11-23",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "嘉島町",
-      "archiveId": "kashima-20261123-ee5cc74a",
-      "archiveUrl": "official-articles/kashima-20261123-ee5cc74a.html"
+      "archiveId": "uki-20261124-3d05fd87",
+      "archiveUrl": "official-articles/uki-20261124-3d05fd87.html"
     },
     {
       "title": "令和8年熊本地震関連情報",
@@ -184,6 +174,16 @@ window.HOME_TOPICS = {
       "municipality": "宇土市",
       "archiveId": "uto-20261120-fa77fd0d",
       "archiveUrl": "official-articles/uto-20261120-fa77fd0d.html"
+    },
+    {
+      "title": "令和8年熊本地震にかかる寄附金の受付について",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6103.html",
+      "date": "2026-11-20",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "嘉島町",
+      "archiveId": "kashima-20261120-28d62fb4",
+      "archiveUrl": "official-articles/kashima-20261120-28d62fb4.html"
     },
     {
       "title": "緊急地震速報",

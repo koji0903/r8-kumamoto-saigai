@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-11-23T03:58:08.319Z",
+  "generatedAt": "2026-11-23T21:59:55.386Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 864,
-  "displayCandidateCount": 616,
-  "classifiedPageCount": 726,
+  "inputCount": 846,
+  "displayCandidateCount": 603,
+  "classifiedPageCount": 712,
   "categoryReport": {
     "home": {
-      "total": 184,
-      "high": 74,
+      "total": 179,
+      "high": 71,
       "medium": 68,
-      "low": 42
+      "low": 40
     },
     "money": {
-      "total": 270,
-      "high": 57,
-      "medium": 75,
-      "low": 138
+      "total": 264,
+      "high": 53,
+      "medium": 74,
+      "low": 137
     },
     "documents": {
-      "total": 170,
-      "high": 42,
-      "medium": 32,
-      "low": 96
+      "total": 159,
+      "high": 39,
+      "medium": 27,
+      "low": 93
     },
     "health_care": {
       "total": 56,
@@ -31,8 +31,8 @@
       "low": 0
     },
     "family_education": {
-      "total": 75,
-      "high": 11,
+      "total": 76,
+      "high": 12,
       "medium": 30,
       "low": 34
     },
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 211,
-      "high": 56,
-      "medium": 153,
+      "total": 207,
+      "high": 55,
+      "medium": 150,
       "low": 2
     }
   },
@@ -87,13 +87,13 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 34,
-      "displayCandidates": 30,
+      "classified": 32,
+      "displayCandidates": 28,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 115,
-      "displayCandidates": 99,
+      "classified": 103,
+      "displayCandidates": 88,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 272,
-    "medium": 344,
-    "low": 110
+    "high": 262,
+    "medium": 341,
+    "low": 109
   },
-  "unclassifiedCount": 28,
+  "unclassifiedCount": 25,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -251,11 +251,6 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年10月07日 【職員募集】令和8年熊本地震に伴う宇城市任期付職員（事務職）を募集します",
-      "url": "https://www.city.uki.kumamoto.jp/gyousei/saiyo/2645544"
-    },
-    {
-      "municipalityName": "宇城市",
       "title": "【職員募集】令和8年熊本地震に伴う宇城市任期付職員（事務職）を募集します",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2645544"
     },
@@ -266,18 +261,8 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月13日 令和8年熊本地震被災求職者等向け企業説明会を開催します",
-      "url": "https://www.city.uki.kumamoto.jp/jigyosha/sangyo/shokogyo/2652986"
-    },
-    {
-      "municipalityName": "宇城市",
       "title": "2026年11月16日 【職員募集】被災市町任期付職員合同採用試験実施 宇城市（事務職）を募集します",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2655703"
-    },
-    {
-      "municipalityName": "宇城市",
-      "title": "2026年11月17日 【職員募集】被災市町任期付職員合同採用試験実施 宇城市（事務職）を募集します",
-      "url": "https://www.city.uki.kumamoto.jp/gyousei/saiyo/2655703"
     },
     {
       "municipalityName": "菊陽町",
@@ -310,7 +295,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036908/index.html"
     }
   ],
-  "outOfScopeCount": 69,
+  "outOfScopeCount": 68,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "disaster_preparedness": 10,
@@ -320,7 +305,7 @@
     "overall_guide": 5,
     "mayor_message": 2,
     "hq_meeting_material": 3,
-    "index_page": 17,
+    "index_page": 16,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 4,
@@ -484,7 +469,7 @@
     },
     {
       "municipalityName": "山鹿市",
-      "title": "震度速報 11月23日 2時47分",
+      "title": "震度速報 11月24日 1時13分",
       "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -621,13 +606,6 @@
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
       "ruleId": "press",
       "ruleLabel": "報道機関向け"
-    },
-    {
-      "municipalityName": "宇城市",
-      "title": "2026年11月20日 令和8年熊本地震 関連情報 （11月21日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "宇城市",
@@ -937,5 +915,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 736
+  "previousClassifiedPageCount": 726
 }

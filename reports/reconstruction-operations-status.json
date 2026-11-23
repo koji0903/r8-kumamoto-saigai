@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-23T04:19:46.181Z",
+  "generatedAt": "2026-11-23T22:20:22.194Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-23T03:58:08.319Z",
-    "inputCount": 864,
-    "classifiedPageCount": 726,
-    "displayCandidateCount": 616,
+    "generatedAt": "2026-11-23T21:59:55.386Z",
+    "inputCount": 846,
+    "classifiedPageCount": 712,
+    "displayCandidateCount": 603,
     "deltaFromPrevious": {
-      "inputCount": -8,
-      "classifiedPageCount": -10,
-      "unclassifiedCount": 1
+      "inputCount": -18,
+      "classifiedPageCount": -14,
+      "unclassifiedCount": -3
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 57,
+      "ageHours": 75,
       "limitHours": 336
     }
   },
@@ -61,13 +61,13 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 34,
-        "displayCandidates": 30,
+        "classified": 32,
+        "displayCandidates": 28,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 115,
-        "displayCandidates": 99,
+        "classified": 103,
+        "displayCandidates": 88,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 184,
-        "high": 74,
+        "total": 179,
+        "high": 71,
         "medium": 68,
-        "low": 42
+        "low": 40
       },
       "money": {
-        "total": 270,
-        "high": 57,
-        "medium": 75,
-        "low": 138
+        "total": 264,
+        "high": 53,
+        "medium": 74,
+        "low": 137
       },
       "documents": {
-        "total": 170,
-        "high": 42,
-        "medium": 32,
-        "low": 96
+        "total": 159,
+        "high": 39,
+        "medium": 27,
+        "low": 93
       },
       "health_care": {
         "total": 56,
@@ -162,8 +162,8 @@
         "low": 0
       },
       "family_education": {
-        "total": 75,
-        "high": 11,
+        "total": 76,
+        "high": 12,
         "medium": 30,
         "low": 34
       },
@@ -180,18 +180,18 @@
         "low": 0
       },
       "daily_life": {
-        "total": 211,
-        "high": 56,
-        "medium": 153,
+        "total": 207,
+        "high": 55,
+        "medium": 150,
         "low": 2
       }
     },
     "confidence": {
-      "high": 272,
-      "medium": 344,
-      "low": 110
+      "high": 262,
+      "medium": 341,
+      "low": 109
     },
-    "unclassifiedCount": 28,
+    "unclassifiedCount": 25,
     "excludedCount": 41,
     "overrideCount": 2
   },
