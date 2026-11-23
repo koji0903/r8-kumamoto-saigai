@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-20T19:34:02.620Z",
+  "generatedAt": "2026-11-23T04:19:46.181Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-20T19:09:59.210Z",
-    "inputCount": 872,
-    "classifiedPageCount": 736,
-    "displayCandidateCount": 626,
+    "generatedAt": "2026-11-23T03:58:08.319Z",
+    "inputCount": 864,
+    "classifiedPageCount": 726,
+    "displayCandidateCount": 616,
     "deltaFromPrevious": {
-      "inputCount": -12,
+      "inputCount": -8,
       "classifiedPageCount": -10,
       "unclassifiedCount": 1
     }
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 57,
       "limitHours": 336
     }
   },
@@ -61,13 +61,13 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 35,
-        "displayCandidates": 31,
+        "classified": 34,
+        "displayCandidates": 30,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 116,
-        "displayCandidates": 100,
+        "classified": 115,
+        "displayCandidates": 99,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -101,8 +101,8 @@
         "fallback": true
       },
       "municipality_mifune": {
-        "classified": 28,
-        "displayCandidates": 19,
+        "classified": 22,
+        "displayCandidates": 13,
         "fallback": true
       },
       "municipality_kashima": {
@@ -121,8 +121,8 @@
         "fallback": true
       },
       "municipality_hikawa": {
-        "classified": 63,
-        "displayCandidates": 55,
+        "classified": 61,
+        "displayCandidates": 53,
         "fallback": true
       },
       "municipality_ashikita": {
@@ -144,10 +144,10 @@
         "low": 42
       },
       "money": {
-        "total": 272,
+        "total": 270,
         "high": 57,
-        "medium": 76,
-        "low": 139
+        "medium": 75,
+        "low": 138
       },
       "documents": {
         "total": 170,
@@ -162,15 +162,15 @@
         "low": 0
       },
       "family_education": {
-        "total": 76,
-        "high": 12,
+        "total": 75,
+        "high": 11,
         "medium": 30,
         "low": 34
       },
       "work_business": {
-        "total": 74,
+        "total": 73,
         "high": 19,
-        "medium": 55,
+        "medium": 54,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,19 +180,19 @@
         "low": 0
       },
       "daily_life": {
-        "total": 219,
-        "high": 61,
-        "medium": 156,
+        "total": 211,
+        "high": 56,
+        "medium": 153,
         "low": 2
       }
     },
     "confidence": {
-      "high": 278,
-      "medium": 348,
+      "high": 272,
+      "medium": 344,
       "low": 110
     },
-    "unclassifiedCount": 27,
-    "excludedCount": 40,
+    "unclassifiedCount": 28,
+    "excludedCount": 41,
     "overrideCount": 2
   },
   "actions": [

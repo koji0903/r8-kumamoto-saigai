@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-20T19:09:59.210Z",
+  "generatedAt": "2026-11-23T03:58:08.319Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 872,
-  "displayCandidateCount": 626,
-  "classifiedPageCount": 736,
+  "inputCount": 864,
+  "displayCandidateCount": 616,
+  "classifiedPageCount": 726,
   "categoryReport": {
     "home": {
       "total": 184,
@@ -13,10 +13,10 @@
       "low": 42
     },
     "money": {
-      "total": 272,
+      "total": 270,
       "high": 57,
-      "medium": 76,
-      "low": 139
+      "medium": 75,
+      "low": 138
     },
     "documents": {
       "total": 170,
@@ -31,15 +31,15 @@
       "low": 0
     },
     "family_education": {
-      "total": 76,
-      "high": 12,
+      "total": 75,
+      "high": 11,
       "medium": 30,
       "low": 34
     },
     "work_business": {
-      "total": 74,
+      "total": 73,
       "high": 19,
-      "medium": 55,
+      "medium": 54,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 219,
-      "high": 61,
-      "medium": 156,
+      "total": 211,
+      "high": 56,
+      "medium": 153,
       "low": 2
     }
   },
@@ -87,13 +87,13 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 35,
-      "displayCandidates": 31,
+      "classified": 34,
+      "displayCandidates": 30,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 116,
-      "displayCandidates": 100,
+      "classified": 115,
+      "displayCandidates": 99,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -127,8 +127,8 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 28,
-      "displayCandidates": 19,
+      "classified": 22,
+      "displayCandidates": 13,
       "fallback": true
     },
     "municipality_kashima": {
@@ -147,8 +147,8 @@
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 63,
-      "displayCandidates": 55,
+      "classified": 61,
+      "displayCandidates": 53,
       "fallback": true
     },
     "municipality_ashikita": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 278,
-    "medium": 348,
+    "high": 272,
+    "medium": 344,
     "low": 110
   },
-  "unclassifiedCount": 27,
+  "unclassifiedCount": 28,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -293,6 +293,11 @@
       "municipalityName": "御船町",
       "title": "運動部活動の社会体育移行",
       "url": "https://www.town.mifune.kumamoto.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=6024"
+    },
+    {
+      "municipalityName": "益城町",
+      "title": "益城中央被災市街地復興土地区画整理事業の土地区画整理法第76条許可申請について",
+      "url": "https://www.town.mashiki.lg.jp/kiji0036234/index.html"
     },
     {
       "municipalityName": "氷川町",
@@ -479,7 +484,7 @@
     },
     {
       "municipalityName": "山鹿市",
-      "title": "震度速報 11月20日 13時51分",
+      "title": "震度速報 11月23日 2時47分",
       "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -514,6 +519,13 @@
     },
     {
       "municipalityName": "宇土市",
+      "title": "キーワード「2026」の記事一覧",
+      "url": "https://www.city.uto.lg.jp/article/keyword/29211.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "宇土市",
       "title": "宇土市立図書館開館について",
       "url": "https://www.city.uto.lg.jp/article/view/1305/16828.html",
       "ruleId": "facility_notice",
@@ -532,13 +544,6 @@
       "url": "https://www.city.uto.lg.jp/article/view/1304/17076.html",
       "ruleId": "facility_notice",
       "ruleLabel": "公共施設の休止・再開・紹介"
-    },
-    {
-      "municipalityName": "宇土市",
-      "title": "キーワード「2026」の記事一覧",
-      "url": "https://www.city.uto.lg.jp/article/keyword/29211.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "宇土市",
@@ -619,7 +624,14 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月20日 令和8年熊本地震 関連情報 （11月20日17時00分更新）",
+      "title": "2026年11月20日 令和8年熊本地震 関連情報 （11月21日8時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/kurashi/bosaiinfo/earthquake/2606699",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "宇城市",
+      "title": "2026年11月21日 令和8年熊本地震 関連情報 （11月21日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -723,13 +735,6 @@
       "ruleLabel": "平時の防災・今後への備え"
     },
     {
-      "municipalityName": "御船町",
-      "title": "緊急地震速報",
-      "url": "https://www.town.mifune.kumamoto.jp/kinkyu/pub/default.aspx?c_id=8",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
       "municipalityName": "嘉島町",
       "title": "令和8年熊本地震に関する情報",
       "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6035.html",
@@ -807,10 +812,10 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 40,
+  "excludedCount": 41,
   "excludedByType": {
     "duplicate_url": 37,
-    "non_official_url": 2,
+    "non_official_url": 3,
     "past_disaster_excluded": 1
   },
   "warningCount": 23,
@@ -932,5 +937,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 746
+  "previousClassifiedPageCount": 736
 }
