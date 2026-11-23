@@ -1,6 +1,6 @@
 # 暮らしの再建 情報品質ステータス
 
-最終監査日時: 2026-08-12（データ生成: 2026-11-23T21:59:55.386Z）
+最終監査日時: 2026-08-12（データ生成: 2026-11-23T22:43:51.516Z）
 
 > 件数の少なさは支援の少なさを意味しません。自治体の発信方法・ページ構造・更新頻度の差として扱います。A/B/Cは品質状態であり自治体評価ではありません。
 
@@ -23,7 +23,7 @@
 - 氷川町: confirmed / 取得エラー 1件
 - 未分類 25件。重要語の取りこぼしを週次確認
 - 収集巡回中の404候補 31件。連続失敗回数をまだ永続保持していない
-- 表示候補のうち機械的freshness判定でstale 542件。自動削除せず公式原文を確認
+- 表示候補のうち機械的freshness判定でstale 541件。自動削除せず公式原文を確認
 
 ## 現在の公式情報件数
 - collector入力: 846件
@@ -135,13 +135,13 @@ A=自治体個別公式情報あり、B=国・県等の広域情報のみ、C=�
 - low confidenceは検索index・通常表示から除外済み。mediumは表示対象のため週次サンプル監査を続ける。
 
 ## source・freshness・障害耐性
-- freshness（生成時点の機械判定）: fresh 61 / stale 542 / unknown 0
+- freshness（生成時点の機械判定）: fresh 62 / stale 541 / unknown 0
 - staleは自動削除しない。速報は公式ページで最新状況を確認する前提を維持する。
 - `publishedAt`を`retrievedAt`より優先。日付なしはエラーにしない。
 - LEVEL 2公式リンクの変更は正常。LEVEL 1 verified sourceのhash変更は`needs_review`へ送る。
 - verified source変更: 6件
 - needs_review entity: 0件
-- 未解決source変更: 132件（ACTION_REQUIRED 64件）
+- 未解決source変更: 133件（ACTION_REQUIRED 64件）
 - review queue: `docs/reconstruction-source-review-queue.md`（高リスク順）
 - refreshは自治体別errorsを保持し、空データ・fallback欠落・非公式URLをfailureにする。
 - 1自治体失敗時も既存データを空上書きしない設計を維持。生成は一時ファイルからrenameし、検証不合格時は公開しない。
