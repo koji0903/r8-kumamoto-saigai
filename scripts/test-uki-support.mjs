@@ -12,7 +12,7 @@ const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
 
 assert.match(html, /<title>[^<]+<\/title>/);
 assert.match(html, /<meta name="description" content="[^"]+">/);
-assert.match(text, /令和8年11月16日時点/);
+assert.match(text, /令和8年11月23日時点/);
 assert.match(text, /内容は変更される場合/);
 assert.match(text, /宇城市公式PDFの内容を、要点が見つかる形に再構成/);
 assert.match(text, /支援制度等一覧/);
