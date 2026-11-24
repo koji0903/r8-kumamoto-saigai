@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-24T07:24:57.833Z",
-  "officialCheckedAt": "11/24 16:24",
+  "retrievedAt": "2026-11-24T14:37:37.133Z",
+  "officialCheckedAt": "11/24 23:37",
   "siteTopics": [
     {
       "date": "2026-11-24",
@@ -96,14 +96,34 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "date": "2026-11-24",
-      "time": "15:17",
+      "time": "19:40",
       "category": "その他",
       "municipality": "八代市",
-      "archiveId": "yatsushiro-20261124-ad77f47a",
-      "archiveUrl": "official-articles/yatsushiro-20261124-ad77f47a.html"
+      "archiveId": "yatsushiro-20261124-95d8bc9e",
+      "archiveUrl": "official-articles/yatsushiro-20261124-95d8bc9e.html"
+    },
+    {
+      "title": "「罹災証明書」「被災証明書」の発行について",
+      "url": "https://www.town.kikuyo.lg.jp/bousai/kiji0035059/index.html",
+      "date": "2026-11-24",
+      "time": "18:14",
+      "category": "住まい・証明",
+      "municipality": "菊陽町",
+      "archiveId": "kikuyo-20261124-82235f44",
+      "archiveUrl": "official-articles/kikuyo-20261124-82235f44.html"
+    },
+    {
+      "title": "令和8年熊本地震に伴う災害ごみ仮置場への受入れについて",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036755/index.html",
+      "date": "2026-11-24",
+      "time": "17:05",
+      "category": "ごみ・生活",
+      "municipality": "氷川町",
+      "archiveId": "hikawa-20261124-e3d5a6b5",
+      "archiveUrl": "official-articles/hikawa-20261124-e3d5a6b5.html"
     },
     {
       "title": "2026年11月24日 令和8年熊本地震 関連情報 （11月24日15時00分更新）",
@@ -114,26 +134,6 @@ window.HOME_TOPICS = {
       "municipality": "宇城市",
       "archiveId": "uki-20261124-7d9d4e13",
       "archiveUrl": "official-articles/uki-20261124-7d9d4e13.html"
-    },
-    {
-      "title": "令和8年熊本地震の災害に伴う雇用調整助成金の特例措置について",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036812/index.html",
-      "date": "2026-11-24",
-      "time": "13:55",
-      "category": "その他",
-      "municipality": "氷川町",
-      "archiveId": "hikawa-20261124-f1c2a314",
-      "archiveUrl": "official-articles/hikawa-20261124-f1c2a314.html"
-    },
-    {
-      "title": "令和8年熊本地震に関する 県民アンケートのご協力のお願い",
-      "url": "https://www.town.kikuyo.lg.jp/kiji0035869/index.html",
-      "date": "2026-11-24",
-      "time": "11:39",
-      "category": "その他",
-      "municipality": "菊陽町",
-      "archiveId": "kikuyo-20261124-2ef2d61a",
-      "archiveUrl": "official-articles/kikuyo-20261124-2ef2d61a.html"
     },
     {
       "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
@@ -154,6 +154,16 @@ window.HOME_TOPICS = {
       "municipality": "山鹿市",
       "archiveId": "yamaga-20261124-ed5178f4",
       "archiveUrl": "official-articles/yamaga-20261124-ed5178f4.html"
+    },
+    {
+      "title": "令和８年熊本地震に係る被災した住宅の応急修理制度について",
+      "url": "https://www.city.uto.lg.jp/article/view/1018/16523.html",
+      "date": "2026-11-24",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261124-5280fc84",
+      "archiveUrl": "official-articles/uto-20261124-5280fc84.html"
     },
     {
       "title": "(11/24更新)本市の水道に係る地震発生後の状況についてお知らせします",
@@ -214,16 +224,6 @@ window.HOME_TOPICS = {
       "municipality": "津奈木町",
       "archiveId": "tsunagi-20261120-6c30f109",
       "archiveUrl": "official-articles/tsunagi-20261120-6c30f109.html"
-    },
-    {
-      "title": "令和８年熊本地震義援金の配分について",
-      "url": "https://www.city.uto.lg.jp/article/view/1307/17389.html",
-      "date": "2026-11-20",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261120-fa77fd0d",
-      "archiveUrl": "official-articles/uto-20261120-fa77fd0d.html"
     },
     {
       "title": "令和8年熊本地震にかかる寄附金の受付について",

@@ -5,8 +5,8 @@ window.DEMOLITION_DATA = {
     "confirmedMunicipalitiesCount": 13,
     "acceptingCount": 13,
     "note": "令和8年熊本地震に伴う被災家屋の公費解体および自費解体費用償還の各自治体公式発表マスターデータ。",
-    "retrievedAt": "2026-11-24T07:24:57.833Z",
-    "officialCheckedAt": "11/24 16:24"
+    "retrievedAt": "2026-11-24T14:37:37.133Z",
+    "officialCheckedAt": "11/24 23:37"
   },
   "alerts": [
     {
@@ -66,6 +66,36 @@ window.DEMOLITION_DATA = {
   ],
   "recentOfficialUpdates": [
     {
+      "municipality": "氷川町",
+      "date": "2026-11-24",
+      "time": "17:01",
+      "title": "自ら解体を行った被災家屋等の解体・撤去（自費解体）について（申請期限を延長しました）",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036841/index.html",
+      "category": "その他",
+      "archiveId": "hikawa-20261028-f6d3a0a0",
+      "archiveUrl": "official-articles/hikawa-20261028-f6d3a0a0.html"
+    },
+    {
+      "municipality": "氷川町",
+      "date": "2026-11-24",
+      "time": "16:23",
+      "title": "令和8年熊本地震で被災した家屋等の解体・撤去について（申請期限を延長しました）",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036794/index.html",
+      "category": "その他",
+      "archiveId": null,
+      "archiveUrl": null
+    },
+    {
+      "municipality": "宇城市",
+      "date": "2026-11-18",
+      "time": null,
+      "title": "2026年11月18日 令和8年熊本地震により被災した家屋等の解体・撤去について",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2641256",
+      "category": "その他",
+      "archiveId": null,
+      "archiveUrl": null
+    },
+    {
       "municipality": "益城町",
       "date": "2026-11-17",
       "time": "10:11",
@@ -107,26 +137,6 @@ window.DEMOLITION_DATA = {
     },
     {
       "municipality": "氷川町",
-      "date": "2026-10-28",
-      "time": "18:40",
-      "title": "自ら解体を行った被災家屋等の解体・撤去（自費解体）について（申請期限を延長しました）",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036841/index.html",
-      "category": "その他",
-      "archiveId": "hikawa-20261028-f6d3a0a0",
-      "archiveUrl": "official-articles/hikawa-20261028-f6d3a0a0.html"
-    },
-    {
-      "municipality": "氷川町",
-      "date": "2026-10-28",
-      "time": "18:39",
-      "title": "令和8年熊本地震で被災した家屋等の解体・撤去について（申請期限を延長しました）",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036794/index.html",
-      "category": "その他",
-      "archiveId": null,
-      "archiveUrl": null
-    },
-    {
-      "municipality": "氷川町",
       "date": "2026-10-26",
       "time": "17:40",
       "title": "【令和8年熊本地震】被災家屋の解体・撤去に伴う浄化槽の手続きについて",
@@ -154,16 +164,6 @@ window.DEMOLITION_DATA = {
       "category": "ごみ・生活",
       "archiveId": "mashiki-20261023-d598eebb",
       "archiveUrl": "official-articles/mashiki-20261023-d598eebb.html"
-    },
-    {
-      "municipality": "氷川町",
-      "date": "2026-10-16",
-      "time": "13:51",
-      "title": "令和8年熊本地震で被災した家屋等の解体・撤去の申請について",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036868/index.html",
-      "category": "その他",
-      "archiveId": null,
-      "archiveUrl": null
     },
     {
       "municipality": "甲佐町",
