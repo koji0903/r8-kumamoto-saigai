@@ -5,6 +5,15 @@ window.HOME_TOPICS = {
   "siteTopics": [
     {
       "date": "2026-11-24",
+      "category": "仮設住宅",
+      "badge": "40団地・1,212戸へ更新",
+      "title": "建設型応急住宅の整備状況を11月16日時点（40団地・1,212戸）へ更新",
+      "url": "temporary-housing.html",
+      "description": "熊本県公式の11月16日時点発表に合わせ、仮設住宅ガイドの整備状況サマリーを40団地・1,212戸（うち18団地・556戸が完成済み）へ更新しました。宇城市・博物館ネットワークセンター（46戸・ムービングハウス）着工や6市町別の完了戸数内訳を反映しています。",
+      "targetPage": "temporary-housing.html"
+    },
+    {
+      "date": "2026-11-24",
       "category": "宇城市支援制度",
       "badge": "11月23日時点版へ更新",
       "title": "宇城市の被災者支援制度ガイドを令和8年11月23日時点版へ更新",
@@ -83,15 +92,6 @@ window.HOME_TOPICS = {
       "url": "uki-demolition.html",
       "description": "申請・制度案内を含むガイド61ページの自治体・県・国公式リンク567件を横断確認し、404となっていた旧PDF・旧様式40件を現行の公式親ページまたは後継ページへ更新しました。宇城市の公費解体・自費解体は、申請期限を令和9年3月31日、12月1日以降は電話・Web予約、月曜〜土曜受付へ修正し、必要書類も11月18日更新の公式案内とチェックリストに合わせました。一次情報で確認できない共通の鉄骨単価・自己負担試算・固定的なマニフェスト票種は削除しました。",
       "targetPage": "uki-demolition.html"
-    },
-    {
-      "date": "2026-11-19",
-      "category": "制度最新化",
-      "badge": "期限延長・2次公募を反映",
-      "title": "八代市災害援護資金（2/1へ延長）・持続化補助金第2次公募（12/15締切）・セーフティネット4号（12/17へ延長）等を最新化",
-      "url": "reconstruction-work-business.html",
-      "description": "全ページの網羅的チェックに基づき、最新の期限延長・次期公募情報を反映しました。①八代市の災害援護資金貸付は令和9年2月1日まで期限延長（yatsushiro-loan.html）、②小規模事業者持続化補助金＜災害支援枠＞は第2次公募（確認書締切12/8・申請締切12/15）へ更新（uto-jizokuka.html、uto-handbook.html、reconstruction-work-business.html等）、③セーフティネット保証4号の指定期間を12月17日へ更新（uto-handbook.html）、④熊本県公式JSONに基づき開設中避難所データ（21件）を最新化しました。",
-      "targetPage": "reconstruction-work-business.html"
     }
   ],
   "municipalityUpdates": [
