@@ -4,6 +4,24 @@ window.HOME_TOPICS = {
   "officialCheckedAt": "11/24 08:04",
   "siteTopics": [
     {
+      "date": "2026-11-24",
+      "category": "宇城市支援制度",
+      "badge": "11月23日時点版へ更新",
+      "title": "宇城市の被災者支援制度ガイドを令和8年11月23日時点版へ更新",
+      "url": "uki-support.html",
+      "description": "宇城市が11月20日に更新した「被災者支援制度等一覧」「各種制度の概要」（令和8年11月23日時点・全48メニュー）を反映しました。被災者サポートダイヤル（0964-27-8002）の12月以降受付条件（平日・土曜のみ）や、車両無償貸出（令和9年3月31日まで延長）への公式導線も追加しています。",
+      "targetPage": "uki-support.html"
+    },
+    {
+      "date": "2026-11-24",
+      "category": "八代市・井戸修理",
+      "badge": "28業者一覧・同意書を追加",
+      "title": "八代市「井戸の応急修理ガイド」に11月13日公式更新を反映",
+      "url": "yatsushiro-well-repair.html",
+      "description": "八代市公式ページの11月13日更新に合わせ、井戸の掘り直し工事が可能な業者一覧（11月12日現在・28業者PDF）、指定給水装置工事事業者一覧、申込チェックシート、県外事業者依頼時に必須の災害用井戸登録同意書、水道本管確認用デジタルマップ、井戸原因調査の11月30日締切を追記しました。",
+      "targetPage": "yatsushiro-well-repair.html"
+    },
+    {
       "date": "2026-11-21",
       "category": "八代市支援制度",
       "badge": "公式第10版・全59制度へ更新",
@@ -74,24 +92,6 @@ window.HOME_TOPICS = {
       "url": "reconstruction-work-business.html",
       "description": "全ページの網羅的チェックに基づき、最新の期限延長・次期公募情報を反映しました。①八代市の災害援護資金貸付は令和9年2月1日まで期限延長（yatsushiro-loan.html）、②小規模事業者持続化補助金＜災害支援枠＞は第2次公募（確認書締切12/8・申請締切12/15）へ更新（uto-jizokuka.html、uto-handbook.html、reconstruction-work-business.html等）、③セーフティネット保証4号の指定期間を12月17日へ更新（uto-handbook.html）、④熊本県公式JSONに基づき開設中避難所データ（21件）を最新化しました。",
       "targetPage": "reconstruction-work-business.html"
-    },
-    {
-      "date": "2026-11-19",
-      "category": "システム改善",
-      "badge": "仮設住宅・り災証明・解体を自動連動",
-      "title": "仮設住宅・り災証明書・公費解体個別ガイドを自治体公式発表と連動する自動更新システムへ刷新",
-      "url": "temporary-housing.html",
-      "description": "仮設住宅・みなし仮設総合ガイド（temporary-housing.html）、り災証明書ガイド（risai-certificate.html）、および宇土市・宇城市・八代市・氷川町・熊本市の公費解体個別ガイド（5ページ）を、自治体公式サイトの最新発信とリアルタイム連動して自動更新されるシステムへ刷新しました。八代市・氷川町の仮設住宅追加募集や熊本市の自宅敷地内仮設、益城町・八代市のり災・被災証明書期限アラート、各市町の解体新着情報を自動同期します。",
-      "targetPage": "temporary-housing.html"
-    },
-    {
-      "date": "2026-11-19",
-      "category": "公費解体",
-      "badge": "自治体発信と連動・自動更新化",
-      "title": "公費解体・自費解体ダッシュボードを自治体公式発表と連動する自動更新システムへ刷新",
-      "url": "demolition.html",
-      "description": "公費解体・自費解体総合ダッシュボード（demolition.html）を、市町村公式サイトの最新発表とリアルタイム連動して3時間ごとに自動更新するシステムへ刷新しました。新着公的発表タイムラインを自動抽出し、リンク切れ防止のサイト内アーカイブとも連携。菊陽町（11/6受付開始）を含む13自治体の受付状況、益城町（被災証明書11/30終了）・美里町（申請11/30）の直近期限、宇城市（11/13着工開始）、八代市の残置物・思い出の品取り出しルールの注意喚起も整理しました。",
-      "targetPage": "demolition.html"
     }
   ],
   "municipalityUpdates": [
