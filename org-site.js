@@ -79,6 +79,56 @@
       }
     }
   }
+  const guideSourceMeta={
+    'demolition.html':'13自治体公式発表（2026年11月確認・自動連動中）',
+    'uto-demolition.html':'宇土市公式（2026年10月21日更新・11月運用確認済）',
+    'uki-demolition.html':'宇城市公式（2026年11月18日更新）',
+    'kumamoto-demolition.html':'熊本市公式（2026年9月11日更新・標準単価10月9日更新）',
+    'hikawa-demolition.html':'氷川町公式（2026年10月28日更新・期限延長反映）',
+    'yatsushiro-demolition.html':'八代市公式（2026年9月24日・11月2日更新）',
+    'uto-support.html':'宇土市公式制度一覧（毎日自動掲載監視中）',
+    'uto-handbook.html':'宇土市ハンドブック（令和8年9月24日現在＋10/21・11月運用変更注記）',
+    'uto-housing.html':'宇土市公式（2026年11月9日・11月14日更新反映）',
+    'uto-repair.html':'宇土市公式（2026年11月14日更新・完了期限R10.1.27延長反映）',
+    'uto-waste.html':'宇土市公式（2026年10月21日以降運用・KIREKA一本化反映）',
+    'uto-interest-subsidy.html':'宇土市公式（2026年11月確認・様式公開・2/26期限反映）',
+    'uto-jizokuka.html':'宇土市・中小企業庁公式（2026年11月確認）',
+    'uto-public-services.html':'宇土市公式施設情報（全39施設・自動検証済）',
+    'uki-support.html':'宇城市公式（令和8年11月23日時点版・11月20日更新）',
+    'uki-living-support.html':'宇城市公式制度一覧（毎日自動掲載監視中）',
+    'uki-einou-saikai.html':'宇城市公式（2026年11月20日更新・3回目12/25締切延長反映）',
+    'uki-consultation.html':'宇城市公式（2026年11月確認・祝日休止反映）',
+    'uki-public-services.html':'宇城市公式施設情報（全20施設・自動検証済）',
+    'yatsushiro-support.html':'八代市公式「被災者応援ガイドブック」第10版（2026年11月18日現在）',
+    'yatsushiro-living-support.html':'八代市公式制度一覧（毎日自動掲載監視中）',
+    'yatsushiro-well-repair.html':'八代市公式（2026年11月13日更新・28業者一覧等反映）',
+    'yatsushiro-loan.html':'八代市公式（災害援護資金貸付・ガイドブック現行版準拠）',
+    'yatsushiro-rebuild.html':'八代市公式（被災者生活再建支援金・ガイドブック現行版準拠）',
+    'yatsushiro-safetynet4.html':'八代市公式（セーフティネット保証4号・現行案内準拠）',
+    'yatsushiro-public-services.html':'八代市公式施設情報（全20施設・自動検証済）',
+    'hikawa-support.html':'氷川町公式「支援制度まとめ」（2026年11月2日時点＋11月最新運用反映）',
+    'hikawa-living-support.html':'氷川町公式制度一覧（毎日自動掲載監視中）',
+    'hikawa-interest-subsidy.html':'氷川町公式（中小企業資金繰り支援・現行案内準拠）',
+    'hikawa-public-services.html':'氷川町公式施設情報（全12拠点・自動検証済）',
+    'kumamoto-support.html':'熊本市公式（り災証明R9.3.31・災害援護資金R9.5.31延長反映）',
+    'kumamoto-living-support.html':'熊本市公式制度一覧（毎日自動掲載監視中）',
+    'kumamoto-saishuppatsu.html':'熊本県公式（令和8年9月18日作成資料・最新案内要確認）',
+    'temporary-housing.html':'熊本県公式（2026年11月16日時点・40団地1,212戸＋各市町最新募集連動）',
+    'risai-certificate.html':'各市町村公式発表（自動収集連動中）',
+    'priority-support-summary.html':'重点5市町公式発表（2026年11月最新運用へ同期済）',
+    'municipality-support-compare.html':'県内被災自治体公式情報（横断比較・随時更新）'
+  };
+  if(guideSourceMeta[path]&&!document.querySelector('.org-freshness-bar')){
+    let modDate='';
+    try{
+      const ld=document.querySelector('script[type="application/ld+json"]')?.textContent;
+      const m=ld&&ld.match(/"dateModified"\s*:\s*"(\d{4})-(\d{2})-(\d{2})"/);
+      if(m)modDate=`${m[1]}年${Number(m[2])}月${Number(m[3])}日`;
+    }catch{}
+    const freshnessBar=`<aside class="org-freshness-bar" aria-label="このページの公式情報参照基準"><div class="org-freshness-inner"><span class="org-freshness-badge">公式情報 参照基準</span><p class="org-freshness-text"><b>参照時点：</b>${guideSourceMeta[path]}${modDate?` <span class="org-freshness-sep" aria-hidden="true">｜</span> <b>ページ更新：</b><time>${modDate}</time>`:''}</p></div></aside>`;
+    const anchor=document.querySelector('.site-breadcrumb')||document.querySelector('.org-context-bar')||header;
+    anchor?.insertAdjacentHTML('afterend',freshnessBar);
+  }
   if(path==='disaster.html'){
     document.title='令和8年熊本地震 支援情報ポータル｜一般社団法人よか隊ネット熊本';
     const main=document.querySelector('main');

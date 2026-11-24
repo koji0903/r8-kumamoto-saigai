@@ -103,4 +103,19 @@ const watchConfig = JSON.parse(read("sources/guide-official-watch.json"));
 assert.ok(Array.isArray(watchConfig.targets) && watchConfig.targets.length >= 27, "公式監視対象が27件以上登録されている必要があります");
 assert.ok(watchConfig.targets.some(target => target.id === "uki-support-overview" && target.guidePages.includes("uki-support.html")), "宇城市の支援制度概要を優先監視してください");
 
-console.log(`ガイドページ横断最新性・整合性テスト OK（監視台帳 ${watchConfig.targets.length}件・横断チェック完了）`);
+// 7. 全ガイドページ上部の「公式情報 参照基準バー」網羅検証
+const orgSiteJs = read("org-site.js");
+assert.ok(orgSiteJs.includes("org-freshness-bar"), "org-site.js に公式情報参照基準バー（.org-freshness-bar）の描画処理がありません");
+for (const page of [
+  "demolition.html", "uto-demolition.html", "uki-demolition.html", "kumamoto-demolition.html", "hikawa-demolition.html", "yatsushiro-demolition.html",
+  "uto-support.html", "uto-handbook.html", "uto-housing.html", "uto-repair.html", "uto-waste.html", "uto-interest-subsidy.html", "uto-jizokuka.html", "uto-public-services.html",
+  "uki-support.html", "uki-living-support.html", "uki-einou-saikai.html", "uki-consultation.html", "uki-public-services.html",
+  "yatsushiro-support.html", "yatsushiro-living-support.html", "yatsushiro-well-repair.html", "yatsushiro-loan.html", "yatsushiro-rebuild.html", "yatsushiro-safetynet4.html", "yatsushiro-public-services.html",
+  "hikawa-support.html", "hikawa-living-support.html", "hikawa-interest-subsidy.html", "hikawa-public-services.html",
+  "kumamoto-support.html", "kumamoto-living-support.html", "kumamoto-saishuppatsu.html",
+  "temporary-housing.html", "risai-certificate.html", "priority-support-summary.html", "municipality-support-compare.html"
+]) {
+  assert.ok(orgSiteJs.includes(`'${page}':`), `org-site.js の guideSourceMeta に ${page} の参照基準表記がありません`);
+}
+
+console.log(`ガイドページ横断最新性・整合性テスト OK（監視台帳 ${watchConfig.targets.length}件・参照基準バー37ページ網羅・横断チェック完了）`);
