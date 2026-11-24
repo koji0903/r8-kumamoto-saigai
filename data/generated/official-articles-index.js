@@ -1,20 +1,20 @@
 // 生成物・直接編集しない。生成: node tools/archive-official-articles.mjs
 window.OFFICIAL_ARTICLES_INDEX = {
   "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html": {
-    "id": "yatsushiro-20261120-ad77f47a",
-    "htmlPath": "official-articles/yatsushiro-20261120-ad77f47a.html",
+    "id": "yatsushiro-20261124-ad77f47a",
+    "htmlPath": "official-articles/yatsushiro-20261124-ad77f47a.html",
     "title": "令和8年熊本地震 関連情報",
     "municipality": "八代市",
-    "date": "2026-11-20",
-    "retrievedAt": "2026-11-20T19:33:30.697Z"
+    "date": "2026-11-24",
+    "retrievedAt": "2026-11-24T07:25:04.761Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699": {
-    "id": "uki-20261120-7d9d4e13",
-    "htmlPath": "official-articles/uki-20261120-7d9d4e13.html",
-    "title": "2026年11月20日 令和8年熊本地震 関連情報 （11月20日17時00分更新）",
+    "id": "uki-20261124-7d9d4e13",
+    "htmlPath": "official-articles/uki-20261124-7d9d4e13.html",
+    "title": "2026年11月24日 令和8年熊本地震 関連情報 （11月24日15時00分更新）",
     "municipality": "宇城市",
-    "date": "2026-11-20",
-    "retrievedAt": "2026-11-20T19:33:29.756Z"
+    "date": "2026-11-24",
+    "retrievedAt": "2026-11-24T07:25:06.737Z"
   },
   "https://localcms.city.minamata.lg.jp/page4895.html?type=top": {
     "id": "minamata-20261019-81bdc420",
@@ -257,12 +257,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-18T01:18:47.932Z"
   },
   "https://www.city.kumamoto.jp/kiji00372210/index.html": {
-    "id": "kumamoto-20261113-2d71cce8",
-    "htmlPath": "official-articles/kumamoto-20261113-2d71cce8.html",
+    "id": "kumamoto-20261124-2d71cce8",
+    "htmlPath": "official-articles/kumamoto-20261124-2d71cce8.html",
     "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
     "municipality": "熊本市",
-    "date": "2026-11-13",
-    "retrievedAt": "2026-11-13T11:33:24.224Z"
+    "date": "2026-11-24",
+    "retrievedAt": "2026-11-24T07:25:10.219Z"
   },
   "https://www.town.hikawa.kumamoto.jp/kiji0036870/index.html": {
     "id": "hikawa-20261021-52aa9d69",
@@ -1423,5 +1423,45 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "宇城市",
     "date": "2026-11-24",
     "retrievedAt": "2026-11-23T22:20:04.200Z"
+  },
+  "https://www.town.hikawa.kumamoto.jp/kiji0036812/index.html": {
+    "id": "hikawa-20261124-f1c2a314",
+    "htmlPath": "official-articles/hikawa-20261124-f1c2a314.html",
+    "title": "令和8年熊本地震の災害に伴う雇用調整助成金の特例措置について",
+    "municipality": "氷川町",
+    "date": "2026-11-24",
+    "retrievedAt": "2026-11-24T07:25:07.796Z"
+  },
+  "https://www.town.kikuyo.lg.jp/kiji0035869/index.html": {
+    "id": "kikuyo-20261124-2ef2d61a",
+    "htmlPath": "official-articles/kikuyo-20261124-2ef2d61a.html",
+    "title": "令和8年熊本地震に関する 県民アンケートのご協力のお願い",
+    "municipality": "菊陽町",
+    "date": "2026-11-24",
+    "retrievedAt": "2026-11-24T07:25:08.871Z"
+  },
+  "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23284.html": {
+    "id": "kamiamakusa-20261124-a4411e17",
+    "htmlPath": "official-articles/kamiamakusa-20261124-a4411e17.html",
+    "title": "(11/24更新)本市の水道に係る地震発生後の状況についてお知らせします",
+    "municipality": "上天草市",
+    "date": "2026-11-24",
+    "retrievedAt": "2026-11-24T07:25:11.631Z"
+  },
+  "https://www.town.ozu.kumamoto.jp/site/bousai/28302.html": {
+    "id": "muni-20261124-a06d5626",
+    "htmlPath": "official-articles/muni-20261124-a06d5626.html",
+    "title": "令和８年熊本地震に関する県民アンケートについて",
+    "municipality": "大津町",
+    "date": "2026-11-24",
+    "retrievedAt": "2026-11-24T07:25:12.658Z"
+  },
+  "https://www.town.kosa.lg.jp/q/aview/102/13787.html": {
+    "id": "kosa-20261124-3115ae84",
+    "htmlPath": "official-articles/kosa-20261124-3115ae84.html",
+    "title": "令和8年熊本地震で被災した井戸の応急修理について",
+    "municipality": "甲佐町",
+    "date": "2026-11-24",
+    "retrievedAt": "2026-11-24T07:25:14.188Z"
   }
 };

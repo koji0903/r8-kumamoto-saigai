@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-23T23:04:59.957Z",
+  "generatedAt": "2026-11-24T07:25:33.995Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-23T22:43:51.516Z",
-    "inputCount": 846,
-    "classifiedPageCount": 712,
-    "displayCandidateCount": 603,
+    "generatedAt": "2026-11-24T07:05:13.873Z",
+    "inputCount": 848,
+    "classifiedPageCount": 715,
+    "displayCandidateCount": 606,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
-      "unclassifiedCount": 0
+      "inputCount": 2,
+      "classifiedPageCount": 3,
+      "unclassifiedCount": 2
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 8,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 143,
-        "displayCandidates": 112,
+        "classified": 144,
+        "displayCandidates": 113,
         "fallback": true
       },
       "municipality_minamata": {
@@ -51,8 +51,8 @@
         "fallback": true
       },
       "municipality_kikuchi": {
-        "classified": 11,
-        "displayCandidates": 9,
+        "classified": 10,
+        "displayCandidates": 8,
         "fallback": true
       },
       "municipality_uto": {
@@ -61,8 +61,8 @@
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 32,
-        "displayCandidates": 28,
+        "classified": 33,
+        "displayCandidates": 29,
         "fallback": true
       },
       "municipality_uki": {
@@ -116,8 +116,8 @@
         "fallback": true
       },
       "municipality_kosa": {
-        "classified": 32,
-        "displayCandidates": 27,
+        "classified": 33,
+        "displayCandidates": 28,
         "fallback": true
       },
       "municipality_hikawa": {
@@ -131,29 +131,29 @@
         "fallback": true
       },
       "municipality_tsunagi": {
-        "classified": 7,
-        "displayCandidates": 6,
+        "classified": 8,
+        "displayCandidates": 7,
         "fallback": true
       }
     },
     "categoryReport": {
       "home": {
-        "total": 179,
-        "high": 71,
+        "total": 180,
+        "high": 72,
         "medium": 68,
         "low": 40
       },
       "money": {
-        "total": 264,
+        "total": 262,
         "high": 53,
-        "medium": 74,
-        "low": 137
+        "medium": 73,
+        "low": 136
       },
       "documents": {
-        "total": 159,
+        "total": 160,
         "high": 39,
         "medium": 27,
-        "low": 93
+        "low": 94
       },
       "health_care": {
         "total": 56,
@@ -162,15 +162,15 @@
         "low": 0
       },
       "family_education": {
-        "total": 76,
-        "high": 12,
-        "medium": 30,
-        "low": 34
+        "total": 79,
+        "high": 13,
+        "medium": 31,
+        "low": 35
       },
       "work_business": {
-        "total": 73,
-        "high": 19,
-        "medium": 54,
+        "total": 75,
+        "high": 20,
+        "medium": 55,
         "low": 0
       },
       "agriculture_fishery": {
@@ -181,18 +181,18 @@
       },
       "daily_life": {
         "total": 207,
-        "high": 55,
-        "medium": 150,
+        "high": 54,
+        "medium": 151,
         "low": 2
       }
     },
     "confidence": {
-      "high": 262,
-      "medium": 341,
+      "high": 264,
+      "medium": 342,
       "low": 109
     },
-    "unclassifiedCount": 25,
-    "excludedCount": 41,
+    "unclassifiedCount": 27,
+    "excludedCount": 40,
     "overrideCount": 2
   },
   "actions": [
@@ -325,9 +325,14 @@
       "count": 1
     },
     {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_uki",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",

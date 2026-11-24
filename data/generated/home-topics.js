@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-23T23:04:37.284Z",
-  "officialCheckedAt": "11/24 08:04",
+  "retrievedAt": "2026-11-24T07:24:57.833Z",
+  "officialCheckedAt": "11/24 16:24",
   "siteTopics": [
     {
       "date": "2026-11-24",
@@ -96,6 +96,56 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震 関連情報",
+      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
+      "date": "2026-11-24",
+      "time": "15:17",
+      "category": "その他",
+      "municipality": "八代市",
+      "archiveId": "yatsushiro-20261124-ad77f47a",
+      "archiveUrl": "official-articles/yatsushiro-20261124-ad77f47a.html"
+    },
+    {
+      "title": "2026年11月24日 令和8年熊本地震 関連情報 （11月24日15時00分更新）",
+      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
+      "date": "2026-11-24",
+      "time": "15:00",
+      "category": "その他",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261124-7d9d4e13",
+      "archiveUrl": "official-articles/uki-20261124-7d9d4e13.html"
+    },
+    {
+      "title": "令和8年熊本地震の災害に伴う雇用調整助成金の特例措置について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036812/index.html",
+      "date": "2026-11-24",
+      "time": "13:55",
+      "category": "その他",
+      "municipality": "氷川町",
+      "archiveId": "hikawa-20261124-f1c2a314",
+      "archiveUrl": "official-articles/hikawa-20261124-f1c2a314.html"
+    },
+    {
+      "title": "令和8年熊本地震に関する 県民アンケートのご協力のお願い",
+      "url": "https://www.town.kikuyo.lg.jp/kiji0035869/index.html",
+      "date": "2026-11-24",
+      "time": "11:39",
+      "category": "その他",
+      "municipality": "菊陽町",
+      "archiveId": "kikuyo-20261124-2ef2d61a",
+      "archiveUrl": "official-articles/kikuyo-20261124-2ef2d61a.html"
+    },
+    {
+      "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
+      "url": "https://www.city.kumamoto.jp/kiji00372210/index.html",
+      "date": "2026-11-24",
+      "time": "08:30",
+      "category": "住まい・証明",
+      "municipality": "熊本市",
+      "archiveId": "kumamoto-20261124-2d71cce8",
+      "archiveUrl": "official-articles/kumamoto-20261124-2d71cce8.html"
+    },
+    {
       "title": "震度速報 11月24日 1時13分",
       "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
       "date": "2026-11-24",
@@ -106,24 +156,34 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/yamaga-20261124-ed5178f4.html"
     },
     {
-      "title": "令和8年熊本地震に伴う教育委員会所管施設(体育施設)の利用一部再開について",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2629810",
+      "title": "(11/24更新)本市の水道に係る地震発生後の状況についてお知らせします",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23284.html",
       "date": "2026-11-24",
       "time": null,
-      "category": "施設・学校",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261124-3d05fd87",
-      "archiveUrl": "official-articles/uki-20261124-3d05fd87.html"
+      "category": "ライフライン",
+      "municipality": "上天草市",
+      "archiveId": "kamiamakusa-20261124-a4411e17",
+      "archiveUrl": "official-articles/kamiamakusa-20261124-a4411e17.html"
     },
     {
-      "title": "令和8年熊本地震関連情報",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036768/index.html",
-      "date": "2026-11-22",
-      "time": "08:30",
+      "title": "令和８年熊本地震に関する県民アンケートについて",
+      "url": "https://www.town.ozu.kumamoto.jp/site/bousai/28302.html",
+      "date": "2026-11-24",
+      "time": null,
       "category": "その他",
-      "municipality": "氷川町",
-      "archiveId": "hikawa-20261122-edaedf97",
-      "archiveUrl": "official-articles/hikawa-20261122-edaedf97.html"
+      "municipality": "大津町",
+      "archiveId": "muni-20261124-a06d5626",
+      "archiveUrl": "official-articles/muni-20261124-a06d5626.html"
+    },
+    {
+      "title": "令和8年熊本地震で被災した井戸の応急修理について",
+      "url": "https://www.town.kosa.lg.jp/q/aview/102/13787.html",
+      "date": "2026-11-24",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "甲佐町",
+      "archiveId": "kosa-20261124-3115ae84",
+      "archiveUrl": "official-articles/kosa-20261124-3115ae84.html"
     },
     {
       "title": "益城中央被災市街地復興土地区画整理事業の土地区画整理法第76条許可申請について",
@@ -134,16 +194,6 @@ window.HOME_TOPICS = {
       "municipality": "益城町",
       "archiveId": "mashiki-20261122-871d2794",
       "archiveUrl": "official-articles/mashiki-20261122-871d2794.html"
-    },
-    {
-      "title": "令和8年熊本地震 関連情報",
-      "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
-      "date": "2026-11-20",
-      "time": "16:47",
-      "category": "その他",
-      "municipality": "八代市",
-      "archiveId": "yatsushiro-20261120-ad77f47a",
-      "archiveUrl": "official-articles/yatsushiro-20261120-ad77f47a.html"
     },
     {
       "title": "罹災（りさい）証明及び罹災届出証明の申請手続き",
@@ -186,26 +236,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/kashima-20261120-28d62fb4.html"
     },
     {
-      "title": "緊急地震速報",
-      "url": "https://www.city.amakusa.kumamoto.jp/kinkyu.html",
-      "date": "2026-11-19",
-      "time": "02:20",
-      "category": "その他",
-      "municipality": "天草市",
-      "archiveId": "amakusa-20261119-4f0d0b3b",
-      "archiveUrl": "official-articles/amakusa-20261119-4f0d0b3b.html"
-    },
-    {
-      "title": "緊急地震速報",
-      "url": "https://www.town.ozu.kumamoto.jp/page/28258.html",
-      "date": "2026-11-19",
-      "time": null,
-      "category": "その他",
-      "municipality": "大津町",
-      "archiveId": "muni-20261119-0140f507",
-      "archiveUrl": "official-articles/muni-20261119-0140f507.html"
-    },
-    {
       "title": "九州中央自動車道（小池高山IC～山都通潤橋IC）夜間通行止めのお知らせ",
       "url": "https://www.town.mifune.kumamoto.jp/page7562.html?type=top",
       "date": "2026-11-18",
@@ -214,36 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "御船町",
       "archiveId": "mifune-20261118-835921c4",
       "archiveUrl": "official-articles/mifune-20261118-835921c4.html"
-    },
-    {
-      "title": "令和8年熊本地震 心の復興事業",
-      "url": "https://www.city.kumamoto.jp/kiji00373712/index.html",
-      "date": "2026-11-18",
-      "time": "13:00",
-      "category": "その他",
-      "municipality": "熊本市",
-      "archiveId": "kumamoto-20261118-124a5c0d",
-      "archiveUrl": "official-articles/kumamoto-20261118-124a5c0d.html"
-    },
-    {
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（11月17日16時更新）",
-      "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
-      "date": "2026-11-17",
-      "time": "16:00",
-      "category": "その他",
-      "municipality": "美里町",
-      "archiveId": "misato-20261117-a8f621b2",
-      "archiveUrl": "official-articles/misato-20261117-a8f621b2.html"
-    },
-    {
-      "title": "【R8.11.17時点】全面通行止め一覧(位置図、写真)(PDF 約8MB)",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/dl?q=128510_filelib_ce154deba2278f93c86a275ce5e7c12b.pdf",
-      "date": "2026-11-17",
-      "time": null,
-      "category": "避難・安全",
-      "municipality": "上天草市",
-      "archiveId": "kamiamakusa-20261117-d4006af0",
-      "archiveUrl": "official-articles/kamiamakusa-20261117-d4006af0.html"
     }
   ],
   "prefectureUpdates": [
