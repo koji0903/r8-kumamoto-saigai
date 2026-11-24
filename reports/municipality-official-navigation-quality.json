@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-24T14:12:00.967Z",
+  "generatedAt": "2026-11-24T19:41:12.366Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 847,
-  "displayCandidateCount": 605,
-  "classifiedPageCount": 714,
+  "displayCandidateCount": 606,
+  "classifiedPageCount": 715,
   "categoryReport": {
     "home": {
       "total": 179,
@@ -13,9 +13,9 @@
       "low": 40
     },
     "money": {
-      "total": 262,
+      "total": 263,
       "high": 53,
-      "medium": 73,
+      "medium": 74,
       "low": 136
     },
     "documents": {
@@ -25,9 +25,9 @@
       "low": 94
     },
     "health_care": {
-      "total": 56,
+      "total": 57,
       "high": 19,
-      "medium": 37,
+      "medium": 38,
       "low": 0
     },
     "family_education": {
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 144,
-      "displayCandidates": 113,
+      "classified": 145,
+      "displayCandidates": 114,
       "fallback": true
     },
     "municipality_minamata": {
@@ -164,7 +164,7 @@
   },
   "confidence": {
     "high": 264,
-    "medium": 341,
+    "medium": 342,
     "low": 109
   },
   "unclassifiedCount": 27,
@@ -305,7 +305,7 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036908/index.html"
     }
   ],
-  "outOfScopeCount": 66,
+  "outOfScopeCount": 65,
   "outOfScopeByRule": {
     "donation_appeal": 2,
     "disaster_preparedness": 10,
@@ -314,7 +314,7 @@
     "budget_notice": 3,
     "overall_guide": 5,
     "hq_meeting_material": 3,
-    "index_page": 14,
+    "index_page": 13,
     "mayor_message": 2,
     "mutual_aid": 1,
     "weather_warning": 2,
@@ -444,17 +444,17 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "ruleId": "mayor_message",
       "ruleLabel": "首長からのメッセージ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "山鹿市",
@@ -476,13 +476,6 @@
       "url": "https://www.city.yamaga.kumamoto.jp/kiji0033173/index.html",
       "ruleId": "disaster_preparedness",
       "ruleLabel": "平時の防災・今後への備え"
-    },
-    {
-      "municipalityName": "山鹿市",
-      "title": "震度速報 11月24日 1時13分",
-      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "菊池市",
@@ -916,5 +909,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 715
+  "previousClassifiedPageCount": 714
 }

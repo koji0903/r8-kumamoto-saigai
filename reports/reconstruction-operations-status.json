@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-24T14:38:07.545Z",
+  "generatedAt": "2026-11-24T20:04:47.193Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-24T14:12:00.967Z",
+    "generatedAt": "2026-11-24T19:41:12.366Z",
     "inputCount": 847,
-    "classifiedPageCount": 714,
-    "displayCandidateCount": 605,
+    "classifiedPageCount": 715,
+    "displayCandidateCount": 606,
     "deltaFromPrevious": {
-      "inputCount": -1,
-      "classifiedPageCount": -1,
+      "inputCount": 0,
+      "classifiedPageCount": 1,
       "unclassifiedCount": 0
     }
   },
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 0,
+      "ageHours": 5,
       "limitHours": 336
     }
   },
@@ -36,8 +36,8 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 144,
-        "displayCandidates": 113,
+        "classified": 145,
+        "displayCandidates": 114,
         "fallback": true
       },
       "municipality_minamata": {
@@ -144,9 +144,9 @@
         "low": 40
       },
       "money": {
-        "total": 262,
+        "total": 263,
         "high": 53,
-        "medium": 73,
+        "medium": 74,
         "low": 136
       },
       "documents": {
@@ -156,9 +156,9 @@
         "low": 94
       },
       "health_care": {
-        "total": 56,
+        "total": 57,
         "high": 19,
-        "medium": 37,
+        "medium": 38,
         "low": 0
       },
       "family_education": {
@@ -188,7 +188,7 @@
     },
     "confidence": {
       "high": 264,
-      "medium": 341,
+      "medium": 342,
       "low": 109
     },
     "unclassifiedCount": 27,

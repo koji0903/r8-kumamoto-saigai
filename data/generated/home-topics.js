@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-24T14:37:37.133Z",
-  "officialCheckedAt": "11/24 23:37",
+  "retrievedAt": "2026-11-24T20:04:11.391Z",
+  "officialCheckedAt": "11/25 05:04",
   "siteTopics": [
     {
       "date": "2026-11-24",
@@ -96,14 +96,14 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "date": "2026-11-24",
-      "time": "19:40",
+      "title": "熊本県八代市",
+      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "date": "2026-11-25",
+      "time": "00:00",
       "category": "その他",
       "municipality": "八代市",
-      "archiveId": "yatsushiro-20261124-95d8bc9e",
-      "archiveUrl": "official-articles/yatsushiro-20261124-95d8bc9e.html"
+      "archiveId": "yatsushiro-20261125-bad1de7e",
+      "archiveUrl": "official-articles/yatsushiro-20261125-bad1de7e.html"
     },
     {
       "title": "「罹災証明書」「被災証明書」の発行について",
@@ -144,16 +144,6 @@ window.HOME_TOPICS = {
       "municipality": "熊本市",
       "archiveId": "kumamoto-20261124-2d71cce8",
       "archiveUrl": "official-articles/kumamoto-20261124-2d71cce8.html"
-    },
-    {
-      "title": "震度速報 11月24日 1時13分",
-      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-      "date": "2026-11-24",
-      "time": "01:13",
-      "category": "避難・安全",
-      "municipality": "山鹿市",
-      "archiveId": "yamaga-20261124-ed5178f4",
-      "archiveUrl": "official-articles/yamaga-20261124-ed5178f4.html"
     },
     {
       "title": "令和８年熊本地震に係る被災した住宅の応急修理制度について",
@@ -244,6 +234,16 @@ window.HOME_TOPICS = {
       "municipality": "御船町",
       "archiveId": "mifune-20261118-835921c4",
       "archiveUrl": "official-articles/mifune-20261118-835921c4.html"
+    },
+    {
+      "title": "断水を回避するため、さらなる節水にご協力を",
+      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314806/index.html",
+      "date": "2026-11-18",
+      "time": null,
+      "category": "ライフライン",
+      "municipality": "天草市",
+      "archiveId": "amakusa-20261118-273d750d",
+      "archiveUrl": "official-articles/amakusa-20261118-273d750d.html"
     }
   ],
   "prefectureUpdates": [
