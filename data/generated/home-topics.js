@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-25T06:04:12.434Z",
-  "officialCheckedAt": "11/25 15:04",
+  "retrievedAt": "2026-11-25T13:46:47.099Z",
+  "officialCheckedAt": "11/25 22:46",
   "siteTopics": [
     {
       "date": "2026-11-24",
@@ -96,14 +96,34 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
-      "title": "熊本県八代市",
-      "url": "https://www.city.yatsushiro.lg.jp/default.html",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "date": "2026-11-25",
-      "time": "14:12",
+      "time": "19:32",
       "category": "その他",
       "municipality": "八代市",
-      "archiveId": "yatsushiro-20261125-bad1de7e",
-      "archiveUrl": "official-articles/yatsushiro-20261125-bad1de7e.html"
+      "archiveId": "yatsushiro-20261125-95d8bc9e",
+      "archiveUrl": "official-articles/yatsushiro-20261125-95d8bc9e.html"
+    },
+    {
+      "title": "避難所について（11/25 17:00時点）",
+      "url": "https://www.city.uto.lg.jp/article/view/1302/17349.html",
+      "date": "2026-11-25",
+      "time": "17:00",
+      "category": "避難・安全",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261125-1d92d642",
+      "archiveUrl": "official-articles/uto-20261125-1d92d642.html"
+    },
+    {
+      "title": "令和8年熊本地震（7月28日発生）に関する情報（11月25日16時更新）",
+      "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
+      "date": "2026-11-25",
+      "time": "16:00",
+      "category": "その他",
+      "municipality": "美里町",
+      "archiveId": "misato-20261125-a8f621b2",
+      "archiveUrl": "official-articles/misato-20261125-a8f621b2.html"
     },
     {
       "title": "令和８年熊本地震に関する支援等",
@@ -146,6 +166,16 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/uki-20261125-7d9d4e13.html"
     },
     {
+      "title": "断水を回避するため、さらなる節水にご協力を",
+      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314806/index.html",
+      "date": "2026-11-25",
+      "time": null,
+      "category": "ライフライン",
+      "municipality": "天草市",
+      "archiveId": "amakusa-20261125-273d750d",
+      "archiveUrl": "official-articles/amakusa-20261125-273d750d.html"
+    },
+    {
       "title": "「罹災証明書」「被災証明書」の発行について",
       "url": "https://www.town.kikuyo.lg.jp/bousai/kiji0035059/index.html",
       "date": "2026-11-24",
@@ -176,14 +206,14 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/kamiamakusa-20261124-a4411e17.html"
     },
     {
-      "title": "令和８年熊本地震に関する県民アンケートについて",
-      "url": "https://www.town.ozu.kumamoto.jp/site/bousai/28302.html",
+      "title": "令和8年熊本地震にかかる寄附金の受付について",
+      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6103.html",
       "date": "2026-11-24",
       "time": null,
-      "category": "その他",
-      "municipality": "大津町",
-      "archiveId": "muni-20261124-a06d5626",
-      "archiveUrl": "official-articles/muni-20261124-a06d5626.html"
+      "category": "支援・制度",
+      "municipality": "嘉島町",
+      "archiveId": "kashima-20261124-28d62fb4",
+      "archiveUrl": "official-articles/kashima-20261124-28d62fb4.html"
     },
     {
       "title": "令和8年熊本地震で被災した井戸の応急修理について",
@@ -214,36 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "津奈木町",
       "archiveId": "tsunagi-20261120-6c30f109",
       "archiveUrl": "official-articles/tsunagi-20261120-6c30f109.html"
-    },
-    {
-      "title": "令和８年熊本地震義援金の配分について",
-      "url": "https://www.city.uto.lg.jp/article/view/1307/17389.html",
-      "date": "2026-11-20",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261120-fa77fd0d",
-      "archiveUrl": "official-articles/uto-20261120-fa77fd0d.html"
-    },
-    {
-      "title": "令和8年熊本地震にかかる寄附金の受付について",
-      "url": "https://www.town.kumamoto-kashima.lg.jp/q/aview/55/6103.html",
-      "date": "2026-11-20",
-      "time": null,
-      "category": "支援・制度",
-      "municipality": "嘉島町",
-      "archiveId": "kashima-20261120-28d62fb4",
-      "archiveUrl": "official-articles/kashima-20261120-28d62fb4.html"
-    },
-    {
-      "title": "九州中央自動車道（小池高山IC～山都通潤橋IC）夜間通行止めのお知らせ",
-      "url": "https://www.town.mifune.kumamoto.jp/page7562.html?type=top",
-      "date": "2026-11-18",
-      "time": "16:00",
-      "category": "避難・安全",
-      "municipality": "御船町",
-      "archiveId": "mifune-20261118-835921c4",
-      "archiveUrl": "official-articles/mifune-20261118-835921c4.html"
     }
   ],
   "prefectureUpdates": [

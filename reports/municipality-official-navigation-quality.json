@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-25T05:40:09.471Z",
+  "generatedAt": "2026-11-25T13:25:08.335Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 858,
-  "displayCandidateCount": 615,
-  "classifiedPageCount": 724,
+  "inputCount": 859,
+  "displayCandidateCount": 616,
+  "classifiedPageCount": 725,
   "categoryReport": {
     "home": {
       "total": 183,
@@ -13,15 +13,15 @@
       "low": 41
     },
     "money": {
-      "total": 265,
-      "high": 54,
-      "medium": 75,
+      "total": 263,
+      "high": 53,
+      "medium": 74,
       "low": 136
     },
     "documents": {
-      "total": 164,
+      "total": 163,
       "high": 40,
-      "medium": 27,
+      "medium": 26,
       "low": 97
     },
     "health_care": {
@@ -49,9 +49,9 @@
       "low": 0
     },
     "daily_life": {
-      "total": 211,
+      "total": 213,
       "high": 56,
-      "medium": 153,
+      "medium": 155,
       "low": 2
     }
   },
@@ -87,13 +87,13 @@
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 33,
-      "displayCandidates": 29,
+      "classified": 36,
+      "displayCandidates": 32,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 103,
-      "displayCandidates": 88,
+      "classified": 102,
+      "displayCandidates": 87,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -107,8 +107,8 @@
       "fallback": true
     },
     "municipality_misato": {
-      "classified": 26,
-      "displayCandidates": 21,
+      "classified": 25,
+      "displayCandidates": 20,
       "fallback": true
     },
     "municipality_ozu": {
@@ -163,8 +163,8 @@
     }
   },
   "confidence": {
-    "high": 269,
-    "medium": 346,
+    "high": 268,
+    "medium": 348,
     "low": 109
   },
   "unclassifiedCount": 28,
@@ -270,9 +270,9 @@
       "url": "https://www.city.koshi.lg.jp/kiji00326022/index.html"
     },
     {
-      "municipalityName": "大津町",
-      "title": "令和８年熊本地震に関する県民アンケートについて",
-      "url": "https://www.town.ozu.kumamoto.jp/site/bousai/28302.html"
+      "municipalityName": "美里町",
+      "title": "令和8年熊本地震により被災された保護者の皆様へ",
+      "url": "https://www.town.kumamoto-misato.lg.jp/soshiki/gakkokyoiku/1/4054.html"
     },
     {
       "municipalityName": "菊陽町",
@@ -319,8 +319,8 @@
     "budget_notice": 3,
     "overall_guide": 5,
     "hq_meeting_material": 3,
-    "mayor_message": 2,
     "index_page": 13,
+    "mayor_message": 2,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 4,
@@ -442,13 +442,6 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
-    },
-    {
-      "municipalityName": "八代市",
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
@@ -460,6 +453,13 @@
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
+    },
+    {
+      "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "山鹿市",
@@ -673,7 +673,7 @@
     },
     {
       "municipalityName": "美里町",
-      "title": "令和8年熊本地震（7月28日発生）に関する情報（11月17日16時更新）",
+      "title": "令和8年熊本地震（7月28日発生）に関する情報（11月25日16時更新）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -790,7 +790,7 @@
     "non_official_url": 3,
     "past_disaster_excluded": 1
   },
-  "warningCount": 25,
+  "warningCount": 26,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -853,9 +853,14 @@
       "count": 1
     },
     {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_uki",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -919,5 +924,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 715
+  "previousClassifiedPageCount": 724
 }
