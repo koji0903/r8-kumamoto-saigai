@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-11-24T21:21:16.718Z",
+  "generatedAt": "2026-11-25T05:40:09.471Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 847,
-  "displayCandidateCount": 606,
-  "classifiedPageCount": 715,
+  "inputCount": 858,
+  "displayCandidateCount": 615,
+  "classifiedPageCount": 724,
   "categoryReport": {
     "home": {
-      "total": 179,
-      "high": 72,
-      "medium": 67,
-      "low": 40
+      "total": 183,
+      "high": 74,
+      "medium": 68,
+      "low": 41
     },
     "money": {
-      "total": 263,
-      "high": 53,
-      "medium": 74,
+      "total": 265,
+      "high": 54,
+      "medium": 75,
       "low": 136
     },
     "documents": {
-      "total": 160,
-      "high": 39,
+      "total": 164,
+      "high": 40,
       "medium": 27,
-      "low": 94
+      "low": 97
     },
     "health_care": {
       "total": 57,
@@ -38,20 +38,20 @@
     },
     "work_business": {
       "total": 75,
-      "high": 20,
-      "medium": 55,
+      "high": 19,
+      "medium": 56,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 21,
+      "total": 22,
       "high": 5,
-      "medium": 16,
+      "medium": 17,
       "low": 0
     },
     "daily_life": {
-      "total": 207,
-      "high": 54,
-      "medium": 151,
+      "total": 211,
+      "high": 56,
+      "medium": 153,
       "low": 2
     }
   },
@@ -62,7 +62,7 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 145,
+      "classified": 144,
       "displayCandidates": 114,
       "fallback": true
     },
@@ -102,8 +102,8 @@
       "fallback": true
     },
     "municipality_koshi": {
-      "classified": 1,
-      "displayCandidates": 1,
+      "classified": 11,
+      "displayCandidates": 10,
       "fallback": true
     },
     "municipality_misato": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 264,
-    "medium": 342,
+    "high": 269,
+    "medium": 346,
     "low": 109
   },
-  "unclassifiedCount": 27,
+  "unclassifiedCount": 28,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -265,6 +265,11 @@
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2655703"
     },
     {
+      "municipalityName": "合志市",
+      "title": "令和8年熊本地震 被災市町任期付職員合同採用試験のご案内",
+      "url": "https://www.city.koshi.lg.jp/kiji00326022/index.html"
+    },
+    {
       "municipalityName": "大津町",
       "title": "令和８年熊本地震に関する県民アンケートについて",
       "url": "https://www.town.ozu.kumamoto.jp/site/bousai/28302.html"
@@ -314,8 +319,8 @@
     "budget_notice": 3,
     "overall_guide": 5,
     "hq_meeting_material": 3,
-    "index_page": 13,
     "mayor_message": 2,
+    "index_page": 13,
     "mutual_aid": 1,
     "weather_warning": 2,
     "press": 4,
@@ -437,17 +442,17 @@
     },
     {
       "municipalityName": "八代市",
+      "title": "小野市長から市民の皆さまへ / 市長の部屋TOP",
+      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
+      "ruleId": "mayor_message",
+      "ruleLabel": "首長からのメッセージ"
+    },
+    {
+      "municipalityName": "八代市",
       "title": "令和8年熊本地震 関連情報",
       "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00326750/index.html",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
     },
     {
       "municipalityName": "八代市",
@@ -605,14 +610,14 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月24日 【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
+      "title": "2026年11月25日 【報道機関の皆さまへ】令和8年熊本地震の取材・撮影について",
       "url": "https://www.city.uki.kumamoto.jp/toppage/important/2608181",
       "ruleId": "press",
       "ruleLabel": "報道機関向け"
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月24日 令和8年熊本地震 関連情報 （11月24日15時00分更新）",
+      "title": "2026年11月25日 令和8年熊本地震 関連情報 （11月25日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -779,13 +784,13 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 40,
+  "excludedCount": 41,
   "excludedByType": {
     "duplicate_url": 37,
-    "non_official_url": 2,
+    "non_official_url": 3,
     "past_disaster_excluded": 1
   },
-  "warningCount": 24,
+  "warningCount": 25,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -848,14 +853,19 @@
       "count": 1
     },
     {
-      "code": "HTTP_404_CANDIDATE",
+      "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
+      "count": 3
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_koshi",
       "message": "継続回数を確認後に表示除外を判断してください"
     },
     {
       "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_uki",
-      "count": 4
+      "municipalityId": "municipality_koshi",
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",

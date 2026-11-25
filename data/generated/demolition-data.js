@@ -5,8 +5,8 @@ window.DEMOLITION_DATA = {
     "confirmedMunicipalitiesCount": 13,
     "acceptingCount": 13,
     "note": "令和8年熊本地震に伴う被災家屋の公費解体および自費解体費用償還の各自治体公式発表マスターデータ。",
-    "retrievedAt": "2026-11-24T21:45:18.960Z",
-    "officialCheckedAt": "11/25 06:45"
+    "retrievedAt": "2026-11-25T06:04:12.434Z",
+    "officialCheckedAt": "11/25 15:04"
   },
   "alerts": [
     {

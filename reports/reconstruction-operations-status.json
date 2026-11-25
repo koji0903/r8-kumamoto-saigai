@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-24T21:45:45.570Z",
+  "generatedAt": "2026-11-25T06:04:52.824Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-24T21:21:16.718Z",
-    "inputCount": 847,
-    "classifiedPageCount": 715,
-    "displayCandidateCount": 606,
+    "generatedAt": "2026-11-25T05:40:09.471Z",
+    "inputCount": 858,
+    "classifiedPageCount": 724,
+    "displayCandidateCount": 615,
     "deltaFromPrevious": {
-      "inputCount": 0,
-      "classifiedPageCount": 0,
-      "unclassifiedCount": 0
+      "inputCount": 11,
+      "classifiedPageCount": 9,
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 7,
+      "ageHours": 15,
       "limitHours": 336
     }
   },
@@ -36,7 +36,7 @@
         "fallback": true
       },
       "municipality_yatsushiro": {
-        "classified": 145,
+        "classified": 144,
         "displayCandidates": 114,
         "fallback": true
       },
@@ -76,8 +76,8 @@
         "fallback": true
       },
       "municipality_koshi": {
-        "classified": 1,
-        "displayCandidates": 1,
+        "classified": 11,
+        "displayCandidates": 10,
         "fallback": true
       },
       "municipality_misato": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 179,
-        "high": 72,
-        "medium": 67,
-        "low": 40
+        "total": 183,
+        "high": 74,
+        "medium": 68,
+        "low": 41
       },
       "money": {
-        "total": 263,
-        "high": 53,
-        "medium": 74,
+        "total": 265,
+        "high": 54,
+        "medium": 75,
         "low": 136
       },
       "documents": {
-        "total": 160,
-        "high": 39,
+        "total": 164,
+        "high": 40,
         "medium": 27,
-        "low": 94
+        "low": 97
       },
       "health_care": {
         "total": 57,
@@ -169,30 +169,30 @@
       },
       "work_business": {
         "total": 75,
-        "high": 20,
-        "medium": 55,
+        "high": 19,
+        "medium": 56,
         "low": 0
       },
       "agriculture_fishery": {
-        "total": 21,
+        "total": 22,
         "high": 5,
-        "medium": 16,
+        "medium": 17,
         "low": 0
       },
       "daily_life": {
-        "total": 207,
-        "high": 54,
-        "medium": 151,
+        "total": 211,
+        "high": 56,
+        "medium": 153,
         "low": 2
       }
     },
     "confidence": {
-      "high": 264,
-      "medium": 342,
+      "high": 269,
+      "medium": 346,
       "low": 109
     },
-    "unclassifiedCount": 27,
-    "excludedCount": 40,
+    "unclassifiedCount": 28,
+    "excludedCount": 41,
     "overrideCount": 2
   },
   "actions": [
@@ -325,14 +325,19 @@
       "count": 1
     },
     {
-      "code": "HTTP_404_CANDIDATE",
+      "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
+      "count": 3
+    },
+    {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_koshi",
       "message": "継続回数を確認後に表示除外を判断してください"
     },
     {
       "code": "RETRIEVAL_ISSUE",
-      "municipalityId": "municipality_uki",
-      "count": 4
+      "municipalityId": "municipality_koshi",
+      "count": 1
     },
     {
       "code": "HTTP_404_CANDIDATE",
