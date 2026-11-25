@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-25T13:46:47.099Z",
-  "officialCheckedAt": "11/25 22:46",
+  "retrievedAt": "2026-11-25T19:13:15.796Z",
+  "officialCheckedAt": "11/26 04:13",
   "siteTopics": [
     {
       "date": "2026-11-24",
@@ -96,6 +96,16 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "学校給食",
+      "url": "https://www.city.uki.kumamoto.jp/kosodate/kyushoku",
+      "date": "2026-11-26",
+      "time": null,
+      "category": "施設・学校",
+      "municipality": "宇城市",
+      "archiveId": "uki-20261126-d601b4e4",
+      "archiveUrl": "official-articles/uki-20261126-d601b4e4.html"
+    },
+    {
       "title": "小野市長から市民の皆さまへ",
       "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
       "date": "2026-11-25",
@@ -156,16 +166,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/koshi-20261125-2748a2c2.html"
     },
     {
-      "title": "2026年11月25日 令和8年熊本地震 関連情報 （11月25日8時00分更新）",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
-      "date": "2026-11-25",
-      "time": "08:00",
-      "category": "その他",
-      "municipality": "宇城市",
-      "archiveId": "uki-20261125-7d9d4e13",
-      "archiveUrl": "official-articles/uki-20261125-7d9d4e13.html"
-    },
-    {
       "title": "断水を回避するため、さらなる節水にご協力を",
       "url": "https://www.city.amakusa.kumamoto.jp/kiji00314806/index.html",
       "date": "2026-11-25",
@@ -174,6 +174,16 @@ window.HOME_TOPICS = {
       "municipality": "天草市",
       "archiveId": "amakusa-20261125-273d750d",
       "archiveUrl": "official-articles/amakusa-20261125-273d750d.html"
+    },
+    {
+      "title": "令和８年熊本地震に関する県民アンケートについて",
+      "url": "https://www.town.ozu.kumamoto.jp/site/bousai/28302.html",
+      "date": "2026-11-25",
+      "time": null,
+      "category": "その他",
+      "municipality": "大津町",
+      "archiveId": "muni-20261125-a06d5626",
+      "archiveUrl": "official-articles/muni-20261125-a06d5626.html"
     },
     {
       "title": "「罹災証明書」「被災証明書」の発行について",
@@ -234,16 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "益城町",
       "archiveId": "mashiki-20261122-871d2794",
       "archiveUrl": "official-articles/mashiki-20261122-871d2794.html"
-    },
-    {
-      "title": "令和8年熊本地震における罹災証明手続きについて",
-      "url": "https://www.town.tsunagi.lg.jp/kinkyu/pub/default.aspx?c_id=9",
-      "date": "2026-11-20",
-      "time": "09:30",
-      "category": "住まい・証明",
-      "municipality": "津奈木町",
-      "archiveId": "tsunagi-20261120-6c30f109",
-      "archiveUrl": "official-articles/tsunagi-20261120-6c30f109.html"
     }
   ],
   "prefectureUpdates": [

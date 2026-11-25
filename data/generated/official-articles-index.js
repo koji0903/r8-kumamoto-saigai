@@ -1449,12 +1449,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-24T07:25:11.631Z"
   },
   "https://www.town.ozu.kumamoto.jp/site/bousai/28302.html": {
-    "id": "muni-20261124-a06d5626",
-    "htmlPath": "official-articles/muni-20261124-a06d5626.html",
+    "id": "muni-20261125-a06d5626",
+    "htmlPath": "official-articles/muni-20261125-a06d5626.html",
     "title": "令和８年熊本地震に関する県民アンケートについて",
     "municipality": "大津町",
-    "date": "2026-11-24",
-    "retrievedAt": "2026-11-24T07:25:12.658Z"
+    "date": "2026-11-25",
+    "retrievedAt": "2026-11-25T19:13:27.747Z"
   },
   "https://www.town.kosa.lg.jp/q/aview/102/13787.html": {
     "id": "kosa-20261124-3115ae84",
@@ -1511,5 +1511,13 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "合志市",
     "date": "2026-11-25",
     "retrievedAt": "2026-11-25T06:04:26.995Z"
+  },
+  "https://www.city.uki.kumamoto.jp/kosodate/kyushoku": {
+    "id": "uki-20261126-d601b4e4",
+    "htmlPath": "official-articles/uki-20261126-d601b4e4.html",
+    "title": "学校給食",
+    "municipality": "宇城市",
+    "date": "2026-11-26",
+    "retrievedAt": "2026-11-25T19:13:26.679Z"
   }
 };

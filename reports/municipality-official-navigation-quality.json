@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-25T13:25:08.335Z",
+  "generatedAt": "2026-11-25T18:49:34.355Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 859,
-  "displayCandidateCount": 616,
-  "classifiedPageCount": 725,
+  "inputCount": 861,
+  "displayCandidateCount": 617,
+  "classifiedPageCount": 726,
   "categoryReport": {
     "home": {
       "total": 183,
@@ -31,8 +31,8 @@
       "low": 0
     },
     "family_education": {
-      "total": 79,
-      "high": 13,
+      "total": 80,
+      "high": 14,
       "medium": 31,
       "low": 35
     },
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 102,
-      "displayCandidates": 87,
+      "classified": 103,
+      "displayCandidates": 88,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 268,
+    "high": 269,
     "medium": 348,
     "low": 109
   },
-  "unclassifiedCount": 28,
+  "unclassifiedCount": 29,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -273,6 +273,11 @@
       "municipalityName": "美里町",
       "title": "令和8年熊本地震により被災された保護者の皆様へ",
       "url": "https://www.town.kumamoto-misato.lg.jp/soshiki/gakkokyoiku/1/4054.html"
+    },
+    {
+      "municipalityName": "大津町",
+      "title": "令和８年熊本地震に関する県民アンケートについて",
+      "url": "https://www.town.ozu.kumamoto.jp/site/bousai/28302.html"
     },
     {
       "municipalityName": "菊陽町",
@@ -924,5 +929,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 724
+  "previousClassifiedPageCount": 725
 }
