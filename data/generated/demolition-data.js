@@ -5,8 +5,8 @@ window.DEMOLITION_DATA = {
     "confirmedMunicipalitiesCount": 13,
     "acceptingCount": 13,
     "note": "令和8年熊本地震に伴う被災家屋の公費解体および自費解体費用償還の各自治体公式発表マスターデータ。",
-    "retrievedAt": "2026-11-25T20:52:37.236Z",
-    "officialCheckedAt": "11/26 05:52"
+    "retrievedAt": "2026-11-26T05:46:50.146Z",
+    "officialCheckedAt": "11/26 14:46"
   },
   "alerts": [
     {
@@ -81,16 +81,6 @@ window.DEMOLITION_DATA = {
       "time": "16:23",
       "title": "令和8年熊本地震で被災した家屋等の解体・撤去について（申請期限を延長しました）",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036794/index.html",
-      "category": "その他",
-      "archiveId": null,
-      "archiveUrl": null
-    },
-    {
-      "municipality": "宇城市",
-      "date": "2026-11-18",
-      "time": null,
-      "title": "2026年11月18日 令和8年熊本地震により被災した家屋等の解体・撤去について",
-      "url": "https://www.city.uki.kumamoto.jp/toppage/important/2641256",
       "category": "その他",
       "archiveId": null,
       "archiveUrl": null
@@ -221,6 +211,16 @@ window.DEMOLITION_DATA = {
       "time": "15:43",
       "title": "令和８年熊本地震で被災した家屋等の解体・撤去について（公費解体）",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00327083/index.html",
+      "category": "その他",
+      "archiveId": null,
+      "archiveUrl": null
+    },
+    {
+      "municipality": "天草市",
+      "date": "2026-09-18",
+      "time": null,
+      "title": "被災家屋などの解体・撤去（公費解体、自費解体）の申請受付",
+      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314885/index.html",
       "category": "その他",
       "archiveId": null,
       "archiveUrl": null

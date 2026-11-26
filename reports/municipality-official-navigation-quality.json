@@ -1,57 +1,57 @@
 {
-  "generatedAt": "2026-11-25T20:31:20.851Z",
+  "generatedAt": "2026-11-26T05:24:40.891Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 861,
-  "displayCandidateCount": 617,
-  "classifiedPageCount": 726,
+  "inputCount": 860,
+  "displayCandidateCount": 624,
+  "classifiedPageCount": 729,
   "categoryReport": {
     "home": {
-      "total": 183,
+      "total": 185,
       "high": 74,
       "medium": 68,
-      "low": 41
+      "low": 43
     },
     "money": {
-      "total": 263,
-      "high": 53,
-      "medium": 74,
-      "low": 136
+      "total": 264,
+      "high": 55,
+      "medium": 75,
+      "low": 134
     },
     "documents": {
-      "total": 163,
-      "high": 40,
-      "medium": 26,
-      "low": 97
+      "total": 166,
+      "high": 41,
+      "medium": 27,
+      "low": 98
     },
     "health_care": {
-      "total": 57,
-      "high": 19,
-      "medium": 38,
+      "total": 59,
+      "high": 20,
+      "medium": 39,
       "low": 0
     },
     "family_education": {
-      "total": 80,
-      "high": 14,
+      "total": 76,
+      "high": 13,
       "medium": 31,
-      "low": 35
+      "low": 32
     },
     "work_business": {
-      "total": 75,
+      "total": 76,
       "high": 19,
-      "medium": 56,
+      "medium": 57,
       "low": 0
     },
     "agriculture_fishery": {
-      "total": 22,
-      "high": 5,
+      "total": 23,
+      "high": 6,
       "medium": 17,
       "low": 0
     },
     "daily_life": {
-      "total": 213,
+      "total": 215,
       "high": 56,
-      "medium": 155,
+      "medium": 157,
       "low": 2
     }
   },
@@ -62,8 +62,8 @@
       "fallback": true
     },
     "municipality_yatsushiro": {
-      "classified": 144,
-      "displayCandidates": 114,
+      "classified": 145,
+      "displayCandidates": 119,
       "fallback": true
     },
     "municipality_minamata": {
@@ -82,8 +82,8 @@
       "fallback": true
     },
     "municipality_uto": {
-      "classified": 60,
-      "displayCandidates": 56,
+      "classified": 61,
+      "displayCandidates": 57,
       "fallback": true
     },
     "municipality_kamiamakusa": {
@@ -127,8 +127,8 @@
       "fallback": true
     },
     "municipality_mifune": {
-      "classified": 22,
-      "displayCandidates": 13,
+      "classified": 23,
+      "displayCandidates": 14,
       "fallback": true
     },
     "municipality_kashima": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 269,
-    "medium": 348,
-    "low": 109
+    "high": 272,
+    "medium": 352,
+    "low": 105
   },
-  "unclassifiedCount": 29,
+  "unclassifiedCount": 27,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -196,13 +196,8 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "スポーツ推進委員派遣事業の一時中断について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326976/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "博物館カフェの営業再開のお知らせ",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00327160/index.html"
+      "title": "震災時だからこそ、互いを思いやる心を",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00327044/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -213,11 +208,6 @@
       "municipalityName": "八代市",
       "title": "⚠️一部公園の利用予約について（球磨川河川緑地・北部中央公園・東片自然公園・緑公園・鏡ヶ池公園・新八代駅がめさん公園・龍峯やまびこ公園の一部 以外）",
       "url": "https://www.city.yatsushiro.lg.jp/kiji00326995/index.html"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "【11月10日更新：追加要望】令和８年熊本地震災害復旧関連事業に係る追加要望の受付について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00327362/index.html"
     },
     {
       "municipalityName": "八代市",
@@ -315,19 +305,19 @@
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036908/index.html"
     }
   ],
-  "outOfScopeCount": 65,
+  "outOfScopeCount": 63,
   "outOfScopeByRule": {
     "donation_appeal": 2,
-    "disaster_preparedness": 10,
-    "facility_notice": 12,
+    "disaster_preparedness": 11,
+    "facility_notice": 9,
     "assembly_petition": 1,
     "budget_notice": 3,
     "overall_guide": 5,
     "hq_meeting_material": 3,
-    "index_page": 13,
-    "mayor_message": 2,
+    "index_page": 14,
     "mutual_aid": 1,
     "weather_warning": 2,
+    "mayor_message": 1,
     "press": 4,
     "public_relations": 6,
     "cultural_property": 1
@@ -391,24 +381,10 @@
     },
     {
       "municipalityName": "八代市",
-      "title": "【図書館本館】10月1日（木曜日）より開館のお知らせ",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00327109/index.html",
-      "ruleId": "facility_notice",
-      "ruleLabel": "公共施設の休止・再開・紹介"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "【鏡文化センター】夜間利用再開のお知らせ",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00327085/index.html",
-      "ruleId": "facility_notice",
-      "ruleLabel": "公共施設の休止・再開・紹介"
-    },
-    {
-      "municipalityName": "八代市",
-      "title": "コミュニティセンターの貸出再開（代陽・高田）について",
-      "url": "https://www.city.yatsushiro.lg.jp/kiji00326816/index.html",
-      "ruleId": "facility_notice",
-      "ruleLabel": "公共施設の休止・再開・紹介"
+      "title": "防災行政情報配信サービスの登録をお願いします。",
+      "url": "https://www.city.yatsushiro.lg.jp/kiji00314856/index.html",
+      "ruleId": "disaster_preparedness",
+      "ruleLabel": "平時の防災・今後への備え"
     },
     {
       "municipalityName": "八代市",
@@ -460,13 +436,6 @@
       "ruleLabel": "入口・一覧のページ"
     },
     {
-      "municipalityName": "八代市",
-      "title": "小野市長から市民の皆さまへ",
-      "url": "https://www.city.yatsushiro.lg.jp/shicho/kiji00326810/index.html",
-      "ruleId": "mayor_message",
-      "ruleLabel": "首長からのメッセージ"
-    },
-    {
       "municipalityName": "山鹿市",
       "title": "令和8年熊本地震（7月28日発生）に関する情報",
       "url": "https://www.city.yamaga.kumamoto.jp/kiji0033159/index.html",
@@ -486,6 +455,13 @@
       "url": "https://www.city.yamaga.kumamoto.jp/kiji0033173/index.html",
       "ruleId": "disaster_preparedness",
       "ruleLabel": "平時の防災・今後への備え"
+    },
+    {
+      "municipalityName": "山鹿市",
+      "title": "震度速報 11月26日 7時33分",
+      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
+      "ruleId": "index_page",
+      "ruleLabel": "入口・一覧のページ"
     },
     {
       "municipalityName": "菊池市",
@@ -622,7 +598,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月25日 令和8年熊本地震 関連情報 （11月25日8時00分更新）",
+      "title": "2026年11月26日 令和8年熊本地震 関連情報 （11月26日13時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -664,17 +640,17 @@
     },
     {
       "municipalityName": "美里町",
-      "title": "令和8年熊本地震 広報みさと号外(10/9更新）",
-      "url": "https://www.town.kumamoto-misato.lg.jp/soshiki/somu/1/9/2/1/1_2/index.html",
-      "ruleId": "public_relations",
-      "ruleLabel": "広報紙・その配布"
-    },
-    {
-      "municipalityName": "美里町",
       "title": "美里町中央公民館の利用再開について【11/16更新】",
       "url": "https://www.town.kumamoto-misato.lg.jp/soshiki/shakaikyoiku/1/7/4051.html",
       "ruleId": "facility_notice",
       "ruleLabel": "公共施設の休止・再開・紹介"
+    },
+    {
+      "municipalityName": "美里町",
+      "title": "令和8年熊本地震 広報みさと号外(11/19更新）",
+      "url": "https://www.town.kumamoto-misato.lg.jp/soshiki/somu/1/9/2/1/1_2/index.html",
+      "ruleId": "public_relations",
+      "ruleLabel": "広報紙・その配布"
     },
     {
       "municipalityName": "美里町",
@@ -795,7 +771,7 @@
     "non_official_url": 3,
     "past_disaster_excluded": 1
   },
-  "warningCount": 26,
+  "warningCount": 25,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -815,7 +791,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_yatsushiro",
-      "count": 7
+      "count": 2
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -858,14 +834,9 @@
       "count": 1
     },
     {
-      "code": "HTTP_404_CANDIDATE",
-      "municipalityId": "municipality_uki",
-      "message": "継続回数を確認後に表示除外を判断してください"
-    },
-    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 4
+      "count": 3
     },
     {
       "code": "HTTP_404_CANDIDATE",
