@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-26T05:46:50.146Z",
-  "officialCheckedAt": "11/26 14:46",
+  "retrievedAt": "2026-11-26T13:26:23.638Z",
+  "officialCheckedAt": "11/26 22:26",
   "siteTopics": [
     {
       "date": "2026-11-24",
@@ -96,14 +96,44 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "令和8年熊本地震に伴う農地等災害復旧事業におけるコンクリート畦畔の受付期限延長について",
+      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036892/index.html",
+      "date": "2026-11-26",
+      "time": "17:47",
+      "category": "その他",
+      "municipality": "氷川町",
+      "archiveId": "hikawa-20261126-a9ad6c43",
+      "archiveUrl": "official-articles/hikawa-20261126-a9ad6c43.html"
+    },
+    {
+      "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
+      "url": "https://www.city.kumamoto.jp/kiji00372210/index.html",
+      "date": "2026-11-26",
+      "time": "16:12",
+      "category": "住まい・証明",
+      "municipality": "熊本市",
+      "archiveId": "kumamoto-20261126-2d71cce8",
+      "archiveUrl": "official-articles/kumamoto-20261126-2d71cce8.html"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-11-26",
-      "time": "14:03",
+      "time": "15:51",
       "category": "その他",
       "municipality": "八代市",
       "archiveId": "yatsushiro-20261126-bad1de7e",
       "archiveUrl": "official-articles/yatsushiro-20261126-bad1de7e.html"
+    },
+    {
+      "title": "【事業者向け】西原村燃料等高騰対策中小企業緊急支援金のお知らせ",
+      "url": "https://www.vill.nishihara.kumamoto.jp/kiji0032066/index.html",
+      "date": "2026-11-26",
+      "time": "15:49",
+      "category": "支援・制度",
+      "municipality": "西原村",
+      "archiveId": "nishihara-20261126-77b80bf3",
+      "archiveUrl": "official-articles/nishihara-20261126-77b80bf3.html"
     },
     {
       "title": "2026年11月26日 令和8年熊本地震 関連情報 （11月26日13時00分更新）",
@@ -146,6 +176,16 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/uto-20261126-b599c5e6.html"
     },
     {
+      "title": "【令和8年熊本地震】お住まいの家の被害拡大を防止する緊急修理について",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23180.html",
+      "date": "2026-11-26",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "上天草市",
+      "archiveId": "kamiamakusa-20261126-7f4c8e02",
+      "archiveUrl": "official-articles/kamiamakusa-20261126-7f4c8e02.html"
+    },
+    {
       "title": "令和8年熊本地震（7月28日発生）に関する情報（11月25日16時更新）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
       "date": "2026-11-25",
@@ -164,16 +204,6 @@ window.HOME_TOPICS = {
       "municipality": "水俣市",
       "archiveId": "minamata-20261125-9f50f0d5",
       "archiveUrl": "official-articles/minamata-20261125-9f50f0d5.html"
-    },
-    {
-      "title": "令和8年熊本地震にかかる「くまもと事業者再出発支援補助金」の現地サポートセンターの開設のご案内",
-      "url": "https://www.town.hikawa.kumamoto.jp/kiji0036876/index.html",
-      "date": "2026-11-25",
-      "time": "11:42",
-      "category": "支援・制度",
-      "municipality": "氷川町",
-      "archiveId": "hikawa-20261125-96f8c6d9",
-      "archiveUrl": "official-articles/hikawa-20261125-96f8c6d9.html"
     },
     {
       "title": "令和8年熊本地震 被災市町任期付職員合同採用試験のご案内",
@@ -214,36 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "甲佐町",
       "archiveId": "kosa-20261125-db8a491d",
       "archiveUrl": "official-articles/kosa-20261125-db8a491d.html"
-    },
-    {
-      "title": "「罹災証明書」「被災証明書」の発行について",
-      "url": "https://www.town.kikuyo.lg.jp/bousai/kiji0035059/index.html",
-      "date": "2026-11-24",
-      "time": "18:14",
-      "category": "住まい・証明",
-      "municipality": "菊陽町",
-      "archiveId": "kikuyo-20261124-82235f44",
-      "archiveUrl": "official-articles/kikuyo-20261124-82235f44.html"
-    },
-    {
-      "title": "令和8年熊本地震の被災者への市営住宅の一時提供について",
-      "url": "https://www.city.kumamoto.jp/kiji00372210/index.html",
-      "date": "2026-11-24",
-      "time": "08:30",
-      "category": "住まい・証明",
-      "municipality": "熊本市",
-      "archiveId": "kumamoto-20261124-2d71cce8",
-      "archiveUrl": "official-articles/kumamoto-20261124-2d71cce8.html"
-    },
-    {
-      "title": "(11/24更新)本市の水道に係る地震発生後の状況についてお知らせします",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23284.html",
-      "date": "2026-11-24",
-      "time": null,
-      "category": "ライフライン",
-      "municipality": "上天草市",
-      "archiveId": "kamiamakusa-20261124-a4411e17",
-      "archiveUrl": "official-articles/kamiamakusa-20261124-a4411e17.html"
     }
   ],
   "prefectureUpdates": [

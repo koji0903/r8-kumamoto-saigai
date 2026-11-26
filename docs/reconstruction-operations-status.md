@@ -1,21 +1,22 @@
 # 暮らしの再建 運用ステータス
 
 - 状態: **ACTION_REQUIRED**
-- 生成: 2026-11-26T05:47:29.713Z
+- 生成: 2026-11-26T13:27:00.256Z
 - sitePhase: **emergency**
-- 収集: 860件 / 分類 729件 / 表示候補 624件
+- 収集: 861件 / 分類 731件 / 表示候補 626件
 - fallback: 21/21
-- 未分類: 27件
+- 未分類: 26件
 - low confidence: 105件
 - manual override: 2件
 - 鮮度（公式ナビ）: fresh
 - 鮮度（厳密制度）: fresh
-- 厳密制度source変更: 6件（変更時は needs_review）
-- ACTION_REQUIRED: 6件
+- 厳密制度source変更: 7件（変更時は needs_review）
+- ACTION_REQUIRED: 7件
 - WARNING: 25件
 
 ## ACTION_REQUIRED
 - STRICT_SOURCE_CHANGED: 内閣府防災担当からの各都道府県等への通知等
+- STRICT_SOURCE_CHANGED: 令和8年熊本地震に係る災害救助法の適用について
 - STRICT_SOURCE_CHANGED: 【令和8年熊本地震】被災した住宅の応急修理について
 - STRICT_SOURCE_CHANGED: 支援・申請
 - STRICT_SOURCE_CHANGED: 災害救助法に基づく被災住宅の応急修理制度について

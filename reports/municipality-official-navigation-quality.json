@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-11-26T05:24:40.891Z",
+  "generatedAt": "2026-11-26T13:03:19.570Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 860,
-  "displayCandidateCount": 624,
-  "classifiedPageCount": 729,
+  "inputCount": 861,
+  "displayCandidateCount": 626,
+  "classifiedPageCount": 731,
   "categoryReport": {
     "home": {
-      "total": 185,
-      "high": 74,
+      "total": 184,
+      "high": 73,
       "medium": 68,
       "low": 43
     },
     "money": {
-      "total": 264,
+      "total": 265,
       "high": 55,
-      "medium": 75,
+      "medium": 76,
       "low": 134
     },
     "documents": {
       "total": 166,
       "high": 41,
-      "medium": 27,
-      "low": 98
+      "medium": 28,
+      "low": 97
     },
     "health_care": {
       "total": 59,
@@ -31,15 +31,15 @@
       "low": 0
     },
     "family_education": {
-      "total": 76,
-      "high": 13,
+      "total": 77,
+      "high": 14,
       "medium": 31,
       "low": 32
     },
     "work_business": {
-      "total": 76,
-      "high": 19,
-      "medium": 57,
+      "total": 78,
+      "high": 20,
+      "medium": 58,
       "low": 0
     },
     "agriculture_fishery": {
@@ -92,8 +92,8 @@
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 103,
-      "displayCandidates": 88,
+      "classified": 104,
+      "displayCandidates": 89,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -117,13 +117,13 @@
       "fallback": true
     },
     "municipality_kikuyo": {
-      "classified": 21,
-      "displayCandidates": 16,
+      "classified": 22,
+      "displayCandidates": 17,
       "fallback": true
     },
     "municipality_nishihara": {
-      "classified": 12,
-      "displayCandidates": 11,
+      "classified": 13,
+      "displayCandidates": 12,
       "fallback": true
     },
     "municipality_mifune": {
@@ -147,8 +147,8 @@
       "fallback": true
     },
     "municipality_hikawa": {
-      "classified": 60,
-      "displayCandidates": 52,
+      "classified": 59,
+      "displayCandidates": 51,
       "fallback": true
     },
     "municipality_ashikita": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 272,
-    "medium": 352,
+    "high": 273,
+    "medium": 353,
     "low": 105
   },
-  "unclassifiedCount": 27,
+  "unclassifiedCount": 26,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -278,11 +278,6 @@
       "municipalityName": "菊陽町",
       "title": "熊本地震記録誌「未来へつなぐ記録」を刊行しました。",
       "url": "https://www.town.kikuyo.lg.jp/kiji0031715/index.html"
-    },
-    {
-      "municipalityName": "菊陽町",
-      "title": "令和8年熊本地震に関する 県民アンケートのご協力のお願い",
-      "url": "https://www.town.kikuyo.lg.jp/kiji0035869/index.html"
     },
     {
       "municipalityName": "御船町",
@@ -896,9 +891,9 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_hikawa",
-      "count": 2
+      "count": 3
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 726
+  "previousClassifiedPageCount": 729
 }

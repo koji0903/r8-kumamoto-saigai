@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-26T05:47:29.713Z",
+  "generatedAt": "2026-11-26T13:27:00.256Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-26T05:24:40.891Z",
-    "inputCount": 860,
-    "classifiedPageCount": 729,
-    "displayCandidateCount": 624,
+    "generatedAt": "2026-11-26T13:03:19.570Z",
+    "inputCount": 861,
+    "classifiedPageCount": 731,
+    "displayCandidateCount": 626,
     "deltaFromPrevious": {
-      "inputCount": -1,
-      "classifiedPageCount": 3,
-      "unclassifiedCount": -2
+      "inputCount": 1,
+      "classifiedPageCount": 2,
+      "unclassifiedCount": -1
     }
   },
   "freshness": {
@@ -66,8 +66,8 @@
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 103,
-        "displayCandidates": 88,
+        "classified": 104,
+        "displayCandidates": 89,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -91,13 +91,13 @@
         "fallback": true
       },
       "municipality_kikuyo": {
-        "classified": 21,
-        "displayCandidates": 16,
+        "classified": 22,
+        "displayCandidates": 17,
         "fallback": true
       },
       "municipality_nishihara": {
-        "classified": 12,
-        "displayCandidates": 11,
+        "classified": 13,
+        "displayCandidates": 12,
         "fallback": true
       },
       "municipality_mifune": {
@@ -121,8 +121,8 @@
         "fallback": true
       },
       "municipality_hikawa": {
-        "classified": 60,
-        "displayCandidates": 52,
+        "classified": 59,
+        "displayCandidates": 51,
         "fallback": true
       },
       "municipality_ashikita": {
@@ -138,22 +138,22 @@
     },
     "categoryReport": {
       "home": {
-        "total": 185,
-        "high": 74,
+        "total": 184,
+        "high": 73,
         "medium": 68,
         "low": 43
       },
       "money": {
-        "total": 264,
+        "total": 265,
         "high": 55,
-        "medium": 75,
+        "medium": 76,
         "low": 134
       },
       "documents": {
         "total": 166,
         "high": 41,
-        "medium": 27,
-        "low": 98
+        "medium": 28,
+        "low": 97
       },
       "health_care": {
         "total": 59,
@@ -162,15 +162,15 @@
         "low": 0
       },
       "family_education": {
-        "total": 76,
-        "high": 13,
+        "total": 77,
+        "high": 14,
         "medium": 31,
         "low": 32
       },
       "work_business": {
-        "total": 76,
-        "high": 19,
-        "medium": 57,
+        "total": 78,
+        "high": 20,
+        "medium": 58,
         "low": 0
       },
       "agriculture_fishery": {
@@ -187,11 +187,11 @@
       }
     },
     "confidence": {
-      "high": 272,
-      "medium": 352,
+      "high": 273,
+      "medium": 353,
       "low": 105
     },
-    "unclassifiedCount": 27,
+    "unclassifiedCount": 26,
     "excludedCount": 41,
     "overrideCount": 2
   },
@@ -210,11 +210,22 @@
     {
       "code": "STRICT_SOURCE_CHANGED",
       "detail": {
+        "id": "source_kumamoto_relief_act_application_r8_earthquake",
+        "title": "令和8年熊本地震に係る災害救助法の適用について",
+        "url": "https://www.pref.kumamoto.jp/soshiki/27/274494.html",
+        "previousHash": "sha256:a2ca22323d26d4122f830ec1fbb17cbd5eb1cd8097cc473b9bba7da9ab63d242",
+        "currentHash": "sha256:bab7dacf1063fa1d94f501a585f20b9bfa0986b86e8c338234feb1b934052f20",
+        "verificationStatus": "needs_review"
+      }
+    },
+    {
+      "code": "STRICT_SOURCE_CHANGED",
+      "detail": {
         "id": "source_kumamoto_emergency_housing_repair_page",
         "title": "【令和8年熊本地震】被災した住宅の応急修理について",
         "url": "https://www.pref.kumamoto.jp/soshiki/27/275109.html",
         "previousHash": "sha256:b35977e35e937bbd53b09f435851c2bef9b8d6003567ca2ef70ba188f1da13e8",
-        "currentHash": "sha256:93c6abdddfb77368f935f9df0ffd07266a035b2dec275e9b9b6f0046e56a1d8d",
+        "currentHash": "sha256:ac85538f67fd3fa89cbc73163821082b5eb7015b6cb94bc7c1545a8925fe9e5e",
         "verificationStatus": "needs_review"
       }
     },
@@ -387,12 +398,12 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_hikawa",
-      "count": 2
+      "count": 3
     }
   ],
   "strictSources": {
     "count": 11,
-    "changedCount": 6,
+    "changedCount": 7,
     "needsReview": [
       {
         "id": "source_cabinet_notifications_r8_kumamoto_earthquake",
@@ -403,11 +414,19 @@
         "verificationStatus": "needs_review"
       },
       {
+        "id": "source_kumamoto_relief_act_application_r8_earthquake",
+        "title": "令和8年熊本地震に係る災害救助法の適用について",
+        "url": "https://www.pref.kumamoto.jp/soshiki/27/274494.html",
+        "previousHash": "sha256:a2ca22323d26d4122f830ec1fbb17cbd5eb1cd8097cc473b9bba7da9ab63d242",
+        "currentHash": "sha256:bab7dacf1063fa1d94f501a585f20b9bfa0986b86e8c338234feb1b934052f20",
+        "verificationStatus": "needs_review"
+      },
+      {
         "id": "source_kumamoto_emergency_housing_repair_page",
         "title": "【令和8年熊本地震】被災した住宅の応急修理について",
         "url": "https://www.pref.kumamoto.jp/soshiki/27/275109.html",
         "previousHash": "sha256:b35977e35e937bbd53b09f435851c2bef9b8d6003567ca2ef70ba188f1da13e8",
-        "currentHash": "sha256:93c6abdddfb77368f935f9df0ffd07266a035b2dec275e9b9b6f0046e56a1d8d",
+        "currentHash": "sha256:ac85538f67fd3fa89cbc73163821082b5eb7015b6cb94bc7c1545a8925fe9e5e",
         "verificationStatus": "needs_review"
       },
       {
