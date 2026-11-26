@@ -1551,5 +1551,13 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "上天草市",
     "date": "2026-11-26",
     "retrievedAt": "2026-11-26T13:26:41.180Z"
+  },
+  "https://www.city.uto.lg.jp/article/view/1307/16406.html": {
+    "id": "uto-20261127-26cd44de",
+    "htmlPath": "official-articles/uto-20261127-26cd44de.html",
+    "title": "住家の緊急修理について",
+    "municipality": "宇土市",
+    "date": "2026-11-27",
+    "retrievedAt": "2026-11-26T19:02:43.947Z"
   }
 };

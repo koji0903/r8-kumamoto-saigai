@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-26T13:26:23.638Z",
-  "officialCheckedAt": "11/26 22:26",
+  "retrievedAt": "2026-11-26T19:02:33.987Z",
+  "officialCheckedAt": "11/27 04:02",
   "siteTopics": [
     {
       "date": "2026-11-24",
@@ -96,6 +96,16 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "住家の緊急修理について",
+      "url": "https://www.city.uto.lg.jp/article/view/1307/16406.html",
+      "date": "2026-11-27",
+      "time": null,
+      "category": "住まい・証明",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261127-26cd44de",
+      "archiveUrl": "official-articles/uto-20261127-26cd44de.html"
+    },
+    {
       "title": "令和8年熊本地震に伴う農地等災害復旧事業におけるコンクリート畦畔の受付期限延長について",
       "url": "https://www.town.hikawa.kumamoto.jp/kiji0036892/index.html",
       "date": "2026-11-26",
@@ -164,16 +174,6 @@ window.HOME_TOPICS = {
       "municipality": "山鹿市",
       "archiveId": "yamaga-20261126-ed5178f4",
       "archiveUrl": "official-articles/yamaga-20261126-ed5178f4.html"
-    },
-    {
-      "title": "キーワードマッチ 2026年11月26日 令和８年熊本地震により被災された方の後期高齢者医療保険料の減免について",
-      "url": "https://www.city.uto.lg.jp/article/view/1004/16830.html",
-      "date": "2026-11-26",
-      "time": null,
-      "category": "その他",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261126-b599c5e6",
-      "archiveUrl": "official-articles/uto-20261126-b599c5e6.html"
     },
     {
       "title": "【令和8年熊本地震】お住まいの家の被害拡大を防止する緊急修理について",
