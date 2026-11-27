@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-26T20:37:05.240Z",
+  "generatedAt": "2026-11-27T05:43:19.155Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-26T20:15:03.038Z",
-    "inputCount": 861,
+    "generatedAt": "2026-11-27T05:19:46.774Z",
+    "inputCount": 863,
     "classifiedPageCount": 731,
-    "displayCandidateCount": 626,
+    "displayCandidateCount": 625,
     "deltaFromPrevious": {
-      "inputCount": 0,
+      "inputCount": 2,
       "classifiedPageCount": 0,
-      "unclassifiedCount": 0
+      "unclassifiedCount": 1
     }
   },
   "freshness": {
@@ -23,7 +23,7 @@
     "strictPrograms": {
       "state": "fresh",
       "status": "OK",
-      "ageHours": 7,
+      "ageHours": 0,
       "limitHours": 336
     }
   },
@@ -57,17 +57,17 @@
       },
       "municipality_uto": {
         "classified": 61,
-        "displayCandidates": 57,
+        "displayCandidates": 56,
         "fallback": true
       },
       "municipality_kamiamakusa": {
-        "classified": 36,
-        "displayCandidates": 32,
+        "classified": 38,
+        "displayCandidates": 34,
         "fallback": true
       },
       "municipality_uki": {
-        "classified": 104,
-        "displayCandidates": 89,
+        "classified": 102,
+        "displayCandidates": 87,
         "fallback": true
       },
       "municipality_amakusa": {
@@ -138,21 +138,21 @@
     },
     "categoryReport": {
       "home": {
-        "total": 184,
+        "total": 182,
         "high": 73,
-        "medium": 68,
-        "low": 43
+        "medium": 67,
+        "low": 42
       },
       "money": {
-        "total": 265,
+        "total": 268,
         "high": 55,
-        "medium": 76,
-        "low": 134
+        "medium": 77,
+        "low": 136
       },
       "documents": {
         "total": 166,
-        "high": 41,
-        "medium": 28,
+        "high": 40,
+        "medium": 29,
         "low": 97
       },
       "health_care": {
@@ -168,9 +168,9 @@
         "low": 32
       },
       "work_business": {
-        "total": 78,
+        "total": 79,
         "high": 20,
-        "medium": 58,
+        "medium": 59,
         "low": 0
       },
       "agriculture_fishery": {
@@ -180,19 +180,19 @@
         "low": 0
       },
       "daily_life": {
-        "total": 215,
-        "high": 56,
+        "total": 214,
+        "high": 55,
         "medium": 157,
         "low": 2
       }
     },
     "confidence": {
-      "high": 273,
-      "medium": 353,
-      "low": 105
+      "high": 271,
+      "medium": 354,
+      "low": 106
     },
-    "unclassifiedCount": 26,
-    "excludedCount": 41,
+    "unclassifiedCount": 27,
+    "excludedCount": 42,
     "overrideCount": 2
   },
   "actions": [
@@ -236,7 +236,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:634fd63dbad2ff953291fe1dc20841089ef8df0c8d3c787d068c1b8178350b6e",
+        "currentHash": "sha256:56e7a2d946b366f7e750ab63e09b81e209ecd70afbec74af73160ef33c9965c3",
         "verificationStatus": "needs_review"
       }
     },
@@ -336,9 +336,14 @@
       "count": 1
     },
     {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_uki",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -434,7 +439,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:634fd63dbad2ff953291fe1dc20841089ef8df0c8d3c787d068c1b8178350b6e",
+        "currentHash": "sha256:56e7a2d946b366f7e750ab63e09b81e209ecd70afbec74af73160ef33c9965c3",
         "verificationStatus": "needs_review"
       },
       {

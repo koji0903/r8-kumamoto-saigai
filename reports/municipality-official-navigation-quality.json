@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-11-26T20:15:03.038Z",
+  "generatedAt": "2026-11-27T05:19:46.774Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
-  "inputCount": 861,
-  "displayCandidateCount": 626,
+  "inputCount": 863,
+  "displayCandidateCount": 625,
   "classifiedPageCount": 731,
   "categoryReport": {
     "home": {
-      "total": 184,
+      "total": 182,
       "high": 73,
-      "medium": 68,
-      "low": 43
+      "medium": 67,
+      "low": 42
     },
     "money": {
-      "total": 265,
+      "total": 268,
       "high": 55,
-      "medium": 76,
-      "low": 134
+      "medium": 77,
+      "low": 136
     },
     "documents": {
       "total": 166,
-      "high": 41,
-      "medium": 28,
+      "high": 40,
+      "medium": 29,
       "low": 97
     },
     "health_care": {
@@ -37,9 +37,9 @@
       "low": 32
     },
     "work_business": {
-      "total": 78,
+      "total": 79,
       "high": 20,
-      "medium": 58,
+      "medium": 59,
       "low": 0
     },
     "agriculture_fishery": {
@@ -49,8 +49,8 @@
       "low": 0
     },
     "daily_life": {
-      "total": 215,
-      "high": 56,
+      "total": 214,
+      "high": 55,
       "medium": 157,
       "low": 2
     }
@@ -83,17 +83,17 @@
     },
     "municipality_uto": {
       "classified": 61,
-      "displayCandidates": 57,
+      "displayCandidates": 56,
       "fallback": true
     },
     "municipality_kamiamakusa": {
-      "classified": 36,
-      "displayCandidates": 32,
+      "classified": 38,
+      "displayCandidates": 34,
       "fallback": true
     },
     "municipality_uki": {
-      "classified": 104,
-      "displayCandidates": 89,
+      "classified": 102,
+      "displayCandidates": 87,
       "fallback": true
     },
     "municipality_amakusa": {
@@ -163,11 +163,11 @@
     }
   },
   "confidence": {
-    "high": 273,
-    "medium": 353,
-    "low": 105
+    "high": 271,
+    "medium": 354,
+    "low": 106
   },
-  "unclassifiedCount": 26,
+  "unclassifiedCount": 27,
   "unclassifiedItems": [
     {
       "municipalityName": "熊本市",
@@ -228,6 +228,11 @@
       "municipalityName": "宇土市",
       "title": "【お知らせとお願い】不審なメールやメッセージにご注意ください！",
       "url": "https://www.city.uto.lg.jp/article/view/1310/17200.html"
+    },
+    {
+      "municipalityName": "宇土市",
+      "title": "令和8年熊本地震 震災復興本部会議",
+      "url": "https://www.city.uto.lg.jp/article/view/1310/17418.html"
     },
     {
       "municipalityName": "宇土市",
@@ -302,14 +307,14 @@
   ],
   "outOfScopeCount": 63,
   "outOfScopeByRule": {
-    "donation_appeal": 2,
+    "donation_appeal": 3,
     "disaster_preparedness": 11,
     "facility_notice": 9,
     "assembly_petition": 1,
     "budget_notice": 3,
     "overall_guide": 5,
     "hq_meeting_material": 3,
-    "index_page": 14,
+    "index_page": 13,
     "mutual_aid": 1,
     "weather_warning": 2,
     "mayor_message": 1,
@@ -452,13 +457,6 @@
       "ruleLabel": "平時の防災・今後への備え"
     },
     {
-      "municipalityName": "山鹿市",
-      "title": "震度速報 11月26日 7時33分",
-      "url": "https://www.city.yamaga.kumamoto.jp/kinkyu.html",
-      "ruleId": "index_page",
-      "ruleLabel": "入口・一覧のページ"
-    },
-    {
       "municipalityName": "菊池市",
       "title": "地震関連情報",
       "url": "https://www.city.kikuchi.lg.jp/article/list/1350.html",
@@ -530,6 +528,13 @@
     },
     {
       "municipalityName": "上天草市",
+      "title": "令和8年熊本地震からの復旧・復興のための「企業版ふるさと納税」を受け付けています",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/290/23317.html",
+      "ruleId": "donation_appeal",
+      "ruleLabel": "寄付・ふるさと納税の受付"
+    },
+    {
+      "municipalityName": "上天草市",
       "title": "被災者の方へ(案内チラシ)(PDF 約267KB)",
       "url": "https://www.city.kamiamakusa.kumamoto.jp/dl?q=122798_filelib_91e49fb52542af54c1c571bf0f9da108.pdf",
       "ruleId": "overall_guide",
@@ -593,7 +598,7 @@
     },
     {
       "municipalityName": "宇城市",
-      "title": "2026年11月26日 令和8年熊本地震 関連情報 （11月26日13時00分更新）",
+      "title": "2026年11月27日 令和8年熊本地震 関連情報 （11月27日8時00分更新）",
       "url": "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699",
       "ruleId": "index_page",
       "ruleLabel": "入口・一覧のページ"
@@ -760,13 +765,13 @@
       "ruleLabel": "広報紙・その配布"
     }
   ],
-  "excludedCount": 41,
+  "excludedCount": 42,
   "excludedByType": {
     "duplicate_url": 37,
-    "non_official_url": 3,
+    "non_official_url": 4,
     "past_disaster_excluded": 1
   },
-  "warningCount": 25,
+  "warningCount": 26,
   "warnings": [
     {
       "code": "HTTP_404_CANDIDATE",
@@ -829,9 +834,14 @@
       "count": 1
     },
     {
+      "code": "HTTP_404_CANDIDATE",
+      "municipalityId": "municipality_uki",
+      "message": "継続回数を確認後に表示除外を判断してください"
+    },
+    {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_uki",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",

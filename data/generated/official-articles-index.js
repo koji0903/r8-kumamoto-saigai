@@ -9,12 +9,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-24T07:25:04.761Z"
   },
   "https://www.city.uki.kumamoto.jp/toppage/kinkyu/2606699": {
-    "id": "uki-20261126-7d9d4e13",
-    "htmlPath": "official-articles/uki-20261126-7d9d4e13.html",
-    "title": "2026年11月26日 令和8年熊本地震 関連情報 （11月26日13時00分更新）",
+    "id": "uki-20261127-7d9d4e13",
+    "htmlPath": "official-articles/uki-20261127-7d9d4e13.html",
+    "title": "2026年11月27日 令和8年熊本地震 関連情報 （11月27日8時00分更新）",
     "municipality": "宇城市",
-    "date": "2026-11-26",
-    "retrievedAt": "2026-11-26T05:47:01.266Z"
+    "date": "2026-11-27",
+    "retrievedAt": "2026-11-27T05:42:52.199Z"
   },
   "https://localcms.city.minamata.lg.jp/page4895.html?type=top": {
     "id": "minamata-20261019-81bdc420",
@@ -297,12 +297,12 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "retrievedAt": "2026-11-05T11:29:29.079Z"
   },
   "https://www.city.yatsushiro.lg.jp/default.html": {
-    "id": "yatsushiro-20261126-bad1de7e",
-    "htmlPath": "official-articles/yatsushiro-20261126-bad1de7e.html",
+    "id": "yatsushiro-20261127-bad1de7e",
+    "htmlPath": "official-articles/yatsushiro-20261127-bad1de7e.html",
     "title": "熊本県八代市",
     "municipality": "八代市",
-    "date": "2026-11-26",
-    "retrievedAt": "2026-11-26T05:46:59.165Z"
+    "date": "2026-11-27",
+    "retrievedAt": "2026-11-27T05:42:48.244Z"
   },
   "https://www.city.kikuchi.lg.jp/article/view/1040/19566.html": {
     "id": "kikuchi-20261021-f5f1e2ae",
@@ -1559,5 +1559,21 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "宇土市",
     "date": "2026-11-27",
     "retrievedAt": "2026-11-26T19:02:43.947Z"
+  },
+  "https://localcms.city.minamata.lg.jp/page4019.html?type=top": {
+    "id": "minamata-20261127-8deacbf7",
+    "htmlPath": "official-articles/minamata-20261127-8deacbf7.html",
+    "title": "庁舎の計画停電に伴いコンビニ交付サービスを一時停止します",
+    "municipality": "水俣市",
+    "date": "2026-11-27",
+    "retrievedAt": "2026-11-27T05:42:50.134Z"
+  },
+  "https://www.town.kosa.lg.jp/q/aview/51/13690.html": {
+    "id": "kosa-20261127-73ca91ee",
+    "htmlPath": "official-articles/kosa-20261127-73ca91ee.html",
+    "title": "り災証明書(2次調査)の発行申請受付について",
+    "municipality": "甲佐町",
+    "date": "2026-11-27",
+    "retrievedAt": "2026-11-27T05:42:54.010Z"
   }
 };
