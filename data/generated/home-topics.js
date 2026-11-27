@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-27T05:42:37.666Z",
-  "officialCheckedAt": "11/27 14:42",
+  "retrievedAt": "2026-11-27T13:23:18.479Z",
+  "officialCheckedAt": "11/27 22:23",
   "siteTopics": [
     {
       "date": "2026-11-24",
@@ -99,7 +99,7 @@ window.HOME_TOPICS = {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-11-27",
-      "time": "11:53",
+      "time": "17:00",
       "category": "その他",
       "municipality": "八代市",
       "archiveId": "yatsushiro-20261127-bad1de7e",
@@ -134,6 +134,16 @@ window.HOME_TOPICS = {
       "municipality": "宇土市",
       "archiveId": "uto-20261127-26cd44de",
       "archiveUrl": "official-articles/uto-20261127-26cd44de.html"
+    },
+    {
+      "title": "減圧給水にご協力ください",
+      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314961/index.html",
+      "date": "2026-11-27",
+      "time": null,
+      "category": "ライフライン",
+      "municipality": "天草市",
+      "archiveId": "amakusa-20261127-8d00a464",
+      "archiveUrl": "official-articles/amakusa-20261127-8d00a464.html"
     },
     {
       "title": "り災証明書(2次調査)の発行申請受付について",
@@ -186,16 +196,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/mifune-20261126-827bb44d.html"
     },
     {
-      "title": "【令和8年熊本地震】お住まいの家の被害拡大を防止する緊急修理について",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23180.html",
-      "date": "2026-11-26",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "上天草市",
-      "archiveId": "kamiamakusa-20261126-7f4c8e02",
-      "archiveUrl": "official-articles/kamiamakusa-20261126-7f4c8e02.html"
-    },
-    {
       "title": "令和8年熊本地震（7月28日発生）に関する情報（11月25日16時更新）",
       "url": "https://www.town.kumamoto-misato.lg.jp/kurashi_tetsuzuki/gou-saigai_1/index.html",
       "date": "2026-11-25",
@@ -216,16 +216,6 @@ window.HOME_TOPICS = {
       "archiveUrl": "official-articles/koshi-20261125-2748a2c2.html"
     },
     {
-      "title": "断水を回避するため、さらなる節水にご協力を",
-      "url": "https://www.city.amakusa.kumamoto.jp/kiji00314806/index.html",
-      "date": "2026-11-25",
-      "time": null,
-      "category": "ライフライン",
-      "municipality": "天草市",
-      "archiveId": "amakusa-20261125-273d750d",
-      "archiveUrl": "official-articles/amakusa-20261125-273d750d.html"
-    },
-    {
       "title": "令和８年熊本地震に関する県民アンケートについて",
       "url": "https://www.town.ozu.kumamoto.jp/site/bousai/28302.html",
       "date": "2026-11-25",
@@ -244,6 +234,16 @@ window.HOME_TOPICS = {
       "municipality": "菊陽町",
       "archiveId": "kikuyo-20261124-82235f44",
       "archiveUrl": "official-articles/kikuyo-20261124-82235f44.html"
+    },
+    {
+      "title": "(11/24更新)本市の水道に係る地震発生後の状況についてお知らせします",
+      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23284.html",
+      "date": "2026-11-24",
+      "time": null,
+      "category": "ライフライン",
+      "municipality": "上天草市",
+      "archiveId": "kamiamakusa-20261124-a4411e17",
+      "archiveUrl": "official-articles/kamiamakusa-20261124-a4411e17.html"
     }
   ],
   "prefectureUpdates": [

@@ -1,18 +1,18 @@
 # 暮らしの再建 運用ステータス
 
 - 状態: **ACTION_REQUIRED**
-- 生成: 2026-11-27T05:43:19.155Z
+- 生成: 2026-11-27T13:23:48.110Z
 - sitePhase: **emergency**
-- 収集: 863件 / 分類 731件 / 表示候補 625件
+- 収集: 858件 / 分類 728件 / 表示候補 624件
 - fallback: 21/21
 - 未分類: 27件
-- low confidence: 106件
+- low confidence: 104件
 - manual override: 2件
 - 鮮度（公式ナビ）: fresh
 - 鮮度（厳密制度）: fresh
 - 厳密制度source変更: 7件（変更時は needs_review）
 - ACTION_REQUIRED: 7件
-- WARNING: 26件
+- WARNING: 28件
 
 ## ACTION_REQUIRED
 - STRICT_SOURCE_CHANGED: 内閣府防災担当からの各都道府県等への通知等
@@ -24,6 +24,8 @@
 - STRICT_SOURCE_CHANGED: 令和8年熊本地震で被災された方に対する支援制度について（氷川町）
 
 ## WARNING
+- HTTP_404_CANDIDATE
+- RETRIEVAL_ISSUE
 - HTTP_404_CANDIDATE
 - RETRIEVAL_ISSUE
 - HTTP_404_CANDIDATE

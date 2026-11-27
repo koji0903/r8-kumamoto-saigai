@@ -1575,5 +1575,13 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "甲佐町",
     "date": "2026-11-27",
     "retrievedAt": "2026-11-27T05:42:54.010Z"
+  },
+  "https://www.city.amakusa.kumamoto.jp/kiji00314961/index.html": {
+    "id": "amakusa-20261127-8d00a464",
+    "htmlPath": "official-articles/amakusa-20261127-8d00a464.html",
+    "title": "減圧給水にご協力ください",
+    "municipality": "天草市",
+    "date": "2026-11-27",
+    "retrievedAt": "2026-11-27T13:23:27.249Z"
   }
 };
