@@ -1,18 +1,25 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-26T11:43:52+09:00",
+  "generatedAt": "2026-11-27T11:44:56+09:00",
   "municipalities": [
     {
       "id": "uto",
       "name": "宇土市",
       "page": "uto-support.html",
       "cardCount": 72,
-      "candidateCount": 74,
+      "candidateCount": 75,
       "listedCount": 39,
       "siblingCount": 0,
       "knownCount": 35,
       "indexErrors": [],
-      "unlisted": [],
+      "unlisted": [
+        {
+          "title": "令和８年熊本地震により被災された方の後期高齢者医療保険料の減免について",
+          "url": "https://www.city.uto.lg.jp/article/view/1018/16830.html",
+          "coverage": "unlisted",
+          "reason": ""
+        }
+      ],
       "staleCandidates": []
     },
     {
@@ -20,8 +27,8 @@
       "name": "宇城市",
       "page": "uki-living-support.html",
       "cardCount": 55,
-      "candidateCount": 45,
-      "listedCount": 32,
+      "candidateCount": 46,
+      "listedCount": 33,
       "siblingCount": 0,
       "knownCount": 12,
       "indexErrors": [],
@@ -78,22 +85,29 @@
       "name": "熊本市",
       "page": "kumamoto-living-support.html",
       "cardCount": 105,
-      "candidateCount": 126,
+      "candidateCount": 125,
       "listedCount": 82,
       "siblingCount": 0,
-      "knownCount": 44,
+      "knownCount": 43,
       "indexErrors": [],
       "unlisted": [],
       "staleCandidates": []
     }
   ],
-  "deadLinks": [],
+  "deadLinks": [
+    {
+      "page": "kumamoto-living-support.html",
+      "url": "https://www.city.kumamoto.jp/kiji00370581/index.html",
+      "status": 404,
+      "error": ""
+    }
+  ],
   "blockedLinks": [],
   "indexErrorDetails": [],
   "summary": {
     "cardCount": 328,
-    "unlistedCount": 3,
-    "deadLinkCount": 0,
+    "unlistedCount": 4,
+    "deadLinkCount": 1,
     "blockedLinkCount": 0,
     "indexErrorCount": 0,
     "staleCandidateCount": 0
