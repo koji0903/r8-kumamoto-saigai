@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-11-27T13:01:12.554Z",
+  "generatedAt": "2026-11-27T18:25:26.422Z",
   "sourceFile": "sources/official/municipalities/municipality-updates.json",
   "outputFile": "public-data/reconstruction/municipality-official-navigation.json",
   "inputCount": 858,
-  "displayCandidateCount": 624,
+  "displayCandidateCount": 623,
   "classifiedPageCount": 728,
   "categoryReport": {
     "home": {
-      "total": 184,
+      "total": 183,
       "high": 72,
-      "medium": 70,
+      "medium": 69,
       "low": 42
     },
     "money": {
-      "total": 264,
+      "total": 265,
       "high": 55,
       "medium": 75,
-      "low": 134
+      "low": 135
     },
     "documents": {
-      "total": 166,
-      "high": 40,
+      "total": 165,
+      "high": 39,
       "medium": 29,
       "low": 97
     },
@@ -77,7 +77,7 @@
       "fallback": true
     },
     "municipality_kikuchi": {
-      "classified": 10,
+      "classified": 11,
       "displayCandidates": 8,
       "fallback": true
     },
@@ -137,8 +137,8 @@
       "fallback": true
     },
     "municipality_mashiki": {
-      "classified": 51,
-      "displayCandidates": 47,
+      "classified": 50,
+      "displayCandidates": 46,
       "fallback": true
     },
     "municipality_kosa": {
@@ -163,9 +163,9 @@
     }
   },
   "confidence": {
-    "high": 269,
+    "high": 268,
     "medium": 355,
-    "low": 104
+    "low": 105
   },
   "unclassifiedCount": 27,
   "unclassifiedItems": [
@@ -814,7 +814,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -908,5 +908,5 @@
     }
   ],
   "errors": [],
-  "previousClassifiedPageCount": 731
+  "previousClassifiedPageCount": 728
 }

@@ -1,7 +1,7 @@
 // 生成物・直接編集しない。生成: node tools/build-home-topics.mjs
 window.HOME_TOPICS = {
-  "retrievedAt": "2026-11-27T13:23:18.479Z",
-  "officialCheckedAt": "11/27 22:23",
+  "retrievedAt": "2026-11-27T18:49:14.286Z",
+  "officialCheckedAt": "11/28 03:49",
   "siteTopics": [
     {
       "date": "2026-11-24",
@@ -96,6 +96,26 @@ window.HOME_TOPICS = {
   ],
   "municipalityUpdates": [
     {
+      "title": "熊本行政評価事務所での熊本地震の支援措置等に関するご相談の受付について",
+      "url": "https://www.city.kikuchi.lg.jp/article/view/1350/18875.html",
+      "date": "2026-11-28",
+      "time": null,
+      "category": "支援・制度",
+      "municipality": "菊池市",
+      "archiveId": "kikuchi-20261128-41ae8dc4",
+      "archiveUrl": "official-articles/kikuchi-20261128-41ae8dc4.html"
+    },
+    {
+      "title": "【あじさいの湯】被災者への入浴支援事業について",
+      "url": "https://www.city.uto.lg.jp/article/view/1307/17115.html",
+      "date": "2026-11-28",
+      "time": null,
+      "category": "ごみ・生活",
+      "municipality": "宇土市",
+      "archiveId": "uto-20261128-6e1a67e4",
+      "archiveUrl": "official-articles/uto-20261128-6e1a67e4.html"
+    },
+    {
       "title": "熊本県八代市",
       "url": "https://www.city.yatsushiro.lg.jp/default.html",
       "date": "2026-11-27",
@@ -124,16 +144,6 @@ window.HOME_TOPICS = {
       "municipality": "宇城市",
       "archiveId": "uki-20261127-7d9d4e13",
       "archiveUrl": "official-articles/uki-20261127-7d9d4e13.html"
-    },
-    {
-      "title": "住家の緊急修理について",
-      "url": "https://www.city.uto.lg.jp/article/view/1307/16406.html",
-      "date": "2026-11-27",
-      "time": null,
-      "category": "住まい・証明",
-      "municipality": "宇土市",
-      "archiveId": "uto-20261127-26cd44de",
-      "archiveUrl": "official-articles/uto-20261127-26cd44de.html"
     },
     {
       "title": "減圧給水にご協力ください",
@@ -234,16 +244,6 @@ window.HOME_TOPICS = {
       "municipality": "菊陽町",
       "archiveId": "kikuyo-20261124-82235f44",
       "archiveUrl": "official-articles/kikuyo-20261124-82235f44.html"
-    },
-    {
-      "title": "(11/24更新)本市の水道に係る地震発生後の状況についてお知らせします",
-      "url": "https://www.city.kamiamakusa.kumamoto.jp/q/aview/400/23284.html",
-      "date": "2026-11-24",
-      "time": null,
-      "category": "ライフライン",
-      "municipality": "上天草市",
-      "archiveId": "kamiamakusa-20261124-a4411e17",
-      "archiveUrl": "official-articles/kamiamakusa-20261124-a4411e17.html"
     }
   ],
   "prefectureUpdates": [

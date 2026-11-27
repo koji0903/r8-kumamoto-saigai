@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-27T13:23:48.110Z",
+  "generatedAt": "2026-11-27T18:49:44.190Z",
   "status": "ACTION_REQUIRED",
   "sitePhase": "emergency",
   "collection": {
-    "generatedAt": "2026-11-27T13:01:12.554Z",
+    "generatedAt": "2026-11-27T18:25:26.422Z",
     "inputCount": 858,
     "classifiedPageCount": 728,
-    "displayCandidateCount": 624,
+    "displayCandidateCount": 623,
     "deltaFromPrevious": {
-      "inputCount": -5,
-      "classifiedPageCount": -3,
+      "inputCount": 0,
+      "classifiedPageCount": 0,
       "unclassifiedCount": 0
     }
   },
@@ -51,7 +51,7 @@
         "fallback": true
       },
       "municipality_kikuchi": {
-        "classified": 10,
+        "classified": 11,
         "displayCandidates": 8,
         "fallback": true
       },
@@ -111,8 +111,8 @@
         "fallback": true
       },
       "municipality_mashiki": {
-        "classified": 51,
-        "displayCandidates": 47,
+        "classified": 50,
+        "displayCandidates": 46,
         "fallback": true
       },
       "municipality_kosa": {
@@ -138,20 +138,20 @@
     },
     "categoryReport": {
       "home": {
-        "total": 184,
+        "total": 183,
         "high": 72,
-        "medium": 70,
+        "medium": 69,
         "low": 42
       },
       "money": {
-        "total": 264,
+        "total": 265,
         "high": 55,
         "medium": 75,
-        "low": 134
+        "low": 135
       },
       "documents": {
-        "total": 166,
-        "high": 40,
+        "total": 165,
+        "high": 39,
         "medium": 29,
         "low": 97
       },
@@ -187,9 +187,9 @@
       }
     },
     "confidence": {
-      "high": 269,
+      "high": 268,
       "medium": 355,
-      "low": 104
+      "low": 105
     },
     "unclassifiedCount": 27,
     "excludedCount": 41,
@@ -236,7 +236,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:fbfb484b76570138295e994641b28783ca15d6f54e9683981829b0e1af6d91d9",
+        "currentHash": "sha256:f4e9fce9702096028fded23d740bc004060446eeb2445532c195b6f99ac321a8",
         "verificationStatus": "needs_review"
       }
     },
@@ -323,7 +323,7 @@
     {
       "code": "RETRIEVAL_ISSUE",
       "municipalityId": "municipality_kikuchi",
-      "count": 3
+      "count": 4
     },
     {
       "code": "HTTP_404_CANDIDATE",
@@ -449,7 +449,7 @@
         "title": "支援・申請",
         "url": "https://www.city.uto.lg.jp/article/list/1307.html",
         "previousHash": "sha256:cbbff8b82359c410f2bb1a599d85240dd5d50865de0ff055d0289d1c05e28ae8",
-        "currentHash": "sha256:fbfb484b76570138295e994641b28783ca15d6f54e9683981829b0e1af6d91d9",
+        "currentHash": "sha256:f4e9fce9702096028fded23d740bc004060446eeb2445532c195b6f99ac321a8",
         "verificationStatus": "needs_review"
       },
       {

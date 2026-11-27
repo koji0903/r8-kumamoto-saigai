@@ -1583,5 +1583,21 @@ window.OFFICIAL_ARTICLES_INDEX = {
     "municipality": "天草市",
     "date": "2026-11-27",
     "retrievedAt": "2026-11-27T13:23:27.249Z"
+  },
+  "https://www.city.kikuchi.lg.jp/article/view/1350/18875.html": {
+    "id": "kikuchi-20261128-41ae8dc4",
+    "htmlPath": "official-articles/kikuchi-20261128-41ae8dc4.html",
+    "title": "熊本行政評価事務所での熊本地震の支援措置等に関するご相談の受付について",
+    "municipality": "菊池市",
+    "date": "2026-11-28",
+    "retrievedAt": "2026-11-27T18:49:23.377Z"
+  },
+  "https://www.city.uto.lg.jp/article/view/1307/17115.html": {
+    "id": "uto-20261128-6e1a67e4",
+    "htmlPath": "official-articles/uto-20261128-6e1a67e4.html",
+    "title": "【あじさいの湯】被災者への入浴支援事業について",
+    "municipality": "宇土市",
+    "date": "2026-11-28",
+    "retrievedAt": "2026-11-27T18:49:24.633Z"
   }
 };
